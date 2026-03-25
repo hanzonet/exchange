@@ -1,8 +1,8 @@
 import { put } from 'typed-redux-saga'
 import { createMonitoredSaga } from 'uniswap/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { addAccounts, setAccountAsActive } from 'wallet/src/features/wallet/slice'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { addAccounts, setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
 
 export interface CreateAccountsParams {
   accounts: Account[]

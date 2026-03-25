@@ -25,9 +25,9 @@ import { DatadogLogMetrics, logAsMetric } from 'utilities/src/logger/datadog/dat
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
-import { waitForTransactionConfirmation } from 'wallet/src/features/transactions/swap/confirmation'
-import { isSignedPermit, SignedPermit } from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
-import { getSignerManager } from 'wallet/src/features/wallet/context'
+import { waitForTransactionConfirmation } from '@luxfi/wallet/src/features/transactions/swap/confirmation'
+import { isSignedPermit, SignedPermit } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
+import { getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
 
 // If the app is closed during the waiting period and then reopened, the saga will resume;
 // the order should not be submitted if too much time has passed as it may be stale.

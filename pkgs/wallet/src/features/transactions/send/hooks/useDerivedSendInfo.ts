@@ -9,7 +9,7 @@ import { DerivedSendInfo } from 'uniswap/src/features/transactions/send/types'
 import { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function useDerivedSendInfo(state: TransactionState): DerivedSendInfo {
   const {

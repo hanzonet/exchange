@@ -1,8 +1,8 @@
 import { signTypedData } from 'uniswap/src/features/transactions/signing'
 import { ensureLeading0x } from 'uniswap/src/utils/addresses'
-import { SignMessageInfo } from 'wallet/src/features/wallet/signing/signing'
-import { EthTypedMessage } from 'wallet/src/features/wallet/signing/types'
-import { formatMessageForSigning } from 'wallet/src/features/wallet/signing/utils'
+import { SignMessageInfo } from '@luxfi/wallet/src/features/wallet/signing/signing'
+import { EthTypedMessage } from '@luxfi/wallet/src/features/wallet/signing/types'
+import { formatMessageForSigning } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 // https://docs.ethers.io/v5/api/signer/#Signer--signing-methods
 export async function signMessage({

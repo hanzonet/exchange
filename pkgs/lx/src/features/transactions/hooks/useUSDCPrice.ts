@@ -1,12 +1,12 @@
 import { Currency, CurrencyAmount, Price, Token, TradeType } from '@luxamm/sdk-core'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getPrimaryStablecoin, isUniverseChainId } from 'lx/src/features/chains/utils'
-import { useTrade } from 'lx/src/features/transactions/swap/hooks/useTrade'
-import { isClassic, isJupiter } from 'lx/src/features/transactions/swap/utils/routing'
-import { areCurrencyIdsEqual, currencyId } from 'lx/src/utils/currencyId'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getPrimaryStablecoin, isUniverseChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { useTrade } from '@luxexchange/lx/src/features/transactions/swap/hooks/useTrade'
+import { isClassic, isJupiter } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { areCurrencyIdsEqual, currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 const SONEIUM_AMOUNT_OVERRIDE = 30
 const DEFAULT_STABLECOIN_AMOUNT_OUT = 1000

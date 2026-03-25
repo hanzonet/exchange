@@ -1,10 +1,10 @@
 import type { GasFeeResult } from '@luxexchange/api'
 import { Flex } from 'ui/src'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { DappWalletLineItem } from 'wallet/src/components/dappRequests/DappWalletLineItem'
-import { TransactionWarningBanner } from 'wallet/src/components/dappRequests/TransactionWarningBanner'
-import type { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
-import { NetworkFeeFooter } from 'wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter'
+import { DappWalletLineItem } from '@luxfi/wallet/src/components/dappRequests/DappWalletLineItem'
+import { TransactionWarningBanner } from '@luxfi/wallet/src/components/dappRequests/TransactionWarningBanner'
+import type { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { NetworkFeeFooter } from '@luxfi/wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter'
 
 interface DappRequestFooterProps {
   chainId: UniverseChainId

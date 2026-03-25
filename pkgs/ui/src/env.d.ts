@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-import { config } from 'ui/src/tamagui.config'
+import { config } from '@luxfi/ui/src/tamagui.config'
 
 type Conf = typeof config
 

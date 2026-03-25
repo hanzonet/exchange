@@ -1,11 +1,11 @@
 /* eslint-disable complexity */
 import { useEffect, useState } from 'react'
 import { type ColorTokens, Image } from '@hanzo/gui'
-import { Flex } from 'ui/src/components/layout/Flex'
-import { PlainImage } from 'ui/src/components/UniversalImage/internal/PlainImage'
-import { SvgImage } from 'ui/src/components/UniversalImage/internal/SvgImage'
-import { type UniversalImageProps, type UniversalImageSize } from 'ui/src/components/UniversalImage/types'
-import { Loader } from 'ui/src/loading/Loader'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import { PlainImage } from '@luxfi/ui/src/components/UniversalImage/internal/PlainImage'
+import { SvgImage } from '@luxfi/ui/src/components/UniversalImage/internal/SvgImage'
+import { type UniversalImageProps, type UniversalImageSize } from '@luxfi/ui/src/components/UniversalImage/types'
+import { Loader } from '@luxfi/ui/src/loading/Loader'
 import { isSVGUri, uriToHttpUrls } from 'utilities/src/format/urls'
 import { logger } from 'utilities/src/logger/logger'
 

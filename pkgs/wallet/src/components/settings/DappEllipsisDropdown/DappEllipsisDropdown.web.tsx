@@ -10,9 +10,9 @@ import { ExtensionEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { logger } from 'utilities/src/logger/logger'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { type DappEllipsisDropdownProps } from 'wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
-import { DappEllipsisDropdownIcon } from 'wallet/src/components/settings/DappEllipsisDropdown/internal/DappEllipsisDropdownIcon'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { type DappEllipsisDropdownProps } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
+import { DappEllipsisDropdownIcon } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/internal/DappEllipsisDropdownIcon'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const PowerCircle = (): JSX.Element => (
   <Flex centered backgroundColor="red" borderRadius="$roundedFull" p="$spacing2" pt="$spacing1">

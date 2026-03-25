@@ -10,9 +10,9 @@ import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { TransactionStatus, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { isAndroid } from 'utilities/src/platform'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { formTransferCurrencyNotificationTitle } from 'wallet/src/features/notifications/utils'
-import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { formTransferCurrencyNotificationTitle } from '@luxfi/wallet/src/features/notifications/utils'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const platformAdjustedUnitagYPosition = isAndroid ? -1 : -2
 

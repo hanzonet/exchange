@@ -13,12 +13,12 @@ import { PlanPriceChangeInterrupt } from 'uniswap/src/features/transactions/swap
 import { SwapExecutionCallbacks } from 'uniswap/src/features/transactions/swap/types/swapCallback'
 import type { ValidatedSwapTxContext } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { ValidatedTransactionRequest } from 'uniswap/src/features/transactions/types/transactionRequests'
-import { prepareTransactionServices } from 'wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
-import { shouldSubmitViaPrivateRpc } from 'wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
+import { prepareTransactionServices } from '@luxfi/wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
+import { shouldSubmitViaPrivateRpc } from '@luxfi/wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
 import {
   DelegationType,
   type TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 
 export type ExecutePlanParams = {
   txId?: string

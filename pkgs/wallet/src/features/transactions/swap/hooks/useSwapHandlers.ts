@@ -17,9 +17,9 @@ import { getEVMTxRequest, isChained, isClassic } from 'uniswap/src/features/tran
 import { getClassicQuoteFromResponse } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
 import { toStringish } from 'uniswap/src/utils/number'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
-import { useAccountsStore, useActiveAddress } from 'wallet/src/features/accounts/store/hooks'
-import { executePlanActions, executeSwapActions } from 'wallet/src/features/transactions/swap/configuredSagas'
-import { useSwapSigning } from 'wallet/src/features/transactions/swap/hooks/useSwapSigning'
+import { useAccountsStore, useActiveAddress } from '@luxfi/wallet/src/features/accounts/store/hooks'
+import { executePlanActions, executeSwapActions } from '@luxfi/wallet/src/features/transactions/swap/configuredSagas'
+import { useSwapSigning } from '@luxfi/wallet/src/features/transactions/swap/hooks/useSwapSigning'
 
 /**
  * Custom hook that provides SwapHandlers with improved caching for prepared transactions

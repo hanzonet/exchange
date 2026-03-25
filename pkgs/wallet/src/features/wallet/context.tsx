@@ -6,10 +6,10 @@ import { call, getContext } from 'typed-redux-saga'
 import { SignerMnemonicAccountMeta } from 'uniswap/src/features/accounts/types'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { logger } from 'utilities/src/logger/logger'
-import { ContractManager } from 'wallet/src/features/contracts/ContractManager'
-import { ProviderManager } from 'wallet/src/features/providers/ProviderManager'
-import { ViemClientManager } from 'wallet/src/features/providers/ViemClientManager'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+import { ContractManager } from '@luxfi/wallet/src/features/contracts/ContractManager'
+import { ProviderManager } from '@luxfi/wallet/src/features/providers/ProviderManager'
+import { ViemClientManager } from '@luxfi/wallet/src/features/providers/ViemClientManager'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 interface WalletContextValue {
   // Manages contracts

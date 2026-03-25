@@ -1,8 +1,8 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { GraphQLApi } from '@luxfi/api'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { ALL_CHAIN_IDS } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { ALL_CHAIN_IDS } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   chainIdToHexadecimalString,
   fromGraphQLChain,
@@ -12,7 +12,7 @@ import {
   hexadecimalStringToInt,
   toSupportedChainId,
   toLuxWebAppLink,
-} from 'lx/src/features/chains/utils'
+} from '@luxexchange/lx/src/features/chains/utils'
 
 describe(toSupportedChainId, () => {
   it('handles undefined input', () => {

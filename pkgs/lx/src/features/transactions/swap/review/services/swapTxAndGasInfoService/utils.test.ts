@@ -13,13 +13,13 @@ import {
   getShouldSkipSwapRequest,
   getSimulationError,
   processWrapResponse,
-} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { TokenApprovalInfo, TradeWithStatus } from 'lx/src/features/transactions/swap/types/trade'
-import { ApprovalAction } from 'lx/src/features/transactions/swap/types/trade'
-import { DEFAULT_PROTOCOL_OPTIONS } from 'lx/src/features/transactions/swap/utils/protocols'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { TokenApprovalInfo, TradeWithStatus } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { ApprovalAction } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { DEFAULT_PROTOCOL_OPTIONS } from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const mockPermitData = { fakePermitField: 'hi' } as unknown as TradingApi.NullablePermit
 

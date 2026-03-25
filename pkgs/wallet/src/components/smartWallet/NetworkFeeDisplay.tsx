@@ -6,7 +6,7 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
 import { NumberType } from 'utilities/src/format/types'
-import { GroupedGasFee } from 'wallet/src/features/smartWallet/utils/gasFeeUtils'
+import { GroupedGasFee } from '@luxfi/wallet/src/features/smartWallet/utils/gasFeeUtils'
 
 interface NetworkFeeDisplayProps {
   symbol: string

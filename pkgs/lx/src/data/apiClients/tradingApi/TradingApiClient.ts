@@ -8,11 +8,11 @@ import {
   getFeatureFlag,
   Layers,
 } from '@luxexchange/gating'
-import { config } from 'lx/src/config'
-import { tradingApiVersionPrefix, luxUrls } from 'lx/src/constants/urls'
-import { createLuxFetchClient } from 'lx/src/data/apiClients/createLuxFetchClient'
-import { filterChainIdsByPlatform } from 'lx/src/features/chains/utils'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { config } from '@luxexchange/lx/src/config'
+import { tradingApiVersionPrefix, luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { filterChainIdsByPlatform } from '@luxexchange/lx/src/features/chains/utils'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 
 const TradingFetchClient = createLuxFetchClient({
   baseUrl: luxUrls.tradingApiUrl,

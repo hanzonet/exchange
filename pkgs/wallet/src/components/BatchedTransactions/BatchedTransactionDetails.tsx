@@ -23,10 +23,10 @@ import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { isExtensionApp, isMobileApp } from 'utilities/src/platform'
 import { trimToLength } from 'utilities/src/primitives/string'
 import { useEvent } from 'utilities/src/react/hooks'
-import { AddressButton } from 'wallet/src/components/buttons/AddressButton'
-import { useCopyToClipboard } from 'wallet/src/components/copy/useCopyToClipboard'
-import { Call } from 'wallet/src/features/dappRequests/types'
-import { SpendingEthDetails } from 'wallet/src/features/transactions/TransactionRequest/SpendingDetails'
+import { AddressButton } from '@luxfi/wallet/src/components/buttons/AddressButton'
+import { useCopyToClipboard } from '@luxfi/wallet/src/components/copy/useCopyToClipboard'
+import { Call } from '@luxfi/wallet/src/features/dappRequests/types'
+import { SpendingEthDetails } from '@luxfi/wallet/src/features/transactions/TransactionRequest/SpendingDetails'
 
 export const MAX_HIDDEN_CALLS_BY_DEFAULT = 10
 const MAX_MODAL_MESSAGE_HEIGHT = 200

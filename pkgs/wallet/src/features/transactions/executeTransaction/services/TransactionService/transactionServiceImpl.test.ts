@@ -12,19 +12,19 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { ensure0xHex } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
-import { isPrivateRpcSupportedOnChain } from 'wallet/src/features/providers/utils'
-import { ExecuteTransactionParams } from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { AnalyticsService } from 'wallet/src/features/transactions/executeTransaction/services/analyticsService'
-import { TransactionRepository } from 'wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepository'
+import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
+import { ExecuteTransactionParams } from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { AnalyticsService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/analyticsService'
+import { TransactionRepository } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepository'
 import {
   PrepareTransactionParams,
   SubmitTransactionParams,
   SubmitTransactionParamsWithTypeInfo,
   TransactionService,
-} from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import { createTransactionService } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionServiceImpl'
-import { TransactionSigner } from 'wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
-import { TransactionConfigService } from 'wallet/src/features/transactions/executeTransaction/services/transactionConfigService'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { createTransactionService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionServiceImpl'
+import { TransactionSigner } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
+import { TransactionConfigService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/transactionConfigService'
 
 // Mock external utilities
 jest.mock('wallet/src/features/providers/utils', () => ({

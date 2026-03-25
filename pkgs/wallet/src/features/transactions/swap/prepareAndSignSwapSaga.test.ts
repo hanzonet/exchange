@@ -11,12 +11,12 @@ import { type UniswapXTrade, UnwrapTrade, WrapTrade } from 'uniswap/src/features
 import { ETH, WETH } from 'uniswap/src/test/fixtures'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
 import { ensure0xHex } from 'utilities/src/addresses/hex'
-import { isPrivateRpcSupportedOnChain } from 'wallet/src/features/providers/utils'
-import { createTransactionServices } from 'wallet/src/features/transactions/factories/createTransactionServices'
+import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
+import { createTransactionServices } from '@luxfi/wallet/src/features/transactions/factories/createTransactionServices'
 import {
   createPrepareAndSignSwapSaga,
   shouldSubmitViaPrivateRpc,
-} from 'wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
+} from '@luxfi/wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
 import {
   mockSignerAccount as account,
   mockTransactionSagaDependencies,
@@ -24,10 +24,10 @@ import {
   mockTransactionSigner,
   prepareAndSignSwapSagaParams,
   prepareSwapTxContext,
-} from 'wallet/src/features/transactions/swap/types/fixtures'
-import { DelegationType } from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import { selectWalletSwapProtectionSetting } from 'wallet/src/features/wallet/selectors'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+} from '@luxfi/wallet/src/features/transactions/swap/types/fixtures'
+import { DelegationType } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import { selectWalletSwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/selectors'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
 
 // Mock dependencies
 jest.mock('wallet/src/features/transactions/factories/createTransactionServices')

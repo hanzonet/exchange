@@ -1,7 +1,7 @@
-import { Plus as PlusIcon } from 'ui/src/components/icons'
-import { Flex } from 'ui/src/components/layout/Flex'
-import { TouchableArea } from 'ui/src/components/touchable/TouchableArea/TouchableArea'
-import { iconSizes } from 'ui/src/theme'
+import { Plus as PlusIcon } from '@luxfi/ui/src/components/icons'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import { TouchableArea } from '@luxfi/ui/src/components/touchable/TouchableArea/TouchableArea'
+import { iconSizes } from '@luxfi/ui/src/theme'
 
 export enum PlusMinusButtonType {
   Plus = 0,

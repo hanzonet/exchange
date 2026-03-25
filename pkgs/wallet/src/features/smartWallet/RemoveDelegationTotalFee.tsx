@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { ContentRow } from 'uniswap/src/components/transactions/requests/ContentRow'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
-import { ChainFiatFeeCalculator } from 'wallet/src/components/smartWallet/ChainFiatFeeCalculator'
-import { FiatFeeDisplay } from 'wallet/src/components/smartWallet/FiatFeeDisplay'
-import { NativeFeeDisplay } from 'wallet/src/components/smartWallet/NativeFeeDisplay'
-import { useFiatGasFees } from 'wallet/src/features/smartWallet/hooks/useFiatGasFees'
-import { GasFeeData, groupGasFeesBySymbol } from 'wallet/src/features/smartWallet/utils/gasFeeUtils'
+import { ChainFiatFeeCalculator } from '@luxfi/wallet/src/components/smartWallet/ChainFiatFeeCalculator'
+import { FiatFeeDisplay } from '@luxfi/wallet/src/components/smartWallet/FiatFeeDisplay'
+import { NativeFeeDisplay } from '@luxfi/wallet/src/components/smartWallet/NativeFeeDisplay'
+import { useFiatGasFees } from '@luxfi/wallet/src/features/smartWallet/hooks/useFiatGasFees'
+import { GasFeeData, groupGasFeesBySymbol } from '@luxfi/wallet/src/features/smartWallet/utils/gasFeeUtils'
 
 interface RemoveDelegationTotalFeeProps {
   gasFees: GasFeeData[]

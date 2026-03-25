@@ -1,5 +1,5 @@
-import { getRPCErrorCategory, getRPCErrorCode, getRPCProvider } from 'wallet/src/features/transactions/utils'
-import { rpcUtilsFixtures } from 'wallet/src/test/rpcUtilsFixtures'
+import { getRPCErrorCategory, getRPCErrorCode, getRPCProvider } from '@luxfi/wallet/src/features/transactions/utils'
+import { rpcUtilsFixtures } from '@luxfi/wallet/src/test/rpcUtilsFixtures'
 
 describe('getRPCErrorCategory', () => {
   it.each([

@@ -5,11 +5,11 @@ import { AccountType } from 'uniswap/src/features/accounts/types'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
-import { createOnRampTransactionsAuth, ON_RAMP_AUTH_MAX_LIMIT } from 'wallet/src/data/utils'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+import { createOnRampTransactionsAuth, ON_RAMP_AUTH_MAX_LIMIT } from '@luxfi/wallet/src/data/utils'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 type OnRampAuthQueryOptions = QueryOptionsResult<
   PartialMessage<FiatOnRampParams> | undefined,

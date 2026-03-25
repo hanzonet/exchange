@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text, useSporeColors } from 'ui/src'
 import { Verified } from 'ui/src/components/icons'
 import { formatDappURL } from 'utilities/src/format/urls'
-import { LinkButton } from 'wallet/src/components/buttons/LinkButton'
-import { DappHeaderIcon } from 'wallet/src/components/dappRequests/DappHeaderIcon'
-import { type DappConnectionInfo, DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+import { LinkButton } from '@luxfi/wallet/src/components/buttons/LinkButton'
+import { DappHeaderIcon } from '@luxfi/wallet/src/components/dappRequests/DappHeaderIcon'
+import { type DappConnectionInfo, DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface DappRequestHeaderProps {
   dappInfo: DappConnectionInfo

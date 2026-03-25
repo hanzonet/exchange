@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { Flex, FlexProps, Switch, Text } from 'ui/src'
-import { selectAllowAnalytics } from 'wallet/src/features/telemetry/selectors'
-import { setAllowAnalytics } from 'wallet/src/features/telemetry/slice'
+import { selectAllowAnalytics } from '@luxfi/wallet/src/features/telemetry/selectors'
+import { setAllowAnalytics } from '@luxfi/wallet/src/features/telemetry/slice'
 
 export function AnalyticsToggleLineSwitch(props: FlexProps): JSX.Element {
   const { t } = useTranslation()

@@ -13,8 +13,8 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { UniswapState } from 'uniswap/src/state/uniswapReducer'
 import { WalletConnectEvent } from 'uniswap/src/types/walletConnect'
-import { buildReceiveNotification } from 'wallet/src/features/notifications/buildReceiveNotification'
-import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+import { buildReceiveNotification } from '@luxfi/wallet/src/features/notifications/buildReceiveNotification'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
 
 export function* notificationWatcher() {
   yield* takeLatest(finalizeTransaction.type, pushTransactionNotification)

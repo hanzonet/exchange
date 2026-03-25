@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { BlockaidApiClient } from 'uniswap/src/data/apiClients/blockaidApi/BlockaidApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
 
 const FIVE_MINUTES_MS = 5 * ONE_MINUTE_MS
 

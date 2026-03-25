@@ -7,9 +7,9 @@ import { AccountType } from 'uniswap/src/features/accounts/types'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { useRestPortfolioValueModifier } from 'uniswap/src/features/dataApi/balances/balancesRest'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { useAccountBalances } from 'wallet/src/features/accounts/useAccountListData'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
+import { useAccountBalances } from '@luxfi/wallet/src/features/accounts/useAccountListData'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const PORTFOLIO_REFETCH_INTERVAL = ONE_MINUTE_MS
 

@@ -11,8 +11,8 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 
 function mapDEXStatusToLocalTxStatus(status: UniswapXTransactionStatus): TransactionStatus {

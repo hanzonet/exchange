@@ -17,7 +17,7 @@ import { sanitizeAddressText } from 'uniswap/src/utils/addresses'
 import { shortenAddress } from 'utilities/src/addresses'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { isExtensionApp, isMobileApp } from 'utilities/src/platform'
-import { AnimatedUnitagDisplayNameProps } from 'wallet/src/components/accounts/AnimatedUnitagDisplayName'
+import { AnimatedUnitagDisplayNameProps } from '@luxfi/wallet/src/components/accounts/AnimatedUnitagDisplayName'
 
 export function AnimatedUnitagDisplayName({
   displayName,

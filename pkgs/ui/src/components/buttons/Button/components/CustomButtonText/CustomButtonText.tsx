@@ -1,10 +1,10 @@
 import type { GetProps } from '@hanzo/gui'
 import { styled, Text } from '@hanzo/gui'
-import { variantEmphasisHash } from 'ui/src/components/buttons/Button/components/CustomButtonText/variantEmphasisHash'
-import { buttonStyledContext, lineHeights } from 'ui/src/components/buttons/Button/constants'
-import type { ButtonEmphasis, ButtonVariantProps } from 'ui/src/components/buttons/Button/types'
-import { getMaybeHexOrRGBColor } from 'ui/src/components/buttons/Button/utils/getMaybeHexOrRGBColor'
-import { getContrastPassingTextColor } from 'ui/src/utils/colors'
+import { variantEmphasisHash } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonText/variantEmphasisHash'
+import { buttonStyledContext, lineHeights } from '@luxfi/ui/src/components/buttons/Button/constants'
+import type { ButtonEmphasis, ButtonVariantProps } from '@luxfi/ui/src/components/buttons/Button/types'
+import { getMaybeHexOrRGBColor } from '@luxfi/ui/src/components/buttons/Button/utils/getMaybeHexOrRGBColor'
+import { getContrastPassingTextColor } from '@luxfi/ui/src/utils/colors'
 
 type TamaguiTextProps = GetProps<typeof Text>
 

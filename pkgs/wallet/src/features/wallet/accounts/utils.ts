@@ -1,4 +1,4 @@
-import { Account, BackupType } from 'wallet/src/features/wallet/accounts/types'
+import { Account, BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 /**
  * Passkey is not considered an external backup, we still want the user to add cloud or manual backups.

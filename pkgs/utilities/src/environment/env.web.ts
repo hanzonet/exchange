@@ -1,6 +1,6 @@
-import { getChromeRuntime } from 'utilities/src/chrome/chrome'
-import { TRUSTED_CHROME_EXTENSION_IDS } from 'utilities/src/environment/extensionId'
-import { isExtensionApp, isWebApp } from 'utilities/src/platform'
+import { getChromeRuntime } from '@luxfi/utilities/src/chrome/chrome'
+import { TRUSTED_CHROME_EXTENSION_IDS } from '@luxfi/utilities/src/environment/extensionId'
+import { isExtensionApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 export function isTestEnv(): boolean {
   return (

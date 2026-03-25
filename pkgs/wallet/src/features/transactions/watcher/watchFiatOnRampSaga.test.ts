@@ -10,9 +10,9 @@ import {
   getTxFixtures,
   transactionDetails as txDetailsFixture,
 } from 'uniswap/src/test/fixtures'
-import { fetchFORTransaction } from 'wallet/src/features/fiatOnRamp/api'
-import { watchFiatOnRampTransaction } from 'wallet/src/features/transactions/watcher/watchFiatOnRampSaga'
-import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+import { fetchFORTransaction } from '@luxfi/wallet/src/features/fiatOnRamp/api'
+import { watchFiatOnRampTransaction } from '@luxfi/wallet/src/features/transactions/watcher/watchFiatOnRampSaga'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
 
 const { txDetailsPending: originalTxDetailsPending } = getTxFixtures(
   txDetailsFixture({ typeInfo: fiatPurchaseTransactionInfo() }),

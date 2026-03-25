@@ -5,7 +5,7 @@ import {
   ValidatedUniswapXSwapTxAndGasInfo,
 } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { ValidatedPermit } from 'uniswap/src/features/transactions/swap/utils/trade'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
 
 export interface SignedPermit {
   permit: ValidatedPermit

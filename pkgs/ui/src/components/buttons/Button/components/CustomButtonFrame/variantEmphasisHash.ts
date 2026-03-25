@@ -4,9 +4,9 @@ import {
   criticalFocusVisibleStyle,
   defaultFocusVisibleStyle,
   warningFocusVisibleStyle,
-} from 'ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
-import { withCommonPressStyle } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/utils'
-import type { ButtonEmphasis, ButtonVariant } from 'ui/src/components/buttons/Button/types'
+} from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
+import { withCommonPressStyle } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/utils'
+import type { ButtonEmphasis, ButtonVariant } from '@luxfi/ui/src/components/buttons/Button/types'
 
 type ButtonStyleLookup = {
   [variant in ButtonVariant]: {

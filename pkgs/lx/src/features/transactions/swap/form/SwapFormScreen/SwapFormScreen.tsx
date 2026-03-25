@@ -2,8 +2,8 @@ import type { BottomSheetView } from '@gorhom/bottom-sheet'
 import type { ComponentProps } from 'react'
 import type { FlexProps } from 'ui/src'
 import { Flex } from 'ui/src'
-import { chainIdToPlatform } from 'lx/src/features/platforms/utils/chains'
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
+import { chainIdToPlatform } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
 import {
   filterSettingsByPlatformAndTradeRouting,
   getShouldSettingApplyToRouting,
@@ -24,7 +24,7 @@ import { SwapFormScreenStoreContextProvider } from 'uniswap/src/features/transac
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { isExtensionApp, isWebApp } from 'utilities/src/platform'
 
 interface SwapFormScreenProps {

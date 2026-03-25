@@ -4,7 +4,7 @@ import type { SwapTradeBaseProperties, UniverseEventProperties } from 'uniswap/s
 import { TransactionDetails, TransactionOriginType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { DatadogLogMetrics, logAsMetric } from 'utilities/src/logger/datadog/datadogLogMetrics'
 import { logger as loggerUtil } from 'utilities/src/logger/logger'
-import type { AnalyticsService } from 'wallet/src/features/transactions/executeTransaction/services/analyticsService'
+import type { AnalyticsService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/analyticsService'
 
 type Logger = typeof loggerUtil
 

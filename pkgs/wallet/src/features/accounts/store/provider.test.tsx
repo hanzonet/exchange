@@ -6,16 +6,16 @@ import { ChainScopeType } from 'uniswap/src/features/accounts/store/types/Sessio
 import { SigningCapability } from 'uniswap/src/features/accounts/store/types/Wallet'
 import { AccountType as ReduxAccountType } from 'uniswap/src/features/accounts/types'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { AccountsStoreContextProvider, useAccountsStoreContext } from 'wallet/src/features/accounts/store/provider'
+import { AccountsStoreContextProvider, useAccountsStoreContext } from '@luxfi/wallet/src/features/accounts/store/provider'
 import {
   Account as ReduxAccount,
   SignerMnemonicAccount as ReduxSignerMnemonicAccount,
-} from 'wallet/src/features/wallet/accounts/types'
-import { useActiveAccount as useActiveReduxAccount } from 'wallet/src/features/wallet/hooks'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
-import { WalletSliceState } from 'wallet/src/features/wallet/slice'
-import { WalletState } from 'wallet/src/state/walletReducer'
-import { RenderHookResult, renderHook } from 'wallet/src/test/test-utils'
+} from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useActiveAccount as useActiveReduxAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
+import { WalletSliceState } from '@luxfi/wallet/src/features/wallet/slice'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
+import { RenderHookResult, renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 // Don't mock the getters - use the real implementation
 

@@ -3,7 +3,7 @@ import { useSporeColors } from 'ui/src'
 import { SmartWallet } from 'ui/src/components/icons'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
 
 interface SmartWalletCreatedModalProps {
   isOpen: boolean

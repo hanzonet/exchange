@@ -1,9 +1,9 @@
 import { type ApolloClient, type NormalizedCacheObject, useApolloClient } from '@apollo/client'
 import { createSignedRequestParams, type GraphQLApi, objectToQueryString } from '@luxexchange/api'
 import { useCallback } from 'react'
-import { type Account } from 'wallet/src/features/wallet/accounts/types'
-import { type SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
-import { generateSignerFunc } from 'wallet/src/features/wallet/signing/utils'
+import { type Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { type SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
+import { generateSignerFunc } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 export const ON_RAMP_AUTH_MAX_LIMIT = 100
 export const ON_RAMP_AUTH_MIN_LIMIT = 1

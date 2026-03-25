@@ -7,24 +7,24 @@ import { AppNotificationType } from 'uniswap/src/features/notifications/slice/ty
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { SmartWalletActionRequiredModal } from 'wallet/src/components/smartWallet/modals/SmartWalletActionRequiredModal'
-import { SmartWalletConfirmModal } from 'wallet/src/components/smartWallet/modals/SmartWalletConfirmModal'
-import { SmartWalletDisableWarningModal } from 'wallet/src/components/smartWallet/modals/SmartWalletDisableWarningModal'
-import { SmartWalletEnabledModal } from 'wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
-import { SmartWalletInsufficientFundsOnNetworkModal } from 'wallet/src/components/smartWallet/modals/SmartWalletInsufficientFundsOnNetworkModal'
-import { SmartWalletUnavailableModal } from 'wallet/src/components/smartWallet/modals/SmartWalletUnavailableModal'
-import { setIsAllSmartWalletNudgesDisabled } from 'wallet/src/features/behaviorHistory/slice'
-import { useNetworkBalances } from 'wallet/src/features/smartWallet/hooks/useNetworkBalances'
-import { SmartWalletStatusModal } from 'wallet/src/features/smartWallet/SmartWalletStatusModal'
-import { removeDelegationActions } from 'wallet/src/features/smartWallet/sagas/removeDelegationSaga'
-import { SmartWalletModalState, type WalletData } from 'wallet/src/features/smartWallet/types'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
+import { SmartWalletActionRequiredModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletActionRequiredModal'
+import { SmartWalletConfirmModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletConfirmModal'
+import { SmartWalletDisableWarningModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletDisableWarningModal'
+import { SmartWalletEnabledModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
+import { SmartWalletInsufficientFundsOnNetworkModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletInsufficientFundsOnNetworkModal'
+import { SmartWalletUnavailableModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletUnavailableModal'
+import { setIsAllSmartWalletNudgesDisabled } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useNetworkBalances } from '@luxfi/wallet/src/features/smartWallet/hooks/useNetworkBalances'
+import { SmartWalletStatusModal } from '@luxfi/wallet/src/features/smartWallet/SmartWalletStatusModal'
+import { removeDelegationActions } from '@luxfi/wallet/src/features/smartWallet/sagas/removeDelegationSaga'
+import { SmartWalletModalState, type WalletData } from '@luxfi/wallet/src/features/smartWallet/types'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
 import {
   useActiveAccountAddressWithThrow,
   useActiveAccountWithThrow,
   useDisplayName,
-} from 'wallet/src/features/wallet/hooks'
-import { setSmartWalletConsent } from 'wallet/src/features/wallet/slice'
+} from '@luxfi/wallet/src/features/wallet/hooks'
+import { setSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/slice'
 
 interface SmartWalletModalsManagerProps {
   selectedWallet: WalletData | undefined

@@ -1,7 +1,7 @@
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import type { ProviderService } from 'wallet/src/features/transactions/executeTransaction/services/providerService'
-import { walletContextValue } from 'wallet/src/features/wallet/context'
-import type { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+import type { ProviderService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/providerService'
+import { walletContextValue } from '@luxfi/wallet/src/features/wallet/context'
+import type { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 export const createProviderService = (ctx: { getSignerManager: () => SignerManager }): ProviderService => {
   const providerManager = walletContextValue.providers

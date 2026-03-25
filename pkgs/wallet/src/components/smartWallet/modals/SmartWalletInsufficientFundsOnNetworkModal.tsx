@@ -4,8 +4,8 @@ import { FlatList } from 'react-native'
 import { Flex, Separator } from 'ui/src'
 import { InsufficientGas } from 'ui/src/components/icons'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
-import { InsufficientFundsNetworkRow, NetworkInfo } from 'wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { InsufficientFundsNetworkRow, NetworkInfo } from '@luxfi/wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
 
 export type SmartWalletInsufficientFundsOnNetworkModalProps = {
   isOpen: boolean

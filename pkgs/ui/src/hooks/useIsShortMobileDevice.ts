@@ -1,4 +1,4 @@
-import { MobileDeviceHeight } from 'ui/src/hooks/constants'
+import { MobileDeviceHeight } from '@luxfi/ui/src/hooks/constants'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 /**

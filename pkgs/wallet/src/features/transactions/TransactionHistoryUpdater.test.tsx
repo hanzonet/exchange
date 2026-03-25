@@ -9,11 +9,11 @@ import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 import {
   getReceiveNotificationFromData,
   TransactionHistoryUpdater,
-} from 'wallet/src/features/transactions/TransactionHistoryUpdater'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
-import { readOnlyAccount, receiveCurrencyTxNotification, signerMnemonicAccount } from 'wallet/src/test/fixtures'
-import { faker, render } from 'wallet/src/test/test-utils'
+} from '@luxfi/wallet/src/features/transactions/TransactionHistoryUpdater'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+import { readOnlyAccount, receiveCurrencyTxNotification, signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+import { faker, render } from '@luxfi/wallet/src/test/test-utils'
 
 const mockedRefetchQueries = jest.fn()
 

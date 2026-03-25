@@ -13,18 +13,18 @@ import {
 } from 'uniswap/src/test/fixtures'
 import { mockApolloClient } from 'uniswap/src/test/mocks'
 import { sleep } from 'utilities/src/time/timing'
-import { attemptCancelTransaction } from 'wallet/src/features/transactions/cancelTransactionSaga'
-import { logTransactionTimeout } from 'wallet/src/features/transactions/watcher/transactionFinalizationSaga'
-import { deleteTransaction } from 'wallet/src/features/transactions/watcher/transactionSagaUtils'
-import { watchForAppBackgrounded } from 'wallet/src/features/transactions/watcher/watchForAppBackgroundedSaga'
+import { attemptCancelTransaction } from '@luxfi/wallet/src/features/transactions/cancelTransactionSaga'
+import { logTransactionTimeout } from '@luxfi/wallet/src/features/transactions/watcher/transactionFinalizationSaga'
+import { deleteTransaction } from '@luxfi/wallet/src/features/transactions/watcher/transactionSagaUtils'
+import { watchForAppBackgrounded } from '@luxfi/wallet/src/features/transactions/watcher/watchForAppBackgroundedSaga'
 import {
   checkIfTransactionInvalidated,
   waitForBridgeSendCompleted,
   waitForSameNonceFinalized,
   watchTransaction,
-} from 'wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
-import { waitForTransactionStatus } from 'wallet/src/features/transactions/watcher/watchTransactionSaga'
-import { getProvider } from 'wallet/src/features/wallet/context'
+} from '@luxfi/wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
+import { waitForTransactionStatus } from '@luxfi/wallet/src/features/transactions/watcher/watchTransactionSaga'
+import { getProvider } from '@luxfi/wallet/src/features/wallet/context'
 
 jest.mock('@luxexchange/api', () => ({
   ...jest.requireActual('@luxexchange/api'),

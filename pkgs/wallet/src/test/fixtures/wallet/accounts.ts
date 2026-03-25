@@ -7,7 +7,7 @@ import {
   ReadOnlyAccount,
   SignerMnemonicAccount,
   WalletAccountFields,
-} from 'wallet/src/features/wallet/accounts/types'
+} from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 /**
  * Base fixtures

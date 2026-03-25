@@ -18,9 +18,9 @@ import { getDatadogApolloLink } from 'utilities/src/logger/datadog/datadogLink'
 import { logger } from 'utilities/src/logger/logger'
 import { isMobileApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
-import { initAndPersistCache } from 'wallet/src/data/apollo/cache'
-import { useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
+import { initAndPersistCache } from '@luxfi/wallet/src/data/apollo/cache'
+import { useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type ApolloClientRef = {
   current: ApolloClient<NormalizedCacheObject> | null

@@ -1,5 +1,5 @@
 import i18n from 'uniswap/src/i18n'
-import { isValidMnemonicWord, MnemonicValidationError, translateMnemonicErrorMessage } from 'wallet/src/utils/mnemonics'
+import { isValidMnemonicWord, MnemonicValidationError, translateMnemonicErrorMessage } from '@luxfi/wallet/src/utils/mnemonics'
 
 describe(translateMnemonicErrorMessage, () => {
   it('correct invalid phrase message', () => {

@@ -6,9 +6,9 @@ import { NOTIFICATION_ICON_SIZE } from 'uniswap/src/features/notifications/const
 import { SwapTxNotification } from 'uniswap/src/features/notifications/slice/types'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { formSwapNotificationTitle } from 'wallet/src/features/notifications/utils'
-import { useCreateSwapFormState } from 'wallet/src/features/transactions/hooks/useCreateSwapFormState'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { formSwapNotificationTitle } from '@luxfi/wallet/src/features/notifications/utils'
+import { useCreateSwapFormState } from '@luxfi/wallet/src/features/transactions/hooks/useCreateSwapFormState'
 
 export function SwapNotification({
   notification: {

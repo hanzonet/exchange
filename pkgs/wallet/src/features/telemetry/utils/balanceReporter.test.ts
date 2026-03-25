@@ -1,5 +1,5 @@
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { shouldSendBalanceReport } from 'wallet/src/features/telemetry/utils/balanceReporter'
+import { shouldSendBalanceReport } from '@luxfi/wallet/src/features/telemetry/utils/balanceReporter'
 
 jest.mock('uniswap/src/features/accounts/reportBalancesForAnalytics', () => ({
   hasRequiredDataForBalancesReport: jest.fn(),

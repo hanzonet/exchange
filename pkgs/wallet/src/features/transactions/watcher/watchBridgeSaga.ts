@@ -13,7 +13,7 @@ import {
   FINALIZED_SWAP_STATUS,
   MIN_BRIDGE_WAIT_TIME,
   SWAP_STATUS_TO_TX_STATUS,
-} from 'wallet/src/features/transactions/watcher/transactionSagaUtils'
+} from '@luxfi/wallet/src/features/transactions/watcher/transactionSagaUtils'
 
 /**
  * Polls the backend API to determine the final status of a bridge transaction

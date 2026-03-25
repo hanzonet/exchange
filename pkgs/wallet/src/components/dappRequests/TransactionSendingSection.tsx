@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Flex } from 'ui/src'
 import { SendAlt } from 'ui/src/components/icons'
-import { TransactionAssetList } from 'wallet/src/components/dappRequests/TransactionAssetList'
-import { type TransactionAsset, TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { TransactionAssetList } from '@luxfi/wallet/src/components/dappRequests/TransactionAssetList'
+import { type TransactionAsset, TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface TransactionSendingSectionProps {
   assets: TransactionAsset[]

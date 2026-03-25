@@ -1,4 +1,4 @@
-import { WalletState } from 'wallet/src/state/walletReducer'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 export const selectLastBalancesReport = (state: WalletState): number => state.telemetry.lastBalancesReport
 

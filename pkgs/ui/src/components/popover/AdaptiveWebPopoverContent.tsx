@@ -1,8 +1,8 @@
 import { ComponentProps, ReactNode, useMemo } from 'react'
 import { GetProps, Popover, useMedia } from 'tamagui'
 // biome-ignore lint/style/noRestrictedImports: needed here
-import { WebBottomSheet } from 'ui/src/components/modal/AdaptiveWebModal'
-import { zIndexes } from 'ui/src/theme'
+import { WebBottomSheet } from '@luxfi/ui/src/components/modal/AdaptiveWebModal'
+import { zIndexes } from '@luxfi/ui/src/theme'
 import { isWebApp } from 'utilities/src/platform'
 
 const ANIMATION_OFFSET = 10

@@ -12,7 +12,7 @@ import { useLocalizationContext } from 'uniswap/src/features/language/Localizati
 import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { NumberType } from 'utilities/src/format/types'
-import { useActiveAddresses } from 'wallet/src/features/accounts/store/hooks'
+import { useActiveAddresses } from '@luxfi/wallet/src/features/accounts/store/hooks'
 
 interface TokenSelectorPanelProps {
   currencyInfo: Maybe<CurrencyInfo>

@@ -33,7 +33,7 @@ import {
   getFeatureFlaggedHeaders,
   getQuoteHeaders,
   TradingApiHeaders,
-} from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
+} from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
 import type { MockedFunction } from 'vitest'
 
 // Helper function to create a mock Response

@@ -2,8 +2,8 @@ import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { UnitagEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { selectHasCompletedUnitagsIntroModal } from 'wallet/src/features/behaviorHistory/selectors'
-import { setHasSkippedUnitagPrompt } from 'wallet/src/features/behaviorHistory/slice'
+import { selectHasCompletedUnitagsIntroModal } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setHasSkippedUnitagPrompt } from '@luxfi/wallet/src/features/behaviorHistory/slice'
 
 export function useUnitagClaimHandler({
   analyticsEntryPoint,

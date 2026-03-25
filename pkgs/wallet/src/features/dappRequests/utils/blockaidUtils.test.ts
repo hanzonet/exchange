@@ -15,7 +15,7 @@ jest.mock('uniswap/src/features/chains/chainInfo', () => ({
 
 import { type BlockaidScanTransactionResponse } from '@luxexchange/api/src'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { TransactionRiskLevel, TransactionSectionType } from 'wallet/src/features/dappRequests/types'
+import { TransactionRiskLevel, TransactionSectionType } from '@luxfi/wallet/src/features/dappRequests/types'
 import {
   extractContractName,
   extractFunctionName,
@@ -26,7 +26,7 @@ import {
   parseTransactionSections,
   roundToDecimals,
   UNLIMITED_APPROVAL_AMOUNT,
-} from 'wallet/src/features/dappRequests/utils/blockaidUtils'
+} from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
 
 const TEST_CHAIN_ID = UniverseChainId.Mainnet
 

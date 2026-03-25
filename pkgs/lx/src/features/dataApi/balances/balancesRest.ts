@@ -33,12 +33,12 @@ import { currencyIdToRestContractInput } from 'uniswap/src/features/dataApi/util
 import {
   getRestCurrencySafetyInfo,
   getRestTokenSafetyInfo,
-} from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from 'lx/src/features/settings/hooks'
-import { useCurrencyIdToVisibility } from 'lx/src/features/transactions/selectors'
-import { CurrencyId } from 'lx/src/types/currency'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { usePlatformBasedFetchPolicy } from 'lx/src/utils/usePlatformBasedFetchPolicy'
+} from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
+import { useCurrencyIdToVisibility } from '@luxexchange/lx/src/features/transactions/selectors'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { usePlatformBasedFetchPolicy } from '@luxexchange/lx/src/utils/usePlatformBasedFetchPolicy'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export type RestTokenOverrides = {

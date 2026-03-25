@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
-import { IconProps } from 'ui/src/components/factories/createIcon'
-import { RotateRight } from 'ui/src/components/icons/RotateRight'
-import { Flex } from 'ui/src/components/layout'
+import { IconProps } from '@luxfi/ui/src/components/factories/createIcon'
+import { RotateRight } from '@luxfi/ui/src/components/icons/RotateRight'
+import { Flex } from '@luxfi/ui/src/components/layout'
 
 /**
  * A refresh icon component that can animate with a smooth 360-degree rotation.

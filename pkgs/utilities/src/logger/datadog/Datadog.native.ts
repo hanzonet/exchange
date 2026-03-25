@@ -2,10 +2,10 @@
 import { DdLogs, DdRum, DdSdkReactNative, ErrorSource, RumActionType } from '@datadog/mobile-react-native'
 import dayjs from 'dayjs'
 import { Action, AnyAction, PreloadedState, Reducer, StoreEnhancerStoreCreator } from 'redux'
-import { ReduxEnhancerConfig } from 'utilities/src/logger/datadog/Datadog'
-import { handleReduxAction } from 'utilities/src/logger/datadog/reduxUtils'
-import { addErrorExtras } from 'utilities/src/logger/logger'
-import { LoggerErrorContext, LogLevel } from 'utilities/src/logger/types'
+import { ReduxEnhancerConfig } from '@luxfi/utilities/src/logger/datadog/Datadog'
+import { handleReduxAction } from '@luxfi/utilities/src/logger/datadog/reduxUtils'
+import { addErrorExtras } from '@luxfi/utilities/src/logger/logger'
+import { LoggerErrorContext, LogLevel } from '@luxfi/utilities/src/logger/types'
 
 let reduxState: Record<string, unknown> | undefined
 

@@ -15,23 +15,23 @@ import { TransactionOriginType, TransactionType } from 'uniswap/src/features/tra
 import { ETH, WETH } from 'uniswap/src/test/fixtures'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
 import { createFixture } from 'uniswap/src/test/utils'
-import { TransactionService } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import { TransactionSigner } from 'wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { SwapParams } from 'wallet/src/features/transactions/swap/executeSwapSaga'
-import { PrepareAndSignSwapSagaParams } from 'wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
-import { TransactionExecutor } from 'wallet/src/features/transactions/swap/services/transactionExecutor'
+import { TransactionService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { TransactionSigner } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { SwapParams } from '@luxfi/wallet/src/features/transactions/swap/executeSwapSaga'
+import { PrepareAndSignSwapSagaParams } from '@luxfi/wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
+import { TransactionExecutor } from '@luxfi/wallet/src/features/transactions/swap/services/transactionExecutor'
 import {
   SwapTransactionData,
   TransactionParamsFactory,
   UniswapXOrderTransactionData,
-} from 'wallet/src/features/transactions/swap/services/transactionParamsFactory'
+} from '@luxfi/wallet/src/features/transactions/swap/services/transactionParamsFactory'
 import {
   PreSignedSwapTransaction,
   UniswapXPreSignedSwapTransaction,
-} from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
-import { TransactionSagaDependencies } from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
+import { TransactionSagaDependencies } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 export const mockTransactionService: jest.Mocked<TransactionService> = {
   getNextNonce: jest.fn(),

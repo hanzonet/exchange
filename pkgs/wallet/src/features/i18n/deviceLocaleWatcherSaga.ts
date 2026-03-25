@@ -7,7 +7,7 @@ import i18n from 'uniswap/src/i18n'
 import { getWalletDeviceLanguage, getWalletDeviceLocale } from 'uniswap/src/i18n/utils'
 import { logger } from 'utilities/src/logger/logger'
 import { isMobileApp } from 'utilities/src/platform'
-import { restartApp } from 'wallet/src/components/ErrorBoundary/restartApp'
+import { restartApp } from '@luxfi/wallet/src/components/ErrorBoundary/restartApp'
 
 function createAppStateChannel(): EventChannel<string> {
   return eventChannel((emit) => {

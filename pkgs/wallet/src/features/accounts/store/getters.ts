@@ -8,7 +8,7 @@ import {
   resolvePlatform,
 } from 'uniswap/src/features/accounts/store/utils/flexibleInput'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import type { WalletAppsAccountsData } from 'wallet/src/features/accounts/store/types'
+import type { WalletAppsAccountsData } from '@luxfi/wallet/src/features/accounts/store/types'
 
 // Temporary utility type to ensure correct return type for getActiveConnector during temporary EVM-only wallet package state.
 // type WalletGetConnectorReturnType<P extends Platform> = P extends Platform.EVM ? LocalConnector : undefined

@@ -1,6 +1,6 @@
 import { styled } from 'tamagui'
-import { CustomButtonFrame } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
-import { dropdownButtonStyledContext } from 'ui/src/components/buttons/DropdownButton/constants'
+import { CustomButtonFrame } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
+import { dropdownButtonStyledContext } from '@luxfi/ui/src/components/buttons/DropdownButton/constants'
 
 export const DropdownButtonFrame = styled(CustomButtonFrame, {
   context: dropdownButtonStyledContext,

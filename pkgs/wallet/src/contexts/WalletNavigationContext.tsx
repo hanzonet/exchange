@@ -9,7 +9,7 @@ import { ModalNameType } from 'lx/src/features/telemetry/constants'
 import { getSwapPrefilledState } from 'lx/src/features/transactions/swap/form/hooks/useSwapPrefilledState'
 import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
 import { CurrencyField } from 'lx/src/types/currency'
-import { getSendPrefilledState } from 'wallet/src/features/transactions/send/getSendPrefilledState'
+import { getSendPrefilledState } from '@luxfi/wallet/src/features/transactions/send/getSendPrefilledState'
 
 type NavigateToTransactionFlowTransactionState = {
   initialState: TransactionState

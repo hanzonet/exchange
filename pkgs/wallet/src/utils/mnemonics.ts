@@ -1,7 +1,7 @@
 import { utils, wordlists } from 'ethers'
 import { type AppTFunction } from 'ui/src/i18n/types'
 import { normalizeTextInput } from 'utilities/src/primitives/string'
-import { MNEMONIC_LENGTH_MAX, MNEMONIC_LENGTH_MIN } from 'wallet/src/constants/accounts'
+import { MNEMONIC_LENGTH_MAX, MNEMONIC_LENGTH_MIN } from '@luxfi/wallet/src/constants/accounts'
 
 export enum MnemonicValidationError {
   InvalidWord = 'InvalidWord',

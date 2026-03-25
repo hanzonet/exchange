@@ -8,13 +8,13 @@ import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { hexlifyTransaction } from 'utilities/src/transactions/hexlifyTransaction'
 import { PublicClient } from 'viem'
-import { getAccountDelegationDetails } from 'wallet/src/features/smartWallet/delegation/utils'
+import { getAccountDelegationDetails } from '@luxfi/wallet/src/features/smartWallet/delegation/utils'
 import {
   convertToEIP7702,
   createSignedAuthorization,
   signAndSerializeEIP7702Transaction,
-} from 'wallet/src/features/transactions/executeTransaction/eip7702Utils'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/eip7702Utils'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 export async function signAndSubmitTransaction({
   request,

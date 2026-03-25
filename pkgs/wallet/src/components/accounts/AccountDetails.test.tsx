@@ -1,6 +1,6 @@
-import { AccountDetails } from 'wallet/src/components/accounts/AccountDetails'
-import { ACCOUNT } from 'wallet/src/test/fixtures'
-import { renderWithProviders } from 'wallet/src/test/render'
+import { AccountDetails } from '@luxfi/wallet/src/components/accounts/AccountDetails'
+import { ACCOUNT } from '@luxfi/wallet/src/test/fixtures'
+import { renderWithProviders } from '@luxfi/wallet/src/test/render'
 
 describe(AccountDetails, () => {
   it('renders without error', () => {

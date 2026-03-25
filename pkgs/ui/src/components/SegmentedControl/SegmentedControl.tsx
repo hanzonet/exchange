@@ -1,7 +1,7 @@
 import { cloneElement, useState } from 'react'
 import { AnimatePresence, ColorTokens, SpaceTokens, styled, TabLayout, Tabs, TabsTabProps } from 'tamagui'
-import { Flex } from 'ui/src/components/layout/Flex'
-import { Text } from 'ui/src/components/text/Text'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import { Text } from '@luxfi/ui/src/components/text/Text'
 import { assert } from 'utilities/src/errors'
 import { isMobileApp, isWebPlatform } from 'utilities/src/platform'
 

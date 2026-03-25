@@ -15,10 +15,10 @@ import { logger } from 'utilities/src/logger/logger'
 import {
   ExecuteTransactionParams,
   executeTransaction,
-} from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
-import { getProvider } from 'wallet/src/features/wallet/context'
-import { selectAccounts } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { getProvider } from '@luxfi/wallet/src/features/wallet/context'
+import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 /**
  * Gets the signer account for a given address after validating and checksumming.

@@ -1,7 +1,7 @@
 import { GetProps } from 'tamagui'
-import { Text } from 'ui/src/components/text'
-import { GradientText } from 'ui/src/components/text/GradientText'
-import { colors } from 'ui/src/theme/color/colors'
+import { Text } from '@luxfi/ui/src/components/text'
+import { GradientText } from '@luxfi/ui/src/components/text/GradientText'
+import { colors } from '@luxfi/ui/src/theme/color/colors'
 
 export function UniswapXText({ children, ...props }: GetProps<typeof Text>): JSX.Element {
   return (

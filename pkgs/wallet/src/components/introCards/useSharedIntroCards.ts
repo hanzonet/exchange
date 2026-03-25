@@ -17,17 +17,17 @@ import { UNITAG_SUFFIX_NO_LEADING_DOT } from 'uniswap/src/features/unitags/const
 import { buildNativeCurrencyId } from 'uniswap/src/utils/currencyId'
 import { isExtensionApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
-import { CardType, IntroCardGraphicType, IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
+import { CardType, IntroCardGraphicType, IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
 import {
   selectHasDismissedNoAppFeesAnnouncement,
   selectHasSkippedUnitagPrompt,
-} from 'wallet/src/features/behaviorHistory/selectors'
-import { setHasDismissedNoAppFeesAnnouncement } from 'wallet/src/features/behaviorHistory/slice'
-import { useCanActiveAddressClaimUnitag } from 'wallet/src/features/unitags/hooks/useCanActiveAddressClaimUnitag'
-import { useHasAnyAccountsWithUnitag } from 'wallet/src/features/unitags/hooks/useHasAnyAccountsWithUnitag'
-import { useUnitagClaimHandler } from 'wallet/src/features/unitags/useUnitagClaimHandler'
-import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setHasDismissedNoAppFeesAnnouncement } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useCanActiveAddressClaimUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useCanActiveAddressClaimUnitag'
+import { useHasAnyAccountsWithUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useHasAnyAccountsWithUnitag'
+import { useUnitagClaimHandler } from '@luxfi/wallet/src/features/unitags/useUnitagClaimHandler'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type SharedIntroCardsProps = {
   navigateToUnitagClaim: () => void

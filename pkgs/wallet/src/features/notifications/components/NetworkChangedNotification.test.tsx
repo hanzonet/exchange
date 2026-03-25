@@ -1,7 +1,7 @@
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { NetworkChangedNotification } from 'wallet/src/features/notifications/components/NetworkChangedNotification'
-import { renderWithProviders } from 'wallet/src/test/render'
+import { NetworkChangedNotification } from '@luxfi/wallet/src/features/notifications/components/NetworkChangedNotification'
+import { renderWithProviders } from '@luxfi/wallet/src/test/render'
 
 // Mock the account store hooks
 jest.mock('uniswap/src/features/accounts/store/hooks', () => ({

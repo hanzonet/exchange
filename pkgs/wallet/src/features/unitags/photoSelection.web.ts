@@ -1,4 +1,4 @@
-import { AVATAR_IMAGE_STANDARDS } from 'wallet/src/features/unitags/imageConstants'
+import { AVATAR_IMAGE_STANDARDS } from '@luxfi/wallet/src/features/unitags/imageConstants'
 
 // Resize image to meet avatar standards
 function resizeImage(file: File): Promise<string> {

@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { WalletStatus } from 'wallet/src/features/smartWallet/types'
+import { WalletStatus } from '@luxfi/wallet/src/features/smartWallet/types'
 
 export function useTranslateSmartWalletStatus(): (status: WalletStatus) => string {
   const { t } = useTranslation()

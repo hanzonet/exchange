@@ -4,15 +4,15 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useCurrencyInfoWithLoading } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { formatUnits } from 'viem'
-import { UniswapXSwapRequest } from 'wallet/src/components/dappRequests/types/Permit2Types'
+import { UniswapXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
 import {
   ParsedTransactionData,
   TransactionAsset,
   TransactionRiskLevel,
   TransactionSection,
   TransactionSectionType,
-} from 'wallet/src/features/dappRequests/types'
-import { roundToDecimals } from 'wallet/src/features/dappRequests/utils/blockaidUtils'
+} from '@luxfi/wallet/src/features/dappRequests/types'
+import { roundToDecimals } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
 
 interface UseParseUniswapXSwapResult extends ParsedTransactionData {
   /** Whether the hook is still loading currency info */

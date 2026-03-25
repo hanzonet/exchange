@@ -2,8 +2,8 @@ import { logger } from 'utilities/src/logger/logger'
 // This should be the only file that imports `restart`.
 // All other files should import `restartApp` instead.
 // biome-ignore lint/style/noRestrictedImports: This is the wrapper function that should import restart
-import { restart } from 'wallet/src/components/ErrorBoundary/restart'
-import { getReduxPersistor } from 'wallet/src/state/persistor'
+import { restart } from '@luxfi/wallet/src/components/ErrorBoundary/restart'
+import { getReduxPersistor } from '@luxfi/wallet/src/state/persistor'
 
 export const restartApp = async (): Promise<void> => {
   try {

@@ -7,7 +7,7 @@ import { ExplorerDataType, getExplorerLink, openUri } from 'uniswap/src/utils/li
 import { shortenHash } from 'utilities/src/addresses'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { logger } from 'utilities/src/logger/logger'
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface TransactionRequestDetailsProps {
   functionName?: string

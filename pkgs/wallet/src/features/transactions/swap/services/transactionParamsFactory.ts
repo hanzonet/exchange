@@ -14,11 +14,11 @@ import {
   TransactionType,
   WrapTransactionInfo,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { SubmitTransactionParamsWithTypeInfo } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { SubmitUniswapXOrderParams } from 'wallet/src/features/transactions/swap/submitOrderSaga'
-import { SignedPermit } from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
-import { BaseTransactionContext } from 'wallet/src/features/transactions/swap/types/transactionExecutor'
+import { SubmitTransactionParamsWithTypeInfo } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { SubmitUniswapXOrderParams } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
+import { SignedPermit } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
+import { BaseTransactionContext } from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
 
 export interface ApprovalTransactionData {
   signedTx: SignedTransactionRequest

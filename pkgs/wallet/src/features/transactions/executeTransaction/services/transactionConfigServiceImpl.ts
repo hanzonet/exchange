@@ -2,9 +2,9 @@ import { Experiments, FeatureFlags, PrivateRpcProperties } from '@luxexchange/ga
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { DEFAULT_FLASHBOTS_ENABLED } from 'uniswap/src/features/providers/FlashbotsCommon'
 import { logger as loggerUtil } from 'utilities/src/logger/logger'
-import { isPrivateRpcSupportedOnChain } from 'wallet/src/features/providers/utils'
-import { FeatureFlagService } from 'wallet/src/features/transactions/executeTransaction/services/featureFlagService'
-import type { TransactionConfigService } from 'wallet/src/features/transactions/executeTransaction/services/transactionConfigService'
+import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
+import { FeatureFlagService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/featureFlagService'
+import type { TransactionConfigService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/transactionConfigService'
 
 type Logger = typeof loggerUtil
 

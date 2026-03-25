@@ -1,7 +1,7 @@
 import { Flex, Text, useIsDarkMode } from 'ui/src'
 import { imageSizes } from 'ui/src/theme'
 import { UNITAG_SUFFIX } from 'uniswap/src/features/unitags/constants'
-import { UnitagProfilePicture } from 'wallet/src/features/unitags/UnitagProfilePicture'
+import { UnitagProfilePicture } from '@luxfi/wallet/src/features/unitags/UnitagProfilePicture'
 
 export const UnitagWithProfilePicture = ({
   unitag,

@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react'
-import { useThrottledCallback } from 'utilities/src/react/useThrottledCallback'
+import { useThrottledCallback } from '@luxfi/utilities/src/react/useThrottledCallback'
 import { vi } from 'vitest'
 
 describe('useThrottledCallback', () => {

@@ -6,19 +6,19 @@ import { luxUrls } from 'lx/src/constants/urls'
 import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useEvent } from 'utilities/src/react/hooks'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
-import { SmartWalletUnavailableModal } from 'wallet/src/components/smartWallet/modals/SmartWalletUnavailableModal'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { SmartWalletUnavailableModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletUnavailableModal'
 import {
   SmartWalletDelegationAction,
   useSmartWalletDelegationStatus,
-} from 'wallet/src/components/smartWallet/smartAccounts/hooks'
+} from '@luxfi/wallet/src/components/smartWallet/smartAccounts/hooks'
 import {
   setHasDismissedSmartWalletHomeScreenNudge,
   setHasShownSmartWalletHomeScreenNudge,
-} from 'wallet/src/features/behaviorHistory/slice'
-import { type Account } from 'wallet/src/features/wallet/accounts/types'
-import { useDisplayName, useHasSmartWalletConsent } from 'wallet/src/features/wallet/hooks'
-import { setSmartWalletConsent } from 'wallet/src/features/wallet/slice'
+} from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { type Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useDisplayName, useHasSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/hooks'
+import { setSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/slice'
 
 interface SmartWalletUpgradeModalsProps {
   account: Account

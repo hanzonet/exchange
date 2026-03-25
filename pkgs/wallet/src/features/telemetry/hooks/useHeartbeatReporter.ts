@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { areSameDays } from 'utilities/src/time/date'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { useInterval } from 'utilities/src/time/timing'
-import { selectAllowAnalytics, selectLastHeartbeat } from 'wallet/src/features/telemetry/selectors'
-import { recordHeartbeat } from 'wallet/src/features/telemetry/slice'
+import { selectAllowAnalytics, selectLastHeartbeat } from '@luxfi/wallet/src/features/telemetry/selectors'
+import { recordHeartbeat } from '@luxfi/wallet/src/features/telemetry/slice'
 
 /**
  * Returns a function that checks if the app needs to send a heartbeat action to record anonymous DAU

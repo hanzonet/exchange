@@ -1,7 +1,7 @@
 import { SignerMnemonicAccountMeta } from 'uniswap/src/features/accounts/types'
 import { SwapTradeBaseProperties } from 'uniswap/src/features/telemetry/types'
 import { TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { SubmitTransactionParamsWithTypeInfo } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { SubmitTransactionParamsWithTypeInfo } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
 
 export interface BaseTransactionContext {
   chainId: number

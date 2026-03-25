@@ -8,8 +8,8 @@ import { TransactionNotificationBase } from 'uniswap/src/features/notifications/
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { formUnknownTxTitle } from 'wallet/src/features/notifications/utils'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { formUnknownTxTitle } from '@luxfi/wallet/src/features/notifications/utils'
 
 export function UnknownTxNotification({
   notification: { address, chainId, tokenAddress, txStatus, txType, hideDelay },

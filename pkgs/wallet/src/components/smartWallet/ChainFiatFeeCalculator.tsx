@@ -1,4 +1,4 @@
-import { useChainFiatFee } from 'wallet/src/features/smartWallet/hooks/useChainFiatFee'
+import { useChainFiatFee } from '@luxfi/wallet/src/features/smartWallet/hooks/useChainFiatFee'
 
 interface ChainFiatFeeCalculatorProps {
   chainId: number

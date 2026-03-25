@@ -5,8 +5,8 @@ import { Camera, PhotoStacked, Share, Trash } from 'ui/src/components/icons'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import { isExtensionApp } from 'utilities/src/platform'
-import { ChooseNftModal, ChooseNftModalProps } from 'wallet/src/features/unitags/ChooseNftModal'
-import { selectPhotoFromLibrary } from 'wallet/src/features/unitags/photoSelection'
+import { ChooseNftModal, ChooseNftModalProps } from '@luxfi/wallet/src/features/unitags/ChooseNftModal'
+import { selectPhotoFromLibrary } from '@luxfi/wallet/src/features/unitags/photoSelection'
 
 export type ChoosePhotoOptionsProps = {
   address: Maybe<Address>

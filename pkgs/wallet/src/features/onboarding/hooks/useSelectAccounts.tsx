@@ -1,6 +1,6 @@
 import isEqual from 'lodash/isEqual'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { AddressWithBalanceAndName } from 'wallet/src/features/onboarding/hooks/useImportableAccounts'
+import { AddressWithBalanceAndName } from '@luxfi/wallet/src/features/onboarding/hooks/useImportableAccounts'
 
 export function useSelectAccounts(initialAccounts: AddressWithBalanceAndName[] = []): {
   selectedAddresses: string[]

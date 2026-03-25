@@ -2,7 +2,7 @@ import { Keyboard } from 'react-native'
 import {
   closeKeyboardBeforeCallback,
   dismissNativeKeyboard,
-} from 'utilities/src/device/keyboard/dismissNativeKeyboard.native'
+} from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard.native'
 import { type Mock, vi } from 'vitest'
 
 // Mock the react-native Keyboard module

@@ -13,8 +13,8 @@ import {
   TransactionType,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
-import { createTransactionRepositoryRedux } from 'wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepositoryImplRedux'
-import { createSagaEffectRunner } from 'wallet/src/state/createSagaEffectRunner'
+import { createTransactionRepositoryRedux } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepositoryImplRedux'
+import { createSagaEffectRunner } from '@luxfi/wallet/src/state/createSagaEffectRunner'
 
 describe('TransactionRepositoryImplRedux', () => {
   // Create saga middleware for our tests

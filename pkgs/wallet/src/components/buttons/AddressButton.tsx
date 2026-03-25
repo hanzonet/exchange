@@ -4,7 +4,7 @@ import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
 import { useENSName } from 'uniswap/src/features/ens/api'
 import { ExplorerDataType, getExplorerLink } from 'uniswap/src/utils/linking'
 import { shortenAddress } from 'utilities/src/addresses'
-import { LinkButton } from 'wallet/src/components/buttons/LinkButton'
+import { LinkButton } from '@luxfi/wallet/src/components/buttons/LinkButton'
 
 type AddressButtonProps = {
   address: string

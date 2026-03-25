@@ -1,7 +1,7 @@
 import { arrayify, isHexString } from 'ethers/lib/utils'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { SignMessageInfo } from 'wallet/src/features/wallet/signing/signing'
-import { signMessage } from 'wallet/src/features/wallet/signing/signing.web'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SignMessageInfo } from '@luxfi/wallet/src/features/wallet/signing/signing'
+import { signMessage } from '@luxfi/wallet/src/features/wallet/signing/signing.web'
 
 // Mock dependencies
 jest.mock('uniswap/src/features/transactions/signing')

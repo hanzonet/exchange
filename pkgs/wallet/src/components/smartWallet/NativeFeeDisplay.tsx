@@ -1,6 +1,6 @@
 import { Flex } from 'ui/src'
-import { NetworkFeeDisplay } from 'wallet/src/components/smartWallet/NetworkFeeDisplay'
-import { GroupedGasFee } from 'wallet/src/features/smartWallet/utils/gasFeeUtils'
+import { NetworkFeeDisplay } from '@luxfi/wallet/src/components/smartWallet/NetworkFeeDisplay'
+import { GroupedGasFee } from '@luxfi/wallet/src/features/smartWallet/utils/gasFeeUtils'
 
 interface NativeFeeDisplayProps {
   groupedFees: Record<string, GroupedGasFee> | null

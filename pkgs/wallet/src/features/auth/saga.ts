@@ -3,8 +3,8 @@ import { ExtensionEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { createMonitoredSaga } from 'uniswap/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
-import { AuthActionType, AuthSagaError, LockParams, UnlockParams } from 'wallet/src/features/auth/types'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { AuthActionType, AuthSagaError, LockParams, UnlockParams } from '@luxfi/wallet/src/features/auth/types'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 function* auth(params: UnlockParams | LockParams) {
   logger.debug('authSaga', 'auth', `Using monitored auth saga`)

@@ -3,7 +3,7 @@ import { DAI, USDC } from 'uniswap/src/constants/tokens'
 import { Locale } from 'uniswap/src/features/language/constants'
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { mockLocalizedFormatter } from 'uniswap/src/test/mocks'
-import { formSwapNotificationTitle } from 'wallet/src/features/notifications/utils'
+import { formSwapNotificationTitle } from '@luxfi/wallet/src/features/notifications/utils'
 
 const mockFormatter = mockLocalizedFormatter(Locale.EnglishUnitedStates)
 

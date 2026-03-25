@@ -8,7 +8,7 @@ import {
 import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { useSortedPendingTransactions } from 'uniswap/src/features/transactions/hooks/usePendingTransactions'
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const PENDING_TX_TIME_LIMIT = 60_000 * 5 // 5 mins
 const LOADING_SPINNER_SIZE = iconSizes.icon20

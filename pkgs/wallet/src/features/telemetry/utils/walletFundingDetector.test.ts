@@ -1,4 +1,4 @@
-import { isWalletJustFunded } from 'wallet/src/features/telemetry/utils/walletFundingDetector'
+import { isWalletJustFunded } from '@luxfi/wallet/src/features/telemetry/utils/walletFundingDetector'
 
 describe('detectWalletFunding', () => {
   it('should return true when wallet transitions from unfunded to funded', () => {

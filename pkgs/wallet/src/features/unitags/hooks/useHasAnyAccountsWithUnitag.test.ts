@@ -1,7 +1,7 @@
 import { useUnitagsAddressesQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { useHasAnyAccountsWithUnitag } from 'wallet/src/features/unitags/hooks/useHasAnyAccountsWithUnitag'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
-import { renderHook } from 'wallet/src/test/test-utils'
+import { useHasAnyAccountsWithUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useHasAnyAccountsWithUnitag'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 jest.mock('wallet/src/features/wallet/hooks', () => ({
   useSignerAccounts: jest.fn(),

@@ -1,10 +1,10 @@
 import type { Middleware, PreloadedState, Reducer, StoreEnhancer } from '@reduxjs/toolkit'
 import { configureStore } from '@reduxjs/toolkit'
 import createSagaMiddleware, { Saga, SagaIterator, SagaMiddleware } from 'redux-saga'
-import { walletContextValue } from 'wallet/src/features/wallet/context'
-import { createSagaEffectRunner } from 'wallet/src/state/createSagaEffectRunner'
-import { rootWalletSaga } from 'wallet/src/state/saga'
-import { WalletStateReducersOnly } from 'wallet/src/state/walletReducer'
+import { walletContextValue } from '@luxfi/wallet/src/features/wallet/context'
+import { createSagaEffectRunner } from '@luxfi/wallet/src/state/createSagaEffectRunner'
+import { rootWalletSaga } from '@luxfi/wallet/src/state/saga'
+import { WalletStateReducersOnly } from '@luxfi/wallet/src/state/walletReducer'
 
 interface CreateStoreProps {
   reducer: Reducer

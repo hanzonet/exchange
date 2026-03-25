@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
-import { AccountSelectPopover } from 'wallet/src/components/dappRequests/AccountSelectPopover'
-import { DappConnectionPermissions } from 'wallet/src/components/dappRequests/DappConnectionPermissions'
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+import { AccountSelectPopover } from '@luxfi/wallet/src/components/dappRequests/AccountSelectPopover'
+import { DappConnectionPermissions } from '@luxfi/wallet/src/components/dappRequests/DappConnectionPermissions'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface DappConnectionContentProps {
   verificationStatus?: DappVerificationStatus

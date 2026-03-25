@@ -11,7 +11,7 @@ declare module 'react-native' {
 
 import { NativeModules } from 'react-native'
 import { NotImplementedError } from 'utilities/src/errors'
-import { IKeyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { IKeyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 const { RNEthersRS, EmbeddedWallet } = NativeModules
 

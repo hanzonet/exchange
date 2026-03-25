@@ -1,9 +1,9 @@
 import { QRCodeErrorCorrectionLevel } from 'qrcode'
 import { memo, PropsWithChildren } from 'react'
 import { ColorTokens } from 'tamagui'
-import { Flex } from 'ui/src/components/layout'
-import { QRCode } from 'ui/src/components/QRCode/QRCode'
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { QRCode } from '@luxfi/ui/src/components/QRCode/QRCode'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
 
 export type BaseQRProps = {
   ecl?: QRCodeErrorCorrectionLevel

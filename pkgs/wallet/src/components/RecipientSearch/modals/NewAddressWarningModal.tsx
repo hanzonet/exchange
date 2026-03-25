@@ -14,7 +14,7 @@ import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 import { shortenAddress } from 'utilities/src/addresses'
 import { isMobileApp } from 'utilities/src/platform'
-import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type NewAddressWarningModalProps = {
   address: string

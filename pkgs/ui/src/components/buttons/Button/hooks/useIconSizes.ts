@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
 import { getTokenValue } from 'tamagui'
-import { TypeOfButton } from 'ui/src/components/buttons/Button/components/types'
-import { lineHeights } from 'ui/src/components/buttons/Button/constants'
-import { ButtonProps } from 'ui/src/components/buttons/Button/types'
-import { getLineHeightForButtonFontTokenKey } from 'ui/src/components/buttons/Button/utils/getLineHeightForButtonFontTokenKey'
-import { IconButtonProps } from 'ui/src/components/buttons/IconButton/IconButton'
+import { TypeOfButton } from '@luxfi/ui/src/components/buttons/Button/components/types'
+import { lineHeights } from '@luxfi/ui/src/components/buttons/Button/constants'
+import { ButtonProps } from '@luxfi/ui/src/components/buttons/Button/types'
+import { getLineHeightForButtonFontTokenKey } from '@luxfi/ui/src/components/buttons/Button/utils/getLineHeightForButtonFontTokenKey'
+import { IconButtonProps } from '@luxfi/ui/src/components/buttons/IconButton/IconButton'
 
 type Size = NonNullable<ButtonProps['size'] | IconButtonProps['size']>
 

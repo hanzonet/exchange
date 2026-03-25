@@ -4,9 +4,9 @@ import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/Tr
 import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import type { Logger } from 'utilities/src/logger/logger'
-import type { DelegationCheckResult } from 'wallet/src/features/smartWallet/delegation/types'
-import { DelegationType } from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import type { SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+import type { DelegationCheckResult } from '@luxfi/wallet/src/features/smartWallet/delegation/types'
+import { DelegationType } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import type { SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 /**
  * Checks if the account needs delegation on the specified chain

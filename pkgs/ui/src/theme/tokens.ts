@@ -1,15 +1,15 @@
 // until the web app needs all of tamagui, avoid heavy imports there
 // biome-ignore lint/style/noRestrictedImports: until the web app needs all of tamagui, avoid heavy imports there
 import { type ColorTokens, createTokens } from '@tamagui/core'
-import type { DynamicColor } from 'ui/src/hooks/useSporeColors'
-import { borderRadii } from 'ui/src/theme/borderRadii'
-import { colors as color } from 'ui/src/theme/color/colors'
-import { fonts } from 'ui/src/theme/fonts'
-import { iconSizes } from 'ui/src/theme/iconSizes'
-import { imageSizes } from 'ui/src/theme/imageSizes'
-import { gap, padding, spacing } from 'ui/src/theme/spacing'
-import { themes } from 'ui/src/theme/themes'
-import { zIndexes } from 'ui/src/theme/zIndexes'
+import type { DynamicColor } from '@luxfi/ui/src/hooks/useSporeColors'
+import { borderRadii } from '@luxfi/ui/src/theme/borderRadii'
+import { colors as color } from '@luxfi/ui/src/theme/color/colors'
+import { fonts } from '@luxfi/ui/src/theme/fonts'
+import { iconSizes } from '@luxfi/ui/src/theme/iconSizes'
+import { imageSizes } from '@luxfi/ui/src/theme/imageSizes'
+import { gap, padding, spacing } from '@luxfi/ui/src/theme/spacing'
+import { themes } from '@luxfi/ui/src/theme/themes'
+import { zIndexes } from '@luxfi/ui/src/theme/zIndexes'
 
 const space = { ...spacing, ...padding, ...gap, true: spacing.spacing8 }
 

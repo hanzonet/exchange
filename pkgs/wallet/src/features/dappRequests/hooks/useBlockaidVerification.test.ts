@@ -1,8 +1,8 @@
 import { waitFor } from '@testing-library/react-native'
 import { BlockaidApiClient } from 'uniswap/src/data/apiClients/blockaidApi/BlockaidApiClient'
-import { useBlockaidVerification } from 'wallet/src/features/dappRequests/hooks/useBlockaidVerification'
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
-import { renderHook } from 'wallet/src/test/test-utils'
+import { useBlockaidVerification } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidVerification'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
+import { renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 jest.mock('uniswap/src/data/apiClients/blockaidApi/BlockaidApiClient', () => ({
   BlockaidApiClient: {

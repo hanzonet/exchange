@@ -12,14 +12,14 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { ensure0xHex } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
-import { TransactionService } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import { waitForTransactionConfirmation } from 'wallet/src/features/transactions/swap/confirmation'
+import { TransactionService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { waitForTransactionConfirmation } from '@luxfi/wallet/src/features/transactions/swap/confirmation'
 import {
   createTransactionExecutor,
   TransactionExecutor,
-} from 'wallet/src/features/transactions/swap/services/transactionExecutor'
-import { TransactionStep, TransactionStepType } from 'wallet/src/features/transactions/swap/types/transactionExecutor'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxfi/wallet/src/features/transactions/swap/services/transactionExecutor'
+import { TransactionStep, TransactionStepType } from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 // Mock dependencies
 jest.mock('utilities/src/logger/logger')

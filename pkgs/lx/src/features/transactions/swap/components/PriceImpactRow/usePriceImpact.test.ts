@@ -1,11 +1,11 @@
 import { CurrencyAmount, Percent } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
-import { DAI, USDC } from 'lx/src/constants/tokens'
-import { usePriceImpact } from 'lx/src/features/transactions/swap/components/PriceImpactRow/usePriceImpact'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { Trade, TradeWithStatus } from 'lx/src/features/transactions/swap/types/trade'
-import { renderHook } from 'lx/src/test/test-utils'
-import { CurrencyField } from 'lx/src/types/currency'
+import { DAI, USDC } from '@luxexchange/lx/src/constants/tokens'
+import { usePriceImpact } from '@luxexchange/lx/src/features/transactions/swap/components/PriceImpactRow/usePriceImpact'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { Trade, TradeWithStatus } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const mockDEXTrade = {
   quote: {

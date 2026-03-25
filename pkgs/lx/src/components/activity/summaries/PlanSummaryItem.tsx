@@ -10,8 +10,8 @@ import {
   type PlanTransactionInfo,
   type TransactionDetails,
   TransactionStatus,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount } from '@luxexchange/lx/src/utils/currency'
 
 /**
  * Component used in the activity history to display the top level details of a plan transaction.

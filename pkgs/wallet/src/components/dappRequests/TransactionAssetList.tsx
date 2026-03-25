@@ -11,9 +11,9 @@ import { ExplorerDataType, getExplorerLink, openUri } from 'lx/src/utils/linking
 import { shortenAddress } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
 import { logger } from 'utilities/src/logger/logger'
-import { AssetLogo } from 'wallet/src/components/dappRequests/AssetLogo'
-import type { GroupedApprovalAsset } from 'wallet/src/components/dappRequests/TransactionApprovingSection'
-import type { TransactionAsset } from 'wallet/src/features/dappRequests/types'
+import { AssetLogo } from '@luxfi/wallet/src/components/dappRequests/AssetLogo'
+import type { GroupedApprovalAsset } from '@luxfi/wallet/src/components/dappRequests/TransactionApprovingSection'
+import type { TransactionAsset } from '@luxfi/wallet/src/features/dappRequests/types'
 
 /**
  * Popover component showing approval details for multiple addresses

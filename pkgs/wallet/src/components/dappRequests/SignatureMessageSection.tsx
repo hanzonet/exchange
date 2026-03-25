@@ -7,7 +7,7 @@ import { Signature } from 'ui/src/components/icons'
 import { fonts, spacing } from 'ui/src/theme'
 import { CopyNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { isWebPlatform } from 'utilities/src/platform'
-import { useCopyToClipboard } from 'wallet/src/components/copy/useCopyToClipboard'
+import { useCopyToClipboard } from '@luxfi/wallet/src/components/copy/useCopyToClipboard'
 
 interface SignatureMessageSectionProps {
   message: string

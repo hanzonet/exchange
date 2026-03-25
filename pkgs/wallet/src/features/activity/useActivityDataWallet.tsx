@@ -8,10 +8,10 @@ import {
 } from 'uniswap/src/features/activity/hooks/useActivityData'
 import { useMostRecentSwapTx } from 'uniswap/src/features/transactions/swap/hooks/useMostRecentSwapTx'
 import type { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useRestOnRampAuth } from 'wallet/src/features/activity/useRestOnRampAuth'
-import { useCreateSwapFormState } from 'wallet/src/features/transactions/hooks/useCreateSwapFormState'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useRestOnRampAuth } from '@luxfi/wallet/src/features/activity/useRestOnRampAuth'
+import { useCreateSwapFormState } from '@luxfi/wallet/src/features/transactions/hooks/useCreateSwapFormState'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function useActivityDataWallet(
   props: Omit<UseActivityDataProps, 'swapCallbacks' | 'ownerAddresses' | 'fiatOnRampParams'>,

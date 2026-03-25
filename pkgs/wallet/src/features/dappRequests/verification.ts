@@ -1,4 +1,4 @@
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
 
 /**
  * Merges multiple verification statuses, prioritizing the most severe status

@@ -1,8 +1,8 @@
 import { AddressZero } from '@ethersproject/constants'
 import { Contract } from '@ethersproject/contracts'
 import { JsonRpcProvider } from '@ethersproject/providers'
-import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { getContract } from 'utilities/src/contracts/getContract'
+import { isEVMAddressWithChecksum } from '@luxfi/utilities/src/addresses/evm/evm'
+import { getContract } from '@luxfi/utilities/src/contracts/getContract'
 import { type Mock, vi } from 'vitest'
 
 vi.mock('@ethersproject/contracts', () => ({

@@ -8,9 +8,9 @@ import { NOTIFICATION_ICON_SIZE } from 'uniswap/src/features/notifications/const
 import { TransferNFTTxNotification } from 'uniswap/src/features/notifications/slice/types'
 import { TransactionStatus, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isAndroid } from 'utilities/src/platform'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { formTransferNFTNotificationTitle } from 'wallet/src/features/notifications/utils'
-import { useActiveAccountAddressWithThrow, useDisplayName } from 'wallet/src/features/wallet/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { formTransferNFTNotificationTitle } from '@luxfi/wallet/src/features/notifications/utils'
+import { useActiveAccountAddressWithThrow, useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const platformAdjustedUnitagYPosition = isAndroid ? -1 : -2
 

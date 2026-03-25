@@ -1,5 +1,5 @@
 import type { Percent } from '@luxamm/sdk-core'
-import type { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
+import type { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
 
 export function formatPriceImpact(
   priceImpact: Percent,

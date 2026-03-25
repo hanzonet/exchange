@@ -4,8 +4,8 @@ import { DappResponseType } from 'uniswap/src/features/dappRequests/types'
 import { EthTransaction } from 'uniswap/src/types/walletConnect'
 import { numberToHex } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
-import { Capability } from 'wallet/src/features/dappRequests/types'
-import { isFreshDelegation } from 'wallet/src/features/smartWallet/delegation/utils'
+import { Capability } from '@luxfi/wallet/src/features/dappRequests/types'
+import { isFreshDelegation } from '@luxfi/wallet/src/features/smartWallet/delegation/utils'
 
 /**
  * Generates a random batch ID in the format of 0x followed by 64 hex characters

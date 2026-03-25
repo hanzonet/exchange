@@ -5,8 +5,8 @@ import {
   filterRecipientByNameAndAddress,
   filterRecipientsByAddress,
   filterRecipientsByName,
-} from 'wallet/src/components/RecipientSearch/filter'
-import { searchableRecipient } from 'wallet/src/test/fixtures'
+} from '@luxfi/wallet/src/components/RecipientSearch/filter'
+import { searchableRecipient } from '@luxfi/wallet/src/test/fixtures'
 
 const recipient1 = searchableRecipient({ name: 'Recipient 1 name', address: '0x123456' })
 const recipient2 = searchableRecipient({ name: 'Recipient 2 name', address: '0x789012' })

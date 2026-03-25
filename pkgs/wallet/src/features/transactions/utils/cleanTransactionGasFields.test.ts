@@ -2,7 +2,7 @@ import { providers } from 'ethers'
 import {
   cleanTransactionGasFields,
   EthereumTransactionType,
-} from 'wallet/src/features/transactions/utils/cleanTransactionGasFields'
+} from '@luxfi/wallet/src/features/transactions/utils/cleanTransactionGasFields'
 
 describe('cleanTransactionGasFields', () => {
   describe('EIP-1559 transactions', () => {

@@ -1,14 +1,14 @@
 import { forwardRef } from 'react'
 import { type TamaguiElement, withStaticProperties } from 'tamagui'
-import { useLayoutAnimationOnChange } from 'ui/src/animations'
-import { CustomButtonFrame } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
-import { CustomButtonText } from 'ui/src/components/buttons/Button/components/CustomButtonText/CustomButtonText'
-import { ThemedIcon } from 'ui/src/components/buttons/Button/components/ThemedIcon'
-import { ThemedSpinningLoader } from 'ui/src/components/buttons/Button/components/ThemedSpinnerLoader'
-import { useIsStringOrTransTag } from 'ui/src/components/buttons/Button/hooks/useIsStringOrTransTag'
-import type { ButtonProps } from 'ui/src/components/buttons/Button/types'
-import { getIconPosition } from 'ui/src/components/buttons/Button/utils/getIconPosition'
-import { getIsButtonDisabled } from 'ui/src/components/buttons/Button/utils/getIsButtonDisabled'
+import { useLayoutAnimationOnChange } from '@luxfi/ui/src/animations'
+import { CustomButtonFrame } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
+import { CustomButtonText } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonText/CustomButtonText'
+import { ThemedIcon } from '@luxfi/ui/src/components/buttons/Button/components/ThemedIcon'
+import { ThemedSpinningLoader } from '@luxfi/ui/src/components/buttons/Button/components/ThemedSpinnerLoader'
+import { useIsStringOrTransTag } from '@luxfi/ui/src/components/buttons/Button/hooks/useIsStringOrTransTag'
+import type { ButtonProps } from '@luxfi/ui/src/components/buttons/Button/types'
+import { getIconPosition } from '@luxfi/ui/src/components/buttons/Button/utils/getIconPosition'
+import { getIsButtonDisabled } from '@luxfi/ui/src/components/buttons/Button/utils/getIsButtonDisabled'
 
 const ButtonComponent = forwardRef<TamaguiElement, ButtonProps>(function Button(
   {

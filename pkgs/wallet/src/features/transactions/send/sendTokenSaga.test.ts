@@ -13,12 +13,12 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { getTxFixtures } from 'uniswap/src/test/fixtures'
 import { noOpFunction } from 'utilities/src/test/utils'
-import { executeTransaction } from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { sendToken } from 'wallet/src/features/transactions/send/sendTokenSaga'
-import { SendCurrencyParams, SendNFTParams } from 'wallet/src/features/transactions/send/types'
-import { getContractManager, getProvider } from 'wallet/src/features/wallet/context'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
-import { getTxProvidersMocks, mockContractManager } from 'wallet/src/test/mocks'
+import { executeTransaction } from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { sendToken } from '@luxfi/wallet/src/features/transactions/send/sendTokenSaga'
+import { SendCurrencyParams, SendNFTParams } from '@luxfi/wallet/src/features/transactions/send/types'
+import { getContractManager, getProvider } from '@luxfi/wallet/src/features/wallet/context'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+import { getTxProvidersMocks, mockContractManager } from '@luxfi/wallet/src/test/mocks'
 
 jest.mock('uniswap/src/features/telemetry/send')
 

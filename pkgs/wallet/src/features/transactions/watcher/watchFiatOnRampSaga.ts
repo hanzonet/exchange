@@ -5,9 +5,9 @@ import { setNotificationStatus } from 'uniswap/src/features/notifications/slice/
 import { forceFetchFiatOnRampTransactions, upsertFiatOnRampTransaction } from 'uniswap/src/features/transactions/slice'
 import { TransactionStatus, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
-import { fetchFORTransaction } from 'wallet/src/features/fiatOnRamp/api'
-import { deleteTransaction } from 'wallet/src/features/transactions/watcher/transactionSagaUtils'
-import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+import { fetchFORTransaction } from '@luxfi/wallet/src/features/fiatOnRamp/api'
+import { deleteTransaction } from '@luxfi/wallet/src/features/transactions/watcher/transactionSagaUtils'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
 
 export function* watchFiatOnRampTransaction(transaction: FORTransactionDetails): Generator<unknown> {
   const { id } = transaction

@@ -12,7 +12,7 @@ import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledCh
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { ensure0xHex } from 'utilities/src/addresses/hex'
 import { isNonEmptyArray, NonEmptyArray } from 'utilities/src/primitives/array'
-import { createAccountsStoreGetters } from 'wallet/src/features/accounts/store/getters'
+import { createAccountsStoreGetters } from '@luxfi/wallet/src/features/accounts/store/getters'
 import {
   DerivedAddresses,
   LocalConnector,
@@ -20,15 +20,15 @@ import {
   MnemonicWallet,
   ReadonlyWallet,
   WalletAppsAccountsData,
-} from 'wallet/src/features/accounts/store/types'
-import { useGetSwapDelegationInfoForActiveAccount } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
+} from '@luxfi/wallet/src/features/accounts/store/types'
+import { useGetSwapDelegationInfoForActiveAccount } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
 import {
   Account as ReduxAccount,
   SignerMnemonicAccount as ReduxSignerMnemonicAccount,
-} from 'wallet/src/features/wallet/accounts/types'
-import { useActiveAccount as useActiveReduxAccount } from 'wallet/src/features/wallet/hooks'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
-import { WalletState } from 'wallet/src/state/walletReducer'
+} from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useActiveAccount as useActiveReduxAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 /**
  * Wallet package implementation of the unified accounts store architecture.

@@ -34,8 +34,8 @@ import { isFinalizedPlanTXDetails } from 'uniswap/src/features/transactions/type
 import { currencyIdToChain } from 'uniswap/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { getDiff, getOptionalTransactionProperty, getPercentageError } from 'wallet/src/features/transactions/utils'
-import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+import { getDiff, getOptionalTransactionProperty, getPercentageError } from '@luxfi/wallet/src/features/transactions/utils'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
 
 export function* finalizeTransaction({
   apolloClient,

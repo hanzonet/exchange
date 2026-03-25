@@ -5,9 +5,9 @@ import {
   TransactionType,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { receiveTokenTransactionInfo } from 'uniswap/src/test/fixtures'
-import { buildReceiveNotification } from 'wallet/src/features/notifications/buildReceiveNotification'
-import { createFinalizedTxAction } from 'wallet/src/features/notifications/notificationWatcherSaga.test'
-import { receiveCurrencyTxNotification, receiveNFTNotification, signerMnemonicAccount } from 'wallet/src/test/fixtures'
+import { buildReceiveNotification } from '@luxfi/wallet/src/features/notifications/buildReceiveNotification'
+import { createFinalizedTxAction } from '@luxfi/wallet/src/features/notifications/notificationWatcherSaga.test'
+import { receiveCurrencyTxNotification, receiveNFTNotification, signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 const account = signerMnemonicAccount()
 

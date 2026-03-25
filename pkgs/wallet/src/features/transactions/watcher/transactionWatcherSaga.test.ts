@@ -6,10 +6,10 @@ import { addTransaction, updateTransaction } from 'uniswap/src/features/transact
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { approveTransactionInfo, transactionDetails as txDetailsFixture } from 'uniswap/src/test/fixtures'
 import { mockApolloClient } from 'uniswap/src/test/mocks'
-import { transactionWatcher } from 'wallet/src/features/transactions/watcher/transactionWatcherSaga'
-import { watchTransaction } from 'wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
-import { getProvider, getProviderManager } from 'wallet/src/features/wallet/context'
-import { getTxProvidersMocks } from 'wallet/src/test/mocks'
+import { transactionWatcher } from '@luxfi/wallet/src/features/transactions/watcher/transactionWatcherSaga'
+import { watchTransaction } from '@luxfi/wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
+import { getProvider, getProviderManager } from '@luxfi/wallet/src/features/wallet/context'
+import { getTxProvidersMocks } from '@luxfi/wallet/src/test/mocks'
 
 const ACTIVE_ACCOUNT_ADDRESS = '0x000000000000000000000000000000000000000001'
 

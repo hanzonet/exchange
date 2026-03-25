@@ -9,14 +9,14 @@ import { AppNotificationType } from 'uniswap/src/features/notifications/slice/ty
 import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
-import { createTransactionServices } from 'wallet/src/features/transactions/factories/createTransactionServices'
+import { createTransactionServices } from '@luxfi/wallet/src/features/transactions/factories/createTransactionServices'
 
 import {
   getShouldWaitBetweenTransactions,
   getSwapTransactionCount,
-} from 'wallet/src/features/transactions/swap/confirmation'
-import { createExecuteSwapSaga } from 'wallet/src/features/transactions/swap/executeSwapSaga'
-import { submitUniswapXOrder } from 'wallet/src/features/transactions/swap/submitOrderSaga'
+} from '@luxfi/wallet/src/features/transactions/swap/confirmation'
+import { createExecuteSwapSaga } from '@luxfi/wallet/src/features/transactions/swap/executeSwapSaga'
+import { submitUniswapXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import {
   mockSignerAccount as account,
   createMockSignedApproveTx,
@@ -35,12 +35,12 @@ import {
   prepareSwapTxContext,
   prepareUniswapXPreSignedSwapTransaction,
   prepareUniswapXSwapTxContext,
-} from 'wallet/src/features/transactions/swap/types/fixtures'
+} from '@luxfi/wallet/src/features/transactions/swap/types/fixtures'
 import {
   type TransactionExecutionResult,
   TransactionStepType,
-} from 'wallet/src/features/transactions/swap/types/transactionExecutor'
-import { DelegationType } from 'wallet/src/features/transactions/types/transactionSagaDependencies'
+} from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
+import { DelegationType } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 
 // Mock dependencies
 jest.mock('wallet/src/features/transactions/factories/createTransactionServices')

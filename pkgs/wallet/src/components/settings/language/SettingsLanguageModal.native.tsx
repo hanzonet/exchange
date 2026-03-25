@@ -7,7 +7,7 @@ import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { isAndroid } from 'utilities/src/platform'
-import { SettingsLanguageModalProps } from 'wallet/src/components/settings/language/SettingsLanguageModalProps'
+import { SettingsLanguageModalProps } from '@luxfi/wallet/src/components/settings/language/SettingsLanguageModalProps'
 
 const openLanguageSettings = async (): Promise<void> => {
   if (isAndroid) {

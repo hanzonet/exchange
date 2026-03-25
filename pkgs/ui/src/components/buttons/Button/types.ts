@@ -1,6 +1,6 @@
 import type { GetProps } from 'tamagui'
-import { CustomButtonFrame } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
-import type { FlexProps } from 'ui/src/components/layout'
+import { CustomButtonFrame } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/CustomButtonFrame'
+import type { FlexProps } from '@luxfi/ui/src/components/layout'
 
 export type ButtonVariant = 'default' | 'branded' | 'critical' | 'warning'
 export type ButtonEmphasis = 'primary' | 'secondary' | 'tertiary' | 'text-only'

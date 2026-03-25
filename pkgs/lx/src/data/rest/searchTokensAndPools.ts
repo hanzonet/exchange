@@ -13,18 +13,18 @@ import {
 } from '@luxdex/client-search/dist/search/v1/api_pb'
 import { searchTokens } from '@luxdex/client-search/dist/search/v1/api-searchService_connectquery'
 import { parseProtectionInfo, parseRestProtocolVersion, parseSafetyLevel, SharedQueryClient } from '@luxfi/api'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { luxPostTransport } from 'lx/src/data/rest/base'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { luxPostTransport } from '@luxexchange/lx/src/data/rest/base'
 import { createLogger } from 'utilities/src/logger/logger'
 
 const FILE_NAME = 'searchTokensAndPools.ts'
 
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { PoolSearchHistoryResult, SearchHistoryResultType } from 'lx/src/features/search/SearchHistoryResult'
-import { buildCurrencyId, currencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { PoolSearchHistoryResult, SearchHistoryResultType } from '@luxexchange/lx/src/features/search/SearchHistoryResult'
+import { buildCurrencyId, currencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
 import { ONE_DAY_MS, ONE_HOUR_MS } from 'utilities/src/time/time'
 
 /**

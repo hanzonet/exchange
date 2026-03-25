@@ -1,5 +1,5 @@
 import { ExperimentProperties, FeatureFlags, getExperimentValue, getFeatureFlag } from '@luxexchange/gating'
-import { FeatureFlagService } from 'wallet/src/features/transactions/executeTransaction/services/featureFlagService'
+import { FeatureFlagService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/featureFlagService'
 
 export const createFeatureFlagService = (): FeatureFlagService => {
   return {

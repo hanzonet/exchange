@@ -1,7 +1,7 @@
 /* biome-ignore-all lint/suspicious/noExplicitAny: Third-party types not available */
 import { StoreEnhancerStoreCreator } from 'redux'
-import { PlatformSplitStubError } from 'utilities/src/errors'
-import { LoggerErrorContext, LogLevel } from 'utilities/src/logger/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
+import { LoggerErrorContext, LogLevel } from '@luxfi/utilities/src/logger/types'
 
 export interface ReduxEnhancerConfig {
   shouldLogReduxState: (state: any) => boolean

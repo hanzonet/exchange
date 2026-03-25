@@ -5,15 +5,15 @@ import type { ValidatedTransactionRequest } from 'uniswap/src/features/transacti
 import type {
   PrepareTransactionParams,
   TransactionService,
-} from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import type { TransactionSigner } from 'wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
-import type { CalculatedNonce } from 'wallet/src/features/transactions/executeTransaction/tryGetNonce'
-import type { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { createTransactionServices } from 'wallet/src/features/transactions/factories/createTransactionServices'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import type { TransactionSigner } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
+import type { CalculatedNonce } from '@luxfi/wallet/src/features/transactions/executeTransaction/tryGetNonce'
+import type { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { createTransactionServices } from '@luxfi/wallet/src/features/transactions/factories/createTransactionServices'
 import type {
   DelegationType,
   TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 
 /**
  * Common metadata for all transaction types

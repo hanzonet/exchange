@@ -1,7 +1,7 @@
 import { Children, ReactNode, useEffect, useState } from 'react'
 import { AnimatePresence, styled } from 'tamagui'
-import { Flex } from 'ui/src/components/layout'
-import { animations } from 'ui/src/theme/animations'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { animations } from '@luxfi/ui/src/theme/animations'
 import { usePrevious } from 'utilities/src/react/hooks'
 
 type TransitionDirection = 'forward' | 'backward' | 'up' | 'down'

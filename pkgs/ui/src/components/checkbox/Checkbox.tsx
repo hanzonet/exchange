@@ -6,10 +6,10 @@ import {
   Checkbox as TamaguiCheckbox,
   CheckboxProps as TamaguiCheckboxPops,
 } from 'tamagui'
-import { Check } from 'ui/src/components/icons'
-import { Flex, FlexProps } from 'ui/src/components/layout'
-import { SporeComponentVariant } from 'ui/src/components/types'
-import { IconSizeTokens } from 'ui/src/theme'
+import { Check } from '@luxfi/ui/src/components/icons'
+import { Flex, FlexProps } from '@luxfi/ui/src/components/layout'
+import { SporeComponentVariant } from '@luxfi/ui/src/components/types'
+import { IconSizeTokens } from '@luxfi/ui/src/theme'
 import { isTestEnv } from 'utilities/src/environment/env'
 import { v4 as uuid } from 'uuid'
 

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import ContextMenu from 'react-native-context-menu-view'
-import { type DappEllipsisDropdownProps } from 'wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
-import { DappEllipsisDropdownIcon } from 'wallet/src/components/settings/DappEllipsisDropdown/internal/DappEllipsisDropdownIcon'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { type DappEllipsisDropdownProps } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
+import { DappEllipsisDropdownIcon } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/internal/DappEllipsisDropdownIcon'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function DappEllipsisDropdown({
   removeAllDappConnections,

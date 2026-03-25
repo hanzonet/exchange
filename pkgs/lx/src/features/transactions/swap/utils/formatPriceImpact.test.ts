@@ -1,5 +1,5 @@
 import { Percent } from '@luxamm/sdk-core'
-import { formatPriceImpact } from 'lx/src/features/transactions/swap/utils/formatPriceImpact'
+import { formatPriceImpact } from '@luxexchange/lx/src/features/transactions/swap/utils/formatPriceImpact'
 
 describe('formatPriceImpact', () => {
   // Accepts Maybe<string | number> and returns string

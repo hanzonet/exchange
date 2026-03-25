@@ -4,19 +4,19 @@ import { Flex, Text, TouchableArea } from 'ui/src'
 import { ContractInteraction, RotatableChevron } from 'ui/src/components/icons'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { TransactionApprovingSection } from 'wallet/src/components/dappRequests/TransactionApprovingSection'
+import { TransactionApprovingSection } from '@luxfi/wallet/src/components/dappRequests/TransactionApprovingSection'
 import {
   TransactionErrorSection,
   TransactionErrorType,
-} from 'wallet/src/components/dappRequests/TransactionErrorSection'
-import { TransactionReceivingSection } from 'wallet/src/components/dappRequests/TransactionReceivingSection'
-import { TransactionRequestDetails } from 'wallet/src/components/dappRequests/TransactionRequestDetails'
-import { TransactionSendingSection } from 'wallet/src/components/dappRequests/TransactionSendingSection'
+} from '@luxfi/wallet/src/components/dappRequests/TransactionErrorSection'
+import { TransactionReceivingSection } from '@luxfi/wallet/src/components/dappRequests/TransactionReceivingSection'
+import { TransactionRequestDetails } from '@luxfi/wallet/src/components/dappRequests/TransactionRequestDetails'
+import { TransactionSendingSection } from '@luxfi/wallet/src/components/dappRequests/TransactionSendingSection'
 import {
   TransactionRiskLevel,
   TransactionSection,
   TransactionSectionType,
-} from 'wallet/src/features/dappRequests/types'
+} from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface TransactionPreviewCardProps {
   sections?: TransactionSection[]

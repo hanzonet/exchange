@@ -15,8 +15,8 @@ import { makeSelectAddressTransactions } from 'uniswap/src/features/transactions
 import { isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
-import { isPrivateRpcSupportedOnChain } from 'wallet/src/features/providers/utils'
-import { getPrivateProvider, getProvider } from 'wallet/src/features/wallet/context'
+import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
+import { getPrivateProvider, getProvider } from '@luxfi/wallet/src/features/wallet/context'
 
 export interface CalculatedNonce {
   nonce: number

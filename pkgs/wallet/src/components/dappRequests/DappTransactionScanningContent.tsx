@@ -3,19 +3,19 @@ import { useEffect, useMemo } from 'react'
 import { Flex } from 'ui/src'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import type { EthTransaction } from 'uniswap/src/types/walletConnect'
-import { DappRequestFooter } from 'wallet/src/components/dappRequests/DappRequestFooter'
-import { TransactionErrorType } from 'wallet/src/components/dappRequests/TransactionErrorSection'
-import { TransactionLoadingState } from 'wallet/src/components/dappRequests/TransactionLoadingState'
-import { TransactionPreviewCard } from 'wallet/src/components/dappRequests/TransactionPreviewCard'
-import { useBlockaidTransactionScan } from 'wallet/src/features/dappRequests/hooks/useBlockaidTransactionScan'
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { DappRequestFooter } from '@luxfi/wallet/src/components/dappRequests/DappRequestFooter'
+import { TransactionErrorType } from '@luxfi/wallet/src/components/dappRequests/TransactionErrorSection'
+import { TransactionLoadingState } from '@luxfi/wallet/src/components/dappRequests/TransactionLoadingState'
+import { TransactionPreviewCard } from '@luxfi/wallet/src/components/dappRequests/TransactionPreviewCard'
+import { useBlockaidTransactionScan } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidTransactionScan'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 import {
   determineTransactionErrorType,
   extractContractName,
   extractFunctionName,
   parseTransactionSections,
-} from 'wallet/src/features/dappRequests/utils/blockaidUtils'
-import { buildBlockaidScanTransactionRequest } from 'wallet/src/features/dappRequests/utils/buildBlockaidScanTransactionRequest'
+} from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
+import { buildBlockaidScanTransactionRequest } from '@luxfi/wallet/src/features/dappRequests/utils/buildBlockaidScanTransactionRequest'
 
 interface DappTransactionScanningContentProps {
   transaction: EthTransaction

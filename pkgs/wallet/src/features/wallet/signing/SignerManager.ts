@@ -1,6 +1,6 @@
 import { AccountMeta, AccountType } from 'uniswap/src/features/accounts/types'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
-import { NativeSigner } from 'wallet/src/features/wallet/signing/NativeSigner'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { NativeSigner } from '@luxfi/wallet/src/features/wallet/signing/NativeSigner'
 
 /** Manages initialized ethers.Signers across the app */
 export class SignerManager {

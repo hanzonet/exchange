@@ -8,7 +8,7 @@ import { DerivedSendInfo } from 'uniswap/src/features/transactions/send/types'
 import i18n from 'uniswap/src/i18n'
 import { uniCurrencyInfo } from 'uniswap/src/test/fixtures'
 import { CurrencyField } from 'uniswap/src/types/currency'
-import { getSendWarnings } from 'wallet/src/features/transactions/send/hooks/useSendWarnings'
+import { getSendWarnings } from '@luxfi/wallet/src/features/transactions/send/hooks/useSendWarnings'
 
 const ETH = nativeOnChain(UniverseChainId.Mainnet)
 

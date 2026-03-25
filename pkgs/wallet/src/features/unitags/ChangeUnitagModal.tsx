@@ -24,12 +24,12 @@ import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNati
 import { uniqueIdQuery } from 'utilities/src/device/uniqueIdQuery'
 import { logger } from 'utilities/src/logger/logger'
 import { isAndroid, isExtensionApp, isMobileApp } from 'utilities/src/platform'
-import { ModalBackButton } from 'wallet/src/components/modals/ModalBackButton'
-import { ChangeUnitagConfirmButton } from 'wallet/src/features/unitags/ChangeUnitagConfirmButton'
-import { useCanAddressClaimUnitag } from 'wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
-import { useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useAccount } from 'wallet/src/features/wallet/hooks'
-import { generateSignerFunc } from 'wallet/src/features/wallet/signing/utils'
+import { ModalBackButton } from '@luxfi/wallet/src/components/modals/ModalBackButton'
+import { ChangeUnitagConfirmButton } from '@luxfi/wallet/src/features/unitags/ChangeUnitagConfirmButton'
+import { useCanAddressClaimUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
+import { useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { generateSignerFunc } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 export function ChangeUnitagModal({
   unitag,

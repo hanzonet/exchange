@@ -1,6 +1,6 @@
 import type { GestureResponderEvent } from 'react-native'
-import { ClickableWithinGestureProps } from 'ui/src/components/swipeablecards/props'
-import { TouchableArea } from 'ui/src/components/touchable'
+import { ClickableWithinGestureProps } from '@luxfi/ui/src/components/swipeablecards/props'
+import { TouchableArea } from '@luxfi/ui/src/components/touchable'
 
 export function ClickableWithinGesture({ onPress, children }: ClickableWithinGestureProps): JSX.Element {
   const onPressWithPropagationStop = (e: GestureResponderEvent): void => {

@@ -1,5 +1,5 @@
 import { useUnitagsAddressesQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function useHasAnyAccountsWithUnitag(): boolean {
   const accounts = useSignerAccounts()

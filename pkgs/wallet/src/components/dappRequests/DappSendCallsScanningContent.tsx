@@ -2,20 +2,20 @@ import type { BlockaidScanJsonRpcRequest, GasFeeResult } from '@luxexchange/api'
 import { useEffect, useMemo } from 'react'
 import { Flex } from 'ui/src'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { DappRequestFooter } from 'wallet/src/components/dappRequests/DappRequestFooter'
-import { TransactionErrorType } from 'wallet/src/components/dappRequests/TransactionErrorSection'
-import { TransactionLoadingState } from 'wallet/src/components/dappRequests/TransactionLoadingState'
-import { TransactionPreviewCard } from 'wallet/src/components/dappRequests/TransactionPreviewCard'
-import { useBlockaidJsonRpcScan } from 'wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
-import type { Call } from 'wallet/src/features/dappRequests/types'
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { DappRequestFooter } from '@luxfi/wallet/src/components/dappRequests/DappRequestFooter'
+import { TransactionErrorType } from '@luxfi/wallet/src/components/dappRequests/TransactionErrorSection'
+import { TransactionLoadingState } from '@luxfi/wallet/src/components/dappRequests/TransactionLoadingState'
+import { TransactionPreviewCard } from '@luxfi/wallet/src/components/dappRequests/TransactionPreviewCard'
+import { useBlockaidJsonRpcScan } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
+import type { Call } from '@luxfi/wallet/src/features/dappRequests/types'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 import {
   determineTransactionErrorType,
   extractContractName,
   extractFunctionName,
   parseTransactionSections,
-} from 'wallet/src/features/dappRequests/utils/blockaidUtils'
-import { buildBlockaidScanJsonRpcRequest } from 'wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
+} from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
+import { buildBlockaidScanJsonRpcRequest } from '@luxfi/wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
 
 interface DappSendCallsScanningContentProps {
   calls: Call[]

@@ -20,8 +20,8 @@ import { TransactionDetails } from 'uniswap/src/features/transactions/Transactio
 import type {
   FeeOnTransferFeeGroupProps,
   TokenWarningProps,
-} from 'lx/src/features/transactions/TransactionDetails/types'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/TransactionDetails/types'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import { isMobileApp, isMobileWeb } from 'utilities/src/platform'
 
 interface SwapDetailsProps {

@@ -1,7 +1,7 @@
 // Disabling this because we need access to `chrome` in the global scope.
 /* biome-ignore-all lint/style/noRestrictedGlobals: we need access to `chrome` in the global scope */
 
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export function getChrome(): typeof chrome | undefined {
   throw new PlatformSplitStubError('getChrome')

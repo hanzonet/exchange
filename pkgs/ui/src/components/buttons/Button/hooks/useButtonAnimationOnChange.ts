@@ -1,4 +1,4 @@
-import { useLayoutAnimationOnChange } from 'ui/src/animations'
+import { useLayoutAnimationOnChange } from '@luxfi/ui/src/animations'
 
 export const useButtonAnimationOnChange = ({
   shouldAnimateBetweenLoadingStates,

@@ -15,11 +15,11 @@ import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing
 import { QueuedOrderStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import i18n from 'uniswap/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
-import { attemptCancelRemoteUniswapXOrder } from 'wallet/src/features/transactions/cancelTransactionSaga'
-import { isFORTransaction } from 'wallet/src/features/transactions/utils'
-import { OrderWatcher } from 'wallet/src/features/transactions/watcher/orderWatcherSaga'
-import { watchFiatOnRampTransaction } from 'wallet/src/features/transactions/watcher/watchFiatOnRampSaga'
-import { watchTransaction } from 'wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
+import { attemptCancelRemoteUniswapXOrder } from '@luxfi/wallet/src/features/transactions/cancelTransactionSaga'
+import { isFORTransaction } from '@luxfi/wallet/src/features/transactions/utils'
+import { OrderWatcher } from '@luxfi/wallet/src/features/transactions/watcher/orderWatcherSaga'
+import { watchFiatOnRampTransaction } from '@luxfi/wallet/src/features/transactions/watcher/watchFiatOnRampSaga'
+import { watchTransaction } from '@luxfi/wallet/src/features/transactions/watcher/watchOnChainTransactionSaga'
 
 /**
  * Main transaction watcher saga.

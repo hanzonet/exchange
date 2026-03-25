@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface UseTypedDataWarningConfirmationParams {
   isNonStandard: boolean

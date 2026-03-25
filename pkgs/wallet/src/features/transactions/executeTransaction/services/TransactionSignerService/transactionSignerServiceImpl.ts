@@ -4,17 +4,17 @@ import { signTypedData as signTypedDataFunction } from 'uniswap/src/features/tra
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 import { HexString } from 'utilities/src/addresses/hex'
 import { PublicClient } from 'viem'
-import { DelegationCheckResult } from 'wallet/src/features/smartWallet/delegation/types'
+import { DelegationCheckResult } from '@luxfi/wallet/src/features/smartWallet/delegation/types'
 import {
   convertToEIP7702,
   createSignedAuthorization,
   signAndSerializeEIP7702Transaction,
-} from 'wallet/src/features/transactions/executeTransaction/eip7702Utils'
-import type { Provider } from 'wallet/src/features/transactions/executeTransaction/services/providerService'
-import type { TransactionSigner } from 'wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
-import { cleanTransactionGasFields } from 'wallet/src/features/transactions/utils/cleanTransactionGasFields'
-import { NativeSigner } from 'wallet/src/features/wallet/signing/NativeSigner'
-import type { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/eip7702Utils'
+import type { Provider } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/providerService'
+import type { TransactionSigner } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
+import { cleanTransactionGasFields } from '@luxfi/wallet/src/features/transactions/utils/cleanTransactionGasFields'
+import { NativeSigner } from '@luxfi/wallet/src/features/wallet/signing/NativeSigner'
+import type { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 export function createTransactionSignerService(ctx: {
   getAccount: () => SignerMnemonicAccountMeta

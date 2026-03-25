@@ -1,4 +1,4 @@
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface ShouldDisableConfirmParams {
   /**

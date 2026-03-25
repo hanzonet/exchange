@@ -1,5 +1,5 @@
 import { GetProps } from 'tamagui'
-import { Text } from 'ui/src/components/text'
+import { Text } from '@luxfi/ui/src/components/text'
 
 const gradientStyle = `
   .uniswapx-gradient {

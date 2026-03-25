@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* biome-ignore-all lint/suspicious/noExplicitAny: legacy code needs review */
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import {
   SearchHistoryResultType,
   type WalletByAddressSearchHistoryResult,
-} from 'lx/src/features/search/SearchHistoryResult'
-import { searchResultId } from 'lx/src/features/search/searchHistorySlice'
+} from '@luxexchange/lx/src/features/search/SearchHistoryResult'
+import { searchResultId } from '@luxexchange/lx/src/features/search/searchHistorySlice'
 import {
   type SerializedTokenMap,
   type TokenDismissInfo,
   type TokenWarningDismissal,
-} from 'lx/src/features/tokens/warnings/slice/types'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { createSafeMigrationFactory } from 'lx/src/state/createSafeMigration'
-import { PreV55SearchResultType } from 'lx/src/state/oldTypes'
-import { getValidAddress } from 'lx/src/utils/addresses'
+} from '@luxexchange/lx/src/features/tokens/warnings/slice/types'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { createSafeMigrationFactory } from '@luxexchange/lx/src/state/createSafeMigration'
+import { PreV55SearchResultType } from '@luxexchange/lx/src/state/oldTypes'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
 
 const createSafeMigration = createSafeMigrationFactory('luxMigrations')
 

@@ -2,9 +2,9 @@ import { call, fork, join } from 'typed-redux-saga'
 import { ALL_EVM_CHAIN_IDS } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { logger } from 'utilities/src/logger/logger'
-import { ProviderManager } from 'wallet/src/features/providers/ProviderManager'
-import { ViemClientManager } from 'wallet/src/features/providers/ViemClientManager'
-import { getProviderManager, getViemClientManager } from 'wallet/src/features/wallet/context'
+import { ProviderManager } from '@luxfi/wallet/src/features/providers/ProviderManager'
+import { ViemClientManager } from '@luxfi/wallet/src/features/providers/ViemClientManager'
+import { getProviderManager, getViemClientManager } from '@luxfi/wallet/src/features/wallet/context'
 
 // Initialize Ethers providers for the chains the wallet interacts with
 export function* initProviders() {

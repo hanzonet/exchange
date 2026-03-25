@@ -19,16 +19,16 @@ import { prepareSwapFormState } from 'lx/src/features/transactions/types/transac
 import { CurrencyField } from 'lx/src/types/currency'
 import { getLogger, logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useAccountsStoreContext } from 'wallet/src/features/accounts/store/provider'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useAccountsStoreContext } from '@luxfi/wallet/src/features/accounts/store/provider'
 import {
   useGetSwapDelegationInfoForActiveAccount,
   WalletDelegationProvider,
-} from 'wallet/src/features/smartWallet/WalletDelegationProvider'
-import { useShowSwapNetworkNotification } from 'wallet/src/features/transactions/swap/hooks/useShowSwapNetworkNotification'
-import { useProvider, useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useActiveAccount, useActiveSignerAccount, useDisplayName } from 'wallet/src/features/wallet/hooks'
-import { NativeSigner } from 'wallet/src/features/wallet/signing/NativeSigner'
+} from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
+import { useShowSwapNetworkNotification } from '@luxfi/wallet/src/features/transactions/swap/hooks/useShowSwapNetworkNotification'
+import { useProvider, useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useActiveAccount, useActiveSignerAccount, useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
+import { NativeSigner } from '@luxfi/wallet/src/features/wallet/signing/NativeSigner'
 
 // Adapts useProvider to fit lux context requirement of returning undefined instead of null
 function useWalletProvider(chainId: number): ethers.providers.JsonRpcProvider | undefined {

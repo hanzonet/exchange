@@ -3,8 +3,8 @@ import { Flex, Text, TouchableArea } from 'ui/src'
 import { AddressDisplay } from 'uniswap/src/components/accounts/AddressDisplay'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { useAllTransactionsBetweenAddresses } from 'wallet/src/features/transactions/hooks/useAllTransactionsBetweenAddresses'
-import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useAllTransactionsBetweenAddresses } from '@luxfi/wallet/src/features/transactions/hooks/useAllTransactionsBetweenAddresses'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 interface RecipientInputPanelProps {
   recipientAddress: string

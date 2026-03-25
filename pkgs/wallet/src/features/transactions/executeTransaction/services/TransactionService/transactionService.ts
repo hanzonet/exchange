@@ -8,9 +8,9 @@ import {
   TransactionOriginType,
   TransactionTypeInfo,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
-import type { ExecuteTransactionParams } from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import type { CalculatedNonce } from 'wallet/src/features/transactions/executeTransaction/tryGetNonce'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
+import type { ExecuteTransactionParams } from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import type { CalculatedNonce } from '@luxfi/wallet/src/features/transactions/executeTransaction/tryGetNonce'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
 
 export interface PrepareTransactionParams {
   chainId: UniverseChainId

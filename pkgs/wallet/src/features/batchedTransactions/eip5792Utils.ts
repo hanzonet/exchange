@@ -2,8 +2,8 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { SagaGenerator, select } from 'typed-redux-saga'
 import { selectTransactions } from 'uniswap/src/features/transactions/selectors'
 import { TransactionDetails, TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { selectBatchedTransactionById } from 'wallet/src/features/batchedTransactions/selectors'
-import { GetCallsStatusResult } from 'wallet/src/features/dappRequests/types'
+import { selectBatchedTransactionById } from '@luxfi/wallet/src/features/batchedTransactions/selectors'
+import { GetCallsStatusResult } from '@luxfi/wallet/src/features/dappRequests/types'
 
 // Helper function to map transaction status to EIP-5792 status
 export function mapTransactionStatusToEip5792Status(status: TransactionStatus): string {

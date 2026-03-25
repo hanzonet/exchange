@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useUnitagsClaimEligibilityQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsClaimEligibilityQuery'
 import { uniqueIdQuery } from 'utilities/src/device/uniqueIdQuery'
-import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export const useCanActiveAddressClaimUnitag = (
   address?: Address,

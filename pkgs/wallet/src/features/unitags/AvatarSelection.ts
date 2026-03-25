@@ -2,7 +2,7 @@ import { GraphQLApi } from '@luxexchange/api'
 import { NUM_FIRST_NFTS } from 'uniswap/src/components/nfts/constants'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { formatNftItems } from 'uniswap/src/features/nfts/utils'
-import { selectPhotoFromLibrary } from 'wallet/src/features/unitags/photoSelection'
+import { selectPhotoFromLibrary } from '@luxfi/wallet/src/features/unitags/photoSelection'
 
 export function useAvatarSelectionHandler({
   address,

@@ -1,5 +1,5 @@
 import { ImageLibraryOptions, launchImageLibrary } from 'react-native-image-picker'
-import { AVATAR_IMAGE_STANDARDS } from 'wallet/src/features/unitags/imageConstants'
+import { AVATAR_IMAGE_STANDARDS } from '@luxfi/wallet/src/features/unitags/imageConstants'
 
 // Selected image will be shrunk to max width/height
 // URI will then be for an image of those dimensions

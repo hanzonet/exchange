@@ -2,7 +2,7 @@ import { Store } from '@reduxjs/toolkit'
 import { ReactNode } from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
 import { SharedPersistQueryClientProvider } from 'uniswap/src/data/apiClients/SharedPersistQueryClientProvider'
-import { TamaguiProvider } from 'wallet/src/providers/tamagui-provider'
+import { TamaguiProvider } from '@luxfi/wallet/src/providers/tamagui-provider'
 
 interface SharedProviderProps {
   children: ReactNode

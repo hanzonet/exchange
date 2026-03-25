@@ -9,10 +9,10 @@ import type {
   TransactionTypeInfo,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
-import type { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { createTransactionSagaDependencies } from 'wallet/src/features/transactions/factories/createTransactionSagaDependencies'
-import { createTransactionServices } from 'wallet/src/features/transactions/factories/createTransactionServices'
-import { DelegationType } from 'wallet/src/features/transactions/types/transactionSagaDependencies'
+import type { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { createTransactionSagaDependencies } from '@luxfi/wallet/src/features/transactions/factories/createTransactionSagaDependencies'
+import { createTransactionServices } from '@luxfi/wallet/src/features/transactions/factories/createTransactionServices'
+import { DelegationType } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 
 export interface ExecuteTransactionParams {
   // internal id used for tracking transactions before they're submitted

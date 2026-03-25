@@ -3,8 +3,8 @@ import { AppearanceSettingType, setSelectedAppearanceSettings } from 'uniswap/sr
 import { addFavoriteToken } from 'uniswap/src/features/favorites/slice'
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
 import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { createWalletStateResetter } from 'wallet/src/state/createWalletStateResetter'
-import { type WalletStateReducersOnly, walletRootReducer } from 'wallet/src/state/walletReducer'
+import { createWalletStateResetter } from '@luxfi/wallet/src/state/createWalletStateResetter'
+import { type WalletStateReducersOnly, walletRootReducer } from '@luxfi/wallet/src/state/walletReducer'
 
 describe('createWalletStateResetter', () => {
   let store: ReturnType<typeof configureStore<WalletStateReducersOnly>>

@@ -31,8 +31,8 @@ import {
   SendElement,
   SwapElement,
   UniconElement,
-} from 'wallet/src/components/landing/elements'
-import { InnerCircleGradient, OuterCircleGradient } from 'wallet/src/components/landing/landingBackgroundGradients'
+} from '@luxfi/wallet/src/components/landing/elements'
+import { InnerCircleGradient, OuterCircleGradient } from '@luxfi/wallet/src/components/landing/landingBackgroundGradients'
 
 const DEFAULT_INNER_CIRCLE_SIZE = 120
 const DEFAULT_OUTER_CIRCLE_SIZE = 215

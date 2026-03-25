@@ -1,12 +1,12 @@
 import { call, SagaGenerator } from 'typed-redux-saga'
 import { logger } from 'utilities/src/logger/logger'
-import { TransactionService } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import { waitForTransactionConfirmation } from 'wallet/src/features/transactions/swap/confirmation'
+import { TransactionService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { waitForTransactionConfirmation } from '@luxfi/wallet/src/features/transactions/swap/confirmation'
 import {
   TransactionExecutionResult,
   TransactionExecutionSyncResult,
   TransactionStep,
-} from 'wallet/src/features/transactions/swap/types/transactionExecutor'
+} from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
 
 /**
  * Interface for unified transaction executor that handles submission and spacing for all transaction types

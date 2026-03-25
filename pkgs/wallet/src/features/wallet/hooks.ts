@@ -2,9 +2,9 @@ import { useEffect, useMemo, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { AccountType, DisplayName, DisplayNameType } from 'uniswap/src/features/accounts/types'
 import { useOnchainDisplayName, WalletDisplayNameOptions } from 'uniswap/src/features/accounts/useOnchainDisplayName'
-import useIsFocused from 'wallet/src/features/focus/useIsFocused'
-import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+import useIsFocused from '@luxfi/wallet/src/features/focus/useIsFocused'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 import {
   makeSelectAccountNotificationSetting,
   selectAccounts,
@@ -15,9 +15,9 @@ import {
   selectSignerMnemonicAccounts,
   selectViewOnlyAccounts,
   selectWalletSwapProtectionSetting,
-} from 'wallet/src/features/wallet/selectors'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
-import { WalletState } from 'wallet/src/state/walletReducer'
+} from '@luxfi/wallet/src/features/wallet/selectors'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 export function useAccounts(): Record<string, Account> {
   return useSelector(selectAccounts)

@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { selectPositionsVisibility } from 'lx/src/features/visibility/selectors'
-import { getUniquePositionId } from 'lx/src/features/visibility/utils'
-import { LuxRootState } from 'lx/src/state'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { selectPositionsVisibility } from '@luxexchange/lx/src/features/visibility/selectors'
+import { getUniquePositionId } from '@luxexchange/lx/src/features/visibility/utils'
+import { LuxRootState } from '@luxexchange/lx/src/state'
 
 type VisibilityCheckParams = {
   poolId: string

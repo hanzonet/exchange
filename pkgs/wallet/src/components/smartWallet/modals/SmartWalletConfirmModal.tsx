@@ -5,10 +5,10 @@ import { SmartWallet } from 'ui/src/components/icons'
 import { ExcludedNetworkBanner } from 'uniswap/src/components/banners/ExcludedNetworkBanner'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { isExtensionApp } from 'utilities/src/platform'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
-import { NetworkInfo } from 'wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
-import { RemoveDelegationTotalFee } from 'wallet/src/features/smartWallet/RemoveDelegationTotalFee'
-import { AddressFooter } from 'wallet/src/features/transactions/TransactionRequest/AddressFooter'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { NetworkInfo } from '@luxfi/wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
+import { RemoveDelegationTotalFee } from '@luxfi/wallet/src/features/smartWallet/RemoveDelegationTotalFee'
+import { AddressFooter } from '@luxfi/wallet/src/features/transactions/TransactionRequest/AddressFooter'
 
 /**
  * Props for the SmartWalletConfirmModal component.

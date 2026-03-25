@@ -6,37 +6,37 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCountry } from 'react-native-localize'
 import { useDispatch } from 'react-redux'
-import { useCurrencies } from 'lx/src/components/TokenSelector/hooks/useCurrencies'
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { toSupportedChainId } from 'lx/src/features/chains/utils'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { useAppFiatCurrencyInfo, useFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
+import { useCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencies'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { useAppFiatCurrencyInfo, useFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
 import {
   useFiatOnRampAggregatorCryptoQuoteQuery,
   useFiatOnRampAggregatorGetCountryQuery,
   useFiatOnRampAggregatorSupportedFiatCurrenciesQuery,
   useFiatOnRampAggregatorSupportedTokensQuery,
-} from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
-import { FiatCurrencyInfo, FiatOnRampCurrency } from 'lx/src/features/fiatOnRamp/types'
+} from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { FiatCurrencyInfo, FiatOnRampCurrency } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import {
   createOnRampTransactionId,
   isFiatOnRampApiError,
   isInvalidRequestAmountTooHigh,
   isInvalidRequestAmountTooLow,
-} from 'lx/src/features/fiatOnRamp/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { addTransaction } from 'lx/src/features/transactions/slice'
+} from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { addTransaction } from '@luxexchange/lx/src/features/transactions/slice'
 import {
   TransactionDetails,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
-import { areCurrencyIdsEqual, buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount } from '@luxexchange/lx/src/utils/currency'
+import { areCurrencyIdsEqual, buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
 import { useDebounce } from 'utilities/src/time/timing'
 

@@ -12,13 +12,13 @@ import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { MAX_REACT_QUERY_CACHE_TIME_MS, ONE_HOUR_MS } from 'utilities/src/time/time'
-import { type DelegationCheckResult } from 'wallet/src/features/smartWallet/delegation/types'
+import { type DelegationCheckResult } from '@luxfi/wallet/src/features/smartWallet/delegation/types'
 import {
   doesAccountNeedDelegationForChain,
   isNonUniswapDelegation,
-} from 'wallet/src/features/smartWallet/delegation/utils'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
-import { selectSortedSignerMnemonicAccounts } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/smartWallet/delegation/utils'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectSortedSignerMnemonicAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 type DelegationDetailsByAccount = Record<Address, Partial<Record<UniverseChainId, DelegationCheckResult>>>
 

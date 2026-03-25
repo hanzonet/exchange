@@ -1,7 +1,7 @@
 import { toContainAllValues, toContainValue } from 'jest-extended'
 import { act } from 'react-test-renderer'
-import { useSelectAccounts } from 'wallet/src/features/onboarding/hooks/useSelectAccounts'
-import { renderHook } from 'wallet/src/test/test-utils'
+import { useSelectAccounts } from '@luxfi/wallet/src/features/onboarding/hooks/useSelectAccounts'
+import { renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 expect.extend({ toContainAllValues, toContainValue })
 

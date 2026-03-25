@@ -1,5 +1,5 @@
 import { REACTOR_ADDRESS_MAPPING } from '@uniswap/uniswapx-sdk'
-import { TypeDefinitionSchema } from 'wallet/src/components/dappRequests/types/EIP712Types'
+import { TypeDefinitionSchema } from '@luxfi/wallet/src/components/dappRequests/types/EIP712Types'
 import { z } from 'zod'
 
 const MessageSchema = z.object({

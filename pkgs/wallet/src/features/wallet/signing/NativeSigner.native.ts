@@ -7,7 +7,7 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
 import { areAddressesEqual, ensureLeading0x } from 'uniswap/src/utils/addresses'
 import { HexString, isValidHexString } from 'utilities/src/addresses/hex'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring.native'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring.native'
 
 // A signer that uses native keystore to access keys
 export class NativeSigner extends Signer {

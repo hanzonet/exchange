@@ -3,7 +3,7 @@ import { Flex, Text } from 'ui/src'
 import { CheckCircleFilled } from 'ui/src/components/icons/CheckCircleFilled'
 import { zIndexes } from 'ui/src/theme'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
 
 interface SmartWalletEnabledModalProps {
   isOpen: boolean

@@ -3,8 +3,8 @@ import {
   type AppStateResetterContext,
   createAppStateResetter,
 } from 'uniswap/src/state/createAppStateResetter'
-import { clearBatchedTransactions } from 'wallet/src/features/batchedTransactions/slice'
-import { resetWalletBehaviorHistory } from 'wallet/src/features/behaviorHistory/slice'
+import { clearBatchedTransactions } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { resetWalletBehaviorHistory } from '@luxfi/wallet/src/features/behaviorHistory/slice'
 
 /**
  * An extension of createAppStateResetter for wallet apps

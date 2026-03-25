@@ -1,4 +1,4 @@
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 /** Dismisses the keyboard on the mobile app. No-ops on other platforms. */
 export function dismissNativeKeyboard(): void {

@@ -24,24 +24,24 @@ import {
 import { isFinalizedTx, isPlanTransactionDetails } from 'uniswap/src/features/transactions/types/utils'
 import i18n from 'uniswap/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
-import { cancelPlanStep as cancelPlanStepSaga } from 'wallet/src/features/transactions/cancelPlanStepSaga'
-import { attemptCancelTransaction } from 'wallet/src/features/transactions/cancelTransactionSaga'
-import { attemptReplaceTransaction } from 'wallet/src/features/transactions/replaceTransactionSaga'
-import { processTransactionReceipt } from 'wallet/src/features/transactions/utils'
-import { OrderWatcher } from 'wallet/src/features/transactions/watcher/orderWatcherSaga'
+import { cancelPlanStep as cancelPlanStepSaga } from '@luxfi/wallet/src/features/transactions/cancelPlanStepSaga'
+import { attemptCancelTransaction } from '@luxfi/wallet/src/features/transactions/cancelTransactionSaga'
+import { attemptReplaceTransaction } from '@luxfi/wallet/src/features/transactions/replaceTransactionSaga'
+import { processTransactionReceipt } from '@luxfi/wallet/src/features/transactions/utils'
+import { OrderWatcher } from '@luxfi/wallet/src/features/transactions/watcher/orderWatcherSaga'
 import {
   finalizeTransaction,
   logTransactionTimeout,
-} from 'wallet/src/features/transactions/watcher/transactionFinalizationSaga'
-import { deleteTransaction } from 'wallet/src/features/transactions/watcher/transactionSagaUtils'
-import { waitForBridgingStatus } from 'wallet/src/features/transactions/watcher/watchBridgeSaga'
-import { watchForAppBackgrounded } from 'wallet/src/features/transactions/watcher/watchForAppBackgroundedSaga'
+} from '@luxfi/wallet/src/features/transactions/watcher/transactionFinalizationSaga'
+import { deleteTransaction } from '@luxfi/wallet/src/features/transactions/watcher/transactionSagaUtils'
+import { waitForBridgingStatus } from '@luxfi/wallet/src/features/transactions/watcher/watchBridgeSaga'
+import { watchForAppBackgrounded } from '@luxfi/wallet/src/features/transactions/watcher/watchForAppBackgroundedSaga'
 import {
   updateTransactionWithReceipt,
   waitForReceiptWithSmartPolling,
   waitForTransactionStatus,
-} from 'wallet/src/features/transactions/watcher/watchTransactionSaga'
-import { getProvider } from 'wallet/src/features/wallet/context'
+} from '@luxfi/wallet/src/features/transactions/watcher/watchTransactionSaga'
+import { getProvider } from '@luxfi/wallet/src/features/wallet/context'
 
 /**
  * Flashbots transactions won't return a receipt until they're included, and will fail silently.

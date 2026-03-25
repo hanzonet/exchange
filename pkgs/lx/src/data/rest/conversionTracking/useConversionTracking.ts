@@ -7,13 +7,13 @@ import { useLocation } from 'react-router'
 import {
   CONVERSION_LEADS_EXPIRATION_MS,
   CONVERSION_LEADS_STORAGE_KEY,
-} from 'lx/src/data/rest/conversionTracking/constants'
-import { buildProxyRequest } from 'lx/src/data/rest/conversionTracking/tracking'
-import { ConversionLead, PlatformIdType, TrackConversionArgs } from 'lx/src/data/rest/conversionTracking/types'
-import { useConversionProxy } from 'lx/src/data/rest/conversionTracking/useConversionProxy'
-import { getExternalConversionLeadsCookie } from 'lx/src/data/rest/conversionTracking/utils'
-import { LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+} from '@luxexchange/lx/src/data/rest/conversionTracking/constants'
+import { buildProxyRequest } from '@luxexchange/lx/src/data/rest/conversionTracking/tracking'
+import { ConversionLead, PlatformIdType, TrackConversionArgs } from '@luxexchange/lx/src/data/rest/conversionTracking/types'
+import { useConversionProxy } from '@luxexchange/lx/src/data/rest/conversionTracking/useConversionProxy'
+import { getExternalConversionLeadsCookie } from '@luxexchange/lx/src/data/rest/conversionTracking/utils'
+import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { HexString } from 'utilities/src/addresses/hex'
 
 const conversionLeadsAtom = atomWithStorage<ConversionLead[]>(CONVERSION_LEADS_STORAGE_KEY, [])

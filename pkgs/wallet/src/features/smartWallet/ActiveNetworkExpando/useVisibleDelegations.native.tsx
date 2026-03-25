@@ -3,11 +3,11 @@ import {
   INITIAL_VISIBLE_ITEMS_MOBILE,
   MAX_VISIBLE_HEIGHT_MOBILE,
   ROW_HEIGHT,
-} from 'wallet/src/features/smartWallet/ActiveNetworkExpando/constants'
+} from '@luxfi/wallet/src/features/smartWallet/ActiveNetworkExpando/constants'
 import {
   UseVisibleDelegationsParams,
   UseVisibleDelegationsResult,
-} from 'wallet/src/features/smartWallet/ActiveNetworkExpando/useVisibleDelegations'
+} from '@luxfi/wallet/src/features/smartWallet/ActiveNetworkExpando/useVisibleDelegations'
 
 export function useVisibleDelegations({ data }: UseVisibleDelegationsParams): UseVisibleDelegationsResult {
   const [visibleItemCount, setVisibleItemCount] = useState(INITIAL_VISIBLE_ITEMS_MOBILE)

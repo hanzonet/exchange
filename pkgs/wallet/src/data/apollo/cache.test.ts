@@ -2,7 +2,7 @@ import { InMemoryCache } from '@apollo/client'
 import { persistCache } from 'apollo3-cache-persist'
 import { PersistentStorage } from 'apollo3-cache-persist/lib/types'
 import { setupSharedApolloCache } from 'uniswap/src/data/cache'
-import { initAndPersistCache, shouldResetCache, storeCacheVersion } from 'wallet/src/data/apollo/cache'
+import { initAndPersistCache, shouldResetCache, storeCacheVersion } from '@luxfi/wallet/src/data/apollo/cache'
 
 // Mock external dependencies
 jest.mock('@apollo/client')

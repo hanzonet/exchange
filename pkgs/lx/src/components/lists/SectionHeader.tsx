@@ -9,8 +9,8 @@ import { Pools } from 'ui/src/components/icons/Pools'
 import { Search } from 'ui/src/components/icons/Search'
 import { Shuffle } from 'ui/src/components/icons/Shuffle'
 import { TrendUp } from 'ui/src/components/icons/TrendUp'
-import { OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { isAndroid } from 'utilities/src/platform'
 
 export type SectionHeaderProps = {

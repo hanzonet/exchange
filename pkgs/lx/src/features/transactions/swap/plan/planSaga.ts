@@ -25,12 +25,12 @@ import {
   unlockPlanExecution,
   updateGlobalStateProofPending,
   updateGlobalStateWithLatestSteps,
-} from 'lx/src/features/transactions/swap/plan/planSagaUtils'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/planSagaUtils'
 import {
   logPlanStepTradeAnalytics,
   logDEXPlanOrderSubmitted,
-} from 'lx/src/features/transactions/swap/plan/planStepAnalytics'
-import { TransactionAndPlanStep } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/planStepAnalytics'
+import { TransactionAndPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
 import {
   AbortPlanError,
   ExpectedPlanError,
@@ -38,10 +38,10 @@ import {
   PlanPriceChangeInterrupt,
   type PlanSagaAnalytics,
   ShouldRetryPlanError,
-} from 'lx/src/features/transactions/swap/plan/types'
-import { findFirstActionableStep } from 'lx/src/features/transactions/swap/plan/utils'
-import { WatchPlanStepParams, watchPlanStep } from 'lx/src/features/transactions/swap/plan/watchPlanStepSaga'
-import { ValidatedChainedSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/types'
+import { findFirstActionableStep } from '@luxexchange/lx/src/features/transactions/swap/plan/utils'
+import { WatchPlanStepParams, watchPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/watchPlanStepSaga'
+import { ValidatedChainedSwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
 import {
   isChained,
   planStepTypeToTradingRoute,

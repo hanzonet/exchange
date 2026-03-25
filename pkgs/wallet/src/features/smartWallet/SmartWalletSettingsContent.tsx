@@ -9,16 +9,16 @@ import { shortenAddress } from 'utilities/src/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { SmartWalletEducationalModal } from 'wallet/src/components/smartWallet/modals/SmartWalletEducationalModal'
-import { useSmartWalletData } from 'wallet/src/features/smartWallet/hooks/useSmartWalletData'
-import { useTranslateSmartWalletStatus } from 'wallet/src/features/smartWallet/hooks/useTranslateSmartWalletStatus'
+import { SmartWalletEducationalModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletEducationalModal'
+import { useSmartWalletData } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletData'
+import { useTranslateSmartWalletStatus } from '@luxfi/wallet/src/features/smartWallet/hooks/useTranslateSmartWalletStatus'
 import {
   SmartWalletModalsManager,
   useSmartWalletModals,
-} from 'wallet/src/features/smartWallet/SmartWalletModalsManager'
-import { SmartWalletModalState, type WalletData, WalletStatus } from 'wallet/src/features/smartWallet/types'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
-import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/smartWallet/SmartWalletModalsManager'
+import { SmartWalletModalState, type WalletData, WalletStatus } from '@luxfi/wallet/src/features/smartWallet/types'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 function WalletItem({ wallet, onPress }: { wallet: WalletData; onPress: (wallet: WalletData) => void }): JSX.Element {
   const getTranslatedStatus = useTranslateSmartWalletStatus()

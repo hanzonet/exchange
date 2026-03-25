@@ -4,8 +4,8 @@ import { Flex, Text, TouchableArea } from 'ui/src'
 import { RotatableChevron } from 'ui/src/components/icons'
 import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
 import { ExplorerDataType, getExplorerLink } from 'uniswap/src/utils/linking'
-import { DomainContent } from 'wallet/src/components/dappRequests/SignTypedData/DomainContent'
-import { MaybeExplorerLinkedAddress } from 'wallet/src/components/dappRequests/SignTypedData/MaybeExplorerLinkedAddress'
+import { DomainContent } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/DomainContent'
+import { MaybeExplorerLinkedAddress } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/MaybeExplorerLinkedAddress'
 
 interface Permit2ContentProps {
   typedData: string

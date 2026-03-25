@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useIsSupportedChainIdCallback } from 'uniswap/src/features/chains/hooks/useSupportedChainId'
 import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { ActiveDelegation, WalletData } from 'wallet/src/features/smartWallet/types'
+import { ActiveDelegation, WalletData } from '@luxfi/wallet/src/features/smartWallet/types'
 
 export function useEnabledActiveNetworkDelegations(
   walletActiveNetworks: WalletData['activeDelegationNetworkToAddress'],

@@ -1,7 +1,7 @@
 import { Wallet } from 'ui/src/components/icons'
 import { OnboardingCardLoggingName } from 'uniswap/src/features/telemetry/types'
-import { CardType, IntroCard, IntroCardGraphicType, IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
-import { render, screen } from 'wallet/src/test/test-utils'
+import { CardType, IntroCard, IntroCardGraphicType, IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { render, screen } from '@luxfi/wallet/src/test/test-utils'
 
 describe(IntroCard, () => {
   it('should render the passed values', () => {

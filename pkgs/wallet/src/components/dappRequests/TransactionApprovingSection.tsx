@@ -6,9 +6,9 @@ import { ApproveAlt, Clear } from 'ui/src/components/icons'
 import type { LocalizationContextState } from 'uniswap/src/features/language/LocalizationContext'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
-import { TransactionAssetList } from 'wallet/src/components/dappRequests/TransactionAssetList'
-import { type TransactionAsset, TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
-import { UNLIMITED_APPROVAL_AMOUNT } from 'wallet/src/features/dappRequests/utils/blockaidUtils'
+import { TransactionAssetList } from '@luxfi/wallet/src/components/dappRequests/TransactionAssetList'
+import { type TransactionAsset, TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { UNLIMITED_APPROVAL_AMOUNT } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
 
 interface TransactionApprovingSectionProps {
   assets: TransactionAsset[]

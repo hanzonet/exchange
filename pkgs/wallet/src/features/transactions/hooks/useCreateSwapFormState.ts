@@ -4,7 +4,7 @@ import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { useSelectTransaction } from 'uniswap/src/features/transactions/hooks/useSelectTransaction'
 import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
-import { createSwapFormFromTxDetails } from 'wallet/src/features/transactions/swap/createSwapFormFromTxDetails'
+import { createSwapFormFromTxDetails } from '@luxfi/wallet/src/features/transactions/swap/createSwapFormFromTxDetails'
 
 export function useCreateSwapFormState({
   address,

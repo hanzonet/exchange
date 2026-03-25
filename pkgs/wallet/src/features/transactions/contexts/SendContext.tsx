@@ -17,10 +17,10 @@ import { TransactionType } from 'uniswap/src/features/transactions/types/transac
 import { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { currencyAddress } from 'uniswap/src/utils/currencyId'
-import { useDerivedSendInfo } from 'wallet/src/features/transactions/send/hooks/useDerivedSendInfo'
-import { useSendTransactionRequest } from 'wallet/src/features/transactions/send/hooks/useSendTransactionRequest'
-import { useSendWarnings } from 'wallet/src/features/transactions/send/hooks/useSendWarnings'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useDerivedSendInfo } from '@luxfi/wallet/src/features/transactions/send/hooks/useDerivedSendInfo'
+import { useSendTransactionRequest } from '@luxfi/wallet/src/features/transactions/send/hooks/useSendTransactionRequest'
+import { useSendWarnings } from '@luxfi/wallet/src/features/transactions/send/hooks/useSendWarnings'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export const getDefaultSendState = (defaultChainId: UniverseChainId): Readonly<TransactionState> => ({
   [CurrencyField.INPUT]: {

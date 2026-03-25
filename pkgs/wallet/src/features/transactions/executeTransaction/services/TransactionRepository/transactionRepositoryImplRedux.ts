@@ -12,8 +12,8 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import type { UniswapState } from 'uniswap/src/state/uniswapReducer'
 import { logger } from 'utilities/src/logger/logger'
-import type { TransactionRepository } from 'wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepository'
-import { RunSagaEffect } from 'wallet/src/state/createSagaEffectRunner'
+import type { TransactionRepository } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepository'
+import { RunSagaEffect } from '@luxfi/wallet/src/state/createSagaEffectRunner'
 
 interface TransactionRepositoryReduxContext {
   actions: typeof transactionActions

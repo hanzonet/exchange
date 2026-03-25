@@ -1,12 +1,12 @@
 import type { BlockaidScanJsonRpcRequest } from '@luxexchange/api'
 import { useMemo } from 'react'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isUniswapXSwapRequest, UniswapXSwapRequest } from 'wallet/src/components/dappRequests/types/Permit2Types'
-import { useBlockaidJsonRpcScan } from 'wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
-import { useParseUniswapXSwap } from 'wallet/src/features/dappRequests/hooks/useParseUniswapXSwap'
-import type { ParsedTransactionData } from 'wallet/src/features/dappRequests/types'
-import { parseTransactionSections } from 'wallet/src/features/dappRequests/utils/blockaidUtils'
-import { buildBlockaidScanJsonRpcRequest } from 'wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
+import { isUniswapXSwapRequest, UniswapXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
+import { useBlockaidJsonRpcScan } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
+import { useParseUniswapXSwap } from '@luxfi/wallet/src/features/dappRequests/hooks/useParseUniswapXSwap'
+import type { ParsedTransactionData } from '@luxfi/wallet/src/features/dappRequests/types'
+import { parseTransactionSections } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
+import { buildBlockaidScanJsonRpcRequest } from '@luxfi/wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
 
 interface UseTypedDataSectionsParams {
   parsedTypedData: unknown

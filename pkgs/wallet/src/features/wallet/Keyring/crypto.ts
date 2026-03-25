@@ -2,7 +2,7 @@ import { logger } from 'utilities/src/logger/logger'
 
 // Module self-reference to enable mocking of internal function calls in tests.
 // TODO: figure out how to rewrite `Keyring.test.ts` to avoid doing this.
-import * as CryptoModule from 'wallet/src/features/wallet/Keyring/crypto'
+import * as CryptoModule from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
 
 export const PBKDF2_PARAMS: Omit<Pbkdf2Params, 'salt'> & { hash: string } = {
   name: 'PBKDF2',

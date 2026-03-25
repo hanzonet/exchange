@@ -7,8 +7,8 @@ import { requireAcceptNewTrade } from 'uniswap/src/features/transactions/swap/ut
 import { useWallet } from 'uniswap/src/features/wallet/hooks/useWallet'
 import { isSignerMnemonicAccountDetails } from 'uniswap/src/features/wallet/types/AccountDetails'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { prepareAndSignSwapActions } from 'wallet/src/features/transactions/swap/configuredSagas'
-import { PreSignedSwapTransaction } from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
+import { prepareAndSignSwapActions } from '@luxfi/wallet/src/features/transactions/swap/configuredSagas'
+import { PreSignedSwapTransaction } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 
 // Constants for validation
 const PREPARED_TRANSACTION_STALENESS_MS = 5 * ONE_SECOND_MS // 5 seconds

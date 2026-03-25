@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux'
 import { AssetType } from 'uniswap/src/entities/assets'
 import { AccountType } from 'uniswap/src/features/accounts/types'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { sendTokenActions } from 'wallet/src/features/transactions/send/sendTokenSaga'
-import { SendTokenParams } from 'wallet/src/features/transactions/send/types'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
+import { sendTokenActions } from '@luxfi/wallet/src/features/transactions/send/sendTokenSaga'
+import { SendTokenParams } from '@luxfi/wallet/src/features/transactions/send/types'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 
 /** Helper send callback for ERC20s */
 export function useSendERC20Callback({

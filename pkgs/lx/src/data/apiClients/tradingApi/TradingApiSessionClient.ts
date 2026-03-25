@@ -9,8 +9,8 @@ import {
 import type { PlanEndpoints } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import { getConfig } from '@luxexchange/config'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
-import { BASE_LUX_HEADERS } from 'lx/src/data/apiClients/createLuxFetchClient'
-import { getFeatureFlaggedHeaders } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { BASE_LUX_HEADERS } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { getFeatureFlaggedHeaders } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
 import { logger } from 'utilities/src/logger/logger'
 
 function getHeaders(): HeadersInit {

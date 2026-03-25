@@ -7,8 +7,8 @@ import { AddressDisplay } from 'lx/src/components/accounts/AddressDisplay'
 import { LuxContext, useLuxContext } from 'lx/src/contexts/LuxContext'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
-import { OverlappingAccountIcons } from 'wallet/src/components/accounts/OverlappingAccountIcons'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+import { OverlappingAccountIcons } from '@luxfi/wallet/src/components/accounts/OverlappingAccountIcons'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type AccountSelectPopoverProps = {
   allAccountAddresses: string[]

@@ -1,4 +1,4 @@
-import ImageColors from 'ui/src/utils/colors/rn-image-colors'
+import ImageColors from '@luxfi/ui/src/utils/colors/rn-image-colors'
 
 export type ExtractedColors = {
   primary?: string

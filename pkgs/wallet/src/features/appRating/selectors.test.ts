@@ -10,10 +10,10 @@ import {
   hasConsecutiveRecentSwapsSelector,
   MIN_FEEDBACK_REMINDER_MS,
   MIN_PROMPT_REMINDER_MS,
-} from 'wallet/src/features/appRating/selectors'
-import { WalletState } from 'wallet/src/state/walletReducer'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
-import { preloadedWalletReducerState } from 'wallet/src/test/fixtures/wallet/redux'
+} from '@luxfi/wallet/src/features/appRating/selectors'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+import { preloadedWalletReducerState } from '@luxfi/wallet/src/test/fixtures/wallet/redux'
 
 const account = signerMnemonicAccount()
 

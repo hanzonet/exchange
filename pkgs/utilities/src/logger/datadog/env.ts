@@ -1,4 +1,4 @@
-import { isBetaEnv, isDevEnv } from 'utilities/src/environment/env'
+import { isBetaEnv, isDevEnv } from '@luxfi/utilities/src/environment/env'
 
 export enum DatadogEnvironment {
   DEV = 'dev',

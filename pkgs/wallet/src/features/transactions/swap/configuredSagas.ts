@@ -1,8 +1,8 @@
 import { createMonitoredSaga } from 'uniswap/src/utils/saga'
-import { getSharedTransactionSagaDependencies } from 'wallet/src/features/transactions/configuredSagas'
-import { createExecutePlanSaga } from 'wallet/src/features/transactions/swap/executePlanSaga'
-import { createExecuteSwapSaga } from 'wallet/src/features/transactions/swap/executeSwapSaga'
-import { createPrepareAndSignSwapSaga } from 'wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
+import { getSharedTransactionSagaDependencies } from '@luxfi/wallet/src/features/transactions/configuredSagas'
+import { createExecutePlanSaga } from '@luxfi/wallet/src/features/transactions/swap/executePlanSaga'
+import { createExecuteSwapSaga } from '@luxfi/wallet/src/features/transactions/swap/executeSwapSaga'
+import { createPrepareAndSignSwapSaga } from '@luxfi/wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
 
 // Create configured saga instances using dependency injection
 export const configuredPrepareAndSignSwapSaga = createPrepareAndSignSwapSaga(getSharedTransactionSagaDependencies())

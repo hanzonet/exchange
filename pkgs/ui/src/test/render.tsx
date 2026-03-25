@@ -1,5 +1,5 @@
 import { TamaguiProvider as OGTamaguiProvider, TamaguiProviderProps } from 'tamagui'
-import { config } from 'ui/src/tamagui.config'
+import { config } from '@luxfi/ui/src/tamagui.config'
 
 /**
  * Helper component to wrap tests in a provider for tests.

@@ -5,7 +5,7 @@ import { DEP_accentColors, opacify } from 'ui/src/theme'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 
-import { SettingsLanguageModalProps } from 'wallet/src/components/settings/language/SettingsLanguageModalProps'
+import { SettingsLanguageModalProps } from '@luxfi/wallet/src/components/settings/language/SettingsLanguageModalProps'
 
 export function SettingsLanguageModal({ isOpen, onClose }: SettingsLanguageModalProps): JSX.Element {
   const { t } = useTranslation()

@@ -8,7 +8,7 @@ import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledCh
 import { useENSName } from 'uniswap/src/features/ens/api'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { queryWithoutCache } from 'utilities/src/reactQuery/queryOptions'
-import { NUMBER_OF_WALLETS_TO_GENERATE } from 'wallet/src/features/onboarding/OnboardingContext'
+import { NUMBER_OF_WALLETS_TO_GENERATE } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 
 export interface AddressWithBalanceAndName {
   address: string

@@ -4,8 +4,8 @@ import { AccountType } from 'uniswap/src/features/accounts/types'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { areAddressesEqual, getValidAddress } from 'uniswap/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { ExploreOrderBy } from 'wallet/src/features/wallet/types'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { ExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
 
 export enum SwapProtectionSetting {
   On = 'on',

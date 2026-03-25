@@ -4,7 +4,7 @@ import {
   getPasswordStrengthTextAndColor,
   isPasswordStrongEnough,
   PasswordStrength,
-} from 'wallet/src/utils/password'
+} from '@luxfi/wallet/src/utils/password'
 
 describe(isPasswordStrongEnough, () => {
   it('returns true for equal strengths', () => {

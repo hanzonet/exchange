@@ -19,14 +19,14 @@ import { TransactionType } from 'uniswap/src/features/transactions/types/transac
 import { isFinalizedTx } from 'uniswap/src/features/transactions/types/utils'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import type { Logger } from 'utilities/src/logger/logger'
-import { apolloClientRef } from 'wallet/src/data/apollo/usePersistedApolloClient'
-import { createTransactionServices } from 'wallet/src/features/transactions/factories/createTransactionServices'
+import { apolloClientRef } from '@luxfi/wallet/src/data/apollo/usePersistedApolloClient'
+import { createTransactionServices } from '@luxfi/wallet/src/features/transactions/factories/createTransactionServices'
 import {
   getShouldWaitBetweenTransactions,
   getSwapTransactionCount,
-} from 'wallet/src/features/transactions/swap/confirmation'
-import { type createPrepareAndSignSwapSaga } from 'wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
-import type { TransactionExecutor } from 'wallet/src/features/transactions/swap/services/transactionExecutor'
+} from '@luxfi/wallet/src/features/transactions/swap/confirmation'
+import { type createPrepareAndSignSwapSaga } from '@luxfi/wallet/src/features/transactions/swap/prepareAndSignSwapSaga'
+import type { TransactionExecutor } from '@luxfi/wallet/src/features/transactions/swap/services/transactionExecutor'
 import type {
   ApprovalTransactionData,
   PermitTransactionData,
@@ -34,23 +34,23 @@ import type {
   TransactionParamsFactory,
   UniswapXOrderTransactionData,
   WrapTransactionData,
-} from 'wallet/src/features/transactions/swap/services/transactionParamsFactory'
-import { submitUniswapXOrder } from 'wallet/src/features/transactions/swap/submitOrderSaga'
+} from '@luxfi/wallet/src/features/transactions/swap/services/transactionParamsFactory'
+import { submitUniswapXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import {
   isUniswapXPreSignedSwapTransaction,
   type PreSignedSwapTransaction,
-} from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
+} from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 import {
   type BaseTransactionContext,
   type TransactionExecutionSyncResultSuccess,
   type TransactionStep,
   TransactionStepType,
-} from 'wallet/src/features/transactions/swap/types/transactionExecutor'
+} from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
 import {
   DelegationType,
   type TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import { finalizeTransaction } from 'wallet/src/features/transactions/watcher/transactionFinalizationSaga'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import { finalizeTransaction } from '@luxfi/wallet/src/features/transactions/watcher/transactionFinalizationSaga'
 
 export type SwapParams = {
   txId?: string

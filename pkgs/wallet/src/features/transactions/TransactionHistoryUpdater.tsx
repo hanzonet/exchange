@@ -19,9 +19,9 @@ import { useHideSpamTokensSetting } from 'uniswap/src/features/settings/hooks'
 import { useSelectAddressTransactions } from 'uniswap/src/features/transactions/selectors'
 import { TransactionStatus, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { buildReceiveNotification } from 'wallet/src/features/notifications/buildReceiveNotification'
-import { shouldSuppressNotification } from 'wallet/src/features/notifications/notificationWatcherSaga'
-import { useAccounts, useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+import { buildReceiveNotification } from '@luxfi/wallet/src/features/notifications/buildReceiveNotification'
+import { shouldSuppressNotification } from '@luxfi/wallet/src/features/notifications/notificationWatcherSaga'
+import { useAccounts, useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
 /**
  * For all imported accounts, checks for new transactions and updates

@@ -14,9 +14,9 @@ import {
   exportKey,
   getEncryptionKeyFromPassword,
   SecretPayload,
-} from 'wallet/src/features/wallet/Keyring/crypto'
-import { IKeyring } from 'wallet/src/features/wallet/Keyring/Keyring'
-import { ENCRYPTION_KEY_STORAGE_KEY, PersistedStorage, prefix } from 'wallet/src/utils/persistedStorage'
+} from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
+import { IKeyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { ENCRYPTION_KEY_STORAGE_KEY, PersistedStorage, prefix } from '@luxfi/wallet/src/utils/persistedStorage'
 
 const mnemonicPrefix = '.mnemonic.'
 const privateKeyPrefix = '.privateKey.'

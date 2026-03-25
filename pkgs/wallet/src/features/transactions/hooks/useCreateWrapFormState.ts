@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useSelectTransaction } from 'uniswap/src/features/transactions/hooks/useSelectTransaction'
 import { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
-import { createWrapFormFromTxDetails } from 'wallet/src/features/transactions/swap/createSwapFormFromTxDetails'
+import { createWrapFormFromTxDetails } from '@luxfi/wallet/src/features/transactions/swap/createSwapFormFromTxDetails'
 
 export function useCreateWrapFormState({
   address,

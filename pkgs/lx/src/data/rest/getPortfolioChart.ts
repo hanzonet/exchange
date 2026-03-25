@@ -4,8 +4,8 @@ import { QueryKey, queryOptions, UseQueryResult, useQuery } from '@tanstack/reac
 import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
 import { GetPortfolioChartRequest, GetPortfolioChartResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { transformInput, WithoutWalletAccount } from '@luxfi/api'
-import { luxPostTransport } from 'lx/src/data/rest/base'
-import { buildAccountAddressesByPlatform } from 'lx/src/data/rest/buildAccountAddressesByPlatform'
+import { luxPostTransport } from '@luxexchange/lx/src/data/rest/base'
+import { buildAccountAddressesByPlatform } from '@luxexchange/lx/src/data/rest/buildAccountAddressesByPlatform'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 

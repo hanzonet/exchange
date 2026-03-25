@@ -10,9 +10,9 @@ import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import { CrossChainCurrencyRow } from 'lx/src/features/transactions/swap/components/CrossChainCurrencyRow'
 import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
 import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { formBridgeNotificationTitle } from 'wallet/src/features/notifications/utils'
-import { useCreateSwapFormState } from 'wallet/src/features/transactions/hooks/useCreateSwapFormState'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { formBridgeNotificationTitle } from '@luxfi/wallet/src/features/notifications/utils'
+import { useCreateSwapFormState } from '@luxfi/wallet/src/features/transactions/hooks/useCreateSwapFormState'
 
 export function CrossChainNotification({
   notification,

@@ -10,7 +10,7 @@ import { logger } from 'utilities/src/logger/logger'
 import {
   ExecuteTransactionParams,
   executeTransaction,
-} from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
 
 export const getRemoveDelegationTransaction = (
   chainId: UniverseChainId,

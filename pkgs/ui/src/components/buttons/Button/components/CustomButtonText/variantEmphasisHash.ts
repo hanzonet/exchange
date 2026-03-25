@@ -1,5 +1,5 @@
 import { TextProps } from 'tamagui'
-import type { ButtonEmphasis, ButtonVariant } from 'ui/src/components/buttons/Button/types'
+import type { ButtonEmphasis, ButtonVariant } from '@luxfi/ui/src/components/buttons/Button/types'
 
 type TextStyleLookup = {
   [variant in ButtonVariant]: {

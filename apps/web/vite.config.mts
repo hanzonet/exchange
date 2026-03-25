@@ -264,6 +264,8 @@ export default defineConfig(({ mode }) => {
     'tracing': path.resolve(__dirname, 'src/tracing'),
     'types': path.resolve(__dirname, 'src/types'),
     'utils': path.resolve(__dirname, 'src/utils'),
+    // @hanzogui (Tamagui fork) bare imports
+    'gui/linear-gradient': '@tamagui/linear-gradient',
     // Force JSBI to use ESM build so transform plugin can add __esModule marker
     jsbi: path.resolve(__dirname, '../../node_modules/jsbi/dist/jsbi.mjs'),
     // Map @luxdex/* to @uniswap/* for packages that exist under the old namespace

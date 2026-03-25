@@ -1,5 +1,5 @@
 import { createMedia } from '@tamagui/react-native-media-driver'
-import { breakpoints, heightBreakpoints } from 'ui/src/theme'
+import { breakpoints, heightBreakpoints } from '@luxfi/ui/src/theme'
 
 export const media = createMedia({
   // the order here is important: least strong to most

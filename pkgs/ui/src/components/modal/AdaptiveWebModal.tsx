@@ -11,12 +11,12 @@ import {
   type View,
   VisuallyHidden,
 } from '@hanzo/gui'
-import { type CloseIconProps, CloseIconWithHover } from 'ui/src/components/icons/CloseIconWithHover'
-import { Flex, type FlexProps } from 'ui/src/components/layout'
-import { RemoveScroll } from 'ui/src/components/RemoveScroll/RemoveScroll'
-import { useScrollbarStyles } from 'ui/src/styles/ScrollbarStyles'
-import { INTERFACE_NAV_HEIGHT, zIndexes } from 'ui/src/theme'
-import { useShadowPropsShort } from 'ui/src/theme/shadows'
+import { type CloseIconProps, CloseIconWithHover } from '@luxfi/ui/src/components/icons/CloseIconWithHover'
+import { Flex, type FlexProps } from '@luxfi/ui/src/components/layout'
+import { RemoveScroll } from '@luxfi/ui/src/components/RemoveScroll/RemoveScroll'
+import { useScrollbarStyles } from '@luxfi/ui/src/styles/ScrollbarStyles'
+import { INTERFACE_NAV_HEIGHT, zIndexes } from '@luxfi/ui/src/theme'
+import { useShadowPropsShort } from '@luxfi/ui/src/theme/shadows'
 import { isWebApp } from 'utilities/src/platform'
 
 export const ADAPTIVE_MODAL_ANIMATION_DURATION = 200

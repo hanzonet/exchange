@@ -10,12 +10,12 @@ import { TransactionDetails, TransactionStatus } from 'uniswap/src/features/tran
 import { POLLING_CONSTANTS, shouldCheckTransaction, withTimeout } from 'uniswap/src/utils/polling'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
-import { processTransactionReceipt } from 'wallet/src/features/transactions/utils'
+import { processTransactionReceipt } from '@luxfi/wallet/src/features/transactions/utils'
 import {
   FINALIZED_SWAP_STATUS,
   SWAP_STATUS_TO_TX_STATUS,
-} from 'wallet/src/features/transactions/watcher/transactionSagaUtils'
-import { isMaybeBridge } from 'wallet/src/features/transactions/watcher/utils'
+} from '@luxfi/wallet/src/features/transactions/watcher/transactionSagaUtils'
+import { isMaybeBridge } from '@luxfi/wallet/src/features/transactions/watcher/utils'
 
 /**
  * Smart polling version of waitForReceipt that uses lastCheckedBlockNumber optimization

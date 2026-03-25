@@ -15,9 +15,9 @@ import {
 import { isNativeCurrencyAddress } from 'uniswap/src/utils/currencyId'
 import { createMonitoredSaga } from 'uniswap/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
-import { executeTransaction } from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { SendTokenParams } from 'wallet/src/features/transactions/send/types'
-import { getContractManager, getProvider } from 'wallet/src/features/wallet/context'
+import { executeTransaction } from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { SendTokenParams } from '@luxfi/wallet/src/features/transactions/send/types'
+import { getContractManager, getProvider } from '@luxfi/wallet/src/features/wallet/context'
 
 type Params = {
   sendTokenParams: SendTokenParams

@@ -25,9 +25,9 @@ import {
   ORDER_STALENESS_THRESHOLD,
   SubmitUniswapXOrderParams,
   submitUniswapXOrder,
-} from 'wallet/src/features/transactions/swap/submitOrderSaga'
-import { getSignerManager } from 'wallet/src/features/wallet/context'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
+import { getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 const mockSignature = '0xMockSignature'
 const mockSigner = {}

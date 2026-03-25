@@ -13,9 +13,9 @@ import { logger } from 'utilities/src/logger/logger'
 import {
   ExecuteTransactionParams,
   executeTransaction,
-} from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { attemptReplaceTransaction } from 'wallet/src/features/transactions/replaceTransactionSaga'
-import { selectAccounts } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { attemptReplaceTransaction } from '@luxfi/wallet/src/features/transactions/replaceTransactionSaga'
+import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 type CancelRemoteUniswapXOrderAction = ReturnType<typeof cancelRemoteUniswapXOrder>
 type SubmitPermit2CancelTransactionParams = CancelRemoteUniswapXOrderAction['payload']

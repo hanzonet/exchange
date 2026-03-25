@@ -19,11 +19,11 @@ import {
 import i18n from 'uniswap/src/i18n'
 import { ethersTransactionRequest, getTxFixtures, transactionDetails } from 'uniswap/src/test/fixtures'
 import * as CreateTransactionId from 'uniswap/src/utils/createTransactionId'
-import { executeTransaction } from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { attemptReplaceTransaction } from 'wallet/src/features/transactions/replaceTransactionSaga'
+import { executeTransaction } from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { attemptReplaceTransaction } from '@luxfi/wallet/src/features/transactions/replaceTransactionSaga'
 
-import { selectAccounts } from 'wallet/src/features/wallet/selectors'
-import { ACCOUNT } from 'wallet/src/test/fixtures'
+import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
+import { ACCOUNT } from '@luxfi/wallet/src/test/fixtures'
 
 const NEW_UNIQUE_ID = faker.datatype.uuid()
 

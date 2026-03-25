@@ -1,9 +1,9 @@
 import { Fragment, PropsWithChildren } from 'react'
 import { Spacer } from 'tamagui'
-import { Flex } from 'ui/src/components/layout'
-import { Separator } from 'ui/src/components/layout/Separator'
-import { Text } from 'ui/src/components/text/Text'
-import { TouchableTextLink } from 'ui/src/components/touchable/TouchableTextLink/TouchableTextLink'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { Separator } from '@luxfi/ui/src/components/layout/Separator'
+import { Text } from '@luxfi/ui/src/components/text/Text'
+import { TouchableTextLink } from '@luxfi/ui/src/components/touchable/TouchableTextLink/TouchableTextLink'
 
 const SectionHeader = ({ title }: { title: string }): JSX.Element => (
   <>

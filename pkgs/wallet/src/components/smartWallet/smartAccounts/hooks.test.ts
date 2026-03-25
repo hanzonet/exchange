@@ -3,13 +3,13 @@ import { SAMPLE_SEED_ADDRESS_1 } from 'uniswap/src/test/fixtures'
 import {
   SmartWalletDelegationAction,
   useSmartWalletDelegationStatus,
-} from 'wallet/src/components/smartWallet/smartAccounts/hooks'
-import type { DelegationCheckResult } from 'wallet/src/features/smartWallet/delegation/types'
-import { useSmartWalletChains } from 'wallet/src/features/smartWallet/hooks/useSmartWalletChains'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
-import { useActiveAccount, useHasSmartWalletConsent, useSignerAccounts } from 'wallet/src/features/wallet/hooks'
-import { ACCOUNT, readOnlyAccount, signerMnemonicAccount } from 'wallet/src/test/fixtures'
-import { renderHook, waitFor } from 'wallet/src/test/test-utils'
+} from '@luxfi/wallet/src/components/smartWallet/smartAccounts/hooks'
+import type { DelegationCheckResult } from '@luxfi/wallet/src/features/smartWallet/delegation/types'
+import { useSmartWalletChains } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletChains'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
+import { useActiveAccount, useHasSmartWalletConsent, useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { ACCOUNT, readOnlyAccount, signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+import { renderHook, waitFor } from '@luxfi/wallet/src/test/test-utils'
 
 jest.mock('wallet/src/features/wallet/hooks', () => ({
   useActiveAccount: jest.fn(),

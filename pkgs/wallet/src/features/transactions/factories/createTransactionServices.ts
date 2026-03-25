@@ -4,15 +4,15 @@ import { call, select } from 'typed-redux-saga'
 import type { SignerMnemonicAccountMeta } from 'uniswap/src/features/accounts/types'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import type { PublicClient } from 'viem'
-import type { Provider } from 'wallet/src/features/transactions/executeTransaction/services/providerService'
-import type { TransactionService } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
-import type { TransactionSigner } from 'wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
+import type { Provider } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/providerService'
+import type { TransactionService } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import type { TransactionSigner } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionSignerService/transactionSignerService'
 import type {
   DelegationType,
   TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import { getSignerManager } from 'wallet/src/features/wallet/context'
-import { selectSortedSignerMnemonicAccounts } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import { getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
+import { selectSortedSignerMnemonicAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 export type CreateTransactionServicesResult = {
   transactionSigner: TransactionSigner

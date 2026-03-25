@@ -5,7 +5,7 @@ import ERC20_ABI from 'uniswap/src/abis/erc20.json'
 import { useIsSmartContractAddress } from 'uniswap/src/features/address/useIsSmartContractAddress'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { useProvider } from 'wallet/src/features/wallet/context'
+import { useProvider } from '@luxfi/wallet/src/features/wallet/context'
 
 export function useIsErc20Contract(
   address: string | undefined,

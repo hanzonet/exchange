@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { GasFeeData } from 'wallet/src/features/smartWallet/utils/gasFeeUtils'
+import { GasFeeData } from '@luxfi/wallet/src/features/smartWallet/utils/gasFeeUtils'
 
 /**
  * This hook calculates the total fiat value of gas fees across multiple chains.

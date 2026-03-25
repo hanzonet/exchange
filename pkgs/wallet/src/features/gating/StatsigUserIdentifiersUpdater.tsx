@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { provideUniswapIdentifierService } from '@luxexchange/api'
 import { uniswapIdentifierQuery } from '@luxexchange/sessions'
 import { useSyncStatsigUserIdentifiers } from 'uniswap/src/features/gating/useSyncStatsigUserIdentifiers'
-import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
 /**
  * Component that updates Statsig user with the active wallet address and uniswap identifier.

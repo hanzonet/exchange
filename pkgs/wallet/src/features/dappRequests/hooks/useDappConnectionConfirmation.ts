@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface UseDappConnectionConfirmationParams {
   verificationStatus?: DappVerificationStatus

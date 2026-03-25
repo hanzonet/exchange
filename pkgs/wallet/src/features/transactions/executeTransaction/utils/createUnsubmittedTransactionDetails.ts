@@ -5,7 +5,7 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isBridgeTypeInfo } from 'uniswap/src/features/transactions/types/utils'
 import { createTransactionId } from 'uniswap/src/utils/createTransactionId'
-import { SubmitTransactionParamsWithTypeInfo } from 'wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
+import { SubmitTransactionParamsWithTypeInfo } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
 
 export function createUnsubmittedTransactionDetails(
   executeTransactionParams: SubmitTransactionParamsWithTypeInfo,

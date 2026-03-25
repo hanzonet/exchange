@@ -13,10 +13,10 @@ import { selectRecipientsByRecency } from 'uniswap/src/features/transactions/sel
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 import { useMemoCompare } from 'utilities/src/react/hooks'
 import { useDebounce } from 'utilities/src/time/timing'
-import { filterRecipientByNameAndAddress } from 'wallet/src/components/RecipientSearch/filter'
-import { filterSections } from 'wallet/src/components/RecipientSearch/utils'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { selectInactiveAccounts } from 'wallet/src/features/wallet/selectors'
+import { filterRecipientByNameAndAddress } from '@luxfi/wallet/src/components/RecipientSearch/filter'
+import { filterSections } from '@luxfi/wallet/src/components/RecipientSearch/utils'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { selectInactiveAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 const MAX_RECENT_RECIPIENTS = 15
 

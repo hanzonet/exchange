@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import { GetProps } from 'tamagui'
 import { LinearGradientProps } from 'tamagui/linear-gradient'
-import { Text } from 'ui/src/components/text'
+import { Text } from '@luxfi/ui/src/components/text'
 
 export type GradientTextProps = PropsWithChildren<GetProps<typeof Text> & { gradient: LinearGradientProps }>
 

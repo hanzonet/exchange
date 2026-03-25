@@ -1,6 +1,6 @@
 import { ON_PRESS_EVENT_PAYLOAD } from 'uniswap/src/test/fixtures'
-import { LinkButton } from 'wallet/src/components/buttons/LinkButton'
-import { fireEvent, render } from 'wallet/src/test/test-utils'
+import { LinkButton } from '@luxfi/wallet/src/components/buttons/LinkButton'
+import { fireEvent, render } from '@luxfi/wallet/src/test/test-utils'
 
 jest.mock('uniswap/src/utils/linking')
 

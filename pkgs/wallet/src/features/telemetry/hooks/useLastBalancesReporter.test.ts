@@ -6,11 +6,11 @@ import { AccountType } from 'uniswap/src/features/accounts/types'
 import * as telemetrySend from 'uniswap/src/features/telemetry/send'
 import * as walletHooks from 'uniswap/src/features/wallet/hooks/useWallet'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { useLastBalancesReporter } from 'wallet/src/features/telemetry/hooks/useLastBalancesReporter'
-import * as portfolioData from 'wallet/src/features/telemetry/hooks/usePortfolioDataForReporting'
-import * as balanceReporter from 'wallet/src/features/telemetry/utils/balanceReporter'
-import * as walletFundingDetector from 'wallet/src/features/telemetry/utils/walletFundingDetector'
-import { renderHook } from 'wallet/src/test/test-utils'
+import { useLastBalancesReporter } from '@luxfi/wallet/src/features/telemetry/hooks/useLastBalancesReporter'
+import * as portfolioData from '@luxfi/wallet/src/features/telemetry/hooks/usePortfolioDataForReporting'
+import * as balanceReporter from '@luxfi/wallet/src/features/telemetry/utils/balanceReporter'
+import * as walletFundingDetector from '@luxfi/wallet/src/features/telemetry/utils/walletFundingDetector'
+import { renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'),

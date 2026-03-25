@@ -1,8 +1,8 @@
 import { SignMessageFunc } from '@luxexchange/api'
 import { arrayify, isHexString } from 'ethers/lib/utils'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
-import { signMessage } from 'wallet/src/features/wallet/signing/signing'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
+import { signMessage } from '@luxfi/wallet/src/features/wallet/signing/signing'
 
 export function generateSignerFunc(account: Account, signerManager: SignerManager): SignMessageFunc
 export function generateSignerFunc(

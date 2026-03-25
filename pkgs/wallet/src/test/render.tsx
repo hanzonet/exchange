@@ -15,10 +15,10 @@ import React, { PropsWithChildren } from 'react'
 import { LuxProvider } from 'lx/src/contexts/LuxContext'
 import { AutoMockedApolloProvider } from 'lx/src/test/mocks'
 import { mockLuxContext } from 'lx/src/test/render'
-import { WalletNavigationContextState, WalletNavigationProvider } from 'wallet/src/contexts/WalletNavigationContext'
-import { NativeWalletProvider } from 'wallet/src/features/wallet/providers/NativeWalletProvider'
-import { SharedWalletProvider } from 'wallet/src/providers/SharedWalletProvider'
-import { WalletStateReducersOnly, walletRootReducer } from 'wallet/src/state/walletReducer'
+import { WalletNavigationContextState, WalletNavigationProvider } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { NativeWalletProvider } from '@luxfi/wallet/src/features/wallet/providers/NativeWalletProvider'
+import { SharedWalletProvider } from '@luxfi/wallet/src/providers/SharedWalletProvider'
+import { WalletStateReducersOnly, walletRootReducer } from '@luxfi/wallet/src/state/walletReducer'
 
 // This type extends the default options for render from RTL, as well
 // as allows the user to specify other things such as initialState, store.

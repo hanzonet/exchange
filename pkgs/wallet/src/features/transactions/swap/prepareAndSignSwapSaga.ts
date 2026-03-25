@@ -10,21 +10,21 @@ import {
   isUniswapX,
   isWrap,
 } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { isPrivateRpcSupportedOnChain } from 'wallet/src/features/providers/utils'
-import type { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
+import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
+import type { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
 import {
   BaseTransactionMetadata,
   handleTransactionPreparationError,
   prepareTransactionServices,
   signSingleTransaction,
-} from 'wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
-import type { PreSignedSwapTransaction } from 'wallet/src/features/transactions/swap/types/preSignedTransaction'
+} from '@luxfi/wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
+import type { PreSignedSwapTransaction } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 import {
   DelegationType,
   type TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
-import { selectWalletSwapProtectionSetting } from 'wallet/src/features/wallet/selectors'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
+import { selectWalletSwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/selectors'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
 
 export type PrepareAndSignSwapSagaParams = PrepareSwapParams & {
   account: SignerMnemonicAccountMeta

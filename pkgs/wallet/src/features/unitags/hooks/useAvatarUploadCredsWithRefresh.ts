@@ -4,9 +4,9 @@ import { UnitagsApiClient } from 'uniswap/src/data/apiClients/unitagsApi/Unitags
 import { AVATAR_UPLOAD_CREDS_EXPIRY_SECONDS } from 'uniswap/src/features/unitags/constants'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
-import { generateSignerFunc } from 'wallet/src/features/wallet/signing/utils'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
+import { generateSignerFunc } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 export const useAvatarUploadCredsWithRefresh = ({
   unitag,

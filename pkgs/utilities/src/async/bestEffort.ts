@@ -1,4 +1,4 @@
-import { BackoffStrategy, retryWithBackoff } from 'utilities/src/async/retryWithBackoff'
+import { BackoffStrategy, retryWithBackoff } from '@luxfi/utilities/src/async/retryWithBackoff'
 
 interface BestEffortInput<T> {
   fn: () => Promise<T>

@@ -1,6 +1,6 @@
 import { createStore, Store } from '@reduxjs/toolkit'
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
 import {
   addAccount,
   removeAccounts,
@@ -8,7 +8,7 @@ import {
   setAccountAsActive,
   WalletSliceState,
   walletReducer,
-} from 'wallet/src/features/wallet/slice'
+} from '@luxfi/wallet/src/features/wallet/slice'
 
 const TEST_IMPORT_TIME_MS = 12345678912345
 const ACCOUNT_1: Account = {

@@ -12,8 +12,8 @@ import {
   appRatingFeedbackProvidedMsSelector,
   appRatingPromptedMsSelector,
   appRatingProvidedMsSelector,
-} from 'wallet/src/features/wallet/selectors'
-import { WalletState } from 'wallet/src/state/walletReducer'
+} from '@luxfi/wallet/src/features/wallet/selectors'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 const NUM_CONSECUTIVE_SWAPS = 2
 // at most once per reminder period (120 days)

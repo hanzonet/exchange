@@ -15,10 +15,10 @@ import { UnitagName } from 'uniswap/src/features/unitags/UnitagName'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { logger } from 'utilities/src/logger/logger'
 import { isExtensionApp } from 'utilities/src/platform'
-import { ModalBackButton } from 'wallet/src/components/modals/ModalBackButton'
-import { useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useAccount } from 'wallet/src/features/wallet/hooks'
-import { generateSignerFunc } from 'wallet/src/features/wallet/signing/utils'
+import { ModalBackButton } from '@luxfi/wallet/src/components/modals/ModalBackButton'
+import { useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { generateSignerFunc } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 export function DeleteUnitagModal({
   unitag,

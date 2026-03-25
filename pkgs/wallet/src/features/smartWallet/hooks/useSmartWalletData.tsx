@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import { isUniverseChainId } from 'uniswap/src/features/chains/utils'
 import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { AddressStringFormat, normalizeAddress } from 'uniswap/src/utils/addresses'
-import { type WalletData, WalletStatus } from 'wallet/src/features/smartWallet/types'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
-import { useSignerMnemonicAccountsSorted } from 'wallet/src/features/wallet/hooks'
-import { selectHasSmartWalletConsent } from 'wallet/src/features/wallet/selectors'
-import { type WalletState } from 'wallet/src/state/walletReducer'
+import { type WalletData, WalletStatus } from '@luxfi/wallet/src/features/smartWallet/types'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
+import { useSignerMnemonicAccountsSorted } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectHasSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/selectors'
+import { type WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 // Time window to treat a confirmed RemoveDelegation tx as still "pending" while delegation data refreshes
 const RECENT_TX_THRESHOLD_MS = 60_000

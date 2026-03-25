@@ -1,6 +1,6 @@
 import { TradingApi } from '@luxexchange/api'
 import { EthTransaction } from 'uniswap/src/types/walletConnect'
-import { generateBatchId, transformCallsToTransactionRequests } from 'wallet/src/features/batchedTransactions/utils'
+import { generateBatchId, transformCallsToTransactionRequests } from '@luxfi/wallet/src/features/batchedTransactions/utils'
 
 describe(generateBatchId, () => {
   it('generates a batch ID with correct format', () => {

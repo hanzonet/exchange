@@ -1,6 +1,6 @@
 import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { NotSupportedNetworkNotification } from 'wallet/src/features/notifications/components/NotSupportedNetworkNotification'
-import { renderWithProviders } from 'wallet/src/test/render'
+import { NotSupportedNetworkNotification } from '@luxfi/wallet/src/features/notifications/components/NotSupportedNetworkNotification'
+import { renderWithProviders } from '@luxfi/wallet/src/test/render'
 
 // Mock the account store hooks
 jest.mock('uniswap/src/features/accounts/store/hooks', () => ({

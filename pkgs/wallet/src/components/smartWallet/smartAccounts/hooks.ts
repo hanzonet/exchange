@@ -10,11 +10,11 @@ import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import {
   selectHasDismissedSmartWalletHomeScreenNudge,
   selectShouldShowPostSwapNudge,
-} from 'wallet/src/features/behaviorHistory/selectors'
-import { useSmartWalletChains } from 'wallet/src/features/smartWallet/hooks/useSmartWalletChains'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
-import { useActiveAccount, useHasSmartWalletConsent, useSignerAccounts } from 'wallet/src/features/wallet/hooks'
-import { type WalletState } from 'wallet/src/state/walletReducer'
+} from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { useSmartWalletChains } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletChains'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
+import { useActiveAccount, useHasSmartWalletConsent, useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { type WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 export enum SmartWalletDelegationAction {
   ShowConflict = 'Conflict',

@@ -3,11 +3,11 @@ import { Flex } from 'ui/src'
 import { OrderRouting } from 'ui/src/components/icons/OrderRouting'
 import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
 import { DEX } from 'ui/src/components/icons/DEX'
-import { RoutingDiagram } from 'lx/src/components/RoutingDiagram/RoutingDiagram'
-import { TransactionDetailsTooltip as Tooltip } from 'lx/src/components/TransactionDetailsTooltip'
-import { luxUrls } from 'lx/src/constants/urls'
-import { useSwapTxStore } from 'lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { useRoutingEntries, useRoutingProvider } from 'lx/src/utils/routingDiagram/routingRegistry'
+import { RoutingDiagram } from '@luxexchange/lx/src/components/RoutingDiagram/RoutingDiagram'
+import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useSwapTxStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
+import { useRoutingEntries, useRoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/routingRegistry'
 
 export function BestRouteTooltip(): JSX.Element | null {
   const { t } = useTranslation()

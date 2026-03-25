@@ -11,12 +11,12 @@ import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { ExtensionScreens } from 'uniswap/src/types/screens/extension'
 import { MobileScreens, OnboardingScreens, UnitagEntryPoint } from 'uniswap/src/types/screens/mobile'
 import { isMobileApp } from 'utilities/src/platform'
-import { useAvatarSelectionHandler } from 'wallet/src/features/unitags/AvatarSelection'
-import { ChoosePhotoOptionsModal, ChoosePhotoOptionsProps } from 'wallet/src/features/unitags/ChoosePhotoOptionsModal'
-import { UnitagProfilePicture } from 'wallet/src/features/unitags/UnitagProfilePicture'
-import { useWalletSigners } from 'wallet/src/features/wallet/context'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
-import { generateSignerFunc } from 'wallet/src/features/wallet/signing/utils'
+import { useAvatarSelectionHandler } from '@luxfi/wallet/src/features/unitags/AvatarSelection'
+import { ChoosePhotoOptionsModal, ChoosePhotoOptionsProps } from '@luxfi/wallet/src/features/unitags/ChoosePhotoOptionsModal'
+import { UnitagProfilePicture } from '@luxfi/wallet/src/features/unitags/UnitagProfilePicture'
+import { useWalletSigners } from '@luxfi/wallet/src/features/wallet/context'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { generateSignerFunc } from '@luxfi/wallet/src/features/wallet/signing/utils'
 
 function convertEntryPointToAnalyticsSource(entryPoint: UnitagEntryPoint): UnitagClaimSource {
   switch (entryPoint) {

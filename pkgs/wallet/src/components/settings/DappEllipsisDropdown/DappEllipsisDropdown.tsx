@@ -1,5 +1,5 @@
 import { PlatformSplitStubError } from 'utilities/src/errors'
-import { type Account } from 'wallet/src/features/wallet/accounts/types'
+import { type Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 export interface DappEllipsisDropdownProps {
   removeAllDappConnections: (activeAccount: Account) => Promise<void>

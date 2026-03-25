@@ -4,8 +4,8 @@ import { TradeRoutingPreference } from 'uniswap/src/features/transactions/swap/c
 import { SwapFlow, type SwapFlowProps } from 'uniswap/src/features/transactions/swap/SwapFlow/SwapFlow'
 import { SwapDependenciesStoreContextProvider } from 'uniswap/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContextProvider'
 import { SwapFormStoreContextProvider } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
-import { useSwapHandlers } from 'wallet/src/features/transactions/swap/hooks/useSwapHandlers'
-import { SwapProtection } from 'wallet/src/features/transactions/swap/settings/SwapProtection'
+import { useSwapHandlers } from '@luxfi/wallet/src/features/transactions/swap/hooks/useSwapHandlers'
+import { SwapProtection } from '@luxfi/wallet/src/features/transactions/swap/settings/SwapProtection'
 
 type WalletSwapFlowProps = Omit<SwapFlowProps, 'settings'> & {
   onSubmitSwap?: () => Promise<void>

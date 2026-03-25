@@ -13,11 +13,11 @@ import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { isMobileApp, isWebPlatform } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { ActiveNetworkExpando } from 'wallet/src/features/smartWallet/ActiveNetworkExpando/ActiveNetworkExpando'
-import { useEnabledActiveNetworkDelegations } from 'wallet/src/features/smartWallet/hooks/useEnabledActiveNetworkDelegations'
-import { useTranslateSmartWalletStatus } from 'wallet/src/features/smartWallet/hooks/useTranslateSmartWalletStatus'
-import { type WalletData, WalletStatus } from 'wallet/src/features/smartWallet/types'
-import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+import { ActiveNetworkExpando } from '@luxfi/wallet/src/features/smartWallet/ActiveNetworkExpando/ActiveNetworkExpando'
+import { useEnabledActiveNetworkDelegations } from '@luxfi/wallet/src/features/smartWallet/hooks/useEnabledActiveNetworkDelegations'
+import { useTranslateSmartWalletStatus } from '@luxfi/wallet/src/features/smartWallet/hooks/useTranslateSmartWalletStatus'
+import { type WalletData, WalletStatus } from '@luxfi/wallet/src/features/smartWallet/types'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 interface SmartWalletStatusModalProps {
   wallet: WalletData

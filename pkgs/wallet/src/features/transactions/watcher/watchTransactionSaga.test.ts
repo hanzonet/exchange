@@ -11,7 +11,7 @@ import {
 import {
   updateTransactionWithReceipt,
   waitForReceipt,
-} from 'wallet/src/features/transactions/watcher/watchTransactionSaga'
+} from '@luxfi/wallet/src/features/transactions/watcher/watchTransactionSaga'
 
 const ACTIVE_ACCOUNT_ADDRESS = '0x000000000000000000000000000000000000000001'
 const { ethersTxReceipt, txReceipt, txDetailsPending } = getTxFixtures(

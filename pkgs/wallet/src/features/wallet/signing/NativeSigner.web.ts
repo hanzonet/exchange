@@ -8,7 +8,7 @@ import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
 import { SignsTypedData } from 'uniswap/src/features/transactions/signing'
 import { areAddressesEqual } from 'uniswap/src/utils/addresses'
 import { HexString, isValidHexString } from 'utilities/src/addresses/hex'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 /**
  * A signer that uses a native keyring to access keys

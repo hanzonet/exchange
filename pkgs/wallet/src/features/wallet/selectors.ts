@@ -1,10 +1,10 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
 import { RankingType } from '@luxexchange/api'
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import { Account, ReadOnlyAccount, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
-import { ExploreOrderBy } from 'wallet/src/features/wallet/types'
-import { WalletState } from 'wallet/src/state/walletReducer'
+import { Account, ReadOnlyAccount, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+import { ExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 const DEFAULT_TOKENS_ORDER_BY = RankingType.Volume
 

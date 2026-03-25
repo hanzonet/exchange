@@ -5,9 +5,9 @@ import { spacing } from 'ui/src/theme'
 import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
 import { ExplorerDataType, getExplorerLink } from 'uniswap/src/utils/linking'
 import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { DomainContent } from 'wallet/src/components/dappRequests/SignTypedData/DomainContent'
-import { MaybeExplorerLinkedAddress } from 'wallet/src/components/dappRequests/SignTypedData/MaybeExplorerLinkedAddress'
-import { EIP712DomainType, EIP712Message } from 'wallet/src/components/dappRequests/types/EIP712Types'
+import { DomainContent } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/DomainContent'
+import { MaybeExplorerLinkedAddress } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/MaybeExplorerLinkedAddress'
+import { EIP712DomainType, EIP712Message } from '@luxfi/wallet/src/components/dappRequests/types/EIP712Types'
 
 interface StandardTypedDataContentProps {
   domain: EIP712DomainType

@@ -1,6 +1,6 @@
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import { getNextDerivationIndex } from 'wallet/src/features/onboarding/createOnboardingAccount'
-import { BackupType, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+import { getNextDerivationIndex } from '@luxfi/wallet/src/features/onboarding/createOnboardingAccount'
+import { BackupType, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 describe('getNextDerivationIndex', () => {
   const createMockAccount = (derivationIndex: number): SignerMnemonicAccount => ({

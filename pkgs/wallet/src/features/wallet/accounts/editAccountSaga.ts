@@ -5,10 +5,10 @@ import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { createMonitoredSaga } from 'uniswap/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
 import { unique } from 'utilities/src/primitives/array'
-import { Account, BackupType } from 'wallet/src/features/wallet/accounts/types'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
-import { selectAccounts } from 'wallet/src/features/wallet/selectors'
-import { editAccount as editInStore, removeAccounts as removeAccountsInStore } from 'wallet/src/features/wallet/slice'
+import { Account, BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
+import { editAccount as editInStore, removeAccounts as removeAccountsInStore } from '@luxfi/wallet/src/features/wallet/slice'
 
 export enum EditAccountAction {
   AddBackupMethod = 'AddBackupMethod',

@@ -19,9 +19,9 @@ import { logger } from 'utilities/src/logger/logger'
 import {
   ExecuteTransactionParams,
   executeTransaction,
-} from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { getSerializableTransactionRequest } from 'wallet/src/features/transactions/utils'
-import { selectAccounts } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { getSerializableTransactionRequest } from '@luxfi/wallet/src/features/transactions/utils'
+import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
 export function* attemptReplaceTransaction({
   transaction,

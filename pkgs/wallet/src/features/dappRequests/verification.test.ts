@@ -1,5 +1,5 @@
-import { DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
-import { mergeVerificationStatuses } from 'wallet/src/features/dappRequests/verification'
+import { DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
+import { mergeVerificationStatuses } from '@luxfi/wallet/src/features/dappRequests/verification'
 
 describe('mergeVerificationStatuses', () => {
   describe('when both statuses are undefined', () => {

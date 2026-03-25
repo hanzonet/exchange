@@ -1,9 +1,9 @@
 import { cloneElement, memo } from 'react'
 import { useStyle } from 'tamagui'
-import { CustomButtonText } from 'ui/src/components/buttons/Button/components/CustomButtonText/CustomButtonText'
-import { TypeOfButton } from 'ui/src/components/buttons/Button/components/types'
-import { useIconSizes } from 'ui/src/components/buttons/Button/hooks/useIconSizes'
-import type { ButtonVariantProps } from 'ui/src/components/buttons/Button/types'
+import { CustomButtonText } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonText/CustomButtonText'
+import { TypeOfButton } from '@luxfi/ui/src/components/buttons/Button/components/types'
+import { useIconSizes } from '@luxfi/ui/src/components/buttons/Button/hooks/useIconSizes'
+import type { ButtonVariantProps } from '@luxfi/ui/src/components/buttons/Button/types'
 
 export type ThemedIconProps = ButtonVariantProps & {
   typeOfButton: TypeOfButton

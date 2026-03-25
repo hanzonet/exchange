@@ -6,8 +6,8 @@ import { Flex, LabeledCheckbox, Text, TouchableArea } from 'ui/src'
 import { AlertCircleFilled, AlertTriangleFilled, OctagonExclamation } from 'ui/src/components/icons'
 import { defaultHitslop } from 'ui/src/theme'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { DappScanInfoModal } from 'wallet/src/components/dappRequests/DappScanInfoModal'
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+import { DappScanInfoModal } from '@luxfi/wallet/src/components/dappRequests/DappScanInfoModal'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 
 interface RiskConfig {
   title: (t: TFunction) => string

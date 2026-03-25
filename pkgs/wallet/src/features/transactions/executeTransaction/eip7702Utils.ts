@@ -10,7 +10,7 @@ import {
   TransactionSerializableEIP7702,
 } from 'viem'
 import { hashAuthorization, recoverAuthorizationAddress, verifyAuthorization } from 'viem/utils'
-import { NativeSigner } from 'wallet/src/features/wallet/signing/NativeSigner'
+import { NativeSigner } from '@luxfi/wallet/src/features/wallet/signing/NativeSigner'
 
 /**
  * Converts an ethers TransactionRequest to a Viem EIP-7702 transaction

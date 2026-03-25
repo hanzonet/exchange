@@ -15,10 +15,10 @@ import { CurrencyField } from 'lx/src/types/currency'
 import { currencyAddress, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { queryWithoutCache } from 'utilities/src/reactQuery/queryOptions'
-import { ContractManager } from 'wallet/src/features/contracts/ContractManager'
-import { SendCurrencyParams, SendNFTParams, SendTokenParams } from 'wallet/src/features/transactions/send/types'
-import { useContractManager, useProvider } from 'wallet/src/features/wallet/context'
-import { useActiveSignerAccount } from 'wallet/src/features/wallet/hooks'
+import { ContractManager } from '@luxfi/wallet/src/features/contracts/ContractManager'
+import { SendCurrencyParams, SendNFTParams, SendTokenParams } from '@luxfi/wallet/src/features/transactions/send/types'
+import { useContractManager, useProvider } from '@luxfi/wallet/src/features/wallet/context'
+import { useActiveSignerAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function useSendTransactionRequest(
   derivedSendInfo: DerivedSendInfo,

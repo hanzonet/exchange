@@ -8,8 +8,8 @@ import { DAI } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { ethersTransactionReceipt } from 'uniswap/src/test/fixtures'
 import { createPublicClient, http, walletActions } from 'viem'
-import { ContractManager } from 'wallet/src/features/contracts/ContractManager'
-import { SignerManager } from 'wallet/src/features/wallet/signing/SignerManager'
+import { ContractManager } from '@luxfi/wallet/src/features/contracts/ContractManager'
+import { SignerManager } from '@luxfi/wallet/src/features/wallet/signing/SignerManager'
 
 export const signerManager = new SignerManager()
 

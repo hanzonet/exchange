@@ -9,10 +9,10 @@ import Reanimated, {
   withRepeat,
   withTiming,
 } from 'react-native-reanimated'
-import { Flex } from 'ui/src/components/layout'
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
-import { ShineProps } from 'ui/src/loading/ShineProps'
-import { opacify } from 'ui/src/theme'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
+import { ShineProps } from '@luxfi/ui/src/loading/ShineProps'
+import { opacify } from '@luxfi/ui/src/theme'
 import { useEvent } from 'utilities/src/react/hooks'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 

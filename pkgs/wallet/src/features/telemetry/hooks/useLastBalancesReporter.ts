@@ -6,18 +6,18 @@ import { MobileAppsFlyerEvents } from 'uniswap/src/features/telemetry/constants'
 import { sendAppsFlyerEvent } from 'uniswap/src/features/telemetry/send'
 import { useWallet } from 'uniswap/src/features/wallet/hooks/useWallet'
 import { logger } from 'utilities/src/logger/logger'
-import { usePortfolioDataForReporting } from 'wallet/src/features/telemetry/hooks/usePortfolioDataForReporting'
+import { usePortfolioDataForReporting } from '@luxfi/wallet/src/features/telemetry/hooks/usePortfolioDataForReporting'
 import {
   selectLastBalancesReport,
   selectLastBalancesReportValue,
   selectWalletIsFunded,
-} from 'wallet/src/features/telemetry/selectors'
-import { recordBalancesReport, recordWalletFunded } from 'wallet/src/features/telemetry/slice'
+} from '@luxfi/wallet/src/features/telemetry/selectors'
+import { recordBalancesReport, recordWalletFunded } from '@luxfi/wallet/src/features/telemetry/slice'
 import {
   type BalanceReportingParams,
   shouldSendBalanceReport,
-} from 'wallet/src/features/telemetry/utils/balanceReporter'
-import { isWalletJustFunded } from 'wallet/src/features/telemetry/utils/walletFundingDetector'
+} from '@luxfi/wallet/src/features/telemetry/utils/balanceReporter'
+import { isWalletJustFunded } from '@luxfi/wallet/src/features/telemetry/utils/walletFundingDetector'
 
 /**
  * Reports portfolio balance data to analytics on a controlled schedule

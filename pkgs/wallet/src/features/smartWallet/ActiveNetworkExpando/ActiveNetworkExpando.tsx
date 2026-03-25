@@ -13,9 +13,9 @@ import {
   MAX_VISIBLE_HEIGHT_MOBILE,
   ROW_HEIGHT,
   TEXT_VARIANT,
-} from 'wallet/src/features/smartWallet/ActiveNetworkExpando/constants'
-import { useVisibleDelegations } from 'wallet/src/features/smartWallet/ActiveNetworkExpando/useVisibleDelegations'
-import { ActiveDelegation } from 'wallet/src/features/smartWallet/types'
+} from '@luxfi/wallet/src/features/smartWallet/ActiveNetworkExpando/constants'
+import { useVisibleDelegations } from '@luxfi/wallet/src/features/smartWallet/ActiveNetworkExpando/useVisibleDelegations'
+import { ActiveDelegation } from '@luxfi/wallet/src/features/smartWallet/types'
 
 export function ActiveNetworkExpando({
   isOpen,

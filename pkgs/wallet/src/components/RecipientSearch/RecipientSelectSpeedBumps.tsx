@@ -11,15 +11,15 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { chainIdToPlatform } from 'uniswap/src/features/platforms/utils/chains'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { areAddressesEqual } from 'uniswap/src/utils/addresses'
-import { ConditionalModalRenderer, SpeedBumps } from 'wallet/src/components/modals/SpeedBumps'
-import { NewAddressWarningModal } from 'wallet/src/components/RecipientSearch/modals/NewAddressWarningModal'
-import { useIsErc20Contract } from 'wallet/src/features/contracts/hooks'
-import { useAllTransactionsBetweenAddresses } from 'wallet/src/features/transactions/hooks/useAllTransactionsBetweenAddresses'
+import { ConditionalModalRenderer, SpeedBumps } from '@luxfi/wallet/src/components/modals/SpeedBumps'
+import { NewAddressWarningModal } from '@luxfi/wallet/src/components/RecipientSearch/modals/NewAddressWarningModal'
+import { useIsErc20Contract } from '@luxfi/wallet/src/features/contracts/hooks'
+import { useAllTransactionsBetweenAddresses } from '@luxfi/wallet/src/features/transactions/hooks/useAllTransactionsBetweenAddresses'
 import {
   useActiveAccountAddressWithThrow,
   useSignerAccounts,
   useViewOnlyAccounts,
-} from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/wallet/hooks'
 
 interface RecipientSelectSpeedBumpsProps {
   recipientAddress?: string

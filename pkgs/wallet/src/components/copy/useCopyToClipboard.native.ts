@@ -3,7 +3,7 @@ import { pushNotification } from 'uniswap/src/features/notifications/slice/slice
 import { AppNotificationType, CopyNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { useEvent } from 'utilities/src/react/hooks'
-import { CopyToClipboardFunction } from 'wallet/src/components/copy/useCopyToClipboard'
+import { CopyToClipboardFunction } from '@luxfi/wallet/src/components/copy/useCopyToClipboard'
 
 /**
  * Hook for copying text to clipboard with notification

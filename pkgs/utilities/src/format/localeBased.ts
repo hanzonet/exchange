@@ -4,9 +4,9 @@ import {
   StandardCurrency,
   TwoDecimalsCurrency,
   TYPE_TO_FORMATTER_RULES,
-} from 'utilities/src/format/localeBasedFormats'
-import { NumberType, PercentNumberDecimals, PercentNumberType } from 'utilities/src/format/types'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxfi/utilities/src/format/localeBasedFormats'
+import { NumberType, PercentNumberDecimals, PercentNumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const PLACEHOLDER_TEXT = '-'
 

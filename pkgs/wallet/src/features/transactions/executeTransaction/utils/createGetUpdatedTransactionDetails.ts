@@ -5,7 +5,7 @@ import {
   TransactionStatus,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { getSerializableTransactionRequest } from 'wallet/src/features/transactions/utils'
+import { getSerializableTransactionRequest } from '@luxfi/wallet/src/features/transactions/utils'
 
 export function createGetUpdatedTransactionDetails(ctx: {
   getBlockNumber: () => Promise<number>

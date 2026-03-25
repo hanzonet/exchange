@@ -1,4 +1,4 @@
-import { renderHookWithProviders, renderWithProviders } from 'wallet/src/test/render'
+import { renderHookWithProviders, renderWithProviders } from '@luxfi/wallet/src/test/render'
 
 // re-export everything
 export * from '@testing-library/react-native'

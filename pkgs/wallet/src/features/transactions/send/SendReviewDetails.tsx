@@ -36,11 +36,11 @@ import { shortenAddress } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
 import { logger } from 'utilities/src/logger/logger'
 import { isWebPlatform } from 'utilities/src/platform'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useIsErc20Contract } from 'wallet/src/features/contracts/hooks'
-import { useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
-import { useSendERC20Callback, useSendNFTCallback } from 'wallet/src/features/transactions/send/hooks/useSendCallback'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useIsErc20Contract } from '@luxfi/wallet/src/features/contracts/hooks'
+import { useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
+import { useSendERC20Callback, useSendNFTCallback } from '@luxfi/wallet/src/features/transactions/send/hooks/useSendCallback'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function SendReviewDetails({
   authTrigger,

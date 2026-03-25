@@ -4,10 +4,10 @@ import { Flex, Loader, Separator } from 'ui/src'
 import { InsufficientGas } from 'ui/src/components/icons'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { useEvent } from 'utilities/src/react/hooks'
-import { SmartWalletModal } from 'wallet/src/components/smartWallet/modals/SmartWalletModal'
-import { useSmartWalletChains } from 'wallet/src/features/smartWallet/hooks/useSmartWalletChains'
-import { InsufficientFundsNetworkRow, NetworkInfo } from 'wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
-import { useWalletDelegationContext } from 'wallet/src/features/smartWallet/WalletDelegationProvider'
+import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
+import { useSmartWalletChains } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletChains'
+import { InsufficientFundsNetworkRow, NetworkInfo } from '@luxfi/wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
+import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
 
 const maxHeightList = 300
 

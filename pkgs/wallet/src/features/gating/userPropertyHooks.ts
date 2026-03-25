@@ -6,7 +6,7 @@ import { useENSName } from 'uniswap/src/features/ens/api'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function useGatingUserPropertyUsernames(): void {
   const activeAccount = useActiveAccount()

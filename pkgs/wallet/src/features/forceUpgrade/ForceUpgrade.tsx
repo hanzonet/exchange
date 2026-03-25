@@ -9,12 +9,12 @@ import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { openUri } from 'uniswap/src/utils/linking'
 import { isExtensionApp, isIOS, isMobileApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
-import { EXTENSION_FORCED_UPGRADE_HELP_LINK, MOBILE_APP_STORE_LINK } from 'wallet/src/constants/urls'
-import { ForceUpgradeModalContent } from 'wallet/src/features/forceUpgrade/ForceUpgradeModalContent'
-import { startAndroidInAppUpdate } from 'wallet/src/features/forceUpgrade/startAndroidInAppUpdate'
-import { UpgradeStatus } from 'wallet/src/features/forceUpgrade/types'
-import { SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+import { EXTENSION_FORCED_UPGRADE_HELP_LINK, MOBILE_APP_STORE_LINK } from '@luxfi/wallet/src/constants/urls'
+import { ForceUpgradeModalContent } from '@luxfi/wallet/src/features/forceUpgrade/ForceUpgradeModalContent'
+import { startAndroidInAppUpdate } from '@luxfi/wallet/src/features/forceUpgrade/startAndroidInAppUpdate'
+import { UpgradeStatus } from '@luxfi/wallet/src/features/forceUpgrade/types'
+import { SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type Translation = {
   description?: string

@@ -1,5 +1,5 @@
-import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
-import { shouldDisableConfirm } from 'wallet/src/features/dappRequests/utils/riskUtils'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { shouldDisableConfirm } from '@luxfi/wallet/src/features/dappRequests/utils/riskUtils'
 
 describe('shouldDisableConfirm', () => {
   describe('signature requests (without gas fee check)', () => {

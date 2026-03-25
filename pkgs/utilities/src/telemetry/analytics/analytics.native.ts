@@ -6,15 +6,15 @@ import {
   TestnetModeConfig,
   UserPropertyValue,
   // biome-ignore lint/style/noRestrictedImports: needed here
-} from 'utilities/src/telemetry/analytics/analytics'
+} from '@luxfi/utilities/src/telemetry/analytics/analytics'
 import {
   AMPLITUDE_NATIVE_TRACKING_OPTIONS,
   AMPLITUDE_SHARED_TRACKING_OPTIONS,
   ANONYMOUS_EVENT_NAMES,
   DUMMY_KEY,
-} from 'utilities/src/telemetry/analytics/constants'
-import { generateAnalyticsLoggers } from 'utilities/src/telemetry/analytics/logging'
-import { getProcessedEvent } from 'utilities/src/telemetry/analytics/utils'
+} from '@luxfi/utilities/src/telemetry/analytics/constants'
+import { generateAnalyticsLoggers } from '@luxfi/utilities/src/telemetry/analytics/logging'
+import { getProcessedEvent } from '@luxfi/utilities/src/telemetry/analytics/utils'
 
 const loggers = generateAnalyticsLoggers('telemetry/analytics.native')
 

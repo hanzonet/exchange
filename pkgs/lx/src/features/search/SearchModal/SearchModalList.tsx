@@ -7,8 +7,8 @@ import { PoolOptionItem } from 'uniswap/src/components/lists/items/pools/PoolOpt
 import {
   PoolContextMenuAction,
   PoolOptionItemContextMenu,
-} from 'lx/src/components/lists/items/pools/PoolOptionItemContextMenu'
-import { TokenContextMenuVariant, TokenOptionItem } from 'lx/src/components/lists/items/tokens/TokenOptionItem'
+} from '@luxexchange/lx/src/components/lists/items/pools/PoolOptionItemContextMenu'
+import { TokenContextMenuVariant, TokenOptionItem } from '@luxexchange/lx/src/components/lists/items/tokens/TokenOptionItem'
 import {
   TokenContextMenuAction,
   TokenOptionItemContextMenu,

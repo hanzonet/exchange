@@ -12,8 +12,8 @@ import { NFTItem } from 'lx/src/features/nfts/types'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { isMobileApp, isWebPlatform } from 'utilities/src/platform'
-import { ChoosePhotoOptionsProps } from 'wallet/src/features/unitags/ChoosePhotoOptionsModal'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
+import { ChoosePhotoOptionsProps } from '@luxfi/wallet/src/features/unitags/ChoosePhotoOptionsModal'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export const NFT_MODAL_MAX_WIDTH = 610
 

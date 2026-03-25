@@ -11,9 +11,9 @@ import { Trace } from 'uniswap/src/features/telemetry/Trace'
 import { type AppStateResetter } from 'uniswap/src/state/createAppStateResetter'
 import { isProdEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
-import { restartApp } from 'wallet/src/components/ErrorBoundary/restartApp'
-import { useAccounts } from 'wallet/src/features/wallet/hooks'
-import { setFinishedOnboarding } from 'wallet/src/features/wallet/slice'
+import { restartApp } from '@luxfi/wallet/src/components/ErrorBoundary/restartApp'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { setFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/slice'
 
 const NOTIFICATION_ROUTER_COMPONENT_NAME = 'SharedNotificationToastRouter'
 

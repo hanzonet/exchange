@@ -17,8 +17,8 @@ import {
   UnknownTransactionInfo,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { finalizedTransactionAction } from 'uniswap/src/test/fixtures'
-import { pushTransactionNotification } from 'wallet/src/features/notifications/notificationWatcherSaga'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+import { pushTransactionNotification } from '@luxfi/wallet/src/features/notifications/notificationWatcherSaga'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 const finalizedTxAction = finalizedTransactionAction()
 const account = signerMnemonicAccount()

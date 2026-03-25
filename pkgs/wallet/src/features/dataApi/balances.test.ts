@@ -26,7 +26,7 @@ import {
   tokenBalance,
 } from 'uniswap/src/test/fixtures'
 import { createArray } from 'uniswap/src/test/utils'
-import { renderHook } from 'wallet/src/test/test-utils'
+import { renderHook } from '@luxfi/wallet/src/test/test-utils'
 
 const daiTokenBalance = tokenBalance({ token: daiToken(), isHidden: true })
 const ethTokenBalance = tokenBalance({ token: ethToken(), isHidden: false })

@@ -18,7 +18,7 @@ import { createSafeMigrationFactory } from 'uniswap/src/state/createSafeMigratio
 import { type CurrencyId } from 'uniswap/src/types/currency'
 import { areAddressesEqual } from 'uniswap/src/utils/addresses'
 import { currencyIdToAddress, currencyIdToChain } from 'uniswap/src/utils/currencyId'
-import { type Account } from 'wallet/src/features/wallet/accounts/types'
+import { type Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 const createSafeMigration = createSafeMigrationFactory('walletMigrations')
 
