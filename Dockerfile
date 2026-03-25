@@ -12,12 +12,10 @@ RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 # Copy entire monorepo
 COPY . .
 
-# Install dependencies in two phases:
-# 1. Install all packages without running lifecycle scripts (guaranteed to succeed)
-# 2. Run postinstall scripts separately, tolerating Nx/native failures
-RUN NODE_ENV=development pnpm install --no-frozen-lockfile --ignore-scripts
+# Install dependencies — run lifecycle scripts but tolerate failures
+RUN NODE_ENV=development pnpm install --no-frozen-lockfile || true
+# Rebuild native modules that might have failed
 RUN pnpm rebuild || true
-RUN pnpm rebuild @hanzogui/vite-plugin 2>/dev/null || true
 
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
