@@ -28,7 +28,6 @@ const __dirname = path.dirname(__filename)
 // At runtime, the dynamic import will fail and the try/catch in loadPrivyPbModule() provides
 // a clear error message: "Embedded Wallet requires @luxamm/client-privy-embedded-wallet".
 const privyPackageInstalled = fs.existsSync(
-  path.resolve(__dirname, '../../node_modules/@luxamm/client-privy-embedded-wallet'),
 )
 const ENABLE_REACT_COMPILER = process.env.ENABLE_REACT_COMPILER === 'true'
 const ReactCompilerConfig = {
@@ -267,10 +266,6 @@ export default defineConfig(({ mode }) => {
     'lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
     'lx': path.resolve(__dirname, '../../pkgs/lx'),
     // @luxamm package aliases (pnpm overrides handle npm resolution, but vite needs explicit paths)
-    '@luxamm/sdk': path.resolve(__dirname, '../../node_modules/@luxamm/swap-sdk'),
-    '@luxamm/merkle-distributor/build': path.resolve(__dirname, '../../node_modules/@luxamm/merkle-distributor/build'),
-    '@luxamm/v3-core/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-core/artifacts'),
-    '@luxamm/v3-periphery/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-periphery/artifacts'),
     // tsconfig path alias ~ → src/
     '~': path.resolve(__dirname, 'src'),
     // Bare src-relative imports (CRA baseUrl convention — pnpm strict mode needs explicit aliases)
@@ -644,8 +639,6 @@ export default defineConfig(({ mode }) => {
               id.includes('node_modules/@scure/') ||
               id.includes('node_modules/wagmi') ||
               id.includes('node_modules/@wagmi/') ||
-              id.includes('node_modules/@luxamm/') ||
-              id.includes('node_modules/@luxamm/') ||
               id.includes('node_modules/@luxdex/')
             ) {
               return 'vendor-web3'

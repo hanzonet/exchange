@@ -31,13 +31,13 @@
     "@luxexchange/sessions": "workspace:^",
     "@luxfi/utilities": "workspace:^",
     "@tanstack/react-query": "5.90.20",
-    "@luxamm/client-data-api": "0.0.161",
-    "@luxamm/client-embeddedwallet": "0.0.118",
-    "@luxamm/client-explore": "0.0.117",
-    "@luxamm/client-for": "0.1.105",
-    "@luxamm/client-liquidity": "0.3.100",
-    "@luxamm/client-notification-service": "0.0.112",
-    "@luxamm/client-unirpc-v2": "0.0.102",
+    "@luxamm/client-data-api": "^0.0.163",
+    "@luxamm/client-embeddedwallet": "^0.0.120",
+    "@luxamm/client-explore": "^0.0.119",
+    "@luxamm/client-for": "^0.1.107",
+    "@luxamm/client-liquidity": "^0.3.102",
+    "@luxamm/client-notification-service": "^0.0.114",
+    "@luxamm/client-unirpc-v2": "^0.0.104",
     "expo-secure-store": "14.0.1",
     "graphql": "16.6.0",
     "react": "19.0.3"
@@ -63,9 +63,6 @@
     "viem": "2.30.5",
     "vitest": "3.2.1",
     "zod": "4.3.6"
-  },
-  "optionalDependencies": {
-    "@luxamm/client-privy-embedded-wallet": "0.0.6"
   },
   "main": "src/index.ts",
   "private": true,

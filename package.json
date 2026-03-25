@@ -413,9 +413,7 @@
       "@hanzo/gui-animations-motion": "npm:@tamagui/animations-motion@2.0.0-rc.31",
       "@hanzo/gui-build": "npm:@tamagui/build@2.0.0-rc.31",
       "@hanzo/gui-native-ci": "npm:@tamagui/native-ci@2.0.0-rc.31",
-      "@hanzo/gui-use-store": "npm:@tamagui/use-store@2.0.0-rc.31",
-      "@luxamm/sdk": "npm:@luxamm/swap-sdk@3.0.1",
-      "@uniswap/client-privy-embedded-wallet": "npm:@luxamm/client-privy-embedded-wallet@0.0.7"
+      "@hanzo/gui-use-store": "npm:@tamagui/use-store@2.0.0-rc.31"
     }
   },
   "packageManager": "pnpm@9.15.9"
