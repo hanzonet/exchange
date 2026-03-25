@@ -28,6 +28,7 @@ const __dirname = path.dirname(__filename)
 // At runtime, the dynamic import will fail and the try/catch in loadPrivyPbModule() provides
 // a clear error message: "Embedded Wallet requires @luxamm/client-privy-embedded-wallet".
 const privyPackageInstalled = fs.existsSync(
+  path.resolve(__dirname, '../../node_modules/@luxamm/client-privy-embedded-wallet')
 )
 const ENABLE_REACT_COMPILER = process.env.ENABLE_REACT_COMPILER === 'true'
 const ReactCompilerConfig = {
