@@ -109,10 +109,13 @@ export default defineConfig({
     },
   ],
   outputDir: './test-results',
-  webServer: {
-    command: 'pnpm dev',
-    url: 'http://localhost:9000',
-    reuseExistingServer: !IS_CI,
-    timeout: ms('120s'),
-  },
+  // Only start local dev server when BASE_URL is not set (testing locally)
+  ...(process.env.BASE_URL ? {} : {
+    webServer: {
+      command: 'pnpm dev',
+      url: 'http://localhost:9000',
+      reuseExistingServer: true,
+      timeout: ms('120s'),
+    },
+  }),
 })
