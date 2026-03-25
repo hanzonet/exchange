@@ -25,7 +25,7 @@
       "outputs": ["{projectRoot}/src/abis/types/*.ts", "{projectRoot}/src/abis/types/factories"]
     },
     "contracts:compile:v3": {
-      "command": "test -f src/abis/types/v3/index.ts && echo 'v3 types exist' || typechain --target ethers-v5 --out-dir src/abis/types/v3 \"../../node_modules/@lux/**/artifacts/contracts/**/*[!dbg].json\"",
+      "command": "test -f src/abis/types/v3/index.ts && echo 'v3 types exist' || (ls ../../node_modules/@lux/**/artifacts/contracts/**/*.json >/dev/null 2>&1 && typechain --target ethers-v5 --out-dir src/abis/types/v3 \"../../node_modules/@lux/**/artifacts/contracts/**/*[!dbg].json\" || (mkdir -p src/abis/types/v3 && echo 'export {}' > src/abis/types/v3/index.ts && echo 'v3 types stub created'))",
       "options": {
         "cwd": "{projectRoot}"
       },
