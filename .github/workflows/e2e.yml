@@ -35,6 +35,7 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run critical e2e tests against production
+        working-directory: apps/web
         run: |
           npx playwright test \
             e2e/advanced.spec.ts \
@@ -73,6 +74,7 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run all e2e tests
+        working-directory: apps/web
         run: |
           npx playwright test \
             e2e/advanced.spec.ts \
