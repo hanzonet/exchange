@@ -593,10 +593,10 @@ export default defineConfig(({ mode }) => {
       port: DEFAULT_PORT,
       proxy: {
         '/config': {
-          target: 'https://gating.interface.gateway.uniswap.org',
+          target: 'https://gw.lux.exchange',
           changeOrigin: true,
           secure: true,
-          rewrite: (path) => path.replace(/^\/config/, '/v1/statsig-proxy'),
+          rewrite: (path) => path.replace(/^\/config/, '/gateway/v1/statsig-proxy'),
         },
         ...(ENABLE_PROXY ? { '/entry-gateway': createEntryGatewayProxy({ getLogger }) } : {}),
       },
