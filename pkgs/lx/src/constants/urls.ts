@@ -62,7 +62,7 @@ export const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? 
 
 export const CHROME_EXTENSION_UNINSTALL_URL_PATH = '/extension/uninstall'
 
-export const luxUrls = {
+export const uniswapUrls = {
   // Help and web articles/items
   helpUrl,
   helpRequestUrl: `${helpUrl}/requests/new`,
@@ -270,5 +270,4 @@ export const luxUrls = {
 }
 
 // Alias for backwards compatibility with upstream imports
-export { luxUrls as uniswapUrls } from "./urls"
 

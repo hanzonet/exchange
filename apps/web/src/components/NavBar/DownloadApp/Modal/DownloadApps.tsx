@@ -17,7 +17,7 @@ import { LUX_LOGO } from '@luxfi/ui/src/assets'
 import { BackArrow } from '@luxfi/ui/src/components/icons/BackArrow'
 import { GoogleChromeLogo } from '@luxfi/ui/src/components/logos/GoogleChromeLogo'
 import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'
@@ -206,7 +206,7 @@ function DownloadApps({ setPage }: { setPage: (page: Page) => void }) {
           <Trace logPress element={ElementName.ExtensionDownloadButton}>
             <Card
               onClick={() => {
-                window.open(luxUrls.chromeExtension)
+                window.open(uniswapUrls.chromeExtension)
                 onPressCard()
               }}
             >

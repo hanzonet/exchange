@@ -104,7 +104,7 @@ export {
   type DexPrecompile,
   fromLP,
   toLP,
-  isDEXPrecompile,
+  isUniswapXPrecompile,
   isBridgePrecompile,
 } from './precompile'
 

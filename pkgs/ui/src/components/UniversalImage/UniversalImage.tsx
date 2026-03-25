@@ -1,6 +1,7 @@
 /* eslint-disable complexity */
 import { useEffect, useState } from 'react'
-import { type ColorTokens, Image } from '@hanzo/gui'
+import { type ColorTokens } from '@hanzo/gui'
+import { Image } from 'react-native'
 import { Flex } from '@luxfi/ui/src/components/layout/Flex'
 import { PlainImage } from '@luxfi/ui/src/components/UniversalImage/internal/PlainImage'
 import { SvgImage } from '@luxfi/ui/src/components/UniversalImage/internal/SvgImage'

@@ -30,7 +30,7 @@ export function useGasFeeQuery({
   const { isStatsigReady } = useStatsigClientStatus()
   const queryKey = [
     ReactQueryCacheKey.LuxApi,
-    luxUrls.gasServicePath,
+    uniswapUrls.gasServicePath,
     params?.tx,
     params?.fallbackGasLimit,
     params?.smartContractDelegationAddress,

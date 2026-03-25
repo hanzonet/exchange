@@ -139,7 +139,7 @@ export function toLP(address: Address): number {
 /**
  * Check if address is a DEX precompile (LP-9xxx range)
  */
-export function isDEXPrecompile(address: Address): boolean {
+export function isUniswapXPrecompile(address: Address): boolean {
   const lp = toLP(address)
   return lp >= 9000 && lp < 10000
 }

@@ -16,7 +16,7 @@ import { useFunctionAfterNavigationTransitionEndWithDelay } from 'src/utils/hook
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
 import { Button, Flex, MobileDeviceHeight, Text, TouchableArea, useIsShortMobileDevice } from '@luxfi/ui/src'
 import { PapersText, QuestionInCircleFilled } from '@luxfi/ui/src/components/icons'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
@@ -98,7 +98,7 @@ export function SeedPhraseInputScreen({ navigation, route: { params } }: SeedPhr
   )
 
   const onPressRecoveryHelpButton = useCallback(
-    () => openUri({ uri: luxUrls.helpArticleUrls.recoveryPhraseHowToImport }),
+    () => openUri({ uri: uniswapUrls.helpArticleUrls.recoveryPhraseHowToImport }),
     [],
   )
 

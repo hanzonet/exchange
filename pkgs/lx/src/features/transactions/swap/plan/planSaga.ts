@@ -28,7 +28,7 @@ import {
 } from '@luxexchange/lx/src/features/transactions/swap/plan/planSagaUtils'
 import {
   logPlanStepTradeAnalytics,
-  logDEXPlanOrderSubmitted,
+  logUniswapXPlanOrderSubmitted,
 } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepAnalytics'
 import { TransactionAndPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
 import {
@@ -308,7 +308,7 @@ export function* plan(params: PlanParams) {
 
         // Log DEXOrderSubmitted after signature is successfully submitted to TAPI
         if (currentStep.type === TransactionStepType.DEXPlanSignature) {
-          logDEXPlanOrderSubmitted({ analyticsWithPlanStepContext })
+          logUniswapXPlanOrderSubmitted({ analyticsWithPlanStepContext })
         }
       } else {
         throw new AbortPlanError('No hash or signature found. Do not retry plan.')

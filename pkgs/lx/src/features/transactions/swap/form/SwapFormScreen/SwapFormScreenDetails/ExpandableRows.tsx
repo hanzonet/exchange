@@ -20,7 +20,7 @@ import { CurrencyField } from 'uniswap/src/types/currency'
 export function ExpandableRows(): JSX.Element | null {
   const { t } = useTranslation()
   const { gasFee, gasFeeBreakdown } = useSwapTxStore((s) => {
-    if (isDEX(s)) {
+    if (isUniswapX(s)) {
       return {
         gasFee: s.gasFee,
         gasFeeBreakdown: s.gasFeeBreakdown,

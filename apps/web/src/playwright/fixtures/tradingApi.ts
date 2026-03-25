@@ -67,7 +67,7 @@ export async function stubTradingApiEndpoint({
       }
 
       // Set a high gas limit to avoid OutOfGas
-      if (endpoint === luxUrls.tradingApiPaths.swap) {
+      if (endpoint === uniswapUrls.tradingApiPaths.swap) {
         responseJson.swap.gasLimit = DEFAULT_TEST_GAS_LIMIT
       }
 
@@ -101,7 +101,7 @@ export async function stubTradingApiEndpoint({
  */
 // eslint-disable-next-line import/no-unused-modules
 export async function mockTradingApiSwapResponse({ page }: { page: Page }) {
-  await page.route(`**/${luxUrls.tradingApiPaths.swap}`, async (route) => {
+  await page.route(`**/${uniswapUrls.tradingApiPaths.swap}`, async (route) => {
     await route.fulfill({ path: Mocks.TradingApi.swap })
   })
 }
@@ -127,7 +127,7 @@ export const test = base.extend<TradingApiFixture>({
     async ({ page }, use) => {
       try {
         await page.route(
-          `${luxUrls.tradingApiUrl}${luxUrls.tradingApiPaths.swaps}?txHashes=*`,
+          `${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.swaps}?txHashes=*`,
           async (route) => {
             try {
               const response = await route.fetch()

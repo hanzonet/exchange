@@ -25,7 +25,7 @@
       "outputs": ["{projectRoot}/src/abis/types/*.ts", "{projectRoot}/src/abis/types/factories"]
     },
     "contracts:compile:v3": {
-      "command": "typechain --target ethers-v5 --out-dir src/abis/types/v3 \"../../node_modules/@uniswap/**/artifacts/contracts/**/*[!dbg].json\"",
+      "command": "typechain --target ethers-v5 --out-dir src/abis/types/v3 \"../../node_modules/@luxamm/**/artifacts/contracts/**/*[!dbg].json\"",
       "options": {
         "cwd": "{projectRoot}"
       },

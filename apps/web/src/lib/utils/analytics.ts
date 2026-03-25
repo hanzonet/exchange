@@ -20,7 +20,7 @@ import {
 import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 import { NATIVE_CHAIN_ID } from '~/constants/tokens'
 import { InterfaceTrade, OffchainOrderType, QuoteMethod, SubmittableTrade } from '~/state/routing/types'
-import { isClassicTrade, isSubmittableTrade, isDEXTrade } from '~/state/routing/utils'
+import { isClassicTrade, isSubmittableTrade, isUniswapXTrade } from '~/state/routing/utils'
 import { computeRealizedPriceImpact } from '~/utils/prices'
 
 export const getDurationUntilTimestampSeconds = (futureTimestampInSecondsSinceEpoch?: number): number | undefined => {
@@ -54,7 +54,7 @@ function getEstimatedNetworkFee(trade: InterfaceTrade) {
   if (isClassicTrade(trade)) {
     return trade.gasUseEstimateUSD
   }
-  if (isDEXTrade(trade)) {
+  if (isUniswapXTrade(trade)) {
     return trade.classicGasUseEstimateUSD
   }
   return undefined
@@ -98,7 +98,7 @@ export function formatCommonPropertiesForTrade({
   return {
     routing: isUniversalSwapFlow ? tradeRoutingToFillType(trade) : trade.fillType,
     type: trade.tradeType,
-    ura_quote_id: isUniversalSwapFlow ? trade.quote.quote.quoteId : isDEXTrade(trade) ? trade.quoteId : undefined,
+    ura_quote_id: isUniversalSwapFlow ? trade.quote.quote.quoteId : isUniswapXTrade(trade) ? trade.quoteId : undefined,
     ura_request_id: isUniversalSwapFlow
       ? trade.quote.requestId
       : isSubmittableTrade(trade)
@@ -145,7 +145,7 @@ export function formatCommonPropertiesForTrade({
     token_in_detected_tax: formatPercentNumber(trade.inputTax),
     offchain_order_type: isUniversalSwapFlow
       ? tradeRoutingToOffchainOrderType(trade.routing)
-      : isDEXTrade(trade)
+      : isUniswapXTrade(trade)
         ? trade.offchainOrderType
         : undefined,
     transactionOriginType: TransactionOriginType.Internal,
@@ -202,7 +202,7 @@ export const formatSwapSignedAnalyticsEventProperties = ({
 })
 
 function getQuoteMethod(trade: InterfaceTrade) {
-  if (isDEXTrade(trade)) {
+  if (isUniswapXTrade(trade)) {
     return QuoteMethod.ROUTING_API
   }
 

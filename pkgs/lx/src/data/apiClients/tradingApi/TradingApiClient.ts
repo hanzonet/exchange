@@ -9,13 +9,13 @@ import {
   Layers,
 } from '@luxexchange/gating'
 import { config } from '@luxexchange/lx/src/config'
-import { tradingApiVersionPrefix, luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { tradingApiVersionPrefix, uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
 import { filterChainIdsByPlatform } from '@luxexchange/lx/src/features/chains/utils'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 
 const TradingFetchClient = createLuxFetchClient({
-  baseUrl: luxUrls.tradingApiUrl,
+  baseUrl: uniswapUrls.tradingApiUrl,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,
   },

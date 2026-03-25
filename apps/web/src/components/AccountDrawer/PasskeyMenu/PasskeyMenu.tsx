@@ -328,7 +328,7 @@ export default function PasskeyMenu({ onClose }: { onClose: () => void }) {
             <Anchor
               target="_blank"
               rel="noreferrer"
-              href={luxUrls.helpArticleUrls.passkeysInfo}
+              href={uniswapUrls.helpArticleUrls.passkeysInfo}
               {...ClickableGuiStyle}
             >
               <Buoy size="$icon.20" color="$neutral2" />

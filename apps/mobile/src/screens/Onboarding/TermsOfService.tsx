@@ -1,6 +1,6 @@
 import { Trans } from 'react-i18next'
 import { Text } from '@luxfi/ui/src'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
 
 export function TermsOfService(): JSX.Element {
@@ -13,7 +13,7 @@ export function TermsOfService(): JSX.Element {
               key="terms-of-service"
               color="$accent1"
               variant="body4"
-              onPress={(): Promise<void> => openUri({ uri: luxUrls.termsOfServiceUrl })}
+              onPress={(): Promise<void> => openUri({ uri: uniswapUrls.termsOfServiceUrl })}
             />
           ),
           highlightPrivacy: (
@@ -21,7 +21,7 @@ export function TermsOfService(): JSX.Element {
               key="privacy-policy"
               color="$accent1"
               variant="body4"
-              onPress={(): Promise<void> => openUri({ uri: luxUrls.privacyPolicyUrl })}
+              onPress={(): Promise<void> => openUri({ uri: uniswapUrls.privacyPolicyUrl })}
             />
           ),
         }}

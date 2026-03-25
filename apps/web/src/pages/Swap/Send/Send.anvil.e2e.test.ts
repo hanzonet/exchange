@@ -1,4 +1,4 @@
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { stubTradingApiEndpoint } from '~/playwright/fixtures/tradingApi'
@@ -19,7 +19,7 @@ test.describe(
   },
   () => {
     test('should send ETH to recipient', async ({ page, anvil }) => {
-      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.quote })
+      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.quote })
       await page.goto('/send')
 
       // Get initial balances

@@ -20,7 +20,7 @@ export function SwapFeeWarning({
   const { t } = useTranslation()
 
   const onPressLearnMore = async (): Promise<void> => {
-    await openUri({ uri: luxUrls.helpArticleUrls.swapFeeInfo })
+    await openUri({ uri: uniswapUrls.helpArticleUrls.swapFeeInfo })
   }
 
   const caption =

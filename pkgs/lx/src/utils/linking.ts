@@ -251,15 +251,15 @@ export async function openTransactionLink(hash: string | undefined, chainId: Uni
 }
 
 export async function openLuxHelpLink(): Promise<void> {
-  return openUri({ uri: luxUrls.helpRequestUrl })
+  return openUri({ uri: uniswapUrls.helpRequestUrl })
 }
 
 export async function openFORSupportLink(serviceProvider: ServiceProviderInfo): Promise<void> {
-  return openUri({ uri: serviceProvider.supportUrl ?? luxUrls.helpRequestUrl })
+  return openUri({ uri: serviceProvider.supportUrl ?? uniswapUrls.helpRequestUrl })
 }
 
 export async function openOfframpPendingSupportLink(): Promise<void> {
-  return openUri({ uri: luxUrls.helpArticleUrls.fiatOffRampHelp })
+  return openUri({ uri: uniswapUrls.helpArticleUrls.fiatOffRampHelp })
 }
 
 export function getPortfolioUrl(walletAddress: string): string {
@@ -281,7 +281,7 @@ export function getTokenUrl(currencyId: string, addMobileUTMTags: boolean = fals
       // this is how web app handles native tokens
       tokenAddress = BACKEND_NATIVE_CHAIN_ADDRESS_STRING
     }
-    const tokenUrl = `${luxUrls.webInterfaceTokensUrl}/${network}/${tokenAddress}`
+    const tokenUrl = `${uniswapUrls.webInterfaceTokensUrl}/${network}/${tokenAddress}`
     return addMobileUTMTags ? tokenUrl + `?${UTM_TAGS_MOBILE}` : tokenUrl
   } catch {
     return undefined

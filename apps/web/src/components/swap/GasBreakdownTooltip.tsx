@@ -2,7 +2,7 @@ import { Currency } from '@luxamm/sdk-core'
 import { ReactNode } from 'react'
 import { Trans } from 'react-i18next'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
@@ -13,7 +13,7 @@ import Row from '~/components/deprecated/Row'
 import DEXRouterLabel, { DEXGradient } from '~/components/RouterLabel/DEXRouterLabel'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 import { InterfaceTrade } from '~/state/routing/types'
-import { isLimitTrade, isPreviewTrade, isDEXTrade } from '~/state/routing/utils'
+import { isLimitTrade, isPreviewTrade, isUniswapXTrade } from '~/state/routing/utils'
 import { ThemedText } from '~/theme/components'
 import { Divider } from '~/theme/components/Dividers'
 import { ExternalLink } from '~/theme/components/Links'
@@ -48,7 +48,7 @@ const GaslessSwapLabel = () => {
 type GasBreakdownTooltipProps = { trade: InterfaceTrade }
 
 export function GasBreakdownTooltip({ trade }: GasBreakdownTooltipProps) {
-  const isDEX = isDEXTrade(trade)
+  const isUniswapX = isUniswapXTrade(trade)
   const inputCurrency = trade.inputAmount.currency
   const native = nativeOnChain(inputCurrency.chainId)
 
@@ -56,13 +56,13 @@ export function GasBreakdownTooltip({ trade }: GasBreakdownTooltipProps) {
     return <NetworkCostDescription native={native} />
   }
 
-  const swapEstimate = !isDEX ? trade.gasUseEstimateUSD : undefined
+  const swapEstimate = !isUniswapX ? trade.gasUseEstimateUSD : undefined
   const approvalEstimate = trade.approveInfo.needsApprove ? trade.approveInfo.approveGasEstimateUSD : undefined
   // Limit orders still require wrapping ETH to WETH (unlike regular DEX swaps which now support native ETH)
   const wrapEstimate = isLimitTrade(trade) && trade.wrapInfo.needsWrap ? trade.wrapInfo.wrapGasEstimateUSD : undefined
   const showEstimateDetails = Boolean(wrapEstimate || approvalEstimate)
 
-  const description = isDEX ? <DEXDescription /> : <NetworkCostDescription native={native} />
+  const description = isUniswapX ? <DEXDescription /> : <NetworkCostDescription native={native} />
 
   if (!showEstimateDetails) {
     return description
@@ -80,7 +80,7 @@ export function GasBreakdownTooltip({ trade }: GasBreakdownTooltipProps) {
           amount={approvalEstimate}
         />
         <GasCostItem title={<Trans i18nKey="common.swap" />} amount={swapEstimate} />
-        {isDEX && <GasCostItem title={<Trans i18nKey="common.swap" />} itemValue={<GaslessSwapLabel />} />}
+        {isUniswapX && <GasCostItem title={<Trans i18nKey="common.swap" />} itemValue={<GaslessSwapLabel />} />}
       </AutoColumn>
       <Divider />
       {description}
@@ -115,7 +115,7 @@ export function DEXDescription() {
           logo: <InlineDEXGradient>DEX</InlineDEXGradient>,
         }}
       />{' '}
-      <ExternalLink href={luxUrls.helpArticleUrls.dexInfo}>
+      <ExternalLink href={uniswapUrls.helpArticleUrls.dexInfo}>
         <Trans i18nKey="common.button.learn" />
       </ExternalLink>
     </ThemedText.Caption>

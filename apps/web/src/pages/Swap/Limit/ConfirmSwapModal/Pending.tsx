@@ -1,7 +1,7 @@
 import { TFunction } from 'i18next'
 import { ReactNode, useMemo, useRef } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { ExplorerDataType, getExplorerLink } from '@luxexchange/lx/src/utils/linking'
@@ -21,7 +21,7 @@ import {
 } from '~/pages/Swap/Limit/ConfirmSwapModal/PendingStatusIcons'
 import { TradeSummary } from '~/pages/Swap/Limit/ConfirmSwapModal/TradeSummary'
 import { InterfaceTrade, TradeFillType } from '~/state/routing/types'
-import { isLimitTrade, isDEXTradeType } from '~/state/routing/utils'
+import { isLimitTrade, isUniswapXTradeType } from '~/state/routing/utils'
 import { useIsTransactionConfirmed, useDEXOrderByOrderHash } from '~/state/transactions/hooks'
 import { AnimationType } from '~/theme/components/FadePresence'
 import { ExternalLink } from '~/theme/components/Links'
@@ -116,7 +116,7 @@ export function Pending({
 
   const swapStatus = useSwapTransactionStatus(swapResult)
   const dexOrder = useDEXOrderByOrderHash(
-    isDEXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
+    isUniswapXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
   )
 
   const limitPlaced = isLimitTrade(initialTrade) && dexOrder?.status === TransactionStatus.Pending
@@ -195,8 +195,8 @@ export function Pending({
               <ExternalLink
                 href={
                   isLimitTrade(initialTrade)
-                    ? luxUrls.helpArticleUrls.limitsInfo
-                    : luxUrls.helpArticleUrls.dexInfo
+                    ? uniswapUrls.helpArticleUrls.limitsInfo
+                    : uniswapUrls.helpArticleUrls.dexInfo
                 }
               >
                 {isLimitTrade(initialTrade) ? (

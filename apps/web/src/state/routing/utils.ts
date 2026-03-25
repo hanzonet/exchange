@@ -75,7 +75,7 @@ export function computeRoutes(args: GetQuoteArgs, routes: ClassicQuoteData['rout
   if (routes.length === 0) {
     return []
   }
-  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isDEXTrade: false, routes })
+  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isUniswapXTrade: false, routes })
 
   try {
     return routes.map((route) => {
@@ -209,11 +209,11 @@ function toUnsignedPriorityOrderInfo(orderInfoJSON: UnsignedPriorityOrderInfoJSO
 // Prepares the currencies used for the actual Swap (either DEX or Universal Router)
 function getTradeCurrencies({
   args,
-  isDEXTrade,
+  isUniswapXTrade,
   routes,
 }: {
   args: GetQuoteArgs | GetQuickQuoteArgs
-  isDEXTrade: boolean
+  isUniswapXTrade: boolean
   routes?: ClassicQuoteData['route']
 }): [Currency, Currency] {
   const {
@@ -329,7 +329,7 @@ export async function transformQuoteToTrade({
       routingType === URAQuoteType.PRIORITY) &&
     routerPreference === RouterPreference.X
 
-  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isDEXTrade: showDEXTrade })
+  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isUniswapXTrade: showDEXTrade })
 
   if (!isEVMChain(currencyIn.chainId)) {
     throw new Error('chainId must be EVM for routing api paths')
@@ -385,12 +385,12 @@ export async function transformQuoteToTrade({
 
   // If the top-level URA quote type is DUTCH_V1 or DUTCH_V2, then DEX is better for the user
   // Or if quote type is PRIORITY, we only use DEX
-  const isDEXBetter =
+  const isUniswapXBetter =
     data.routing === URAQuoteType.DUTCH_V1 ||
     data.routing === URAQuoteType.DUTCH_V2 ||
     data.routing === URAQuoteType.DUTCH_V3 ||
     data.routing === URAQuoteType.PRIORITY
-  if (isDEXBetter) {
+  if (isUniswapXBetter) {
     const swapFee = getSwapFee(data.quote)
     // DEX no longer requires wrapping native ETH to WETH
     const wrapInfo: WrapInfo = { needsWrap: false }
@@ -543,11 +543,11 @@ export function isPreviewTrade(trade?: InterfaceTrade): trade is PreviewTrade {
 }
 
 export function isSubmittableTrade(trade?: InterfaceTrade): trade is SubmittableTrade {
-  return isClassicTrade(trade) || isDEXTrade(trade)
+  return isClassicTrade(trade) || isUniswapXTrade(trade)
 }
 
 /* Returns true if trade uses DEX protocol. Includes both X swaps and limit orders. */
-export function isDEXTradeType(
+export function isUniswapXTradeType(
   tradeType?: TradeFillType,
 ): tradeType is TradeFillType.DEX | TradeFillType.DEXv2 | TradeFillType.DEXv3 {
   return (
@@ -557,18 +557,18 @@ export function isDEXTradeType(
   )
 }
 
-export function isDEXTrade(
+export function isUniswapXTrade(
   trade?: InterfaceTrade,
 ): trade is DutchOrderTrade | V2DutchOrderTrade | V3DutchOrderTrade | LimitOrderTrade | PriorityOrderTrade {
-  return isDEXTradeType(trade?.fillType)
+  return isUniswapXTradeType(trade?.fillType)
 }
 
 /* Returns true if trade is a SWAP on DEX, not a limit order */
-export function isDEXSwapTrade(
+export function isUniswapXSwapTrade(
   trade?: InterfaceTrade,
 ): trade is DutchOrderTrade | V2DutchOrderTrade | V3DutchOrderTrade | PriorityOrderTrade {
   return (
-    isDEXTrade(trade) &&
+    isUniswapXTrade(trade) &&
     (trade.offchainOrderType === OffchainOrderType.DUTCH_AUCTION ||
       trade.offchainOrderType === OffchainOrderType.DUTCH_V2_AUCTION ||
       trade.offchainOrderType === OffchainOrderType.DUTCH_V3_AUCTION ||
@@ -577,5 +577,5 @@ export function isDEXSwapTrade(
 }
 
 export function isLimitTrade(trade?: InterfaceTrade): trade is LimitOrderTrade {
-  return isDEXTrade(trade) && trade.offchainOrderType === OffchainOrderType.LIMIT_ORDER
+  return isUniswapXTrade(trade) && trade.offchainOrderType === OffchainOrderType.LIMIT_ORDER
 }

@@ -6,7 +6,7 @@ import { iconSizes } from '@luxfi/ui/src/theme'
 import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { EdgeFade } from '@luxexchange/lx/src/features/fiatOnRamp/EdgeFade/EdgeFade'
@@ -163,7 +163,7 @@ function ChooseProviderModalContent({ closeModal }: ChooseProviderModal) {
     >
       <Flex gap="$spacing24">
         <GetHelpHeader
-          link={luxUrls.helpArticleUrls.fiatOnRampHelp}
+          link={uniswapUrls.helpArticleUrls.fiatOnRampHelp}
           closeModal={closeModal}
           closeDataTestId="ChooseProviderModal-close"
         />

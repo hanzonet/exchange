@@ -1,4 +1,4 @@
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { stubTradingApiEndpoint } from '~/playwright/fixtures/tradingApi'
@@ -31,7 +31,7 @@ test.describe(
         })
       }
 
-      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.quote })
+      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.quote })
       await page.goto('/buy')
 
       // Wait for wallet to be connected

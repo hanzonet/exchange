@@ -22,7 +22,7 @@ import { DOT_GRID, LUX_LOGO } from '@luxfi/ui/src/assets'
 import { FileListLock, Mobile, RotatableChevron, Wifi } from '@luxfi/ui/src/components/icons'
 import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
 import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -86,7 +86,7 @@ export function ScanToOnboard(): JSX.Element {
     }
     try {
       // poll OTP state
-      const response = await fetch(`${luxUrls.scantasticApiUrl}/otp-state/${sessionUUID}`, {
+      const response = await fetch(`${uniswapUrls.scantasticApiUrl}/otp-state/${sessionUUID}`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

@@ -45,7 +45,7 @@ import type {
   ClassicTrade,
   DEXTrade,
 } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
-import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import type {
   ApproveTransactionInfo,
   BridgeTransactionInfo,
@@ -585,7 +585,7 @@ export function getSwapTransactionInfo({
   return {
     type: TransactionType.Swap,
     ...commonAttributes,
-    isDEXOrder: isDEX(trade),
+    isUniswapXOrder: isUniswapX(trade),
     ...(trade.tradeType === TradeType.EXACT_INPUT
       ? {
           tradeType: TradeType.EXACT_INPUT,

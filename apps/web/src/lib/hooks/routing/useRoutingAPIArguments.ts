@@ -17,12 +17,12 @@ import { GetQuoteArgs } from '~/state/routing/types'
  * be destructured.
  */
 export function useRoutingAPIArguments(input: RoutingAPIInput): GetQuoteArgs | SkipToken {
-  const isDEXSupportedChain = useIsDEXSupportedChain(input.tokenIn?.chainId)
+  const isUniswapXSupportedChain = useIsDEXSupportedChain(input.tokenIn?.chainId)
   const isPriorityOrdersEnabled = useDEXPriorityOrderFlag(input.tokenIn?.chainId)
   const isDutchV3Enabled = useFeatureFlag(FeatureFlags.ArbitrumDutchV3)
   const { data: isDelegationMismatch } = useIsMismatchAccountQuery({ chainId: input.tokenIn?.chainId })
   // if there is a mismatched account, we want to disable dex
-  const canUseDEX = isDEXSupportedChain && !isDelegationMismatch
+  const canUseDEX = isUniswapXSupportedChain && !isDelegationMismatch
 
   const getRoutingAPIArguments = useMemo(
     () =>

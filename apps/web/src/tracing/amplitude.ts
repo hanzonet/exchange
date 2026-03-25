@@ -24,7 +24,7 @@ export function setupAmplitude() {
   getAnalyticsAtomDirect(true).then((allowAnalytics) => {
     analytics.init({
       transportProvider: new ApplicationTransport({
-        serverUrl: luxUrls.amplitudeProxyUrl,
+        serverUrl: uniswapUrls.amplitudeProxyUrl,
         appOrigin: OriginApplication.INTERFACE,
         reportOriginCountry: (country: string) => store.dispatch(setOriginCountry(country)),
       }),

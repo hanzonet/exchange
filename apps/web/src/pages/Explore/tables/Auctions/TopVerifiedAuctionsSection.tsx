@@ -80,7 +80,7 @@ export function TopVerifiedAuctionsSection() {
         <Tooltip placement="top" delay={0}>
           <Tooltip.Trigger>
             <Anchor
-              href={luxUrls.helpArticleUrls.toucanVerifiedAuctionsHelp}
+              href={uniswapUrls.helpArticleUrls.toucanVerifiedAuctionsHelp}
               target="_blank"
               onPress={(e) => e.stopPropagation()}
               display="flex"

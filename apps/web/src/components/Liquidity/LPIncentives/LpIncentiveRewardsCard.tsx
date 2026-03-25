@@ -23,7 +23,7 @@ import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFille
 import { iconSizes } from '@luxfi/ui/src/theme'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
 import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useGetPoolsRewards } from '@luxexchange/lx/src/data/rest/getPoolsRewards'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
@@ -247,7 +247,7 @@ function LpIncentiveRewardsCard({
                       </Text>
                       {!rewardsError && (
                         <Trace logPress eventOnTrigger={LuxEventName.LpIncentiveLearnMoreCtaClicked}>
-                          <LearnMoreLink textVariant="buttonLabel4" url={luxUrls.helpArticleUrls.lpIncentiveInfo} />
+                          <LearnMoreLink textVariant="buttonLabel4" url={uniswapUrls.helpArticleUrls.lpIncentiveInfo} />
                         </Trace>
                       )}
                     </Flex>

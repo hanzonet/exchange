@@ -7,9 +7,9 @@ import { ChartBar } from 'ui/src/components/icons/ChartBar'
 import { zIndexes } from 'ui/src/theme'
 import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 import { WarningInfo } from '@luxexchange/lx/src/components/modals/WarningModal/WarningInfo'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
-import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
 import { isWebPlatform } from 'utilities/src/platform'
 
@@ -17,22 +17,22 @@ function getPriceImpactInfo({ t, routing, missing }: { t: TFunction; routing: Tr
   caption: string
   link: string
 } {
-  if (isDEX({ routing })) {
+  if (isUniswapX({ routing })) {
     if (missing) {
       return {
         caption: t('swap.impactOfTrade.dex.missing'),
-        link: luxUrls.helpArticleUrls.dexInfo,
+        link: uniswapUrls.helpArticleUrls.dexInfo,
       }
     } else {
       return {
         caption: t('swap.impactOfTrade.dex'),
-        link: luxUrls.helpArticleUrls.dexInfo,
+        link: uniswapUrls.helpArticleUrls.dexInfo,
       }
     }
   } else {
     return {
       caption: t('swap.impactOfTrade'),
-      link: luxUrls.helpArticleUrls.priceImpact,
+      link: uniswapUrls.helpArticleUrls.priceImpact,
     }
   }
 }

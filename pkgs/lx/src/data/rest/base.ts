@@ -37,7 +37,7 @@ export const ALL_NETWORKS_ARG = 'ALL_NETWORKS'
  * export function useNewServiceQuery(
     input?: PartialMessage<NewServiceRequest>,
   ): UseQueryResult<NewServiceResponse, ConnectError> {
-    return useQuery(newService, input, { transport: luxGetTransport })
+    return useQuery(newService, input, { transport: uniswapGetTransport })
   }
  */
 

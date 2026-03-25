@@ -2,7 +2,7 @@ import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useTranslation } from 'react-i18next'
 import { LayerGroup } from '@luxfi/ui/src/components/icons/LayerGroup'
 import { opacify } from '@luxfi/ui/src/theme'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { CardContents } from '~/pages/Landing/components/cards/CardContents'
 import { PillButton } from '~/pages/Landing/components/cards/PillButton'
 import ValuePropCard from '~/pages/Landing/components/cards/ValuePropCard'
@@ -19,7 +19,7 @@ export function TradingApiCard() {
       $theme-dark={{
         backgroundColor: opacify(12, primary),
       }}
-      href={luxUrls.tradingApiDocsUrl}
+      href={uniswapUrls.tradingApiDocsUrl}
       color={primary}
       title={
         <PillButton

@@ -12,7 +12,7 @@ import { CloseIconWithHover } from '@luxfi/ui/src/components/icons/CloseIconWith
 import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
 import { Pools } from '@luxfi/ui/src/components/icons/Pools'
 import { Wallet } from '@luxfi/ui/src/components/icons/Wallet'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useGetPositionsInfiniteQuery } from '@luxexchange/lx/src/data/rest/getPositions'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -124,13 +124,13 @@ function DisconnectedWalletView() {
             width="100%"
             img={PROVIDE_LIQUIDITY}
             text={t('liquidity.provideOnProtocols')}
-            link={luxUrls.helpArticleUrls.providingLiquidityInfo}
+            link={uniswapUrls.helpArticleUrls.providingLiquidityInfo}
           />
           <LearnMoreTile
             width="100%"
             img={V4_HOOK}
             text={t('liquidity.hooks')}
-            link={luxUrls.helpArticleUrls.v4HooksInfo}
+            link={uniswapUrls.helpArticleUrls.v4HooksInfo}
           />
           <LearnMoreTile
             width="100%"
@@ -572,12 +572,12 @@ export default function Pool() {
                 <LearnMoreTile
                   img={PROVIDE_LIQUIDITY}
                   text={t('liquidity.provideOnProtocols')}
-                  link={luxUrls.helpArticleUrls.providingLiquidityInfo}
+                  link={uniswapUrls.helpArticleUrls.providingLiquidityInfo}
                 />
                 <LearnMoreTile
                   img={V4_HOOK}
                   text={t('liquidity.hooks')}
-                  link={luxUrls.helpArticleUrls.v4HooksInfo}
+                  link={uniswapUrls.helpArticleUrls.v4HooksInfo}
                 />
                 <LearnMoreTile
                   img={ALLOWLISTED_HOOKS}
@@ -585,7 +585,7 @@ export default function Pool() {
                   link={uniswapUrls.helpArticleUrls.allowlistedHooks}
                 />
               </Flex>
-              <ExternalArrowLink href={luxUrls.helpArticleUrls.positionsLearnMore}>
+              <ExternalArrowLink href={uniswapUrls.helpArticleUrls.positionsLearnMore}>
                 {t('common.button.learn')}
               </ExternalArrowLink>
             </Flex>

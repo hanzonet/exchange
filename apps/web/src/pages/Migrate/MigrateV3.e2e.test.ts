@@ -1,5 +1,5 @@
 import { getPosition } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { Mocks } from '~/playwright/mocks/mocks'
@@ -19,7 +19,7 @@ test.describe(
     test.describe('error handling', () => {
       test('should gracefully handle errors during review', async ({ page }) => {
         await page.route(
-          `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+          `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
           async (route) => {
             await route.fulfill({ path: Mocks.Positions.get_v3_position })
           },

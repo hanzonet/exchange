@@ -8,7 +8,7 @@ import {
   focusOrCreateLuxInterfaceTab,
   SidebarLocationState,
 } from 'src/app/navigation/utils'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useNavigateToNftExplorerLink } from '@luxexchange/lx/src/features/nfts/hooks/useNavigateToNftExplorerLink'
@@ -206,7 +206,7 @@ function useNavigateToPoolDetails(): (args: { poolId: Address; chainId: Universe
       url: getPoolDetailsURL(poolId, chainId),
       // We want to reuse the active tab only if it's already in any other PDP.
       // eslint-disable-next-line security/detect-non-literal-regexp
-      reuseActiveTabIfItMatches: new RegExp(`^${escapeRegExp(luxUrls.webInterfacePoolsUrl)}`),
+      reuseActiveTabIfItMatches: new RegExp(`^${escapeRegExp(uniswapUrls.webInterfacePoolsUrl)}`),
     })
   }, [])
 }
