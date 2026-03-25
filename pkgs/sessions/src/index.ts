@@ -135,3 +135,5 @@ export {
   createCookieJar,
   createLocalCookieTransport,
 } from '@luxexchange/sessions/src/test-utils/createLocalCookieTransport'
+
+export const luxIdentifierQuery = uniswapIdentifierQuery

@@ -224,3 +224,5 @@ export async function cancelMultipleUniswapXOrders({
     return undefined
   }
 }
+
+export const cancelMultipleDEXOrders = cancelMultipleUniswapXOrders

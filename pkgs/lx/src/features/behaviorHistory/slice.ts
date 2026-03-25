@@ -159,3 +159,5 @@ export const {
 } = slice.actions
 
 export const uniswapBehaviorHistoryReducer = slice.reducer
+
+export const setHasDismissedLuxWrapped2025Banner = setHasDismissedUniswapWrapped2025Banner

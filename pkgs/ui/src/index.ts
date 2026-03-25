@@ -135,3 +135,5 @@ export { EM_DASH } from './utils/constants'
 export * from './utils/gui'
 export { DEXText } from './components/text/DEXText'
 export { DEXGeneric } from './components/icons/DEXGeneric'
+
+export { assertWebElement } from '@luxfi/ui/src/utils/tamagui'

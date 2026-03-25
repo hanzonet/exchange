@@ -269,7 +269,3 @@ export const uniswapUrls = {
 
   dataApiServiceUrl: getCloudflareApiBaseUrl({ postfix: 'v2/data.v1.DataApiService' }),
 }
-
-// Alias for backwards compatibility with upstream imports
-
-export { LUX_WEB_URL as UNISWAP_WEB_URL } from "./urls"

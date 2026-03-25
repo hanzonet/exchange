@@ -343,3 +343,5 @@ export { getEntryGatewayUrl, getMigratedForApiUrl } from '@luxexchange/api/src/g
 export { getWebSocketUrl } from '@luxexchange/api/src/getWebSocketUrl'
 
 export { provideUniswapIdentifierService } from '@luxexchange/api/src/provideUniswapIdentifierService'
+
+export const provideLuxIdentifierService = provideUniswapIdentifierService
