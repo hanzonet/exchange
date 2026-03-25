@@ -32,7 +32,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Install Playwright browsers
-        run: npx playwright install chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Run critical e2e tests against production
         run: |
