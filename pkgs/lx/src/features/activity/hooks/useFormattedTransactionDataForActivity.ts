@@ -18,7 +18,7 @@ import { PaginationControls } from '@luxexchange/lx/src/features/dataApi/types'
 import { useLocalizedDayjs } from '@luxexchange/lx/src/features/language/localizedDayjs'
 import { useCurrencyIdToVisibility } from '@luxexchange/lx/src/features/transactions/selectors'
 import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
-import { isLimitOrder } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { isLimitOrder } from '@luxexchange/lx/src/features/transactions/utils/dexUtils'
 import { selectNftsVisibility } from '@luxexchange/lx/src/features/visibility/selectors'
 import { isAndroid } from 'utilities/src/platform'
 

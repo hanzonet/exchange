@@ -12,7 +12,7 @@ import {
 import {
   convertOrderStatusToTransactionStatus,
   convertOrderTypeToRouting,
-} from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+} from '@luxexchange/lx/src/features/transactions/utils/dexUtils'
 import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'

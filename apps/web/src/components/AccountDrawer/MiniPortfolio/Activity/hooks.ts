@@ -15,7 +15,7 @@ import {
   TransactionType,
   DEXOrderDetails,
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
-import { isLimitOrder, isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { isLimitOrder, isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dexUtils'
 import { usePendingTransactions, usePendingDEXOrders } from '~/state/transactions/hooks'
 import { isExistingTransaction } from '~/state/transactions/utils'
 

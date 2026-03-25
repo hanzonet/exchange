@@ -13,7 +13,7 @@ import {
   DEXOrderDetails,
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTxStatus } from '@luxexchange/lx/src/features/transactions/types/utils'
-import { convertOrderStatusToTransactionStatus } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { convertOrderStatusToTransactionStatus } from '@luxexchange/lx/src/features/transactions/utils/dexUtils'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useAccount } from '~/hooks/useAccount'
 import { ActivityUpdateTransactionType, OnActivityUpdate } from '~/state/activity/types'

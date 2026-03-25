@@ -28,7 +28,7 @@ import {
   isPlanTransactionDetails,
   isPlanTransactionInfo,
 } from '@luxexchange/lx/src/features/transactions/types/utils'
-import { isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dexUtils'
 import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
 import { usePrevious } from '@luxfi/utilities/src/react/hooks'
 import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
