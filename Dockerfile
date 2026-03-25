@@ -17,7 +17,7 @@ COPY . .
 # 2. Run postinstall scripts separately, tolerating Nx/native failures
 RUN NODE_ENV=development pnpm install --no-frozen-lockfile --ignore-scripts
 RUN pnpm rebuild || true
-RUN node node_modules/@tamagui/vite-plugin/dist/cjs/index.js --help 2>/dev/null || pnpm add -w @tamagui/vite-plugin || true
+RUN pnpm rebuild @hanzogui/vite-plugin 2>/dev/null || true
 
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
