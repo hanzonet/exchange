@@ -11,7 +11,7 @@ import {
   UnsignedV3DutchOrder,
   V2DutchOrderBuilder,
   V3DutchOrderBuilder,
-} from '@luxamm/uniswapx-sdk'
+} from '@luxamm/luxswap-sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { InterfaceEventName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'

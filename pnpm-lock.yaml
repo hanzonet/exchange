@@ -22,9 +22,9 @@ overrides:
   '@types/react': 19.0.10
   '@typescript-eslint/eslint-plugin': 6.20.0
   '@typescript-eslint/parser': 6.20.0
-  '@luxamm/router-sdk': npm:@uniswap/router-sdk@2.7.1
-  '@luxamm/sdk-core': npm:@uniswap/sdk-core@7.12.1
-  '@luxamm/v2-sdk': npm:@uniswap/v2-sdk@4.19.1
+  '@luxamm/router-sdk': npm:@uniswap/router-sdk@2.7.2
+  '@luxamm/sdk-core': npm:@uniswap/sdk-core@7.12.2
+  '@luxamm/v2-sdk': npm:@uniswap/v2-sdk@4.19.2
   '@wxt-dev/browser': 0.1.4
   '@xmldom/xmldom': 0.7.7
   cheerio: 1.0.0-rc.12
@@ -64,33 +64,6 @@ overrides:
   xml2js: 0.5.0
   yaml: 2.2.2
   zod: 4.3.6
-  '@luxamm/v3-sdk': npm:@uniswap/v3-sdk@3.29.1
-  '@luxamm/v4-sdk': npm:@uniswap/v4-sdk@1.29.1
-  '@luxamm/permit2-sdk': npm:@uniswap/permit2-sdk@1.3.0
-  '@luxamm/universal-router-sdk': npm:@uniswap/universal-router-sdk@4.33.0
-  '@luxamm/luxswap-sdk': npm:@uniswap/uniswapx-sdk@3.0.0-beta.7
-  '@luxamm/analytics-events': npm:@uniswap/analytics-events@2.43.0
-  '@luxamm/analytics': npm:@uniswap/analytics@1.7.2
-  '@luxamm/client-data-api': npm:@uniswap/client-data-api@0.0.59
-  '@luxamm/client-liquidity': npm:@uniswap/client-liquidity@0.1.2
-  '@luxamm/client-explore': npm:@uniswap/client-explore@0.0.17
-  '@luxamm/client-search': npm:@uniswap/client-search@0.0.11
-  '@luxamm/client-notification-service': npm:@uniswap/client-notification-service@0.0.11
-  '@luxamm/client-privy-embedded-wallet': npm:@uniswap/client-privy-embedded-wallet@0.0.5
-  '@luxamm/client-embeddedwallet': npm:@uniswap/client-embeddedwallet@0.0.16
-  '@luxamm/client-trading': npm:@uniswap/client-trading@0.1.3
-  '@luxamm/client-for': npm:@uniswap/client-for@0.1.5
-  '@luxamm/client-platform-service': npm:@uniswap/client-platform-service@0.0.14
-  '@luxamm/client-unirpc-v2': npm:@uniswap/client-unirpc-v2@0.0.2
-  '@luxamm/default-token-list': npm:@uniswap/default-token-list@11.19.0
-  '@luxamm/token-lists': npm:@uniswap/token-lists@1.0.0-beta.33
-  '@luxamm/merkle-distributor': npm:@uniswap/merkle-distributor@1.0.1
-  '@luxamm/v3-core': npm:@uniswap/v3-core@1.0.1
-  '@luxamm/v3-periphery': npm:@uniswap/v3-periphery@1.4.4
-  '@luxamm/ethers-rs-mobile': npm:@uniswap/ethers-rs-mobile@0.0.5
-  '@luxamm/swap-router-contracts': npm:@uniswap/swap-router-contracts@1.1.0
-  '@luxamm/universal-router': npm:@uniswap/universal-router@2.0.0-beta.2
-  '@luxamm/lib': npm:@uniswap/lib@4.0.1-alpha
   '@hanzogui/cli-color': npm:@tamagui/cli-color@2.0.0-rc.31
   '@hanzogui/core': npm:@tamagui/core@2.0.0-rc.31
   '@hanzogui/static': npm:@tamagui/static@2.0.0-rc.31
@@ -275,6 +248,38 @@ overrides:
   '@hanzo/gui-build': npm:@tamagui/build@2.0.0-rc.31
   '@hanzo/gui-native-ci': npm:@tamagui/native-ci@2.0.0-rc.31
   '@hanzo/gui-use-store': npm:@tamagui/use-store@2.0.0-rc.31
+  '@uniswap/sdk-core': npm:@uniswap/sdk-core@7.12.2
+  '@uniswap/v2-sdk': npm:@uniswap/v2-sdk@4.19.2
+  '@uniswap/v3-sdk': npm:@uniswap/v3-sdk@3.29.2
+  '@uniswap/v4-sdk': npm:@uniswap/v4-sdk@1.29.2
+  '@uniswap/router-sdk': npm:@uniswap/router-sdk@2.7.2
+  '@luxamm/luxswap-sdk': npm:@uniswap/uniswapx-sdk@3.0.0-beta.7
+  '@luxamm/analytics': npm:@uniswap/analytics@1.7.2
+  '@luxamm/analytics-events': npm:@uniswap/analytics-events@2.43.0
+  '@luxamm/client-data-api': npm:@uniswap/client-data-api@0.0.60
+  '@luxamm/client-embeddedwallet': npm:@uniswap/client-embeddedwallet@0.0.17
+  '@luxamm/client-explore': npm:@uniswap/client-explore@0.0.17
+  '@luxamm/client-for': npm:@uniswap/client-for@0.1.5
+  '@luxamm/client-liquidity': npm:@uniswap/client-liquidity@0.3.0
+  '@luxamm/client-notification-service': npm:@uniswap/client-notification-service@0.0.12
+  '@luxamm/client-platform-service': npm:@uniswap/client-platform-service@0.0.15
+  '@luxamm/client-search': npm:@uniswap/client-search@0.0.11
+  '@luxamm/client-trading': npm:@uniswap/client-trading@0.1.4
+  '@luxamm/client-unirpc-v2': npm:@uniswap/client-unirpc-v2@0.0.2
+  '@luxamm/default-token-list': npm:@uniswap/default-token-list@11.4.0
+  '@luxamm/ethers-rs-mobile': npm:@uniswap/ethers-rs-mobile@0.0.5
+  '@luxamm/merkle-distributor': npm:@uniswap/merkle-distributor@1.0.1
+  '@luxamm/permit2-sdk': npm:@uniswap/permit2-sdk@1.3.1
+  '@luxamm/token-lists': npm:@uniswap/token-lists@1.0.0-beta.34
+  '@luxamm/universal-router-sdk': npm:@uniswap/universal-router-sdk@4.33.0
+  '@luxamm/v3-core': npm:@uniswap/v3-core@1.0.1
+  '@luxamm/v3-periphery': npm:@uniswap/v3-periphery@1.4.4
+  '@luxamm/v3-sdk': npm:@uniswap/v3-sdk@3.29.2
+  '@luxamm/v4-sdk': npm:@uniswap/v4-sdk@1.29.2
+  '@luxamm/client-privy-embedded-wallet': npm:@uniswap/client-privy-embedded-wallet@0.0.6
+  '@luxamm/swap-router-contracts': npm:@uniswap/swap-router-contracts@1.1.0
+  '@luxamm/universal-router': npm:@uniswap/universal-router@2.0.0-beta.2
+  '@luxamm/lib': npm:@uniswap/lib@4.0.1-alpha
 
 importers:
 
@@ -477,20 +482,20 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxamm/universal-router-sdk':
         specifier: npm:@uniswap/universal-router-sdk@4.33.0
         version: '@uniswap/universal-router-sdk@4.33.0(bufferutil@4.1.0)(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)'
       '@luxamm/v3-sdk':
-        specifier: npm:@uniswap/v3-sdk@3.29.1
-        version: '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v3-sdk@3.29.2
+        version: '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/v4-sdk':
-        specifier: npm:@uniswap/v4-sdk@1.29.1
-        version: '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v4-sdk@1.29.2
+        version: '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../../pkgs/api
@@ -805,20 +810,20 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/client-explore':
         specifier: npm:@uniswap/client-explore@0.0.17
         version: '@uniswap/client-explore@0.0.17'
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxamm/ethers-rs-mobile':
         specifier: npm:@uniswap/ethers-rs-mobile@0.0.5
         version: '@uniswap/ethers-rs-mobile@0.0.5'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../../pkgs/api
@@ -1403,17 +1408,17 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/client-explore':
         specifier: npm:@uniswap/client-explore@0.0.17
         version: '@uniswap/client-explore@0.0.17'
       '@luxamm/client-liquidity':
-        specifier: npm:@uniswap/client-liquidity@0.1.2
-        version: '@uniswap/client-liquidity@0.1.2'
+        specifier: npm:@uniswap/client-liquidity@0.3.0
+        version: '@uniswap/client-liquidity@0.3.0'
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxamm/client-search':
         specifier: npm:@uniswap/client-search@0.0.11
         version: '@uniswap/client-search@0.0.11'
@@ -1424,23 +1429,23 @@ importers:
         specifier: npm:@uniswap/merkle-distributor@1.0.1
         version: '@uniswap/merkle-distributor@1.0.1'
       '@luxamm/permit2-sdk':
-        specifier: npm:@uniswap/permit2-sdk@1.3.0
-        version: '@uniswap/permit2-sdk@1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
+        specifier: npm:@uniswap/permit2-sdk@1.3.1
+        version: '@uniswap/permit2-sdk@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/router-sdk':
-        specifier: npm:@uniswap/router-sdk@2.7.1
-        version: '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/router-sdk@2.7.2
+        version: '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxamm/token-lists':
-        specifier: npm:@uniswap/token-lists@1.0.0-beta.33
-        version: '@uniswap/token-lists@1.0.0-beta.33'
+        specifier: npm:@uniswap/token-lists@1.0.0-beta.34
+        version: '@uniswap/token-lists@1.0.0-beta.34'
       '@luxamm/universal-router-sdk':
         specifier: npm:@uniswap/universal-router-sdk@4.33.0
         version: '@uniswap/universal-router-sdk@4.33.0(bufferutil@4.1.0)(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)'
       '@luxamm/v2-sdk':
-        specifier: npm:@uniswap/v2-sdk@4.19.1
-        version: '@uniswap/v2-sdk@4.19.1'
+        specifier: npm:@uniswap/v2-sdk@4.19.2
+        version: '@uniswap/v2-sdk@4.19.2'
       '@luxamm/v3-core':
         specifier: npm:@uniswap/v3-core@1.0.1
         version: '@uniswap/v3-core@1.0.1'
@@ -1448,11 +1453,11 @@ importers:
         specifier: npm:@uniswap/v3-periphery@1.4.4
         version: '@uniswap/v3-periphery@1.4.4'
       '@luxamm/v3-sdk':
-        specifier: npm:@uniswap/v3-sdk@3.29.1
-        version: '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v3-sdk@3.29.2
+        version: '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/v4-sdk':
-        specifier: npm:@uniswap/v4-sdk@1.29.1
-        version: '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v4-sdk@1.29.2
+        version: '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../../pkgs/api
@@ -1755,11 +1760,11 @@ importers:
         specifier: 5.7.0
         version: 5.7.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@luxamm/client-trading':
-        specifier: npm:@uniswap/client-trading@0.1.3
-        version: '@uniswap/client-trading@0.1.3'
+        specifier: npm:@uniswap/client-trading@0.1.4
+        version: '@uniswap/client-trading@0.1.4'
       '@luxamm/default-token-list':
-        specifier: npm:@uniswap/default-token-list@11.19.0
-        version: '@uniswap/default-token-list@11.19.0'
+        specifier: npm:@uniswap/default-token-list@11.4.0
+        version: '@uniswap/default-token-list@11.4.0'
       '@playwright/test':
         specifier: 1.58.2
         version: 1.58.2
@@ -2098,11 +2103,11 @@ importers:
         specifier: 5.7.2
         version: 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/client-embeddedwallet':
-        specifier: npm:@uniswap/client-embeddedwallet@0.0.16
-        version: '@uniswap/client-embeddedwallet@0.0.16'
+        specifier: npm:@uniswap/client-embeddedwallet@0.0.17
+        version: '@uniswap/client-embeddedwallet@0.0.17'
       '@luxamm/client-explore':
         specifier: npm:@uniswap/client-explore@0.0.17
         version: '@uniswap/client-explore@0.0.17'
@@ -2110,11 +2115,11 @@ importers:
         specifier: npm:@uniswap/client-for@0.1.5
         version: '@uniswap/client-for@0.1.5'
       '@luxamm/client-liquidity':
-        specifier: npm:@uniswap/client-liquidity@0.1.2
-        version: '@uniswap/client-liquidity@0.1.2'
+        specifier: npm:@uniswap/client-liquidity@0.3.0
+        version: '@uniswap/client-liquidity@0.3.0'
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxamm/client-unirpc-v2':
         specifier: npm:@uniswap/client-unirpc-v2@0.0.2
         version: '@uniswap/client-unirpc-v2@0.0.2'
@@ -2561,17 +2566,17 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/client-embeddedwallet':
-        specifier: npm:@uniswap/client-embeddedwallet@0.0.16
-        version: '@uniswap/client-embeddedwallet@0.0.16'
+        specifier: npm:@uniswap/client-embeddedwallet@0.0.17
+        version: '@uniswap/client-embeddedwallet@0.0.17'
       '@luxamm/client-explore':
         specifier: npm:@uniswap/client-explore@0.0.17
         version: '@uniswap/client-explore@0.0.17'
       '@luxamm/client-liquidity':
-        specifier: npm:@uniswap/client-liquidity@0.1.2
-        version: '@uniswap/client-liquidity@0.1.2'
+        specifier: npm:@uniswap/client-liquidity@0.3.0
+        version: '@uniswap/client-liquidity@0.3.0'
       '@luxamm/client-search':
         specifier: npm:@uniswap/client-search@0.0.11
         version: '@uniswap/client-search@0.0.11'
@@ -2579,26 +2584,26 @@ importers:
         specifier: npm:@uniswap/uniswapx-sdk@3.0.0-beta.7
         version: '@uniswap/uniswapx-sdk@3.0.0-beta.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/permit2-sdk':
-        specifier: npm:@uniswap/permit2-sdk@1.3.0
-        version: '@uniswap/permit2-sdk@1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
+        specifier: npm:@uniswap/permit2-sdk@1.3.1
+        version: '@uniswap/permit2-sdk@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/router-sdk':
-        specifier: npm:@uniswap/router-sdk@2.7.1
-        version: '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/router-sdk@2.7.2
+        version: '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxamm/universal-router-sdk':
         specifier: npm:@uniswap/universal-router-sdk@4.33.0
         version: '@uniswap/universal-router-sdk@4.33.0(bufferutil@4.1.0)(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)'
       '@luxamm/v2-sdk':
-        specifier: npm:@uniswap/v2-sdk@4.19.1
-        version: '@uniswap/v2-sdk@4.19.1'
+        specifier: npm:@uniswap/v2-sdk@4.19.2
+        version: '@uniswap/v2-sdk@4.19.2'
       '@luxamm/v3-sdk':
-        specifier: npm:@uniswap/v3-sdk@3.29.1
-        version: '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v3-sdk@3.29.2
+        version: '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/v4-sdk':
-        specifier: npm:@uniswap/v4-sdk@1.29.1
-        version: '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v4-sdk@1.29.2
+        version: '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../api
@@ -2811,8 +2816,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0(graphql@16.6.0)
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxfi/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -2941,8 +2946,8 @@ importers:
         specifier: 1.10.0
         version: 1.10.0
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxexchange/api':
         specifier: workspace:*
         version: link:../api
@@ -2990,8 +2995,8 @@ importers:
   pkgs/prices:
     dependencies:
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../api
@@ -3095,8 +3100,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0(@bufbuild/protobuf@1.10.0)(@connectrpc/connect@1.5.0(@bufbuild/protobuf@1.10.0))
       '@luxamm/client-platform-service':
-        specifier: npm:@uniswap/client-platform-service@0.0.14
-        version: '@uniswap/client-platform-service@0.0.14'
+        specifier: npm:@uniswap/client-platform-service@0.0.15
+        version: '@uniswap/client-platform-service@0.0.15'
       '@luxfi/utilities':
         specifier: workspace:^
         version: link:../utilities
@@ -3412,17 +3417,17 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/client-embeddedwallet':
-        specifier: npm:@uniswap/client-embeddedwallet@0.0.16
-        version: '@uniswap/client-embeddedwallet@0.0.16'
+        specifier: npm:@uniswap/client-embeddedwallet@0.0.17
+        version: '@uniswap/client-embeddedwallet@0.0.17'
       '@luxamm/client-explore':
         specifier: npm:@uniswap/client-explore@0.0.17
         version: '@uniswap/client-explore@0.0.17'
       '@luxamm/client-liquidity':
-        specifier: npm:@uniswap/client-liquidity@0.1.2
-        version: '@uniswap/client-liquidity@0.1.2'
+        specifier: npm:@uniswap/client-liquidity@0.3.0
+        version: '@uniswap/client-liquidity@0.3.0'
       '@luxamm/client-search':
         specifier: npm:@uniswap/client-search@0.0.11
         version: '@uniswap/client-search@0.0.11'
@@ -3433,26 +3438,26 @@ importers:
         specifier: npm:@uniswap/uniswapx-sdk@3.0.0-beta.7
         version: '@uniswap/uniswapx-sdk@3.0.0-beta.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/permit2-sdk':
-        specifier: npm:@uniswap/permit2-sdk@1.3.0
-        version: '@uniswap/permit2-sdk@1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
+        specifier: npm:@uniswap/permit2-sdk@1.3.1
+        version: '@uniswap/permit2-sdk@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/router-sdk':
-        specifier: npm:@uniswap/router-sdk@2.7.1
-        version: '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/router-sdk@2.7.2
+        version: '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxamm/universal-router-sdk':
         specifier: npm:@uniswap/universal-router-sdk@4.33.0
         version: '@uniswap/universal-router-sdk@4.33.0(bufferutil@4.1.0)(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))(utf-8-validate@5.0.10)'
       '@luxamm/v2-sdk':
-        specifier: npm:@uniswap/v2-sdk@4.19.1
-        version: '@uniswap/v2-sdk@4.19.1'
+        specifier: npm:@uniswap/v2-sdk@4.19.2
+        version: '@uniswap/v2-sdk@4.19.2'
       '@luxamm/v3-sdk':
-        specifier: npm:@uniswap/v3-sdk@3.29.1
-        version: '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v3-sdk@3.29.2
+        version: '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/v4-sdk':
-        specifier: npm:@uniswap/v4-sdk@1.29.1
-        version: '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/v4-sdk@1.29.2
+        version: '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../api
@@ -3677,8 +3682,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0(graphql@16.6.0)
       '@luxamm/client-notification-service':
-        specifier: npm:@uniswap/client-notification-service@0.0.11
-        version: '@uniswap/client-notification-service@0.0.11'
+        specifier: npm:@uniswap/client-notification-service@0.0.12
+        version: '@uniswap/client-notification-service@0.0.12'
       '@luxfi/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
@@ -3821,8 +3826,8 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@react-native-community/netinfo':
         specifier: 11.4.1
         version: 11.4.1(react-native@0.79.5(@babel/core@7.29.0)(@react-native-community/cli@18.0.0(bufferutil@4.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.0.10)(bufferutil@4.1.0)(react@19.0.3)(utf-8-validate@5.0.10))
@@ -3939,20 +3944,20 @@ importers:
         specifier: npm:@uniswap/analytics-events@2.43.0
         version: '@uniswap/analytics-events@2.43.0'
       '@luxamm/client-data-api':
-        specifier: npm:@uniswap/client-data-api@0.0.59
-        version: '@uniswap/client-data-api@0.0.59'
+        specifier: npm:@uniswap/client-data-api@0.0.60
+        version: '@uniswap/client-data-api@0.0.60'
       '@luxamm/luxswap-sdk':
         specifier: npm:@uniswap/uniswapx-sdk@3.0.0-beta.7
         version: '@uniswap/uniswapx-sdk@3.0.0-beta.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/permit2-sdk':
-        specifier: npm:@uniswap/permit2-sdk@1.3.0
-        version: '@uniswap/permit2-sdk@1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
+        specifier: npm:@uniswap/permit2-sdk@1.3.1
+        version: '@uniswap/permit2-sdk@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)'
       '@luxamm/router-sdk':
-        specifier: npm:@uniswap/router-sdk@2.7.1
-        version: '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
+        specifier: npm:@uniswap/router-sdk@2.7.2
+        version: '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))'
       '@luxamm/sdk-core':
-        specifier: npm:@uniswap/sdk-core@7.12.1
-        version: '@uniswap/sdk-core@7.12.1'
+        specifier: npm:@uniswap/sdk-core@7.12.2
+        version: '@uniswap/sdk-core@7.12.2'
       '@luxexchange/api':
         specifier: workspace:^
         version: link:../api
@@ -13422,11 +13427,11 @@ packages:
     resolution: {integrity: sha512-zAdXvRPFXhR+g8bTD/xsMnX7Hn8lpHa1H3PwCjs/WWRcUHnQz0Ub5Xi4MVlGjcjus0uePzm9k3FC4Tke1NXo5A==}
     engines: {node: '>=14'}
 
-  '@uniswap/client-data-api@0.0.59':
-    resolution: {integrity: sha512-uIFd6MV9cltur9h+/KIH8S8lkND11xVbVK1KebeoiC66u9XlN/p/yuVglB4c7M38tnT5Xwq2t84RPEcBNDZ6Fg==}
+  '@uniswap/client-data-api@0.0.60':
+    resolution: {integrity: sha512-4aDBQZG/qumJHzq/epIjD2g4DVQA3ZH8eBKPTjdPV3k+Y5RgoN6YYmje7yqVbokn+u4WWAB5vmF3AdP5wIXqdQ==}
 
-  '@uniswap/client-embeddedwallet@0.0.16':
-    resolution: {integrity: sha512-zxlx3E2X0kKAw10FKOGlbFpX4yq3KJv9SEipBJxZae5OZH8Ki8UO+FBX/Ke9JPQmU1WUoiJ7NOknjIIDOjVmpw==}
+  '@uniswap/client-embeddedwallet@0.0.17':
+    resolution: {integrity: sha512-FFTPogimDvcrp7OZ6riBkpHzZCZlvrFdsalOOf69X+XJ/RsltjStGKhnYLGii99OExUNMa0tOwuVPnRbX99VBA==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@uniswap/client-explore@0.0.17':
@@ -13435,26 +13440,26 @@ packages:
   '@uniswap/client-for@0.1.5':
     resolution: {integrity: sha512-c8LkMyMCiA2y1IeZfAWC6vcGCVVv75cyq+SqKWV7qjWe+qZJmmoRdz9v6oFcm5W2YzM2JqOq7ZKlEl+dcJ/rtQ==}
 
-  '@uniswap/client-liquidity@0.1.2':
-    resolution: {integrity: sha512-oRPZGBoPKjE4RoJMbgdL4w6QBMZ+gH/V4dmvSMgbchJC/sdOf91WM4T22nt861sAS2Y/hRAnxmQuYQhqs1tvlg==}
+  '@uniswap/client-liquidity@0.3.0':
+    resolution: {integrity: sha512-UTR+8nZ+iVuex0pDlgcIuZnz3eht7cLTVg0UpsYRUI2M4sdqPXCa/MQIFXwpWmfu8lw+d5fWgEiagJsnvWDuWw==}
 
-  '@uniswap/client-notification-service@0.0.11':
-    resolution: {integrity: sha512-5XF6an0PZs50UK7u20ogpqP+EoGP+MjK4+r9VwZ7t85GA5E6UmY0xZQnbHfZrJwuqWiUvWLJYE+S9vaA28iscQ==}
+  '@uniswap/client-notification-service@0.0.12':
+    resolution: {integrity: sha512-0QkcyYTES6qy7MhJJ4hOGbD6xQz7czXiK1M80J0NFKWaj6qub6RT9n/ul15h3WAcz/tH2DzeMhIGkM5AWZP5dg==}
 
-  '@uniswap/client-platform-service@0.0.14':
-    resolution: {integrity: sha512-dhAR+dpQNTHvDMofmSPTf72a1/5MDVjnVCJPTVEl8JkWEeGQ2BVUE9JiPtdsPP2GWSSF94mLQAyAYWxOi2CzVw==}
+  '@uniswap/client-platform-service@0.0.15':
+    resolution: {integrity: sha512-snOAe/wRnR0WqKvj1FHrKCpExjqap//x4sHw3bAmRbNn3VBPm6hMRBATejHz5BKWV09DdXgkzgRxJ5f+BNQAog==}
 
   '@uniswap/client-search@0.0.11':
     resolution: {integrity: sha512-2g15zk+mF7AYxmQk9AVrIIFrr+9Ho5jeYbI1rfTVo3EgzFsC4AiQQzJwMMv6cZiVDMBmBsX4N4+z7eTE3ABloA==}
 
-  '@uniswap/client-trading@0.1.3':
-    resolution: {integrity: sha512-ZQ4Hjz8/KU5ZpOAmB2shcuFRgBTc09U4pG8Lew2fvFV3XIhgU6MQXpzII340IDjMsoG9729arasLT+rI1uKNdA==}
+  '@uniswap/client-trading@0.1.4':
+    resolution: {integrity: sha512-MLbKriPiKV8txM6cYwBAsi7hSJ+9LOTwWR1yGrXKXuJfZeUHyDjXcTqdTEdEP3LrgvcyPsC6aWG2all73+6clg==}
 
   '@uniswap/client-unirpc-v2@0.0.2':
     resolution: {integrity: sha512-ODvxYVziKypgEWpsVRfUFEFdA9E6GiAfmqS9kIS67fcWU42uZn1tRYEbeJshf37pSpXfHdwW3LbAqcUq+iiVPg==}
 
-  '@uniswap/default-token-list@11.19.0':
-    resolution: {integrity: sha512-H/YLpxeZUrzT4Ki8mi4k5UiadREiLHg7WUqCv0Qt/VkOjX2mIBhrxCj1Wh61/J7lK0XqOjksfpm6RG1+YErPoQ==}
+  '@uniswap/default-token-list@11.4.0':
+    resolution: {integrity: sha512-ADAksIMv/emjJpeD9Rx/1vPBfpI5+Qkf/jWMOnNpRgW1MIGbRPKsVWyZTFeebx6p0MxXnxN70PbysgswWNmemA==}
 
   '@uniswap/ethers-rs-mobile@0.0.5':
     resolution: {integrity: sha512-xCRYg4rAh/+Dahb7geIi7vxrCfdLtnYS6v9deos0vUxk89vCqe1XiXZLyuWgBSyL4NrOE9q8LJRMv5iN39jXaA==}
@@ -13470,11 +13475,14 @@ packages:
   '@uniswap/permit2-sdk@1.3.0':
     resolution: {integrity: sha512-LstYQWP47dwpQrgqBJ+ysFstne9LgI5FGiKHc2ewjj91MTY8Mq1reocu6U/VDncdR5ef30TUOcZ7gPExRY8r6Q==}
 
-  '@uniswap/router-sdk@2.7.1':
-    resolution: {integrity: sha512-d2+P+761vchusTTC019bSh8dqCUOEZ+JQzgOXXuMkbcxzs81bOIL0WAeKO4azhZhcRQpxCrRqQYEeSX8dE/Oww==}
+  '@uniswap/permit2-sdk@1.3.1':
+    resolution: {integrity: sha512-Eq2by4zVEVSZL3PJ1Yuf5+AZ/yE1GOuksWzPXPoxr5WRm3hqh34jKEqtyTImHqwuPrdILG8i02xJmgGLTH1QfA==}
 
-  '@uniswap/sdk-core@7.12.1':
-    resolution: {integrity: sha512-qQG6dVFIgk9x+WRQBDZms/abi+aM6J6YFLhaMnrvTSFIIL4hOjf74SpOep5wPEDZGx3iw3LqofRq+ijeVwLLBQ==}
+  '@uniswap/router-sdk@2.7.2':
+    resolution: {integrity: sha512-E6CloGiZgPx6U8EPFS1JfGlk/2VEZZnwX7t5i839PrVt+zNtiDQP/Rmx7l8spsa8ndb0SIIMI9HDTaL86SQJfg==}
+
+  '@uniswap/sdk-core@7.12.2':
+    resolution: {integrity: sha512-r2F6TtMatnk18C+6oyvAFlcs2PsCvAD4msHwuOjfvGYIRNfU2ha4WnCp6uJbmJ/3RMBtMasiYUvyN3/RyE/dpw==}
     engines: {node: '>=10'}
 
   '@uniswap/swap-router-contracts@1.3.1':
@@ -13482,8 +13490,8 @@ packages:
     engines: {node: '>=10'}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
-  '@uniswap/token-lists@1.0.0-beta.33':
-    resolution: {integrity: sha512-JQkXcpRI3jFG8y3/CGC4TS8NkDgcxXaOQuYW8Qdvd6DcDiIyg2vVYCG9igFEzF0G6UvxgHkBKC7cWCgzZNYvQg==}
+  '@uniswap/token-lists@1.0.0-beta.34':
+    resolution: {integrity: sha512-Hc3TfrFaupg0M84e/Zv7BoF+fmMWDV15mZ5s8ZQt2qZxUcNw2GQW+L6L/2k74who31G+p1m3GRYbJpAo7d1pqA==}
     engines: {node: '>=10'}
 
   '@uniswap/uniswapx-sdk@3.0.0-beta.7':
@@ -13502,8 +13510,8 @@ packages:
     resolution: {integrity: sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q==}
     engines: {node: '>=10'}
 
-  '@uniswap/v2-sdk@4.19.1':
-    resolution: {integrity: sha512-c89H6S8YNI7tGSsk5wWXLxnXUe/jT+BewKSXtJ/w0WXEV8r4dl18R80YfOtwajnYbt8jYrUVVdPgPLaX0CdDEg==}
+  '@uniswap/v2-sdk@4.19.2':
+    resolution: {integrity: sha512-Y+KgIa/a51/7BLyEwv7TwkmXctUNctm25Ojtl0MiHjHhIFlcMUBjDGMp4CfiAypWvGcQJ7OPsgJgfL/gSCqa+Q==}
     engines: {node: '>=10'}
 
   '@uniswap/v3-core@1.0.0':
@@ -13518,8 +13526,8 @@ packages:
     resolution: {integrity: sha512-S4+m+wh8HbWSO3DKk4LwUCPZJTpCugIsHrWR86m/OrUyvSqGDTXKFfc2sMuGXCZrD1ZqO3rhQsKgdWg3Hbb2Kw==}
     engines: {node: '>=10'}
 
-  '@uniswap/v3-sdk@3.29.1':
-    resolution: {integrity: sha512-EYCzrfCCxc9DqUguw5rX+9774jvpVIvvrnyraJenZ371JiX/VC09/6OToKReu3gJfgITaH1BynMATwGkmOb2SQ==}
+  '@uniswap/v3-sdk@3.29.2':
+    resolution: {integrity: sha512-NyvtKE1lXjW0Cjvddy86XQsgad42baovQybbcFDj63U1Gqk9XmEx6w1hAj8pWMXpi15Im8JVOkg/iU/Z8nIcNA==}
     engines: {node: '>=10'}
 
   '@uniswap/v3-staker@1.0.0':
@@ -13527,8 +13535,8 @@ packages:
     engines: {node: '>=10'}
     deprecated: Please upgrade to 1.0.1
 
-  '@uniswap/v4-sdk@1.29.1':
-    resolution: {integrity: sha512-JYAnNmTGhbl5G4Xl+fUsew/ic8VwKofJxZ2uQjMkGMkzkCMT70Sht7E2ysZD+znLWQ9cCB0AAQWZqTlryiEfhA==}
+  '@uniswap/v4-sdk@1.29.2':
+    resolution: {integrity: sha512-TWIf26YpGaZaypnHPq4VSjJXNPfzQsgp6mbtTihkpvtizaCAuGuJtouSf6RKXnr0zQsOiomgegsbxU5z0ADqRw==}
     engines: {node: '>=14'}
 
   '@unrs/resolver-binding-android-arm-eabi@1.11.1':
@@ -44587,27 +44595,27 @@ snapshots:
       react: 19.0.3
       react-dom: 19.0.3(react@19.0.3)
 
-  '@uniswap/client-data-api@0.0.59': {}
+  '@uniswap/client-data-api@0.0.60': {}
 
-  '@uniswap/client-embeddedwallet@0.0.16': {}
+  '@uniswap/client-embeddedwallet@0.0.17': {}
 
   '@uniswap/client-explore@0.0.17': {}
 
   '@uniswap/client-for@0.1.5': {}
 
-  '@uniswap/client-liquidity@0.1.2': {}
+  '@uniswap/client-liquidity@0.3.0': {}
 
-  '@uniswap/client-notification-service@0.0.11': {}
+  '@uniswap/client-notification-service@0.0.12': {}
 
-  '@uniswap/client-platform-service@0.0.14': {}
+  '@uniswap/client-platform-service@0.0.15': {}
 
   '@uniswap/client-search@0.0.11': {}
 
-  '@uniswap/client-trading@0.1.3': {}
+  '@uniswap/client-trading@0.1.4': {}
 
   '@uniswap/client-unirpc-v2@0.0.2': {}
 
-  '@uniswap/default-token-list@11.19.0': {}
+  '@uniswap/default-token-list@11.4.0': {}
 
   '@uniswap/ethers-rs-mobile@0.0.5': {}
 
@@ -44623,29 +44631,37 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/permit2-sdk@1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
+    dependencies:
+      ethers: 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      tiny-invariant: 1.3.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/abi': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v2-sdk': 4.19.1
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v4-sdk': 1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v2-sdk': 4.19.2
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v4-sdk': 1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
     transitivePeerDependencies:
       - hardhat
 
-  '@uniswap/router-sdk@2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/router-sdk@2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/abi': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v2-sdk': 4.19.1
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v4-sdk': 1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v2-sdk': 4.19.2
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v4-sdk': 1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
     transitivePeerDependencies:
       - hardhat
 
-  '@uniswap/sdk-core@7.12.1':
+  '@uniswap/sdk-core@7.12.2':
     dependencies:
       '@ethersproject/address': 5.8.0
       '@ethersproject/bytes': 5.8.0
@@ -44679,14 +44695,14 @@ snapshots:
     transitivePeerDependencies:
       - hardhat
 
-  '@uniswap/token-lists@1.0.0-beta.33': {}
+  '@uniswap/token-lists@1.0.0-beta.34': {}
 
   '@uniswap/uniswapx-sdk@3.0.0-beta.7(bufferutil@4.1.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@ethersproject/bytes': 5.8.0
       '@ethersproject/providers': 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@uniswap/permit2-sdk': 1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/permit2-sdk': 1.3.1(bufferutil@4.1.0)(utf-8-validate@5.0.10)
+      '@uniswap/sdk-core': 7.12.2
       ethers: 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
       - bufferutil
@@ -44696,14 +44712,14 @@ snapshots:
     dependencies:
       '@openzeppelin/contracts': 4.7.0
       '@uniswap/permit2-sdk': 1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@uniswap/router-sdk': 2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/router-sdk': 2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/universal-router': 2.1.0
       '@uniswap/v2-core': 1.0.1
-      '@uniswap/v2-sdk': 4.19.1
+      '@uniswap/v2-sdk': 4.19.2
       '@uniswap/v3-core': 1.0.0
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v4-sdk': 1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v4-sdk': 1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       bignumber.js: 9.3.1
       ethers: 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -44715,14 +44731,14 @@ snapshots:
     dependencies:
       '@openzeppelin/contracts': 4.7.0
       '@uniswap/permit2-sdk': 1.3.0(bufferutil@4.1.0)(utf-8-validate@5.0.10)
-      '@uniswap/router-sdk': 2.7.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/router-sdk': 2.7.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/universal-router': 2.1.0
       '@uniswap/v2-core': 1.0.1
-      '@uniswap/v2-sdk': 4.19.1
+      '@uniswap/v2-sdk': 4.19.2
       '@uniswap/v3-core': 1.0.0
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
-      '@uniswap/v4-sdk': 1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/v4-sdk': 1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       bignumber.js: 9.3.1
       ethers: 5.7.2(bufferutil@4.1.0)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -44738,11 +44754,11 @@ snapshots:
 
   '@uniswap/v2-core@1.0.1': {}
 
-  '@uniswap/v2-sdk@4.19.1':
+  '@uniswap/v2-sdk@4.19.2':
     dependencies:
       '@ethersproject/address': 5.8.0
       '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/sdk-core': 7.12.2
       tiny-invariant: 1.3.1
       tiny-warning: 1.0.3
 
@@ -44758,11 +44774,11 @@ snapshots:
       '@uniswap/v3-core': 1.0.1
       base64-sol: 1.0.1
 
-  '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@uniswap/v3-periphery': 1.4.4
       '@uniswap/v3-staker': 1.0.0
@@ -44771,11 +44787,11 @@ snapshots:
     transitivePeerDependencies:
       - hardhat
 
-  '@uniswap/v3-sdk@3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/v3-sdk@3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/abi': 5.8.0
       '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
+      '@uniswap/sdk-core': 7.12.2
       '@uniswap/swap-router-contracts': 1.3.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       '@uniswap/v3-periphery': 1.4.4
       '@uniswap/v3-staker': 1.0.0
@@ -44790,21 +44806,21 @@ snapshots:
       '@uniswap/v3-core': 1.0.0
       '@uniswap/v3-periphery': 1.4.4
 
-  '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/sdk-core': 7.12.2
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@22.13.1)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       tiny-invariant: 1.3.1
       tiny-warning: 1.0.3
     transitivePeerDependencies:
       - hardhat
 
-  '@uniswap/v4-sdk@1.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
+  '@uniswap/v4-sdk@1.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@ethersproject/solidity': 5.8.0
-      '@uniswap/sdk-core': 7.12.1
-      '@uniswap/v3-sdk': 3.29.1(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
+      '@uniswap/sdk-core': 7.12.2
+      '@uniswap/v3-sdk': 3.29.2(hardhat@2.28.6(bufferutil@4.1.0)(ts-node@10.9.2(@swc/core@1.5.7(@swc/helpers@0.5.11))(@types/node@25.5.0)(typescript@5.8.3))(typescript@5.8.3)(utf-8-validate@5.0.10))
       tiny-invariant: 1.3.1
       tiny-warning: 1.0.3
     transitivePeerDependencies:
