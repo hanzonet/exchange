@@ -138,6 +138,9 @@ const CHAIN_THEME_LIGHT: Record<UniverseChainId, ChainTheme> = {
   [UniverseChainId.LuxDev]: { bgColor: '#F5456233', textColor: '#F54562' },
   [UniverseChainId.Zoo]: { bgColor: '#9945FF33', textColor: '#9945FF' },
   [UniverseChainId.ZooTestnet]: { bgColor: '#9945FF33', textColor: '#9945FF' },
+  [UniverseChainId.Hanzo]: { bgColor: '#00D4AA33', textColor: '#00D4AA' },
+  [UniverseChainId.SPC]: { bgColor: '#FF69B433', textColor: '#FF69B4' },
+  [UniverseChainId.Pars]: { bgColor: '#FFB80033', textColor: '#FFB800' },
 }
 
 const CHAIN_THEME_DARK: Record<UniverseChainId, ChainTheme> = {
