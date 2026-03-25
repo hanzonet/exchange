@@ -47,7 +47,6 @@
   },
   "engines": {
     "node": ">=22",
-    ,
     "npm": "please-use-pnpm"
   },
   "manypkg": {
