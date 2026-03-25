@@ -49,7 +49,7 @@ export const MAINNET_CHAIN_INFO = {
   blockPerMainnetEpochForChainId: 1,
   blockWaitMsBeforeWarning: isWebApp ? DEFAULT_MS_BEFORE_WARNING : ONE_MINUTE_MS,
   bridge: undefined,
-  docs: 'https://docs.uniswap.org/',
+  docs: 'https://docs.lux.exchange/',
   elementName: ElementName.ChainEthereum,
   explorer: {
     name: 'Etherscan',
@@ -135,7 +135,7 @@ export const SEPOLIA_CHAIN_INFO = {
   blockPerMainnetEpochForChainId: 1,
   blockWaitMsBeforeWarning: undefined,
   bridge: undefined,
-  docs: 'https://docs.uniswap.org/',
+  docs: 'https://docs.lux.exchange/',
   elementName: ElementName.ChainSepolia,
   explorer: {
     name: 'Etherscan',

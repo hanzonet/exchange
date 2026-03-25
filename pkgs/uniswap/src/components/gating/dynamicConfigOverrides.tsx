@@ -1,3 +1,4 @@
+import { brand } from '@luxexchange/config'
 import { ForceUpgradeStatus, ForceUpgradeTranslations } from '@luxexchange/gating'
 import { ComponentProps } from 'react'
 import { DynamicConfigDropdown } from 'uniswap/src/components/gating/DynamicConfigDropdown'
@@ -6,8 +7,8 @@ type DynamicConfigOptions = ComponentProps<typeof DynamicConfigDropdown>['option
 
 export const EMBEDDED_WALLET_BASE_URL_OPTIONS: DynamicConfigOptions = [
   {
-    value: 'https://app.uniswap.org',
-    label: 'app.uniswap.org',
+    value: `https://${brand.appDomain}`,
+    label: brand.appDomain,
   },
   {
     value: 'https://ew.unihq.org',

@@ -4,6 +4,7 @@ import { useAtomValue } from 'jotai/utils'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Separator, SpinningLoader, Text, TouchableArea } from '@luxfi/ui/src'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { BackArrow } from '@luxfi/ui/src/components/icons/BackArrow'
 import { EnvelopeHeart } from '@luxfi/ui/src/components/icons/EnvelopeHeart'
 import { EnvelopeLock } from '@luxfi/ui/src/components/icons/EnvelopeLock'
@@ -93,7 +94,7 @@ export function EmbeddedWalletConnectionsModal(): JSX.Element {
             <TouchableArea variant="unstyled" onPress={handleBackToConnect}>
               <BackArrow size="$icon.20" color="$neutral1" />
             </TouchableArea>
-            <TouchableArea variant="unstyled" onPress={() => window.open('https://support.uniswap.org', '_blank')}>
+            <TouchableArea variant="unstyled" onPress={() => window.open(uniswapUrls.helpUrl, '_blank')}>
               <Flex
                 row
                 gap="$gap4"
