@@ -7,7 +7,7 @@ import {
   Notification,
   NotificationVersion,
   OnClick,
-} from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import {

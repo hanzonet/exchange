@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-import { Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { UNIVERSAL_ROUTER_ADDRESS, UniversalRouterVersion } from '@uniswap/universal-router-sdk'
+import { Currency, CurrencyAmount, Token } from '@luxamm/sdk-core'
+import { UNIVERSAL_ROUTER_ADDRESS, UniversalRouterVersion } from '@luxamm/universal-router-sdk'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'

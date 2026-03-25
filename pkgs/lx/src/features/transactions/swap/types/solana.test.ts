@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { JupiterOrderResponse } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { createSolanaTrade } from 'uniswap/src/features/transactions/swap/types/solana'

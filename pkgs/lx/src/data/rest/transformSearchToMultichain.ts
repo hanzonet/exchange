@@ -3,7 +3,7 @@ import {
   MultichainToken,
   type Token as SearchToken,
   SearchTokensResponse,
-} from '@uniswap/client-search/dist/search/v1/api_pb'
+} from '@luxamm/client-search/dist/search/v1/api_pb'
 
 /**
  * Transforms a SearchTokens response that uses the legacy flat `tokens[]`

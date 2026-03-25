@@ -1,4 +1,4 @@
-import { ExploreStatsResponse, PoolStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
+import { ExploreStatsResponse, PoolStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
 import { ALL_NETWORKS_ARG, GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { usePoolStatsToPoolOptions } from 'uniswap/src/components/lists/items/pools/usePoolStatsToPoolOptions'

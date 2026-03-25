@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-import { MixedRouteSDK, Trade as RouterSDKTrade, ZERO_PERCENT } from '@uniswap/router-sdk'
-import { Currency, CurrencyAmount, Percent, Price, TradeType } from '@uniswap/sdk-core'
+import { MixedRouteSDK, Trade as RouterSDKTrade, ZERO_PERCENT } from '@luxamm/router-sdk'
+import { Currency, CurrencyAmount, Percent, Price, TradeType } from '@luxamm/sdk-core'
 import {
   PriorityOrderTrade as IPriorityOrderTrade,
   UnsignedPriorityOrderInfo,
@@ -8,10 +8,10 @@ import {
   UnsignedV3DutchOrderInfo,
   V2DutchOrderTrade,
   V3DutchOrderTrade,
-} from '@uniswap/uniswapx-sdk'
-import { Route as V2RouteSDK } from '@uniswap/v2-sdk'
-import { Route as V3RouteSDK } from '@uniswap/v3-sdk'
-import { Route as V4RouteSDK } from '@uniswap/v4-sdk'
+} from '@luxamm/uniswapx-sdk'
+import { Route as V2RouteSDK } from '@luxamm/v2-sdk'
+import { Route as V3RouteSDK } from '@luxamm/v3-sdk'
+import { Route as V4RouteSDK } from '@luxamm/v4-sdk'
 import type {
   BridgeQuoteResponse,
   ChainedQuoteResponse,

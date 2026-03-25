@@ -1,7 +1,7 @@
 import { TransactionRequest } from '@ethersproject/abstract-provider'
 import type { Web3Provider } from '@ethersproject/providers'
 import { useQuery } from '@tanstack/react-query'
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback } from 'react'
 import ERC20_ABI from '@luxexchange/lx/src/abis/erc20.json'
 import { Erc20 } from '@luxexchange/lx/src/abis/types'

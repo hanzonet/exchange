@@ -1,5 +1,5 @@
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { type Currency, Token } from '@uniswap/sdk-core'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { type Currency, Token } from '@luxamm/sdk-core'
 import { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Separator, Text } from '@luxfi/ui/src'

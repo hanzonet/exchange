@@ -1,5 +1,5 @@
-import type { Currency, CurrencyAmount, Percent } from '@uniswap/sdk-core'
-import type { Pair } from '@uniswap/v2-sdk'
+import type { Currency, CurrencyAmount, Percent } from '@luxamm/sdk-core'
+import type { Pair } from '@luxamm/v2-sdk'
 import ms from 'ms'
 import type { ReactNode } from 'react'
 import { forwardRef, useCallback, useEffect, useState } from 'react'

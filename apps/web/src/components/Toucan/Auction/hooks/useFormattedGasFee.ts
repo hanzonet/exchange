@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

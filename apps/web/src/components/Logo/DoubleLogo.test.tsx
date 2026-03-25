@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { Flex } from '@luxfi/ui/src'
 import { UNI, WBTC } from '@luxexchange/lx/src/constants/tokens'

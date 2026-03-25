@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent } from '@uniswap/sdk-core'
+import { CurrencyAmount, Percent } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
 import { DAI, USDC } from '@luxexchange/lx/src/constants/tokens'
 import { usePriceImpact } from '@luxexchange/lx/src/features/transactions/swap/components/PriceImpactRow/usePriceImpact'

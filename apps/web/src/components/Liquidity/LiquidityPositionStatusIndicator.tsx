@@ -1,4 +1,4 @@
-import { PositionStatus } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { PositionStatus } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import { Trans } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
 import { StatusIndicatorCircle } from '@luxfi/ui/src/components/icons/StatusIndicatorCircle'

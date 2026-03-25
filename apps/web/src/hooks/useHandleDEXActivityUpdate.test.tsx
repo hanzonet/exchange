@@ -25,7 +25,7 @@ vi.mock('~/state/hooks', async () => {
   }
 })
 
-vi.mock('@uniswap/analytics', () => ({
+vi.mock('@luxamm/analytics', () => ({
   useTrace: vi.fn(() => ({ trace: 'mock-trace' })),
 }))
 

@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { CurrencyAmount, Percent, Token, TradeType, WETH9 } from '@uniswap/sdk-core'
-import { FeeAmount, Pool, Route } from '@uniswap/v3-sdk'
+import { CurrencyAmount, Percent, Token, TradeType, WETH9 } from '@luxamm/sdk-core'
+import { FeeAmount, Pool, Route } from '@luxamm/v3-sdk'
 import JSBI from 'jsbi'
 import {
   DAI,

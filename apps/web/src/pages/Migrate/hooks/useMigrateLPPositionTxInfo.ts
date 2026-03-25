@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import {
   MigrateV2ToV3LPPositionRequest,
   MigrateV3ToV4LPPositionRequest,
-} from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { Dispatch, SetStateAction, useEffect, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'

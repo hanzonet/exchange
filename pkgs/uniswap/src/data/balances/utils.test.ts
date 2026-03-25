@@ -1,4 +1,4 @@
-import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { GetPortfolioResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { calculateTotalBalancesUsdPerChainRest } from 'uniswap/src/data/balances/utils'
 
 describe('calculateTotalBalancesUsdPerChainRest', () => {

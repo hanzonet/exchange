@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@luxamm/sdk-core'
 import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import i18n from '@luxexchange/lx/src/i18n'

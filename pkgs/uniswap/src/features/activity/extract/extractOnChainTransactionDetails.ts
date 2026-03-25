@@ -2,7 +2,7 @@ import {
   OnChainTransaction,
   OnChainTransactionLabel,
   OnChainTransactionStatus,
-} from '@uniswap/client-data-api/dist/data/v1/types_pb'
+} from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { TradingApi } from '@luxexchange/api'
 
 import { parseRestApproveTransaction } from 'uniswap/src/features/activity/parse/parseApproveTransaction'

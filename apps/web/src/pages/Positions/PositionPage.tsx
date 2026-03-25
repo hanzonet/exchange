@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 import { BigNumber } from '@ethersproject/bignumber'
-import { Position, PositionStatus, ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { Currency, CurrencyAmount, Percent, Price } from '@uniswap/sdk-core'
+import { Position, PositionStatus, ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { Currency, CurrencyAmount, Percent, Price } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo, useState } from 'react'

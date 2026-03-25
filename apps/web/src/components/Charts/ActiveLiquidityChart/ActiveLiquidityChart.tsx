@@ -1,4 +1,4 @@
-import { Currency, Percent } from '@uniswap/sdk-core'
+import { Currency, Percent } from '@luxamm/sdk-core'
 import { max as getMax, scaleLinear } from 'd3'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Flex, Text, useSporeColors } from '@luxfi/ui/src'

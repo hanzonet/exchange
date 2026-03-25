@@ -1,5 +1,5 @@
-import { Token } from '@uniswap/sdk-core'
-import { Pool, Position } from '@uniswap/v3-sdk'
+import { Token } from '@luxamm/sdk-core'
+import { Pool, Position } from '@luxamm/v3-sdk'
 import { atom, useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 import ms from 'ms'

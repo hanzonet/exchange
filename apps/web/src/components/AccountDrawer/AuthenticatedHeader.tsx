@@ -1,5 +1,5 @@
 import { NetworkStatus } from '@apollo/client'
-import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token } from '@luxamm/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'

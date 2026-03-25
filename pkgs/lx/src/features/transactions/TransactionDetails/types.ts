@@ -1,4 +1,4 @@
-import { Percent } from '@uniswap/sdk-core'
+import { Percent } from '@luxamm/sdk-core'
 import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'

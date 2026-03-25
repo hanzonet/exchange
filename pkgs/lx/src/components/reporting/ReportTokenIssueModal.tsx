@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { ReportAssetType, TokenReportEventType } from '@luxfi/api'
 import { atom } from 'jotai'
 import { useMemo } from 'react'

@@ -11,15 +11,15 @@ import {
   useQueries,
   useQuery,
 } from '@tanstack/react-query'
-import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
+import { DataApiService } from '@luxamm/client-data-api/dist/data/v1/api_connect'
 import {
   GetPositionRequest,
   GetPositionResponse,
   ListPositionsRequest,
   ListPositionsResponse,
-} from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { Pair } from '@uniswap/v2-sdk'
+} from '@luxamm/client-data-api/dist/data/v1/api_pb'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { Pair } from '@luxamm/v2-sdk'
 import { useMemo } from 'react'
 import { uniswapPostTransport } from 'uniswap/src/data/rest/base'
 import { SerializedToken } from 'uniswap/src/features/tokens/warnings/slice/types'

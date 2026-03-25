@@ -1,4 +1,4 @@
-import { SearchTokensResponse, SearchType } from '@uniswap/client-search/dist/search/v1/api_pb'
+import { SearchTokensResponse, SearchType } from '@luxamm/client-search/dist/search/v1/api_pb'
 import { GqlResult } from '@luxexchange/api'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'

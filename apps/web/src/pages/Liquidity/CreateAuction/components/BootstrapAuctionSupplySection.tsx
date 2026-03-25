@@ -1,4 +1,4 @@
-import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
+import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { QuestionInCircleFilled } from '@luxfi/ui/src/components/icons/QuestionInCircleFilled'

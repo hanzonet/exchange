@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { ChainId } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback, useRef, useState } from 'react'
 import { useSubmitBidMutation } from '@luxexchange/lx/src/data/rest/auctions/useSubmitBidMutation'
 import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'

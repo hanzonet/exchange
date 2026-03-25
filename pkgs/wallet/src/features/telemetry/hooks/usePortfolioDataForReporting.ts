@@ -1,5 +1,5 @@
 import { UseQueryResult } from '@tanstack/react-query'
-import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { GetPortfolioResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { useMemo } from 'react'
 import { calculateTotalBalancesUsdPerChainRest } from 'uniswap/src/data/balances/utils'
 import { useGetPortfolioQuery } from 'uniswap/src/data/rest/getPortfolio'

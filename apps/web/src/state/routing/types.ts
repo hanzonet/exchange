@@ -1,9 +1,9 @@
 /* eslint-disable max-lines */
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
-import { PermitTransferFromData } from '@uniswap/permit2-sdk'
-import { MixedRouteSDK, ONE, Protocol, Trade } from '@uniswap/router-sdk'
-import { Currency, CurrencyAmount, Fraction, Percent, Price, Token, TradeType } from '@uniswap/sdk-core'
+import { PermitTransferFromData } from '@luxamm/permit2-sdk'
+import { MixedRouteSDK, ONE, Protocol, Trade } from '@luxamm/router-sdk'
+import { Currency, CurrencyAmount, Fraction, Percent, Price, Token, TradeType } from '@luxamm/sdk-core'
 import {
   DutchOrderInfo,
   DutchOrderInfoJSON,
@@ -19,9 +19,9 @@ import {
   UnsignedV3DutchOrderInfoJSON,
   REACTOR_ADDRESS_MAPPING,
   OrderType,
-} from '@uniswap/uniswapx-sdk'
-import { Route as V2Route } from '@uniswap/v2-sdk'
-import { Route as V3Route } from '@uniswap/v3-sdk'
+} from '@luxamm/uniswapx-sdk'
+import { Route as V2Route } from '@luxamm/v2-sdk'
+import { Route as V3Route } from '@luxamm/v3-sdk'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { ZERO_PERCENT } from '~/constants/misc'
 
@@ -774,7 +774,7 @@ export class PreviewTrade {
   }
 }
 
-// Reactor address for limit orders — sourced from @uniswap/uniswapx-sdk
+// Reactor address for limit orders — sourced from @luxamm/uniswapx-sdk
 const LX_REACTOR = REACTOR_ADDRESS_MAPPING[UniverseChainId.Mainnet]?.[OrderType.Dutch] ?? AddressZero
 
 export class LimitOrderTrade {

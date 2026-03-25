@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent, Price, Token } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Percent, Price, Token } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { SwapTradeBaseProperties } from '@luxexchange/lx/src/features/telemetry/types'
 import { getRouteAnalyticsData, tradeRoutingToFillType } from '@luxexchange/lx/src/features/transactions/swap/analytics'

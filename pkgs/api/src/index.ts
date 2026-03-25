@@ -198,7 +198,7 @@ export {
 export type {
   EstimateGasFeeRequest as GasServiceEstimateRequest,
   EstimateGasFeeResponse as GasServiceEstimateResponse,
-} from '@uniswap/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
+} from '@luxamm/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
 
 // Data API Service (ConnectRPC - listTopTokens, listTopPools, getPortfolio, etc.)
 export {
@@ -217,9 +217,9 @@ export {
   type GetPortfolioResponse,
   type ListTopPoolsResponse,
   type ListTokensResponse,
-} from '@uniswap/client-data-api/dist/data/v1/api_pb'
-export { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-export { type Pool as DataApiPool, type Token as DataApiToken } from '@uniswap/client-data-api/dist/data/v1/types_pb'
+} from '@luxamm/client-data-api/dist/data/v1/api_pb'
+export { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+export { type Pool as DataApiPool, type Token as DataApiToken } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 
 // Data Service API
 export {
@@ -280,7 +280,7 @@ export {
   TransferWidgetUrlRequest,
   WidgetUrlRequest,
   WidgetUrlResponse,
-} from '@uniswap/client-for/dist/for/v1/api_pb'
+} from '@luxamm/client-for/dist/for/v1/api_pb'
 
 // ConnectRPC API
 export {

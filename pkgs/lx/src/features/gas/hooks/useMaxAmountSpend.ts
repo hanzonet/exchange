@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@luxexchange/gating'
 import JSBI from 'jsbi'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'

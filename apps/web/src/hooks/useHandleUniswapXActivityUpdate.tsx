@@ -1,4 +1,4 @@
-import { useTrace } from '@uniswap/analytics'
+import { useTrace } from '@luxamm/analytics'
 import { TradingApi } from '@universe/api'
 import { useCallback } from 'react'
 import { finalizeTransaction, updateTransaction } from 'uniswap/src/features/transactions/slice'

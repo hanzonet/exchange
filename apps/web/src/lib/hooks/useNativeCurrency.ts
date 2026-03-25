@@ -1,4 +1,4 @@
-import { NativeCurrency, Token } from '@uniswap/sdk-core'
+import { NativeCurrency, Token } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

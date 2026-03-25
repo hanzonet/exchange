@@ -1,4 +1,4 @@
-import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import type { GasFeeResult } from '@luxexchange/api'
 import { TradingApi } from '@luxexchange/api'
 import type { PropsWithChildren, ReactNode } from 'react'

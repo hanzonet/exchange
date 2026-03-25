@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'
