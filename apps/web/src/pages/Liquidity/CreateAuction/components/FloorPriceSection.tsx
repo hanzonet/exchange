@@ -1,4 +1,4 @@
-import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
+import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Input, Text, TouchableArea } from '@luxfi/ui/src'

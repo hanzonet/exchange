@@ -1,5 +1,5 @@
 import { useFocusEffect } from '@react-navigation/core'
-import { BrowserEvent, SharedEventName } from '@uniswap/analytics-events'
+import { BrowserEvent, SharedEventName } from '@luxamm/analytics-events'
 import React, { memo, PropsWithChildren, ReactNode, useEffect, useId, useMemo } from 'react'
 import { isWebPlatform } from '@luxfi/utilities/src/platform'
 // biome-ignore lint/style/noRestrictedImports: Platform-specific implementation needs internal types

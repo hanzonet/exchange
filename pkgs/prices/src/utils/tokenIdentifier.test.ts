@@ -1,4 +1,4 @@
-import { Ether, Token } from '@uniswap/sdk-core'
+import { Ether, Token } from '@luxamm/sdk-core'
 import type { TokenIdentifier } from '@luxexchange/prices'
 import {
   createPriceKey,

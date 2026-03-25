@@ -1,4 +1,4 @@
-import type { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
+import type { Currency, CurrencyAmount, Price } from '@luxamm/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { createContext, type ReactNode, useContext } from 'react'
 import type { PollingInterval } from '@luxexchange/lx/src/constants/misc'

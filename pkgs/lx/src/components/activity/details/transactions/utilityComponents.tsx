@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { Flex, Loader, Text, TouchableArea } from 'ui/src'
 import { fonts, iconSizes, validColor } from 'ui/src/theme'
 import { useFormattedCurrencyAmountAndUSDValue } from '@luxexchange/lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'

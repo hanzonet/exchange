@@ -1,4 +1,4 @@
-import { Currency, Percent, TradeType } from '@uniswap/sdk-core'
+import { Currency, Percent, TradeType } from '@luxamm/sdk-core'
 import { Trans } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

@@ -1,4 +1,4 @@
-import { TransactionRequest as LiquidityTransactionRequest } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+import { TransactionRequest as LiquidityTransactionRequest } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { SetCurrentStepFn } from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'

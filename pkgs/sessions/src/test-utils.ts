@@ -17,7 +17,7 @@ import {
   type UpdateSessionResponse,
   type VerifyRequest,
   type VerifyResponse,
-} from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
+} from '@luxamm/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
 import type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
 import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
 import type { SessionState, SessionStorage } from '@luxexchange/sessions/src/session-storage/types'

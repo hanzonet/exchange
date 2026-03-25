@@ -1,4 +1,4 @@
-import { Percent } from '@uniswap/sdk-core'
+import { Percent } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
 import { OrderDirection } from '~/appGraphql/data/util'

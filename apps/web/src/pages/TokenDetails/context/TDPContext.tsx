@@ -1,5 +1,5 @@
 import { QueryResult } from '@apollo/client'
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { createContext } from 'react'
 import { GqlChainId, UniverseChainId } from 'uniswap/src/features/chains/types'

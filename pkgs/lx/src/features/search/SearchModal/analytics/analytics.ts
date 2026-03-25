@@ -1,4 +1,4 @@
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import { OnchainItemListOptionType, SearchModalOption } from '@luxexchange/lx/src/components/lists/items/types'
 import { extractDomain } from '@luxexchange/lx/src/components/lists/items/wallets/utils'
 import { OnchainItemSection, OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'

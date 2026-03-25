@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { ColorTokens, GeneratedIcon } from 'ui/src'
 
 export enum WarningSeverity {

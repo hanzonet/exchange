@@ -1,5 +1,5 @@
-import { getPosition } from '@uniswap/client-data-api/dist/data/v1/api-DataApiService_connectquery'
-import { LiquidityService } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
+import { getPosition } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
+import { LiquidityService } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { createExpectSingleTransaction } from '~/playwright/anvil/transactions'
 import { expect, getTest } from '~/playwright/fixtures'

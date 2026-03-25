@@ -1,4 +1,4 @@
-import type { ClearingPriceChange } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
+import type { ClearingPriceChange } from '@luxamm/client-data-api/dist/data/v1/auction_pb'
 import { ONE_DAY_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 import type {
   ClearingPriceChartPoint,

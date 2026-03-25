@@ -7,8 +7,8 @@ import {
   UseInfiniteQueryResult,
   useInfiniteQuery,
 } from '@tanstack/react-query'
-import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
-import { ListTransactionsRequest, ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { DataApiService } from '@luxamm/client-data-api/dist/data/v1/api_connect'
+import { ListTransactionsRequest, ListTransactionsResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { transformInput, WithoutWalletAccount } from '@luxexchange/api'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { dataApiGetTransport } from 'uniswap/src/data/rest/base'

@@ -1,4 +1,4 @@
-import { ChallengeType } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
+import { ChallengeType } from '@luxamm/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
 import type { TypedChallengeData } from '@luxexchange/sessions/src/session-repository/types'
 import { SessionState } from '@luxexchange/sessions/src/session-storage/types'
 

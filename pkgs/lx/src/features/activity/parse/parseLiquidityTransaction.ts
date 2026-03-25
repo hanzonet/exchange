@@ -3,7 +3,7 @@ import {
   OnChainTransaction,
   OnChainTransactionLabel,
   Transfer,
-} from '@uniswap/client-data-api/dist/data/v1/types_pb'
+} from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { extractDappInfo } from 'uniswap/src/features/activity/utils/extractDappInfo'
 import { AssetCase } from 'uniswap/src/features/activity/utils/remote'
 import {

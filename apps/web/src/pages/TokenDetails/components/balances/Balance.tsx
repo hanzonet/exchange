@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, TouchableArea } from '@luxfi/ui/src'

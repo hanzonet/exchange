@@ -1,11 +1,11 @@
-const biomeSupportedRules = require('@uniswap/eslint-config/biome-supported')
-const { reactNative: reactNativeImports } = require('@uniswap/eslint-config/restrictedImports')
+const biomeSupportedRules = require('@luxamm/eslint-config/biome-supported')
+const { reactNative: reactNativeImports } = require('@luxamm/eslint-config/restrictedImports')
 const rulesDirPlugin = require('eslint-plugin-rulesdir')
 rulesDirPlugin.RULES_DIR = 'eslint_rules'
 
 module.exports = {
   root: true,
-  extends: ['@uniswap/eslint-config/native', '@uniswap/eslint-config/webPlatform'],
+  extends: ['@luxamm/eslint-config/native', '@luxamm/eslint-config/webPlatform'],
   plugins: ['rulesdir'],
   ignorePatterns: [
     'node_modules',

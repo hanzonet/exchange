@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { SwapConfigKey } from '@luxexchange/gating'
 import { MONAD_LOGO_FILLED } from 'ui/src/assets'

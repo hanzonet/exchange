@@ -1,5 +1,5 @@
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { CurrencyAmount, Token, ChainId as UniswapSDKChainId } from '@uniswap/sdk-core'
+import { CurrencyAmount, Token, ChainId as UniswapSDKChainId } from '@luxamm/sdk-core'
 import type { GraphQLApi } from '@luxexchange/api'
 import { SwapConfigKey } from '@luxexchange/gating'
 import type { ImageSourcePropType } from 'react-native'

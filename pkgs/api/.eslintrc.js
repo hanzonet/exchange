@@ -1,7 +1,7 @@
-const { reactNative: reactNativeImports } = require('@uniswap/eslint-config/restrictedImports')
+const { reactNative: reactNativeImports } = require('@luxamm/eslint-config/restrictedImports')
 
 module.exports = {
-  extends: ['@uniswap/eslint-config/lib'],
+  extends: ['@luxamm/eslint-config/lib'],
   ignorePatterns: ['graphql.config.ts', 'stubs/**'],
   parserOptions: {
     tsconfigRootDir: __dirname,

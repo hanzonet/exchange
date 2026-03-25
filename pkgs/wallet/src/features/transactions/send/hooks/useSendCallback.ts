@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { GasEstimate } from '@luxexchange/api'
 import { providers } from 'ethers'
 import { useMemo } from 'react'

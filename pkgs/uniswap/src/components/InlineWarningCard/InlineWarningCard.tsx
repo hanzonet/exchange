@@ -1,4 +1,4 @@
-import { SharedEventName } from '@uniswap/analytics-events'
+import { SharedEventName } from '@luxamm/analytics-events'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, GeneratedIcon, InlineCard, LabeledCheckbox, Text, TouchableArea } from 'ui/src'

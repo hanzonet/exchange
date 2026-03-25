@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { PropsWithChildren } from 'react'
 import { Flex, ModalCloseIcon, styled, TouchableArea, useSporeColors } from '@luxfi/ui/src'
 import { ReactComponent as ForConnectingBackground } from '@luxfi/ui/src/assets/backgrounds/for-connecting-v2.svg'

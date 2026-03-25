@@ -1,4 +1,4 @@
-import { MaxUint256, TradeType } from '@uniswap/sdk-core'
+import { MaxUint256, TradeType } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { BigNumber } from 'ethers'
 import JSBI from 'jsbi'

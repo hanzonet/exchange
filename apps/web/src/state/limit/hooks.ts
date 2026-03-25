@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price, TradeType } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, Price, TradeType } from '@luxamm/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import JSBI from 'jsbi'
 import { useEffect, useMemo, useState } from 'react'

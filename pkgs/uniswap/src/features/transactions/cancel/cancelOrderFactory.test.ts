@@ -8,7 +8,7 @@ import {
   DutchOrder,
   getCancelMultipleParams,
   getCancelSingleParams,
-} from '@uniswap/uniswapx-sdk'
+} from '@luxamm/luxswap-sdk'
 import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import {
@@ -19,9 +19,9 @@ import {
 import { createPermit2Contract } from 'uniswap/src/features/transactions/utils/permit2'
 import type { Mock } from 'vitest'
 
-// Mock the uniswapx-sdk functions
-vi.mock('@uniswap/uniswapx-sdk', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@uniswap/uniswapx-sdk')>()
+// Mock the luxswap-sdk functions
+vi.mock('@luxamm/luxswap-sdk', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxamm/luxswap-sdk')>()
   return {
     ...actual,
     getCancelSingleParams: vi.fn(),

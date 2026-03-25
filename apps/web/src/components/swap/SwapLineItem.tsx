@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import React, { ReactNode } from 'react'
 import { Trans } from 'react-i18next'
 import { Flex } from '@luxfi/ui/src'

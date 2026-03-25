@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
 import { useExtractedTokenColor, useSporeColors } from '@luxfi/ui/src'
 import { useCurrencyInfo } from '~/hooks/Tokens'

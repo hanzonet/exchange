@@ -1,4 +1,4 @@
-import { Currency, Price } from '@uniswap/sdk-core'
+import { Currency, Price } from '@luxamm/sdk-core'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { NumberType } from '@luxfi/utilities/src/format/types'
 import { PriceOrdering } from '~/components/Liquidity/types'

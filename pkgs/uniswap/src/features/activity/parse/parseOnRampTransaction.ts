@@ -1,4 +1,4 @@
-import { FiatOnRampTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
+import { FiatOnRampTransaction } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { getAddressFromAsset } from 'uniswap/src/features/activity/utils/remote'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
 import {

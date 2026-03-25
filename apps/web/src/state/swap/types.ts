@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { createContext, Dispatch, SetStateAction } from 'react'
 import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'

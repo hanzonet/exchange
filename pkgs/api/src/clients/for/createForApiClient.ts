@@ -17,7 +17,7 @@ import {
   TransferWidgetUrlRequest,
   WidgetUrlRequest,
   WidgetUrlResponse,
-} from '@uniswap/client-for/dist/for/v1/api_pb'
+} from '@luxamm/client-for/dist/for/v1/api_pb'
 import { FetchClient } from '@luxexchange/api/src/clients/base/types'
 import { createFetcher } from '@luxexchange/api/src/clients/base/utils'
 import { FORQuoteResponse } from '@luxexchange/api/src/clients/for/types'

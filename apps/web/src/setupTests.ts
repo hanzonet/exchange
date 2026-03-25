@@ -170,7 +170,7 @@ vi.mock('@datadog/browser-logs', () => ({
 }))
 
 // This package must be mocked because it doesn't support ESM
-vi.mock('@uniswap/analytics-events', () => {
+vi.mock('@luxamm/analytics-events', () => {
   return {
     SharedEventName: {},
     sendAnalyticsEvent: vi.fn(),
@@ -198,7 +198,7 @@ vi.mock('@hanzogui/animations-moti', () => ({
   },
 }))
 
-vi.mock('@uniswap/analytics', () => ({
+vi.mock('@luxamm/analytics', () => ({
   Trace: ({ children }: any) => {
     return React.createElement(React.Fragment, {}, children)
   },

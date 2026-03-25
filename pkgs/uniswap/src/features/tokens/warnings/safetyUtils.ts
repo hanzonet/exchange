@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import { Currency, NativeCurrency } from '@uniswap/sdk-core'
+import { Currency, NativeCurrency } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { ColorTokens } from 'ui/src'

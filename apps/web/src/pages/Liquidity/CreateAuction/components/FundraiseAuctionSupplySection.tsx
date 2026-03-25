@@ -1,4 +1,4 @@
-import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
+import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
 import { AuctionSupplyCard } from '~/pages/Liquidity/CreateAuction/components/AuctionSupplyCard'

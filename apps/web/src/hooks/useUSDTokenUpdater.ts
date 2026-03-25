@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
 import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'

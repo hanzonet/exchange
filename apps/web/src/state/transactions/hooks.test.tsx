@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { permit2Address } from '@uniswap/permit2-sdk'
-import { TradeType } from '@uniswap/sdk-core'
+import { permit2Address } from '@luxamm/permit2-sdk'
+import { TradeType } from '@luxamm/sdk-core'
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {

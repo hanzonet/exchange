@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { ClaimLPFeesRequest } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { ClaimLPFeesRequest } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import {
   V2Pool,
   V2Position,
@@ -8,8 +8,8 @@ import {
   V3Position,
   V4Pool,
   V4Position,
-} from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { Dispatch, SetStateAction, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Button, Flex, Switch, Text } from '@luxfi/ui/src'

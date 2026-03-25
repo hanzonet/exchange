@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { useCallback, useEffect } from 'react'
 import { Flex } from '@luxfi/ui/src'
 import { TokenSelectorContent } from 'uniswap/src/components/TokenSelector/TokenSelector'

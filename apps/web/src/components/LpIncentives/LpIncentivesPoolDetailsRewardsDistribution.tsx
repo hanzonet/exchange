@@ -1,4 +1,4 @@
-import { CurrencyAmount } from '@uniswap/sdk-core'
+import { CurrencyAmount } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import JSBI from 'jsbi'

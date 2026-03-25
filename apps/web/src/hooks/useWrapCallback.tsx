@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { useMemo, useRef, useState } from 'react'
 import { WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'

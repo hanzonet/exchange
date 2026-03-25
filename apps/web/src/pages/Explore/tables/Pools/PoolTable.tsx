@@ -3,8 +3,8 @@
 
 import { ApolloError } from '@apollo/client'
 import { createColumnHelper, Row } from '@tanstack/react-table'
-import { TokenStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
-import { Percent, Token } from '@uniswap/sdk-core'
+import { TokenStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
+import { Percent, Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, ReactElement, useCallback, useEffect, useMemo } from 'react'

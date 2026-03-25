@@ -1,4 +1,4 @@
-import { Currency } from '@uniswap/sdk-core'
+import { Currency } from '@luxamm/sdk-core'
 import { memo } from 'react'
 import { Flex, useColorSchemeFromSeed } from '@luxfi/ui/src'
 import { zIndexes } from '@luxfi/ui/src/theme'

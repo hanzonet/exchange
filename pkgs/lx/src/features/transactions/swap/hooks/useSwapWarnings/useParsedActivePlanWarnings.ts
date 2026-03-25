@@ -1,4 +1,4 @@
-import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
+import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import type { TFunction } from 'i18next'
 import { useMemo } from 'react'

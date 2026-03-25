@@ -1,8 +1,8 @@
-const biomeSupportedRules = require('@uniswap/eslint-config/biome-supported')
+const biomeSupportedRules = require('@luxamm/eslint-config/biome-supported')
 
 module.exports = {
   root: true,
-  extends: ['@uniswap/eslint-config/native'],
+  extends: ['@luxamm/eslint-config/native'],
   ignorePatterns: [
     'node_modules',
     '.turbo',

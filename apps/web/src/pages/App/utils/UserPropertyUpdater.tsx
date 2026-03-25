@@ -1,6 +1,6 @@
 import { datadogRum } from '@datadog/browser-rum'
 import { useQuery } from '@tanstack/react-query'
-import { getBrowser, SharedEventName } from '@uniswap/analytics-events'
+import { getBrowser, SharedEventName } from '@luxamm/analytics-events'
 import { provideLuxIdentifierService } from '@luxexchange/api'
 import { luxIdentifierQuery } from '@luxexchange/sessions'
 import { useEffect } from 'react'

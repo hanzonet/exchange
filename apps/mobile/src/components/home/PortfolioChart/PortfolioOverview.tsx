@@ -1,5 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query'
-import { ChartPeriod } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { ChartPeriod } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { PERIOD_OPTIONS, PortfolioChart } from 'src/components/home/PortfolioChart/PortfolioChart'
 import { type ChartData } from 'src/components/home/PortfolioChart/SparklineChart'

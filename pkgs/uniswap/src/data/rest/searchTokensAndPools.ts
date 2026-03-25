@@ -10,8 +10,8 @@ import {
   SearchTokensRequest,
   SearchTokensResponse,
   SearchType,
-} from '@uniswap/client-search/dist/search/v1/api_pb'
-import { searchTokens } from '@uniswap/client-search/dist/search/v1/api-searchService_connectquery'
+} from '@luxamm/client-search/dist/search/v1/api_pb'
+import { searchTokens } from '@luxamm/client-search/dist/search/v1/api-searchService_connectquery'
 import { parseProtectionInfo, parseRestProtocolVersion, parseSafetyLevel, SharedQueryClient } from '@luxexchange/api'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { uniswapPostTransport } from 'uniswap/src/data/rest/base'

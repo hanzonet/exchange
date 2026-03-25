@@ -3,7 +3,7 @@ import type {
   RegistrationOptions_AuthenticatorAttachment as AuthenticatorAttachment,
   ChallengeResponse,
   RegistrationOptions,
-} from '@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+} from '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
 import { EmbeddedWalletApiClient } from 'uniswap/src/data/rest/embeddedWallet/requests'
 import {
   clearDeviceSession,
@@ -24,10 +24,10 @@ export type {
   AuthenticatorNameType,
   RecoveryMethod,
   RegistrationOptions_AuthenticatorAttachment as AuthenticatorAttachment,
-} from '@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+} from '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
 
 type PrivyPbModule =
-  typeof import('@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb')
+  typeof import('@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb')
 
 let _privyPbModulePromise: Promise<PrivyPbModule> | undefined
 
@@ -37,10 +37,10 @@ export async function loadPrivyPbModule(): Promise<PrivyPbModule> {
       try {
         return await import(
           /* @vite-ignore */
-          '@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+          '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
         )
       } catch {
-        throw new Error('Embedded Wallet requires @uniswap/client-privy-embedded-wallet (private Uniswap package).')
+        throw new Error('Embedded Wallet requires @luxamm/client-privy-embedded-wallet (private Uniswap package).')
       }
     })()
   }

@@ -5,7 +5,7 @@ import {
   SafetyLevel as RestSafetyLevel,
   SpamCode as RestSpamCode,
   TokenMetadata,
-} from '@uniswap/client-data-api/dist/data/v1/types_pb'
+} from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { GraphQLApi, SpamCode } from '@luxexchange/api'
 import { AttackType, SafetyInfo, TokenList } from 'uniswap/src/features/dataApi/types'
 

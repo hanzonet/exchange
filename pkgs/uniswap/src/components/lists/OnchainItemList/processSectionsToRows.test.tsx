@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@luxamm/sdk-core'
 import { OnchainItemListOptionType, type TokenOption } from 'uniswap/src/components/lists/items/types'
 import {
   ProcessedRow,

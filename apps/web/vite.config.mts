@@ -643,6 +643,8 @@ export default defineConfig(({ mode }) => {
           ...(!privyPackageInstalled ? [/^@uniswap\/client-privy-embedded-wallet/] : []),
           // Externalize unavailable optional packages
           /^@luxdex\/conedison/,
+          /x_verification_connect/,
+          /^@luxamm\//,
         ],
         output: {
           // Ensure consistent file naming for better caching

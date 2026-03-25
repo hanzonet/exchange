@@ -1,6 +1,6 @@
 import { PublicKey } from '@solana/web3.js'
 import { skipToken, useQuery } from '@tanstack/react-query'
-import { Currency, CurrencyAmount, NativeCurrency as NativeCurrencyClass } from '@uniswap/sdk-core'
+import { Currency, CurrencyAmount, NativeCurrency as NativeCurrencyClass } from '@luxamm/sdk-core'
 import { SharedQueryClient } from '@luxexchange/api'
 import { DynamicConfigs, getDynamicConfigValue, SyncTransactionSubmissionChainIdsConfigKey } from '@luxexchange/gating'
 import { Contract } from 'ethers/lib/ethers'

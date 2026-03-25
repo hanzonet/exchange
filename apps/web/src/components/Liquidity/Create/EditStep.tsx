@@ -1,4 +1,4 @@
-import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Text, useMedia } from '@luxfi/ui/src'

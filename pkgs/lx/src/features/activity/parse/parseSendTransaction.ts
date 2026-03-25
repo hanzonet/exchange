@@ -1,4 +1,4 @@
-import { Nft, OnChainTransaction, Token } from '@uniswap/client-data-api/dist/data/v1/types_pb'
+import { Nft, OnChainTransaction, Token } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { SpamCode } from '@luxexchange/api'
 import { AssetType } from 'uniswap/src/entities/assets'
 import { extractDappInfo } from 'uniswap/src/features/activity/utils/extractDappInfo'

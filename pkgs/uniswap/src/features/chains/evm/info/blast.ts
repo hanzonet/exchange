@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { BLAST_LOGO, ETH_LOGO } from 'ui/src/assets'
 import { config } from 'uniswap/src/config'

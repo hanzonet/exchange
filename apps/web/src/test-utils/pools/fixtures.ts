@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { Currency, WETH9 } from '@uniswap/sdk-core'
-import { FeeAmount, Pool, Position } from '@uniswap/v3-sdk'
+import { Currency, WETH9 } from '@luxamm/sdk-core'
+import { FeeAmount, Pool, Position } from '@luxamm/v3-sdk'
 import { GraphQLApi } from '@luxexchange/api'
 import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'

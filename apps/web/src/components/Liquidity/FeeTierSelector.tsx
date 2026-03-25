@@ -1,4 +1,4 @@
-import type { Percent } from '@uniswap/sdk-core'
+import type { Percent } from '@luxamm/sdk-core'
 import type { ReactNode } from 'react'
 import { useReducer } from 'react'
 import { useTranslation } from 'react-i18next'
