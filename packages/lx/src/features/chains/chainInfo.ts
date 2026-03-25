@@ -1,27 +1,23 @@
-import { ARBITRUM_CHAIN_INFO } from 'lx/src/features/chains/evm/info/arbitrum'
-import { AVALANCHE_CHAIN_INFO } from 'lx/src/features/chains/evm/info/avalanche'
-import { BASE_CHAIN_INFO } from 'lx/src/features/chains/evm/info/base'
-import { BLAST_CHAIN_INFO } from 'lx/src/features/chains/evm/info/blast'
-import { BNB_CHAIN_INFO } from 'lx/src/features/chains/evm/info/bnb'
-import { CELO_CHAIN_INFO } from 'lx/src/features/chains/evm/info/celo'
-import { HANZO_CHAIN_INFO } from 'lx/src/features/chains/evm/info/hanzo'
-import { LUX_CHAIN_INFO, LUX_DEV_CHAIN_INFO, LUX_TESTNET_CHAIN_INFO } from 'lx/src/features/chains/evm/info/lux'
-import { MAINNET_CHAIN_INFO, SEPOLIA_CHAIN_INFO } from 'lx/src/features/chains/evm/info/mainnet'
-import { MONAD_CHAIN_INFO } from 'lx/src/features/chains/evm/info/monad'
-import { OPTIMISM_CHAIN_INFO } from 'lx/src/features/chains/evm/info/optimism'
-import { PARS_CHAIN_INFO } from 'lx/src/features/chains/evm/info/pars'
-import { POLYGON_CHAIN_INFO } from 'lx/src/features/chains/evm/info/polygon'
-import { SONEIUM_CHAIN_INFO } from 'lx/src/features/chains/evm/info/soneium'
-import { SPC_CHAIN_INFO } from 'lx/src/features/chains/evm/info/spc'
-import { UNICHAIN_CHAIN_INFO, UNICHAIN_SEPOLIA_CHAIN_INFO } from 'lx/src/features/chains/evm/info/unichain'
-import { WORLD_CHAIN_INFO } from 'lx/src/features/chains/evm/info/worldchain'
-import { XLAYER_CHAIN_INFO } from 'lx/src/features/chains/evm/info/xlayer'
-import { ZKSYNC_CHAIN_INFO } from 'lx/src/features/chains/evm/info/zksync'
-import { ZORA_CHAIN_INFO } from 'lx/src/features/chains/evm/info/zora'
-import { ZOO_CHAIN_INFO, ZOO_TESTNET_CHAIN_INFO } from 'lx/src/features/chains/evm/info/zoo'
-import { SOLANA_CHAIN_INFO } from 'lx/src/features/chains/svm/info/solana'
-import { UniverseChainId, UniverseChainInfo } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { ARBITRUM_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/arbitrum'
+import { AVALANCHE_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/avalanche'
+import { BASE_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/base'
+import { BLAST_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/blast'
+import { BNB_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/bnb'
+import { CELO_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/celo'
+import { MAINNET_CHAIN_INFO, SEPOLIA_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/mainnet'
+import { MONAD_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/monad'
+import { OPTIMISM_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/optimism'
+import { POLYGON_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/polygon'
+import { SONEIUM_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/soneium'
+import { TEMPO_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/tempo'
+import { UNICHAIN_CHAIN_INFO, UNICHAIN_SEPOLIA_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/unichain'
+import { WORLD_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/worldchain'
+import { XLAYER_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/xlayer'
+import { ZKSYNC_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/zksync'
+import { ZORA_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/zora'
+import { SOLANA_CHAIN_INFO } from 'uniswap/src/features/chains/svm/info/solana'
+import { UniverseChainId, UniverseChainInfo } from 'uniswap/src/features/chains/types'
+import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { getNonEmptyArrayOrThrow } from 'utilities/src/primitives/array'
 
 export function getChainInfo(chainId: UniverseChainId): UniverseChainInfo {
@@ -48,6 +44,7 @@ export const ORDERED_CHAINS = [
   CELO_CHAIN_INFO,
   WORLD_CHAIN_INFO,
   SONEIUM_CHAIN_INFO,
+  TEMPO_CHAIN_INFO,
   XLAYER_CHAIN_INFO,
   ZORA_CHAIN_INFO,
   ZKSYNC_CHAIN_INFO,
@@ -103,6 +100,7 @@ export const UNIVERSE_CHAIN_INFO = {
   [UniverseChainId.Celo]: CELO_CHAIN_INFO,
   [UniverseChainId.WorldChain]: WORLD_CHAIN_INFO,
   [UniverseChainId.Soneium]: SONEIUM_CHAIN_INFO,
+  [UniverseChainId.Tempo]: TEMPO_CHAIN_INFO,
   [UniverseChainId.XLayer]: XLAYER_CHAIN_INFO,
   [UniverseChainId.Zora]: ZORA_CHAIN_INFO,
   [UniverseChainId.Zksync]: ZKSYNC_CHAIN_INFO,

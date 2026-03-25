@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import { Experiments } from '@universe/gating'
+import { TradingApi } from '@luxexchange/api'
+import { Experiments } from '@luxexchange/gating'
 import ms from 'ms'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -90,6 +90,7 @@ function* handleSwapTransactionStep(params: HandleSwapStepParams): SagaGenerator
     trade,
     swapStartTimestamp: analytics.swap_start_timestamp,
     planAnalytics: planAnalyticsToCamelCase(analytics),
+    transactedUSDValue: analytics.token_in_amount_usd,
   })
   const txRequest = yield* call(getSwapTxRequest, step, signature)
 
@@ -152,6 +153,7 @@ function createHandleSwapTransactionBatchedStep(ctx: { disableOneClickSwap: () =
       trade,
       swapStartTimestamp: analytics.swap_start_timestamp,
       planAnalytics: planAnalyticsToCamelCase(analytics),
+      transactedUSDValue: analytics.token_in_amount_usd,
     })
 
     const batchId = yield* handleAtomicSendCalls({

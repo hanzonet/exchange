@@ -5,8 +5,9 @@ import { getDeviceId } from '@amplitude/analytics-browser'
 import { ApolloProvider } from '@apollo/client'
 import { InsightsProvider } from '@hanzo/insights-react'
 import { datadogRum } from '@datadog/browser-rum'
-import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@universe/api'
-import type { StatsigUser } from '@universe/gating'
+import { PrivyProvider } from '@privy-io/react-auth'
+import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
+import type { StatsigUser } from '@luxexchange/gating'
 import {
   getIsHashcashSolverEnabled,
   getIsSessionServiceEnabled,
@@ -14,7 +15,7 @@ import {
   getIsSessionUpgradeAutoEnabled,
   getIsTurnstileSolverEnabled,
   useIsSessionServiceEnabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import {
   type ChallengeSolver,
   ChallengeType,
@@ -26,9 +27,9 @@ import {
   createSessionInitializationService,
   createTurnstileMockSolver,
   createTurnstileSolver,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v7'
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren, ReactNode } from 'react'
 import { StrictMode, useEffect, useMemo } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Helmet, HelmetProvider } from 'react-helmet-async/lib/index'
@@ -124,12 +125,13 @@ const provideSessionInitService = () => {
           createHashcashWorkerChannel({
             getWorker: () => {
               return new Worker(
-                new URL('@universe/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
+                new URL('@luxexchange/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
                 { type: 'module' },
               )
             },
           }),
         onSolveCompleted: onHashcashSolveCompleted,
+        getLogger,
       }),
     )
   } else {
@@ -229,6 +231,19 @@ function StatsigProvider({ children }: PropsWithChildren) {
   )
 }
 
+const PRIVY_APP_ID = process.env.PRIVY_APP_ID
+
+function MaybePrivyProvider({ children }: { children: ReactNode }) {
+  if (!PRIVY_APP_ID) {
+    return <>{children}</>
+  }
+  return (
+    <PrivyProvider appId={PRIVY_APP_ID} config={{ loginMethods: ['email', 'google', 'apple'] }}>
+      {children}
+    </PrivyProvider>
+  )
+}
+
 const container = document.getElementById('root') as HTMLElement
 
 const Router = isBrowserRouterEnabled() ? BrowserRouter : HashRouter
@@ -252,43 +267,45 @@ const RootApp = (): JSX.Element => {
             <QueryClientPersistProvider>
               <NuqsAdapter>
                 <Router>
-                  <I18nextProvider i18n={i18n}>
-                    <LanguageProvider>
-                      <Web3Provider>
-                        <StatsigProvider>
-                          <WalletCapabilitiesEffects />
-                          <ExternalWalletProvider>
-                            <ConnectWalletMutationProvider>
-                              <WebAccountsStoreProvider>
-                                <WebLuxProvider>
-                                  <TokenPriceProvider>
-                                    <GraphqlProviders>
-                                      <LivePricesProvider>
-                                        <LocalizationContextProvider>
-                                          <BlockNumberProvider>
-                                            <Updaters />
-                                            <ThemeProvider>
-                                              <GuiProvider>
-                                                <PortalProvider>
-                                                  <WebNotificationServiceManager />
-                                                  <ThemedGlobalStyle />
-                                                  <App />
-                                                </PortalProvider>
-                                              </GuiProvider>
-                                            </ThemeProvider>
-                                          </BlockNumberProvider>
-                                        </LocalizationContextProvider>
-                                      </LivePricesProvider>
-                                    </GraphqlProviders>
-                                  </TokenPriceProvider>
-                                </WebLuxProvider>
-                              </WebAccountsStoreProvider>
-                            </ConnectWalletMutationProvider>
-                          </ExternalWalletProvider>
-                        </StatsigProvider>
-                      </Web3Provider>
-                    </LanguageProvider>
-                  </I18nextProvider>
+                  <MaybePrivyProvider>
+                    <I18nextProvider i18n={i18n}>
+                      <LanguageProvider>
+                        <Web3Provider>
+                          <StatsigProvider>
+                            <WalletCapabilitiesEffects />
+                            <ExternalWalletProvider>
+                              <ConnectWalletMutationProvider>
+                                <WebAccountsStoreProvider>
+                                  <WebUniswapProvider>
+                                    <TokenPriceProvider>
+                                      <GraphqlProviders>
+                                        <LivePricesProvider>
+                                          <LocalizationContextProvider>
+                                            <BlockNumberProvider>
+                                              <Updaters />
+                                              <ThemeProvider>
+                                                <TamaguiProvider>
+                                                  <PortalProvider>
+                                                    <WebNotificationServiceManager />
+                                                    <ThemedGlobalStyle />
+                                                    <App />
+                                                  </PortalProvider>
+                                                </TamaguiProvider>
+                                              </ThemeProvider>
+                                            </BlockNumberProvider>
+                                          </LocalizationContextProvider>
+                                        </LivePricesProvider>
+                                      </GraphqlProviders>
+                                    </TokenPriceProvider>
+                                  </WebUniswapProvider>
+                                </WebAccountsStoreProvider>
+                              </ConnectWalletMutationProvider>
+                            </ExternalWalletProvider>
+                          </StatsigProvider>
+                        </Web3Provider>
+                      </LanguageProvider>
+                    </I18nextProvider>
+                  </MaybePrivyProvider>
                 </Router>
               </NuqsAdapter>
             </QueryClientPersistProvider>

@@ -1,12 +1,11 @@
 import { memo, useMemo } from 'react'
-import { useOnRetrySwap } from 'lx/src/components/activity/hooks/useOnRetrySwap'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import type { SummaryItemProps } from 'lx/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
-import { CrossChainIcon, SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { CrossChainCurrencyRow } from 'lx/src/features/transactions/swap/components/CrossChainCurrencyRow'
+import { TransactionSummaryLayout } from 'uniswap/src/components/activity/summaries/TransactionSummaryLayout'
+import type { SummaryItemProps } from 'uniswap/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from 'uniswap/src/components/activity/utils'
+import { CrossChainIcon, SplitLogo } from 'uniswap/src/components/CurrencyLogo/SplitLogo'
+import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { CrossChainCurrencyRow } from 'uniswap/src/features/transactions/swap/components/CrossChainCurrencyRow'
 import {
   type PlanTransactionInfo,
   type TransactionDetails,
@@ -21,7 +20,6 @@ import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
  */
 function _PlanSummaryItem({
   transaction,
-  swapCallbacks,
   index,
   isExternalProfile,
 }: SummaryItemProps & {
@@ -34,7 +32,6 @@ function _PlanSummaryItem({
   const inputCurrencyInfo = useCurrencyInfo(inputCurrencyId)
   const outputCurrencyInfo = useCurrencyInfo(outputCurrencyId)
   const formatter = useLocalizationContext()
-  const onRetry = useOnRetrySwap(transaction, swapCallbacks)
 
   const caption = useMemo(() => {
     if (!inputCurrencyInfo || !outputCurrencyInfo) {
@@ -82,6 +79,7 @@ function _PlanSummaryItem({
     [inputCurrencyInfo, outputCurrencyInfo, transaction.chainId, status],
   )
 
+  // TODO(SWAP-2133): Add onRetry prop to support retrying plan transactions in-line.
   return (
     <TransactionSummaryLayout
       caption={caption}
@@ -89,7 +87,6 @@ function _PlanSummaryItem({
       index={index}
       transaction={transaction}
       isExternalProfile={isExternalProfile}
-      onRetry={onRetry}
     />
   )
 }

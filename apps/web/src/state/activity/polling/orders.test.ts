@@ -1,5 +1,5 @@
 import { TradeType } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { DAI } from 'lx/src/constants/tokens'
 import { UniverseChainId } from 'lx/src/features/chains/types'

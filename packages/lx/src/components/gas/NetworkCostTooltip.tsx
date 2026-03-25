@@ -1,4 +1,4 @@
-import { FormattedDEXGasFeeInfo } from '@universe/api'
+import { FormattedDEXGasFeeInfo } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { DEX } from 'ui/src/components/icons/DEX'
@@ -30,7 +30,7 @@ export function NetworkCostTooltip({
         title={{ title: t('common.chain.networkCost', { chain: getChainInfo(chainId).name }) }}
         logo={<NetworkLogo chainId={chainId} size={16} />}
       />
-      <Tooltip.Description learnMorePinkColor={false} learnMoreUrl={learnMoreUrl} text={text} />
+      <Tooltip.Description learnMoreUrl={learnMoreUrl} text={text} />
     </Tooltip.Outer>
   )
 }
@@ -69,11 +69,7 @@ export function NetworkCostTooltipDEX({
         )}
       </Tooltip.Content>
       <Tooltip.Separator />
-      <Tooltip.Description
-        learnMorePinkColor={false}
-        learnMoreUrl={luxUrls.helpArticleUrls.dexInfo}
-        text={t('dex.cost')}
-      />
+      <Tooltip.Description learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
     </Tooltip.Outer>
   )
 }

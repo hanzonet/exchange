@@ -50,6 +50,7 @@ export default function extractRestDEXOrderDetails(transaction: UniswapXTransact
       status,
       orderType,
       encodedOrder,
+      expiryMillis,
     } = transaction
 
     if (!orderHash || !chainId || !inputToken || !outputToken) {
@@ -69,6 +70,7 @@ export default function extractRestDEXOrderDetails(transaction: UniswapXTransact
       addedTime: Number(timestampMillis),
       status: mapDEXStatusToLocalTxStatus(status),
       from: offerer, // This transaction is not on-chain, so use the offerer address as the from address
+      expiry: expiryMillis ? Number(expiryMillis) / 1000 : undefined,
       // TODO(CONS-722): remove special limit typeInfo once limit orders can be excluded from REST query
       typeInfo:
         orderType === UniswapXOrderType.LIMIT

@@ -1,5 +1,5 @@
 import { useTrace } from '@uniswap/analytics'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { useCallback } from 'react'
 import { finalizeTransaction, updateTransaction } from 'lx/src/features/transactions/slice'
 import {
@@ -74,6 +74,7 @@ export function useHandleDEXActivityUpdate(): (params: HandleDEXActivityUpdatePa
           status: update.status,
           swapStartTimestamp: extractTransactionTypeInfoAttribute(original.typeInfo, 'swapStartTimestamp'),
           planAnalytics: extractPlanFieldsFromTypeInfo(original.typeInfo),
+          transactedUSDValue: extractTransactionTypeInfoAttribute(original.typeInfo, 'transactedUSDValue'),
         })
       }
     },

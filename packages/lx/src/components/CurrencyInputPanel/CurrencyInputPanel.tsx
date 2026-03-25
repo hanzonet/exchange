@@ -46,7 +46,6 @@ export const CurrencyInputPanel = memo(
         resetSelection,
         disabled = false,
         onPressDisabled,
-        priceDifferencePercentage,
         headerLabel,
         transactionType,
         customPanelStyle,
@@ -61,6 +60,7 @@ export const CurrencyInputPanel = memo(
         inputRowMinHeight,
         inputSuffix,
         allowOverflow,
+        balanceVariant,
       } = props
 
       const isShortMobileDevice = useIsShortMobileDevice()
@@ -189,7 +189,6 @@ export const CurrencyInputPanel = memo(
                     value={value}
                     usdValue={usdValue}
                     isFiatMode={isFiatMode}
-                    priceDifferencePercentage={priceDifferencePercentage}
                     currencyInfo={currencyInfo}
                     currencyAmount={currencyAmount}
                     currencyField={currencyField}
@@ -207,6 +206,7 @@ export const CurrencyInputPanel = memo(
                     currencyInfo={currencyInfo}
                     showInsufficientBalanceWarning={showInsufficientBalanceWarning}
                     hideBalance={!!hidePresets}
+                    variant={balanceVariant}
                   />
                   {/* Max button */}
                   {showMaxButton && onSetPresetValue && (

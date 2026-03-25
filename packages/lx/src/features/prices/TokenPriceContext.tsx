@@ -1,5 +1,5 @@
 import type { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { createContext, type ReactNode, useContext } from 'react'
 import type { PollingInterval } from 'lx/src/constants/misc'
 import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
@@ -27,12 +27,15 @@ export interface TokenPriceHooks {
     pollInterval?: PollingInterval,
   ) => CurrencyAmount<Currency> | null
 
-  useUSDCValueWithStatus: (currencyAmount: CurrencyAmount<Currency> | undefined | null) => {
+  useUSDCValueWithStatus: (
+    currencyAmount: CurrencyAmount<Currency> | undefined | null,
+    pollInterval?: PollingInterval,
+  ) => {
     value: CurrencyAmount<Currency> | null
     isLoading: boolean
   }
 
-  useTokenSpotPrice: (currencyId: CurrencyId) => number | undefined
+  useTokenSpotPrice: (currencyId: CurrencyId | undefined) => number | undefined
 }
 
 const LEGACY_HOOKS: TokenPriceHooks = {

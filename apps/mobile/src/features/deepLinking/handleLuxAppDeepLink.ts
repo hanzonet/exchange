@@ -18,14 +18,12 @@ import { buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
 import { selectAccounts, selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
 import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
 
-const NFT_ITEM_SHARE_LINK_HASH_REGEX = /^(#\/)?nfts\/asset\/(0x[a-fA-F0-9]{40})\/(\d+)$/
-const NFT_COLLECTION_SHARE_LINK_HASH_REGEX = /^(#\/)?nfts\/collection\/(0x[a-fA-F0-9]{40})$/
 const TOKEN_SHARE_LINK_HASH_REGEX = RegExp(
   `^(#/)?(?:explore/)?tokens/([\\w\\d]*)/(0x[a-fA-F0-9]{40}|${BACKEND_NATIVE_CHAIN_ADDRESS_STRING})$`,
 )
 const TOP_TOKENS_LINK_CHAIN_REGEX = /^(?:explore\/)?tokens\/([\w\d]+)/
 const TOP_TOKENS_LINK_REGEX = /^(?:explore\/)?tokens/
-const ADDRESS_SHARE_LINK_HASH_REGEX = /^(#\/)?address\/(0x[a-fA-F0-9]{40})$/
+const ADDRESS_SHARE_LINK_HASH_REGEX = /^(#\/)?portfolio\/(0x[a-fA-F0-9]{40})$/
 const SWAP_LINK_HASH_REGEX = /^\/?swap(?:\?)?/
 const BUY_LINK_HASH_REGEX = /^\/?buy(?:\?)?/
 
@@ -52,19 +50,7 @@ export function* handleLuxAppDeepLink({
     return
   }
 
-  // Handle NFT Item share (ex. https://app.lux.org/nfts/asset/0x.../123)
-  if (NFT_ITEM_SHARE_LINK_HASH_REGEX.test(path)) {
-    yield* call(handleNFTItemShare, { path, url })
-    return
-  }
-
-  // Handle NFT collection share (ex. https://app.lux.org/nfts/collection/0x...)
-  if (NFT_COLLECTION_SHARE_LINK_HASH_REGEX.test(path)) {
-    yield* call(handleNFTCollectionShare, { path, url })
-    return
-  }
-
-  // Handle Token share (ex. https://app.lux.org/tokens/ethereum/0x... or https://app.lux.org/explore/tokens/arbitrum/0x...)
+  // Handle Token share (ex. https://app.uniswap.org/tokens/ethereum/0x... or https://app.uniswap.org/explore/tokens/arbitrum/0x...)
   if (TOKEN_SHARE_LINK_HASH_REGEX.test(path)) {
     yield* call(handleTokenShare, { path, url, linkSource })
     return
@@ -86,42 +72,6 @@ export function* handleLuxAppDeepLink({
     yield* call(handleAddressShare, { path, url })
     return
   }
-}
-
-function* handleNFTItemShare({ path, url }: { path: string; url: string }): Generator {
-  const [, , contractAddress, tokenId] = path.match(NFT_ITEM_SHARE_LINK_HASH_REGEX) || []
-  if (!contractAddress || !tokenId) {
-    return
-  }
-
-  yield* call(dismissAllModalsBeforeNavigation)
-
-  yield* call(navigate, MobileScreens.NFTItem, {
-    address: contractAddress,
-    tokenId,
-    isSpam: false,
-  })
-  yield* call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-    entity: ShareableEntity.NftItem,
-    url,
-  })
-}
-
-function* handleNFTCollectionShare({ path, url }: { path: string; url: string }): Generator {
-  const [, , contractAddress] = path.match(NFT_COLLECTION_SHARE_LINK_HASH_REGEX) || []
-  if (!contractAddress) {
-    return
-  }
-
-  yield* call(dismissAllModalsBeforeNavigation)
-
-  yield* call(navigate, MobileScreens.NFTCollection, {
-    collectionAddress: contractAddress,
-  })
-  yield* call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-    entity: ShareableEntity.NftCollection,
-    url,
-  })
 }
 
 function* handleTokenShare({

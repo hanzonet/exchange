@@ -1,6 +1,8 @@
-import { isWarmLoadingStatus } from '@luxfi/api'
+import { ChartPeriod } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { isWarmLoadingStatus } from '@luxexchange/api'
 import { memo, useMemo } from 'react'
-import { Flex, RefreshButton, Shine, useIsDarkMode } from 'ui/src'
+import { useTranslation } from 'react-i18next'
+import { Flex, RefreshButton, Shine, Text, useIsDarkMode } from 'ui/src'
 import AnimatedNumber, {
   BALANCE_CHANGE_INDICATION_DURATION,
 } from 'lx/src/components/AnimatedNumber/AnimatedNumber'
@@ -15,11 +17,33 @@ import i18next from 'lx/src/i18n'
 import { NumberType } from 'utilities/src/format/types'
 import { isWebPlatform } from 'utilities/src/platform'
 
+function periodToTimeLabel(t: ReturnType<typeof useTranslation>['t'], period: ChartPeriod): string {
+  switch (period) {
+    case ChartPeriod.HOUR:
+      return t('common.thisHour')
+    case ChartPeriod.DAY:
+      return t('common.today')
+    case ChartPeriod.WEEK:
+      return t('common.thisWeek')
+    case ChartPeriod.MONTH:
+      return t('common.thisMonth')
+    case ChartPeriod.YEAR:
+      return t('common.thisYear')
+    case ChartPeriod.MAX:
+      return t('common.allTime')
+    default:
+      return t('common.today')
+  }
+}
+
 interface PortfolioBalanceProps {
   evmOwner?: Address
   svmOwner?: Address
   endText?: JSX.Element | string
   chainIds?: UniverseChainId[]
+  chartPeriod?: ChartPeriod
+  /** When set, overrides the displayed balance (e.g. during chart scrubbing) */
+  overrideBalanceUSD?: number
 }
 
 export const PortfolioBalance = memo(function _PortfolioBalance({
@@ -27,7 +51,10 @@ export const PortfolioBalance = memo(function _PortfolioBalance({
   svmOwner,
   endText,
   chainIds,
+  chartPeriod,
+  overrideBalanceUSD,
 }: PortfolioBalanceProps): JSX.Element {
+  const { t } = useTranslation()
   const { data, loading, networkStatus, refetch } = usePortfolioTotalValue({
     evmAddress: evmOwner,
     svmAddress: svmOwner,
@@ -51,7 +78,8 @@ export const PortfolioBalance = memo(function _PortfolioBalance({
 
   const isRightToLeft = i18next.dir() === 'rtl'
 
-  const totalBalance = convertFiatAmountFormatted(balanceUSD, NumberType.PortfolioBalance)
+  const displayBalanceUSD = overrideBalanceUSD ?? balanceUSD
+  const totalBalance = convertFiatAmountFormatted(displayBalanceUSD, NumberType.PortfolioBalance)
   const absoluteChange = absoluteChangeUSD && convertFiatAmount(absoluteChangeUSD).amount
   // TODO gary re-enabling this for USD/Euros only, replace with more scalable approach
   const shouldFadePortfolioDecimals =
@@ -67,8 +95,9 @@ export const PortfolioBalance = memo(function _PortfolioBalance({
   return (
     <Flex gap="$spacing4">
       <AnimatedNumber
-        balance={balanceUSD}
-        colorIndicationDuration={BALANCE_CHANGE_INDICATION_DURATION}
+        balance={displayBalanceUSD}
+        colorIndicationDuration={overrideBalanceUSD !== undefined ? 0 : BALANCE_CHANGE_INDICATION_DURATION}
+        disableAnimations={overrideBalanceUSD !== undefined}
         loading={isLoading}
         loadingPlaceholderText="000000.00"
         shouldFadeDecimals={shouldFadePortfolioDecimals}
@@ -89,6 +118,11 @@ export const PortfolioBalance = memo(function _PortfolioBalance({
             variant="body3"
           />
         </Shine>
+        {chartPeriod !== undefined && (
+          <Text variant="body3" color="$neutral3" ml="$spacing4">
+            {periodToTimeLabel(t, chartPeriod).toLocaleLowerCase()}
+          </Text>
+        )}
         {endText}
       </Flex>
     </Flex>

@@ -8,6 +8,7 @@ import type {
 } from 'react-native'
 import {
   AnimatePresence,
+  ColorTokens,
   Flex,
   FlexProps,
   Input,
@@ -71,6 +72,8 @@ export type SearchTextInputProps = InputProps & {
   hideIcon?: boolean
   minHeight?: number
   cancelBehaviorType?: CancelBehaviorType
+  borderColor?: ColorTokens
+  borderWidth?: SpaceTokens
 }
 
 export const SearchTextInput = forwardRef<NativeTextInput, SearchTextInputProps>(
@@ -100,6 +103,8 @@ export const SearchTextInput = forwardRef<NativeTextInput, SearchTextInputProps>
       keyboardType = 'default',
       inputMode: inputModeProp,
       placeholderTextColor = '$neutral2',
+      borderColor = '$surface3',
+      borderWidth = '$spacing1',
     } = props
 
     const inputMode = inputModeProp ?? 'text'
@@ -163,7 +168,7 @@ export const SearchTextInput = forwardRef<NativeTextInput, SearchTextInputProps>
           animateOnly={animateOnly}
           animation="quick"
           backgroundColor={backgroundColor}
-          borderRadius="$roundedFull"
+          borderRadius="$rounded16"
           gap="$spacing8"
           minHeight={minHeight}
           ml={showBackChevron && isFocus ? cancelChevronWidth + spacing.spacing8 + spacing.spacing2 : 0}
@@ -171,6 +176,8 @@ export const SearchTextInput = forwardRef<NativeTextInput, SearchTextInputProps>
           my={my}
           px={px}
           py={py}
+          borderColor={borderColor}
+          borderWidth={borderWidth}
           {...(showShadow && SHADOW_PROPS)}
         >
           {!hideIcon && (

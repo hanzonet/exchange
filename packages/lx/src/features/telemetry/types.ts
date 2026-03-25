@@ -11,8 +11,8 @@ import {
   type IncreaseLPPositionRequest,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import { type Currency, type TradeType } from '@uniswap/sdk-core'
-import { type TradingApi, type UnitagClaimContext } from '@universe/api'
-import { type Experiments } from '@universe/gating'
+import { type TradingApi, type UnitagClaimContext } from '@luxexchange/api'
+import { type Experiments } from '@luxexchange/gating'
 import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
 import { type OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
 import { type UniverseChainId } from 'lx/src/features/chains/types'
@@ -394,8 +394,6 @@ export enum OnboardingCardLoggingName {
   RecoveryBackup = 'recovery_backup',
   ClaimUnitag = 'claim_unitag',
   EnablePushNotifications = 'enable_push_notifications',
-  BridgedAsset = 'bridged_asset',
-
   NoAppFeesAnnouncement = 'no_app_fees_announcement',
 
   Unknown = 'unknown',
@@ -958,6 +956,9 @@ export type UniverseEventProperties = {
     collection_address?: string
     token_id?: string
     link_type?: string
+    // Covering ElementName.DisconnectWalletButton
+    connector_id?: string
+    svm_connector_id?: string
   }
   [SharedEventName.PAGE_VIEWED]: ITraceContext
   [SharedEventName.ANALYTICS_SWITCH_TOGGLED]: {
@@ -1086,7 +1087,6 @@ export type UniverseEventProperties = {
   [SwapEventName.SwapTokensReversed]: undefined
   [LuxEventName.TooltipOpened]: ITraceContext & {
     tooltip_name: string
-    is_price_ux_enabled: boolean
   }
   [LuxEventName.DelegationDetected]: {
     chainId: number
@@ -1119,6 +1119,8 @@ export type UniverseEventProperties = {
         volume?: boolean
         price_chart?: boolean
         token_details?: boolean
+        performance?: boolean
+        performance_text?: string
         something_else?: boolean
       })
     | (TokenReportProperties & {

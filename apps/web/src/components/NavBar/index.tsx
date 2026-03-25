@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Flex, styled, Nav as GuiNav, useMedia } from 'ui/src'
 import { breakpoints, INTERFACE_NAV_HEIGHT, zIndexes } from 'ui/src/theme'
 import { useConnectionStatus } from 'lx/src/features/accounts/store/hooks'
@@ -75,7 +75,6 @@ export default function Navbar() {
           {!isEmbeddedWalletEnabled && isLandingPage && !isSmallScreen && <NewUserCTAButton />}
           {!isConnected && <PreferenceMenu />}
           {isTestnetModeEnabled && <TestnetModeTooltip />}
-          {isEmbeddedWalletEnabled && !isConnected && <NewUserCTAButton />}
           <Web3Status />
         </Right>
       </UnpositionedFlex>

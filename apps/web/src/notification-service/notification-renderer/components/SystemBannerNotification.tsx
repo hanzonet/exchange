@@ -1,5 +1,5 @@
-import type { InAppNotification } from '@universe/api'
-import { type NotificationClickTarget } from '@universe/notifications'
+import type { InAppNotification } from '@luxexchange/api'
+import { type NotificationClickTarget } from '@luxexchange/notifications'
 import { memo, useEffect, useMemo } from 'react'
 import { Flex, styled, Text, useSporeColors } from 'ui/src'
 import type { GeneratedIcon } from 'ui/src/components/factories/createIcon'

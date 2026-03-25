@@ -1,6 +1,6 @@
 import { Amount, PoolStats, TokenStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
 import { Percent } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { FeeData as CreatePositionFeeData } from '~/components/Liquidity/Create/types'
 
 type PricePoint = { timestamp: number; value: number }

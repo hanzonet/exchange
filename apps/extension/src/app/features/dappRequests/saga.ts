@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 import { type Provider } from '@ethersproject/providers'
 import { providerErrors, rpcErrors, serializeError } from '@metamask/rpc-errors'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { createSearchParams } from 'react-router'
 import { changeChain } from 'src/app/features/dapp/changeChain'
 import { type DappInfo, dappStore } from 'src/app/features/dapp/store'

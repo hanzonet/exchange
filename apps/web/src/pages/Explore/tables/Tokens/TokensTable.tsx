@@ -2,16 +2,18 @@
 
 import { ApolloError } from '@apollo/client'
 import { createColumnHelper } from '@tanstack/react-table'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ReactElement, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, useMedia } from 'ui/src'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain, toGraphQLChain } from 'lx/src/features/chains/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { fromGraphQLChain, toGraphQLChain } from 'uniswap/src/features/chains/utils'
+import { useTokenSpotPrice } from 'uniswap/src/features/dataApi/tokenDetails/useTokenSpotPriceWrapper'
+import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { ElementName } from 'uniswap/src/features/telemetry/constants'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { FiatNumberType, NumberType } from 'utilities/src/format/types'
 import { SparklineMap } from '~/appGraphql/data/types'
 import { getTokenDetailsURL, OrderDirection, unwrapToken } from '~/appGraphql/data/util'
@@ -19,7 +21,8 @@ import SparklineChart from '~/components/Charts/SparklineChart'
 import { DeltaArrow } from '~/components/DeltaArrow/DeltaArrow'
 import { Table } from '~/components/Table'
 import { Cell } from '~/components/Table/Cell'
-import { EllipsisText, HeaderCell, TableText } from '~/components/Table/styled'
+import { EllipsisText, TableText } from '~/components/Table/shared/TableText'
+import { HeaderCell } from '~/components/Table/styled'
 import { TokenSortMethod } from '~/components/Tokens/constants'
 import { useExploreTablesFilterStore } from '~/pages/Explore/exploreTablesFilterStore'
 import { TokenDescription } from '~/pages/Explore/tables/Tokens/TokenDescription'
@@ -30,8 +33,8 @@ import { getChainIdFromChainUrlParam } from '~/utils/chainParams'
 
 interface TokenTableValue {
   index: number
+  token: TokenStat
   tokenDescription: ReactElement
-  price: string
   percentChange1hr: ReactElement
   percentChange1d: ReactElement
   fdv: string
@@ -40,6 +43,18 @@ interface TokenTableValue {
   link: string
   /** Used for pre-loading TDP with logo to extract color from */
   linkState: { preloadedLogoSrc?: string }
+}
+
+function LivePriceCell({ token }: { token?: TokenStat }) {
+  const { convertFiatAmountFormatted } = useLocalizationContext()
+  const chainId = token ? fromGraphQLChain(token.chain) : undefined
+  const currencyId = chainId && token?.address ? buildCurrencyId(chainId, token.address) : undefined
+  const livePrice = useTokenSpotPrice(currencyId)
+
+  const price = livePrice ?? token?.price?.value
+  const formatted = price ? convertFiatAmountFormatted(price, NumberType.FiatTokenPrice) : '-'
+
+  return <TableText>{formatted}</TableText>
 }
 
 export function TokenTable({
@@ -58,6 +73,7 @@ export function TokenTable({
   loadMore?: ({ onComplete }: { onComplete?: () => void }) => void
 }) {
   const { t } = useTranslation()
+  const isMultichainTokenUx = useFeatureFlag(FeatureFlags.MultichainTokenUx)
   const { convertFiatAmountFormatted, formatPercent } = useLocalizationContext()
   const { defaultChainId } = useEnabledChains()
   const { sortMethod, sortAscending } = useTokenTableSortStore((s) => ({
@@ -88,8 +104,8 @@ export function TokenTable({
 
         return {
           index: tokenSortIndex,
+          token,
           tokenDescription: <TokenDescription token={unwrappedToken} />,
-          price: parseAmount(token.price?.value, NumberType.FiatTokenPrice),
           testId: `${TestID.TokenTableRowPrefix}${unwrappedToken.address}`,
           percentChange1hr: (
             <Flex row gap="$gap4" alignItems="center">
@@ -186,7 +202,7 @@ export function TokenTable({
           </Cell>
         ),
       }),
-      columnHelper.accessor((row) => row.price, {
+      columnHelper.accessor((row) => row.token, {
         id: 'price',
         maxSize: 140,
         header: () => (
@@ -198,12 +214,9 @@ export function TokenTable({
             />
           </HeaderCell>
         ),
-        cell: (price) => (
+        cell: (tokenCell) => (
           <Cell loading={showLoadingSkeleton} testId={TestID.PriceCell} justifyContent="flex-end">
-            <TableText>
-              {/* A simple 0 price indicates the price is not currently available from the api */}
-              {price.getValue?.()}
-            </TableText>
+            <LivePriceCell token={tokenCell.getValue?.()} />
           </Cell>
         ),
       }),
@@ -302,7 +315,7 @@ export function TokenTable({
       data={tokenTableValues}
       loading={loading}
       error={error}
-      v2={false}
+      v2={isMultichainTokenUx}
       loadMore={loadMore}
       maxWidth={1200}
       defaultPinnedColumns={['index', 'tokenDescription']}

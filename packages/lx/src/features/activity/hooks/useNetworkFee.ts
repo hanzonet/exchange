@@ -9,6 +9,7 @@ import { buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
 export function useNetworkFee(transactionDetails: TransactionDetails): {
   value: string
   amount: string
+  isLoading: boolean
 } {
   const formatter = useLocalizationContext()
 

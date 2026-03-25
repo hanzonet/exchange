@@ -1,5 +1,5 @@
-import { Token } from '@uniswap/sdk-core'
-import type { TokenIdentifier } from '@universe/prices'
+import { Ether, Token } from '@uniswap/sdk-core'
+import type { TokenIdentifier } from '@luxexchange/prices'
 import {
   createPriceKey,
   createPriceKeyFromToken,
@@ -9,7 +9,7 @@ import {
   normalizeToken,
   parsePriceKey,
   toSubscriptionParams,
-} from '@universe/prices'
+} from '@luxexchange/prices'
 import { describe, expect, it } from 'vitest'
 
 const WETH_ADDRESS = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
@@ -47,6 +47,15 @@ describe('tokenIdentifier utilities', () => {
       expect(result).toEqual({
         chainId: 1,
         address: WETH_ADDRESS.toLowerCase(),
+      })
+    })
+
+    it('normalizes native currency to zero address', () => {
+      const eth = Ether.onChain(1)
+      const result = normalizeToken(eth)
+      expect(result).toEqual({
+        chainId: 1,
+        address: '0x0000000000000000000000000000000000000000',
       })
     })
 

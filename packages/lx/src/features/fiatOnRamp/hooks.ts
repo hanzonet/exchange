@@ -1,7 +1,7 @@
 import { skipToken } from '@tanstack/react-query'
 import { Currency } from '@uniswap/sdk-core'
-import type { FORQuote, FORSupportedFiatCurrency, FORSupportedToken } from '@universe/api'
-import { RampDirection, TradingApi } from '@universe/api'
+import type { FORQuote, FORSupportedFiatCurrency, FORSupportedToken } from '@luxexchange/api'
+import { RampDirection, TradingApi } from '@luxexchange/api'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getCountry } from 'react-native-localize'
@@ -350,17 +350,13 @@ export function useIsSupportedFiatOnRampCurrency(
     countryCode: ipCountryData?.countryCode ?? fallbackCountryCode,
     skip,
   })
-  const {
-    list: supportedTokensList,
-    loading: supportedTokensLoading,
-    error: supportedTokensError,
-  } = useFiatOnRampSupportedTokens({
+  const { list: supportedTokensList, loading: supportedTokensLoading } = useFiatOnRampSupportedTokens({
     sourceCurrencyCode: meldSupportedFiatCurrency.code,
     countryCode: ipCountryData?.countryCode ?? fallbackCountryCode,
     skip,
   })
 
-  const isLoading = isCountryLoading || supportedTokensLoading || supportedTokensError
+  const isLoading = isCountryLoading || supportedTokensLoading
 
   if (isLoading) {
     return { currency: undefined, isLoading }

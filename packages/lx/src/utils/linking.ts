@@ -1,15 +1,15 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import * as WebBrowser from 'expo-web-browser'
 import { colorsLight } from 'ui/src/theme'
-import { NATIVE_TOKEN_PLACEHOLDER } from 'lx/src/constants/addresses'
-import { LUX_WEB_URL, luxUrls } from 'lx/src/constants/urls'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { toGraphQLChain, toLuxWebAppLink } from 'lx/src/features/chains/utils'
-import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from 'lx/src/features/search/utils'
-import { ServiceProviderInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { currencyIdToChain, currencyIdToGraphQLAddress, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { canOpenURL, openURL } from 'lx/src/utils/link'
+import { NATIVE_TOKEN_PLACEHOLDER } from 'uniswap/src/constants/addresses'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { toGraphQLChain, toUniswapWebAppLink } from 'uniswap/src/features/chains/utils'
+import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from 'uniswap/src/features/search/utils'
+import { ServiceProviderInfo } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { currencyIdToChain, currencyIdToGraphQLAddress, isNativeCurrencyAddress } from 'uniswap/src/utils/currencyId'
+import { canOpenURL, openURL } from 'uniswap/src/utils/link'
 import { logger } from 'utilities/src/logger/logger'
 
 const ALLOWED_EXTERNAL_URI_SCHEMES = ['http://', 'https://']
@@ -169,18 +169,15 @@ export function getExplorerLink({
 
 export function getNftExplorerLink({
   chainId,
-  fallbackChainId,
   contractAddress,
   tokenId,
 }: {
-  chainId?: UniverseChainId
-  fallbackChainId: UniverseChainId
+  chainId: UniverseChainId
   contractAddress: string
   tokenId: string
 }): string {
-  const targetChainId = chainId ?? fallbackChainId
   return getExplorerLink({
-    chainId: targetChainId,
+    chainId,
     data: `${contractAddress}/${tokenId}`,
     type: ExplorerDataType.NFT,
   })
@@ -265,12 +262,8 @@ export async function openOfframpPendingSupportLink(): Promise<void> {
   return openUri({ uri: luxUrls.helpArticleUrls.fiatOffRampHelp })
 }
 
-export function getProfileUrl(walletAddress: string): string {
-  return `${luxUrls.webInterfaceAddressUrl}/${walletAddress}`
-}
-
 export function getPortfolioUrl(walletAddress: string): string {
-  return `${LUX_WEB_URL}/portfolio/${walletAddress}`
+  return `${uniswapUrls.webInterfacePortfolioUrl}/${walletAddress}`
 }
 
 const UTM_TAGS_MOBILE = 'utm_medium=mobile&utm_source=share-tdp'

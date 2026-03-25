@@ -3,7 +3,7 @@ import {
   Metadata,
   Notification,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle } from '@universe/api'
+import { ContentStyle } from '@luxexchange/api'
 import {
   APP_RATING_NOTIFICATION_ID,
   createAppRatingTrigger,

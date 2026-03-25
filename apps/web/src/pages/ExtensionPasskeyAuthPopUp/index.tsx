@@ -101,7 +101,11 @@ export default function ExtensionPasskeyAuthPopUp() {
   }, [])
 
   const onPressSignIn = async () => {
-    if (signInAttemptStatus !== ReferrerVerification.Allowed || !passkeyRequestData) {
+    if (
+      signInAttemptStatus !== ReferrerVerification.Allowed ||
+      !passkeyRequestData ||
+      !passkeyRequestData.challengeJson
+    ) {
       logger.debug('ExtensionPasskeyAuthPopUp/index.tsx', 'onPressSignIn', 'Invalid state', {
         signInAttemptStatus,
         passkeyRequestData,
@@ -112,6 +116,9 @@ export default function ExtensionPasskeyAuthPopUp() {
     const chromeRuntime = getChromeRuntimeWithThrow()
 
     try {
+      if (!passkeyRequestData.challengeJson) {
+        return
+      }
       const credential = await authenticatePasskey(passkeyRequestData.challengeJson)
 
       if (!credential) {
@@ -201,7 +208,13 @@ export default function ExtensionPasskeyAuthPopUp() {
 
               <Flex row py="$spacing16">
                 <Button
-                  icon={signInAttemptStatus === ReferrerVerification.Verifying ? <SpinningLoader /> : <Passkey />}
+                  icon={
+                    signInAttemptStatus === ReferrerVerification.Verifying ? (
+                      <SpinningLoader />
+                    ) : (
+                      <Passkey color="$neutral1" />
+                    )
+                  }
                   size="large"
                   variant="branded"
                   onPress={onPressSignIn}

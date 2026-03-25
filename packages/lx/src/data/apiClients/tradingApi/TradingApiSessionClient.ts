@@ -1,9 +1,14 @@
-import { createFetchClient, createTradingApiClient, getEntryGatewayUrl, provideSessionService } from '@universe/api'
-import type { PlanEndpoints } from '@universe/api/src/clients/trading/createTradingApiClient'
-import { reinitializeSession } from '@universe/api/src/components/ApiInit'
-import { createWithSessionRetry } from '@universe/api/src/session/createWithSessionRetry'
-import { getConfig } from '@universe/config'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import {
+  createFetchClient,
+  createTradingApiClient,
+  createWithSessionRetry,
+  getEntryGatewayUrl,
+  provideSessionService,
+  reinitializeSession,
+} from '@luxexchange/api'
+import type { PlanEndpoints } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
+import { getConfig } from '@luxexchange/config'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { BASE_LUX_HEADERS } from 'lx/src/data/apiClients/createLuxFetchClient'
 import { getFeatureFlaggedHeaders } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
 import { logger } from 'utilities/src/logger/logger'

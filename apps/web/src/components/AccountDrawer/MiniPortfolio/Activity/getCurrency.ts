@@ -1,5 +1,5 @@
 import { Currency } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { COMMON_BASES } from 'lx/src/constants/routing'
 import { nativeOnChain } from 'lx/src/constants/tokens'
 import { toGraphQLChain } from 'lx/src/features/chains/utils'

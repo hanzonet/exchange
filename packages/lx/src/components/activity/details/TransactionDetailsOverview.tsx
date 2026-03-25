@@ -2,22 +2,22 @@ import dayjs from 'dayjs'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Separator, Text, TouchableArea } from 'ui/src'
-import { AnglesDownUp } from 'ui/src/components/icons/AnglesDownUp'
-import { SortVertical } from 'ui/src/components/icons/SortVertical'
-import { ResumePlanButton } from 'lx/src/components/activity/details/plan/ResumePlanButton'
-import { TransactionDetailsContent } from 'lx/src/components/activity/details/TransactionDetailsContent'
-import { TransactionDetailsHeader } from 'lx/src/components/activity/details/TransactionDetailsHeader'
-import { TransactionDetailsInfoRows } from 'lx/src/components/activity/details/TransactionDetailsInfoRows'
-import type { TransactionDetailsModalProps } from 'lx/src/components/activity/details/TransactionDetailsModal'
-import { OffRampPendingSupportCard } from 'lx/src/components/activity/details/transactions/OffRampPendingSupportCard'
-import { isOffRampSaleTransactionInfo, isUnknownTransactionInfo } from 'lx/src/components/activity/details/types'
-import { isNFTActivity } from 'lx/src/components/activity/utils'
-import { MenuOptionItem } from 'lx/src/components/menus/ContextMenu'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { useIsCancelable } from 'lx/src/features/transactions/hooks/useIsCancelable'
-import { useCanResumePlan } from 'lx/src/features/transactions/swap/plan/intermediaryState/useCanResumePlan'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
+import { ChevronsIn } from 'ui/src/components/icons/ChevronsIn'
+import { ChevronsOut } from 'ui/src/components/icons/ChevronsOut'
+import { ResumePlanButton } from 'uniswap/src/components/activity/details/plan/ResumePlanButton'
+import { TransactionDetailsContent } from 'uniswap/src/components/activity/details/TransactionDetailsContent'
+import { TransactionDetailsHeader } from 'uniswap/src/components/activity/details/TransactionDetailsHeader'
+import { TransactionDetailsInfoRows } from 'uniswap/src/components/activity/details/TransactionDetailsInfoRows'
+import type { TransactionDetailsModalProps } from 'uniswap/src/components/activity/details/TransactionDetailsModal'
+import { OffRampPendingSupportCard } from 'uniswap/src/components/activity/details/transactions/OffRampPendingSupportCard'
+import { isOffRampSaleTransactionInfo, isUnknownTransactionInfo } from 'uniswap/src/components/activity/details/types'
+import { isNFTActivity } from 'uniswap/src/components/activity/utils'
+import { MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
+import { AccountType } from 'uniswap/src/features/accounts/types'
+import { useIsCancelable } from 'uniswap/src/features/transactions/hooks/useIsCancelable'
+import { useCanResumePlan } from 'uniswap/src/features/transactions/swap/plan/intermediaryState/useCanResumePlan'
+import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { useWallet } from 'uniswap/src/features/wallet/hooks/useWallet'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export type TransactionDetailsOverviewProps = TransactionDetailsModalProps & {
@@ -139,9 +139,9 @@ function ShowMoreSeparator({
             {isShowingMore ? t('common.button.showLess') : t('common.button.showMore')}
           </Text>
           {isShowingMore ? (
-            <AnglesDownUp color="$neutral3" size="$icon.16" />
+            <ChevronsIn color="$neutral3" size="$icon.16" />
           ) : (
-            <SortVertical color="$neutral3" size="$icon.16" />
+            <ChevronsOut color="$neutral3" size="$icon.16" />
           )}
         </Flex>
       </TouchableArea>

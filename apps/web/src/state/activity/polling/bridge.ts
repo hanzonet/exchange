@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { useCallback, useEffect, useMemo } from 'react'
 import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'

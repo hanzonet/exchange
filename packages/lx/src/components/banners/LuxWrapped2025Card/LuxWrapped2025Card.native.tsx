@@ -27,7 +27,7 @@ export function LuxWrapped2025Card({ onPress }: LuxWrapped2025CardProps): JSX.El
         shadowColor="rgba(77, 10, 79, 0.43)"
         shadowOffset={{ width: 0, height: 6 }}
         shadowRadius={12}
-        borderWidth={1}
+        borderWidth="$spacing1"
         borderColor={darkColors.surface3.val}
         height={CARD_HEIGHT}
         p="$spacing20"

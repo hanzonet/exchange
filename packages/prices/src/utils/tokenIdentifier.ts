@@ -1,9 +1,9 @@
 import type { Currency, Token } from '@uniswap/sdk-core'
-import type { PriceKey, TokenIdentifier, TokenInput, TokenSubscriptionParams } from '@universe/prices'
+import type { PriceKey, TokenIdentifier, TokenInput, TokenSubscriptionParams } from '@luxexchange/prices'
 import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
 
 /** Address that represents native currencies on ETH, Arbitrum, etc. */
-const DEFAULT_NATIVE_ADDRESS_LEGACY = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
+const DEFAULT_NATIVE_ADDRESS = '0x0000000000000000000000000000000000000000'
 
 /**
  * Type guard to check if input is a Currency object (from @uniswap/sdk-core).
@@ -50,7 +50,7 @@ export function normalizeToken(token: TokenInput): TokenIdentifier {
   if (currency.isNative) {
     return {
       chainId: currency.chainId,
-      address: DEFAULT_NATIVE_ADDRESS_LEGACY,
+      address: DEFAULT_NATIVE_ADDRESS,
     }
   }
 

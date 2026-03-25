@@ -2,9 +2,10 @@ import { formatUnits } from 'ethers/lib/utils'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, SpinningLoader } from 'ui/src'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useResumePlanMutation } from 'lx/src/features/transactions/swap/plan/intermediaryState/useResumePlanMutation'
-import { PlanTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { useIsPriceChangeInterrupted } from 'uniswap/src/features/transactions/swap/plan/intermediaryState/useIsPriceChangeInterrupted'
+import { useResumePlanMutation } from 'uniswap/src/features/transactions/swap/plan/intermediaryState/useResumePlanMutation'
+import { PlanTransactionInfo } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export function ResumePlanButton({
@@ -16,6 +17,7 @@ export function ResumePlanButton({
 }): JSX.Element {
   const { planId, inputCurrencyId, outputCurrencyId, inputCurrencyAmountRaw } = typeInfo
   const { t } = useTranslation()
+  const isPriceChangeInterrupted = useIsPriceChangeInterrupted(planId)
 
   const inputCurrencyDecimals = useCurrencyInfo(typeInfo.inputCurrencyId)?.currency.decimals
   const inputCurrencyAmount = useMemo(() => {
@@ -53,7 +55,9 @@ export function ResumePlanButton({
       icon={isPending ? <SpinningLoader /> : undefined}
       onPress={onPress}
     >
-      {t('transaction.status.plan.completeSwap')}
+      {isPriceChangeInterrupted
+        ? t('transaction.status.plan.priceChange.viewNewPrice')
+        : t('transaction.status.plan.completeSwap')}
     </Button>
   )
 }

@@ -1,5 +1,5 @@
 import { TransactionRequest } from '@ethersproject/providers'
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 import { useEffect, useMemo } from 'react'
 import { PollingInterval } from 'lx/src/constants/misc'
 import { UniverseChainId } from 'lx/src/features/chains/types'

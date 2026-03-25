@@ -4,8 +4,8 @@ import {
   Notification,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { type ReactiveCondition } from '@universe/notifications'
+import { ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { type ReactiveCondition } from '@luxexchange/notifications'
 import { GlobalErrorEvent } from 'src/app/events/constants'
 import { globalEventEmitter } from 'src/app/events/global'
 import { logger } from 'utilities/src/logger/logger'

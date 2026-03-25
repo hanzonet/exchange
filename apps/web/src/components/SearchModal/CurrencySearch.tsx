@@ -1,15 +1,15 @@
 import { Currency } from '@uniswap/sdk-core'
 import { useCallback, useEffect } from 'react'
 import { Flex } from 'ui/src'
-import { TokenSelectorContent, TokenSelectorVariation } from 'lx/src/components/TokenSelector/TokenSelector'
-import { TokenSelectorFlow } from 'lx/src/components/TokenSelector/types'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { InterfaceEventName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { CurrencyField } from 'lx/src/types/currency'
-import { SwapTab } from 'lx/src/types/screens/interface'
+import { TokenSelectorContent } from 'uniswap/src/components/TokenSelector/TokenSelector'
+import { TokenSelectorFlow, TokenSelectorVariation } from 'uniswap/src/components/TokenSelector/types'
+import { useActiveAddresses } from 'uniswap/src/features/accounts/store/hooks'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { InterfaceEventName, ModalName } from 'uniswap/src/features/telemetry/constants'
+import Trace from 'uniswap/src/features/telemetry/Trace'
+import { CurrencyField } from 'uniswap/src/types/currency'
+import { SwapTab } from 'uniswap/src/types/screens/interface'
 import { usePrevious } from 'utilities/src/react/hooks'
 import { SwitchNetworkAction } from '~/components/Popups/types'
 import useSelectChain from '~/hooks/useSelectChain'
@@ -24,6 +24,7 @@ interface CurrencySearchProps {
   onDismiss: () => void
   chainIds?: UniverseChainId[]
   variation?: TokenSelectorVariation
+  flow?: TokenSelectorFlow
 }
 
 export function CurrencySearch({
@@ -33,6 +34,7 @@ export function CurrencySearch({
   onDismiss,
   chainIds,
   variation,
+  flow = TokenSelectorFlow.Swap,
 }: CurrencySearchProps) {
   const addresses = useActiveAddresses()
 
@@ -75,11 +77,10 @@ export function CurrencySearch({
         <TokenSelectorContent
           renderedInModal={false}
           addresses={addresses}
-          isLimits={currentTab === SwapTab.Limit}
           chainId={!isMultichainContext || isUserSelectedToken ? chainId : undefined}
           chainIds={chainIds ?? chains}
           currencyField={currencyField}
-          flow={TokenSelectorFlow.Swap}
+          flow={currentTab === SwapTab.Limit ? TokenSelectorFlow.Limit : flow}
           isSurfaceReady={true}
           variation={
             variation ??

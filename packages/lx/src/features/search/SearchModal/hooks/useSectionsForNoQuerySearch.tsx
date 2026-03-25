@@ -1,5 +1,5 @@
 import { ExploreStatsResponse, PoolStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
-import { ALL_NETWORKS_ARG, GqlResult } from '@universe/api'
+import { ALL_NETWORKS_ARG, GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { usePoolStatsToPoolOptions } from 'lx/src/components/lists/items/pools/usePoolStatsToPoolOptions'
 import { SearchModalOption } from 'lx/src/components/lists/items/types'
@@ -114,11 +114,6 @@ export function useSectionsForNoQuerySearch({
       case SearchTab.Wallets:
         return {
           data: [...(recentSearchSection ?? []), ...(favoriteWalletsSection ?? [])],
-          loading: false,
-        }
-      case SearchTab.NFTCollections:
-        return {
-          data: [...(recentSearchSection ?? [])],
           loading: false,
         }
       default:

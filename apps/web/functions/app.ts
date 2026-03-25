@@ -1,4 +1,5 @@
 import { poolImageHandler } from 'functions/api/image/pools'
+import { positionImageHandler } from 'functions/api/image/positions'
 import { tokenImageHandler } from 'functions/api/image/tokens'
 import { metaTagInjectionMiddleware } from 'functions/components/metaTagInjector'
 import { rewriteProxiedCookies } from 'functions/cookie-utils'
@@ -26,11 +27,12 @@ export const ENTRY_GATEWAY_URLS = {
 
 // Statsig proxy via Cloudflare gateway — the URL is constant for the web app
 // (platform prefix "interface", service prefix "gating")
-const STATSIG_PROXY_TARGET = 'https://gating.interface.gateway.lux.org'
+const STATSIG_PROXY_TARGET = 'https://gating.interface.gateway.uniswap.org'
+
 export const WEBSOCKET_URLS = {
-  development: 'https://websockets.backend-prod.api.lux.org',
-  staging: 'https://websockets.backend-prod.api.lux.org',
-  production: 'https://websockets.backend-prod.api.lux.org',
+  development: 'https://websockets.backend-staging.api.uniswap.org',
+  staging: 'https://websockets.backend-staging.api.uniswap.org',
+  production: 'https://websockets.backend-prod.api.uniswap.org',
 } as const
 
 // ── Cache-Control middleware for image routes ───────────────────────────
@@ -50,6 +52,8 @@ export function createApp({ fetchSpaHtml, getEntryGatewayUrl, getWebSocketUrl, g
   app.get('/api/image/tokens/:networkName/:tokenAddress', cacheControl(604800), tokenImageHandler)
 
   app.get('/api/image/pools/:networkName/:poolAddress', cacheControl(604800), poolImageHandler)
+
+  app.get('/api/image/positions/:version/:chainName/:identifier', cacheControl(604800), positionImageHandler)
 
   // ── BFF proxy: entry-gateway ─────────────────────────────────────────
   app.all('/entry-gateway/*', async (c) => {

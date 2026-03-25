@@ -1,5 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 // biome-ignore lint/style/noRestrictedImports: This import is needed for fetching portfolio value modifiers despite being restricted

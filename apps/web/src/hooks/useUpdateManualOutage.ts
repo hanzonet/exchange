@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useEffect } from 'react'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { useIsOffline } from 'utilities/src/connection/useIsOffline'

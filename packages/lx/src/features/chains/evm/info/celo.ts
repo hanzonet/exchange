@@ -1,9 +1,10 @@
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
 import { CELO_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
-import { getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { config } from 'uniswap/src/config'
+import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
+import { getQuicknodeEndpointUrl } from 'uniswap/src/features/chains/evm/rpc'
+import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
@@ -60,7 +61,7 @@ export const CELO_CHAIN_INFO = {
   statusPage: undefined,
   supportsV4: true,
   supportsNFTs: false,
-  urlParam: 'celo',
+  urlParam: CHAIN_ID_TO_URL_PARAM[UniverseChainId.Celo],
   rpcUrls: {
     [RPCType.Public]: { http: [getQuicknodeEndpointUrl(UniverseChainId.Celo)] },
     [RPCType.Default]: { http: [`https://forno.celo.org`] },

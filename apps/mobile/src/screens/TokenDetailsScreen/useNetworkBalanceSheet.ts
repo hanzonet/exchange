@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo, useState } from 'react'
 import { getNativeAddress } from 'lx/src/constants/addresses'
 import { useCrossChainBalances } from 'lx/src/data/balances/hooks/useCrossChainBalances'

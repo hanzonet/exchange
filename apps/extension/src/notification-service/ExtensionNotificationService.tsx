@@ -6,9 +6,9 @@ import {
   getEntryGatewayUrl,
   provideSessionService,
   SharedQueryClient,
-} from '@universe/api'
-import { SESSION_INIT_QUERY_KEY } from '@universe/api/src/components/ApiInit'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { SESSION_INIT_QUERY_KEY } from '@luxexchange/api/src/components/ApiInit'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -17,7 +17,7 @@ import {
   createReactiveDataSource,
   getNotificationQueryOptions,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import ms from 'ms'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { focusOrCreateLuxInterfaceTab, focusOrCreateUnitagTab } from 'src/app/navigation/utils'
@@ -68,7 +68,8 @@ function provideExtensionNotificationService(ctx: {
       return {
         'Content-Type': 'application/json',
         'x-request-source': REQUEST_SOURCE,
-        'x-lux-locale': backendLocale,
+        'x-uniswap-locale': backendLocale,
+        'x-app-version': (process.env.VERSION ?? '').split('.').slice(0, 3).join('.'),
       }
     },
     getSessionService: () =>

@@ -1,7 +1,7 @@
 import { CheckApprovalLPResponse } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import type { Currency } from '@uniswap/sdk-core'
 import { CurrencyAmount } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import type { PropsWithChildren } from 'react'
 import { createContext, useContext, useEffect, useMemo } from 'react'
 import { useSelector } from 'react-redux'

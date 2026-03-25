@@ -1,6 +1,6 @@
 import type { Currency } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { useCallback, useContext, useEffect, useMemo } from 'react'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { useCallback, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router'
@@ -37,7 +37,6 @@ import { noop } from 'utilities/src/react/noop'
 import { PrefetchBalancesWrapper } from '~/appGraphql/data/apollo/AdaptiveTokenBalancesProvider'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { SwapBottomCard } from '~/components/SwapBottomCard'
-import { SwitchLocaleLink } from '~/components/SwitchLocaleLink'
 import { PageWrapper } from '~/components/swap/styled'
 import { useAccount } from '~/hooks/useAccount'
 import { useDeferredComponent } from '~/hooks/useDeferredComponent'
@@ -46,7 +45,6 @@ import { useModalState } from '~/hooks/useModalState'
 import { ReturnToAuctionBanner } from '~/pages/Swap/ReturnToAuctionBanner'
 import { useResetOverrideOneClickSwapFlag } from '~/pages/Swap/settings/OneClickSwap'
 import { useWebSwapSettings } from '~/pages/Swap/settings/useWebSwapSettings'
-import { TDPContext } from '~/pages/TokenDetails/context/TDPContext'
 import { MultichainContextProvider } from '~/state/multichain/MultichainContext'
 import { useSwapHandlers } from '~/state/sagas/transactions/useSwapHandlers'
 import { useInitialCurrencyState } from '~/state/swap/hooks'
@@ -97,7 +95,6 @@ export default function SwapPage() {
         </WebFORNudgeProvider>
       </PageWrapper>
       <ReturnToAuctionBanner />
-      {location.pathname === '/swap' && <SwitchLocaleLink />}
     </Trace>
   )
 }
@@ -140,6 +137,7 @@ export function Swap({
   swapRedirectCallback,
   tokenColor,
   usePersistedFilteredChainIds = false,
+  tdpCurrency,
 }: {
   initialInputChainId?: UniverseChainId
   onCurrencyChange?: (selected: CurrencyState) => void
@@ -155,6 +153,8 @@ export function Swap({
   tokenColor?: string
   usePersistedFilteredChainIds?: boolean
   passkeyAuthStatus?: PasskeyAuthStatus
+  /** When Swap is embedded in Token Details Page, pass the TDP token currency for Buy/Sell prefill */
+  tdpCurrency?: Currency
 }) {
   const { isSwapTokenSelectorOpen, swapOutputChainId } = useLuxContext()
 
@@ -206,6 +206,7 @@ export function Swap({
                   onCurrencyChange={onCurrencyChange}
                   prefilledState={prefilledState}
                   tokenColor={tokenColor}
+                  tdpCurrency={tdpCurrency}
                 />
               </Flex>
             </SwapFormStoreContextProvider>
@@ -242,6 +243,7 @@ function UniversalSwapFlow({
   onCurrencyChange,
   swapRedirectCallback,
   tokenColor,
+  tdpCurrency,
 }: {
   hideHeader?: boolean
   hideFooter?: boolean
@@ -251,11 +253,11 @@ function UniversalSwapFlow({
   onCurrencyChange?: (selected: CurrencyState, isBridgePair?: boolean) => void
   swapRedirectCallback?: SwapRedirectFn
   tokenColor?: string
+  /** When Swap is embedded in TDP, the TDP token currency for Buy/Sell prefill */
+  tdpCurrency?: Currency
 }) {
   const { currentTab, setCurrentTab } = useSwapAndLimitContext()
-
-  // Get TDP currency if available (will be null if not in TDP context)
-  const tdpCurrency = currencyToAsset(useContext(TDPContext)?.currency)
+  const tdpCurrencyAsset = currencyToAsset(tdpCurrency)
 
   const { pathname } = useLocation()
   const navigate = useNavigate()
@@ -362,14 +364,14 @@ function UniversalSwapFlow({
         <BuyForm
           rampDirection={RampDirection.ON_RAMP}
           disabled={disableTokenInputs}
-          initialCurrency={tdpCurrency ?? prefilledState?.output}
+          initialCurrency={tdpCurrencyAsset ?? prefilledState?.output}
         />
       )}
       {currentTab === SwapTab.Sell && BuyForm && (
         <BuyForm
           rampDirection={RampDirection.OFF_RAMP}
           disabled={disableTokenInputs}
-          initialCurrency={tdpCurrency ?? prefilledState?.output}
+          initialCurrency={tdpCurrencyAsset ?? prefilledState?.output}
         />
       )}
     </Flex>

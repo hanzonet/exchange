@@ -1,14 +1,12 @@
 import { Accordion, Flex } from 'ui/src'
-import { SwapFormButton } from 'lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButton'
-import { ExpandableRows } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/ExpandableRows'
-import { SwapFormScreenFooter } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
-import { SwapFormWarningModals } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormWarningModals/SwapFormWarningModals'
-import { useSwapFormScreenStore } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenStore'
-import { SwapFormWarningStoreContextProvider } from 'lx/src/features/transactions/swap/form/stores/swapFormWarningStore/SwapFormWarningStoreContextProvider'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { SwapFormButton } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/SwapFormButton'
+import { ExpandableRows } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/ExpandableRows'
+import { SwapFormScreenFooter } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
+import { SwapFormWarningModals } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormWarningModals/SwapFormWarningModals'
+import { useSwapFormScreenStore } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenStore'
+import { SwapFormWarningStoreContextProvider } from 'uniswap/src/features/transactions/swap/form/stores/swapFormWarningStore/SwapFormWarningStoreContextProvider'
 
 export function SwapFormScreenDetails(): JSX.Element {
-  const isPriceUXEnabled = usePriceUXEnabled()
   const { tokenColor, showFooter } = useSwapFormScreenStore((state) => ({
     tokenColor: state.tokenColor,
     showFooter: state.showFooter,
@@ -32,7 +30,7 @@ export function SwapFormScreenDetails(): JSX.Element {
           </Flex>
           <SwapFormScreenFooter />
         </Flex>
-        {showFooter && !isPriceUXEnabled ? <ExpandableRows /> : null}
+        {showFooter ? <ExpandableRows /> : null}
       </Accordion.Item>
     </Accordion>
   )

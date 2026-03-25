@@ -65,6 +65,7 @@ export function toGraphQLChain(chainId: UniverseChainId): GqlChainId {
   return getChainInfo(chainId).backendChain.chain
 }
 
+// eslint-disable-next-line complexity
 export function fromGraphQLChain(chain: GraphQLApi.Chain | string | undefined): UniverseChainId | null {
   switch (chain) {
     case GraphQLApi.Chain.Ethereum:
@@ -105,23 +106,8 @@ export function fromGraphQLChain(chain: GraphQLApi.Chain | string | undefined): 
       return UniverseChainId.Zksync
     case GraphQLApi.Chain.Zora:
       return UniverseChainId.Zora
-    // Lux chains (custom, not in GraphQL API)
-    case 'LUXDEV':
-      return UniverseChainId.LuxDev
-    case 'LUX':
-      return UniverseChainId.Lux
-    case 'LUX_TESTNET':
-      return UniverseChainId.LuxTestnet
-    case 'ZOO':
-      return UniverseChainId.Zoo
-    case 'ZOO_TESTNET':
-      return UniverseChainId.ZooTestnet
-    case 'HANZO':
-      return UniverseChainId.Hanzo
-    case 'SPC':
-      return UniverseChainId.SPC
-    case 'PARS':
-      return UniverseChainId.Pars
+    case GraphQLApi.Chain.Tempo:
+      return UniverseChainId.Tempo
   }
 
   return null
@@ -131,7 +117,8 @@ export function getPollingIntervalByBlocktime(chainId?: UniverseChainId): Pollin
   return isMainnetChainId(chainId) ? PollingInterval.Fast : PollingInterval.LightningMcQueen
 }
 
-export function fromLuxWebAppLink(network: string | null): UniverseChainId {
+// eslint-disable-next-line complexity
+export function fromUniswapWebAppLink(network: string | null): UniverseChainId {
   switch (network) {
     case GraphQLApi.Chain.Ethereum.toLowerCase():
       return UniverseChainId.Mainnet
@@ -170,22 +157,8 @@ export function fromLuxWebAppLink(network: string | null): UniverseChainId {
       return UniverseChainId.Zksync
     case GraphQLApi.Chain.Zora.toLowerCase():
       return UniverseChainId.Zora
-    case 'lux':
-      return UniverseChainId.Lux
-    case 'lux_testnet':
-      return UniverseChainId.LuxTestnet
-    case 'lux_dev':
-      return UniverseChainId.LuxDev
-    case 'zoo':
-      return UniverseChainId.Zoo
-    case 'zoo_testnet':
-      return UniverseChainId.ZooTestnet
-    case 'hanzo':
-      return UniverseChainId.Hanzo
-    case 'spc':
-      return UniverseChainId.SPC
-    case 'pars':
-      return UniverseChainId.Pars
+    case GraphQLApi.Chain.Tempo.toLowerCase():
+      return UniverseChainId.Tempo
     default:
       throw new Error(`Network "${network}" can not be mapped`)
   }
@@ -229,22 +202,8 @@ export function toLuxWebAppLink(chainId: UniverseChainId): string | null {
       return GraphQLApi.Chain.Zksync.toLowerCase()
     case UniverseChainId.Zora:
       return GraphQLApi.Chain.Zora.toLowerCase()
-    case UniverseChainId.Lux:
-      return 'lux'
-    case UniverseChainId.LuxTestnet:
-      return 'lux_testnet'
-    case UniverseChainId.LuxDev:
-      return 'lux_dev'
-    case UniverseChainId.Zoo:
-      return 'zoo'
-    case UniverseChainId.ZooTestnet:
-      return 'zoo_testnet'
-    case UniverseChainId.Hanzo:
-      return 'hanzo'
-    case UniverseChainId.SPC:
-      return 'spc'
-    case UniverseChainId.Pars:
-      return 'pars'
+    case UniverseChainId.Tempo:
+      return GraphQLApi.Chain.Tempo.toLowerCase()
     default:
       throw new Error(`ChainID "${chainId}" can not be mapped`)
   }

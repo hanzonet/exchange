@@ -45,8 +45,7 @@ export function BestRouteTooltip(): JSX.Element | null {
       <Tooltip.Separator />
       {routingProvider.getDescription && (
         <Tooltip.Description
-          learnMoreUrl={luxUrls.helpArticleUrls.routingSettings}
-          learnMorePinkColor={false}
+          learnMoreUrl={uniswapUrls.helpArticleUrls.routingSettings}
           text={routingProvider.getDescription(t)}
         />
       )}
@@ -73,9 +72,8 @@ export function BestRouteDEXTooltip(): JSX.Element {
         </Tooltip.Row>
       </Tooltip.Content>
       <Tooltip.Description
-        learnMoreUrl={luxUrls.helpArticleUrls.dexInfo}
-        learnMorePinkColor={false}
-        text={t('routing.aggregateLiquidity.dex')}
+        learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo}
+        text={t('routing.aggregateLiquidity.uniswapx')}
       />
     </Tooltip.Outer>
   )

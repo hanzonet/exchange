@@ -4,8 +4,8 @@ import { Flex, styled, Text } from 'ui/src'
 import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
 import { TokenDetailsPoolsTable } from '~/pages/TokenDetails/components/activity/TokenDetailsPoolsTable'
 import { TransactionsTable } from '~/pages/TokenDetails/components/activity/TransactionsTable'
-import { useTDPContext } from '~/pages/TokenDetails/context/TDPContext'
-import { ClickableGuiStyle } from '~/theme/components/styles'
+import { useTDPStore } from '~/pages/TokenDetails/context/useTDPStore'
+import { ClickableTamaguiStyle } from '~/theme/components/styles'
 
 const Tab = styled(Text, {
   color: '$neutral1',
@@ -29,7 +29,10 @@ enum ActivityTab {
 
 export function ActivitySection() {
   const { t } = useTranslation()
-  const { currency: referenceCurrency, currencyChainId } = useTDPContext()
+  const { currency: referenceCurrency, currencyChainId } = useTDPStore((s) => ({
+    currency: s.currency!,
+    currencyChainId: s.currencyChainId,
+  }))
 
   const [activityInView, setActivityInView] = useState(ActivityTab.Txs)
 

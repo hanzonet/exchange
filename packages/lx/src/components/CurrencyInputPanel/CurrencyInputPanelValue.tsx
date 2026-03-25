@@ -3,23 +3,20 @@ import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Flex, Text, TextProps, TouchableArea } from 'ui/src'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { pushNotification } from 'lx/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
-import { useTokenAndFiatDisplayAmounts } from 'lx/src/features/transactions/hooks/useTokenAndFiatDisplayAmounts'
-import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import { CurrencyField } from 'lx/src/types/currency'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
+import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
+import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
+import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
+import { useTokenAndFiatDisplayAmounts } from 'uniswap/src/features/transactions/hooks/useTokenAndFiatDisplayAmounts'
+import { useUSDCPrice } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { CurrencyField } from 'uniswap/src/types/currency'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 interface CurrencyInputPanelValueProps {
   disabled: boolean
   value: string | undefined
   usdValue: Maybe<CurrencyAmount<Currency>>
-  priceDifferencePercentage?: number
   onPressDisabledWithShakeAnimation: () => void
   onToggleIsFiatMode: (currencyField: CurrencyField) => void
   currencyField: CurrencyField
@@ -33,7 +30,6 @@ export const CurrencyInputPanelValue = memo(function _CurrencyInputPanelValue({
   disabled,
   value,
   usdValue,
-  priceDifferencePercentage,
   onPressDisabledWithShakeAnimation,
   onToggleIsFiatMode,
   currencyField,
@@ -44,11 +40,7 @@ export const CurrencyInputPanelValue = memo(function _CurrencyInputPanelValue({
 }: CurrencyInputPanelValueProps): JSX.Element {
   const { t } = useTranslation()
   const dispatch = useDispatch()
-  const { formatPercent } = useLocalizationContext()
   const { isTestnetModeEnabled } = useEnabledChains()
-  const priceUXEnabled = usePriceUXEnabled()
-  const isOutput = currencyField === CurrencyField.OUTPUT
-  const showPriceDifference = isOutput && !!currencyInfo && !!currencyAmount
   const { price: usdPrice } = useUSDCPrice(currencyInfo?.currency)
   const { code: fiatCurrencyCode } = useAppFiatCurrencyInfo()
   const _onToggleIsFiatMode = useCallback(() => {
@@ -88,11 +80,6 @@ export const CurrencyInputPanelValue = memo(function _CurrencyInputPanelValue({
           >
             {inputPanelFormattedValue}
           </Text>
-          {priceUXEnabled && showPriceDifference && (
-            <Text color="$neutral3" variant={fiatValueVariant}>
-              ({formatPercent(priceDifferencePercentage)})
-            </Text>
-          )}
         </Flex>
       )}
     </TouchableArea>

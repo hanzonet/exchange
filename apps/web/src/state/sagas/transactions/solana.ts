@@ -1,5 +1,5 @@
 import { VersionedTransaction } from '@solana/web3.js'
-import { JupiterExecuteResponse, TradingApi } from '@universe/api'
+import { JupiterExecuteResponse, TradingApi } from '@luxexchange/api'
 import { call, delay, spawn } from 'typed-redux-saga'
 import { JupiterApiClient } from 'lx/src/data/apiClients/jupiterApi/JupiterFetchClient'
 import { UniverseChainId } from 'lx/src/features/chains/types'

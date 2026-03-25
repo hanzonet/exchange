@@ -1,5 +1,5 @@
 import 'utilities/src/logger/mocks'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import {
   cancelMultipleDEXOrders,

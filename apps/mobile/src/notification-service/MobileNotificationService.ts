@@ -6,8 +6,8 @@ import {
   getEntryGatewayUrl,
   provideSessionService,
   SharedQueryClient,
-} from '@universe/api'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -16,8 +16,9 @@ import {
   createReactiveDataSource,
   getNotificationQueryOptions,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import { Appearance } from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 import { MobileState } from 'src/app/mobileReducer'
 import { store } from 'src/app/store'
 import { createMobileStorageAdapter } from 'src/notification-service/createMobileStorageAdapter'
@@ -54,10 +55,14 @@ function provideMobileNotificationService(ctx: { getIsApiDataSourceEnabled: () =
       const locale = getLocale(currentLanguage)
       const backendLocale = mapLocaleToBackendLocale(locale)
 
+      const version = DeviceInfo.getVersion()
+      const semver = version.split('.').length === 2 ? `${version}.0` : version
+
       return {
         'Content-Type': 'application/json',
         'x-request-source': REQUEST_SOURCE,
-        'x-lux-locale': backendLocale,
+        'x-uniswap-locale': backendLocale,
+        'x-app-version': semver,
       }
     },
     getSessionService: () =>

@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "22.13.1",
-    "@typescript/native-preview": "7.0.0-dev.20260108.1",
+    "@typescript/native-preview": "7.0.0-dev.20260311.1",
     "@luxfi/eslint-config": "workspace:^",
     "depcheck": "1.4.7",
     "eslint": "8.57.1",
@@ -32,15 +32,15 @@
     "typescript": "5.8.3"
   },
   "scripts": {
-    "typecheck": "nx typecheck @universe/mycelium",
-    "typecheck:tsgo": "nx typecheck:tsgo @universe/mycelium",
-    "lint": "nx lint @universe/mycelium",
-    "lint:fix": "nx lint:fix @universe/mycelium",
-    "lint:biome": "nx lint:biome @universe/mycelium",
-    "lint:biome:fix": "nx lint:biome:fix @universe/mycelium",
-    "lint:eslint": "nx lint:eslint @universe/mycelium",
-    "lint:eslint:fix": "nx lint:eslint:fix @universe/mycelium",
-    "check:deps:usage": "nx check:deps:usage @universe/mycelium"
+    "typecheck": "nx typecheck @luxexchange/mycelium",
+    "typecheck:tsgo": "nx typecheck:tsgo @luxexchange/mycelium",
+    "lint": "nx lint @luxexchange/mycelium",
+    "lint:fix": "nx lint:fix @luxexchange/mycelium",
+    "lint:biome": "nx lint:biome @luxexchange/mycelium",
+    "lint:biome:fix": "nx lint:biome:fix @luxexchange/mycelium",
+    "lint:eslint": "nx lint:eslint @luxexchange/mycelium",
+    "lint:eslint:fix": "nx lint:eslint:fix @luxexchange/mycelium",
+    "check:deps:usage": "nx check:deps:usage @luxexchange/mycelium"
   },
   "nx": {
     "includedScripts": []

@@ -12,7 +12,7 @@ import {
   type WalletName,
   WalletReadyState,
 } from '@solana/wallet-adapter-base'
-import { useFeatureFlag } from '@universe/gating'
+import { useFeatureFlag } from '@luxexchange/gating'
 import { useWeb3React } from '@web3-react/core'
 import { config as loadEnv } from 'dotenv'
 import failOnConsole from 'jest-fail-on-console'
@@ -420,7 +420,7 @@ failOnConsole({
   },
 })
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

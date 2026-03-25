@@ -1,10 +1,10 @@
-import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
-import { Text } from 'ui/src'
-import { useConnectionStatus } from 'lx/src/features/accounts/store/hooks'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { CurrencyField } from 'lx/src/types/currency'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Text, type TextProps } from 'ui/src'
+import { useConnectionStatus } from 'uniswap/src/features/accounts/store/hooks'
+import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
+import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { CurrencyField } from 'uniswap/src/types/currency'
+import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
 import { NumberType } from 'utilities/src/format/types'
 
 interface CurrencyInputBalanceProps {
@@ -13,6 +13,7 @@ interface CurrencyInputBalanceProps {
   showInsufficientBalanceWarning: boolean
   currencyField: CurrencyField
   hideBalance: boolean
+  variant?: TextProps['variant']
 }
 export function CurrencyInputPanelBalance({
   currencyBalance,
@@ -20,6 +21,7 @@ export function CurrencyInputPanelBalance({
   currencyField,
   showInsufficientBalanceWarning,
   hideBalance,
+  variant = 'body3',
 }: CurrencyInputBalanceProps): JSX.Element | null {
   const { formatCurrencyAmount } = useLocalizationContext()
   const { isDisconnected } = useConnectionStatus()
@@ -32,7 +34,7 @@ export function CurrencyInputPanelBalance({
     return null
   }
   return (
-    <Text color={showInsufficientBalanceWarning ? '$statusCritical' : '$neutral2'} variant="body3">
+    <Text color={showInsufficientBalanceWarning ? '$statusCritical' : '$neutral2'} variant={variant}>
       {formatCurrencyAmount({
         value: currencyBalance,
         type: NumberType.TokenTx,

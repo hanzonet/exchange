@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import { provideLuxIdentifierService } from '@universe/api'
-import { luxIdentifierQuery } from '@universe/sessions'
+import { provideLuxIdentifierService } from '@luxexchange/api'
+import { luxIdentifierQuery } from '@luxexchange/sessions'
 import { useEffect, useMemo } from 'react'
 import { NativeModules, useWindowDimensions } from 'react-native'
 import { OneSignal } from 'react-native-onesignal'

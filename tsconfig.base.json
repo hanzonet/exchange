@@ -37,22 +37,22 @@
     "types": ["node"],
     "useUnknownInCatchVariables": true,
     "paths": {
-      "@universe/api/*": ["./packages/api/*"],
-      "@universe/cli/*": ["./apps/cli/*"],
-      "@universe/config/*": ["./packages/config/*"],
-      "@universe/gating/*": ["./packages/gating/*"],
-      "@universe/notifications/*": ["./packages/notifications/*"],
-      "@universe/sessions/*": ["./packages/sessions/*"],
-      "@universe/hashcash-native": ["./packages/hashcash-native/src/index.ts"],
-      "@universe/hashcash-native/*": ["./packages/hashcash-native/*"],
+      "@luxexchange/api/*": ["./packages/api/*"],
+      "@luxexchange/cli/*": ["./apps/cli/*"],
+      "@luxexchange/config/*": ["./packages/config/*"],
+      "@luxexchange/gating/*": ["./packages/gating/*"],
+      "@luxexchange/notifications/*": ["./packages/notifications/*"],
+      "@luxexchange/sessions/*": ["./packages/sessions/*"],
+      "@luxexchange/hashcash-native": ["./packages/hashcash-native/src/index.ts"],
+      "@luxexchange/hashcash-native/*": ["./packages/hashcash-native/*"],
       "ui/*": ["./packages/ui/*"],
       "lx/*": ["./packages/lx/*"],
       "utilities/*": ["./packages/utilities/*"],
       "wallet/*": ["./packages/wallet/*"],
-      "@universe/transactional/*": ["./packages/transactional/*"],
-      "@universe/mycelium/*": ["./packages/mycelium/*"],
-      "@universe/websocket/*": ["./packages/websocket/*"],
-      "@universe/prices/*": ["./packages/prices/*"],
+      "@luxexchange/transactional/*": ["./packages/transactional/*"],
+      "@luxexchange/mycelium/*": ["./packages/mycelium/*"],
+      "@luxexchange/websocket/*": ["./packages/websocket/*"],
+      "@luxexchange/prices/*": ["./packages/prices/*"],
       "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb": [
         "./node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb",
         "./packages/api/stubs/privy-service-pb"
@@ -60,7 +60,12 @@
       "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_connect": [
         "./node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_connect",
         "./packages/api/stubs/privy-service-connect"
-      ]
+      ],
+      "@luxexchange/privacy/*": ["./packages/privacy/*"],
+      "@luxexchange/logger/*": ["./packages/logger/*"],
+      "@luxexchange/react-query/*": ["./packages/react-query/*"],
+      "@luxexchange/analytics/*": ["./packages/analytics/*"],
+      "@luxexchange/trpc/*": ["./packages/trpc/*"]
     }
   }
 }

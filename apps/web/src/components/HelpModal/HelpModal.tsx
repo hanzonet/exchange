@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import { Flex, Popover, TouchableArea, useMedia } from 'ui/src'
+import { Flex, Popover, Theme, TouchableArea, useMedia, useSporeColors } from 'ui/src'
 import { QuestionInCircleFilled } from 'ui/src/components/icons/QuestionInCircleFilled'
 import { zIndexes } from 'ui/src/theme'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { useSelectedColorScheme } from 'uniswap/src/features/appearance/hooks'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { HelpContent } from '~/components/HelpModal/HelpContent'
 import { ClickableGuiStyle } from '~/theme/components/styles'
 
 export function HelpModal({ showOnXL = false }: { showOnXL?: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const media = useMedia()
+  const colors = useSporeColors()
+  const colorScheme = useSelectedColorScheme()
   const isTabletWidth = media.xl && !media.sm
 
   return (
@@ -39,8 +42,8 @@ export function HelpModal({ showOnXL = false }: { showOnXL?: boolean }) {
         onOpenChange={(open) => setIsOpen(open)}
       >
         <Popover.Trigger>
-          <TouchableArea hoverable {...ClickableGuiStyle}>
-            <QuestionInCircleFilled size={20} data-testid={TestID.HelpIcon} />
+          <TouchableArea hoverable {...ClickableTamaguiStyle}>
+            <QuestionInCircleFilled size={20} color={colors.neutral1.get()} data-testid={TestID.HelpIcon} />
           </TouchableArea>
         </Popover.Trigger>
         <Popover.Content
@@ -53,7 +56,9 @@ export function HelpModal({ showOnXL = false }: { showOnXL?: boolean }) {
           $xl={{ ml: 0, mt: '$spacing20' }}
           $sm={{ ml: '$spacing12' }}
         >
-          <HelpContent onClose={() => setIsOpen(false)} />
+          <Theme name={colorScheme}>
+            <HelpContent onClose={() => setIsOpen(false)} />
+          </Theme>
         </Popover.Content>
       </Popover>
     </Flex>

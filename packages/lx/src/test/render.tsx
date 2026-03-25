@@ -33,7 +33,6 @@ export const mockLuxContext = {
   navigateToTokenDetails: createMockFn(),
   navigateToExternalProfile: createMockFn(),
   navigateToNftDetails: createMockFn(),
-  navigateToNftCollection: createMockFn(),
   navigateToPoolDetails: createMockFn(),
   handleShareToken: createMockFn(),
   navigateToAdvancedSettings: createMockFn(),

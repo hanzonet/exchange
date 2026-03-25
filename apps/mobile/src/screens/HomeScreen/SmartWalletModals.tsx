@@ -1,5 +1,5 @@
 import { useIsFocused } from '@react-navigation/native'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useMemo, useState } from 'react'
 import { Video } from 'react-native-video'
 import { useDispatch, useSelector } from 'react-redux'

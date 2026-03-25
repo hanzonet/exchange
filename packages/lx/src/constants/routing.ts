@@ -34,6 +34,7 @@ import {
   LZOO_LUX,
   nativeOnChain,
   OP,
+  PATHUSD_TEMPO,
   PORTAL_ETH_CELO,
   SADA_LUX,
   SAI_LUX,
@@ -64,6 +65,7 @@ import {
   USDC_BASE,
   USDC_BSC,
   USDC_CELO,
+  USDC_E_TEMPO,
   USDC_MAINNET,
   USDC_MONAD,
   USDC_OPTIMISM,
@@ -192,12 +194,11 @@ export const COMMON_BASES: ChainCurrencyList = {
     USDC_SONEIUM,
   ].map(buildPartialCurrencyInfo),
 
-  [UniverseChainId.XLayer]: [
-    nativeOnChain(UniverseChainId.XLayer),
-    WRAPPED_NATIVE_CURRENCY[UniverseChainId.XLayer] as Token,
-    USDC_XLAYER,
-    USDT0_XLAYER,
-  ].map(buildPartialCurrencyInfo),
+  [UniverseChainId.Tempo]: [PATHUSD_TEMPO, USDC_E_TEMPO].map(buildPartialCurrencyInfo),
+
+  [UniverseChainId.XLayer]: [WRAPPED_NATIVE_CURRENCY[UniverseChainId.XLayer] as Token, USDC_XLAYER, USDT0_XLAYER].map(
+    buildPartialCurrencyInfo,
+  ),
 
   [UniverseChainId.Solana]: [nativeOnChain(UniverseChainId.Solana), USDC_SOLANA].map(buildPartialCurrencyInfo),
 

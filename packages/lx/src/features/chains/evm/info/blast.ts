@@ -1,7 +1,8 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { BLAST_LOGO, ETH_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
+import { config } from 'uniswap/src/config'
+import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
 import {
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   DEFAULT_RETRY_OPTIONS,
@@ -57,7 +58,7 @@ export const BLAST_CHAIN_INFO = {
   statusPage: undefined,
   supportsV4: true,
   supportsNFTs: true,
-  urlParam: 'blast',
+  urlParam: CHAIN_ID_TO_URL_PARAM[UniverseChainId.Blast],
   nativeCurrency: {
     name: 'Blast ETH',
     symbol: 'ETH',

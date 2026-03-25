@@ -1,5 +1,5 @@
-import { GraphQLApi } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useEffect, useMemo, useReducer } from 'react'
 import { Helmet } from 'react-helmet-async/lib/index'
 import { useTranslation } from 'react-i18next'
@@ -293,8 +293,18 @@ export default function PoolDetailsPage() {
                     loading={loading}
                   />
                 )}
-                <PoolDetailsLink address={token0?.address} chainId={chainInfo.id} tokens={[token0]} loading={loading} />
-                <PoolDetailsLink address={token1?.address} chainId={chainInfo.id} tokens={[token1]} loading={loading} />
+                <PoolDetailsLink
+                  address={poolData?.token0.address}
+                  chainId={chainInfo.id}
+                  tokens={[poolData?.token0]}
+                  loading={loading}
+                />
+                <PoolDetailsLink
+                  address={poolData?.token1.address}
+                  chainId={chainInfo.id}
+                  tokens={[poolData?.token1]}
+                  loading={loading}
+                />
               </LinksContainer>
             </TokenDetailsWrapper>
           </Flex>

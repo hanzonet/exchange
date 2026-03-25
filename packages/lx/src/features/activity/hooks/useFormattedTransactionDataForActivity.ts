@@ -2,7 +2,7 @@ import { NetworkStatus, QueryHookOptions } from '@apollo/client'
 import { PartialMessage } from '@bufbuild/protobuf'
 import { FiatOnRampParams } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { TransactionTypeFilter } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import isEqual from 'lodash/isEqual'
 import { useCallback, useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -145,9 +145,14 @@ export function useFormattedTransactionDataForActivity({
   const hasTransactions = transactions && transactions.length > 0
   const hasData = Boolean(formattedTransactions?.length)
 
-  // show loading if no data and fetching, or refetching when there is error (for UX when "retry" is clicked).
+  // show loading if:
+  // 1. Query has never completed and not intentionally skipped — this is synchronously true from render 1
+  // when there is no cached data, ensuring skeletons appear immediately on mount.
+  // 2. No data and loading (redundant when condition 1 is true, but kept as a safety net)
+  // 3. Error with a retry in progress (for UX when "retry" is clicked)
+  // 4. Explicitly showing loading on refetch
   const showLoading =
-    (!hasData && loading) ||
+    (!hasData && (loading || (!skip && networkStatus === NetworkStatus.loading))) ||
     (Boolean(error) && networkStatus === NetworkStatus.loading) ||
     (showLoadingOnRefetch && isFetching && !isFetchingNextPage)
 

@@ -6,19 +6,18 @@ import { ArrowUpRight } from 'ui/src/components/icons/ArrowUpRight'
 import { MoreHorizontal } from 'ui/src/components/icons/MoreHorizontal'
 import { zIndexes } from 'ui/src/theme'
 import { iconSizes } from 'ui/src/theme/iconSizes'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { ContextMenu } from 'lx/src/components/menus/ContextMenu'
-import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
-import { NftView, NftViewProps } from 'lx/src/components/nfts/NftView'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { useNFTContextMenuItems } from 'lx/src/features/nfts/hooks/useNftContextMenuItems'
-import { getNFTAssetKey } from 'lx/src/features/nfts/utils'
-import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { getNftExplorerLink, getOpenseaLink, openUri } from 'lx/src/utils/linking'
+import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
+import { ContextMenu } from 'uniswap/src/components/menus/ContextMenu'
+import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
+import { NftView, NftViewProps } from 'uniswap/src/components/nfts/NftView'
+import { useActiveAddresses } from 'uniswap/src/features/accounts/store/hooks'
+import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
+import { useNFTContextMenuItems } from 'uniswap/src/features/nfts/hooks/useNftContextMenuItems'
+import { getNFTAssetKey } from 'uniswap/src/features/nfts/utils'
+import { ElementName, SectionName } from 'uniswap/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { getNftExplorerLink, getOpenseaLink, openUri } from 'uniswap/src/utils/linking'
 import { isMobileWeb } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
 import { GroupHoverTransition } from '~/components/GroupHoverTransition'
@@ -54,7 +53,6 @@ function _NFTCard(props: NftCardProps): JSX.Element {
   const { t } = useTranslation()
   const { isExternalWallet } = usePortfolioAddresses()
   const activeAddresses = useActiveAddresses()
-  const { defaultChainId } = useEnabledChains()
 
   const nftUniqueId = useMemo(
     () => getNFTAssetKey(props.item.contractAddress ?? '', props.item.tokenId ?? ''),
@@ -121,13 +119,12 @@ function _NFTCard(props: NftCardProps): JSX.Element {
     if (!openseaUrl && chainId && props.item.contractAddress && props.item.tokenId) {
       return getNftExplorerLink({
         chainId,
-        fallbackChainId: defaultChainId,
         contractAddress: props.item.contractAddress,
         tokenId: props.item.tokenId,
       })
     }
     return null
-  }, [openseaUrl, chainId, props.item.contractAddress, props.item.tokenId, defaultChainId])
+  }, [openseaUrl, chainId, props.item.contractAddress, props.item.tokenId])
 
   const onCopySuccess = useCallback(() => {
     popupRegistry.addPopup(

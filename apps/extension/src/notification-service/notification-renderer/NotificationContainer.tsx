@@ -1,6 +1,6 @@
-import { ContentStyle, type InAppNotification } from '@universe/api'
-import { type NotificationClickTarget } from '@universe/notifications'
-import { InlineBannerNotification } from '@universe/notifications/src/notification-renderer/components/InlineBannerNotification'
+import { ContentStyle, type InAppNotification } from '@luxexchange/api'
+import { type NotificationClickTarget } from '@luxexchange/notifications'
+import { InlineBannerNotification } from '@luxexchange/notifications/src/notification-renderer/components/InlineBannerNotification'
 import { memo, useEffect, useMemo } from 'react'
 import { isStorageWarningNotification } from 'src/notification-service/data-sources/reactive/storageWarningCondition'
 import {

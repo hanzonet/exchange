@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { Trans } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'

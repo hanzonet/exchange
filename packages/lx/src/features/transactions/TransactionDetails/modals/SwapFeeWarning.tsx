@@ -3,12 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { Text, TouchableArea, useSporeColors } from 'ui/src'
 import { AlertCircleFilled } from 'ui/src/components/icons/AlertCircleFilled'
 import { zIndexes } from 'ui/src/theme'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningInfo } from 'lx/src/components/modals/WarningModal/WarningInfo'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import { openUri } from 'lx/src/utils/linking'
+import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
+import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { openUri } from 'uniswap/src/utils/linking'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function SwapFeeWarning({
@@ -16,8 +15,7 @@ export function SwapFeeWarning({
   noFeeOnThisSwap,
   children,
   isJupiter,
-}: PropsWithChildren<{ noLuxInterfaceFees: boolean; noFeeOnThisSwap: boolean; isJupiter: boolean }>): JSX.Element {
-  const priceUXEnabled = usePriceUXEnabled()
+}: PropsWithChildren<{ noUniswapInterfaceFees: boolean; noFeeOnThisSwap: boolean; isJupiter: boolean }>): JSX.Element {
   const colors = useSporeColors()
   const { t } = useTranslation()
 
@@ -28,19 +26,17 @@ export function SwapFeeWarning({
   const caption =
     noLuxInterfaceFees && !isJupiter
       ? t('swap.warning.noInterfaceFees.message')
-      : priceUXEnabled
-        ? t('fee.lux.description')
-        : noFeeOnThisSwap
-          ? t('swap.warning.luxFee.message.default')
-          : isJupiter
-            ? t('swap.fees.jupiter.message')
-            : t('swap.warning.luxFee.message.included')
+      : noFeeOnThisSwap
+        ? t('swap.warning.uniswapFee.message.default')
+        : isJupiter
+          ? t('swap.fees.jupiter.message')
+          : t('swap.warning.uniswapFee.message.included')
 
   return (
     <WarningInfo
       infoButton={
         <TouchableArea onPress={onPressLearnMore}>
-          <Text color="$accent1" variant={isWebPlatform ? (priceUXEnabled ? 'buttonLabel4' : 'body4') : 'buttonLabel2'}>
+          <Text color="$neutral1" variant={isWebPlatform ? 'body4' : 'buttonLabel2'}>
             {t('common.button.learn')}
           </Text>
         </TouchableArea>

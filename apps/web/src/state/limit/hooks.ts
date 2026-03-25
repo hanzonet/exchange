@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, Price, TradeType } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import JSBI from 'jsbi'
 import { useEffect, useMemo, useState } from 'react'
 import { nativeOnChain } from 'lx/src/constants/tokens'

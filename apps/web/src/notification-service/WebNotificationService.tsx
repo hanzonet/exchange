@@ -7,8 +7,8 @@ import {
   provideSessionService,
   SESSION_INIT_QUERY_KEY,
   SharedQueryClient,
-} from '@universe/api'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -17,7 +17,7 @@ import {
   getNotificationQueryOptions,
   type NotificationDataSource,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import ms from 'ms'
 import { useEffect, useMemo, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router'
@@ -68,7 +68,8 @@ function provideWebNotificationService(ctx: {
       return {
         'Content-Type': 'application/json',
         'x-request-source': REQUEST_SOURCE,
-        'x-lux-locale': backendLocale,
+        'x-uniswap-locale': backendLocale,
+        'x-app-version': process.env.REACT_APP_VERSION_TAG ?? '',
       }
     },
     getSessionService: () =>
@@ -206,8 +207,8 @@ export function WebNotificationServiceManager(): JSX.Element | null {
   const isDarkMode = useIsDarkMode()
 
   // Hook values that need to be passed to system alerts data source
-  const { swapInputChainId } = useLuxContext()
-  const blockTimestamp = useCurrentBlockTimestamp({ refetchInterval: ms('5min') })
+  const { swapInputChainId } = useUniswapContext()
+  const blockTimestamp = useCurrentBlockTimestamp({ refetchInterval: ms('5min'), chainId: swapInputChainId })
   const machineTime = useMachineTimeMs(AVERAGE_L1_BLOCK_TIME_MS)
 
   // Store latest values in refs so getter functions always return current values

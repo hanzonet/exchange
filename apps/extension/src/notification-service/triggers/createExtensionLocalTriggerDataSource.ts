@@ -1,9 +1,9 @@
 import {
   createLocalTriggerDataSource,
   type TriggerCondition,
-} from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
-import { type NotificationDataSource } from '@universe/notifications/src/notification-data-source/NotificationDataSource'
-import { type NotificationTracker } from '@universe/notifications/src/notification-tracker/NotificationTracker'
+} from '@luxexchange/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
+import { type NotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/NotificationDataSource'
+import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
 import { createAppRatingTrigger } from 'src/notification-service/triggers/appRatingTrigger'
 import { type ExtensionState } from 'src/store/extensionReducer'
 import { setAppRating } from 'wallet/src/features/wallet/slice'

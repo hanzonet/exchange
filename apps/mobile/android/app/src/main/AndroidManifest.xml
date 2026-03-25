@@ -97,8 +97,8 @@
 
         <data
           android:scheme="https"
-          android:host="app.lux.exchange"
-          android:pathPrefix="/address/" />
+          android:host="app.uniswap.org"
+          android:pathPrefix="/portfolio/" />
 
         <data
           android:scheme="https"

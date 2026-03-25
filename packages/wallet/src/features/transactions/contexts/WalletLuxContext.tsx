@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ethers } from 'ethers'
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react'
 import { LuxProvider } from 'lx/src/contexts/LuxContext'
@@ -78,7 +78,6 @@ function WalletLuxProviderInner({ children }: PropsWithChildren): JSX.Element {
     navigateToReceive,
     navigateToExternalProfile,
     navigateToPoolDetails,
-    navigateToNftCollection,
     handleShareToken,
     navigateToAdvancedSettings,
   } = useWalletNavigation()
@@ -131,7 +130,6 @@ function WalletLuxProviderInner({ children }: PropsWithChildren): JSX.Element {
       navigateToTokenDetails={navigateToTokenDetails}
       navigateToExternalProfile={navigateToExternalProfile}
       navigateToNftDetails={navigateToNftDetails}
-      navigateToNftCollection={navigateToNftCollection}
       navigateToPoolDetails={navigateToPoolDetails}
       handleShareToken={handleShareToken}
       navigateToAdvancedSettings={navigateToAdvancedSettings}

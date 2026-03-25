@@ -1,15 +1,15 @@
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     getFeatureFlag: vi.fn(),
-    getExperimentValue: vi.fn(),
+    getExperimentValueFromLayer: vi.fn(),
   }
 })
 
-vi.mock('@universe/config', async () => {
-  const { getConfig } = await vi.importActual<typeof import('@universe/config/src/getConfig.web')>(
-    '@universe/config/src/getConfig.web',
+vi.mock('@luxexchange/config', async () => {
+  const { getConfig } = await vi.importActual<typeof import('@luxexchange/config/src/getConfig.web')>(
+    '@luxexchange/config/src/getConfig.web',
   )
   return {
     getConfig,
@@ -19,15 +19,15 @@ vi.mock('@universe/config', async () => {
 const mockFetch = vi.fn()
 global.fetch = mockFetch
 
-import { TradingApi } from '@universe/api'
-import { TRADING_API_PATHS } from '@universe/api/src/clients/trading/createTradingApiClient'
+import { TradingApi } from '@luxexchange/api'
+import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
-  EthAsErc20DEXProperties,
-  Experiments,
+  EthAsErc20UniswapXProperties,
   FeatureFlags,
-  getExperimentValue,
+  getExperimentValueFromLayer,
   getFeatureFlag,
-} from '@universe/gating'
+  Layers,
+} from '@luxexchange/gating'
 import {
   checkWalletDelegation,
   getFeatureFlaggedHeaders,
@@ -491,12 +491,14 @@ describe('checkWalletDelegation', () => {
 
 describe('getFeatureFlaggedHeaders', () => {
   const mockGetFeatureFlag = getFeatureFlag as MockedFunction<typeof getFeatureFlag>
-  const mockGetExperimentValue = getExperimentValue as MockedFunction<typeof getExperimentValue>
+  const mockGetExperimentValueFromLayer = getExperimentValueFromLayer as MockedFunction<
+    typeof getExperimentValueFromLayer
+  >
 
   beforeEach(() => {
     vi.clearAllMocks()
     mockGetFeatureFlag.mockReturnValue(false)
-    mockGetExperimentValue.mockReturnValue(false)
+    mockGetExperimentValueFromLayer.mockReturnValue(false)
   })
 
   getAllTradingApiPaths().forEach((path) => {
@@ -528,15 +530,14 @@ describe('getFeatureFlaggedHeaders', () => {
     })
 
     it(`Endpoint: ${path} should/should not include Erc20EthEnabled header when experiment is enabled`, () => {
-      mockGetExperimentValue.mockImplementation(({ experiment, param }: { experiment: string; param: string }) => {
-        if (
-          experiment === Experiments.EthAsErc20DEX &&
-          param === EthAsErc20DEXProperties.EthAsErc20DEXEnabled
-        ) {
-          return true
-        }
-        return false
-      })
+      mockGetExperimentValueFromLayer.mockImplementation(
+        ({ layerName, param }: { layerName: string; param: string }) => {
+          if (layerName === Layers.SwapPage && param === EthAsErc20UniswapXProperties.EthAsErc20UniswapXEnabled) {
+            return true
+          }
+          return false
+        },
+      )
       const headers = getFeatureFlaggedHeaders(path)
       switch (path) {
         case TRADING_API_PATHS.quote:

@@ -1,5 +1,5 @@
 import { useQueries } from '@tanstack/react-query'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'lx/src/features/chains/types'

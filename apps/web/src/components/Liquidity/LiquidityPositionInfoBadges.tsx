@@ -1,5 +1,5 @@
 import { ProtocolVersion as RestProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, styled, Text, Tooltip } from 'ui/src'
@@ -138,10 +138,14 @@ export function LiquidityPositionInfoBadges({
             {icon}
             {copyable ? (
               <CopyHelper toCopy={label} iconSize={12} iconPosition="right">
-                {displayLabel}
+                <Text variant={size === 'small' ? 'body4' : 'body3'} color="$neutral2">
+                  {displayLabel}
+                </Text>
               </CopyHelper>
             ) : (
-              displayLabel
+              <Text variant={size === 'small' ? 'body4' : 'body3'} color={badge.onPress ? '$neutral1' : '$neutral2'}>
+                {displayLabel}
+              </Text>
             )}
             {iconAfter}
           </PositionInfoBadge>

@@ -2,9 +2,10 @@ import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
 import { AVALANCHE_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { config } from 'uniswap/src/config'
+import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'uniswap/src/features/chains/evm/rpc'
+import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
@@ -70,7 +71,7 @@ export const AVALANCHE_CHAIN_INFO = {
   statusPage: undefined,
   supportsV4: true,
   supportsNFTs: true,
-  urlParam: 'avalanche',
+  urlParam: CHAIN_ID_TO_URL_PARAM[UniverseChainId.Avalanche],
   wrappedNativeCurrency: {
     name: 'Wrapped AVAX',
     symbol: 'WAVAX',

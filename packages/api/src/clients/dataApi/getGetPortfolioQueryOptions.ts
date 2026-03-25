@@ -1,8 +1,8 @@
 import { type PartialMessage } from '@bufbuild/protobuf'
 import { queryOptions } from '@tanstack/react-query'
 import type { GetPortfolioRequest, GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { type DataApiServiceClient } from '@universe/api/src/clients/dataApi/createDataApiServiceClient'
-import { transformInput, type WithoutWalletAccount } from '@universe/api/src/connectRpc/utils'
+import { type DataApiServiceClient } from '@luxexchange/api/src/clients/dataApi/createDataApiServiceClient'
+import { transformInput, type WithoutWalletAccount } from '@luxexchange/api/src/connectRpc/utils'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 
@@ -51,9 +51,13 @@ export function getGetPortfolioQueryOptions(
 ): QueryOptionsResult<GetPortfolioResponse | undefined, Error, GetPortfolioResponse | undefined, GetPortfolioQueryKey> {
   const transformedInput = transformInput(input)
 
-  const { modifier: _modifier, walletAccount: _walletAccount, ...queryCacheInputs } = transformedInput ?? {}
+  const { modifier, walletAccount: _walletAccount, ...queryCacheInputs } = transformedInput ?? {}
 
-  const queryCacheInputsSorted = sortQueryCacheInputs(queryCacheInputs)
+  const queryCacheInputsSorted = sortQueryCacheInputs({
+    ...queryCacheInputs,
+    includeSmallBalances: modifier?.includeSmallBalances,
+    includeSpamTokens: modifier?.includeSpamTokens,
+  })
 
   const addressKey = {
     ...(input?.evmAddress && { evmAddress: input.evmAddress }),

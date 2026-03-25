@@ -1,11 +1,11 @@
 /* eslint-disable max-lines */
-import { getEntryGatewayUrl, provideSessionService } from '@universe/api'
+import { getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
 import {
   ChallengeType,
   createHashcashSolver,
   createHashcashWorkerChannel,
   type SessionService,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { memo, useCallback, useEffect, useRef } from 'react'
 import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { type LogEntry, useSessionsDebugStore } from 'src/app/features/settings/stores/sessionsDebugStore'
@@ -366,7 +366,7 @@ export function SessionsDebugScreen(): JSX.Element {
           createHashcashWorkerChannel({
             getWorker: () =>
               new Worker(
-                new URL('@universe/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
+                new URL('@luxexchange/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
                 { type: 'module' },
               ),
           }),

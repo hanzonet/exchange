@@ -3,11 +3,12 @@ import { loadDevMessages, loadErrorMessages } from '@apollo/client/dev'
 import { DdRum, RumActionType } from '@datadog/mobile-react-native'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { PerformanceProfiler, type RenderPassReport } from '@shopify/react-native-performance'
-import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@universe/api'
+import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
 import {
   DatadogSessionSampleRateKey,
   DynamicConfigs,
   Experiments,
+  FeatureFlags,
   getDynamicConfigValue,
   getIsHashcashSolverEnabled,
   getIsSessionServiceEnabled,
@@ -18,9 +19,10 @@ import {
   StatsigCustomAppValue,
   type StatsigUser,
   Storage,
+  useFeatureFlag,
   useIsSessionServiceEnabled,
   WALLET_FEATURE_FLAG_NAMES,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import {
   type ChallengeSolver,
   ChallengeType,
@@ -31,7 +33,7 @@ import {
   createSessionInitializationService,
   createTurnstileMockSolver,
   type SessionInitializationService,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { MMKVWrapper } from 'apollo3-cache-persist'
 import { default as React, StrictMode, useCallback, useEffect, useMemo, useRef } from 'react'
 import { I18nextProvider } from 'react-i18next'
@@ -80,29 +82,29 @@ import { SystemBannerPortalProvider } from 'src/notification-service/notificatio
 import { initDynamicIntlPolyfills } from 'src/polyfills/intl-delayed'
 import { useDatadogUserAttributesTracking } from 'src/screens/HomeScreen/useDatadogUserAttributesTracking'
 import { useAppStateTrigger } from 'src/utils/useAppStateTrigger'
-import { flexStyles, useIsDarkMode } from 'ui/src'
-import { TestnetModeBanner } from 'lx/src/components/banners/TestnetModeBanner'
-import { BlankUrlProvider } from 'lx/src/contexts/UrlContext'
-import { initializePortfolioQueryOverrides } from 'lx/src/data/rest/portfolioBalanceOverrides'
-import { useCurrentAppearanceSetting } from 'lx/src/features/appearance/hooks'
-import { selectFavoriteTokens } from 'lx/src/features/favorites/selectors'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { StatsigProviderWrapper } from 'lx/src/features/gating/StatsigProviderWrapper'
-import { useCurrentLanguageInfo } from 'lx/src/features/language/hooks'
-import { LocalizationContextProvider } from 'lx/src/features/language/LocalizationContext'
-import { clearNotificationQueue } from 'lx/src/features/notifications/slice/slice'
-import { TokenPriceProvider } from 'lx/src/features/prices/TokenPriceContext'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import Trace from 'lx/src/features/telemetry/Trace'
-import i18n from 'lx/src/i18n'
-import { type CurrencyId } from 'lx/src/types/currency'
+import { flexStyles, ImageSettingsProvider, useIsDarkMode } from 'ui/src'
+import { TestnetModeBanner } from 'uniswap/src/components/banners/TestnetModeBanner'
+import { BlankUrlProvider } from 'uniswap/src/contexts/UrlContext'
+import { initializePortfolioQueryOverrides } from 'uniswap/src/data/rest/portfolioBalanceOverrides'
+import { useCurrentAppearanceSetting } from 'uniswap/src/features/appearance/hooks'
+import { selectFavoriteTokens } from 'uniswap/src/features/favorites/selectors'
+import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
+import { StatsigProviderWrapper } from 'uniswap/src/features/gating/StatsigProviderWrapper'
+import { useCurrentLanguageInfo } from 'uniswap/src/features/language/hooks'
+import { LocalizationContextProvider } from 'uniswap/src/features/language/LocalizationContext'
+import { clearNotificationQueue } from 'uniswap/src/features/notifications/slice/slice'
+import { TokenPriceProvider } from 'uniswap/src/features/prices/TokenPriceContext'
+import { MobileEventName } from 'uniswap/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import Trace from 'uniswap/src/features/telemetry/Trace'
+import i18n from 'uniswap/src/i18n'
+import { type CurrencyId } from 'uniswap/src/types/currency'
 import { datadogEnabledBuild } from 'utilities/src/environment/constants'
 import { isTestEnv } from 'utilities/src/environment/env'
 import { registerConsoleOverrides } from 'utilities/src/logger/console'
 import { attachUnhandledRejectionHandler, setAttributesToDatadog } from 'utilities/src/logger/datadog/Datadog'
 import { DDRumAction, DDRumTiming } from 'utilities/src/logger/datadog/datadogEvents'
-import { logger } from 'utilities/src/logger/logger'
+import { getLogger, logger } from 'utilities/src/logger/logger'
 import { isIOS } from 'utilities/src/platform'
 import { AnalyticsNavigationContextProvider } from 'utilities/src/telemetry/trace/AnalyticsNavigationContext'
 import { ErrorBoundary } from 'wallet/src/components/ErrorBoundary/ErrorBoundary'
@@ -178,6 +180,7 @@ const provideSessionInitializationService = (): SessionInitializationService => 
       createHashcashSolver({
         performanceTracker,
         getWorkerChannel: () => createHashcashWorkerChannel(),
+        getLogger,
       }),
     )
   } else {
@@ -189,12 +192,15 @@ const provideSessionInitializationService = (): SessionInitializationService => 
       provideSessionService({
         getBaseUrl: getEntryGatewayUrl,
         getIsSessionServiceEnabled,
+        getLogger,
       }),
     challengeSolverService: createChallengeSolverService({
       solvers,
+      getLogger,
     }),
     performanceTracker,
     getIsSessionUpgradeAutoEnabled,
+    getLogger,
   })
 }
 
@@ -291,6 +297,8 @@ function AppOuter(): JSX.Element | null {
     sendAnalyticsEvent(MobileEventName.PerformanceReport, report)
   }, [])
 
+  const enableExpoImage = useFeatureFlag(FeatureFlags.ExpoImage)
+
   useEffect(() => {
     for (const [_, flagKey] of WALLET_FEATURE_FLAG_NAMES.entries()) {
       DdRum.addFeatureFlagEvaluation(
@@ -327,30 +335,32 @@ function AppOuter(): JSX.Element | null {
         <ErrorBoundaryWrapper>
           <BlankUrlProvider>
             <LocalizationContextProvider>
-              <GestureHandlerRootView style={flexStyles.fill}>
-                <WalletContextProvider>
-                  <NavigationContainer>
-                    <MobileWalletNavigationProvider>
-                      <NativeWalletProvider>
-                        <TokenPriceProvider>
-                          <WalletLuxProvider>
-                            <AccountsStoreContextProvider>
-                              <DataUpdaters />
-                              <BottomSheetModalProvider>
-                                <AppModals />
-                                <PerformanceProfiler onReportPrepared={onReportPrepared}>
-                                  <AppInner />
-                                </PerformanceProfiler>
-                              </BottomSheetModalProvider>
-                              <NotificationToastWrapper />
-                            </AccountsStoreContextProvider>
-                          </WalletLuxProvider>
-                        </TokenPriceProvider>
-                      </NativeWalletProvider>
-                    </MobileWalletNavigationProvider>
-                  </NavigationContainer>
-                </WalletContextProvider>
-              </GestureHandlerRootView>
+              <ImageSettingsProvider enableExpoImage={enableExpoImage}>
+                <GestureHandlerRootView style={flexStyles.fill}>
+                  <WalletContextProvider>
+                    <NavigationContainer>
+                      <MobileWalletNavigationProvider>
+                        <NativeWalletProvider>
+                          <TokenPriceProvider>
+                            <WalletUniswapProvider>
+                              <AccountsStoreContextProvider>
+                                <DataUpdaters />
+                                <BottomSheetModalProvider>
+                                  <AppModals />
+                                  <PerformanceProfiler onReportPrepared={onReportPrepared}>
+                                    <AppInner />
+                                  </PerformanceProfiler>
+                                </BottomSheetModalProvider>
+                                <NotificationToastWrapper />
+                              </AccountsStoreContextProvider>
+                            </WalletUniswapProvider>
+                          </TokenPriceProvider>
+                        </NativeWalletProvider>
+                      </MobileWalletNavigationProvider>
+                    </NavigationContainer>
+                  </WalletContextProvider>
+                </GestureHandlerRootView>
+              </ImageSettingsProvider>
             </LocalizationContextProvider>
           </BlankUrlProvider>
         </ErrorBoundaryWrapper>

@@ -1,23 +1,24 @@
 import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import type { TFunction } from 'i18next'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import type { ParsedWarnings, Warning } from 'lx/src/components/modals/WarningModal/types'
-import { WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { hasSufficientFundsIncludingGas } from 'lx/src/features/gas/utils'
-import { useOnChainCurrencyBalance, useOnChainNativeCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useFormattedWarnings } from 'lx/src/features/transactions/hooks/useParsedTransactionWarnings'
-import type { TransactionAndPlanStep } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { tradingApiToUniverseChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import type { ParsedWarnings, Warning } from 'uniswap/src/components/modals/WarningModal/types'
+import { WarningAction, WarningLabel, WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
+import { useActiveAddress } from 'uniswap/src/features/accounts/store/hooks'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { getChainLabel } from 'uniswap/src/features/chains/utils'
+import { useChainGasToken } from 'uniswap/src/features/gas/hooks/useChainGasToken'
+import { hasSufficientGasBalance } from 'uniswap/src/features/gas/utils'
+import { useOnChainCurrencyBalance } from 'uniswap/src/features/portfolio/api'
+import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
+import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { useFormattedWarnings } from 'uniswap/src/features/transactions/hooks/useParsedTransactionWarnings'
+import type { TransactionAndPlanStep } from 'uniswap/src/features/transactions/swap/plan/planStepTransformer'
+import { activePlanStore } from 'uniswap/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { tradingApiToUniverseChainId } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { isWebPlatform } from 'utilities/src/platform'
 import { useStore } from 'zustand'
 
@@ -96,36 +97,42 @@ function getGasWarning({
   totalGasFee,
   balanceConsumingStep,
   currency,
-  nativeBalance,
+  gasBalance,
+  chainId,
+  gasToken,
   t,
 }: {
   totalGasFee: string
   balanceConsumingStep: TransactionAndPlanStep | undefined
   currency: Currency | undefined
-  nativeBalance: CurrencyAmount<Currency>
+  gasBalance: CurrencyAmount<Currency>
+  chainId: UniverseChainId
+  gasToken: Currency
   t: TFunction
 }): Warning | undefined {
   if (totalGasFee === '0') {
     return undefined
   }
 
-  // If the balance-consuming step spends native currency, include that in the total native spend
-  const nativeAmountIn =
-    currency?.isNative && balanceConsumingStep?.tokenInAmount
-      ? getCurrencyAmount({ value: balanceConsumingStep.tokenInAmount, valueType: ValueType.Raw, currency })
+  // Include transaction amount when the input currency IS the gas token
+  const gasTokenTransactionAmount =
+    currency?.equals(gasToken) && balanceConsumingStep?.tokenInAmount
+      ? (getCurrencyAmount({ value: balanceConsumingStep.tokenInAmount, valueType: ValueType.Raw, currency }) ??
+        undefined)
       : undefined
 
-  const hasGasFunds = hasSufficientFundsIncludingGas({
-    transactionAmount: nativeAmountIn ?? undefined,
+  const hasGasFunds = hasSufficientGasBalance({
+    chainId,
+    gasBalance,
     gasFee: totalGasFee,
-    nativeCurrencyBalance: nativeBalance,
+    gasTokenTransactionAmount,
   })
 
   if (hasGasFunds) {
     return undefined
   }
 
-  const currencySymbol = nativeBalance.currency.symbol ?? ''
+  const currencySymbol = gasBalance.currency.symbol ?? ''
   return {
     type: WarningLabel.InsufficientGasFunds,
     severity: WarningSeverity.Medium,
@@ -133,7 +140,7 @@ function getGasWarning({
     title: t('swap.warning.insufficientGas.title', { currencySymbol }),
     buttonText: isWebPlatform ? t('swap.warning.insufficientGas.button', { currencySymbol }) : undefined,
     message: undefined,
-    currency: nativeBalance.currency,
+    currency: gasBalance.currency,
   }
 }
 
@@ -194,7 +201,7 @@ export function useParsedActivePlanWarnings(): ParsedWarnings {
   const accountAddress = useActiveAddress(chainIdForHooks)
 
   const { balance: tokenInBalance } = useOnChainCurrencyBalance(currency, accountAddress)
-  const { balance: nativeBalance } = useOnChainNativeCurrencyBalance(chainIdForHooks, accountAddress)
+  const { gasToken, gasBalance } = useChainGasToken({ chainId: chainIdForHooks, accountAddress })
 
   const warnings: Warning[] = useMemo(() => {
     if (!currentStep || remainingStepsOnCurrentChain.length === 0 || isSubmitting) {
@@ -202,16 +209,27 @@ export function useParsedActivePlanWarnings(): ParsedWarnings {
     }
 
     const result: Warning[] = []
+    let hasBalanceWarning = false
 
     if (balanceConsumingStep && currency && tokenInBalance) {
       const balanceWarningResult = getBalanceWarning({ balanceConsumingStep, currency, tokenInBalance, t })
       if (balanceWarningResult) {
         result.push(balanceWarningResult)
+        hasBalanceWarning = true
       }
     }
 
-    if (nativeBalance) {
-      const gasWarningResult = getGasWarning({ totalGasFee, balanceConsumingStep, currency, nativeBalance, t })
+    // Skip gas warning if balance is already insufficient — the balance warning is sufficient
+    if (gasBalance && !hasBalanceWarning) {
+      const gasWarningResult = getGasWarning({
+        totalGasFee,
+        balanceConsumingStep,
+        currency,
+        gasBalance,
+        chainId: chainIdForHooks,
+        gasToken,
+        t,
+      })
       if (gasWarningResult) {
         result.push(gasWarningResult)
       }
@@ -224,7 +242,9 @@ export function useParsedActivePlanWarnings(): ParsedWarnings {
     balanceConsumingStep,
     currency,
     tokenInBalance,
-    nativeBalance,
+    gasBalance,
+    gasToken,
+    chainIdForHooks,
     totalGasFee,
     isSubmitting,
     t,

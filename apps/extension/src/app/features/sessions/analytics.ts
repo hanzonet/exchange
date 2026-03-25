@@ -1,4 +1,4 @@
-import type { HashcashSolveAnalytics, SessionInitAnalytics } from '@universe/sessions'
+import type { HashcashSolveAnalytics, SessionInitAnalytics } from '@luxexchange/sessions'
 import { SessionsEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 

@@ -3,15 +3,38 @@ import {
   getCloudflareApiBaseUrl,
   getMigratedForApiUrl,
   helpUrl,
+  PROD_ENTRY_GATEWAY_API_BASE_URL,
+  STAGING_ENTRY_GATEWAY_API_BASE_URL,
   TrafficFlows,
-} from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
-import { config } from 'lx/src/config'
-import { isDevEnv, isPlaywrightEnv } from 'utilities/src/environment/env'
+} from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
+import { config } from 'uniswap/src/config'
+import { isBetaEnv, isDevEnv, isPlaywrightEnv } from 'utilities/src/environment/env'
 import { isWebApp } from 'utilities/src/platform'
 
-export const LUX_WEB_HOSTNAME = 'lux.exchange'
-const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : LUX_WEB_HOSTNAME
+function getComplianceApiBaseUrl(): string {
+  if (isPlaywrightEnv()) {
+    return PROD_ENTRY_GATEWAY_API_BASE_URL
+  }
+  // Dev and staging both use the staging compliance backend
+  if (isDevEnv() || isBetaEnv()) {
+    return STAGING_ENTRY_GATEWAY_API_BASE_URL
+  }
+  return PROD_ENTRY_GATEWAY_API_BASE_URL
+}
+
+export const UNISWAP_WEB_HOSTNAME = 'app.uniswap.org'
+const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : UNISWAP_WEB_HOSTNAME
+
+function getPrivyEmbeddedWalletUrl(): string {
+  if (isDevEnv()) {
+    return 'https://privy-embedded-wallet.backend-dev.api.uniswap.org'
+  }
+  if (isBetaEnv()) {
+    return 'https://privy-embedded-wallet.backend-staging.api.uniswap.org'
+  }
+  return 'https://privy-embedded-wallet.backend-prod.api.uniswap.org'
+}
 
 /**
  * Returns the FOR API URL based on the ForUrlMigration feature flag.
@@ -120,6 +143,7 @@ export const luxUrls = {
     routingSettings: createHelpArticleUrl('27362707722637'),
     luxVersionsInfo: createHelpArticleUrl('7425482965517-Lux-v2-v3-and-v4'),
     v4HooksInfo: createHelpArticleUrl('30998263256717'),
+    allowlistedHooks: createHelpArticleUrl('41305283155597'),
     subgraphDowntime: createHelpArticleUrl('23952001935373-Subgraph-downtime'),
     walletSecurityMeasures: createHelpArticleUrl('28278904584077-Lux-Wallet-Security-Measures'),
     whatIsPrivateKey: createHelpArticleUrl('11306371824653-What-is-a-private-key'),
@@ -155,6 +179,7 @@ export const luxUrls = {
   // Core API Urls
   apiOrigin: 'https://api.lux.org',
   apiBaseUrl: config.apiBaseUrlOverride || getCloudflareApiBaseUrl(),
+  complianceApiBaseUrl: getComplianceApiBaseUrl(),
   apiBaseUrlV2: config.apiBaseUrlV2Override || getCloudflareApiBaseUrl({ postfix: 'v2' }),
   dataApiBaseUrlV2:
     config.apiBaseUrlV2Override || getCloudflareApiBaseUrl({ flow: TrafficFlows.DataApi, postfix: 'v2' }),
@@ -191,10 +216,9 @@ export const luxUrls = {
   evervaultProductionUrl: 'https://embedded-wallet.app-907329d19a06.enclave.evervault.com',
   embeddedWalletUrl: `https://${EMBEDDED_WALLET_HOSTNAME}`,
   passkeysManagementUrl: `https://${EMBEDDED_WALLET_HOSTNAME}/manage/passkey`,
-  privyEmbeddedWalletUrl: 'https://privy-embedded-wallet.backend-dev.api.lux.org',
+  privyEmbeddedWalletUrl: getPrivyEmbeddedWalletUrl(),
 
   // API Paths
-  trmPath: '/v1/screen',
   gasServicePath: '/v1/gas-fee',
   tradingApiPaths: {
     approval: `${tradingApiVersionPrefix}/check_approval`,
@@ -232,13 +256,11 @@ export const luxUrls = {
   requestOriginUrl: LUX_WEB_URL,
 
   // Web Interface Urls
-  webInterfaceSwapUrl: `${LUX_WEB_URL}/#/swap`,
-  webInterfaceTokensUrl: `${LUX_WEB_URL}/explore/tokens`,
-  webInterfacePoolsUrl: `${LUX_WEB_URL}/explore/pools`,
-  webInterfaceAddressUrl: `${LUX_WEB_URL}/address`,
-  webInterfaceNftItemUrl: `${LUX_WEB_URL}/nfts/asset`,
-  webInterfaceNftCollectionUrl: `${LUX_WEB_URL}/nfts/collection`,
-  webInterfaceBuyUrl: `${LUX_WEB_URL}/buy`,
+  webInterfaceSwapUrl: `${UNISWAP_WEB_URL}/#/swap`,
+  webInterfaceTokensUrl: `${UNISWAP_WEB_URL}/explore/tokens`,
+  webInterfacePoolsUrl: `${UNISWAP_WEB_URL}/explore/pools`,
+  webInterfacePortfolioUrl: `${UNISWAP_WEB_URL}/portfolio`,
+  webInterfaceBuyUrl: `${UNISWAP_WEB_URL}/buy`,
 
   // Feedback Links
   walletFeedbackForm:

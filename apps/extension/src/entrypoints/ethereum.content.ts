@@ -1,4 +1,5 @@
 import { addWindowMessageListener } from 'src/background/messagePassing/messageUtils'
+import { isSandboxedFrame } from 'src/contentScript/isSandboxedFrame'
 import {
   ETH_PROVIDER_CONFIG,
   isValidContentScriptToProxyEmission,
@@ -23,8 +24,13 @@ function makeEthereum(): void {
   if (typeof window === 'undefined') {
     return
   }
-  // TODO(xtine): Get this working by importing the svg file directly. The svg text comes from packages/ui/src/assets/icons/lux-logo.svg
-  const LUX_LOGO = `data:image/svg+xml,${encodeURIComponent(`<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  // Do not inject the provider into sandboxed frames without allow-same-origin.
+  if (isSandboxedFrame()) {
+    return
+  }
+  // TODO(xtine): Get this working by importing the svg file directly. The svg text comes from packages/ui/src/assets/icons/uniswap-logo.svg
+  const UNISWAP_LOGO = `data:image/svg+xml,${encodeURIComponent(`<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="96" height="96" rx="18" fill="#FEF4FF"/>
 <g filter="url(#filter0_d_12393_20043)">
 <path d="M71.9367 18.39C72.0482 16.4526 72.3145 15.1746 72.8497 14.0075C73.0616 13.5456 73.2601 13.1675 73.2907 13.1675C73.3214 13.1675 73.2293 13.5085 73.086 13.9252C72.6969 15.0578 72.633 16.607 72.901 18.4094C73.2413 20.6963 73.4348 21.0263 75.8841 23.4967C77.0329 24.6554 78.3692 26.1168 78.8536 26.7443L79.7343 27.8851L78.8536 27.0698C77.7764 26.0728 75.2992 24.1283 74.7521 23.8503C74.3852 23.6639 74.3306 23.6671 74.1043 23.8894C73.8958 24.0943 73.8519 24.4021 73.8229 25.8572C73.7778 28.125 73.4646 29.5807 72.7087 31.0362C72.2998 31.8234 72.2354 31.6554 72.6053 30.7668C72.8816 30.1034 72.9096 29.8117 72.9076 27.6163C72.9033 23.2052 72.3727 22.1447 69.2607 20.3281C68.4724 19.8678 67.1734 19.2041 66.3742 18.8531C65.575 18.502 64.9401 18.1962 64.9633 18.1734C65.0514 18.0868 68.0863 18.961 69.3077 19.4247C71.1247 20.1145 71.4247 20.2039 71.6454 20.1207C71.7933 20.0649 71.8648 19.6398 71.9367 18.39Z" fill="#F50DB4"/>

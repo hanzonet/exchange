@@ -1,16 +1,15 @@
 import type { TransactionRequest } from '@ethersproject/providers'
-import type { FetchClient } from '@universe/api/src/clients/base/types'
+import type { FetchClient } from '@luxexchange/api/src/clients/base/types'
 import {
   type GasFeeResponse,
   type GasFeeResultWithoutState,
   type GasStrategy,
-} from '@universe/api/src/clients/trading/types'
+} from '@luxexchange/api/src/clients/trading/types'
 import { isWebApp } from 'utilities/src/platform'
 
 // TODO(app-infra), de-duplicate with luxUrls when other consumers are migrated to use this client
 const LUX_API_PATHS = {
   gasFee: '/v1/gas-fee',
-  trmScreen: '/v1/screen',
 }
 
 type FetchGasFn = ({
@@ -23,15 +22,7 @@ type FetchGasFn = ({
   smartContractDelegationAddress?: Address
 }) => Promise<GasFeeResultWithoutState>
 
-export type ScreenResponse = {
-  block: boolean
-}
-
-export type ScreenRequest = {
-  address: string
-}
-
-export interface LuxApiClientContext {
+export interface UniswapApiClientContext {
   fetchClient: FetchClient
   processGasFeeResponse: (gasFeeResponse: GasFeeResponse, gasStrategy: GasStrategy) => GasFeeResultWithoutState
   estimateGasWithClientSideProvider: (params: {
@@ -42,7 +33,6 @@ export interface LuxApiClientContext {
 
 export interface LuxApiClient {
   fetchGasFee: FetchGasFn
-  fetchTrmScreen: (params: ScreenRequest) => Promise<ScreenResponse>
 }
 
 export function createLuxApiClient(ctx: LuxApiClientContext): LuxApiClient {
@@ -87,14 +77,7 @@ export function createLuxApiClient(ctx: LuxApiClientContext): LuxApiClient {
     }
   }
 
-  const fetchTrmScreen = async (params: ScreenRequest): Promise<ScreenResponse> => {
-    return await client.post<ScreenResponse>(LUX_API_PATHS.trmScreen, {
-      body: JSON.stringify(params),
-    })
-  }
-
   return {
     fetchGasFee,
-    fetchTrmScreen,
   }
 }

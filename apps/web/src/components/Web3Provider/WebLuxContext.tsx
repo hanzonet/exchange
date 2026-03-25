@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import React, { PropsWithChildren, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router'
@@ -186,16 +186,6 @@ function WebLuxProviderInner({ children }: PropsWithChildren) {
     [navigate, closeSearchModal],
   )
 
-  const navigateToNftCollection = useCallback((args: { collectionAddress: Address; chainId: UniverseChainId }) => {
-    window.open(
-      `https://opensea.io/assets/${getChainInfo(
-        args.chainId,
-      ).backendChain.chain.toLowerCase()}/${args.collectionAddress}`,
-      '_blank',
-      'noopener,noreferrer',
-    )
-  }, [])
-
   const { openModal } = useModalState(ModalName.DelegationMismatch)
 
   const handleOpenDEXUnsupportedModal = useEvent(() => {
@@ -265,7 +255,6 @@ function WebLuxProviderInner({ children }: PropsWithChildren) {
       navigateToBuyOrReceiveWithEmptyWallet={navigateToBuyOrReceiveWithEmptyWallet}
       navigateToTokenDetails={navigateToTokenDetails}
       navigateToExternalProfile={navigateToExternalProfile}
-      navigateToNftCollection={navigateToNftCollection}
       navigateToNftDetails={navigateToNftDetails}
       navigateToPoolDetails={navigateToPoolDetails}
       handleShareToken={handleShareToken}

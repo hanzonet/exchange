@@ -1,6 +1,6 @@
-import { ChainedQuoteResponse, TradingApi } from '@universe/api'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
-import { WalletExecutionContext } from '@universe/api/src/clients/trading/__generated__/models/WalletExecutionContext'
+import { ChainedQuoteResponse, TradingApi } from '@luxexchange/api'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
+import { WalletExecutionContext } from '@luxexchange/api/src/clients/trading/__generated__/models/WalletExecutionContext'
 import { call, race, SagaGenerator, take } from 'typed-redux-saga'
 import { CAIP25Session } from 'lx/src/features/capabilities/caip25/types'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -23,13 +23,16 @@ import {
   createOrRefreshPlan,
   findFirstActiveStep,
   getStepLogArray,
-} from 'lx/src/features/transactions/swap/plan/utils'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { ValidatedChainedSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { ChainedActionTrade, Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { signalSwapModalClosed } from 'lx/src/utils/saga'
+} from 'uniswap/src/features/transactions/swap/plan/utils'
+import {
+  ActivePlanData,
+  activePlanStore,
+} from 'uniswap/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { ValidatedTradeInput } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { ValidatedChainedSwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { ChainedActionTrade, Trade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
+import { signalSwapModalClosed } from 'uniswap/src/utils/saga'
 import { isProdEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
 
@@ -37,7 +40,7 @@ interface FetchAndTransformPlanParams {
   quote: ChainedQuoteResponse['quote']
   routing: ChainedQuoteResponse['routing']
   walletExecutionContext?: WalletExecutionContext
-  trade?: Trade
+  trade: Trade
 }
 
 export interface FetchAndTransformPlanResult {
@@ -76,38 +79,40 @@ interface InitializePlanResult extends FetchAndTransformPlanResult {
 export function* initializePlan(params: FetchAndTransformPlanParams): SagaGenerator<InitializePlanResult> {
   const { quote, routing, walletExecutionContext } = params
 
-  const activePlanState = activePlanStore.getState().activePlan
-  if (activePlanState) {
-    const currentStep = activePlanState.steps[activePlanState.currentStepIndex]
+  // Case 1: Using a plan that already exists.
+  const resumedPlanState = yield* call(getOrAwaitLatestActivePlan)
+
+  if (resumedPlanState) {
+    const currentStep = resumedPlanState.steps[resumedPlanState.currentStepIndex]
     if (!currentStep) {
       throw new AbortPlanError('No active step found. Do not retry plan.')
     }
     return {
-      planId: activePlanState.planId,
-      steps: activePlanState.steps,
-      currentStepIndex: activePlanState.currentStepIndex,
-      inputChainId: activePlanState.inputChainId,
+      planId: resumedPlanState.planId,
+      steps: resumedPlanState.steps,
+      currentStepIndex: resumedPlanState.currentStepIndex,
+      inputChainId: resumedPlanState.inputChainId,
       currentStep,
       wasPlanResumed: true,
     }
   }
 
-  if (params.trade) {
-    const prefetchedResponse = yield* call(consumePrefetchedPlan, params.trade)
-    if (prefetchedResponse) {
-      try {
-        const transformedResponse = transformPlanResponse(prefetchedResponse)
-        updateGlobalPlanState({ activePlan: transformedResponse, originalResponse: prefetchedResponse })
-        return { ...transformedResponse, response: prefetchedResponse, wasPlanResumed: false }
-      } catch (error) {
-        logger.warn('planSagaUtils', 'initializePlan', 'Prefetched plan unusable, creating fresh', {
-          error: error instanceof Error ? error.message : String(error),
-        })
-        // Fall through to normal createOrRefreshPlan
-      }
+  // Case 2: Using a plan that was pre-fetched, rather than creating a new plan.
+  const prefetchedResponse = yield* call(consumePrefetchedPlan, params.trade)
+  if (prefetchedResponse) {
+    try {
+      const transformedResponse = transformPlanResponse(prefetchedResponse)
+      updateGlobalPlanState({ activePlan: transformedResponse, originalResponse: prefetchedResponse })
+      return { ...transformedResponse, response: prefetchedResponse, wasPlanResumed: false }
+    } catch (error) {
+      logger.warn('planSagaUtils', 'initializePlan', 'Prefetched plan unusable, creating fresh', {
+        error: error instanceof Error ? error.message : String(error),
+      })
+      // Fall through to normal createOrRefreshPlan
     }
   }
 
+  // Case 3: No fetch is in-flight, no plan is active in the store to resume; create a new plan.
   try {
     const { response, modalClosed } = yield* race({
       response: call(createOrRefreshPlan, {
@@ -300,6 +305,22 @@ export function isPlanBackgrounded(planId: string): boolean {
  */
 export function isPlanCancelledCheck(planId: string): boolean {
   return activePlanStore.getState().actions.isPlanCancelled(planId)
+}
+
+/**
+ * Waits for any ongoing ActivePlanUpdater refresh to finish, then returns the active plan.
+ * Resolves to undefined if there is no active plan or the refresh fails.
+ */
+export function getOrAwaitLatestActivePlan(): Promise<ActivePlanData | undefined> {
+  return activePlanStore.getState().actions.getOrAwaitLatestActivePlan()
+}
+
+/**
+ * Marks a plan as interrupted due to a price change (>1% movement).
+ * Called before throwing PlanPriceChangeInterrupt so the UI can show a specific warning.
+ */
+export function markPlanPriceChangeInterrupted(planId: string): void {
+  activePlanStore.getState().actions.markPlanPriceChangeInterrupted(planId)
 }
 
 /**

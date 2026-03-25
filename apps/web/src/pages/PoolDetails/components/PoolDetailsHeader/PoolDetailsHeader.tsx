@@ -1,6 +1,6 @@
 import { Percent } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Flex, Text } from 'ui/src'
 import { shortenHash } from 'utilities/src/addresses'
 import { FeeData } from '~/components/Liquidity/Create/types'

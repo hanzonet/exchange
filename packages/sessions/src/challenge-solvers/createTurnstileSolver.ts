@@ -4,14 +4,14 @@ import {
   TurnstileScriptLoadError,
   TurnstileTimeoutError,
   TurnstileTokenExpiredError,
-} from '@universe/sessions/src/challenge-solvers/turnstileErrors'
-import { ensureTurnstileScript } from '@universe/sessions/src/challenge-solvers/turnstileScriptLoader'
+} from '@luxexchange/sessions/src/challenge-solvers/turnstileErrors'
+import { ensureTurnstileScript } from '@luxexchange/sessions/src/challenge-solvers/turnstileScriptLoader'
 import type {
   ChallengeData,
   ChallengeSolver,
   TurnstileScriptOptions,
-} from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
+} from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
 import type { Logger } from 'utilities/src/logger/logger'
 
 /**
@@ -298,20 +298,24 @@ function createTurnstileSolver(ctx: CreateTurnstileSolverContext): ChallengeSolv
       })
 
       // Report success
-      ctx.onSolveCompleted?.({
+      const data: TurnstileSolveAnalytics = {
         durationMs: ctx.performanceTracker.now() - startTime,
         success: true,
-      })
+      }
+      ctx.onSolveCompleted?.(data)
+      ctx.getLogger?.().info('sessions', 'turnstileSolved', 'Turnstile solve completed', data)
 
       return token
     } catch (error) {
       // Report failure
-      ctx.onSolveCompleted?.({
+      const data: TurnstileSolveAnalytics = {
         durationMs: ctx.performanceTracker.now() - startTime,
         success: false,
         errorType: classifyError(error),
         errorMessage: error instanceof Error ? error.message : String(error),
-      })
+      }
+      ctx.onSolveCompleted?.(data)
+      ctx.getLogger?.().warn('sessions', 'turnstileSolved', 'Turnstile solve failed', data)
 
       ctx.getLogger?.().error(error, {
         tags: {

@@ -5,7 +5,7 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import type { MobileState } from 'src/app/mobileReducer'
 import { BannerId, MOBILE_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'
 import { AccountType } from 'lx/src/features/accounts/types'
@@ -33,7 +33,7 @@ export async function checkFundWalletBanner(getState: () => MobileState): Promis
 
   // Check if wallet has balance or activity - if it does, don't show the fund wallet card
   const hasBalanceOrActivity = selectHasBalanceOrActivityForAddress(state, activeAddress)
-  if (hasBalanceOrActivity) {
+  if (hasBalanceOrActivity !== false) {
     return null
   }
 
@@ -58,7 +58,7 @@ function createFundWalletBanner(): InAppNotification {
         backgroundOnClick: new OnClick({
           // No ACK here - required notifications should reappear until the user funds their wallet
           // The notification will stop showing once hasBalanceOrActivity becomes true
-          onClick: [OnClickAction.EXTERNAL_LINK, OnClickAction.DISMISS],
+          onClick: [OnClickAction.EXTERNAL_LINK],
           onClickLink: fundWalletLink,
         }),
       }),

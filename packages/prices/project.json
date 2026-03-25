@@ -1,5 +1,5 @@
 {
-  "name": "@universe/prices",
+  "name": "@luxexchange/prices",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/prices/src",
   "projectType": "library",
@@ -7,10 +7,6 @@
   "targets": {
     "test": {
       "command": "vitest run --passWithNoTests",
-      "options": { "cwd": "{projectRoot}" }
-    },
-    "test:coverage": {
-      "command": "vitest run --coverage --passWithNoTests",
       "options": { "cwd": "{projectRoot}" }
     },
     "typecheck": {},

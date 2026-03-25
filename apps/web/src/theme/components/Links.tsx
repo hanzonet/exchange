@@ -1,7 +1,6 @@
 import React, { HTMLProps, useCallback } from 'react'
-import { Link } from 'react-router'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { InterfaceEventName } from 'uniswap/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { css, deprecatedStyled } from '~/lib/deprecated-styled'
 import { ClickableStyle } from '~/theme/components/styles'
 import { anonymizeLink } from '~/utils/anonymizeLink'
@@ -10,12 +9,6 @@ const LinkStyle = css`
   color: ${({ theme }) => theme.accent1};
   stroke: ${({ theme }) => theme.accent1};
   font-weight: 500;
-`
-
-// An internal link from the react-router library that is correctly styled
-export const StyledInternalLink = deprecatedStyled(Link)`
-  ${ClickableStyle}
-  ${LinkStyle}
 `
 
 function outboundLink({ label }: { label: string }) {

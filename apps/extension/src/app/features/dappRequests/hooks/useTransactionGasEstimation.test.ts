@@ -1,6 +1,6 @@
 import { TransactionRequest } from '@ethersproject/providers'
 import { renderHook } from '@testing-library/react'
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 import { useTransactionGasEstimation } from 'src/app/features/dappRequests/hooks/useTransactionGasEstimation'
 import { PollingInterval } from 'lx/src/constants/misc'
 import { UniverseChainId } from 'lx/src/features/chains/types'

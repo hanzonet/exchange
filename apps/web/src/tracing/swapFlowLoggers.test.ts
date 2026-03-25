@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { SwapEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { maybeLogFirstSwapAction } from 'lx/src/features/transactions/swap/utils/maybeLogFirstSwapAction'
@@ -59,6 +59,7 @@ describe('swapFlowLoggers', () => {
       id: mockHash,
       batch_id: mockBatchId,
       swap_start_timestamp: undefined,
+      transactedUSDValue: undefined,
       plan_id: undefined,
       step_index: undefined,
       total_steps: undefined,
@@ -95,6 +96,7 @@ describe('swapFlowLoggers', () => {
       chain_id: mockChainId,
       id: 'mockId',
       swap_start_timestamp: undefined,
+      transactedUSDValue: undefined,
       plan_id: undefined,
       step_index: undefined,
       total_steps: undefined,

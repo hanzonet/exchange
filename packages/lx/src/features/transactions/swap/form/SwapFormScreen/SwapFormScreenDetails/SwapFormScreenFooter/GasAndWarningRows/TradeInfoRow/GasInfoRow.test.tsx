@@ -1,25 +1,11 @@
-import { type GasFeeResult } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { GasInfoRow } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/GasInfoRow'
-import { GasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { render } from 'lx/src/test/test-utils'
-import type { MockedFunction } from 'vitest'
-
-// Mock dependencies
-vi.mock('lx/src/features/transactions/swap/hooks/usePriceUXEnabled', () => ({
-  usePriceUXEnabled: vi.fn(),
-}))
-
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-
-const mockUsePriceUXEnabled = usePriceUXEnabled as MockedFunction<typeof usePriceUXEnabled>
+import { type GasFeeResult } from '@luxexchange/api'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { GasInfoRow } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/GasInfoRow'
+import { GasInfo } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { render } from 'uniswap/src/test/test-utils'
 
 describe('GasInfoRow', () => {
-  beforeEach(() => {
-    mockUsePriceUXEnabled.mockReturnValue(false)
-  })
-
   const createGasFeeResult = (overrides: Partial<GasFeeResult> = {}): GasFeeResult => ({
     value: '1000000000000000',
     isLoading: false,
@@ -119,9 +105,7 @@ describe('GasInfoRow', () => {
       expect(queryAllByText('Free').length).toBeGreaterThan(0)
     })
 
-    it('should display DEX savings with priceUX enabled', () => {
-      mockUsePriceUXEnabled.mockReturnValue(true)
-
+    it('should display UniswapX savings', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         dexGasFeeInfo: {

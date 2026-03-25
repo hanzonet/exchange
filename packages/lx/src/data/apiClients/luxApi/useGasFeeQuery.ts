@@ -5,11 +5,12 @@ import {
   type GasStrategy,
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
-} from '@universe/api'
-import { useStatsigClientStatus } from '@universe/gating'
-import { luxUrls } from 'lx/src/constants/urls'
-import { LuxApiClient } from 'lx/src/data/apiClients/luxApi/LuxApiClient'
-import { getActiveGasStrategy } from 'lx/src/features/gas/utils'
+} from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag, useStatsigClientStatus } from '@luxexchange/gating'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { fetchGasFeeV2 } from 'uniswap/src/data/apiClients/gasService/fetchGasFeeV2'
+import { UniswapApiClient } from 'uniswap/src/data/apiClients/uniswapApi/UniswapApiClient'
+import { getActiveGasStrategy } from 'uniswap/src/features/gas/utils'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export function useGasFeeQuery({
@@ -62,5 +63,12 @@ export async function fetchGasFeeQuery(params: {
   } = params
   const gasStrategy =
     overrideGasStrategy || getActiveGasStrategy({ chainId: tx.chainId, type: 'general', isStatsigReady })
-  return LuxApiClient.fetchGasFee({ tx, fallbackGasLimit, gasStrategy, smartContractDelegationAddress })
+
+  const shouldUseGasServiceV2 = getFeatureFlag(FeatureFlags.GasServiceV2)
+
+  if (shouldUseGasServiceV2) {
+    return fetchGasFeeV2({ tx, gasStrategy, smartContractDelegationAddress, fallbackGasLimit })
+  }
+
+  return UniswapApiClient.fetchGasFee({ tx, fallbackGasLimit, gasStrategy, smartContractDelegationAddress })
 }

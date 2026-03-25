@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { finalizeTransaction, updateTransaction } from 'lx/src/features/transactions/slice'
 import {
@@ -279,6 +279,7 @@ describe('useHandleDEXActivityUpdate', () => {
           totalNonErrorSteps: 2,
           stepType: 'SwapTransaction',
         },
+        transactedUSDValue: undefined,
       })
     })
 
@@ -334,6 +335,7 @@ describe('useHandleDEXActivityUpdate', () => {
           totalNonErrorSteps: 2,
           stepType: 'SwapTransaction',
         },
+        transactedUSDValue: undefined,
       })
     })
 
@@ -370,6 +372,7 @@ describe('useHandleDEXActivityUpdate', () => {
           totalNonErrorSteps: 2,
           stepType: 'SwapTransaction',
         },
+        transactedUSDValue: undefined,
       })
     })
 

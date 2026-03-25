@@ -1,9 +1,9 @@
 /* eslint-disable max-lines */
 import { useApolloClient } from '@apollo/client'
 import { useIsFocused, useScrollToTop } from '@react-navigation/native'
-import { SharedQueryClient } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { getIsNotificationServiceLocalOverrideEnabled } from '@universe/notifications'
+import { SharedQueryClient } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { getIsNotificationServiceLocalOverrideEnabled } from '@luxexchange/notifications'
 import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Freeze } from 'react-freeze'
 import { useTranslation } from 'react-i18next'
@@ -20,6 +20,7 @@ import { ActivityContent } from 'src/components/activity/ActivityContent'
 import { HomeExploreTab } from 'src/components/home/HomeExploreTab'
 import { OnboardingIntroCardStack } from 'src/components/home/introCards/OnboardingIntroCardStack'
 import { NftsTab } from 'src/components/home/NftsTab'
+import { PortfolioOverview } from 'src/components/home/PortfolioChart/PortfolioOverview'
 import { TokensTab } from 'src/components/home/TokensTab'
 import { Screen } from 'src/components/layout/Screen'
 import {
@@ -49,23 +50,23 @@ import { Flex, Text, TouchableArea, useMedia, useSporeColors } from 'ui/src'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
 import { spacing } from 'ui/src/theme'
-import { buildWrappedUrl } from 'lx/src/components/banners/shared/utils'
-import { LuxWrapped2025Banner } from 'lx/src/components/banners/LuxWrapped2025Banner/LuxWrapped2025Banner'
-import { NFTS_TAB_DATA_DEPENDENCIES } from 'lx/src/components/nfts/constants'
-import { LUX_WEB_URL } from 'lx/src/constants/urls'
-import { getPortfolioQuery } from 'lx/src/data/rest/getPortfolio'
-import { getListTransactionsQuery } from 'lx/src/data/rest/listTransactions'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { selectHasDismissedLuxWrapped2025Banner } from 'lx/src/features/behaviorHistory/selectors'
-import { setHasDismissedLuxWrapped2025Banner } from 'lx/src/features/behaviorHistory/slice'
-import { useSelectAddressHasNotifications } from 'lx/src/features/notifications/slice/hooks'
-import { setNotificationStatus } from 'lx/src/features/notifications/slice/slice'
-import { PortfolioBalance } from 'lx/src/features/portfolio/PortfolioBalance/PortfolioBalance'
-import { ModalName, SectionName } from 'lx/src/features/telemetry/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { openUri } from 'lx/src/utils/linking'
+import { buildWrappedUrl } from 'uniswap/src/components/banners/shared/utils'
+import { UniswapWrapped2025Banner } from 'uniswap/src/components/banners/UniswapWrapped2025Banner/UniswapWrapped2025Banner'
+import { NFTS_TAB_DATA_DEPENDENCIES } from 'uniswap/src/components/nfts/constants'
+import { UNISWAP_WEB_URL } from 'uniswap/src/constants/urls'
+import { getPortfolioQuery } from 'uniswap/src/data/rest/getPortfolio'
+import { getListTransactionsQuery } from 'uniswap/src/data/rest/listTransactions'
+import { AccountType } from 'uniswap/src/features/accounts/types'
+import { selectHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/selectors'
+import { setHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/slice'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { useSelectAddressHasNotifications } from 'uniswap/src/features/notifications/slice/hooks'
+import { setNotificationStatus } from 'uniswap/src/features/notifications/slice/slice'
+import { ModalName, SectionName } from 'uniswap/src/features/telemetry/constants'
+import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { MobileScreens } from 'uniswap/src/types/screens/mobile'
+import { openUri } from 'uniswap/src/utils/linking'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useOpenSmartWalletNudgeOnCompletedSwap } from 'wallet/src/components/smartWallet/smartAccounts/hooks'
@@ -130,7 +131,8 @@ function HomeScreen({
   const { requiredForTransactions: requiresBiometrics } = useBiometricAppSettings()
 
   const isBottomTabsEnabled = useFeatureFlag(FeatureFlags.BottomTabs)
-  const isWrappedBannerEnabled = useFeatureFlag(FeatureFlags.LuxWrapped2025)
+  const isPnLEnabled = useFeatureFlag(FeatureFlags.ProfitLoss)
+  const isWrappedBannerEnabled = useFeatureFlag(FeatureFlags.UniswapWrapped2025)
   const isNotificationServiceEnabledFlag = useFeatureFlag(FeatureFlags.NotificationService)
   const isNotificationServiceEnabled =
     getIsNotificationServiceLocalOverrideEnabled() || isNotificationServiceEnabledFlag
@@ -140,6 +142,7 @@ function HomeScreen({
 
   const { showEmptyWalletState, isTabsDataLoaded } = useHomeScreenState()
   const [hasIntroCards, setHasIntroCards] = useState(false)
+  const { chains } = useEnabledChains()
 
   // opens the wallet restore modal if recovery phrase is missing after the app is opened
   useWalletRestore({ openModalImmediately: true })
@@ -337,7 +340,7 @@ function HomeScreen({
   const promoBanner = useMemo(
     () =>
       isNotificationServiceEnabled ? (
-        <MobileNotificationServiceManager />
+        <MobileNotificationServiceManager isLoading={!isTabsDataLoaded} />
       ) : (
         <OnboardingIntroCardStack
           isLoading={!isTabsDataLoaded}
@@ -372,9 +375,7 @@ function HomeScreen({
           </Flex>
         )}
         <AccountHeader />
-        <Flex py="$spacing20" px={isBottomTabsEnabled ? '$spacing24' : '$spacing12'}>
-          <PortfolioBalance evmOwner={activeAccount.address} />
-        </Flex>
+        <PortfolioOverview evmAddress={activeAccount.address} chainIds={chains} isPnLEnabled={isPnLEnabled} />
         {isSignerAccount ? (
           <HomeScreenQuickActions />
         ) : (
@@ -393,6 +394,8 @@ function HomeScreen({
     hasIntroCards,
     showEmptyWalletState,
     isBottomTabsEnabled,
+    isPnLEnabled,
+    chains,
     shouldShowWrappedBanner,
     handleDismissWrappedBanner,
     handlePressWrappedBanner,

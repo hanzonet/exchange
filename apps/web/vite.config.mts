@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import { cloudflare } from '@cloudflare/vite-plugin'
 import { tamaguiPlugin } from '@tamagui/vite-plugin'
 import react from '@vitejs/plugin-react'
@@ -126,8 +127,46 @@ const portWarningPlugin = (isProduction: boolean) =>
 let commitHash = 'unknown'
 try { commitHash = execSync('git rev-parse HEAD').toString().trim() } catch {}
 
+// Compute next dev version from latest non-RC web/* git tag
+function getNextDevVersion(): string {
+  try {
+    const latestTag = execSync("git tag --list 'web/*' --sort=-version:refname | grep -v '\\-rc\\.' | head -1")
+      .toString()
+      .trim()
+    if (!latestTag) {
+      return ''
+    }
+    const version = latestTag.replace('web/', '')
+    const parts = version.split('.').map(Number)
+    if (parts.length < 3 || parts.some(isNaN)) {
+      return ''
+    }
+    return `${parts[0]}.${parts[1] + 1}.0`
+  } catch {
+    return ''
+  }
+}
+
 export default defineConfig(({ mode }) => {
   let env = loadEnv(mode, __dirname, '')
+
+  // Load root .env.defaults.local as a base layer (app-level env files take precedence)
+  const rootEnvDefaultsLocalPath = path.resolve(__dirname, '../../.env.defaults.local')
+  if (fs.existsSync(rootEnvDefaultsLocalPath)) {
+    try {
+      const result = dotenvConfig({ path: rootEnvDefaultsLocalPath })
+      if (result.parsed) {
+        // Only set values that aren't already defined (lowest priority)
+        for (const [key, value] of Object.entries(result.parsed)) {
+          if (!(key in env)) {
+            env[key] = value
+          }
+        }
+      }
+    } catch (error) {
+      console.warn(`Warning: Failed to read ${rootEnvDefaultsLocalPath}:`, error instanceof Error ? error.message : String(error))
+    }
+  }
 
   // Force load .env.[mode] files since NX ignores them
   const modeEnvPath = path.resolve(__dirname, `.env.${mode}`)
@@ -142,7 +181,7 @@ export default defineConfig(({ mode }) => {
         console.warn(`Warning: Failed to parse ${modeEnvPath}:`, result.error.message)
       }
     } catch (error) {
-      console.warn(`Warning: Failed to read ${modeEnvPath}:`, error.message)
+      console.warn(`Warning: Failed to read ${modeEnvPath}:`, error instanceof Error ? error.message : String(error))
     }
   }
 
@@ -286,7 +325,13 @@ export default defineConfig(({ mode }) => {
     'process.env.REACT_APP_WEB_BUILD_TYPE': JSON.stringify('vite'),
     // Enable Tamagui's global z-index stacking to fix modal stacking issues
     'process.env.TAMAGUI_STACK_Z_INDEX_GLOBAL': JSON.stringify('true'),
+    // So getConfig().isVercelEnvironment is true in the client on Vercel; enables direct staging WS URL to match EGW
+    ...(isVercelDeploy ? { 'process.env.VERCEL': JSON.stringify(process.env.VERCEL ?? '0') } : {}),
     ...envDefines,
+    // Fallback: compute next version from git tags when not set by CI
+    ...(!env.REACT_APP_VERSION_TAG
+      ? { 'process.env.REACT_APP_VERSION_TAG': JSON.stringify(getNextDevVersion()) }
+      : {}),
   }
 
   const cacheDir = path.resolve(__dirname, 'node_modules/.vite')
@@ -533,7 +578,7 @@ export default defineConfig(({ mode }) => {
         '@visx/responsive',
       ],
       // Libraries that shouldn't be pre-bundled
-      exclude: ['expo-clipboard', '@connectrpc/connect', '@uniswap/client-privy-embedded-wallet'],
+      exclude: ['expo-clipboard', '@connectrpc/connect', '@uniswap/client-liquidity'],
       esbuildOptions: {
         resolveExtensions: ['.web-app.js', '.web-app.ts', '.web-app.tsx', '.web.js', '.web.ts', '.web.tsx', '.js', '.ts', '.tsx'],
         loader: {

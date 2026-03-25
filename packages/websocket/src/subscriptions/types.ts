@@ -1,9 +1,10 @@
-import type { SubscriptionHandler } from '@universe/websocket/src/types'
+import type { SubscriptionHandler } from '@luxexchange/websocket/src/types'
 
 export interface SubscriptionEntry<TParams, TMessage> {
   channel: string
   params: TParams
   callbacks: Set<(message: TMessage) => void>
+  subscriberCount: number
 }
 
 export interface SubscriptionManagerOptions<TParams> {

@@ -5,12 +5,12 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@universe/api'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@luxexchange/api'
 import {
   createNotificationDataSource,
   type NotificationDataSource,
   type NotificationTracker,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import { AppRoutes, SettingsRoutes, UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { getReduxStore } from 'src/store/store'
 

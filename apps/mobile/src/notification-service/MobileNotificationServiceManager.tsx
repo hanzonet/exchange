@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { getIsNotificationServiceLocalOverrideEnabled } from '@universe/notifications'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { getIsNotificationServiceLocalOverrideEnabled } from '@luxexchange/notifications'
 import React, { useEffect } from 'react'
 import { getNotificationServiceQueryOptions } from 'src/notification-service/MobileNotificationService'
 import { NotificationContainer } from 'src/notification-service/notification-renderer/NotificationContainer'
@@ -19,7 +19,11 @@ import { getLogger } from 'utilities/src/logger/logger'
  * Replace the legacy OnboardingIntroCardStack with this component in HomeScreen
  * when the NotificationService feature flag is enabled.
  */
-export function MobileNotificationServiceManager(): React.JSX.Element | null {
+export function MobileNotificationServiceManager({
+  isLoading = false,
+}: {
+  isLoading?: boolean
+}): React.JSX.Element | null {
   const isNotificationServiceEnabledFlag = useFeatureFlag(FeatureFlags.NotificationService)
   const isNotificationServiceEnabled =
     getIsNotificationServiceLocalOverrideEnabled() || isNotificationServiceEnabledFlag
@@ -48,6 +52,19 @@ export function MobileNotificationServiceManager(): React.JSX.Element | null {
       notificationService.destroy()
     }
   }, [notificationService])
+
+  useEffect(() => {
+    if (isLoading || !notificationService) {
+      return
+    }
+
+    notificationService.refresh().catch((error) => {
+      getLogger().error(error, {
+        tags: { file: 'MobileNotificationServiceManager', function: 'refresh' },
+        extra: { message: 'Failed to refresh notifications after profile load' },
+      })
+    })
+  }, [isLoading, notificationService])
 
   if (!isNotificationServiceEnabled || !notificationService) {
     return null

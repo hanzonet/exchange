@@ -150,6 +150,10 @@ export const networkColors = {
     light: '#000000',
     dark: '#FFFFFF',
   },
+  tempo: {
+    light: '#1A1A2E',
+    dark: '#E8E8F0',
+  },
   xlayer: {
     light: '#A7A7A747',
     dark: '#A7A7A724',
@@ -352,6 +356,7 @@ export const colorsLight = {
   chain_324: networkColors.zksync.light,
   chain_480: networkColors.worldchain.light,
   chain_1868: networkColors.soneium.light,
+  chain_4217: networkColors.tempo.light,
   chain_196: networkColors.xlayer.light,
   chain_501000101: networkColors.solana.light,
   chain_143: networkColors.monad.light,
@@ -453,6 +458,7 @@ export const colorsDark = {
   chain_324: networkColors.zksync.dark,
   chain_480: networkColors.worldchain.dark,
   chain_1868: networkColors.soneium.dark,
+  chain_4217: networkColors.tempo.dark,
   chain_196: networkColors.xlayer.dark,
   chain_501000101: networkColors.solana.dark,
   chain_143: networkColors.monad.dark,

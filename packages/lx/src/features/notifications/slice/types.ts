@@ -1,10 +1,14 @@
-import { TradeType } from '@luxamm/sdk-core'
-import { AssetType } from 'lx/src/entities/assets'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { FinalizedTransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { WalletConnectEvent } from 'lx/src/types/walletConnect'
+import { TradeType } from '@uniswap/sdk-core'
+import { AssetType } from 'uniswap/src/entities/assets'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
+import {
+  FinalizedTransactionStatus,
+  TransactionStatus,
+  TransactionType,
+} from 'uniswap/src/features/transactions/types/transactionDetails'
+import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
+import { WalletConnectEvent } from 'uniswap/src/types/walletConnect'
 
 export enum AppNotificationType {
   Default = 0,
@@ -57,7 +61,7 @@ export interface WalletConnectNotification extends AppNotificationBase {
 export interface TransactionNotificationBase extends AppNotificationBase {
   type: AppNotificationType.Transaction
   txType: TransactionType
-  txStatus: FinalizedTransactionStatus
+  txStatus: FinalizedTransactionStatus | TransactionStatus.AwaitingAction
   txId: string
   chainId: UniverseChainId
   tokenAddress?: string

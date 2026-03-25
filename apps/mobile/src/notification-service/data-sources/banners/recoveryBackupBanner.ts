@@ -5,7 +5,7 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import type { MobileState } from 'src/app/mobileReducer'
 import { BannerId, MOBILE_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'
 import { AccountType } from 'lx/src/features/accounts/types'

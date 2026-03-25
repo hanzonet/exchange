@@ -4,8 +4,8 @@ import {
   Notification,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { type TriggerCondition } from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
+import { ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { type TriggerCondition } from '@luxexchange/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
 import { type MobileState } from 'src/app/mobileReducer'
 import { AccountType } from 'lx/src/features/accounts/types'
 import { ONE_DAY_MS } from 'utilities/src/time/time'

@@ -1,4 +1,4 @@
-import { type GasFeeResult } from '@universe/api'
+import { type GasFeeResult } from '@luxexchange/api'
 import { type PropsWithChildren } from 'react'
 import { useTranslation } from 'react-i18next'
 import { type Animated } from 'react-native'
@@ -11,12 +11,12 @@ import { useIsRequestStale } from 'src/app/features/dappRequests/hooks/useIsRequ
 import { type DappRequestStoreItem } from 'src/app/features/dappRequests/shared'
 import { type DappRequest, isBatchedSwapRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
 import { AnimatePresence, Button, Flex, type GetThemeValueForKey, styled, Text } from 'ui/src'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { DappRequestType } from 'lx/src/features/dappRequests/types'
-import { hasGasEstimationFailed, hasSufficientFundsIncludingGas } from 'lx/src/features/gas/utils'
-import { useOnChainNativeCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { type TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { type UniverseChainId } from 'uniswap/src/features/chains/types'
+import { DappRequestType } from 'uniswap/src/features/dappRequests/types'
+import { useChainGasToken } from 'uniswap/src/features/gas/hooks/useChainGasToken'
+import { hasGasEstimationFailed, hasSufficientGasBalance } from 'uniswap/src/features/gas/utils'
+import { type TransactionTypeInfo } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { extractNameFromUrl } from 'utilities/src/format/extractNameFromUrl'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
@@ -178,13 +178,14 @@ function DappRequestFooter({
   const sendTransactionChainId =
     request.dappRequest.type === DappRequestType.SendTransaction ? request.dappRequest.transaction.chainId : undefined
   const currentChainId = chainId || sendTransactionChainId || activeChain || defaultChainId
-  const { balance: nativeBalance } = useOnChainNativeCurrencyBalance(currentChainId, currentAccount.address)
+  const { gasBalance } = useChainGasToken({ chainId: currentChainId, accountAddress: currentAccount.address })
   const isRequestConfirming = useIsDappRequestConfirming(request.dappRequest.requestId)
   const isRequestStale = useIsRequestStale(request.createdAt)
 
-  const hasSufficientGas = hasSufficientFundsIncludingGas({
+  const hasSufficientGas = hasSufficientGasBalance({
+    chainId: currentChainId,
+    gasBalance,
     gasFee: transactionGasFeeResult?.value,
-    nativeCurrencyBalance: nativeBalance,
   })
 
   const shouldCloseSidebar = request.isSidebarClosed && totalRequestCount <= 1
@@ -251,7 +252,7 @@ function DappRequestFooter({
           <Flex pb="$spacing8">
             <Text color="$statusWarning" variant="body3">
               {t('swap.warning.insufficientGas.title', {
-                currencySymbol: nativeBalance?.currency.symbol ?? '',
+                currencySymbol: gasBalance?.currency.symbol ?? '',
               })}
             </Text>
           </Flex>

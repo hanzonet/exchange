@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FadeInDown } from 'react-native-reanimated'
@@ -9,29 +9,37 @@ import {
   TokenDetailsSwapButtons,
 } from 'src/components/TokenDetails/TokenDetailsActionButtons'
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
-import { useTokenDetailsCTAVariant } from 'src/components/TokenDetails/useTokenDetailsCTAVariant'
+import {
+  useMultichainBuyVariant,
+  useTokenDetailsCTAVariant,
+} from 'src/components/TokenDetails/useTokenDetailsCTAVariant'
 import { useTokenDetailsCurrentChainBalance } from 'src/components/TokenDetails/useTokenDetailsCurrentChainBalance'
 import { NetworkBalanceSheetContent } from 'src/screens/TokenDetailsScreen/NetworkBalanceSheetContent'
 import { useNetworkBalanceSheet } from 'src/screens/TokenDetailsScreen/useNetworkBalanceSheet'
 import { useIsScreenNavigationReady } from 'src/utils/useIsScreenNavigationReady'
-import { ArrowDownCircle, ArrowUpCircle, Bank, SendRoundedAirplane } from 'ui/src/components/icons'
+import { ArrowDownCircle, ArrowUpCircle, Bank, QrCode, SendRoundedAirplane } from 'ui/src/components/icons'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import type { MenuOptionItem } from 'lx/src/components/menus/ContextMenu'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { useTokenBasicInfoPartsFragment } from 'lx/src/data/graphql/lux-data-api/fragments'
-import { useBridgingTokenWithHighestBalance } from 'lx/src/features/bridging/hooks/tokens'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { TokenList } from 'lx/src/features/dataApi/types'
-import { useIsSupportedFiatOnRampCurrency } from 'lx/src/features/fiatOnRamp/hooks'
-import { useOnChainNativeCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { CurrencyField } from 'lx/src/types/currency'
-import { buildCurrencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+import type { MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
+import { Modal } from 'uniswap/src/components/modals/Modal'
+import { getNativeAddress } from 'uniswap/src/constants/addresses'
+import { useTokenBasicInfoPartsFragment } from 'uniswap/src/data/graphql/uniswap-data-api/fragments'
+import { useBridgingTokenWithHighestBalance } from 'uniswap/src/features/bridging/hooks/tokens'
+import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { type PortfolioBalance, TokenList } from 'uniswap/src/features/dataApi/types'
+import { useIsSupportedFiatOnRampCurrency } from 'uniswap/src/features/fiatOnRamp/hooks'
+import { useChainGasToken } from 'uniswap/src/features/gas/hooks/useChainGasToken'
+import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+import { CurrencyField } from 'uniswap/src/types/currency'
+import { buildCurrencyId, isNativeCurrencyAddress } from 'uniswap/src/utils/currencyId'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+
+function getHighestBalanceEntry(balances: PortfolioBalance[]): PortfolioBalance {
+  return balances.reduce((best, current) => ((current.balanceUSD ?? 0) > (best.balanceUSD ?? 0) ? current : best))
+}
 
 export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActionButtonsWrapper(): JSX.Element | null {
   const { t } = useTranslation()
@@ -52,18 +60,13 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
   const isNativeCurrency = isNativeCurrencyAddress(chainId, address)
   const nativeCurrencyAddress = getChainInfo(chainId).nativeCurrency.address
 
-  const { balance: nativeCurrencyBalance, isLoading: isNativeCurrencyBalanceLoading } = useOnChainNativeCurrencyBalance(
-    chainId,
-    activeAddress,
-  )
-  const hasZeroNativeBalance = nativeCurrencyBalance && nativeCurrencyBalance.equalTo('0')
+  const { gasBalance, isLoading: isGasBalanceLoading } = useChainGasToken({ chainId, accountAddress: activeAddress })
+  const hasZeroGasBalance = gasBalance && gasBalance.equalTo('0')
 
   const { currency: nativeFiatOnRampCurrency, isLoading: isNativeFiatOnRampCurrencyLoading } =
     useIsSupportedFiatOnRampCurrency(buildCurrencyId(chainId, nativeCurrencyAddress))
 
   const currentChainBalance = useTokenDetailsCurrentChainBalance()
-
-  const hasTokenBalance = Boolean(currentChainBalance)
 
   const { currency: fiatOnRampCurrency, isLoading: isFiatOnRampCurrencyLoading } =
     useIsSupportedFiatOnRampCurrency(currencyId)
@@ -84,6 +87,20 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
     onCloseNetworkSheet,
     onSelectNetwork,
   } = useNetworkBalanceSheet({ currencyId, chainId })
+
+  const hasTokenBalance = isMultichainTokenUx ? allChainBalances.length > 0 : Boolean(currentChainBalance)
+
+  // For multichain UX: resolve the chain with the highest balance (computed once, used by multiple handlers)
+  const highestBalanceEntry = useMemo(() => {
+    if (!isMultichainTokenUx || !allChainBalances.length) {
+      return null
+    }
+    return getHighestBalanceEntry(allChainBalances)
+  }, [isMultichainTokenUx, allChainBalances])
+
+  const highestBalanceCurrencyId = highestBalanceEntry?.currencyInfo.currencyId ?? currencyId
+
+  const { currency: highestBalanceFiatCurrency } = useIsSupportedFiatOnRampCurrency(highestBalanceCurrencyId)
 
   const onPressSwap = useEvent((currencyField: CurrencyField) => {
     if (isBlocked) {
@@ -120,13 +137,34 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
     }, MODAL_OPEN_WAIT_TIME)
   })
 
-  const onPressBuy = useEvent(() => onPressSwap(CurrencyField.OUTPUT))
+  const onPressBuy = useEvent(() => {
+    if (isBlocked) {
+      openTokenWarningModal()
+      return
+    }
+    if (isMultichainTokenUx && highestBalanceEntry) {
+      const { currency } = highestBalanceEntry.currencyInfo
+      const currencyAddress = currency.isToken ? currency.address : getNativeAddress(currency.chainId)
+      navigateToSwapFlow({ currencyField: CurrencyField.OUTPUT, currencyAddress, currencyChainId: currency.chainId })
+    } else {
+      navigateToSwapFlow({ currencyField: CurrencyField.OUTPUT, currencyAddress: address, currencyChainId: chainId })
+    }
+  })
+
   const onPressSell = useEvent(() => {
     if (isMultichainTokenUx && hasMultiChainBalances) {
       openSellSheet()
     } else {
       onPressSwap(CurrencyField.INPUT)
     }
+  })
+
+  const onPressBuyWithCash = useEvent(() => {
+    navigateToFiatOnRamp({ prefilledCurrency: highestBalanceFiatCurrency ?? fiatOnRampCurrency })
+  })
+
+  const onPressSellForCash = useEvent(() => {
+    navigateToFiatOnRamp({ prefilledCurrency: highestBalanceFiatCurrency ?? fiatOnRampCurrency, isOfframp: true })
   })
 
   const bridgedWithdrawalInfo = currencyInfo?.bridgedWithdrawalInfo
@@ -139,7 +177,7 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
     nativeFiatOnRampCurrency,
     fiatOnRampCurrency,
     bridgingTokenWithHighestBalance,
-    hasZeroNativeBalance,
+    hasZeroGasBalance,
     tokenSymbol: token.symbol,
     onPressBuyFiatOnRamp,
     onPressGet,
@@ -195,7 +233,6 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
     onPressBuyFiatOnRamp,
   ])
 
-  // Secondary actions only (Send, Receive, Withdraw) — trade actions are handled by the primary CTAs
   const multichainActionMenuOptions: MenuOptionItem[] = useMemo(() => {
     const actions: MenuOptionItem[] = []
 
@@ -203,7 +240,15 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
       actions.push({ label: t('common.button.send'), Icon: SendRoundedAirplane, onPress: onPressSend })
     }
 
-    actions.push({ label: t('common.button.receive'), Icon: ArrowDownCircle, onPress: navigateToReceive })
+    actions.push({ label: t('common.button.receive'), Icon: QrCode, onPress: navigateToReceive })
+
+    if (highestBalanceFiatCurrency || fiatOnRampCurrency) {
+      actions.push({ label: t('fiatOnRamp.action.buyWithCash'), Icon: Bank, onPress: onPressBuyWithCash })
+    }
+
+    if (hasTokenBalance && (highestBalanceFiatCurrency || fiatOnRampCurrency)) {
+      actions.push({ label: t('fiatOnRamp.action.sellForCash'), Icon: ArrowUpCircle, onPress: onPressSellForCash })
+    }
 
     if (bridgedWithdrawalInfo && hasTokenBalance) {
       actions.push({
@@ -217,12 +262,23 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
     }
 
     return actions
-  }, [t, hasTokenBalance, bridgedWithdrawalInfo, onPressSend, navigateToReceive, onPressWithdraw])
+  }, [
+    t,
+    hasTokenBalance,
+    bridgedWithdrawalInfo,
+    highestBalanceFiatCurrency,
+    fiatOnRampCurrency,
+    onPressSend,
+    navigateToReceive,
+    onPressBuyWithCash,
+    onPressSellForCash,
+    onPressWithdraw,
+  ])
 
   const hideActionButtons =
     !isScreenNavigationReady ||
     tokenColorLoading ||
-    isNativeCurrencyBalanceLoading ||
+    isGasBalanceLoading ||
     isNativeFiatOnRampCurrencyLoading ||
     isFiatOnRampCurrencyLoading ||
     isBridgingTokenLoading
@@ -235,13 +291,28 @@ export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActio
         })
     : openTokenWarningModal
 
+  const multichainBuyVariant = useMultichainBuyVariant({
+    hasTokenBalance,
+    isNativeCurrency,
+    nativeFiatOnRampCurrency,
+    fiatOnRampCurrency,
+    bridgingTokenWithHighestBalance,
+    hasZeroGasBalance,
+    tokenSymbol: token.symbol,
+    onPressBuyWithCash,
+    onPressGet,
+    onPressBuy,
+  })
+
   return hideActionButtons ? null : (
     <AnimatedFlex mb={insets.bottom} backgroundColor="$surface1" entering={FadeInDown}>
       {isMultichainTokenUx ? (
         <TokenDetailsBuySellButtons
           actionMenuOptions={multichainActionMenuOptions}
+          buyButtonIcon={multichainBuyVariant.icon}
+          buyButtonTitle={multichainBuyVariant.title}
           userHasBalance={hasTokenBalance}
-          onPressBuy={onPressBuy}
+          onPressBuy={multichainBuyVariant.onPress}
           onPressDisabled={onPressDisabled}
           onPressSell={onPressSell}
         />

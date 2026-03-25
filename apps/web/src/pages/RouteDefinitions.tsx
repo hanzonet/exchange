@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { lazy, type PropsWithChildren, ReactNode, Suspense, useMemo } from 'react'
 import { matchPath, Navigate, Route, Routes, useLocation } from 'react-router'
 import { WRAPPED_PATH } from 'lx/src/components/banners/shared/utils'
@@ -48,6 +48,8 @@ const ExtensionUninstall = lazy(() => import('~/pages/ExtensionUninstall/Extensi
 const Portfolio = lazy(() => import('~/pages/Portfolio/Portfolio'))
 const ToucanToken = lazy(() => import('~/pages/Explore/ToucanToken'))
 const CreateAuction = lazy(() => import('~/pages/Liquidity/CreateAuction/CreateAuction'))
+const XOAuthCallbackPage = lazy(() => import('~/pages/Liquidity/CreateAuction/XOAuthCallbackPage'))
+const BetaPage = lazy(() => import('~/pages/Beta'))
 const Wrapped = lazy(() => import('~/pages/Wrapped'))
 const TradePage = lazy(() => import('~/pages/Trade'))
 
@@ -211,6 +213,16 @@ export const routes: RouteDefinition[] = [
     getElement: () => (
       <Suspense fallback={null}>
         <CreateAuction />
+      </Suspense>
+    ),
+  }),
+  createRouteDefinition({
+    path: '/liquidity/launch-auction/x/callback',
+    getTitle: () => 'X Verification',
+    getDescription: () => StaticTitlesAndDescriptions.ToucanPlaceholderDescription,
+    getElement: () => (
+      <Suspense fallback={null}>
+        <XOAuthCallbackPage />
       </Suspense>
     ),
   }),
@@ -429,12 +441,11 @@ export const routes: RouteDefinition[] = [
     enabled: (args) => args.isWrappedEnabled ?? false,
   }),
   createRouteDefinition({
-    path: '/advanced',
-    getTitle: () => i18n.t('title.advancedTrading', { defaultValue: 'Advanced Trading — Lux Exchange' }),
-    getDescription: () => i18n.t('title.advancedTradingDesc', { defaultValue: 'Advanced order book trading with limit, stop, and bracket orders on Lux Exchange' }),
+    path: '/preview',
+    getTitle: () => 'Uniswap Preview',
     getElement: () => (
       <Suspense fallback={null}>
-        <TradePage />
+        <BetaPage />
       </Suspense>
     ),
   }),

@@ -1,4 +1,4 @@
-import { createNotificationTelemetry, type NotificationTelemetry } from '@universe/notifications'
+import { createNotificationTelemetry, type NotificationTelemetry } from '@luxexchange/notifications'
 import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 

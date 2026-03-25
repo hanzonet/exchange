@@ -1,12 +1,13 @@
 /* eslint-disable max-lines */
 import { PositionStatus, ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { atom, useAtom } from 'jotai'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { FixedSizeList } from 'react-window'
 import { Anchor, Button, Flex, Text, useMedia } from 'ui/src'
+import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { CloseIconWithHover } from 'ui/src/components/icons/CloseIconWithHover'
 import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
 import { Pools } from 'ui/src/components/icons/Pools'
@@ -22,6 +23,7 @@ import Trace from 'lx/src/features/telemetry/Trace'
 import { useIsMissingPlatformWallet } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
 import { usePositionVisibilityCheck } from 'lx/src/features/visibility/hooks/usePositionVisibilityCheck'
 import { useInfiniteScroll } from 'utilities/src/react/useInfiniteScroll'
+import ALLOWLISTED_HOOKS from '~/assets/images/allowlistedHooks.jpg'
 import PROVIDE_LIQUIDITY from '~/assets/images/provideLiquidity.png'
 import tokenLogo from '~/assets/images/token-logo.png'
 import V4_HOOK from '~/assets/images/v4Hooks.png'
@@ -130,6 +132,12 @@ function DisconnectedWalletView() {
             text={t('liquidity.hooks')}
             link={luxUrls.helpArticleUrls.v4HooksInfo}
           />
+          <LearnMoreTile
+            width="100%"
+            img={ALLOWLISTED_HOOKS}
+            text={t('liquidity.hooks.allowlisted')}
+            link={uniswapUrls.helpArticleUrls.allowlistedHooks}
+          />
         </Flex>
       </Flex>
     </Flex>
@@ -190,6 +198,37 @@ function EmptyPositionsView() {
             {t('position.new')}
           </Button>
         </Flex>
+      </Flex>
+    </Flex>
+  )
+}
+
+function ErrorPositionsView({ onRetry }: { onRetry: () => void }) {
+  const { t } = useTranslation()
+  return (
+    <Flex gap="$spacing12">
+      <Flex
+        padding="$spacing24"
+        centered
+        gap="$gap16"
+        borderRadius="$rounded12"
+        borderColor="$surface3"
+        borderWidth="$spacing1"
+        borderStyle="solid"
+        $platform-web={{
+          textAlign: 'center',
+        }}
+      >
+        <Flex padding="$padding12" borderRadius="$rounded12" backgroundColor="$statusCritical2">
+          <AlertTriangleFilled size="$icon.24" color="$statusCritical" />
+        </Flex>
+        <Text variant="subheading1">{t('common.error.general')}</Text>
+        <Text variant="body2" color="$neutral2" maxWidth={420}>
+          {t('positions.error.loading')}
+        </Text>
+        <Button variant="default" size="small" onPress={onRetry}>
+          {t('common.button.retry')}
+        </Button>
       </Flex>
     </Flex>
   )
@@ -279,12 +318,7 @@ function VirtualizedPositionsList({
                 style={{ textDecoration: 'none' }}
                 to={getPositionUrl(position)}
               >
-                <LiquidityPositionCard
-                  showVisibilityOption
-                  liquidityPosition={position}
-                  showMigrateButton
-                  isLast={index === positions.length - 1}
-                />
+                <LiquidityPositionCard showVisibilityOption liquidityPosition={position} showMigrateButton />
               </Link>
             </Flex>
           )
@@ -313,7 +347,7 @@ export default function Pool() {
   const isLPIncentivesEnabled = useFeatureFlag(FeatureFlags.LpIncentives) && isConnected
 
   const [chainFilter, setChainFilter] = useAtom(chainFilterAtom)
-  const { chains: currentModeChains } = useEnabledChains()
+  const { chains: currentModeChains } = useEnabledChains({ platform: Platform.EVM })
   const [versionFilter, setVersionFilter] = useAtom(versionFilterAtom)
   const [statusFilter, setStatusFilter] = useAtom(statusFilterAtom)
   const [closedCTADismissed, setClosedCTADismissed] = useState(false)
@@ -332,7 +366,7 @@ export default function Pool() {
     hasCollectedRewards,
   } = useLpIncentives()
 
-  const { data, isPlaceholderData, refetch, isLoading, fetchNextPage, hasNextPage, isFetching } =
+  const { data, isPlaceholderData, refetch, isLoading, fetchNextPage, hasNextPage, isFetching, error } =
     useGetPositionsInfiniteQuery(
       {
         address,
@@ -352,7 +386,8 @@ export default function Pool() {
 
   const savedPositions = useRequestPositionsForSavedPairs()
 
-  const isLoadingPositions = !!account.address && (isLoading || !data)
+  const isLoadingPositions = !!account.address && (isLoading || !data) && !error
+  const hasErrorWithoutData = !!error && !data
   const combinedPositions = useMemo(() => {
     return [
       ...loadedPositions,
@@ -461,7 +496,9 @@ export default function Pool() {
               }}
             />
           </Flex>
-          {!isLoadingPositions ? (
+          {hasErrorWithoutData && isConnected ? (
+            <ErrorPositionsView onRetry={refetch} />
+          ) : !isLoadingPositions ? (
             combinedPositions.length > 0 ? (
               <Flex gap="$gap16" mb="$spacing16" opacity={isPlaceholderData ? 0.6 : 1}>
                 <VirtualizedPositionsList
@@ -541,6 +578,11 @@ export default function Pool() {
                   img={V4_HOOK}
                   text={t('liquidity.hooks')}
                   link={luxUrls.helpArticleUrls.v4HooksInfo}
+                />
+                <LearnMoreTile
+                  img={ALLOWLISTED_HOOKS}
+                  text={t('liquidity.hooks.allowlisted')}
+                  link={uniswapUrls.helpArticleUrls.allowlistedHooks}
                 />
               </Flex>
               <ExternalArrowLink href={luxUrls.helpArticleUrls.positionsLearnMore}>

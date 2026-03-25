@@ -2,11 +2,8 @@ import { ContentStyle } from '@shopify/flash-list'
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Currency } from '@uniswap/sdk-core'
 import { memo, useState } from 'react'
-import { Flex, styled, TouchableArea } from 'ui/src'
-import { MoreHorizontal } from 'ui/src/components/icons/MoreHorizontal'
-import { iconSizes } from 'ui/src/theme'
-import { NFTCollectionOptionItem } from 'lx/src/components/lists/items/nfts/NFTCollectionOptionItem'
-import { PoolOptionItem } from 'lx/src/components/lists/items/pools/PoolOptionItem'
+import { Flex } from 'ui/src'
+import { PoolOptionItem } from 'uniswap/src/components/lists/items/pools/PoolOptionItem'
 import {
   PoolContextMenuAction,
   PoolOptionItemContextMenu,
@@ -15,41 +12,37 @@ import { TokenContextMenuVariant, TokenOptionItem } from 'lx/src/components/list
 import {
   TokenContextMenuAction,
   TokenOptionItemContextMenu,
-} from 'lx/src/components/lists/items/tokens/TokenOptionItemContextMenu'
-import { OnchainItemListOptionType, SearchModalOption } from 'lx/src/components/lists/items/types'
-import { ENSAddressOptionItem } from 'lx/src/components/lists/items/wallets/ENSAddressOptionItem'
-import { UnitagOptionItem } from 'lx/src/components/lists/items/wallets/UnitagOptionItem'
-import { WalletByAddressOptionItem } from 'lx/src/components/lists/items/wallets/WalletByAddressOptionItem'
-import { ItemRowInfo } from 'lx/src/components/lists/OnchainItemList/OnchainItemList'
-import type { OnchainItemSection } from 'lx/src/components/lists/OnchainItemList/types'
-import { SelectorBaseList } from 'lx/src/components/lists/SelectorBaseList'
-import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
-import { useAddToSearchHistory } from 'lx/src/components/TokenSelector/hooks/useAddToSearchHistory'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { sendSearchOptionItemClickedAnalytics } from 'lx/src/features/search/SearchModal/analytics/analytics'
-import { SearchFilterContext } from 'lx/src/features/search/SearchModal/analytics/SearchContext'
+} from 'uniswap/src/components/lists/items/tokens/TokenOptionItemContextMenu'
+import { OnchainItemListOptionType, SearchModalOption } from 'uniswap/src/components/lists/items/types'
+import { ENSAddressOptionItem } from 'uniswap/src/components/lists/items/wallets/ENSAddressOptionItem'
+import { UnitagOptionItem } from 'uniswap/src/components/lists/items/wallets/UnitagOptionItem'
+import { WalletByAddressOptionItem } from 'uniswap/src/components/lists/items/wallets/WalletByAddressOptionItem'
+import { ItemRowInfo } from 'uniswap/src/components/lists/OnchainItemList/OnchainItemList'
+import type { OnchainItemSection } from 'uniswap/src/components/lists/OnchainItemList/types'
+import { SelectorBaseList } from 'uniswap/src/components/lists/SelectorBaseList'
+import { ContextMenuTriggerButton } from 'uniswap/src/components/menus/ContextMenuTriggerButton'
+import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
+import { useAddToSearchHistory } from 'uniswap/src/components/TokenSelector/hooks/useAddToSearchHistory'
+import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { sendSearchOptionItemClickedAnalytics } from 'uniswap/src/features/search/SearchModal/analytics/analytics'
+import { SearchFilterContext } from 'uniswap/src/features/search/SearchModal/analytics/SearchContext'
 import { isHoverable, isWebPlatform } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
-
-const OptionItemMoreButton = styled(TouchableArea, {
-  borderWidth: 1,
-  borderRadius: '$rounded12',
-  hoverStyle: {
-    borderColor: '$surface3Hovered',
-  },
-})
 
 // Context menu button components that manage their own state
 const TokenRowContextMenuButton = memo(function TokenRowContextMenuButton({
   currency,
+  isVisible = true,
 }: {
   currency: Currency
+  isVisible?: boolean
 }): JSX.Element {
   const { value: isOpen, setTrue: openMenu, setFalse: closeMenu } = useBooleanState(false)
+  const shouldShow = isVisible || isOpen
 
   return (
-    <OptionItemMoreButton>
+    <Flex opacity={shouldShow ? 1 : 0} pointerEvents={shouldShow ? 'auto' : 'none'}>
       <TokenOptionItemContextMenu
         actions={[
           TokenContextMenuAction.CopyAddress,
@@ -65,11 +58,9 @@ const TokenRowContextMenuButton = memo(function TokenRowContextMenuButton({
         openMenu={openMenu}
         closeMenu={closeMenu}
       >
-        <Flex p="$spacing6">
-          <MoreHorizontal size={iconSizes.icon16} color="$neutral2" />
-        </Flex>
+        <ContextMenuTriggerButton />
       </TokenOptionItemContextMenu>
-    </OptionItemMoreButton>
+    </Flex>
   )
 })
 
@@ -77,15 +68,18 @@ const PoolRowContextMenuButton = memo(function PoolRowContextMenuButton({
   poolId,
   chainId,
   protocolVersion,
+  isVisible = true,
 }: {
   poolId: string
   chainId: UniverseChainId
   protocolVersion: ProtocolVersion
+  isVisible?: boolean
 }): JSX.Element {
   const { value: isOpen, setTrue: openMenu, setFalse: closeMenu } = useBooleanState(false)
+  const shouldShow = isVisible || isOpen
 
   return (
-    <OptionItemMoreButton>
+    <Flex opacity={shouldShow ? 1 : 0} pointerEvents={shouldShow ? 'auto' : 'none'}>
       <PoolOptionItemContextMenu
         actions={[PoolContextMenuAction.CopyAddress, PoolContextMenuAction.Share]}
         isOpen={isOpen}
@@ -96,11 +90,9 @@ const PoolRowContextMenuButton = memo(function PoolRowContextMenuButton({
         protocolVersion={protocolVersion}
         triggerMode={ContextMenuTriggerMode.Primary}
       >
-        <Flex p="$spacing6">
-          <MoreHorizontal size={iconSizes.icon16} color="$neutral2" />
-        </Flex>
+        <ContextMenuTriggerButton />
       </PoolOptionItemContextMenu>
-    </OptionItemMoreButton>
+    </Flex>
   )
 })
 
@@ -129,8 +121,7 @@ export const SearchModalList = memo(function _SearchModalList({
   renderedInModal,
   contentContainerStyle,
 }: SearchModalListProps): JSX.Element {
-  const { navigateToTokenDetails, navigateToExternalProfile, navigateToNftCollection, navigateToPoolDetails } =
-    useLuxContext()
+  const { navigateToTokenDetails, navigateToExternalProfile, navigateToPoolDetails } = useUniswapContext()
   const { registerSearchItem } = useAddToSearchHistory()
 
   const [focusedRowIndex, setFocusedRowIndex] = useState<number | undefined>()
@@ -154,11 +145,12 @@ export const SearchModalList = memo(function _SearchModalList({
               focusedRowIndex,
             }}
             rightElement={
-              isHoverable && rowIndex === focusedRowIndex ? (
+              isHoverable ? (
                 <PoolRowContextMenuButton
                   poolId={item.poolId}
                   chainId={item.chainId}
                   protocolVersion={item.protocolVersion}
+                  isVisible={rowIndex === focusedRowIndex}
                 />
               ) : undefined
             }
@@ -191,14 +183,58 @@ export const SearchModalList = memo(function _SearchModalList({
               rowIndex,
             }}
             rightElement={
-              isHoverable && rowIndex === focusedRowIndex ? (
-                <TokenRowContextMenuButton currency={item.currencyInfo.currency} />
+              isHoverable ? (
+                <TokenRowContextMenuButton
+                  currency={item.currencyInfo.currency}
+                  isVisible={rowIndex === focusedRowIndex}
+                />
               ) : undefined
             }
             onPress={() => {
               registerSearchItem(item)
 
               navigateToTokenDetails(item.currencyInfo.currencyId)
+
+              sendSearchOptionItemClickedAnalytics({
+                item,
+                section,
+                sectionIndex: index,
+                rowIndex,
+                searchFilters,
+              })
+
+              onSelect?.()
+            }}
+          />
+        )
+      case OnchainItemListOptionType.MultichainToken:
+        return (
+          <TokenOptionItem
+            option={{
+              type: OnchainItemListOptionType.Token,
+              currencyInfo: item.primaryCurrencyInfo,
+              quantity: null,
+              balanceUSD: undefined,
+            }}
+            networkCount={item.multichainResult.tokens.length}
+            contextMenuVariant={TokenContextMenuVariant.Search}
+            focusedRowControl={{
+              focusedRowIndex,
+              setFocusedRowIndex,
+              rowIndex,
+            }}
+            rightElement={
+              isHoverable ? (
+                <TokenRowContextMenuButton
+                  currency={item.primaryCurrencyInfo.currency}
+                  isVisible={rowIndex === focusedRowIndex}
+                />
+              ) : undefined
+            }
+            onPress={() => {
+              registerSearchItem(item)
+
+              navigateToTokenDetails(item.primaryCurrencyInfo.currencyId)
 
               sendSearchOptionItemClickedAnalytics({
                 item,
@@ -275,29 +311,6 @@ export const SearchModalList = memo(function _SearchModalList({
             }}
           />
         )
-      case OnchainItemListOptionType.NFTCollection:
-        return (
-          <NFTCollectionOptionItem
-            collectionOption={item}
-            onPress={() => {
-              const { address, chainId } = item
-
-              navigateToNftCollection({ collectionAddress: address, chainId })
-
-              registerSearchItem(item)
-
-              sendSearchOptionItemClickedAnalytics({
-                item,
-                section,
-                sectionIndex: index,
-                rowIndex,
-                searchFilters,
-              })
-
-              onSelect?.()
-            }}
-          />
-        )
     }
   }
 
@@ -329,13 +342,13 @@ function key(item: SearchModalOption): string {
       return `pool-${item.chainId}-${item.poolId}-${item.protocolVersion}-${item.hookAddress}-${item.feeTier}`
     case OnchainItemListOptionType.Token:
       return `token-${item.currencyInfo.currency.chainId}-${item.currencyInfo.currencyId}`
+    case OnchainItemListOptionType.MultichainToken:
+      return `multichain-${item.multichainResult.id}`
     case OnchainItemListOptionType.WalletByAddress:
       return `wallet-${item.address}`
     case OnchainItemListOptionType.ENSAddress:
       return `ens-${item.address}`
     case OnchainItemListOptionType.Unitag:
       return `unitag-${item.address}`
-    case OnchainItemListOptionType.NFTCollection:
-      return `nft-${item.chainId}-${item.address}`
   }
 }

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { getChainInfo } from 'lx/src/features/chains/chainInfo'
 import { supportedChainIdFromGQLChain } from '~/appGraphql/data/chainUtils'
 

@@ -1,7 +1,7 @@
 import '~/test-utils/tokens/mocks'
 
 import userEvent from '@testing-library/user-event'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useLuxContext } from 'lx/src/contexts/LuxContext'
 import { AccountsStore } from 'lx/src/features/accounts/store/types/AccountsState'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -56,7 +56,6 @@ describe('PoolDetailsStatsButton', () => {
     navigateToTokenDetails: () => {},
     navigateToPoolDetails: () => {},
     navigateToExternalProfile: () => {},
-    navigateToNftCollection: () => {},
     navigateToNftDetails: () => {},
     navigateToAdvancedSettings: () => {},
     onSwapChainsChanged: () => {},

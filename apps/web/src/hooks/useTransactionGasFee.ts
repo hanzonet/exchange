@@ -1,5 +1,5 @@
 import { type TransactionRequest } from '@ethersproject/abstract-provider'
-import type { GasFeeResult } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useGasFeeQuery } from 'lx/src/data/apiClients/luxApi/useGasFeeQuery'
 import { GAS_SPEED_STRATEGIES, GasSpeed } from 'lx/src/features/gas/utils'

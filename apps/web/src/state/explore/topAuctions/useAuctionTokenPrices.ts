@@ -1,17 +1,17 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import {
   buildContractInputForAddress,
   type PriceMap,
   useTokenMarketPrices,
 } from '~/components/Toucan/hooks/useTokenMarketPrices'
-import type { AuctionWithCurrencyInfo } from '~/state/explore/topAuctions/useTopAuctions'
+import type { EnrichedAuction } from '~/state/explore/topAuctions/useTopAuctions'
 
 /**
  * Fetches USD prices for the auction tokens (the tokens being auctioned).
  * Used to compute FDV from actual market price for completed auctions.
  */
-export function useAuctionTokenPrices(auctions: readonly AuctionWithCurrencyInfo[]): {
+export function useAuctionTokenPrices(auctions: readonly EnrichedAuction[]): {
   priceMap: PriceMap
   loading: boolean
 } {

@@ -1,10 +1,12 @@
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Fragment } from 'react'
 import { Flex, Separator } from 'ui/src'
 import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { isMobileWeb } from 'utilities/src/platform'
 import { MenuStateVariant, useSetMenuCallback } from '~/components/AccountDrawer/menuState'
-import { LuxMobileWalletConnectorOption } from '~/components/WalletModal/LuxMobileWalletConnectorOption'
+import { NoSolanaWalletConnectedView } from '~/components/WalletModal/NoSolanaWalletConnectedView'
+import { UniswapMobileWalletConnectorOption } from '~/components/WalletModal/UniswapMobileWalletConnectorOption'
 import { OtherWalletsOption, WalletConnectorOption } from '~/components/WalletModal/WalletConnectorOption'
 import { useRecentConnectorId } from '~/components/Web3Provider/constants'
 import { useOrderedWallets } from '~/features/wallet/connection/hooks/useOrderedWalletConnectors'
@@ -30,10 +32,17 @@ export function WalletOptionsGrid({
   const showOtherWalletsCallback = useSetMenuCallback(MenuStateVariant.OTHER_WALLETS)
   const wallets = useOrderedWallets({ showSecondaryConnectors: isMobileWeb, platformFilter: connectOnPlatform })
   const recentConnectorId = useRecentConnectorId()
+  const isEmbeddedWalletEnabled = useFeatureFlag(FeatureFlags.EmbeddedWallet)
 
   const shouldShowMobileConnector =
     showMobileConnector &&
-    (recentConnectorId === CONNECTION_PROVIDER_IDS.LUX_WALLET_CONNECT_CONNECTOR_ID || isMobileWeb)
+    (recentConnectorId === CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID ||
+      isMobileWeb ||
+      isEmbeddedWalletEnabled)
+
+  if (connectOnPlatform === Platform.SVM && wallets.length === 0) {
+    return <NoSolanaWalletConnectedView />
+  }
 
   return (
     <Flex row alignItems="flex-start">
@@ -48,14 +57,16 @@ export function WalletOptionsGrid({
       >
         {shouldShowMobileConnector && (
           <>
-            <LuxMobileWalletConnectorOption />
-            <Separator />
+            <UniswapMobileWalletConnectorOption />
+            {isEmbeddedWalletEnabled ? <Flex height={2} backgroundColor="$surface1" /> : <Separator />}
           </>
         )}
         {wallets.map((wallet, index) => (
           <Fragment key={wallet.name}>
             <WalletConnectorOption wallet={wallet} connectOnPlatform={connectOnPlatform} />
-            {showSeparators && (index < wallets.length - 1 || showOtherWallets) && <Separator />}
+            {showSeparators &&
+              (index < wallets.length - 1 || showOtherWallets) &&
+              (isEmbeddedWalletEnabled ? <Flex height={2} backgroundColor="$surface1" /> : <Separator />)}
           </Fragment>
         ))}
         {showOtherWallets && !isMobileWeb && <OtherWalletsOption onPress={showOtherWalletsCallback} />}

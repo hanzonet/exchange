@@ -1,5 +1,5 @@
-import { type InAppNotification } from '@universe/api'
-import { type NotificationClickTarget } from '@universe/notifications'
+import { type InAppNotification } from '@luxexchange/api'
+import { type NotificationClickTarget } from '@luxexchange/notifications'
 import { useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ONBOARDING_CONTENT_WIDTH } from 'src/app/features/onboarding/utils'

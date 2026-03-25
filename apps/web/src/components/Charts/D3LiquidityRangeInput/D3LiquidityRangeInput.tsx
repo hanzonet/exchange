@@ -1,6 +1,6 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Currency, Price } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -291,7 +291,7 @@ export function D3LiquidityRangeInput({
           )}
           {!showChartErrorView && <LiquidityRangeActionButtons />}
         </Flex>
-        <DefaultPriceStrategies isLoading={isLoading} />
+        {!showChartErrorView && !creatingPoolOrPair && <DefaultPriceStrategies isLoading={isLoading} />}
         <D3LiquidityMinMaxInput />
       </LiquidityChartStoreProvider>
     </Flex>

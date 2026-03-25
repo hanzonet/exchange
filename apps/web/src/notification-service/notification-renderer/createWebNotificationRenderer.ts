@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unused-modules */
-import { ContentStyle, type InAppNotification } from '@universe/api'
-import { createNotificationRenderer, type NotificationRenderer } from '@universe/notifications'
+import { ContentStyle, type InAppNotification } from '@luxexchange/api'
+import { createNotificationRenderer, type NotificationRenderer } from '@luxexchange/notifications'
 import { type StoreApi, type UseBoundStore } from 'zustand'
 import { type NotificationState } from '~/notification-service/notification-renderer/notificationStore'
 

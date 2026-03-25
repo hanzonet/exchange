@@ -1,5 +1,5 @@
 import { nanoid } from '@reduxjs/toolkit'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useRef } from 'react'
 import { selectHasShownMismatchToast } from 'lx/src/features/behaviorHistory/selectors'
 import { setHasShownMismatchToast } from 'lx/src/features/behaviorHistory/slice'

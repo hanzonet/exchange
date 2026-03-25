@@ -5,13 +5,14 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Text } from 'ui/src'
 import { ArrowLeft } from 'ui/src/components/icons/ArrowLeft'
-import { nativeOnChain } from 'lx/src/constants/tokens'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { InterfacePageName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { TokenSelectorFlow } from 'uniswap/src/components/TokenSelector/types'
+import { nativeOnChain } from 'uniswap/src/constants/tokens'
+import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { InterfacePageName } from 'uniswap/src/features/telemetry/constants'
+import Trace from 'uniswap/src/features/telemetry/Trace'
+import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { useUSDCValue } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { currencyId } from 'uniswap/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { BreadcrumbNavContainer, BreadcrumbNavLink } from '~/components/BreadcrumbNav'
@@ -53,7 +54,7 @@ export default function PoolFinder() {
   const hasPosition = Boolean(position && JSBI.greaterThan(position.quotient, JSBI.BigInt(0)))
 
   const userPoolBalance = useTokenBalance(account.address, pair?.liquidityToken)
-  const totalPoolTokens = useTotalSupply(pair?.liquidityToken)
+  const { totalSupply: totalPoolTokens } = useTotalSupply(pair?.liquidityToken)
 
   const [token0Deposited, token1Deposited] =
     !!pair &&
@@ -187,6 +188,7 @@ export default function PoolFinder() {
           isOpen={currencySearchInputState !== undefined}
           onDismiss={() => setCurrencySearchInputState(undefined)}
           switchNetworkAction={SwitchNetworkAction.PoolFinder}
+          flow={TokenSelectorFlow.Liquidity}
           onCurrencySelect={(currency) => {
             if (currencySearchInputState === PositionField.TOKEN0) {
               setCurrency0(currency)

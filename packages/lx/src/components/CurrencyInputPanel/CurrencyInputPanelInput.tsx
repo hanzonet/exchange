@@ -10,16 +10,16 @@ import { DefaultTokenOptions } from 'lx/src/components/CurrencyInputPanel/Defaul
 import {
   MIN_INPUT_FONT_SIZE,
   useCurrencyInputFontSize,
-} from 'lx/src/components/CurrencyInputPanel/hooks/useCurrencyInputFontSize'
-import type { PanelTextDisplay } from 'lx/src/components/CurrencyInputPanel/hooks/useIndicativeQuoteTextDisplay'
-import { useInputFocusSync } from 'lx/src/components/CurrencyInputPanel/hooks/useInputFocusSync/useInputFocusSync.native'
-import { useRefetchAnimationStyle } from 'lx/src/components/CurrencyInputPanel/hooks/useRefetchAnimationStyle'
-import { SelectTokenButton } from 'lx/src/components/CurrencyInputPanel/SelectTokenButton'
-import type { CurrencyInputPanelProps, CurrencyInputPanelRef } from 'lx/src/components/CurrencyInputPanel/types'
-import { MAX_FIAT_INPUT_DECIMALS } from 'lx/src/constants/transactions'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { CurrencyField } from 'lx/src/types/currency'
+} from 'uniswap/src/components/CurrencyInputPanel/hooks/useCurrencyInputFontSize'
+import type { PanelTextDisplay } from 'uniswap/src/components/CurrencyInputPanel/hooks/useIndicativeQuoteTextDisplay'
+import { useInputFocusSync } from 'uniswap/src/components/CurrencyInputPanel/hooks/useInputFocusSync/useInputFocusSync'
+import { useRefetchAnimationStyle } from 'uniswap/src/components/CurrencyInputPanel/hooks/useRefetchAnimationStyle'
+import { SelectTokenButton } from 'uniswap/src/components/CurrencyInputPanel/SelectTokenButton'
+import type { CurrencyInputPanelProps, CurrencyInputPanelRef } from 'uniswap/src/components/CurrencyInputPanel/types'
+import { MAX_FIAT_INPUT_DECIMALS } from 'uniswap/src/constants/transactions'
+import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { CurrencyField } from 'uniswap/src/types/currency'
 import { isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
 
 type CurrencyInputPanelInputProps = {

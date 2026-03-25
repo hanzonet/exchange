@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import ms from 'ms'
 import { PropsWithChildren, useEffect, useMemo, useState } from 'react'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'

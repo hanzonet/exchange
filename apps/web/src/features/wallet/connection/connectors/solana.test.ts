@@ -15,7 +15,7 @@ vi.mock('utilities/src/time/timing', () => ({
 // Import mocked modules to get references to their functions
 import { WalletName, WalletReadyState } from '@solana/wallet-adapter-base'
 import { useWallet } from '@solana/wallet-adapter-react'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { AccessPattern, ConnectorStatus } from 'lx/src/features/accounts/store/types/Connector'
 import { SigningCapability } from 'lx/src/features/accounts/store/types/Wallet'
 import { Platform } from 'lx/src/features/platforms/types/Platform'

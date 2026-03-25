@@ -4,7 +4,7 @@ import {
   IncreaseLPPositionRequest,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import {
   createContext,
   Dispatch,

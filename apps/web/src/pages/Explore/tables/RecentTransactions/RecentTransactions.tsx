@@ -2,7 +2,8 @@
 
 import { ApolloError } from '@apollo/client'
 import { createColumnHelper } from '@tanstack/react-table'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, useMemo, useReducer, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, styled, Text, useMedia } from 'ui/src'
@@ -25,7 +26,10 @@ import { InternalLink } from '~/components/InternalLink'
 import { Table } from '~/components/Table'
 import { Cell } from '~/components/Table/Cell'
 import { Filter } from '~/components/Table/Filter'
-import { FilterHeaderRow, HeaderCell, TableText, TimestampCell, TokenLinkCell } from '~/components/Table/styled'
+import { TableText } from '~/components/Table/shared/TableText'
+import { TimestampCell } from '~/components/Table/shared/TimestampCell'
+import { TokenLinkCell } from '~/components/Table/shared/TokenLinkCell'
+import { FilterHeaderRow, HeaderCell } from '~/components/Table/styled'
 import { useUpdateManualOutage } from '~/hooks/useUpdateManualOutage'
 import { useFilteredTransactions } from '~/pages/Explore/tables/RecentTransactions/useFilterTransaction'
 import { buildPortfolioUrl } from '~/pages/Portfolio/utils/portfolioUrls'
@@ -40,6 +44,7 @@ const TableRow = styled(Flex, {
 type RecentTransactionType = GraphQLApi.PoolTransaction & { usdValueFormatted: string }
 
 export const RecentTransactionsTable = memo(function RecentTransactions() {
+  const isMultichainTokenUx = useFeatureFlag(FeatureFlags.MultichainTokenUx)
   const activeLocalCurrency = useAppFiatCurrency()
   const { convertFiatAmountFormatted, formatNumberOrString } = useLocalizationContext()
   const [filterModalIsOpen, toggleFilterModal] = useReducer((s) => !s, false)
@@ -275,7 +280,7 @@ export const RecentTransactionsTable = memo(function RecentTransactions() {
       data={filteredTransactionsWithFiat}
       loading={allDataStillLoading}
       error={combinedError}
-      v2={false}
+      v2={isMultichainTokenUx}
       loadMore={loadMore}
       maxWidth={1200}
       defaultPinnedColumns={['timestamp', 'swap-type']}

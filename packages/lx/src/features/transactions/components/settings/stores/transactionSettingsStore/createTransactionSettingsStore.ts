@@ -15,7 +15,7 @@ export const initialTransactionSettingsState: TransactionSettingsState = {
   selectedProtocols: DEFAULT_PROTOCOL_OPTIONS,
   slippageWarningModalSeen: false,
   isV4HookPoolsEnabled: true,
-  routeVia: 'auto',
+  isSlippageDirty: false,
 }
 
 export type TransactionSettingsStoreState = TransactionSettingsState & {
@@ -25,6 +25,7 @@ export type TransactionSettingsStoreState = TransactionSettingsState & {
     setSelectedProtocols: (protocols: FrontendSupportedProtocol[]) => void
     setSlippageWarningModalSeen: (seen: boolean) => void
     setIsV4HookPoolsEnabled: (enabled: boolean) => void
+    setIsSlippageDirty: (dirty: boolean) => void
     toggleProtocol: (protocol: FrontendSupportedProtocol) => void
     setRouteVia: (method: RoutingMethod) => void
   }
@@ -44,6 +45,7 @@ export const createTransactionSettingsStore = (): { store: TransactionSettingsSt
           setSelectedProtocols: (protocols: FrontendSupportedProtocol[]): void => set({ selectedProtocols: protocols }),
           setSlippageWarningModalSeen: (seen: boolean): void => set({ slippageWarningModalSeen: seen }),
           setIsV4HookPoolsEnabled: (enabled: boolean): void => set({ isV4HookPoolsEnabled: enabled }),
+          setIsSlippageDirty: (dirty: boolean): void => set({ isSlippageDirty: dirty }),
           toggleProtocol: (protocol: FrontendSupportedProtocol): void => {
             const { selectedProtocols } = get()
             if (selectedProtocols.includes(protocol)) {

@@ -1,5 +1,5 @@
 import { Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { Flex } from 'ui/src'
 import { UNI, WBTC } from 'lx/src/constants/tokens'
 import { UniverseChainId } from 'lx/src/features/chains/types'

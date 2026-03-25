@@ -20,7 +20,7 @@ import { ETH_MAINNET, ETH_SEPOLIA } from '~/test-utils/constants'
 import { mocked } from '~/test-utils/mocked'
 import { renderHook, waitFor } from '~/test-utils/render'
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),
@@ -319,7 +319,6 @@ describe('hooks', () => {
         navigateToExternalProfile: () => {},
         navigateToPoolDetails: () => {},
         navigateToNftDetails: () => {},
-        navigateToNftCollection: () => {},
         navigateToSendFlow: () => {},
         navigateToReceive: () => {},
         handleShareToken: () => {},

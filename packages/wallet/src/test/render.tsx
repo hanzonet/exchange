@@ -10,7 +10,7 @@ import {
   render as RNRender,
   renderHook as RNRenderHook,
 } from '@testing-library/react-native'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import React, { PropsWithChildren } from 'react'
 import { LuxProvider } from 'lx/src/contexts/LuxContext'
 import { AutoMockedApolloProvider } from 'lx/src/test/mocks'
@@ -36,7 +36,6 @@ const mockNavigationFunctions: WalletNavigationContextState = {
   navigateToExternalProfile: jest.fn(),
   navigateToFiatOnRamp: jest.fn(),
   navigateToNftDetails: jest.fn(),
-  navigateToNftCollection: jest.fn(),
   navigateToSwapFlow: jest.fn(),
   navigateToTokenDetails: jest.fn(),
   navigateToReceive: jest.fn(),

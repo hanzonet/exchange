@@ -8,6 +8,6 @@
 import { useTokenPriceHooks } from 'lx/src/features/prices/TokenPriceContext'
 import type { CurrencyId } from 'lx/src/types/currency'
 
-export function useTokenSpotPrice(currencyId: CurrencyId): number | undefined {
+export function useTokenSpotPrice(currencyId: CurrencyId | undefined): number | undefined {
   return useTokenPriceHooks().useTokenSpotPrice(currencyId)
 }

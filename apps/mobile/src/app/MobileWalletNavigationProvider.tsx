@@ -1,5 +1,5 @@
 import { StackActions } from '@react-navigation/native'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { PropsWithChildren, useCallback } from 'react'
 import { Share } from 'react-native'
 import { useDispatch } from 'react-redux'
@@ -9,21 +9,21 @@ import { useReactNavigationModal } from 'src/components/modals/useReactNavigatio
 import { closeAllModals, closeModal, openModal } from 'src/features/modals/modalSlice'
 import { useAdvancedSettingsMenuState } from 'src/features/settings/hooks/useAdvancedSettingsMenuState'
 import { HomeScreenTabIndex } from 'src/screens/HomeScreen/HomeScreenTabIndex'
-import { ScannerModalState } from 'lx/src/components/ReceiveQRCode/constants'
-import { NavigateToNftItemArgs } from 'lx/src/contexts/LuxContext'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { ScannerModalState } from 'uniswap/src/components/ReceiveQRCode/constants'
+import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import {
   useFiatOnRampAggregatorCountryListQuery,
   useFiatOnRampAggregatorGetCountryQuery,
-} from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
-import { RampDirection } from 'lx/src/features/fiatOnRamp/types'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { ShareableEntity } from 'lx/src/types/sharing'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { getTokenUrl } from 'lx/src/utils/linking'
+} from 'uniswap/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { RampDirection } from 'uniswap/src/features/fiatOnRamp/types'
+import { useNavigateToNftExplorerLink } from 'uniswap/src/features/nfts/hooks/useNavigateToNftExplorerLink'
+import { ModalName, WalletEventName } from 'uniswap/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
+import { MobileScreens } from 'uniswap/src/types/screens/mobile'
+import { ShareableEntity } from 'uniswap/src/types/sharing'
+import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+import { getTokenUrl } from 'uniswap/src/utils/linking'
 import { closeKeyboardBeforeCallback } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
 import { logger } from 'utilities/src/logger/logger'
 import { noop } from 'utilities/src/react/noop'
@@ -33,7 +33,6 @@ import {
   isNavigateToSwapFlowArgsPartialState,
   NavigateToExternalProfileArgs,
   NavigateToFiatOnRampArgs,
-  NavigateToNftCollectionArgs,
   NavigateToSendFlowArgs,
   NavigateToSwapFlowArgs,
   ShareTokenArgs,
@@ -45,8 +44,7 @@ export function MobileWalletNavigationProvider({ children }: PropsWithChildren):
   const navigateToAccountActivityList = useNavigateToActivity()
   const navigateToAccountTokenList = useNavigateToHomepageTab(HomeScreenTabIndex.Tokens)
   const navigateToBuyOrReceiveWithEmptyWallet = useNavigateToBuyOrReceiveWithEmptyWallet()
-  const navigateToNftCollection = useNavigateToNftCollection()
-  const navigateToNftDetails = useNavigateToNftDetails()
+  const navigateToNftDetails = useNavigateToNftExplorerLink()
   const navigateToReceive = useNavigateToReceive()
   const navigateToSend = useNavigateToSend()
   const navigateToSwapFlow = useNavigateToSwapFlow()
@@ -63,7 +61,6 @@ export function MobileWalletNavigationProvider({ children }: PropsWithChildren):
       navigateToBuyOrReceiveWithEmptyWallet={navigateToBuyOrReceiveWithEmptyWallet}
       navigateToExternalProfile={navigateToExternalProfile}
       navigateToFiatOnRamp={navigateToFiatOnRamp}
-      navigateToNftCollection={navigateToNftCollection}
       navigateToNftDetails={navigateToNftDetails}
       navigateToReceive={navigateToReceive}
       navigateToSend={navigateToSend}
@@ -297,46 +294,6 @@ function useNavigateToTokenDetails(): (currencyId: string) => void {
       })
     },
     [appNavigation, dispatch, onClose, isBottomTabsEnabled],
-  )
-}
-
-function useNavigateToNftDetails(): (args: NavigateToNftItemArgs) => void {
-  const navigation = useAppStackNavigation()
-
-  return useCallback(
-    ({ owner, contractAddress: address, tokenId, isSpam, fallbackData }: NavigateToNftItemArgs): void => {
-      closeKeyboardBeforeCallback(() => {
-        navigation.navigate(MobileScreens.NFTItem, {
-          owner,
-          address,
-          tokenId,
-          isSpam,
-          fallbackData,
-        })
-      })
-    },
-    [navigation],
-  )
-}
-
-function useNavigateToNftCollection(): (args: NavigateToNftCollectionArgs) => void {
-  const appNavigation = useAppStackNavigation()
-
-  return useCallback(
-    ({ collectionAddress }: NavigateToNftCollectionArgs): void => {
-      closeKeyboardBeforeCallback(() => {
-        if (exploreNavigationRef.current && exploreNavigationRef.isFocused()) {
-          exploreNavigationRef.navigate(MobileScreens.NFTCollection, {
-            collectionAddress,
-          })
-        } else {
-          appNavigation.navigate(MobileScreens.NFTCollection, {
-            collectionAddress,
-          })
-        }
-      })
-    },
-    [appNavigation],
   )
 }
 

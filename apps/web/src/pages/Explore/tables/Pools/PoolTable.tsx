@@ -5,8 +5,8 @@ import { ApolloError } from '@apollo/client'
 import { createColumnHelper, Row } from '@tanstack/react-table'
 import { TokenStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
 import { Percent, Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, ReactElement, useCallback, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, styled, Text, useMedia } from 'ui/src'
@@ -32,14 +32,9 @@ import { isDynamicFeeTier } from '~/components/Liquidity/utils/feeTiers'
 import CurrencyLogo from '~/components/Logo/CurrencyLogo'
 import { Table } from '~/components/Table'
 import { Cell } from '~/components/Table/Cell'
-import {
-  ClickableHeaderRow,
-  EllipsisText,
-  HeaderArrow,
-  HeaderCell,
-  HeaderSortText,
-  TableText,
-} from '~/components/Table/styled'
+import { ClickableHeaderRow, HeaderArrow, HeaderSortText } from '~/components/Table/shared/SortableHeader'
+import { EllipsisText, TableText } from '~/components/Table/shared/TableText'
+import { HeaderCell } from '~/components/Table/styled'
 import { MouseoverTooltip, TooltipSize } from '~/components/Tooltip'
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '~/constants/breakpoints'
 import useSimplePagination from '~/hooks/useSimplePagination'
@@ -138,7 +133,7 @@ function PoolTableHeader({
       <MouseoverTooltip
         disabled={!HEADER_DESCRIPTIONS[category]}
         size={TooltipSize.Small}
-        text={HEADER_DESCRIPTIONS[category]}
+        text={<Text variant="body3">{HEADER_DESCRIPTIONS[category]}</Text>}
         placement="top"
       >
         <ClickableHeaderRow justifyContent="flex-end" onPress={handleSortCategory} group>
@@ -258,6 +253,10 @@ export function PoolsTable({
   hiddenColumns?: PoolSortFields[]
   forcePinning?: boolean
 }) {
+  const { t } = useTranslation()
+  const isLPIncentivesEnabled = useFeatureFlag(FeatureFlags.LpIncentives)
+  const isMultichainTokenUx = useFeatureFlag(FeatureFlags.MultichainTokenUx)
+
   const { formatPercent, formatNumberOrString, convertFiatAmountFormatted } = useLocalizationContext()
   const { sortMethod, sortAscending } = usePoolTableStore((s) => ({
     sortMethod: s.sortMethod,
@@ -266,8 +265,6 @@ export function PoolsTable({
   const orderDirection = sortAscending ? OrderDirection.Asc : OrderDirection.Desc
   const filterString = useExploreTablesFilterStore((s) => s.filterString)
   const { defaultChainId } = useEnabledChains()
-  const { t } = useTranslation()
-  const isLPIncentivesEnabled = useFeatureFlag(FeatureFlags.LpIncentives)
 
   const poolTableValues: PoolTableValues[] | undefined = useMemo(
     () =>
@@ -567,7 +564,7 @@ export function PoolsTable({
       data={poolTableValues}
       loading={loading}
       error={error}
-      v2={false}
+      v2={isMultichainTokenUx}
       loadMore={loadMore}
       maxWidth={maxWidth}
       maxHeight={maxHeight}

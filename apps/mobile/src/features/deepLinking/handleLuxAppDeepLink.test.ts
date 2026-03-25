@@ -34,136 +34,7 @@ const stateWithAccounts = {
   },
 }
 
-describe('handleLuxAppDeepLink', () => {
-  describe('NFT Item deep links', () => {
-    it('should handle NFT item share with hash prefix', () => {
-      const path = `#/nfts/asset/${SAMPLE_CONTRACT_ADDRESS}/${SAMPLE_TOKEN_ID}`
-      const url = `https://app.lux.org/${path}`
-
-      return expectSaga(handleLuxAppDeepLink, {
-        path,
-        url,
-        linkSource: LinkSource.Share,
-      })
-        .provide([
-          [
-            call(navigate, MobileScreens.NFTItem, {
-              address: SAMPLE_CONTRACT_ADDRESS,
-              tokenId: SAMPLE_TOKEN_ID,
-              isSpam: false,
-            }),
-            undefined,
-          ],
-          [
-            call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-              entity: ShareableEntity.NftItem,
-              url,
-            }),
-            undefined,
-          ],
-        ])
-        .run()
-    })
-
-    it('should handle NFT item share without hash prefix', () => {
-      const path = `nfts/asset/${SAMPLE_CONTRACT_ADDRESS}/${SAMPLE_TOKEN_ID}`
-      const url = `https://app.lux.org/${path}`
-
-      return expectSaga(handleLuxAppDeepLink, {
-        path,
-        url,
-        linkSource: LinkSource.Share,
-      })
-        .provide([
-          [
-            call(navigate, MobileScreens.NFTItem, {
-              address: SAMPLE_CONTRACT_ADDRESS,
-              tokenId: SAMPLE_TOKEN_ID,
-              isSpam: false,
-            }),
-            undefined,
-          ],
-          [
-            call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-              entity: ShareableEntity.NftItem,
-              url,
-            }),
-            undefined,
-          ],
-        ])
-        .run()
-    })
-
-    it('should not handle invalid NFT item path', () => {
-      const path = 'nfts/asset/invalid-address/123'
-      const url = `https://app.lux.org/${path}`
-
-      return expectSaga(handleLuxAppDeepLink, {
-        path,
-        url,
-        linkSource: LinkSource.Share,
-      })
-        .not.call.fn(navigate)
-        .run()
-    })
-  })
-
-  describe('NFT Collection deep links', () => {
-    it('should handle NFT collection share with hash prefix', () => {
-      const path = `#/nfts/collection/${SAMPLE_CONTRACT_ADDRESS}`
-      const url = `https://app.lux.org/${path}`
-
-      return expectSaga(handleLuxAppDeepLink, {
-        path,
-        url,
-        linkSource: LinkSource.Share,
-      })
-        .provide([
-          [
-            call(navigate, MobileScreens.NFTCollection, {
-              collectionAddress: SAMPLE_CONTRACT_ADDRESS,
-            }),
-            undefined,
-          ],
-          [
-            call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-              entity: ShareableEntity.NftCollection,
-              url,
-            }),
-            undefined,
-          ],
-        ])
-        .run()
-    })
-
-    it('should handle NFT collection share without hash prefix', () => {
-      const path = `nfts/collection/${SAMPLE_CONTRACT_ADDRESS}`
-      const url = `https://app.lux.org/${path}`
-
-      return expectSaga(handleLuxAppDeepLink, {
-        path,
-        url,
-        linkSource: LinkSource.Share,
-      })
-        .provide([
-          [
-            call(navigate, MobileScreens.NFTCollection, {
-              collectionAddress: SAMPLE_CONTRACT_ADDRESS,
-            }),
-            undefined,
-          ],
-          [
-            call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
-              entity: ShareableEntity.NftCollection,
-              url,
-            }),
-            undefined,
-          ],
-        ])
-        .run()
-    })
-  })
-
+describe('handleUniswapAppDeepLink', () => {
   describe('Token deep links', () => {
     it('should handle token share with contract address', () => {
       const path = `tokens/ethereum/${SAMPLE_CONTRACT_ADDRESS}`
@@ -357,8 +228,8 @@ describe('handleLuxAppDeepLink', () => {
   describe('Address deep links', () => {
     it('should handle external address share', () => {
       const externalAddress = '0x1234567890abcdef1234567890abcdef12345679'
-      const path = `address/${externalAddress}`
-      const url = `https://app.lux.org/${path}`
+      const path = `portfolio/${externalAddress}`
+      const url = `https://app.uniswap.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -385,8 +256,8 @@ describe('handleLuxAppDeepLink', () => {
     })
 
     it('should handle internal address share by switching to that account', () => {
-      const path = `address/${SAMPLE_CONTRACT_ADDRESS_2}`
-      const url = `https://app.lux.org/${path}`
+      const path = `portfolio/${SAMPLE_CONTRACT_ADDRESS_2}`
+      const url = `https://app.uniswap.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -408,8 +279,8 @@ describe('handleLuxAppDeepLink', () => {
     })
 
     it('should not handle active account address', () => {
-      const path = `address/${account.address}`
-      const url = `https://app.lux.org/${path}`
+      const path = `portfolio/${account.address}`
+      const url = `https://app.uniswap.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -430,6 +301,35 @@ describe('handleLuxAppDeepLink', () => {
         .not.put.actionType(setAccountAsActive.type)
         .run()
     })
+
+    it('should handle portfolio share', () => {
+      const externalAddress = '0x1234567890abcdef1234567890abcdef12345679'
+      const path = `portfolio/${externalAddress}`
+      const url = `https://app.uniswap.org/${path}`
+
+      return expectSaga(handleUniswapAppDeepLink, {
+        path,
+        url,
+        linkSource: LinkSource.Share,
+      })
+        .withState(stateWithAccounts)
+        .provide([
+          [
+            call(navigate, MobileScreens.ExternalProfile, {
+              address: externalAddress,
+            }),
+            undefined,
+          ],
+          [
+            call(sendAnalyticsEvent, MobileEventName.ShareLinkOpened, {
+              entity: ShareableEntity.Wallet,
+              url,
+            }),
+            undefined,
+          ],
+        ])
+        .run()
+    })
   })
 
   describe('Edge cases and invalid paths', () => {
@@ -448,8 +348,8 @@ describe('handleLuxAppDeepLink', () => {
     })
 
     it('should not handle address with invalid format', () => {
-      const path = 'address/invalid-address'
-      const url = `https://app.lux.org/${path}`
+      const path = 'portfolio/invalid-address'
+      const url = `https://app.uniswap.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,

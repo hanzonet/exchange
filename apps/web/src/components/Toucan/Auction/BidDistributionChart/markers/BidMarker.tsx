@@ -1,13 +1,14 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, Tooltip, useMedia } from 'ui/src'
 import { zIndexes } from 'ui/src/theme'
-import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
-import { useAbbreviatedTimeString } from '~/components/Table/utils'
+import { AccountIcon } from 'uniswap/src/features/accounts/AccountIcon'
+import { useAbbreviatedTimeString } from '~/components/Table/utils/useAbbreviatedTimeString'
 import { MARKER_CONFIG } from '~/components/Toucan/Auction/BidDistributionChart/constants'
 import { MarkerPosition } from '~/components/Toucan/Auction/BidDistributionChart/markers/types'
 import { useBidStatusColors } from '~/components/Toucan/Auction/hooks/useBidStatusColors'
-import { BidTokenInfo, UserBid } from '~/components/Toucan/Auction/store/types'
+import { BidInfoTab, BidTokenInfo, UserBid } from '~/components/Toucan/Auction/store/types'
+import { useAuctionStoreActions } from '~/components/Toucan/Auction/store/useAuctionStore'
 import { BidAmountWithPrice } from '~/components/Toucan/Shared/BidAmountWithPrice'
 
 interface BidMarkerProps {
@@ -78,6 +79,14 @@ export function BidMarker({ marker, bidTokenInfo, formatPrice, formatTokenAmount
   const { bids, left, top, address, isInRange } = marker
   const media = useMedia()
   const { t } = useTranslation()
+  const { setChartSelectedBid, setActiveBidFormTab } = useAuctionStoreActions()
+
+  const handleClick = useCallback(() => {
+    if (bids.length === 1) {
+      setChartSelectedBid({ bidId: bids[0].bidId, isInRange })
+      setActiveBidFormTab(BidInfoTab.MY_BIDS)
+    }
+  }, [bids, isInRange, setChartSelectedBid, setActiveBidFormTab])
 
   // Sort bids by creation time descending (newest first)
   const sortedBids = useMemo(() => {
@@ -105,6 +114,7 @@ export function BidMarker({ marker, bidTokenInfo, formatPrice, formatTokenAmount
           justifyContent="center"
           cursor="pointer"
           pointerEvents="auto"
+          onPress={handleClick}
           style={{
             left: `${left}px`,
             top: `${top}px`,
@@ -125,7 +135,7 @@ export function BidMarker({ marker, bidTokenInfo, formatPrice, formatTokenAmount
               px="$spacing2"
               alignItems="center"
               justifyContent="center"
-              borderWidth={1}
+              borderWidth="$spacing1"
               borderColor="$surface3"
             >
               <Text variant="body4" fontSize={10} lineHeight={10} color="$neutral1">

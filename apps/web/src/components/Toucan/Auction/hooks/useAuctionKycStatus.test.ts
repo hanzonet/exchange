@@ -5,7 +5,7 @@ import {
   KycVerificationStatus,
   ValidationType,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useAuctionKycStatus } from '~/components/Toucan/Auction/hooks/useAuctionKycStatus'
@@ -17,7 +17,7 @@ vi.mock('react-i18next', () => ({
   }),
 }))
 
-vi.mock('@universe/gating', () => ({
+vi.mock('@luxexchange/gating', () => ({
   useFeatureFlag: vi.fn(),
   FeatureFlags: {
     ToucanAuctionKYC: 'toucan_auction_kyc',

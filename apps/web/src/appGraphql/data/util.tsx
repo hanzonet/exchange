@@ -1,7 +1,7 @@
 import { DeepPartial } from '@apollo/client/utilities'
 import { DataTag, DefaultError, QueryKey, queryOptions, UndefinedInitialDataOptions } from '@tanstack/react-query'
 import { Currency } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { ColorTokens } from 'ui/src'
 import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from 'lx/src/constants/tokens'
 import { GqlChainId, UniverseChainId } from 'lx/src/features/chains/types'

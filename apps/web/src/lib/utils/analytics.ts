@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, Percent, Price, Token } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { SwapTradeBaseProperties } from 'lx/src/features/telemetry/types'
 import { getRouteAnalyticsData, tradeRoutingToFillType } from 'lx/src/features/transactions/swap/analytics'
 import { planAnalyticsToSnakeCase } from 'lx/src/features/transactions/swap/plan/types'

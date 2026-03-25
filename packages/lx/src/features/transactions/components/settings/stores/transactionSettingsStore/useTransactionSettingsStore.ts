@@ -72,7 +72,7 @@ export const useAllTransactionSettings = (): TransactionSettings => {
     selectedProtocols: s.selectedProtocols,
     slippageWarningModalSeen: s.slippageWarningModalSeen,
     isV4HookPoolsEnabled: s.isV4HookPoolsEnabled,
-    routeVia: s.routeVia,
+    isSlippageDirty: s.isSlippageDirty,
   }))
   const autoSlippageTolerance = useTransactionSettingsAutoSlippageToleranceStore((state) => state.autoSlippageTolerance)
   return useMemo(() => ({ ...settings, autoSlippageTolerance }), [settings, autoSlippageTolerance])

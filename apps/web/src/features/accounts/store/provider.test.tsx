@@ -1,5 +1,5 @@
 import { WalletReadyState as SolanaWalletReadyState } from '@solana/wallet-adapter-base'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
 import { ConnectorStatus } from 'lx/src/features/accounts/store/types/Connector'
 import { ChainScopeType } from 'lx/src/features/accounts/store/types/Session'
@@ -25,7 +25,7 @@ vi.mock('wagmi', async () => ({
   useChainId: () => mockUseWagmiChainId(),
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

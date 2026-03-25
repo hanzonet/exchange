@@ -1,4 +1,5 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { SharedEventName } from '@uniswap/analytics-events'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { type PropsWithChildren, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
@@ -7,12 +8,13 @@ import { PlusCircle } from 'ui/src/components/icons/PlusCircle'
 import { SwitchArrows } from 'ui/src/components/icons/SwitchArrows'
 import { type AppTFunction } from 'ui/src/i18n/types'
 import { zIndexes } from 'ui/src/theme'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { setIsTestnetModeEnabled } from 'lx/src/features/settings/slice'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { CONNECTION_PROVIDER_IDS } from 'uniswap/src/constants/web3'
+import { Platform } from 'uniswap/src/features/platforms/types/Platform'
+import { setIsTestnetModeEnabled } from 'uniswap/src/features/settings/slice'
+import { ElementName } from 'uniswap/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import Trace from 'uniswap/src/features/telemetry/Trace'
+import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { MenuStateVariant, useSetMenu } from '~/components/AccountDrawer/menuState'
@@ -22,7 +24,7 @@ import { type ExternalWallet } from '~/features/accounts/store/types'
 import { useDisconnect } from '~/hooks/useDisconnect'
 import { useSignOutWithPasskey } from '~/hooks/useSignOutWithPasskey'
 
-function useOnDisconnect() {
+export function useOnDisconnect() {
   const disconnect = useDisconnect()
 
   const activeEVMWallet = useActiveWallet(Platform.EVM)
@@ -270,16 +272,25 @@ function InLineDisconnectButton() {
   const onDisconnect = useOnDisconnect()
   const { t } = useTranslation()
   const colors = useSporeColors()
+  const evmConnectorId = useActiveConnector(Platform.EVM)?.externalLibraryId
+  const svmConnectorId = useActiveConnector(Platform.SVM)?.externalLibraryId
+
+  const handleDisconnect = useEvent(() => {
+    sendAnalyticsEvent(SharedEventName.ELEMENT_CLICKED, {
+      element: ElementName.DisconnectWalletButton,
+      connector_id: evmConnectorId,
+      svm_connector_id: svmConnectorId,
+    })
+    onDisconnect()
+  })
 
   return (
-    <DisconnectTraceWrapper>
-      <DisconnectMenuButtonRow onPress={onDisconnect} testId={TestID.WalletDisconnectInModal}>
-        <Power height={16} width={16} color={colors.neutral1.val} />
-        <Text variant="buttonLabel3" color="$neutral1" lineHeight={20}>
-          {t('common.button.disconnect')}
-        </Text>
-      </DisconnectMenuButtonRow>
-    </DisconnectTraceWrapper>
+    <DisconnectMenuButtonRow onPress={handleDisconnect} testId={TestID.WalletDisconnectInModal}>
+      <Power height={16} width={16} color={colors.neutral1.val} />
+      <Text variant="buttonLabel3" color="$neutral1" lineHeight={20}>
+        {t('common.button.disconnect')}
+      </Text>
+    </DisconnectMenuButtonRow>
   )
 }
 

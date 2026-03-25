@@ -1,6 +1,6 @@
 import 'utilities/src/logger/mocks'
 import { CurrencyAmount, WETH9 } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import {

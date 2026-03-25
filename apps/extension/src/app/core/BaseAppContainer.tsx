@@ -1,4 +1,4 @@
-import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@universe/api'
+import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
 import {
   getIsHashcashSolverEnabled,
   getIsSessionServiceEnabled,
@@ -6,7 +6,7 @@ import {
   getIsSessionUpgradeAutoEnabled,
   getIsTurnstileSolverEnabled,
   useIsSessionServiceEnabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import {
   type ChallengeSolver,
   ChallengeType,
@@ -18,7 +18,7 @@ import {
   createSessionInitializationService,
   createTurnstileMockSolver,
   type SessionInitializationService,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { PropsWithChildren, useEffect } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { GraphqlProvider } from 'src/app/apollo'
@@ -28,12 +28,13 @@ import { type DatadogAppNameTag } from 'src/app/datadog'
 import { onHashcashSolveCompleted, sessionInitAnalytics } from 'src/app/features/sessions/analytics'
 import { useOnCrashAppStateResetter } from 'src/store/appStateResetter'
 import { getReduxStore } from 'src/store/store'
-import { BlankUrlProvider } from 'lx/src/contexts/UrlContext'
-import { useCurrentLanguage } from 'lx/src/features/language/hooks'
-import { LocalizationContextProvider } from 'lx/src/features/language/LocalizationContext'
-import { getLocale } from 'lx/src/features/language/navigatorLocale'
-import Trace from 'lx/src/features/telemetry/Trace'
-import i18n, { changeLanguage } from 'lx/src/i18n'
+import { BlankUrlProvider } from 'uniswap/src/contexts/UrlContext'
+import { useCurrentLanguage } from 'uniswap/src/features/language/hooks'
+import { LocalizationContextProvider } from 'uniswap/src/features/language/LocalizationContext'
+import { getLocale } from 'uniswap/src/features/language/navigatorLocale'
+import Trace from 'uniswap/src/features/telemetry/Trace'
+import i18n, { changeLanguage } from 'uniswap/src/i18n'
+import { getLogger } from 'utilities/src/logger/logger'
 import { ErrorBoundary } from 'wallet/src/components/ErrorBoundary/ErrorBoundary'
 import { StatsigUserIdentifiersUpdater } from 'wallet/src/features/gating/StatsigUserIdentifiersUpdater'
 import { SharedWalletProvider } from 'wallet/src/providers/SharedWalletProvider'
@@ -62,11 +63,12 @@ const provideSessionInitializationService = (): SessionInitializationService => 
           createHashcashWorkerChannel({
             getWorker: () =>
               new Worker(
-                new URL('@universe/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
+                new URL('@luxexchange/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
                 { type: 'module' },
               ),
           }),
         onSolveCompleted: onHashcashSolveCompleted,
+        getLogger,
       }),
     )
   } else {
@@ -84,6 +86,7 @@ const provideSessionInitializationService = (): SessionInitializationService => 
     }),
     performanceTracker,
     getIsSessionUpgradeAutoEnabled,
+    getLogger,
     analytics: sessionInitAnalytics,
   })
 }

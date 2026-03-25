@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { toContractInput } from '~/appGraphql/data/util'
