@@ -31,7 +31,7 @@ function processConfig(baseConfig, globalRules) {
 
     // Second pass: process each override to resolve __INCLUDE_GLOBAL_VALUES__ markers
     config.overrides = processedOverrides.map((override) =>
-      override.linter?.rules ? resolveIncludeGlobalValuesMarkers(override, globalRules) : override
+      override.linter?.rules ? resolveIncludeGlobalValuesMarkers(override, globalRules) : override,
     )
   } else if (config.overrides) {
     throw new Error('`overrides` must be an array')

@@ -15,11 +15,6 @@
   "nx": {
     "includedScripts": []
   },
-  "keywords": [
-    "biome",
-    "config",
-    "linting",
-    "formatting"
-  ],
+  "keywords": ["biome", "config", "linting", "formatting"],
   "license": "MIT"
 }
