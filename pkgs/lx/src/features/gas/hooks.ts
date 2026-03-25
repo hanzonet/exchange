@@ -1,4 +1,4 @@
-import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
+import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
 import { type FormattedDEXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
 import { type GasStrategyType, useStatsigClientStatus } from '@luxexchange/gating'
 import { BigNumber, type providers } from 'ethers/lib/ethers'

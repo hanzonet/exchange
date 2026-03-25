@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
 import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'

@@ -1,4 +1,4 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { describe, expect, it } from 'vitest'
 import { isUnsupportedLPChain } from '~/components/Liquidity/utils/isUnsupportedLPChain'

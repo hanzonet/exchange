@@ -1,5 +1,5 @@
 import { skipToken } from '@tanstack/react-query'
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import type { FORQuote, FORSupportedFiatCurrency, FORSupportedToken } from '@luxexchange/api'
 import { RampDirection, TradingApi } from '@luxexchange/api'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'

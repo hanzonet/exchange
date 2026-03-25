@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 import { ExtensionEventName } from 'uniswap/src/features/telemetry/constants/extension'
 import { SwapEventName } from 'uniswap/src/features/telemetry/constants/features'
 import { UniswapEventName } from 'uniswap/src/features/telemetry/constants/uniswap'

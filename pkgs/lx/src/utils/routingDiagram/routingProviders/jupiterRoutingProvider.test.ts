@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import { type JupiterOrderResponse, TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { SolanaTrade } from 'uniswap/src/features/transactions/swap/types/solana'

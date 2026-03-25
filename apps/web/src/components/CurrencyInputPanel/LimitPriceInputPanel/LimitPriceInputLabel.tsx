@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { Trans } from 'react-i18next'
 import { Text } from '@luxfi/ui/src'
 import { PrefetchBalancesWrapper } from '~/appGraphql/data/apollo/AdaptiveTokenBalancesProvider'

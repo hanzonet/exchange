@@ -1,13 +1,13 @@
 import { TransactionResponse } from '@ethersproject/abstract-provider'
 import { BigNumber } from '@ethersproject/bignumber'
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import {
   FlatFeeOptions,
   SwapRouter,
   UNIVERSAL_ROUTER_ADDRESS,
   UniversalRouterVersion,
-} from '@luxamm/universal-router-sdk'
-import { FeeOptions, toHex } from '@luxamm/v3-sdk'
+} from '@uniswap/universal-router-sdk'
+import { FeeOptions, toHex } from '@uniswap/v3-sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'

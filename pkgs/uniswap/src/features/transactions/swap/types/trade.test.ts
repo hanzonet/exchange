@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-import { TradeType } from '@luxamm/sdk-core'
+import { TradeType } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { UnwrapTrade, WrapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { ETH, WETH } from 'uniswap/src/test/fixtures/lib/sdk'

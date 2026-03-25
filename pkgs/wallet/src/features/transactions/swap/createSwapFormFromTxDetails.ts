@@ -1,4 +1,4 @@
-import { Currency, TradeType } from '@luxamm/sdk-core'
+import { Currency, TradeType } from '@uniswap/sdk-core'
 import { AssetType, CurrencyAsset } from 'uniswap/src/entities/assets'
 import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
 import { getAmountsFromTrade } from 'uniswap/src/features/transactions/swap/utils/getAmountsFromTrade'

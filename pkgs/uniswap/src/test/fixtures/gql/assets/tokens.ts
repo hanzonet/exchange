@@ -1,4 +1,4 @@
-import { Token as SDKToken } from '@luxamm/sdk-core'
+import { Token as SDKToken } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import {
   DAI,

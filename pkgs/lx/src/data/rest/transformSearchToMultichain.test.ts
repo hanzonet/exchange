@@ -6,7 +6,7 @@ import {
   SpamCode,
   Token,
   TokenProtectionInfo,
-} from '@luxamm/client-search/dist/search/v1/api_pb'
+} from '@uniswap/client-search/dist/search/v1/api_pb'
 import {
   shouldTransformSearchToMultichain,
   transformSearchToMultichain,

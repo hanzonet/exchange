@@ -1,5 +1,5 @@
 import { ContractTransaction } from '@ethersproject/contracts'
-import { CurrencyAmount, MaxUint256, Token } from '@luxamm/sdk-core'
+import { CurrencyAmount, MaxUint256, Token } from '@uniswap/sdk-core'
 import { useCallback, useMemo, useRef } from 'react'
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'

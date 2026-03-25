@@ -1,4 +1,4 @@
-import { TradeType } from '@luxamm/sdk-core'
+import { TradeType } from '@uniswap/sdk-core'
 import { FetchError } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { SwapEventName } from 'uniswap/src/features/telemetry/constants/features'

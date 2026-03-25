@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { AssetType, CurrencyAsset } from 'uniswap/src/entities/assets'
 import { currencyAddress } from 'uniswap/src/utils/currencyId'
 

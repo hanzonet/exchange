@@ -1,4 +1,4 @@
-import { Currency, Token, TradeType } from '@luxamm/sdk-core'
+import { Currency, Token, TradeType } from '@uniswap/sdk-core'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { GetQuoteArgs, PoolType, RouterPreference, TokenInRoute, URAQuoteType } from '~/state/routing/types'

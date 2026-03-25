@@ -1,6 +1,6 @@
 import '~/test-utils/tokens/mocks'
 import { BigNumber } from '@ethersproject/bignumber'
-import { WETH9 } from '@luxamm/sdk-core'
+import { WETH9 } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

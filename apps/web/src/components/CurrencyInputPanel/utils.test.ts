@@ -1,4 +1,4 @@
-import { Token } from '@luxamm/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { formatCurrencySymbol } from '~/components/CurrencyInputPanel/utils'

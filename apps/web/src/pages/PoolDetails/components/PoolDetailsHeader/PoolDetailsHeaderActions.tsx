@@ -1,4 +1,4 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { GraphQLApi, parseRestProtocolVersion } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, useMedia } from '@luxfi/ui/src'

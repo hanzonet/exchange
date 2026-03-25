@@ -1,5 +1,5 @@
 import type { BottomSheetView } from '@gorhom/bottom-sheet'
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ComponentProps, memo, useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'

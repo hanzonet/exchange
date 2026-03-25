@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { type ComponentProps, PropsWithChildren, ReactNode } from 'react'
 import { Flex, Text } from '@luxfi/ui/src'
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'

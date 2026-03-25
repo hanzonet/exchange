@@ -3,14 +3,14 @@ import { UseQueryResult, useQuery } from '@tanstack/react-query'
 import {
   VerifyWalletRequest,
   VerifyWalletResponse,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
+} from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
 import {
   AuctionValidation,
   Erc1155GateData,
   KycVerificationStatus,
   PredicateKycVerificationData,
   ValidationType,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+} from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { PollingInterval } from 'uniswap/src/constants/misc'
 import { AuctionMutationClient } from 'uniswap/src/data/apiClients/liquidityService/AuctionMutationClient'

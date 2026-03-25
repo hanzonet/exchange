@@ -1,5 +1,5 @@
 import { flush, getUserId, Identify, identify, init, setDeviceId, track } from '@amplitude/analytics-react-native'
-import { ANONYMOUS_DEVICE_ID } from '@luxamm/analytics'
+import { ANONYMOUS_DEVICE_ID } from '@uniswap/analytics'
 import {
   Analytics,
   AnalyticsInitConfig,

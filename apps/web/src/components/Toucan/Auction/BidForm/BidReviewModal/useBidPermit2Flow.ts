@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 import { Contract } from '@ethersproject/contracts'
-import { MaxAllowanceTransferAmount, permit2Address } from '@luxamm/permit2-sdk'
-import { Currency, CurrencyAmount, MaxUint256, Token } from '@luxamm/sdk-core'
+import { MaxAllowanceTransferAmount, permit2Address } from '@uniswap/permit2-sdk'
+import { Currency, CurrencyAmount, MaxUint256, Token } from '@uniswap/sdk-core'
 import ms from 'ms'
 import { useMemo } from 'react'
 import ERC20_ABI from '@luxexchange/lx/src/abis/erc20.json'

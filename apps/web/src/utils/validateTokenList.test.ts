@@ -1,4 +1,4 @@
-import { TokenInfo } from '@luxamm/token-lists'
+import { TokenInfo } from '@uniswap/token-lists'
 import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { validateTokens } from '~/utils/validateTokenList'
 

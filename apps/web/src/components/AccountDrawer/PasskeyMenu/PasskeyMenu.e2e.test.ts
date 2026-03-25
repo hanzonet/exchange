@@ -6,7 +6,7 @@ import { getVisibleDropdownElementByTestId } from '~/playwright/fixtures/utils'
 import { TEST_WALLET_ADDRESS } from '~/playwright/fixtures/wallets'
 import { Mocks } from '~/playwright/mocks/mocks'
 
-// NOTE: These tests require @luxamm/client-privy-embedded-wallet to be installed
+// NOTE: These tests require @uniswap/client-privy-embedded-wallet to be installed
 // (built with NPM_READ_ONLY_TOKEN). The Connect RPC HTTP call only fires when the
 // package loads successfully.
 

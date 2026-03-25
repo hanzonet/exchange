@@ -1,4 +1,4 @@
-import { Token } from '@luxamm/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { SwapConfigKey } from '@luxexchange/gating'
 import { AVALANCHE_LOGO } from 'ui/src/assets'

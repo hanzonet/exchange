@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@luxamm/sdk-core'
+import { CurrencyAmount, Token } from '@uniswap/sdk-core'
 import { useEffect } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'

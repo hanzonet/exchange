@@ -1,6 +1,6 @@
 /* eslint-disable max-params */
 
-import type { Currency } from '@luxamm/sdk-core'
+import type { Currency } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { Flex, styled, Text } from '@luxfi/ui/src'
 import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'

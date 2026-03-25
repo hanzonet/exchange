@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { GasFeeResult } from '@luxexchange/api'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'

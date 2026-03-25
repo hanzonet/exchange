@@ -1,4 +1,4 @@
-import { SOCKS_CONTROLLER_ADDRESSES, Token } from '@luxamm/sdk-core'
+import { SOCKS_CONTROLLER_ADDRESSES, Token } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useAccount } from '~/hooks/useAccount'

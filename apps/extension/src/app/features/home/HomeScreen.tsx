@@ -1,5 +1,5 @@
 import { useApolloClient } from '@apollo/client'
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { getIsNotificationServiceLocalOverrideEnabled } from '@luxexchange/notifications'
 import React, { memo, useCallback, useEffect, useState } from 'react'

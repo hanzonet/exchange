@@ -1,5 +1,5 @@
 import 'utilities/src/logger/mocks'
-import { CurrencyAmount, WETH9 } from '@luxamm/sdk-core'
+import { CurrencyAmount, WETH9 } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

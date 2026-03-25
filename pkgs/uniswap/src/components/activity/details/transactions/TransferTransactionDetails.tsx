@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 import { Flex, Loader, Text, TouchableArea } from 'ui/src'
 import { fonts, iconSizes } from 'ui/src/theme'
 import { NftTransactionDetails } from 'uniswap/src/components/activity/details/transactions/NftTransactionDetails'

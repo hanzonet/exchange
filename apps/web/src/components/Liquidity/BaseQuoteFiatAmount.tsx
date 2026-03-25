@@ -1,4 +1,4 @@
-import { Currency, Price } from '@luxamm/sdk-core'
+import { Currency, Price } from '@uniswap/sdk-core'
 import { Text, TextProps } from '@luxfi/ui/src'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

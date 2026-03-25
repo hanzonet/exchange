@@ -1,6 +1,6 @@
 import { skipToken } from '@reduxjs/toolkit/query/react'
 import { renderHook } from '@testing-library/react'
-import { CurrencyAmount, TradeType } from '@luxamm/sdk-core'
+import { CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import ms from 'ms'
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { useIsMismatchAccountQuery } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'

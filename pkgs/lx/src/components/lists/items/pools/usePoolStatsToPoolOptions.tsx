@@ -1,5 +1,5 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
-import { PoolStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { PoolStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
 import { parseRestProtocolVersion } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { OnchainItemListOptionType, PoolOption } from 'uniswap/src/components/lists/items/types'

@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { useNavigate } from 'react-router'
 import { toGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'

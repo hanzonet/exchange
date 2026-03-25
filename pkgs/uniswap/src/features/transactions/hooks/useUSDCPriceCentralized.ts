@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount, Price } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
 import { normalizeToken, usePrice } from '@luxexchange/prices'
 import { useMemo } from 'react'
 import type { PollingInterval } from 'uniswap/src/constants/misc'

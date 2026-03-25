@@ -1,5 +1,5 @@
-import { AllowanceTransfer, MaxAllowanceTransferAmount, PermitSingle, permit2Address } from '@luxamm/permit2-sdk'
-import { CurrencyAmount, Token } from '@luxamm/sdk-core'
+import { AllowanceTransfer, MaxAllowanceTransferAmount, PermitSingle, permit2Address } from '@uniswap/permit2-sdk'
+import { CurrencyAmount, Token } from '@uniswap/sdk-core'
 import ms from 'ms'
 import { useCallback, useMemo, useRef } from 'react'
 import { PERMIT2_ABI } from '@luxexchange/lx/src/abis/permit2'

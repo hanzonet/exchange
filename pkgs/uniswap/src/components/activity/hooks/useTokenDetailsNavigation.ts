@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 import { useCallback } from 'react'
 import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'

@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import { formatPriceImpact } from 'uniswap/src/features/transactions/swap/utils/formatPriceImpact'
 
 describe('formatPriceImpact', () => {

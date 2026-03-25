@@ -1,5 +1,5 @@
-import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
-import { WETH9 } from '@luxamm/sdk-core'
+import { listTransactions } from '@uniswap/client-data-api/dist/data/v1/api-DataApiService_connectquery'
+import { WETH9 } from '@uniswap/sdk-core'
 import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'

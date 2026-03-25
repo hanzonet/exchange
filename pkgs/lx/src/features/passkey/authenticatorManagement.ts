@@ -3,7 +3,7 @@ import type {
   RegistrationOptions_AuthenticatorAttachment as AuthenticatorAttachment,
   RecoveryMethod,
   RegistrationOptions,
-} from '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+} from '@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
 import { EmbeddedWalletApiClient } from 'uniswap/src/data/rest/embeddedWallet/requests'
 import {
   base64ToBase64url,

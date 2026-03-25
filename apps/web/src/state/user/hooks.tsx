@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 
-import { Percent } from '@luxamm/sdk-core'
-import { Pair } from '@luxamm/v2-sdk'
+import { Percent } from '@uniswap/sdk-core'
+import { Pair } from '@uniswap/v2-sdk'
 import JSBI from 'jsbi'
 import { useCallback, useMemo } from 'react'
 import { useGetPositionsForPairs } from '@luxexchange/lx/src/data/rest/getPositions'

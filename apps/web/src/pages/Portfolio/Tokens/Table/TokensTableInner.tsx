@@ -1,5 +1,5 @@
 import { type ColumnDef, Row } from '@tanstack/react-table'
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

@@ -1,4 +1,4 @@
-import { Currency, Percent } from '@luxamm/sdk-core'
+import { Currency, Percent } from '@uniswap/sdk-core'
 import { SwapPriceUpdateUserResponse } from '@luxexchange/lx/src/features/telemetry/types'
 import { TransactionOriginType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { SwapResult } from '~/hooks/useSwapCallback'

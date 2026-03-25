@@ -1,4 +1,4 @@
-import { Token } from '@luxamm/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import {
   OnchainItemListOptionType,
   TokenOption,

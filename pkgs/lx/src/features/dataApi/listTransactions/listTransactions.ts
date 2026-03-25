@@ -1,6 +1,6 @@
 import { PartialMessage } from '@bufbuild/protobuf'
-import { FiatOnRampParams, ListTransactionsResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
-import { TransactionTypeFilter } from '@luxamm/client-data-api/dist/data/v1/types_pb'
+import { FiatOnRampParams, ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import { TransactionTypeFilter } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { useListTransactionsQuery } from 'uniswap/src/data/rest/listTransactions'

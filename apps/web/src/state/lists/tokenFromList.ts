@@ -1,4 +1,4 @@
-import { Currency, Token } from '@luxamm/sdk-core'
+import { Currency, Token } from '@uniswap/sdk-core'
 import { Tags, TokenInfo, TokenList } from 'utils/tokenListTypes'
 import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'

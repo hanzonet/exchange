@@ -1,4 +1,4 @@
-import { CurrencyAmount, TradeType } from '@luxamm/sdk-core'
+import { CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
 import { USDC } from '@luxexchange/lx/src/constants/tokens'

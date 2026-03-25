@@ -1,4 +1,4 @@
-import { Currency, Percent } from '@luxamm/sdk-core'
+import { Currency, Percent } from '@uniswap/sdk-core'
 import { useCallback, useEffect, useMemo } from 'react'
 import { Flex } from '@luxfi/ui/src'
 // biome-ignore lint/style/noRestrictedImports: ui constant needed for modal animation timing

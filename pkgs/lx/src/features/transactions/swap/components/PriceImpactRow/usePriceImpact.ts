@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'

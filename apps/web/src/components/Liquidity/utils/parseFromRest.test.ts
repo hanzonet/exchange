@@ -7,12 +7,12 @@ import {
   Position as RestPosition,
   Token as RestToken,
   V4Position as RestV4Position,
-} from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
-import { ChainId, PoolInformation } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { CurrencyAmount, Token } from '@luxamm/sdk-core'
-import { Pair } from '@luxamm/v2-sdk'
-import { FeeAmount, TICK_SPACINGS, Pool as V3Pool, Position as V3Position } from '@luxamm/v3-sdk'
-import { Pool as V4Pool, Position as V4Position } from '@luxamm/v4-sdk'
+} from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { ChainId, PoolInformation } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { Pair } from '@uniswap/v2-sdk'
+import { FeeAmount, TICK_SPACINGS, Pool as V3Pool, Position as V3Position } from '@uniswap/v3-sdk'
+import { Pool as V4Pool, Position as V4Position } from '@uniswap/v4-sdk'
 import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { DAI, USDT } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

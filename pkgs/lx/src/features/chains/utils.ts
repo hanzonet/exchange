@@ -1,5 +1,5 @@
 import { BigNumber, BigNumberish } from '@ethersproject/bignumber'
-import { Token } from '@luxamm/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
 import { ALL_CHAIN_IDS, getChainInfo, ORDERED_CHAINS } from '@luxexchange/lx/src/features/chains/chainInfo'

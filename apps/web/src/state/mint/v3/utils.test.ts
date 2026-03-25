@@ -1,4 +1,4 @@
-import { Token } from '@luxamm/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { tryParsePrice } from '~/state/mint/v3/utils'
 

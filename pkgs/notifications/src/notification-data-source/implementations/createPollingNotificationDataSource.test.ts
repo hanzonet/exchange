@@ -5,7 +5,7 @@ import {
   Metadata,
   Notification,
   PlatformType,
-} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+} from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
 import type { InAppNotification, NotificationsApiClient } from '@luxexchange/api'
 import { ContentStyle } from '@luxexchange/api'
 import { getNotificationQueryOptions } from '@luxexchange/notifications/src/notification-data-source/getNotificationQueryOptions'

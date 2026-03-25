@@ -1,5 +1,5 @@
 import { useQueryClient } from '@tanstack/react-query'
-import { GetLatestCheckpointRequest } from '@luxamm/client-data-api/dist/data/v1/auction_pb'
+import { GetLatestCheckpointRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
 import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'

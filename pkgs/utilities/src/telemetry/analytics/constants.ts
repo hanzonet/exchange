@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxamm/analytics-events'
+import { SharedEventName } from '@uniswap/analytics-events'
 
 export const DUMMY_KEY = '00000000000000000000000000000000'
 

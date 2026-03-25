@@ -1,4 +1,4 @@
-import { FiatOnRampTransaction, FiatOnRampTransactionStatus } from '@luxamm/client-data-api/dist/data/v1/types_pb'
+import { FiatOnRampTransaction, FiatOnRampTransactionStatus } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { TradingApi } from '@luxexchange/api'
 
 import { parseRestOnRampTransaction } from 'uniswap/src/features/activity/parse/parseOnRampTransaction'

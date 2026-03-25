@@ -1,4 +1,4 @@
-import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { OnChainTransactionFields, TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
 import type { ValidatedTransactionRequest } from 'uniswap/src/features/transactions/types/transactionRequests'
 

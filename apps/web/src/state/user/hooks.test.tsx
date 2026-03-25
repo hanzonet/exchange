@@ -1,5 +1,5 @@
 import { act } from '@testing-library/react'
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { deserializeToken, serializeToken } from '@luxexchange/lx/src/utils/currency'
 import store from '~/state'

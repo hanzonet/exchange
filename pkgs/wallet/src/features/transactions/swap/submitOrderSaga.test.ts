@@ -1,5 +1,5 @@
-import { Protocol } from '@luxamm/router-sdk'
-import { TradeType } from '@luxamm/sdk-core'
+import { Protocol } from '@uniswap/router-sdk'
+import { TradeType } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { testSaga } from 'redux-saga-test-plan'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'

@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { Flex, Text } from '@luxfi/ui/src'
 import { ArrowDownArrowUp } from '@luxfi/ui/src/components/icons/ArrowDownArrowUp'
 import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'

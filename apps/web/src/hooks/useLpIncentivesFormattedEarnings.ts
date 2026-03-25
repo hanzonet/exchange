@@ -1,5 +1,5 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
-import { type Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { type Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'

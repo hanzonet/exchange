@@ -1,4 +1,4 @@
-import { ChartPeriod } from '@luxamm/client-data-api/dist/data/v1/api_pb'
+import { ChartPeriod } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { isWarmLoadingStatus } from '@luxexchange/api'
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

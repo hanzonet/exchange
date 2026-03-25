@@ -1,4 +1,4 @@
-import { CurrencyAmount } from '@luxamm/sdk-core'
+import { CurrencyAmount } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { DAI, nativeOnChain } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

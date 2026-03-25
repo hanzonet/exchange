@@ -1,4 +1,4 @@
-import { OnChainTransaction, OnChainTransactionLabel } from '@luxamm/client-data-api/dist/data/v1/types_pb'
+import { OnChainTransaction, OnChainTransactionLabel } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { DappInfoTransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
 
 /**

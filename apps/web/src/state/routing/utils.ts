@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 import { BigNumber } from '@ethersproject/bignumber'
-import { MixedRouteSDK } from '@luxamm/router-sdk'
-import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@luxamm/sdk-core'
+import { MixedRouteSDK } from '@uniswap/router-sdk'
+import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@uniswap/sdk-core'
 import {
   DutchOrderInfo,
   DutchOrderInfoJSON,
@@ -14,9 +14,9 @@ import {
   UnsignedV3DutchOrderInfo,
   UnsignedV3DutchOrderInfoJSON,
   V3DutchOutputJSON,
-} from '@luxamm/luxswap-sdk'
-import { Pair, Route as V2Route } from '@luxamm/v2-sdk'
-import { FeeAmount, Pool, Route as V3Route } from '@luxamm/v3-sdk'
+} from '@uniswap/luxswap-sdk'
+import { Pair, Route as V2Route } from '@uniswap/v2-sdk'
+import { FeeAmount, Pool, Route as V3Route } from '@uniswap/v3-sdk'
 import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

@@ -1,4 +1,4 @@
-import { PositionStatus } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { PositionStatus } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

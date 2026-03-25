@@ -2,8 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 import {
   CheckApprovalLPRequest,
   IncreaseLPPositionRequest,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
-import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+} from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
+import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import {
   createContext,

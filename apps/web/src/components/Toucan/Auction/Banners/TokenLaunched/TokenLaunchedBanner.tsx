@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { GetClearingPriceHistoryRequest } from '@luxamm/client-data-api/dist/data/v1/auction_pb'
+import { GetClearingPriceHistoryRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useMemo } from 'react'
 import { useSporeColors } from '@luxfi/ui/src'
 import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'

@@ -1,6 +1,6 @@
 import type { PartialMessage } from '@bufbuild/protobuf'
-import type { ListTokensRequest, ListTokensResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
-import type { MultichainToken } from '@luxamm/client-data-api/dist/data/v1/types_pb'
+import type { ListTokensRequest, ListTokensResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
+import type { MultichainToken } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { TokenSortMethod } from '~/components/Tokens/constants'
 import { backendSortedToMultichainTokens } from '~/state/explore/listTokens/services/backendSorted/backendSortedToMultichainTokens'
 import { tokenStatsToMultichainTokens } from '~/state/explore/listTokens/services/legacy/legacyToMultichainTokens'

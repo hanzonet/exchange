@@ -1,7 +1,7 @@
 /*
  * Represents the search result types that are saved in Redux.
  */
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { CurrencyId } from 'uniswap/src/types/currency'
 

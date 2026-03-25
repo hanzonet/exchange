@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { Flex, FlexProps, Text } from '@luxfi/ui/src'
 import { Chevron } from '@luxfi/ui/src/components/icons/Chevron'
 import { iconSizes } from '@luxfi/ui/src/theme'

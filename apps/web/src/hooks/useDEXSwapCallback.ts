@@ -1,7 +1,7 @@
 import { TypedDataDomain, TypedDataField } from '@ethersproject/abstract-signer'
 import { BigNumber } from '@ethersproject/bignumber'
-import { PermitTransferFrom } from '@luxamm/permit2-sdk'
-import { Percent } from '@luxamm/sdk-core'
+import { PermitTransferFrom } from '@uniswap/permit2-sdk'
+import { Percent } from '@uniswap/sdk-core'
 import {
   DutchOrder,
   DutchOrderBuilder,
@@ -11,7 +11,7 @@ import {
   UnsignedV3DutchOrder,
   V2DutchOrderBuilder,
   V3DutchOrderBuilder,
-} from '@luxamm/luxswap-sdk'
+} from '@uniswap/luxswap-sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { InterfaceEventName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'

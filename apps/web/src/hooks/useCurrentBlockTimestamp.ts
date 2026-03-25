@@ -1,4 +1,4 @@
-import { MULTICALL_ADDRESSES } from '@luxamm/sdk-core'
+import { MULTICALL_ADDRESSES } from '@uniswap/sdk-core'
 import ms from 'ms'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useReadContract } from 'wagmi'

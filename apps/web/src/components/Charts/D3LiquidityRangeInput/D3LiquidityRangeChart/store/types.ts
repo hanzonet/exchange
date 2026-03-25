@@ -1,5 +1,5 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
-import { Currency } from '@luxamm/sdk-core'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+import { Currency } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import * as d3 from 'd3'
 import { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'

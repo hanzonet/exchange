@@ -1,7 +1,7 @@
 import {
   ChallengeFailure_Reason,
   VerifyFailure_Reason,
-} from '@luxamm/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
+} from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
 import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
 import { ChallengeRejectedError } from '@luxexchange/sessions/src/session-repository/errors'
 import type { SessionRepository, TypedChallengeData } from '@luxexchange/sessions/src/session-repository/types'
@@ -12,7 +12,7 @@ import type { Logger } from 'utilities/src/logger/logger'
  * Creates a session repository that handles communication with the session service.
  * This is the layer that makes actual API calls to the backend.
  *
- * TODO(proto): `VerifyResponse` in `@luxamm/client-platform-service` still has a proto3
+ * TODO(proto): `VerifyResponse` in `@uniswap/client-platform-service` still has a proto3
  * issue where an empty `VerifySuccess` message gets silently dropped, leaving
  * `outcome.case === undefined`. The `verifySession()` method works around this by using
  * the `retry` flag as a discriminator.

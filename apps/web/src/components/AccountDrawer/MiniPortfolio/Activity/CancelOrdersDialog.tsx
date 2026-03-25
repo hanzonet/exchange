@@ -1,4 +1,4 @@
-import { CurrencyAmount } from '@luxamm/sdk-core'
+import { CurrencyAmount } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

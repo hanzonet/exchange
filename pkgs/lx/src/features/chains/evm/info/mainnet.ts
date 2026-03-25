@@ -1,4 +1,4 @@
-import { CurrencyAmount } from '@luxamm/sdk-core'
+import { CurrencyAmount } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
 import { ETH_LOGO, ETHEREUM_LOGO } from 'ui/src/assets'

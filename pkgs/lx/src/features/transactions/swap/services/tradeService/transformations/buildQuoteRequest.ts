@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { GasStrategy, TradingApi } from '@luxexchange/api'
 import { getActiveGasStrategy } from 'uniswap/src/features/gas/utils'
 import {

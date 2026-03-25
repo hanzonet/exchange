@@ -1,4 +1,4 @@
-import { OriginApplication } from '@luxamm/analytics'
+import { OriginApplication } from '@uniswap/analytics'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { isPlaywrightEnv, isTestEnv } from '@luxfi/utilities/src/environment/env'
 import { logger } from '@luxfi/utilities/src/logger/logger'

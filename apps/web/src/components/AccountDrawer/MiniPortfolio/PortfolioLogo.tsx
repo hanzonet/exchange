@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import React, { memo } from 'react'
 import { Flex, useSporeColors } from '@luxfi/ui/src'
 import { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'

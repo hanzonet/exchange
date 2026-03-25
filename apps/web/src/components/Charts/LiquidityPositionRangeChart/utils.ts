@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
 import { FlexProps } from '@luxfi/ui/src/components/layout/Flex'
 
 export function getCrosshairProps(

@@ -1,4 +1,4 @@
-import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
+import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { USDC, USDC_MAINNET, USDT } from '@luxexchange/lx/src/constants/tokens'
 import { ETH } from '@luxexchange/lx/src/test/fixtures/lib/sdk'
 import {

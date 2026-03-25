@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'

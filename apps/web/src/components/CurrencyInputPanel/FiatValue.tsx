@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 import { Trans } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'

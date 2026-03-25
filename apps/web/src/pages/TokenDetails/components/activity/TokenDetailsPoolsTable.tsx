@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client'
-import { type Currency } from '@luxamm/sdk-core'
+import { type Currency } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 import { Flex } from '@luxfi/ui/src'
 import { AddressStringFormat, normalizeAddress } from '@luxexchange/lx/src/utils/addresses'

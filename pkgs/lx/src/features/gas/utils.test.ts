@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@luxamm/sdk-core'
+import { CurrencyAmount, Token } from '@uniswap/sdk-core'
 import type { GasStrategy } from '@luxexchange/api'
 import { DynamicConfigs, type GasStrategies, getStatsigClient } from '@luxexchange/gating'
 import { DAI } from 'uniswap/src/constants/tokens'

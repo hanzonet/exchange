@@ -1,4 +1,4 @@
-import { Currency, Token } from '@luxamm/sdk-core'
+import { Currency, Token } from '@uniswap/sdk-core'
 
 /**
  * Checks if a token matches a search term.

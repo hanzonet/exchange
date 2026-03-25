@@ -1,7 +1,7 @@
 import { type PartialMessage } from '@bufbuild/protobuf'
 import { createPromiseClient } from '@connectrpc/connect'
-import { UniRpcService } from '@luxamm/client-unirpc-v2/dist/uniswap/unirpc/v2/service_connect'
-import type { EstimateGasFeeRequest } from '@luxamm/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
+import { UniRpcService } from '@uniswap/client-unirpc-v2/dist/uniswap/unirpc/v2/service_connect'
+import type { EstimateGasFeeRequest } from '@uniswap/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
 import {
   createGasServiceClient,
   createWithSessionRetry,

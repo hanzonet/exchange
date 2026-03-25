@@ -1,4 +1,4 @@
-import { getRewards } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
+import { getRewards } from '@uniswap/client-data-api/dist/data/v1/api-DataApiService_connectquery'
 import { FeatureFlags } from '@luxexchange/gating'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { expect, getTest } from '~/playwright/fixtures'
