@@ -6,7 +6,7 @@
     "@uniswap/sdk-core": "7.12.1",
     "@luxexchange/api": "workspace:^",
     "@luxexchange/websocket": "workspace:^",
-    "utilities": "workspace:^"
+    "@luxfi/utilities": "workspace:^"
   },
   "peerDependencies": {
     "react": "19.0.3"

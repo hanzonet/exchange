@@ -20,14 +20,13 @@ interface AppConfig {
 
 // ── Shared constants ─────────────────────────────────────────────────
 export const ENTRY_GATEWAY_URLS = {
-  development: 'https://entry-gateway.backend-staging.api.lux.org',
-  staging: 'https://entry-gateway.backend-staging.api.lux.org',
-  production: 'https://entry-gateway.backend-prod.api.lux.org',
+  development: 'https://gw.lux.exchange/conversion',
+  staging: 'https://gw.lux.exchange/conversion',
+  production: 'https://gw.lux.exchange/conversion',
 } as const
 
-// Statsig proxy via Cloudflare gateway — the URL is constant for the web app
-// (platform prefix "interface", service prefix "gating")
-const STATSIG_PROXY_TARGET = 'https://gating.interface.gateway.uniswap.org'
+// Statsig proxy -- routed through gw.lux.exchange in production
+const STATSIG_PROXY_TARGET = 'https://gw.lux.exchange/gateway'
 
 export const WEBSOCKET_URLS = {
   development: 'https://websockets.backend-staging.api.uniswap.org',
@@ -82,7 +81,7 @@ export function createApp({ fetchSpaHtml, getEntryGatewayUrl, getWebSocketUrl, g
       redirect: 'manual',
     })
 
-    // Rewrite Set-Cookie headers so cookies work on non-.lux.org domains
+    // Rewrite Set-Cookie headers so cookies work on non-.lux.exchange domains
     // (Vercel previews, staging, etc.)
     return rewriteProxiedCookies(response)
   })
@@ -101,7 +100,7 @@ export function createApp({ fetchSpaHtml, getEntryGatewayUrl, getWebSocketUrl, g
       redirect: 'manual',
     })
   })
-  
+
   // ── BFF proxy: WebSocket ────────────────────────────────────────────
   // In production, clients connect directly to the backend WebSocket
   // service — see getWebSocketUrl() in packages/api/src/getWebSocketUrl.ts.

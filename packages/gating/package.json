@@ -9,7 +9,7 @@
     "@statsig/react-native-bindings": "3.12.2",
     "@luxexchange/api": "workspace:*",
     "@luxexchange/config": "workspace:*",
-    "utilities": "workspace:*"
+    "@luxfi/utilities": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "22.13.1",

@@ -30,6 +30,15 @@ export const CHAIN_ID_TO_URL_PARAM: Record<UniverseChainId, string> = {
   [UniverseChainId.XLayer]: 'xlayer',
   [UniverseChainId.Zksync]: 'zksync',
   [UniverseChainId.Zora]: 'zora',
+  // Lux ecosystem chains
+  [UniverseChainId.Lux]: 'lux',
+  [UniverseChainId.LuxTestnet]: 'lux_testnet',
+  [UniverseChainId.LuxDev]: 'lux_dev',
+  [UniverseChainId.Zoo]: 'zoo',
+  [UniverseChainId.ZooTestnet]: 'zoo_testnet',
+  [UniverseChainId.Hanzo]: 'hanzo',
+  [UniverseChainId.SPC]: 'spc',
+  [UniverseChainId.Pars]: 'pars',
 }
 
 /** Reverse mapping: URL-param → chain ID (built once, O(1) lookup). */
