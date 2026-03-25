@@ -232,8 +232,8 @@ export default defineConfig(({ mode }) => {
     '@luxexchange/websocket/src': path.resolve(__dirname, '../../pkgs/websocket/src'),
     '@luxexchange/websocket': path.resolve(__dirname, '../../pkgs/websocket'),
     // @luxexchange/* aliases (workspace package scope)
-    '@luxexchange/lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
-    '@luxexchange/lx': path.resolve(__dirname, '../../pkgs/lx'),
+    '@luxexchange/lx/src': path.resolve(__dirname, '../../pkgs/uniswap/src'),
+    '@luxexchange/lx': path.resolve(__dirname, '../../pkgs/uniswap'),
     '@luxexchange/config': path.resolve(__dirname, '../../pkgs/config'),
     '@luxexchange/sessions': path.resolve(__dirname, '../../pkgs/sessions'),
     // @luxfi/* aliases (shared ecosystem packages)
