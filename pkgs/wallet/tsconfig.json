@@ -1,7 +1,22 @@
 {
   "extends": "../../config/tsconfig/app.json",
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.json", "env.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.json",
+    "env.d.ts"
+  ],
   "references": [
+    {
+      "path": "../uniswap"
+    },
+    {
+      "path": "../utilities"
+    },
+    {
+      "path": "../lx"
+    },
     {
       "path": "../ui"
     },
@@ -13,12 +28,6 @@
     },
     {
       "path": "../api"
-    },
-    {
-      "path": "../uniswap"
-    },
-    {
-      "path": "../utilities"
     }
   ],
   "compilerOptions": {

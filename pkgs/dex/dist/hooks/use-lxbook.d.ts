@@ -1,19 +1,8 @@
-import { type LXAction, type LXL1, TIF } from '../precompile/types';
+import { type LXAction, TIF } from '../precompile/types';
 /**
  * Hook to get L1 (best bid/ask) for a market
  */
-export declare function useLXBookL1(marketId: number): {
-    l1: LXL1 | undefined;
-    isLoading: boolean;
-    error: import("viem").ReadContractErrorType | null;
-    refetch: (options?: import("@tanstack/query-core").RefetchOptions) => Promise<import("@tanstack/query-core").QueryObserverResult<{
-        bestBidPxX18: bigint;
-        bestBidSzX18: bigint;
-        bestAskPxX18: bigint;
-        bestAskSzX18: bigint;
-        lastTradePxX18: bigint;
-    }, import("viem").ReadContractErrorType>>;
-};
+export declare function useLXBookL1(marketId: number): any;
 /**
  * Hook to get market config
  */

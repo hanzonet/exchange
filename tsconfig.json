@@ -44,18 +44,6 @@
       "path": "./pkgs/lx"
     },
     {
-      "path": "./pkgs/dex"
-    },
-    {
-      "path": "./pkgs/exchange"
-    },
-    {
-      "path": "./pkgs/eslint-config"
-    },
-    {
-      "path": "./pkgs/biome-config"
-    },
-    {
       "path": "./apps/web"
     },
     {
@@ -69,6 +57,24 @@
     },
     {
       "path": "./tools/uniswap-nx"
+    },
+    {
+      "path": "./pkgs/react-query"
+    },
+    {
+      "path": "./pkgs/analytics"
+    },
+    {
+      "path": "./pkgs/privacy"
+    },
+    {
+      "path": "./pkgs/uniswap"
+    },
+    {
+      "path": "./pkgs/logger"
+    },
+    {
+      "path": "./pkgs/trpc"
     }
   ]
 }
