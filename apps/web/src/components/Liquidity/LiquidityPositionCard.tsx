@@ -31,7 +31,7 @@ import { getBaseAndQuoteCurrencies } from '~/components/Liquidity/utils/currency
 import { MouseoverTooltip } from '~/components/Tooltip'
 import useHoverProps from '~/hooks/useHoverProps'
 import { useLpIncentivesFormattedEarnings } from '~/hooks/useLpIncentivesFormattedEarnings'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 export function LiquidityPositionCardLoader() {
   return (

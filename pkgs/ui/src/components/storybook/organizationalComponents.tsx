@@ -1,5 +1,5 @@
 import { Fragment, PropsWithChildren } from 'react'
-import { Spacer } from 'tamagui'
+import { Spacer } from '@hanzo/gui'
 import { Flex } from '@luxfi/ui/src/components/layout'
 import { Separator } from '@luxfi/ui/src/components/layout/Separator'
 import { Text } from '@luxfi/ui/src/components/text/Text'

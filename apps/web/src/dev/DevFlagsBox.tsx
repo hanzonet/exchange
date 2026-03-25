@@ -21,7 +21,7 @@ import { GatingRowContent, GatingSwitch } from '~/components/FeatureFlagModal/Fe
 import { MouseoverTooltip, TooltipSize } from '~/components/Tooltip'
 import { usePinnedExperiments, usePinnedFeatureFlags } from '~/dev/usePinnedFeatureFlags'
 import { useModalState } from '~/hooks/useModalState'
-import { EllipsisTamaguiStyle } from '~/theme/components/styles'
+import { EllipsisGuiStyle } from '~/theme/components/styles'
 
 const FLAG_BOX_MAX_WIDTH = 300
 
@@ -59,7 +59,7 @@ const PinnedFlagRow = memo(function PinnedFlagRow({ gateName }: { gateName: stri
       py="$spacing4"
       onPress={(e: { stopPropagation: () => void }) => e.stopPropagation()}
     >
-      <Text {...EllipsisTamaguiStyle}>{gateName}</Text>
+      <Text {...EllipsisGuiStyle}>{gateName}</Text>
       <Switch checked={checked} onCheckedChange={onCheckedChange} variant="branded" />
     </Flex>
   )

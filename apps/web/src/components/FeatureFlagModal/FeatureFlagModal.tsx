@@ -24,7 +24,7 @@ import { FeatureFlagSelector } from '~/components/FeatureFlagModal/FeatureFlagSe
 import { usePinnedExperiments, usePinnedFeatureFlags } from '~/dev/usePinnedFeatureFlags'
 import { useModalState } from '~/hooks/useModalState'
 import { useExternallyConnectableExtensionId } from '~/pages/ExtensionPasskeyAuthPopUp/useExternallyConnectableExtensionId'
-import { EllipsisTamaguiStyle } from '~/theme/components/styles'
+import { EllipsisGuiStyle } from '~/theme/components/styles'
 
 const CenteredRowProps: FlexProps = {
   flexDirection: 'row',
@@ -53,11 +53,11 @@ export function GatingRowContent({ title, label, rightContent }: GatingRowConten
   return (
     <CenteredRow flexGrow={1} flexShrink={1} py={rightContent ? '$none' : undefined}>
       <FlagInfo>
-        <Text variant="body2" {...EllipsisTamaguiStyle}>
+        <Text variant="body2" {...EllipsisGuiStyle}>
           {title}
         </Text>
         {label && (
-          <Text variant="body4" color="$neutral2" {...EllipsisTamaguiStyle}>
+          <Text variant="body4" color="$neutral2" {...EllipsisGuiStyle}>
             {label}
           </Text>
         )}

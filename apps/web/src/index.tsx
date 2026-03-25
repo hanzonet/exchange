@@ -284,13 +284,13 @@ const RootApp = (): JSX.Element => {
                                             <BlockNumberProvider>
                                               <Updaters />
                                               <ThemeProvider>
-                                                <TamaguiProvider>
+                                                <GuiProvider>
                                                   <PortalProvider>
                                                     <WebNotificationServiceManager />
                                                     <ThemedGlobalStyle />
                                                     <App />
                                                   </PortalProvider>
-                                                </TamaguiProvider>
+                                                </GuiProvider>
                                               </ThemeProvider>
                                             </BlockNumberProvider>
                                           </LocalizationContextProvider>

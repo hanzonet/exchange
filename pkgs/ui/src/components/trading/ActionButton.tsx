@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from 'tamagui'
+import { Button, type ButtonProps } from '@hanzo/gui'
 
 export type ActionButtonProps = ButtonProps & {
   variant?: 'primary' | 'secondary' | 'critical'

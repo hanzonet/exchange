@@ -1,4 +1,4 @@
-import { ColorTokens } from 'tamagui'
+import { ColorTokens } from '@hanzo/gui'
 import { TransitionItem } from '@luxfi/ui/src/animations/components/AnimatePresencePager'
 import { CheckmarkCircle } from '@luxfi/ui/src/components/icons/CheckmarkCircle'
 import { CopySheets } from '@luxfi/ui/src/components/icons/CopySheets'

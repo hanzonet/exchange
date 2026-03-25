@@ -1,2 +1,5 @@
-export { styled, useTheme, getTokens, getConfig } from '@tamagui/core'
-export type { GetProps, TamaguiElement } from '@tamagui/core'
+export function assertWebElement(element: unknown): asserts element is HTMLDivElement {
+  if (!(element instanceof HTMLDivElement)) {
+    throw new Error('Element is not an HTMLDivElement')
+  }
+}

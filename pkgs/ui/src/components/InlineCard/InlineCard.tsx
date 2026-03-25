@@ -1,4 +1,4 @@
-import { ColorTokens } from 'tamagui'
+import { ColorTokens } from '@hanzo/gui'
 import { GeneratedIcon, IconProps } from '@luxfi/ui/src/components/factories/createIcon'
 import { Flex, FlexProps } from '@luxfi/ui/src/components/layout/Flex'
 import { Text } from '@luxfi/ui/src/components/text/Text'

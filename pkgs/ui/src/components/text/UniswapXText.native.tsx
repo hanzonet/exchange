@@ -1,4 +1,4 @@
-import { GetProps } from 'tamagui'
+import { GetProps } from '@hanzo/gui'
 import { Text } from '@luxfi/ui/src/components/text'
 import { GradientText } from '@luxfi/ui/src/components/text/GradientText'
 import { colors } from '@luxfi/ui/src/theme/color/colors'

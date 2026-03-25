@@ -1,7 +1,7 @@
-import type { IconProps as TamaguiIconProps } from '@tamagui/helpers-icon'
+import type { IconProps as GuiIconProps } from '@hanzogui/helpers-icon'
 import { createElement, forwardRef, useState } from 'react'
 import { Svg, SvgProps } from 'react-native-svg'
-import { ColorTokens, SpecificTokens, Stack, styled, ThemeKeys, usePropsAndStyle, View } from 'tamagui'
+import { ColorTokens, SpecificTokens, Stack, styled, ThemeKeys, usePropsAndStyle, View } from '@hanzo/gui'
 import { withAnimated } from '@luxfi/ui/src/components/factories/animated'
 import { DynamicColor } from '@luxfi/ui/src/hooks/useSporeColors'
 import { IconSizeTokens } from '@luxfi/ui/src/theme'
@@ -9,7 +9,7 @@ import { isWebPlatform } from 'utilities/src/platform'
 
 type SvgPropsWithRef = SvgProps & { ref: React.ForwardedRef<Svg>; style?: { color?: string } }
 
-export type IconProps = Omit<Omit<TamaguiIconProps, 'size' | 'width' | 'height'>, 'color'> & {
+export type IconProps = Omit<Omit<GuiIconProps, 'size' | 'width' | 'height'>, 'color'> & {
   size?: IconSizeTokens | number | { width: number; height: number }
   // we need the string & {} to allow strings but not lose the intellisense autocomplete
   color?: (ColorTokens | ThemeKeys | (string & {})) | DynamicColor | null
@@ -62,7 +62,7 @@ export function createIcon({
       },
     )
 
-    // On web, style must be an object, not an array. The Tamagui compiler may
+    // On web, style must be an object, not an array. The Gui compiler may
     // return an array in production builds which causes React DOM to throw:
     // "Failed to set an indexed property [0] on 'CSSStyleDeclaration'"
     const flattenedStyle = isWebPlatform && Array.isArray(style) ? Object.assign({}, ...style) : style

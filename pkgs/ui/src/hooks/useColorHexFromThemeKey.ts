@@ -1,4 +1,4 @@
-import { ColorTokens, ThemeKeys } from 'tamagui'
+import { ColorTokens, ThemeKeys } from '@hanzo/gui'
 import { DynamicColor, useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
 
 export type ColorHexFromThemeKey = {

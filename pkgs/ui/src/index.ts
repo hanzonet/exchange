@@ -1,4 +1,4 @@
-export { PortalProvider } from '@tamagui/portal'
+export { PortalProvider } from '@hanzogui/portal'
 export type {
   Adapt,
   AnchorProps,
@@ -136,4 +136,4 @@ export * from './utils/gui'
 export { DEXText } from './components/text/DEXText'
 export { DEXGeneric } from './components/icons/DEXGeneric'
 
-export { assertWebElement } from '@luxfi/ui/src/utils/tamagui'
+export { assertWebElement } from '@luxfi/ui/src/utils/gui'

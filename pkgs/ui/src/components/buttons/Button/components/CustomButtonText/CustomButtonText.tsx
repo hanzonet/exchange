@@ -6,9 +6,9 @@ import type { ButtonEmphasis, ButtonVariantProps } from '@luxfi/ui/src/component
 import { getMaybeHexOrRGBColor } from '@luxfi/ui/src/components/buttons/Button/utils/getMaybeHexOrRGBColor'
 import { getContrastPassingTextColor } from '@luxfi/ui/src/utils/colors'
 
-type TamaguiTextProps = GetProps<typeof Text>
+type GuiTextProps = GetProps<typeof Text>
 
-function createSizeVariant({ fontSize, fontWeight, lineHeight }: TamaguiTextProps) {
+function createSizeVariant({ fontSize, fontWeight, lineHeight }: GuiTextProps) {
   return (
     _size: NonNullable<ButtonVariantProps['size']>,
     context: { props: Record<string, unknown> }

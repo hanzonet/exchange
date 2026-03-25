@@ -1,13 +1,13 @@
-import { TamaguiProvider as OGTamaguiProvider, TamaguiProviderProps } from 'tamagui'
-import { config } from '@luxfi/ui/src/tamagui.config'
+import { GuiProvider as OGGuiProvider, GuiProviderProps } from '@hanzo/gui'
+import { config } from '@luxfi/ui/src/gui.config'
 
 /**
  * Helper component to wrap tests in a provider for tests.
  */
-export function SharedUILuxProvider({ children }: Pick<TamaguiProviderProps, 'children'>): JSX.Element {
+export function SharedUILuxProvider({ children }: Pick<GuiProviderProps, 'children'>): JSX.Element {
   return (
-    <OGTamaguiProvider config={config} defaultTheme="dark">
+    <OGGuiProvider config={config} defaultTheme="dark">
       {children}
-    </OGTamaguiProvider>
+    </OGGuiProvider>
   )
 }

@@ -1,8 +1,8 @@
 import { BlurView, type BlurViewProps } from 'expo-blur'
 import React, { Children, cloneElement, forwardRef, isValidElement, memo, type ReactNode, useMemo } from 'react'
 import { type GestureResponderEvent, StyleSheet } from 'react-native'
-import type { ColorTokens } from 'tamagui'
-import { type TamaguiElement, withStaticProperties, type YStackProps } from 'tamagui'
+import type { ColorTokens } from '@hanzo/gui'
+import { type GuiElement, withStaticProperties, type YStackProps } from '@hanzo/gui'
 import { ThemedIcon } from '@luxfi/ui/src/components/buttons/Button/components/ThemedIcon'
 import { withAnimated } from '@luxfi/ui/src/components/factories/animated'
 import { Text, type TextProps } from '@luxfi/ui/src/components/text'
@@ -82,7 +82,7 @@ const WithInjectedColors = memo(function WithInjectedColors({
     const colorConsideringDisabled: string | ColorTokens = disabled ? '$neutral2' : maybeColor
 
     return cloneElement(child, {
-      // @ts-expect-error '$group-item-hover' is a tamagui type, not a React Native type
+      // @ts-expect-error '$group-item-hover' is a gui type, not a React Native type
       color: colorConsideringDisabled,
       backgroundColor: backgroundColorConsideringDisabled,
       '$group-hover': groupHover,
@@ -90,7 +90,7 @@ const WithInjectedColors = memo(function WithInjectedColors({
   })
 })
 
-const TouchableAreaComponentWithoutMemo = forwardRef<TamaguiElement, TouchableAreaProps>(function TouchableArea(
+const TouchableAreaComponentWithoutMemo = forwardRef<GuiElement, TouchableAreaProps>(function TouchableArea(
   {
     children,
     hoverable = true,
@@ -131,7 +131,7 @@ const TouchableAreaComponentWithoutMemo = forwardRef<TamaguiElement, TouchableAr
     return finalStyle
   }, [scaleTo, activeOpacity, pressStyleProp])
 
-  // Tamagui bug: when animation prop is set alongside $group-* props, fatal exceptions occur in React 19
+  // Gui bug: when animation prop is set alongside $group-* props, fatal exceptions occur in React 19
   // Solution: only include animation/animateOnly in props spread when explicitly set (not null)
   const animationAndAnimateOnly: { animation?: YStackProps['animation']; animateOnly?: YStackProps['animateOnly'] } =
     useMemo(() => {
@@ -266,7 +266,7 @@ const TouchableAreaComponent = memo(TouchableAreaComponentWithoutMemo)
  * @param {TouchableAreaProps} restProps - Additional props passed down to the underlying `TouchableAreaFrame`.
  * @param {boolean} [shouldStopPropagation=true] - If true (default), calls event.stopPropagation() on press events to prevent bubbling to parent touchables.
  * @param {boolean} [shouldAutomaticallyInjectColors] - If true, automatically injects colors into the children based on the Spore Design System guidelines. Defaults to true on web, false on native.
- * @param {React.Ref<TamaguiElement>} ref - Forwarded ref to the underlying `TouchableAreaFrame` element.
+ * @param {React.Ref<GuiElement>} ref - Forwarded ref to the underlying `TouchableAreaFrame` element.
  * @returns {JSX.Element} The rendered TouchableArea component.
  * @see TouchableAreaFrame for styling and variant options.
  * @see useAutoHitSlop for automatic hitSlop calculation.

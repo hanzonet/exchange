@@ -164,7 +164,7 @@ test.describe(
       await navigateToPasskeyMenu(page)
 
       // While the request is in-flight, skeleton rows should be visible
-      const skeletons = page.locator('[data-tamagui-tag="Loader.Box"]')
+      const skeletons = page.locator('[data-gui-tag="Loader.Box"]')
       await expect(skeletons.first()).toBeVisible()
     })
 

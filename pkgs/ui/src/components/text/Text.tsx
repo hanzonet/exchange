@@ -7,12 +7,12 @@ import { Skeleton } from '@luxfi/ui/src/loading/Skeleton'
 import { fonts } from '@luxfi/ui/src/theme/fonts'
 import { isWebPlatform } from 'utilities/src/platform'
 
-type TamaguiTextProps = GetProps<typeof TamaguiText>
+type GuiTextProps = GetProps<typeof GuiText>
 
 // When the user's language is set to Vietnamese, some strings are truncated because the line height
 // doesn't account for Vietnamese diacritical marks that extend beyond standard character bounds.
 // Setting lineHeight param to 'unset' skips the line height to prevent truncation.
-function createTextVariant({ fontFamily, fontSize, fontWeight, lineHeight, maxFontSizeMultiplier }: TamaguiTextProps) {
+function createTextVariant({ fontFamily, fontSize, fontWeight, lineHeight, maxFontSizeMultiplier }: GuiTextProps) {
   return (_variant: string, context: { props: Record<string, unknown> }): Record<string, unknown> => {
     const baseStyles = {
       fontFamily,
@@ -34,7 +34,7 @@ function createTextVariant({ fontFamily, fontSize, fontWeight, lineHeight, maxFo
   }
 }
 
-export const TextFrame = styled(TamaguiText, {
+export const TextFrame = styled(GuiText, {
   fontFamily: '$body',
   wordWrap: 'break-word',
 

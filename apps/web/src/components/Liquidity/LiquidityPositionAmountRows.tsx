@@ -42,7 +42,7 @@ export function LiquidityPositionAmountRows({ rows }: LiquidityPositionAmountRow
         <Flex row alignItems="center" justifyContent="space-between" key={row.currencyInfo.currencyId}>
           <TouchableArea
             onPress={() => navigate(getLink(row.currencyInfo))}
-            {...ClickableTamaguiStyle}
+            {...ClickableGuiStyle}
             pressStyle={{ scale: 1 }}
           >
             <Flex row alignItems="center" gap="$gap12" maxWidth={160}>

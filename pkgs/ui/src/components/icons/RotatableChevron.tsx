@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react'
 import { I18nManager } from 'react-native'
-import { ColorTokens } from 'tamagui'
+import { ColorTokens } from '@hanzo/gui'
 import { IconProps } from '@luxfi/ui/src/components/factories/createIcon'
 import { Chevron } from '@luxfi/ui/src/components/icons'
 import { Flex, FlexProps } from '@luxfi/ui/src/components/layout'

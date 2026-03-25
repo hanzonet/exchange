@@ -1,6 +1,6 @@
 import { QRCodeErrorCorrectionLevel } from 'qrcode'
 import { memo, PropsWithChildren } from 'react'
-import { ColorTokens } from 'tamagui'
+import { ColorTokens } from '@hanzo/gui'
 import { Flex } from '@luxfi/ui/src/components/layout'
 import { QRCode } from '@luxfi/ui/src/components/QRCode/QRCode'
 import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'

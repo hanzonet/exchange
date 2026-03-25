@@ -5,7 +5,7 @@ import { isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
 import { TokenDetailsPoolsTable } from '~/pages/TokenDetails/components/activity/TokenDetailsPoolsTable'
 import { TransactionsTable } from '~/pages/TokenDetails/components/activity/TransactionsTable'
 import { useTDPStore } from '~/pages/TokenDetails/context/useTDPStore'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 const Tab = styled(Text, {
   color: '$neutral1',

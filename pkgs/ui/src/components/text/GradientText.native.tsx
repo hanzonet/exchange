@@ -1,5 +1,5 @@
 import MaskedView from '@react-native-masked-view/masked-view'
-import { LinearGradient } from 'tamagui/linear-gradient'
+import { LinearGradient } from '@hanzo/gui/linear-gradient'
 import { Text } from '@luxfi/ui/src/components/text'
 import { GradientTextProps } from '@luxfi/ui/src/components/text/GradientText'
 

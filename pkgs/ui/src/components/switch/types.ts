@@ -1,6 +1,6 @@
-import { SwitchProps as TamaguiSwitchProps } from 'tamagui'
+import { SwitchProps as GuiSwitchProps } from '@hanzo/gui'
 import { SporeComponentVariant } from '@luxfi/ui/src/components/types'
 
-export type SwitchProps = TamaguiSwitchProps & {
+export type SwitchProps = GuiSwitchProps & {
   variant: SporeComponentVariant
 }

@@ -2,14 +2,14 @@ import { ArrowDown } from '@luxfi/ui/src/components/icons/ArrowDown'
 import { ArrowUp } from '@luxfi/ui/src/components/icons/ArrowUp'
 import { Flex, styled, Text } from '@luxfi/ui/src/index'
 import { IconSizeTokens } from '@luxfi/ui/src/theme'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 export const ClickableHeaderRow = styled(Flex, {
   row: true,
   alignItems: 'center',
   justifyContent: 'flex-end',
 
-  ...ClickableTamaguiStyle,
+  ...ClickableGuiStyle,
 })
 
 export function HeaderArrow({

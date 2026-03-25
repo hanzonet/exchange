@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from 'react'
-import { getToken, SpaceTokens } from 'tamagui'
+import { getToken, SpaceTokens } from '@hanzo/gui'
 import { Flex, Separator } from '@luxfi/ui/src/components/layout'
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions/useDeviceDimensions'
 import { FlexLoader, FlexLoaderProps } from '@luxfi/ui/src/loading/FlexLoader'

@@ -31,7 +31,7 @@ import {
 } from '~/pages/TokenDetails/components/info/MultichainPillDropdown'
 import { MultiChainMap } from '~/pages/TokenDetails/context/TDPContext'
 import { useTDPStore } from '~/pages/TokenDetails/context/useTDPStore'
-import { EllipsisTamaguiStyle } from '~/theme/components/styles'
+import { EllipsisGuiStyle } from '~/theme/components/styles'
 
 const TRUNCATE_CHARACTER_COUNT = 300
 const MULTICHAIN_POPOVER_WIDTH = 280

@@ -1,4 +1,4 @@
-import { GetProps } from 'tamagui'
+import { GetProps } from '@hanzo/gui'
 import { Text } from '@luxfi/ui/src/components/text'
 
 const gradientStyle = `

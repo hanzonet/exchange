@@ -30,7 +30,7 @@ import { AppleLogo } from '~/components/Icons/AppleLogo'
 import { setOpenModal } from '~/state/application/reducer'
 import { useEmbeddedWalletState } from '~/state/embeddedWallet/store'
 import { useAppDispatch } from '~/state/hooks'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 function getPrivyAppId(): string | undefined {
   return process.env.PRIVY_APP_ID

@@ -37,7 +37,7 @@ import {
 import { LpIncentivesAprDisplay } from '~/components/LpIncentives/LpIncentivesAprDisplay'
 import { StyledPercentInput } from '~/components/PercentInput'
 import { NumericalInputMimic, NumericalInputSymbolContainer } from '~/pages/Swap/common/shared'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 const FeeTierPercentInput = styled(StyledPercentInput)`
   flex-grow: 0;

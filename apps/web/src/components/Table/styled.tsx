@@ -1,6 +1,6 @@
 import { Flex, styled } from '@luxfi/ui/src'
 import { Cell } from '~/components/Table/Cell'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 export const TableRowBase = styled(Flex, {
   row: true,

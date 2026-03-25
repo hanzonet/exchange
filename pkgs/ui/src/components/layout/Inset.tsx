@@ -1,5 +1,5 @@
-// biome-ignore lint/style/noRestrictedImports: until the web app needs all of tamagui, avoid heavy imports there
-import { SpaceTokens } from '@tamagui/core'
+// biome-ignore lint/style/noRestrictedImports: until the web app needs all of gui, avoid heavy imports there
+import { SpaceTokens } from '@hanzogui/core'
 import { PropsWithChildren } from 'react'
 import { Flex } from '@luxfi/ui/src/components/layout/Flex'
 

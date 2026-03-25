@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react'
-import { getTokenValue } from 'tamagui'
+import { getTokenValue } from '@hanzo/gui'
 import { UNITAG_DARK, UNITAG_DARK_SMALL, UNITAG_LIGHT, UNITAG_LIGHT_SMALL } from '@luxfi/ui/src/assets'
 import { UniversalImageStyleProps } from '@luxfi/ui/src/components/UniversalImage/types'
 import { UniversalImage } from '@luxfi/ui/src/components/UniversalImage/UniversalImage'

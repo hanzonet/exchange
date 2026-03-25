@@ -9,10 +9,10 @@ import { PortfolioLogo } from '~/components/AccountDrawer/MiniPortfolio/Portfoli
 import { EllipsisText } from '~/components/Table/shared/TableText'
 import { NATIVE_CHAIN_ID } from '~/constants/tokens'
 import { useCurrency } from '~/hooks/Tokens'
-import { ClickableTamaguiStyle } from '~/theme/components/styles'
+import { ClickableGuiStyle } from '~/theme/components/styles'
 
 const StyledInternalLink = styled(Link, {
-  ...ClickableTamaguiStyle,
+  ...ClickableGuiStyle,
   color: '$neutral1',
   '$platform-web': {
     textDecoration: 'none',

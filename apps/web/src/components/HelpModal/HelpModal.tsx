@@ -42,7 +42,7 @@ export function HelpModal({ showOnXL = false }: { showOnXL?: boolean }) {
         onOpenChange={(open) => setIsOpen(open)}
       >
         <Popover.Trigger>
-          <TouchableArea hoverable {...ClickableTamaguiStyle}>
+          <TouchableArea hoverable {...ClickableGuiStyle}>
             <QuestionInCircleFilled size={20} color={colors.neutral1.get()} data-testid={TestID.HelpIcon} />
           </TouchableArea>
         </Popover.Trigger>
