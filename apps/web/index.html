@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Lux Exchange</title>
+    <title>Exchange</title>
+    <script>
+      // Runtime brand detection — update title before first paint
+      (function(){var p={'zoo.exchange':'Zoo Exchange','lux.exchange':'Lux Exchange'};
+      var h=location.hostname;for(var d in p){if(h===d||h.endsWith('.'+d)){document.title=p[d];break;}}})();
+    </script>
 
     <!-- Vite uses / for public assets instead of %PUBLIC_URL% -->
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
