@@ -6,7 +6,7 @@ import {
   DutchOrder,
   getCancelMultipleParams,
   getCancelSingleParams,
-} from '@uniswap/luxswap-sdk'
+} from '@uniswap/uniswapx-sdk'
 import { TradingApi } from '@luxexchange/api'
 import { providers } from 'ethers/lib/ethers'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

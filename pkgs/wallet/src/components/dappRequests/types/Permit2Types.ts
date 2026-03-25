@@ -1,4 +1,4 @@
-import { REACTOR_ADDRESS_MAPPING } from '@uniswap/luxswap-sdk'
+import { REACTOR_ADDRESS_MAPPING } from '@uniswap/uniswapx-sdk'
 import { TypeDefinitionSchema } from '@luxfi/wallet/src/components/dappRequests/types/EIP712Types'
 import { z } from 'zod'
 

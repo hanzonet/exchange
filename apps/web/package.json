@@ -223,7 +223,7 @@
     "@luxamm/analytics": "1.7.3",
     "@luxamm/analytics-events": "2.43.1",
     "@luxamm/client-data-api": "0.0.60",
-    "@luxamm/client-explore": "0.0.18",
+    "@luxamm/client-explore": "0.0.19",
     "@luxamm/client-liquidity": "0.1.3",
     "@luxamm/client-notification-service": "0.0.12",
     "@luxamm/client-search": "0.0.12",

@@ -19,7 +19,7 @@ import {
   UnsignedV3DutchOrderInfoJSON,
   REACTOR_ADDRESS_MAPPING,
   OrderType,
-} from '@uniswap/luxswap-sdk'
+} from '@uniswap/uniswapx-sdk'
 import { Route as V2Route } from '@uniswap/v2-sdk'
 import { Route as V3Route } from '@uniswap/v3-sdk'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -774,7 +774,7 @@ export class PreviewTrade {
   }
 }
 
-// Reactor address for limit orders — sourced from @uniswap/luxswap-sdk
+// Reactor address for limit orders — sourced from @uniswap/uniswapx-sdk
 const LX_REACTOR = REACTOR_ADDRESS_MAPPING[UniverseChainId.Mainnet]?.[OrderType.Dutch] ?? AddressZero
 
 export class LimitOrderTrade {

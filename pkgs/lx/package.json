@@ -54,7 +54,7 @@
     "@luxamm/analytics-events": "2.43.1",
     "@luxamm/client-data-api": "0.0.60",
     "@luxamm/client-embeddedwallet": "0.0.17",
-    "@luxamm/client-explore": "0.0.18",
+    "@luxamm/client-explore": "0.0.19",
     "@luxamm/client-liquidity": "0.1.3",
     "@luxamm/client-search": "0.0.12",
     "@luxamm/permit2-sdk": "1.3.1",
