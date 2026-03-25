@@ -20,8 +20,8 @@
     "noEmit": false,
     "paths": {
       "@luxexchange/api/*": ["./src/*"],
-      "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb": [
-        "../../node_modules/@uniswap/client-privy-embedded-wallet/node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb",
+      "@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb": [
+        "../../node_modules/@luxamm/client-privy-embedded-wallet/node_modules/@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb",
         "./stubs/privy-service-pb"
       ]
     },

@@ -305,10 +305,6 @@ export default defineConfig(({ mode }) => {
     '@luxdex/client-liquidity': path.resolve(__dirname, '../../node_modules/@uniswap/client-liquidity'),
     '@luxdex/permit': path.resolve(__dirname, '../../node_modules/@uniswap/permit2-sdk'),
     // Map @luxamm/* to workspace package ESM entry files
-    '@luxamm/sdk-core': path.resolve(__dirname, '../../pkgs/luxamm-sdk-core/dist/sdk-core.esm.js'),
-    '@luxamm/v2-sdk': path.resolve(__dirname, '../../pkgs/luxamm-v2-sdk/dist/v2-sdk.esm.js'),
-    '@luxamm/v3-sdk': path.resolve(__dirname, '../../pkgs/luxamm-v3-sdk/dist/v3-sdk.esm.js'),
-    '@luxamm/v4-sdk': path.resolve(__dirname, '../../pkgs/luxamm-v4-sdk/dist/v4-sdk.esm.js'),
     // Additional @luxdex/* aliases missing from original config
     '@luxdex/analytics': path.resolve(__dirname, '../../pkgs/luxdex-analytics/dist/index.mjs'),
     '@luxdex/analytics-events': path.resolve(__dirname, '../../node_modules/@uniswap/analytics-events/lib/cjs/index.js'),
