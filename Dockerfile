@@ -1,5 +1,5 @@
-# Lux Exchange - Vite SPA Dockerfile
-# Multi-stage build for production deployment
+# Lux Exchange - White-Label DEX
+# One image, any brand. Config via /config.json mounted by K8s ConfigMap.
 
 # Stage 1: Builder
 FROM node:22-alpine AS builder
@@ -14,48 +14,39 @@ COPY . .
 
 # Install dependencies — run lifecycle scripts but tolerate failures
 RUN NODE_ENV=development pnpm install --no-frozen-lockfile || true
-# Rebuild native modules that might have failed
 RUN pnpm rebuild || true
 
-# Build-time arguments for secrets (pass via --build-arg, never hardcode)
-ARG REACT_APP_INSIGHTS_API_KEY
-ARG REACT_APP_INSIGHTS_HOST=https://insights.hanzo.ai
-
-# Set build-time environment variables
+# Build-time env — brand-neutral, no hardcoded domains
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 ENV DOCKER_BUILD=true
-ENV NEXT_PUBLIC_LXD_GATEWAY_URL=https://dex.lux.network
-ENV REACT_APP_LXD_GATEWAY_URL=https://dex.lux.network
-ENV REACT_APP_LUX_GATEWAY_DNS=https://dex.lux.network
-ENV REACT_APP_AWS_API_ENDPOINT=https://api.lux.exchange/v1/graphql
-ENV REACT_APP_INSIGHTS_HOST=${REACT_APP_INSIGHTS_HOST}
-ENV REACT_APP_INSIGHTS_API_KEY=${REACT_APP_INSIGHTS_API_KEY}
 
 # Generate gitignored types before build
-# Run pnpm install (with scripts this time) in just the api package for codegen
 RUN cd pkgs/api && pnpm exec openapi \
       --input ./src/clients/trading/api.json \
       --output ./src/clients/trading/__generated__ \
       --useOptions --exportServices true --exportModels true \
     || (mkdir -p src/clients/trading/__generated__/models src/clients/trading/__generated__/core src/clients/trading/__generated__/services && \
         echo 'export {}' > src/clients/trading/__generated__/index.ts)
-# V3 contract types stub (no @lux artifacts in Docker)
 RUN mkdir -p pkgs/lx/src/abis/types/v3 && \
     echo 'export {}' > pkgs/lx/src/abis/types/v3/index.ts
-# AJV validators
 RUN NODE_PATH=/app/node_modules node apps/web/scripts/compile-ajv-validators.js
 
-# Build the web app (Vite SPA)
+# Build the web app (Vite SPA) — brand-neutral
 RUN cd apps/web && DISABLE_EXTRACTION=1 NODE_OPTIONS="--max-old-space-size=16384" pnpm exec vite build
 
-# Stage 2: Runner — lightweight static file server
+# Stage 2: Runner
 FROM node:22-alpine AS runner
 RUN npm install -g serve@14
 WORKDIR /app
 
-# Copy built static assets
+# Copy built static assets (includes default config.json for Lux)
 COPY --from=builder /app/apps/web/build /app/public
+
+# Mount point: K8s ConfigMap mounts brand-specific config here
+# kubectl create configmap exchange-brand --from-file=config.json=zoo-config.json
+# volumeMounts: [{name: brand, mountPath: /app/public/config.json, subPath: config.json}]
+VOLUME ["/app/public/config.json"]
 
 EXPOSE 3000
 

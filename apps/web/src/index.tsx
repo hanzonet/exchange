@@ -317,7 +317,12 @@ const RootApp = (): JSX.Element => {
   )
 }
 
-createRoot(container).render(<RootApp />)
+// Load runtime brand config before rendering (fetches /config.json)
+import { loadBrandConfig } from '@luxexchange/config'
+
+loadBrandConfig().then(() => {
+  createRoot(container).render(<RootApp />)
+})
 
 // We once had a ServiceWorker, and users who have not visited since then may still have it registered.
 // This ensures it is truly gone.

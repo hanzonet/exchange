@@ -1,93 +1,143 @@
 /**
- * Unified brand configuration for white-label exchange deployments.
- * 100% env-driven — no hardcoded brands. Set via KMS → K8s Secret → env vars.
- * Generic defaults work out of box; customize per deployment.
+ * Runtime brand configuration for white-label exchange deployments.
+ * Zero baked-in brands — everything loaded from /config.json at runtime.
+ *
+ * How it works:
+ * 1. Default config.json ships in the Docker image (Lux defaults)
+ * 2. K8s mounts a ConfigMap over /config.json per deployment
+ * 3. SPA calls loadBrandConfig() before first render
+ * 4. All brand references use the `brand` export which updates in place
+ *
+ * For zoo.exchange: mount a ConfigMap with Zoo branding over /config.json
+ * For any L2: same image, different ConfigMap
  */
+
 export interface BrandConfig {
-  // Identity
   name: string
   title: string
   description: string
-
-  // Domains
   appDomain: string
   docsDomain: string
   infoDomain: string
   gatewayDomain: string
   wsDomain: string
-
-  // URLs
   helpUrl: string
   termsUrl: string
   privacyUrl: string
   downloadUrl: string
-
-  // Contact
   complianceEmail: string
   supportEmail: string
-
-  // Social
   twitter: string
   github: string
   discord: string
-
-  // Assets
   logoUrl: string
   faviconUrl: string
   primaryColor: string
-
-  // Chain
   defaultChainId: number
   supportedChainIds: number[]
-
-  // WalletConnect
   walletConnectProjectId: string
-
-  // Analytics
   insightsHost: string
   insightsApiKey: string
 }
 
-const env = (key: string, fallback: string): string =>
-  (typeof process !== 'undefined' ? process.env?.[key] : undefined) ?? fallback
+export interface RuntimeConfig {
+  brand: Partial<BrandConfig>
+  chains: {
+    defaultChainId: number
+    supported: number[]
+  }
+  rpc: Record<string, string>
+  api: {
+    graphql: string
+    gateway: string
+    insights: string
+  }
+  walletConnect: {
+    projectId: string
+  }
+}
 
+// Mutable brand — updated by loadBrandConfig()
 export const brand: BrandConfig = {
-  name: env('NEXT_PUBLIC_BRAND_NAME', 'Exchange'),
-  title: env('NEXT_PUBLIC_BRAND_TITLE', 'Exchange | Trade'),
-  description: env('NEXT_PUBLIC_BRAND_DESCRIPTION', 'Swap, earn, and build on the leading decentralized exchange'),
+  name: 'Exchange',
+  title: 'Exchange | Trade',
+  description: 'Swap, earn, and build on the leading decentralized exchange',
+  appDomain: 'lux.exchange',
+  docsDomain: 'docs.lux.exchange',
+  infoDomain: 'info.lux.exchange',
+  gatewayDomain: 'gw.lux.exchange',
+  wsDomain: 'ws.lux.exchange',
+  helpUrl: 'https://docs.lux.exchange/help',
+  termsUrl: 'https://lux.exchange/terms',
+  privacyUrl: 'https://lux.exchange/privacy',
+  downloadUrl: 'https://lux.exchange/wallet',
+  complianceEmail: 'compliance@lux.exchange',
+  supportEmail: 'hi@lux.exchange',
+  twitter: 'https://x.com/luxfi',
+  github: 'https://github.com/luxfi',
+  discord: 'https://discord.gg/lux',
+  logoUrl: '',
+  faviconUrl: '/favicon.ico',
+  primaryColor: '#FC72FF',
+  defaultChainId: 96369,
+  supportedChainIds: [96369, 96368, 96367],
+  walletConnectProjectId: '',
+  insightsHost: 'https://insights.hanzo.ai',
+  insightsApiKey: '',
+}
 
-  appDomain: env('NEXT_PUBLIC_APP_DOMAIN', 'lux.exchange'),
-  docsDomain: env('NEXT_PUBLIC_DOCS_DOMAIN', 'docs.lux.exchange'),
-  infoDomain: env('NEXT_PUBLIC_INFO_DOMAIN', 'info.lux.exchange'),
-  gatewayDomain: env('NEXT_PUBLIC_GATEWAY_DOMAIN', 'gateway.lux.exchange'),
-  wsDomain: env('NEXT_PUBLIC_WS_DOMAIN', 'ws.lux.exchange'),
+// Full runtime config (includes RPC, API endpoints, etc.)
+export let runtimeConfig: RuntimeConfig | null = null
 
-  helpUrl: env('NEXT_PUBLIC_HELP_URL', 'https://docs.lux.exchange/help'),
-  termsUrl: env('NEXT_PUBLIC_TERMS_URL', 'https://lux.exchange/terms'),
-  privacyUrl: env('NEXT_PUBLIC_PRIVACY_URL', 'https://lux.exchange/privacy'),
-  downloadUrl: env('NEXT_PUBLIC_DOWNLOAD_URL', 'https://lux.exchange/wallet'),
+/**
+ * Load brand config from /config.json. Call once before React renders.
+ * The config.json is either the default shipped in the image, or a
+ * ConfigMap mounted by K8s for white-label deployments.
+ */
+export async function loadBrandConfig(): Promise<RuntimeConfig> {
+  try {
+    const res = await fetch('/config.json')
+    if (!res.ok) throw new Error(`${res.status}`)
+    const config: RuntimeConfig = await res.json()
 
-  complianceEmail: env('NEXT_PUBLIC_COMPLIANCE_EMAIL', 'compliance@lux.exchange'),
-  supportEmail: env('NEXT_PUBLIC_SUPPORT_EMAIL', 'hi@lux.exchange'),
+    // Apply brand overrides
+    if (config.brand) {
+      Object.assign(brand, config.brand)
+    }
 
-  twitter: env('NEXT_PUBLIC_TWITTER', 'https://x.com/luxfi'),
-  github: env('NEXT_PUBLIC_GITHUB', 'https://github.com/luxfi'),
-  discord: env('NEXT_PUBLIC_DISCORD', 'https://discord.gg/lux'),
+    // Apply chain config
+    if (config.chains) {
+      brand.defaultChainId = config.chains.defaultChainId ?? brand.defaultChainId
+      brand.supportedChainIds = config.chains.supported ?? brand.supportedChainIds
+    }
 
-  logoUrl: env('NEXT_PUBLIC_LOGO_URL', ''),
-  faviconUrl: env('NEXT_PUBLIC_FAVICON_URL', '/favicon.ico'),
-  primaryColor: env('NEXT_PUBLIC_PRIMARY_COLOR', '#FC72FF'),
+    // Apply walletconnect
+    if (config.walletConnect?.projectId) {
+      brand.walletConnectProjectId = config.walletConnect.projectId
+    }
 
-  defaultChainId: parseInt(env('NEXT_PUBLIC_DEFAULT_CHAIN_ID', '96369'), 10),
-  supportedChainIds: env('NEXT_PUBLIC_SUPPORTED_CHAIN_IDS', '')
-    .split(',')
-    .filter(Boolean)
-    .map(Number),
+    // Apply analytics
+    if (config.api?.insights) {
+      brand.insightsHost = config.api.insights
+    }
 
-  walletConnectProjectId: env('NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID', ''),
+    // Update document title
+    if (typeof document !== 'undefined' && config.brand?.title) {
+      document.title = config.brand.title
+    }
 
-  insightsHost: env('NEXT_PUBLIC_INSIGHTS_HOST', 'https://insights.hanzo.ai'),
-  insightsApiKey: env('NEXT_PUBLIC_INSIGHTS_API_KEY', ''),
+    runtimeConfig = config
+    return config
+  } catch {
+    // Config fetch failed — use defaults (works for local dev)
+    return {
+      brand: {},
+      chains: { defaultChainId: brand.defaultChainId, supported: brand.supportedChainIds },
+      rpc: {},
+      api: { graphql: '', gateway: '', insights: brand.insightsHost },
+      walletConnect: { projectId: '' },
+    }
+  }
 }
 
 export function getBrandUrl(path: string): string {
@@ -104,4 +154,12 @@ export function getGatewayUrl(path: string): string {
 
 export function getWsUrl(path: string): string {
   return `wss://${brand.wsDomain}${path}`
+}
+
+export function getRpcUrl(chainId: number): string | undefined {
+  return runtimeConfig?.rpc?.[String(chainId)]
+}
+
+export function getApiUrl(key: keyof RuntimeConfig['api']): string {
+  return runtimeConfig?.api?.[key] ?? ''
 }
