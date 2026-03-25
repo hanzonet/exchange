@@ -7,6 +7,7 @@ import {
   STAGING_ENTRY_GATEWAY_API_BASE_URL,
   TrafficFlows,
 } from '@luxexchange/api'
+import { brand, getBrandUrl, getDocsUrl } from '@luxexchange/config'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
 import { isBetaEnv, isDevEnv, isPlaywrightEnv } from 'utilities/src/environment/env'
@@ -23,11 +24,11 @@ function getComplianceApiBaseUrl(): string {
   return PROD_ENTRY_GATEWAY_API_BASE_URL
 }
 
-export const UNISWAP_WEB_HOSTNAME = process.env.REACT_APP_WEB_HOSTNAME || 'lux.exchange'
+export const UNISWAP_WEB_HOSTNAME = process.env.REACT_APP_WEB_HOSTNAME || brand.appDomain
 const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : UNISWAP_WEB_HOSTNAME
 
 function getPrivyEmbeddedWalletUrl(): string {
-  const host = process.env.REACT_APP_PRIVY_WALLET_HOST || 'api.lux.exchange'
+  const host = process.env.REACT_APP_PRIVY_WALLET_HOST || `api.${brand.appDomain}`
   if (isDevEnv()) {
     return `https://privy-embedded-wallet.backend-dev.${host}`
   }
@@ -55,8 +56,8 @@ export function getForApiUrl(): string {
 }
 
 export const UNISWAP_WEB_URL = `https://${UNISWAP_WEB_HOSTNAME}`
-export const UNISWAP_APP_URL = 'https://uniswap.org/app'
-export const UNISWAP_MOBILE_REDIRECT_URL = 'https://uniswap.org/mobile-redirect'
+export const UNISWAP_APP_URL = getBrandUrl('/app')
+export const UNISWAP_MOBILE_REDIRECT_URL = getBrandUrl('/mobile-redirect')
 
 // The trading api uses custom builds for testing which may not use the v1 prefix
 export const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? '' : '/v1'
@@ -150,27 +151,27 @@ export const uniswapUrls = {
     whatIsPrivateKey: createHelpArticleUrl('11306371824653-What-is-a-private-key'),
     wethExplainer: createHelpArticleUrl('16015852009997-Why-do-ETH-swaps-involve-converting-to-WETH'),
   },
-  downloadWalletUrl: 'https://lux.exchange/wallet',
-  tradingApiDocsUrl: 'https://docs.lux.exchange/api',
+  downloadWalletUrl: brand.downloadUrl,
+  tradingApiDocsUrl: getDocsUrl('/api'),
   unichainUrl: 'https://www.unichain.org/',
-  uniswapXUrl: 'https://lux.exchange/dex',
-  helpCenterUrl: 'https://docs.lux.exchange/help',
-  blogUrl: 'https://lux.exchange/blog',
-  docsUrl: 'https://docs.lux.exchange/',
-  voteUrl: 'https://lux.exchange/governance',
-  governanceUrl: 'https://lux.exchange/governance',
-  developersUrl: 'https://docs.lux.exchange/developers',
-  aboutUrl: 'https://lux.exchange/about',
-  careersUrl: 'https://lux.exchange/careers',
+  uniswapXUrl: getBrandUrl('/dex'),
+  helpCenterUrl: brand.helpUrl,
+  blogUrl: getBrandUrl('/blog'),
+  docsUrl: getDocsUrl('/'),
+  voteUrl: getBrandUrl('/governance'),
+  governanceUrl: getBrandUrl('/governance'),
+  developersUrl: getDocsUrl('/developers'),
+  aboutUrl: getBrandUrl('/about'),
+  careersUrl: getBrandUrl('/careers'),
   social: {
-    x: 'https://x.com/luxdefi',
-    farcaster: 'https://farcaster.xyz/luxdefi',
-    linkedin: 'https://www.linkedin.com/company/luxdefi',
-    tiktok: 'https://www.tiktok.com/@luxdefi',
+    x: brand.twitter,
+    farcaster: 'https://farcaster.xyz/luxfi',
+    linkedin: 'https://www.linkedin.com/company/luxfi',
+    tiktok: 'https://www.tiktok.com/@luxfi',
   },
-  termsOfServiceUrl: 'https://lux.exchange/terms',
-  privacyPolicyUrl: 'https://lux.exchange/privacy',
-  chromeExtension: 'https://lux.exchange/ext',
+  termsOfServiceUrl: brand.termsUrl,
+  privacyPolicyUrl: brand.privacyUrl,
+  chromeExtension: getBrandUrl('/ext'),
   chromeExtensionUninstallUrl: `${UNISWAP_WEB_URL}${CHROME_EXTENSION_UNINSTALL_URL_PATH}`,
 
   // Download links
@@ -178,7 +179,7 @@ export const uniswapUrls = {
   playStoreDownloadUrl: 'https://play.google.com/store/apps/details?id=com.uniswap.mobile&pcampaignid=web_share',
 
   // Core API Urls
-  apiOrigin: process.env.REACT_APP_API_ORIGIN || 'https://api.lux.exchange',
+  apiOrigin: process.env.REACT_APP_API_ORIGIN || `https://api.${brand.appDomain}`,
   apiBaseUrl: config.apiBaseUrlOverride || getCloudflareApiBaseUrl(),
   complianceApiBaseUrl: getComplianceApiBaseUrl(),
   apiBaseUrlV2: config.apiBaseUrlV2Override || getCloudflareApiBaseUrl({ postfix: 'v2' }),
@@ -205,7 +206,7 @@ export const uniswapUrls = {
   forApiUrl:
     config.forApiUrlOverride || getCloudflareApiBaseUrl({ flow: TrafficFlows.FOR, postfix: 'v2/FOR.v1.FORService' }),
   tradingApiUrl: config.tradingApiUrlOverride || getCloudflareApiBaseUrl({ flow: TrafficFlows.TradingApi }),
-  liquidityServiceUrl: config.liquidityServiceUrlOverride || process.env.REACT_APP_LIQUIDITY_SERVICE_URL || 'https://liquidity.backend-prod.api.lux.exchange',
+  liquidityServiceUrl: config.liquidityServiceUrlOverride || process.env.REACT_APP_LIQUIDITY_SERVICE_URL || `https://liquidity.backend-prod.api.${brand.appDomain}`,
 
   // Merkl Docs for LP Incentives
   merklDocsUrl: 'https://docs.merkl.xyz/earn-with-merkl/faq-earn#how-are-aprs-calculated',

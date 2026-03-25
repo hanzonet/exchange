@@ -1,3 +1,4 @@
+import { brand, getGatewayUrl, getWsUrl } from '@luxexchange/config'
 import { isBetaEnv, isDevEnv, isPlaywrightEnv, isTestEnv } from 'utilities/src/environment/env'
 import { isAndroid, isExtensionApp, isMobileApp, isWebApp } from 'utilities/src/platform'
 
@@ -12,7 +13,7 @@ export enum TrafficFlows {
   DataApi = 'data-api',
 }
 
-export const helpUrl = 'https://docs.lux.exchange/help'
+export const helpUrl = brand.helpUrl
 
 const FLOWS_USING_BETA = [TrafficFlows.FOR]
 
@@ -53,7 +54,7 @@ export function getServicePrefix(flow?: TrafficFlows): string {
 export function getCloudflareApiBaseUrl(params?: { flow?: TrafficFlows; postfix?: string }): string {
   const { flow, postfix } = params ?? {}
   let baseUrl
-  const gatewayHost = process.env.REACT_APP_GATEWAY_HOST || 'gateway.lux.exchange'
+  const gatewayHost = process.env.REACT_APP_GATEWAY_HOST || brand.gatewayDomain
   if (flow === TrafficFlows.TradingApi && !isPlaywrightEnv()) {
     // This is an exception that only applies to dev + TAPI where the order of the prefix matters
     baseUrl = `https://${isDevEnv() ? 'beta.' : ''}trading-api-labs.${getCloudflarePrefix(flow)}.${gatewayHost}`
@@ -75,18 +76,18 @@ export function createHelpArticleUrl(resourceId: string, path: string = 'article
   return `${helpUrl}/${path}/${resourceId}?product_link=${product}`
 }
 
-// Entry Gateway API URLs — configurable via env, defaults to lux.exchange
+// Entry Gateway API URLs — configurable via brand config + env overrides
 export const DEV_ENTRY_GATEWAY_API_BASE_URL: string =
-  process.env.REACT_APP_DEV_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
+  process.env.REACT_APP_DEV_ENTRY_GATEWAY_URL || getGatewayUrl('/conversion')
 export const STAGING_ENTRY_GATEWAY_API_BASE_URL: string =
-  process.env.REACT_APP_STAGING_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
+  process.env.REACT_APP_STAGING_ENTRY_GATEWAY_URL || getGatewayUrl('/conversion')
 export const PROD_ENTRY_GATEWAY_API_BASE_URL: string =
-  process.env.REACT_APP_PROD_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
+  process.env.REACT_APP_PROD_ENTRY_GATEWAY_URL || getGatewayUrl('/conversion')
 
-// WebSocket URLs — configurable via env, defaults to lux.exchange
+// WebSocket URLs — configurable via brand config + env overrides
 export const DEV_WEBSOCKET_BASE_URL: string =
-  process.env.REACT_APP_DEV_WEBSOCKET_URL || 'wss://ws.lux.exchange/staging'
+  process.env.REACT_APP_DEV_WEBSOCKET_URL || getWsUrl('/staging')
 export const STAGING_WEBSOCKET_BASE_URL: string =
-  process.env.REACT_APP_STAGING_WEBSOCKET_URL || 'wss://ws.lux.exchange/staging'
+  process.env.REACT_APP_STAGING_WEBSOCKET_URL || getWsUrl('/staging')
 export const PROD_WEBSOCKET_BASE_URL: string =
-  process.env.REACT_APP_PROD_WEBSOCKET_URL || 'wss://ws.lux.exchange'
+  process.env.REACT_APP_PROD_WEBSOCKET_URL || getWsUrl('')

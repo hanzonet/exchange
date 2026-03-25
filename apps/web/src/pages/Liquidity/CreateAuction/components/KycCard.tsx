@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Text } from '@luxfi/ui/src'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { ExternalLink } from '~/theme/components/Links'
 
 export function KycCard() {
@@ -20,7 +21,7 @@ export function KycCard() {
         <Text variant="body4" color="$neutral1">
           {t('toucan.createAuction.step.configureAuction.kyc.description')}
         </Text>
-        <ExternalLink href="https://support.uniswap.org/hc/en-us">
+        <ExternalLink href={uniswapUrls.helpUrl}>
           <Text variant="buttonLabel4" color="$neutral2">
             {t('toucan.createAuction.step.configureAuction.kyc.learnMore')}
           </Text>
