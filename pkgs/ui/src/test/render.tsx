@@ -1,4 +1,4 @@
-import { GuiProvider as OGGuiProvider, GuiProviderProps } from '@hanzo/gui'
+import { TamaguiProvider as OGGuiProvider, TamaguiProviderProps as GuiProviderProps } from '@hanzo/gui'
 import { config } from '@luxfi/ui/src/gui.config'
 
 /**
