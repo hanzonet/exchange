@@ -48,6 +48,13 @@ const nextConfig = {
       }
     }
 
+    // Stub React Native packages that leak into web builds
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'expo-blur': false,
+      'react-native': 'react-native-web',
+    }
+
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
