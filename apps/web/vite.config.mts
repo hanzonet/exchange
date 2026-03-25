@@ -266,7 +266,8 @@ export default defineConfig(({ mode }) => {
     'wallet': path.resolve(__dirname, '../../pkgs/wallet'),
     'lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
     'lx': path.resolve(__dirname, '../../pkgs/lx'),
-    // @luxamm artifact subpath aliases (Solidity contract artifacts)
+    // @luxamm package aliases (pnpm overrides handle npm resolution, but vite needs explicit paths)
+    '@luxamm/sdk': path.resolve(__dirname, '../../node_modules/@luxamm/swap-sdk'),
     '@luxamm/merkle-distributor/build': path.resolve(__dirname, '../../node_modules/@luxamm/merkle-distributor/build'),
     '@luxamm/v3-core/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-core/artifacts'),
     '@luxamm/v3-periphery/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-periphery/artifacts'),
