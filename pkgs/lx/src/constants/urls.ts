@@ -23,17 +23,17 @@ function getComplianceApiBaseUrl(): string {
   return PROD_ENTRY_GATEWAY_API_BASE_URL
 }
 
-export const UNISWAP_WEB_HOSTNAME = 'app.uniswap.org'
-const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : UNISWAP_WEB_HOSTNAME
+export const UNISWAP_WEB_HOSTNAME = 'lux.exchange'
+const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.lux.exchange' : UNISWAP_WEB_HOSTNAME
 
 function getPrivyEmbeddedWalletUrl(): string {
   if (isDevEnv()) {
-    return 'https://privy-embedded-wallet.backend-dev.api.uniswap.org'
+    return 'https://privy-embedded-wallet.backend-dev.api.lux.exchange'
   }
   if (isBetaEnv()) {
-    return 'https://privy-embedded-wallet.backend-staging.api.uniswap.org'
+    return 'https://privy-embedded-wallet.backend-staging.api.lux.exchange'
   }
-  return 'https://privy-embedded-wallet.backend-prod.api.uniswap.org'
+  return 'https://privy-embedded-wallet.backend-prod.api.lux.exchange'
 }
 
 /**

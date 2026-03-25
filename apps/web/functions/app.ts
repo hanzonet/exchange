@@ -29,9 +29,9 @@ export const ENTRY_GATEWAY_URLS = {
 const STATSIG_PROXY_TARGET = 'https://gw.lux.exchange/gateway'
 
 export const WEBSOCKET_URLS = {
-  development: 'https://websockets.backend-staging.api.uniswap.org',
-  staging: 'https://websockets.backend-staging.api.uniswap.org',
-  production: 'https://websockets.backend-prod.api.uniswap.org',
+  development: 'wss://ws.lux.exchange/staging',
+  staging: 'wss://ws.lux.exchange/staging',
+  production: 'wss://ws.lux.exchange',
 } as const
 
 // ── Cache-Control middleware for image routes ───────────────────────────
@@ -46,6 +46,17 @@ function cacheControl(maxAge: number) {
 
 export function createApp({ fetchSpaHtml, getEntryGatewayUrl, getWebSocketUrl, getTrustedClientIp }: AppConfig) {
   const app = new Hono<{ Bindings: Bindings }>()
+
+  // ── Security headers middleware ──────────────────────────────────────
+  app.use('*', async (c, next) => {
+    await next()
+    c.res.headers.set('X-Frame-Options', 'DENY')
+    c.res.headers.set('X-Content-Type-Options', 'nosniff')
+    c.res.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
+    c.res.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+    c.res.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), interest-cohort=()')
+    c.res.headers.set('X-DNS-Prefetch-Control', 'on')
+  })
 
   // ── OG image routes ────────────────────────────────────────────────────
   app.get('/api/image/tokens/:networkName/:tokenAddress', cacheControl(604800), tokenImageHandler)

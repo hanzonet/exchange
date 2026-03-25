@@ -17,6 +17,10 @@ RUN NODE_ENV=development pnpm install --no-frozen-lockfile || true
 # Rebuild native modules that might have failed
 RUN pnpm rebuild || true
 
+# Build-time arguments for secrets (pass via --build-arg, never hardcode)
+ARG REACT_APP_INSIGHTS_API_KEY
+ARG REACT_APP_INSIGHTS_HOST=https://insights.hanzo.ai
+
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
@@ -25,8 +29,8 @@ ENV NEXT_PUBLIC_LXD_GATEWAY_URL=https://dex.lux.network
 ENV REACT_APP_LXD_GATEWAY_URL=https://dex.lux.network
 ENV REACT_APP_LUX_GATEWAY_DNS=https://dex.lux.network
 ENV REACT_APP_AWS_API_ENDPOINT=https://api.lux.exchange/v1/graphql
-ENV REACT_APP_INSIGHTS_HOST=https://insights.hanzo.ai
-ENV REACT_APP_INSIGHTS_API_KEY=hi_a5316882b930d11c9183007d70c3955b
+ENV REACT_APP_INSIGHTS_HOST=${REACT_APP_INSIGHTS_HOST}
+ENV REACT_APP_INSIGHTS_API_KEY=${REACT_APP_INSIGHTS_API_KEY}
 
 # Generate gitignored types before build
 # Run pnpm install (with scripts this time) in just the api package for codegen

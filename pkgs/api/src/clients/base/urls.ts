@@ -12,7 +12,7 @@ export enum TrafficFlows {
   DataApi = 'data-api',
 }
 
-export const helpUrl = 'https://support.uniswap.org/hc/en-us'
+export const helpUrl = 'https://docs.lux.exchange/help'
 
 const FLOWS_USING_BETA = [TrafficFlows.FOR]
 
@@ -53,15 +53,16 @@ export function getServicePrefix(flow?: TrafficFlows): string {
 export function getCloudflareApiBaseUrl(params?: { flow?: TrafficFlows; postfix?: string }): string {
   const { flow, postfix } = params ?? {}
   let baseUrl
+  const gatewayHost = process.env.REACT_APP_GATEWAY_HOST || 'gateway.lux.exchange'
   if (flow === TrafficFlows.TradingApi && !isPlaywrightEnv()) {
     // This is an exception that only applies to dev + TAPI where the order of the prefix matters
-    baseUrl = `https://${isDevEnv() ? 'beta.' : ''}trading-api-labs.${getCloudflarePrefix(flow)}.gateway.uniswap.org`
+    baseUrl = `https://${isDevEnv() ? 'beta.' : ''}trading-api-labs.${getCloudflarePrefix(flow)}.${gatewayHost}`
   }
   // Only changing this for DataApi to use the new prefixing logic that points both prod and beta to prod
   else if (flow === TrafficFlows.DataApi) {
-    baseUrl = `https://${isDevEnv() && !isPlaywrightEnv() ? 'beta' : getCloudflarePrefix(flow)}.gateway.uniswap.org`
+    baseUrl = `https://${isDevEnv() && !isPlaywrightEnv() ? 'beta' : getCloudflarePrefix(flow)}.${gatewayHost}`
   } else {
-    baseUrl = `https://${getServicePrefix(flow)}${getCloudflarePrefix(flow)}.gateway.uniswap.org`
+    baseUrl = `https://${getServicePrefix(flow)}${getCloudflarePrefix(flow)}.${gatewayHost}`
   }
   if (postfix) {
     baseUrl += `/${postfix}`
@@ -74,12 +75,18 @@ export function createHelpArticleUrl(resourceId: string, path: string = 'article
   return `${helpUrl}/${path}/${resourceId}?product_link=${product}`
 }
 
-// Entry Gateway API URLs
-export const DEV_ENTRY_GATEWAY_API_BASE_URL: string = 'https://entry-gateway.backend-dev.api.uniswap.org'
-export const STAGING_ENTRY_GATEWAY_API_BASE_URL: string = 'https://entry-gateway.backend-staging.api.uniswap.org'
-export const PROD_ENTRY_GATEWAY_API_BASE_URL: string = 'https://entry-gateway.backend-prod.api.uniswap.org'
+// Entry Gateway API URLs — configurable via env, defaults to lux.exchange
+export const DEV_ENTRY_GATEWAY_API_BASE_URL: string =
+  process.env.REACT_APP_DEV_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
+export const STAGING_ENTRY_GATEWAY_API_BASE_URL: string =
+  process.env.REACT_APP_STAGING_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
+export const PROD_ENTRY_GATEWAY_API_BASE_URL: string =
+  process.env.REACT_APP_PROD_ENTRY_GATEWAY_URL || 'https://gw.lux.exchange/conversion'
 
-// WebSocket URLs
-export const DEV_WEBSOCKET_BASE_URL: string = 'wss://websockets.backend-staging.api.uniswap.org'
-export const STAGING_WEBSOCKET_BASE_URL: string = 'wss://websockets.backend-staging.api.uniswap.org'
-export const PROD_WEBSOCKET_BASE_URL: string = 'wss://websockets.backend-prod.api.uniswap.org'
+// WebSocket URLs — configurable via env, defaults to lux.exchange
+export const DEV_WEBSOCKET_BASE_URL: string =
+  process.env.REACT_APP_DEV_WEBSOCKET_URL || 'wss://ws.lux.exchange/staging'
+export const STAGING_WEBSOCKET_BASE_URL: string =
+  process.env.REACT_APP_STAGING_WEBSOCKET_URL || 'wss://ws.lux.exchange/staging'
+export const PROD_WEBSOCKET_BASE_URL: string =
+  process.env.REACT_APP_PROD_WEBSOCKET_URL || 'wss://ws.lux.exchange'

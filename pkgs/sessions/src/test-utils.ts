@@ -40,7 +40,7 @@ export interface MockEndpoints {
 // Test transport that intercepts requests and returns mock responses
 export function createTestTransport(mockEndpoints: MockEndpoints): ReturnType<typeof createConnectTransport> {
   return createConnectTransport({
-    baseUrl: 'https://test.api.uniswap.org',
+    baseUrl: 'https://test.api.lux.exchange',
     interceptors: [
       (_next) => async (request) => {
         const url = request.url

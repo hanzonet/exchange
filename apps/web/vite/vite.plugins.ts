@@ -15,6 +15,7 @@ const CSP_DIRECTIVE_MAP: Record<string, string> = {
   mediaSrc: 'media-src',
   fontSrc: 'font-src',
   formAction: 'form-action',
+  reportUri: 'report-uri',
 }
 
 // This plugin is used in vite.config.mts

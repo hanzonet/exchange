@@ -32,24 +32,42 @@ const BLOCKSCOUT_API = process.env.BLOCKSCOUT_API || 'https://api-explore.lux.ne
 const app = express();
 
 // F2: Restrict CORS to known origins
+const ALLOWED_ORIGINS = [
+  'https://lux.exchange',
+  /^https:\/\/[a-z0-9-]+\.lux\.(exchange|network)$/,
+  /^https:\/\/[a-z0-9-]+\.liquidity\.io$/,
+];
+// Allow localhost in development only
+if (process.env.NODE_ENV !== 'production') {
+  ALLOWED_ORIGINS.push(/^http:\/\/localhost:\d+$/);
+}
 app.use(cors({
-  origin: [
-    'https://lux.exchange',
-    /\.lux\.(exchange|network)$/,
-    /\.lux\.org$/,
-  ],
+  origin: ALLOWED_ORIGINS,
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Request-Source'],
+  maxAge: 86400,
 }));
 
 // F4: Security headers and rate limiting
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false, // CSP is managed via meta tag in the SPA
+  hsts: { maxAge: 31536000, includeSubDomains: true, preload: true },
+  frameguard: { action: 'deny' },
+  referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
+}));
 app.disable('x-powered-by');
 app.use(express.json({ limit: '100kb' }));
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
-  standardHeaders: true,
+  standardHeaders: true,   // Return X-RateLimit-* headers
   legacyHeaders: false,
+  message: { error: 'Too many requests, please try again later.' },
+  handler: (req, res) => {
+    res.status(429).json({ error: 'Too many requests, please try again later.' });
+  },
 });
 app.use(limiter);
 
@@ -283,6 +301,10 @@ app.get('/api/price/:symbol', async (req, res) => {
 app.get('/api/token/:address/history', async (req, res) => {
   try {
     const { address } = req.params;
+    // Validate token address format
+    if (!address || !/^0x[0-9a-fA-F]{40}$/.test(address)) {
+      return res.status(400).json({ error: 'Invalid token address' });
+    }
     const { days = 30 } = req.query;
     const safeDays = Math.min(Math.max(Number(days) || 30, 1), 365);
     const safeAddress = String(address).toLowerCase();
@@ -310,6 +332,10 @@ app.get('/api/token/:address/history', async (req, res) => {
 app.get('/api/portfolio/:address', async (req, res) => {
   try {
     const { address } = req.params;
+    // Validate Ethereum address format
+    if (!address || !/^0x[0-9a-fA-F]{40}$/.test(address)) {
+      return res.status(400).json({ error: 'Invalid Ethereum address' });
+    }
     if (!provider) return res.status(503).json({ error: 'No RPC provider' });
 
     const erc20ABI = ['function balanceOf(address) view returns (uint256)'];
@@ -333,9 +359,27 @@ app.get('/api/portfolio/:address', async (req, res) => {
   }
 });
 
+// Subgraph query validation: reject excessively deep or large queries
+function validateSubgraphQuery(query) {
+  if (!query || typeof query !== 'string') return 'Query must be a non-empty string';
+  if (query.length > 10000) return 'Query too large (max 10000 chars)';
+  // Count nesting depth by tracking braces
+  let depth = 0, maxDepth = 0;
+  for (const ch of query) {
+    if (ch === '{') { depth++; maxDepth = Math.max(maxDepth, depth); }
+    else if (ch === '}') { depth--; }
+  }
+  if (maxDepth > 10) return 'Query nesting too deep (max 10 levels)';
+  // Block introspection queries (information disclosure)
+  if (/__schema|__type/i.test(query)) return 'Introspection queries are not allowed';
+  return null;
+}
+
 // Lux V3 subgraph proxy
 app.post('/subgraph/v3', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(SUBGRAPH_V3_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
@@ -346,6 +390,8 @@ app.post('/subgraph/v3', async (req, res) => {
 // Lux V2 subgraph proxy
 app.post('/subgraph/v2', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(SUBGRAPH_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
@@ -356,6 +402,8 @@ app.post('/subgraph/v2', async (req, res) => {
 // Zoo V3 subgraph proxy
 app.post('/subgraph/zoo/v3', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(ZOO_SUBGRAPH_V3_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
@@ -366,6 +414,8 @@ app.post('/subgraph/zoo/v3', async (req, res) => {
 // Zoo V2 subgraph proxy
 app.post('/subgraph/zoo/v2', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(SUBGRAPH_ZOO_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
@@ -376,6 +426,8 @@ app.post('/subgraph/zoo/v2', async (req, res) => {
 // Pars V2 subgraph proxy
 app.post('/subgraph/pars/v2', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(SUBGRAPH_PARS_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
@@ -386,6 +438,8 @@ app.post('/subgraph/pars/v2', async (req, res) => {
 // Hanzo V2 subgraph proxy
 app.post('/subgraph/hanzo/v2', async (req, res) => {
   try {
+    const validationError = validateSubgraphQuery(req.body.query);
+    if (validationError) return res.status(400).json({ errors: [{ message: validationError }] });
     const data = await querySubgraph(SUBGRAPH_HANZO_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
