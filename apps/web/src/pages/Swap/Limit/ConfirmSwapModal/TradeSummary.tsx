@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import Row from '~/components/deprecated/Row'
 import CurrencyLogo from '~/components/Logo/CurrencyLogo'
 import { InterfaceTrade } from '~/state/routing/types'

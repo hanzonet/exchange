@@ -1,8 +1,15 @@
 import { OriginApplication } from '@uniswap/analytics'
+<<<<<<< Updated upstream
 import { luxUrls } from 'lx/src/constants/urls'
 import { isTestEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
 import { ApplicationTransport } from 'utilities/src/telemetry/analytics/ApplicationTransport'
+=======
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ApplicationTransport } from '@luxfi/utilities/src/telemetry/analytics/ApplicationTransport'
+>>>>>>> Stashed changes
 // biome-ignore lint/style/noRestrictedImports: Need direct analytics import for Amplitude initialization
 import { analytics, getAnalyticsAtomDirect } from 'utilities/src/telemetry/analytics/analytics'
 import store from '~/state'

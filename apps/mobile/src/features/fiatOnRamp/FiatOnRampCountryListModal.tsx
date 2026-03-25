@@ -5,6 +5,7 @@ import { FadeIn, FadeOut } from 'react-native-reanimated'
 import { SvgUri } from 'react-native-svg'
 import { Loader } from 'src/components/loading/loaders'
 import { useFiatOnRampContext } from 'src/features/fiatOnRamp/FiatOnRampContext'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
 import { AnimatedBottomSheetFlashList } from 'ui/src/components/AnimatedFlashList/AnimatedFlashList'
 import { Check } from 'ui/src/components/icons'
@@ -21,6 +22,24 @@ import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { bubbleToTop } from 'utilities/src/primitives/array'
 import { useDebounce } from 'utilities/src/time/timing'
+=======
+import { Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { AnimatedBottomSheetFlashList } from '@luxfi/ui/src/components/AnimatedFlashList/AnimatedFlashList'
+import { Check } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { fonts, spacing } from '@luxfi/ui/src/theme'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { FOR_MODAL_SNAP_POINTS } from '@luxexchange/lx/src/features/fiatOnRamp/constants'
+import { useFiatOnRampAggregatorCountryListQuery } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { FORCountry, RampDirection } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { getCountryFlagSvgUrl } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { SearchTextInput } from '@luxexchange/lx/src/features/search/SearchTextInput'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { bubbleToTop } from '@luxfi/utilities/src/primitives/array'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 
 const ICON_SIZE = 32 // design prefers a custom value here
 

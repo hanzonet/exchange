@@ -37,6 +37,7 @@ import {
   WindowEthereumRequest,
 } from 'src/contentScript/types'
 import { logContentScriptError } from 'src/contentScript/utils'
+<<<<<<< Updated upstream
 import { chainIdToHexadecimalString } from 'lx/src/features/chains/utils'
 import { EthMethod } from 'lx/src/features/dappRequests/types'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
@@ -47,6 +48,18 @@ import { logger } from 'utilities/src/logger/logger'
 import { arraysAreEqual } from 'utilities/src/primitives/array'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { walletContextValue } from 'wallet/src/features/wallet/context'
+=======
+import { chainIdToHexadecimalString } from '@luxexchange/lx/src/features/chains/utils'
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { arraysAreEqual } from '@luxfi/utilities/src/primitives/array'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { walletContextValue } from '@luxfi/wallet/src/features/wallet/context'
+>>>>>>> Stashed changes
 import { defineContentScript } from 'wxt/utils/define-content-script'
 import { ZodError } from 'zod'
 

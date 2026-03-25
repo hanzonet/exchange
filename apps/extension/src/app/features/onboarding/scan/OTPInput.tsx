@@ -5,6 +5,7 @@ import { OnboardingScreen } from 'src/app/features/onboarding/OnboardingScreen'
 import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { useScantasticContext } from 'src/app/features/onboarding/scan/ScantasticContextProvider'
 import { decryptMessage } from 'src/app/features/onboarding/scan/utils'
+<<<<<<< Updated upstream
 import { Flex, Input, inputStyles, Square, Text } from 'ui/src'
 import { Mobile } from 'ui/src/components/icons'
 import { fonts, iconSizes } from 'ui/src/theme'
@@ -17,6 +18,20 @@ import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { useInterval, useTimeout } from 'utilities/src/time/timing'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { getOtpDurationString } from 'wallet/src/utils/duration'
+=======
+import { Flex, Input, inputStyles, Square, Text } from '@luxfi/ui/src'
+import { Mobile } from '@luxfi/ui/src/components/icons'
+import { fonts, iconSizes } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { arraysAreEqual } from '@luxfi/utilities/src/primitives/array'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { useInterval, useTimeout } from '@luxfi/utilities/src/time/timing'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { getOtpDurationString } from '@luxfi/wallet/src/utils/duration'
+>>>>>>> Stashed changes
 
 const MAX_FAILED_OTP_ATTEMPTS = 3
 

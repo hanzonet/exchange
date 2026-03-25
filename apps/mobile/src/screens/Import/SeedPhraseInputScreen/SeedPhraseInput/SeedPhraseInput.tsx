@@ -9,9 +9,15 @@ import {
   NativeSeedPhraseInputProps,
   NativeSeedPhraseInputRef,
 } from 'src/screens/Import/SeedPhraseInputScreen/SeedPhraseInput/types'
+<<<<<<< Updated upstream
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 const styles = StyleSheet.create({
   input: {

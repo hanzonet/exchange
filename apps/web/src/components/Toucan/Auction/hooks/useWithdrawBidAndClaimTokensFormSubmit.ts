@@ -4,25 +4,32 @@ import type {
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
 import { BidToExit, ChainId } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { useCallback, useMemo, useRef, useState } from 'react'
-import { useExitBidAndClaimTokensMutation } from 'lx/src/data/rest/auctions/useExitBidAndClaimTokensMutation'
-import { useExitBidPositionMutation } from 'lx/src/data/rest/auctions/useExitBidPositionMutation'
-import { AuctionEventName } from 'lx/src/features/telemetry/constants'
-import type { UniverseEventProperties } from 'lx/src/features/telemetry/types'
-import { SetCurrentStepFn } from 'lx/src/features/transactions/swap/types/swapCallback'
-import { validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
+import { useExitBidAndClaimTokensMutation } from '@luxexchange/lx/src/data/rest/auctions/useExitBidAndClaimTokensMutation'
+import { useExitBidPositionMutation } from '@luxexchange/lx/src/data/rest/auctions/useExitBidPositionMutation'
+import { AuctionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import type { UniverseEventProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { SetCurrentStepFn } from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'
+import { validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
 import {
   ToucanWithdrawBidAndClaimTokensTransactionInfo,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { ValidatedTransactionRequest } from 'lx/src/features/transactions/types/transactionRequests'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ValidatedTransactionRequest } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
 import {
   isSignerMnemonicAccountDetails,
   SignerMnemonicAccountDetails,
+<<<<<<< Updated upstream
 } from 'lx/src/features/wallet/types/AccountDetails'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+} from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { getAuctionWithdrawBaseAnalyticsProperties } from '~/components/Toucan/Auction/analytics'
 import { AuctionBidStatus } from '~/components/Toucan/Auction/store/types'
 import { useAuctionStore, useAuctionStoreActions } from '~/components/Toucan/Auction/store/useAuctionStore'

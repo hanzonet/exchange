@@ -12,8 +12,8 @@ import {
   BRIDGED_ASSETS_CARD_BANNER,
   BRIDGED_ASSETS_V2_CARD_BANNER_DARK,
   BRIDGED_ASSETS_V2_CARD_BANNER_LIGHT,
-} from 'ui/src/assets'
-import i18n from 'lx/src/i18n'
+} from '@luxfi/ui/src/assets'
+import i18n from '@luxexchange/lx/src/i18n'
 
 /**
  * Check if Bridged Assets V2 banner should be shown based on feature flag.

@@ -31,7 +31,7 @@ import {
 import { useAdvancedSettingsMenuState } from 'src/features/settings/hooks/useAdvancedSettingsMenuState'
 import { useWalletRestore } from 'src/features/wallet/useWalletRestore'
 import { importFromCloudBackupOption, restoreFromCloudBackupOption } from 'src/screens/Import/constants'
-import { Flex, IconProps, Text, useSporeColors } from 'ui/src'
+import { Flex, IconProps, Text, useSporeColors } from '@luxfi/ui/src'
 import {
   Bell,
   BookOpen,
@@ -54,6 +54,7 @@ import {
   LuxLogo,
   WavePulse,
   Wrench,
+<<<<<<< Updated upstream
 } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
 import { luxUrls } from 'lx/src/constants/urls'
@@ -73,6 +74,27 @@ import { selectHasCopiedPrivateKeys } from 'wallet/src/features/behaviorHistory/
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
 import { hasBackup } from 'wallet/src/features/wallet/accounts/utils'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useCurrentAppearanceSetting } from '@luxexchange/lx/src/features/appearance/hooks'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { useHapticFeedback } from '@luxexchange/lx/src/features/settings/useHapticFeedback/useHapticFeedback'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { selectHasCopiedPrivateKeys } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { hasBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 // avoids rendering during animation which makes it laggy
 // set to a bit above the Switch animation "simple" which is 80ms

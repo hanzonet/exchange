@@ -1,6 +1,7 @@
 import { GasFeeResult } from '@universe/api'
 import { useTranslation } from 'react-i18next'
 import { DappRequestContent } from 'src/app/features/dappRequests/DappRequestContent'
+<<<<<<< Updated upstream
 import { Flex, Separator, Text } from 'ui/src'
 import { ArrowDown } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
@@ -12,6 +13,19 @@ import { useLocalizationContext } from 'lx/src/features/language/LocalizationCon
 import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Separator, Text } from '@luxfi/ui/src'
+import { ArrowDown } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { SplitLogo } from '@luxexchange/lx/src/components/CurrencyLogo/SplitLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 export function SwapDisplay({
   inputAmount,

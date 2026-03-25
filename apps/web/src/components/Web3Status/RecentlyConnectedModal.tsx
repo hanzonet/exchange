@@ -1,6 +1,7 @@
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { MutableRefObject, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { AdaptiveWebPopoverContent, Button, Flex, Text, useShadowPropsShort } from 'ui/src'
 import { Unitag } from 'ui/src/components/icons/Unitag'
 import { X } from 'ui/src/components/icons/X'
@@ -10,6 +11,17 @@ import { useOnchainDisplayName } from 'lx/src/features/accounts/useOnchainDispla
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { shortenAddress } from 'utilities/src/addresses'
 import { useOnClickOutside } from 'utilities/src/react/hooks'
+=======
+import { AdaptiveWebPopoverContent, Button, Flex, Text, useShadowPropsShort } from '@luxfi/ui/src'
+import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { useOnchainDisplayName } from '@luxexchange/lx/src/features/accounts/useOnchainDisplayName'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { useOnClickOutside } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import StatusIcon from '~/components/StatusIcon'
 import { useRecentConnectorId } from '~/components/Web3Provider/constants'
 import { useIsMobile } from '~/hooks/screenSize/useIsMobile'

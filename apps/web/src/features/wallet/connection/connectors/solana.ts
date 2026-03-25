@@ -1,9 +1,15 @@
 import { WalletError } from '@solana/wallet-adapter-base'
 import { useWallet as useSolanaWalletContext } from '@solana/wallet-adapter-react'
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { useEvent } from 'utilities/src/react/hooks'
 import { sleep } from 'utilities/src/time/timing'
+=======
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { sleep } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 import type { ExternalConnector } from '~/features/accounts/store/types'
 import type { GetConnectorFn } from '~/features/wallet/connection/services/createConnectionService'
 import { createConnectionService } from '~/features/wallet/connection/services/createConnectionService'

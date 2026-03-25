@@ -8,6 +8,7 @@ import { AppStackScreenProp } from 'src/app/navigation/types'
 import { BackHeader } from 'src/components/layout/BackHeader'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { navigateBackFromEditingWallet } from 'src/components/Settings/EditWalletModal/EditWalletNavigation'
+<<<<<<< Updated upstream
 import { Button, Flex, Text } from 'ui/src'
 import { fonts } from 'ui/src/theme'
 import { TextInput } from 'lx/src/components/input/TextInput'
@@ -21,6 +22,21 @@ import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNati
 import { NICKNAME_MAX_LENGTH } from 'wallet/src/constants/accounts'
 import { EditAccountAction, editAccountActions } from 'wallet/src/features/wallet/accounts/editAccountSaga'
 import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { fonts } from '@luxfi/ui/src/theme'
+import { TextInput } from '@luxexchange/lx/src/components/input/TextInput'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { sanitizeAddressText } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { NICKNAME_MAX_LENGTH } from '@luxfi/wallet/src/constants/accounts'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function EditLabelSettingsModal({
   route,

@@ -3,6 +3,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { queryOptions, useQuery } from '@tanstack/react-query'
 import type { Currency } from '@uniswap/sdk-core'
 import { CurrencyAmount, TradeType } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { TradingApi } from '@universe/api'
 import { ZERO_ADDRESS } from 'lx/src/constants/misc'
 import { nativeOnChain } from 'lx/src/constants/tokens'
@@ -13,6 +14,18 @@ import { useLocalizationContext } from 'lx/src/features/language/LocalizationCon
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
 import { hasTradeType } from 'lx/src/features/transactions/swap/utils/trade'
+=======
+import { TradingApi } from '@luxexchange/api'
+import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import type { FORTransaction } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { hasTradeType } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+>>>>>>> Stashed changes
 import type {
   ApproveTransactionInfo,
   BridgeTransactionInfo,
@@ -32,6 +45,7 @@ import type {
   ToucanWithdrawBidAndClaimTokensTransactionInfo,
   DEXOrderDetails,
   WrapTransactionInfo,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
 import { isConfirmedSwapTypeInfo } from 'lx/src/features/transactions/types/utils'
@@ -42,6 +56,18 @@ import { NumberType } from 'utilities/src/format/types'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isConfirmedSwapTypeInfo } from '@luxexchange/lx/src/features/transactions/types/utils'
+import i18n from '@luxexchange/lx/src/i18n'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { buildCurrencyId, buildNativeCurrencyId, currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import DEXBolt from '~/assets/svg/bolt.svg'
 import StaticRouteIcon from '~/assets/svg/static_route.svg'
 import {

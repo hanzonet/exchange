@@ -12,10 +12,10 @@ vi.mock('lx/src/features/accounts/store/hooks', () => ({
 }))
 
 import { CurrencyAmount } from '@uniswap/sdk-core'
-import { nativeOnChain, USDT } from 'lx/src/constants/tokens'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyField } from 'lx/src/types/currency'
+import { nativeOnChain, USDT } from '@luxexchange/lx/src/constants/tokens'
+import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import SwapCurrencyInputPanel from '~/components/CurrencyInputPanel/SwapCurrencyInputPanel'
 import { useAccount } from '~/hooks/useAccount'
 import { useCurrencyBalance } from '~/state/connection/hooks'

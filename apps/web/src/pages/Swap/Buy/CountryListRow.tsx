@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react'
-import { Avatar, Flex, styled } from 'ui/src'
-import { Check } from 'ui/src/components/icons/Check'
-import { Text } from 'ui/src/components/text/Text'
-import { iconSizes } from 'ui/src/theme'
-import { FORCountry } from 'lx/src/features/fiatOnRamp/types'
-import { getCountryFlagSvgUrl } from 'lx/src/features/fiatOnRamp/utils'
+import { Avatar, Flex, styled } from '@luxfi/ui/src'
+import { Check } from '@luxfi/ui/src/components/icons/Check'
+import { Text } from '@luxfi/ui/src/components/text/Text'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { FORCountry } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { getCountryFlagSvgUrl } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
 
 const RowWrapper = styled(Flex, {
   row: true,

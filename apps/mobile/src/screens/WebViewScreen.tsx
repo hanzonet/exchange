@@ -3,10 +3,17 @@ import WebView from 'react-native-webview'
 import { AppStackScreenProp, SettingsStackScreenProp } from 'src/app/navigation/types'
 import { BackHeader } from 'src/components/layout/BackHeader'
 import { Screen } from 'src/components/layout/Screen'
+<<<<<<< Updated upstream
 import { Separator, Text } from 'ui/src'
 import { luxUrls } from 'lx/src/constants/urls'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+=======
+import { Separator, Text } from '@luxfi/ui/src'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function WebViewScreen({
   route,

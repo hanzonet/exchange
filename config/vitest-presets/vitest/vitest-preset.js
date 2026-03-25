@@ -24,7 +24,7 @@ module.exports = {
     coverage: {
       enabled: false, // only collect in CI
       reporter: ['json', 'lcov', 'html'],
-      include: ['packages/**/src/**/*.ts'],
+      include: ['pkgs/**/src/**/*.ts'],
     },
     clearMocks: true,
     pool: 'forks',

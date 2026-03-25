@@ -1,7 +1,12 @@
 import { useWeb3React } from '@web3-react/core'
 import { useEffect, useState } from 'react'
+<<<<<<< Updated upstream
 import { useSupportedChainId } from 'lx/src/features/chains/hooks/useSupportedChainId'
 import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+=======
+import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
+>>>>>>> Stashed changes
 import { useAccount } from '~/hooks/useAccount'
 import useDebounce from '~/hooks/useDebounce'
 import { updateChainId } from '~/state/application/reducer'

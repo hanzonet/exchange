@@ -1,8 +1,15 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { CheckmarkCircle } from 'ui/src/components/icons/CheckmarkCircle'
 import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { CheckmarkCircle } from '@luxfi/ui/src/components/icons/CheckmarkCircle'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { OrderDirection } from '~/appGraphql/data/util'
 import { ClickableHeaderRow, EllipsisText, HeaderArrow, HeaderSortText } from '~/components/Table/styled'
 import { getAuctionMetadata } from '~/components/Toucan/Config/config'

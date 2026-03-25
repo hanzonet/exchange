@@ -1,4 +1,4 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TokenSortMethod } from '~/components/Tokens/constants'
 import { useBackendSortedTopTokens } from '~/state/explore/topTokens/useBackendSortedTopTokens'
 import { useTopTokensLegacy } from '~/state/explore/topTokens/useTopTokensLegacy'

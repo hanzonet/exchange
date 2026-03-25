@@ -9,10 +9,17 @@ import {
 import { memo, useCallback, useEffect, useRef } from 'react'
 import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { type LogEntry, useSessionsDebugStore } from 'src/app/features/settings/stores/sessionsDebugStore'
+<<<<<<< Updated upstream
 import { Button, Flex, ScrollView, Text, TouchableArea } from 'ui/src'
 import { CopyAlt } from 'ui/src/components/icons'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Button, Flex, ScrollView, Text, TouchableArea } from '@luxfi/ui/src'
+import { CopyAlt } from '@luxfi/ui/src/components/icons'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { useShallow } from 'zustand/shallow'
 
 // Storage keys (must match session storage)

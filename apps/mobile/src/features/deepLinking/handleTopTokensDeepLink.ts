@@ -3,11 +3,19 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { ExploreModalState } from 'src/app/navigation/types'
 import { dismissAllModalsBeforeNavigation } from 'src/features/deepLinking/utils'
 import { call } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { logger } from 'utilities/src/logger/logger'
 import { ExploreOrderBy, isSupportedExploreOrderBy } from 'wallet/src/features/wallet/types'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ExploreOrderBy, isSupportedExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
+>>>>>>> Stashed changes
 
 const getValidRankingType = (metric: string | null): ExploreOrderBy | undefined => {
   if (!metric) {

@@ -1,5 +1,5 @@
 import { PersistState } from 'redux-persist'
-import { TokensState } from 'lx/src/features/tokens/warnings/slice/slice'
+import { TokensState } from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
 
 type PersistAppState = {
   _persist: PersistState

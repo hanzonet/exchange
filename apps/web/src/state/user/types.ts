@@ -1,4 +1,4 @@
-import { SerializedToken } from 'lx/src/features/tokens/warnings/slice/types'
+import { SerializedToken } from '@luxexchange/lx/src/features/tokens/warnings/slice/types'
 
 export interface SerializedPair {
   token0: SerializedToken

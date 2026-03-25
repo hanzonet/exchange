@@ -6,6 +6,7 @@ import * as biometricAppSettingsHooks from 'src/features/biometrics/useBiometric
 import * as deviceBiometricHooks from 'src/features/biometrics/useDeviceSupportsBiometricAuth'
 import { AuthMethod } from 'src/features/telemetry/utils'
 import * as versionUtils from 'src/utils/version'
+<<<<<<< Updated upstream
 import * as useIsDarkModeFile from 'ui/src/hooks/useIsDarkMode'
 import { AccountType } from 'lx/src/features/accounts/types'
 import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
@@ -17,6 +18,19 @@ import { analytics } from 'utilities/src/telemetry/analytics/analytics'
 import { BackupType, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
 import * as walletHooks from 'wallet/src/features/wallet/hooks'
 import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+=======
+import * as useIsDarkModeFile from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import * as fiatCurrencyHooks from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import * as languageHooks from '@luxexchange/lx/src/features/language/hooks'
+import * as userSettingsHooks from '@luxexchange/lx/src/features/settings/hooks'
+import { MobileUserPropertyName } from '@luxexchange/lx/src/features/telemetry/user'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
+import { BackupType, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import * as walletHooks from '@luxfi/wallet/src/features/wallet/hooks'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 // `any` is the actual type used by `jest.spyOn`
 // eslint-disable-next-line max-params

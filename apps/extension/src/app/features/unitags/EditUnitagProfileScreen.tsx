@@ -6,6 +6,7 @@ import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
 import { backgroundToSidePanelMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { BackgroundToSidePanelRequestType } from 'src/background/messagePassing/types/requests'
+<<<<<<< Updated upstream
 import { AnimatePresence, Flex } from 'ui/src'
 import { Edit, Ellipsis, Trash } from 'ui/src/components/icons'
 import { ContextMenu, MenuOptionItem } from 'lx/src/components/menus/ContextMenu'
@@ -18,6 +19,20 @@ import { ChangeUnitagModal } from 'wallet/src/features/unitags/ChangeUnitagModal
 import { DeleteUnitagModal } from 'wallet/src/features/unitags/DeleteUnitagModal'
 import { EditUnitagProfileContent } from 'wallet/src/features/unitags/EditUnitagProfileContent'
 import { useAccountAddressFromUrlWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { AnimatePresence, Flex } from '@luxfi/ui/src'
+import { Edit, Ellipsis, Trash } from '@luxfi/ui/src/components/icons'
+import { ContextMenu, MenuOptionItem } from '@luxexchange/lx/src/components/menus/ContextMenu'
+import { ContextMenuTriggerMode } from '@luxexchange/lx/src/components/menus/types'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { ChangeUnitagModal } from '@luxfi/wallet/src/features/unitags/ChangeUnitagModal'
+import { DeleteUnitagModal } from '@luxfi/wallet/src/features/unitags/DeleteUnitagModal'
+import { EditUnitagProfileContent } from '@luxfi/wallet/src/features/unitags/EditUnitagProfileContent'
+import { useAccountAddressFromUrlWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function EditUnitagProfileScreen({ enableBack = false }: { enableBack?: boolean }): JSX.Element {
   const { t } = useTranslation()

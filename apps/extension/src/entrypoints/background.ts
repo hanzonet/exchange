@@ -19,11 +19,19 @@ import {
   readDeviceAccessTimeoutMinutesFromStorage,
   readIsOnboardedFromStorage,
 } from 'src/background/utils/persistedStateUtils'
+<<<<<<< Updated upstream
 import { luxUrls } from 'lx/src/constants/urls'
 import { ExtensionEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { logger } from 'utilities/src/logger/logger'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+=======
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+>>>>>>> Stashed changes
 import { defineBackground } from 'wxt/utils/define-background'
 
 async function enableSidebar(): Promise<void> {

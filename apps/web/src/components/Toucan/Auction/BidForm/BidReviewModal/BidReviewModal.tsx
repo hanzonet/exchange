@@ -2,6 +2,7 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { Modal } from 'lx/src/components/modals/Modal'
@@ -11,6 +12,17 @@ import { ModalName } from 'lx/src/features/telemetry/constants'
 import { TransactionStep, TransactionStepType } from 'lx/src/features/transactions/steps/types'
 import { NumberType } from 'utilities/src/format/types'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TransactionStep, TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import CurrencyLogo from '~/components/Logo/CurrencyLogo'
 import {
   BidProgressIndicator,

@@ -1,8 +1,15 @@
 import { NativeEventEmitter, NativeModules, Platform } from 'react-native'
+<<<<<<< Updated upstream
 import { WalletEventName } from 'lx/src/features/telemetry/constants/wallet'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { logger } from 'utilities/src/logger/logger'
 import { isMobileApp } from 'utilities/src/platform'
+=======
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants/wallet'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 const EVENT_NAME = 'SilentPushReceived'
 

@@ -1,0 +1,43 @@
+import { useTranslation } from 'react-i18next'
+import { Flex, Text } from '@luxfi/ui/src'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningInfo } from '@luxexchange/lx/src/components/modals/WarningModal/WarningInfo'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
+
+export function V4HooksInfo(): JSX.Element {
+  const { t } = useTranslation()
+  return (
+    <WarningInfo
+      infoButton={
+        <LearnMoreLink
+          textVariant={isWebPlatform ? 'body4' : undefined}
+          url={luxUrls.helpArticleUrls.v4HooksInfo}
+        />
+      }
+      modalProps={{
+        caption: t('swap.settings.routingPreference.option.v4.hooks.tooltip'),
+        rejectText: t('common.button.close'),
+        severity: WarningSeverity.None,
+        modalName: ModalName.V4HooksInfo,
+        icon: <LuxLogo size="$icon.24" />,
+      }}
+      trigger={
+        <Flex row centered>
+          <Text color="$neutral1" variant="subheading2" mr="$spacing4">
+            {t('swap.settings.routingPreference.option.v4.hooks.title')}
+          </Text>
+          <InfoCircleFilled color="$neutral3" size="$icon.16" />
+        </Flex>
+      }
+      tooltipProps={{
+        text: t('swap.settings.routingPreference.option.v4.hooks.tooltip'),
+        placement: 'bottom',
+      }}
+    />
+  )
+}

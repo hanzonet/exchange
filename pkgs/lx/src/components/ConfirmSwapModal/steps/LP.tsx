@@ -1,0 +1,60 @@
+import { useTranslation } from 'react-i18next'
+import { Flex } from '@luxfi/ui/src'
+import { Swap } from '@luxfi/ui/src/components/icons/Swap' // TODO: update to LP icon
+import { StepRowProps, StepRowSkeleton } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { CollectFeesSteps } from '@luxexchange/lx/src/features/transactions/liquidity/steps/collectFeesSteps'
+import { DecreasePositionTransactionStep } from '@luxexchange/lx/src/features/transactions/liquidity/steps/decreasePosition'
+import {
+  IncreasePositionTransactionStep,
+  IncreasePositionTransactionStepAsync,
+} from '@luxexchange/lx/src/features/transactions/liquidity/steps/increasePosition'
+import {
+  MigratePositionTransactionStep,
+  MigratePositionTransactionStepAsync,
+} from '@luxexchange/lx/src/features/transactions/liquidity/steps/migrate'
+
+const LPIcon = (): JSX.Element => (
+  <Flex centered width="$spacing24" height="$spacing24" borderRadius="$roundedFull" backgroundColor="$DEP_blue400">
+    <Swap color="$neutral1" size="$icon.12" />
+  </Flex>
+)
+
+type LPSteps =
+  | IncreasePositionTransactionStep
+  | IncreasePositionTransactionStepAsync
+  | DecreasePositionTransactionStep
+  | MigratePositionTransactionStep
+  | MigratePositionTransactionStepAsync
+  | CollectFeesSteps
+export function LPTransactionStepRow({
+  status,
+  currentStepIndex,
+  totalStepsCount,
+}: StepRowProps<LPSteps>): JSX.Element {
+  const { t } = useTranslation()
+
+  const title = {
+    [StepStatus.Preview]: t('common.confirmWallet'),
+    [StepStatus.Failed]: t('common.failed'),
+    [StepStatus.Replaced]: t('common.failed'),
+    [StepStatus.Active]: t('common.confirmWallet'),
+    [StepStatus.InProgress]: t('common.transactionPending'),
+    [StepStatus.Complete]: t('common.confirmWallet'),
+  }[status]
+
+  return (
+    <StepRowSkeleton
+      title={title}
+      icon={<LPIcon />}
+      learnMore={{
+        url: luxUrls.helpArticleUrls.providingLiquidityVersions,
+        text: t('common.learnMoreLiquidity'),
+      }}
+      status={status}
+      currentStepIndex={currentStepIndex}
+      totalStepsCount={totalStepsCount}
+    />
+  )
+}

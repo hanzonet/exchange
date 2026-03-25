@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text } from 'ui/src'
+import { Button, Flex, Text } from '@luxfi/ui/src'
 import { useCreateAuctionStoreActions } from '~/pages/Liquidity/CreateAuction/CreateAuctionContext'
 
 export function AddTokenInfoStep() {

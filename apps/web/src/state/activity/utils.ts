@@ -1,5 +1,5 @@
 import { TradingApi } from '@luxfi/api'
-import { TransactionType, TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { TransactionType, TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Get the appropriate routing type for a transaction based on its type info

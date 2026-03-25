@@ -4,6 +4,7 @@ import { RefreshControl } from 'react-native'
 import { useAppStackNavigation } from 'src/app/navigation/types'
 import { useAdaptiveFooter } from 'src/components/home/hooks'
 import { TAB_BAR_HEIGHT, TabProps } from 'src/components/layout/TabHelpers'
+<<<<<<< Updated upstream
 import { Flex, useSporeColors } from 'ui/src'
 import { NftsList } from 'lx/src/components/nfts/NftsList'
 import { NftViewWithContextMenu } from 'lx/src/components/nfts/NftViewWithContextMenu'
@@ -13,6 +14,17 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { isAndroid } from 'utilities/src/platform'
 import { useAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { NftsList } from '@luxexchange/lx/src/components/nfts/NftsList'
+import { NftViewWithContextMenu } from '@luxexchange/lx/src/components/nfts/NftViewWithContextMenu'
+import { NFTItem } from '@luxexchange/lx/src/features/nfts/types'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export const NftsTab = memo(
   forwardRef<FlashList<unknown>, TabProps>(function _NftsTab(

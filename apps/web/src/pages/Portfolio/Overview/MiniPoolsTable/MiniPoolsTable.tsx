@@ -4,6 +4,7 @@ import { PositionStatus, ProtocolVersion } from '@uniswap/client-data-api/dist/d
 import { memo, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { useGetPositionsQuery } from 'lx/src/data/rest/getPositions'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
@@ -11,6 +12,15 @@ import { UniverseChainId } from 'lx/src/features/chains/types'
 import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { useGetPositionsQuery } from '@luxexchange/lx/src/data/rest/getPositions'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { PositionInfo } from '~/components/Liquidity/types'
 import { getPositionUrl } from '~/components/Liquidity/utils/getPositionUrl'
 import { parseRestPosition } from '~/components/Liquidity/utils/parseFromRest'

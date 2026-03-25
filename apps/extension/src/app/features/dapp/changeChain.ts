@@ -2,11 +2,11 @@ import { JsonRpcProvider } from '@ethersproject/providers'
 import { providerErrors, serializeError } from '@metamask/rpc-errors'
 import { dappStore } from 'src/app/features/dapp/store'
 import { ChangeChainResponse, ErrorResponse } from 'src/app/features/dappRequests/types/DappRequestTypes'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { chainIdToHexadecimalString } from 'lx/src/features/chains/utils'
-import { DappResponseType } from 'lx/src/features/dappRequests/types'
-import { ExtensionEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { chainIdToHexadecimalString } from '@luxexchange/lx/src/features/chains/utils'
+import { DappResponseType } from '@luxexchange/lx/src/features/dappRequests/types'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 export function changeChain({
   activeConnectedAddress,

@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
+=======
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+>>>>>>> Stashed changes
 import { MenuStateVariant, useSetMenuCallback } from '~/components/AccountDrawer/menuState'
 import { EmbeddedWalletModal } from '~/components/WalletModal/EmbeddedWalletModal'
 import { StandardWalletModal } from '~/components/WalletModal/StandardWalletModal'

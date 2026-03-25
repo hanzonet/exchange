@@ -1,9 +1,9 @@
 import React, { forwardRef, useState } from 'react'
 import { TextInput as NativeTextInput } from 'react-native'
-import { Flex, TouchableArea } from 'ui/src'
-import { Eye, EyeOff } from 'ui/src/components/icons'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { TextInput, TextInputProps } from 'lx/src/components/input/TextInput'
+import { Flex, TouchableArea } from '@luxfi/ui/src'
+import { Eye, EyeOff } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { TextInput, TextInputProps } from '@luxexchange/lx/src/components/input/TextInput'
 
 export const PasswordInput = forwardRef<NativeTextInput, TextInputProps>(function _PasswordInput(props, ref) {
   const [showPassword, setShowPassword] = useState(false)

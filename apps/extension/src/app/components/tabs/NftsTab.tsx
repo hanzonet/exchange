@@ -1,13 +1,22 @@
 import { SharedEventName } from '@luxdex/analytics-events'
 import { memo, useCallback } from 'react'
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 // This is intentionally imported from the native file as only the web app requires a web specific implementation
+<<<<<<< Updated upstream
 import { NftsList } from 'lx/src/components/nfts/NftsList.native'
 import { NftViewWithContextMenu } from 'lx/src/components/nfts/NftViewWithContextMenu'
 import { NFTItem } from 'lx/src/features/nfts/types'
 import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { NftsList } from '@luxexchange/lx/src/components/nfts/NftsList.native'
+import { NftViewWithContextMenu } from '@luxexchange/lx/src/components/nfts/NftViewWithContextMenu'
+import { NFTItem } from '@luxexchange/lx/src/features/nfts/types'
+import { ElementName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export const NftsTab = memo(function _NftsTab({ owner, skip }: { owner: Address; skip?: boolean }): JSX.Element {
   const accounts = useAccounts()

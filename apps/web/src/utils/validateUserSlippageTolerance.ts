@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@luxfi/amm-core'
 
 export enum SlippageValidationResult {
   TooLow = 0,

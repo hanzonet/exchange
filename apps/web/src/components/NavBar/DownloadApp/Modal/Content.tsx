@@ -1,9 +1,9 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, FlexProps, Image, ModalCloseIcon, Text, TouchableArea } from 'ui/src'
-import { LUX_LOGO } from 'ui/src/assets'
-import { BackArrow } from 'ui/src/components/icons/BackArrow'
-import { iconSizes } from 'ui/src/theme'
+import { Flex, FlexProps, Image, ModalCloseIcon, Text, TouchableArea } from '@luxfi/ui/src'
+import { LUX_LOGO } from '@luxfi/ui/src/assets'
+import { BackArrow } from '@luxfi/ui/src/components/icons/BackArrow'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import { ExternalLink } from '~/theme/components/Links'
 
 export function ModalContent({

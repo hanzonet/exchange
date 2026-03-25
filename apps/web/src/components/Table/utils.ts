@@ -1,8 +1,8 @@
 import { Column, RowData } from '@tanstack/react-table'
 import { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
-import { opacify, padding, zIndexes } from 'ui/src/theme'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
+import { opacify, padding, zIndexes } from '@luxfi/ui/src/theme'
 
 /**
  * Displays the time as a human-readable string.

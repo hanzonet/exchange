@@ -1,7 +1,13 @@
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { useMedia } from 'ui/src'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { useMedia } from '@luxfi/ui/src'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { NetworkFilter } from '~/components/NetworkFilter/NetworkFilter'
 import { ExploreTab } from '~/pages/Explore/constants'
 import { useExploreParams } from '~/pages/Explore/redirects'

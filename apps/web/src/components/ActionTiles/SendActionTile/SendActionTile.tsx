@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { FlexProps } from 'ui/src'
 import { SendAction } from 'ui/src/components/icons/SendAction'
 import { useLuxContext } from 'lx/src/contexts/LuxContext'
@@ -7,6 +8,16 @@ import { ElementName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { FlexProps } from '@luxfi/ui/src'
+import { SendAction } from '@luxfi/ui/src/components/icons/SendAction'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { ActionTileWithIconAnimation } from '~/components/ActionTiles/ActionTileWithIconAnimation'
 import { SendButtonTooltip } from '~/components/ActionTiles/SendActionTile/SendButtonTooltip'
 import { useActiveAddresses } from '~/features/accounts/store/hooks'

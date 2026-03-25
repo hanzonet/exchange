@@ -4,61 +4,70 @@ import ms from 'ms'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { call, type SagaGenerator } from 'typed-redux-saga'
-import { resolvePlatform } from 'lx/src/features/accounts/store/utils/flexibleInput'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { isL2ChainId } from 'lx/src/features/chains/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { type SwapTradeBaseProperties } from 'lx/src/features/telemetry/types'
-import { logExperimentQualifyingEvent } from 'lx/src/features/telemetry/utils/logExperimentQualifyingEvent'
-import { selectSwapStartTimestamp } from 'lx/src/features/timing/selectors'
-import { updateSwapStartTimestamp } from 'lx/src/features/timing/slice'
-import { UnexpectedTransactionStateError } from 'lx/src/features/transactions/errors'
+import { resolvePlatform } from '@luxexchange/lx/src/features/accounts/store/utils/flexibleInput'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { type SwapTradeBaseProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { logExperimentQualifyingEvent } from '@luxexchange/lx/src/features/telemetry/utils/logExperimentQualifyingEvent'
+import { selectSwapStartTimestamp } from '@luxexchange/lx/src/features/timing/selectors'
+import { updateSwapStartTimestamp } from '@luxexchange/lx/src/features/timing/slice'
+import { UnexpectedTransactionStateError } from '@luxexchange/lx/src/features/transactions/errors'
 import {
   HandleSwapBatchedStepParams,
   type HandleSwapStepParams,
   type TransactionStep,
   TransactionStepType,
-} from 'lx/src/features/transactions/steps/types'
+} from '@luxexchange/lx/src/features/transactions/steps/types'
 import {
   type ExtractedBaseTradeAnalyticsProperties,
   getBaseTradeAnalyticsProperties,
-} from 'lx/src/features/transactions/swap/analytics'
-import { getFlashblocksExperimentStatus } from 'lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
-import { planActions } from 'lx/src/features/transactions/swap/plan/planSaga'
-import { type PlanAnalyticsFields, planAnalyticsToCamelCase } from 'lx/src/features/transactions/swap/plan/types'
-import { handleSwitchChains } from 'lx/src/features/transactions/swap/plan/utils'
-import { getSwapTxRequest } from 'lx/src/features/transactions/swap/steps/swap'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from '@luxexchange/lx/src/features/transactions/swap/analytics'
+import { getFlashblocksExperimentStatus } from '@luxexchange/lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
+import { planActions } from '@luxexchange/lx/src/features/transactions/swap/plan/planSaga'
+import { type PlanAnalyticsFields, planAnalyticsToCamelCase } from '@luxexchange/lx/src/features/transactions/swap/plan/types'
+import { handleSwitchChains } from '@luxexchange/lx/src/features/transactions/swap/plan/utils'
+import { getSwapTxRequest } from '@luxexchange/lx/src/features/transactions/swap/steps/swap'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import {
   type SwapCallback,
   type SwapCallbackParams,
   type SwapExecutionCallbacks,
-} from 'lx/src/features/transactions/swap/types/swapCallback'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'
 import {
   PermitMethod,
   type ValidatedSwapTxContext,
-} from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
 import {
   type BridgeTrade,
   type ChainedActionTrade,
   type ClassicTrade,
-} from 'lx/src/features/transactions/swap/types/trade'
-import { slippageToleranceToPercent } from 'lx/src/features/transactions/swap/utils/format'
-import { generateSwapTransactionSteps } from 'lx/src/features/transactions/swap/utils/generateSwapTransactionSteps'
+} from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { slippageToleranceToPercent } from '@luxexchange/lx/src/features/transactions/swap/utils/format'
+import { generateSwapTransactionSteps } from '@luxexchange/lx/src/features/transactions/swap/utils/generateSwapTransactionSteps'
 import {
   isClassic,
   isJupiter,
   requireRouting,
   LUXX_ROUTING_VARIANTS,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/swap/utils/routing'
 import { getClassicQuoteFromResponse } from 'lx/src/features/transactions/swap/utils/tradingApi'
 import { createMonitoredSaga } from 'lx/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+} from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { getClassicQuoteFromResponse } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { createMonitoredSaga } from '@luxexchange/lx/src/utils/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { useTotalBalancesUsdForAnalytics } from '~/appGraphql/data/apollo/useTotalBalancesUsdForAnalytics'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'

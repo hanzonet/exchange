@@ -36,6 +36,7 @@ import {
   setHasPendingSessionError,
 } from 'src/features/walletConnect/walletConnectSlice'
 import { call, fork, put, select, take } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { getChainLabel } from 'lx/src/features/chains/utils'
 import { EthMethod } from 'lx/src/features/dappRequests/types'
@@ -49,6 +50,21 @@ import { DappRequestType, EthEvent, WalletConnectEvent } from 'lx/src/types/wall
 import { areAddressesEqual } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { isSelfCallWithData } from '@luxexchange/lx/src/features/dappRequests/utils'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEnabledChainIdsSaga } from '@luxexchange/lx/src/features/settings/saga'
+import i18n from '@luxexchange/lx/src/i18n'
+import { DappRequestType, EthEvent, WalletConnectEvent } from '@luxexchange/lx/src/types/walletConnect'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import {
   selectAccounts,
   selectActiveAccountAddress,

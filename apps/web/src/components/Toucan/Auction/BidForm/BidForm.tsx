@@ -3,12 +3,21 @@
 import { KycVerificationStatus } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, useColorsFromTokenColor } from 'ui/src'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { AuctionEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Flex, styled, useColorsFromTokenColor } from '@luxfi/ui/src'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { AuctionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { zeroAddress } from 'viem'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { getAuctionBidInputtedAnalyticsProperties } from '~/components/Toucan/Auction/analytics'

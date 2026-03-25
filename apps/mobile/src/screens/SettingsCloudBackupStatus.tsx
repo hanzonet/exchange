@@ -10,6 +10,7 @@ import { Screen } from 'src/components/layout/Screen'
 import { useBiometricAppSettings } from 'src/features/biometrics/useBiometricAppSettings'
 import { useBiometricPrompt } from 'src/features/biometricsSettings/hooks'
 import { deleteCloudStorageMnemonicBackup } from 'src/features/CloudBackup/RNCloudStorageBackupsManager'
+<<<<<<< Updated upstream
 import { Button, Flex, Text } from 'ui/src'
 import { Check } from 'ui/src/components/icons'
 import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
@@ -31,6 +32,29 @@ import { EditAccountAction, editAccountActions } from 'wallet/src/features/walle
 import { Account, BackupType, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
 import { useAccounts } from 'wallet/src/features/wallet/hooks'
 import { selectAndroidCloudBackupEmail } from 'wallet/src/features/wallet/selectors'
+=======
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { Check } from '@luxfi/ui/src/components/icons'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing } from '@luxfi/ui/src/theme'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useAccountListData } from '@luxfi/wallet/src/features/accounts/useAccountListData'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { Account, BackupType, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectAndroidCloudBackupEmail } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<SettingsStackParamList, MobileScreens.SettingsCloudBackupStatus>
 

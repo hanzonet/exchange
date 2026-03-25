@@ -1,6 +1,6 @@
 import { PositionStatus, ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Protocols } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { AppTFunction } from 'ui/src/i18n/types'
+import { AppTFunction } from '@luxfi/ui/src/i18n/types'
 
 export function getProtocolVersionLabel(version: ProtocolVersion): string | undefined {
   switch (version) {

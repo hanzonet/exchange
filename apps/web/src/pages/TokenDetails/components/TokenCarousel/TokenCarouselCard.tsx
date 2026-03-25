@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -6,6 +7,16 @@ import { useLocalizationContext } from 'lx/src/features/language/LocalizationCon
 import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { SparklineMap } from '~/appGraphql/data/types'
 import SparklineChart from '~/components/Charts/SparklineChart'
 import { DeltaArrow } from '~/components/DeltaArrow/DeltaArrow'

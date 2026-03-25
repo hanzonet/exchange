@@ -1,5 +1,5 @@
 import type { UTCTimestamp } from 'lightweight-charts'
-import type { UseSporeColorsReturn } from 'ui/src/hooks/useSporeColors'
+import type { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'
 import type { BidTokenInfo } from '~/components/Toucan/Auction/store/types'
 
 export interface ClearingPriceChartPoint {

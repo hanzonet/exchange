@@ -13,6 +13,7 @@ import { useLineChartFiatDelta } from 'src/components/PriceExplorer/useFiatDelta
 import { useLineChartPrice, useLineChartRelativeChange } from 'src/components/PriceExplorer/usePrice'
 import { AnimatedText } from 'src/components/text/AnimatedText'
 import { numberToPercentWorklet } from 'src/utils/reanimated'
+<<<<<<< Updated upstream
 import { Flex, Text, useSporeColors } from 'ui/src'
 import { AnimatedCaretChange } from 'ui/src/components/icons'
 import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
@@ -20,6 +21,15 @@ import { useAppFiatCurrency, useAppFiatCurrencyInfo } from 'lx/src/features/fiat
 import { useCurrentLocale } from 'lx/src/features/language/hooks'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { AnimatedCaretChange } from '@luxfi/ui/src/components/icons'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { useAppFiatCurrency, useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 export function PriceText({ maxWidth }: { loading: boolean; maxWidth?: number }): JSX.Element {
   const price = useLineChartPrice()

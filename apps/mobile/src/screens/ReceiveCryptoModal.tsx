@@ -5,6 +5,7 @@ import { AppStackScreenProp } from 'src/app/navigation/types'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { ServiceProviderSelector } from 'src/features/fiatOnRamp/ExchangeTransferServiceProviderSelector'
 import { openModal } from 'src/features/modals/modalSlice'
+<<<<<<< Updated upstream
 import { Flex, Separator, Text, TouchableArea, useSporeColors } from 'ui/src'
 import { CopySheets, QrCode } from 'ui/src/components/icons'
 import { AddressDisplay } from 'lx/src/components/accounts/AddressDisplay'
@@ -17,6 +18,20 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, Separator, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { CopySheets, QrCode } from '@luxfi/ui/src/components/icons'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ScannerModalState } from '@luxexchange/lx/src/components/ReceiveQRCode/constants'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType, CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const ACCOUNT_IMAGE_SIZE = 52
 const ICON_SIZE = 32

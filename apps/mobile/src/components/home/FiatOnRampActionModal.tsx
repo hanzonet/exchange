@@ -6,12 +6,12 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { AppStackScreenProp } from 'src/app/navigation/types'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { openModal } from 'src/features/modals/modalSlice'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { GeneratedIcon } from 'ui/src/components/factories/createIcon'
-import { ArrowUpCircle, Bank, CoinConvert } from 'ui/src/components/icons'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import { Trace } from 'lx/src/features/telemetry/Trace'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { GeneratedIcon } from '@luxfi/ui/src/components/factories/createIcon'
+import { ArrowUpCircle, Bank, CoinConvert } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
 
 type ActionRow = {
   Icon: GeneratedIcon

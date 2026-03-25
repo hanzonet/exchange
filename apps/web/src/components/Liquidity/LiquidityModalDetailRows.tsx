@@ -1,11 +1,20 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { Trans } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
 import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { DetailLineItem } from '~/components/swap/DetailLineItem'
 import { useCurrencyInfo } from '~/hooks/Tokens'
 

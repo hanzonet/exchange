@@ -3,9 +3,15 @@ import { type Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { PositionInfo } from '~/components/Liquidity/types'
 import { LP_INCENTIVES_REWARD_TOKEN } from '~/components/LpIncentives/constants'
 

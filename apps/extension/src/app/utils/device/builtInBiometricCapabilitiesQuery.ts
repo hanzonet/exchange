@@ -1,5 +1,6 @@
 import { queryOptions } from '@tanstack/react-query'
 import { TFunction } from 'i18next'
+<<<<<<< Updated upstream
 import { GeneratedIcon } from 'ui/src'
 import { Fingerprint } from 'ui/src/components/icons'
 import { getChromeRuntimeWithThrow } from 'utilities/src/chrome/chrome'
@@ -7,6 +8,15 @@ import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 import { MAX_REACT_QUERY_CACHE_TIME_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { GeneratedIcon } from '@luxfi/ui/src'
+import { Fingerprint } from '@luxfi/ui/src/components/icons'
+import { getChromeRuntimeWithThrow } from '@luxfi/utilities/src/chrome/chrome'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
+import { MAX_REACT_QUERY_CACHE_TIME_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 
 type BuiltInBiometricCapabilities = {
   name: string

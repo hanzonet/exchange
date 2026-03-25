@@ -3,6 +3,7 @@ import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { SCREEN_ITEM_HORIZONTAL_PAD } from 'src/app/constants'
 import { SendFormScreen } from 'src/app/features/send/SendFormScreen/SendFormScreen'
 import { useExtensionNavigation } from 'src/app/navigation/utils'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { X } from 'ui/src/components/icons'
 import { ModalName } from 'lx/src/features/telemetry/constants'
@@ -10,6 +11,15 @@ import { TransactionSettingsStoreContextProvider } from 'lx/src/features/transac
 import { TransactionModal } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
 import { SwapFormStoreContextProvider } from 'lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
 import { SendContextProvider } from 'wallet/src/features/transactions/contexts/SendContext'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TransactionSettingsStoreContextProvider } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContextProvider'
+import { TransactionModal } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { SwapFormStoreContextProvider } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
+import { SendContextProvider } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
+>>>>>>> Stashed changes
 
 export function SendFlow(): JSX.Element {
   const { t } = useTranslation()

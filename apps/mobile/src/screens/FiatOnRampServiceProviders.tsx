@@ -9,6 +9,7 @@ import { FiatOnRampStackParamList } from 'src/app/navigation/types'
 import { BackButton } from 'src/components/buttons/BackButton'
 import { Screen } from 'src/components/layout/Screen'
 import { useFiatOnRampContext } from 'src/features/fiatOnRamp/FiatOnRampContext'
+<<<<<<< Updated upstream
 import { Flex, Inset, Text } from 'ui/src'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { iconSizes } from 'ui/src/theme'
@@ -24,6 +25,23 @@ import { FiatOffRampEventName, FiatOnRampEventName } from 'lx/src/features/telem
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { FiatOnRampScreens } from 'lx/src/types/screens/mobile'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Inset, Text } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { HandleBar } from '@luxexchange/lx/src/components/modals/HandleBar'
+import { EdgeFade } from '@luxexchange/lx/src/features/fiatOnRamp/EdgeFade/EdgeFade'
+import { FORQuoteItem } from '@luxexchange/lx/src/features/fiatOnRamp/FORQuoteItem'
+import { PaymentMethodFilter } from '@luxexchange/lx/src/features/fiatOnRamp/PaymentMethodFilter/PaymentMethodFilter'
+import { FORQuote } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { filterQuotesByPaymentMethod } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FiatOffRampEventName, FiatOnRampEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { FiatOnRampScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<FiatOnRampStackParamList, FiatOnRampScreens.ServiceProviders>
 

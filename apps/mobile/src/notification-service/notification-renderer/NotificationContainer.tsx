@@ -16,12 +16,21 @@ import { BackupReminderModalRenderer } from 'src/notification-service/renderers/
 import { OfflineBannerRenderer } from 'src/notification-service/renderers/OfflineBannerRenderer'
 import { isBackupReminderNotification } from 'src/notification-service/triggers/backupReminderTrigger'
 import { isLocalTriggerNotification } from 'src/notification-service/triggers/createMobileLocalTriggerDataSource'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { type IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
 import { IntroCardStack } from 'wallet/src/components/introCards/IntroCardStack'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { type IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCardStack'
+>>>>>>> Stashed changes
 import {
   convertNotificationToIntroCard,
   shouldRenderAsIntroCard,

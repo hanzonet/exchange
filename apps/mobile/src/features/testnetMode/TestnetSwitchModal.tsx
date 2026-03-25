@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { AppStackScreenProp } from 'src/app/navigation/types'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
-import { Wrench } from 'ui/src/components/icons'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { setIsTestnetModeEnabled } from 'lx/src/features/settings/slice'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { Wrench } from '@luxfi/ui/src/components/icons'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { setIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/slice'
+import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 export function TestnetSwitchModal({ route }: AppStackScreenProp<typeof ModalName.TestnetSwitchModal>): JSX.Element {
   const { onClose } = useReactNavigationModal()

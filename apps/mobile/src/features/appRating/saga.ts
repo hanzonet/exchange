@@ -1,5 +1,6 @@
 import { Alert, Platform } from 'react-native'
 import { call, delay, put, select, takeLatest } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { luxUrls } from 'lx/src/constants/urls'
 import { WalletEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
@@ -14,6 +15,22 @@ import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { appRatingStateSelector } from 'wallet/src/features/appRating/selectors'
 import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
 import { setAppRating } from 'wallet/src/features/wallet/slice'
+=======
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { finalizeTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import i18n from '@luxexchange/lx/src/i18n'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { isTestRun } from '@luxfi/utilities/src/environment/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { appRatingStateSelector } from '@luxfi/wallet/src/features/appRating/selectors'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setAppRating } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 function isAndroid14(): boolean {
   return isAndroid && Platform.Version === 34

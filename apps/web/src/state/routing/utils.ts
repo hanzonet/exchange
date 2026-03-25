@@ -17,11 +17,19 @@ import {
 } from '@uniswap/uniswapx-sdk'
 import { Pair, Route as V2Route } from '@uniswap/v2-sdk'
 import { FeeAmount, Pool, Route as V3Route } from '@uniswap/v3-sdk'
+<<<<<<< Updated upstream
 import { BIPS_BASE } from 'lx/src/constants/misc'
 import { nativeOnChain } from 'lx/src/constants/tokens'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { isEVMChain } from 'lx/src/features/platforms/utils/chains'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isEVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { getApproveInfo } from '~/state/routing/gas'
 import {
   ClassicQuoteData,

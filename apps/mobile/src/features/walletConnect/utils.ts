@@ -9,6 +9,7 @@ import {
   WalletGetCapabilitiesRequest,
   WalletSendCallsRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { toSupportedChainId } from 'lx/src/features/chains/utils'
 import { EthMethod, EthSignMethod, WalletConnectEthMethod } from 'lx/src/features/dappRequests/types'
@@ -16,6 +17,15 @@ import { DappRequestInfo, DappRequestType } from 'lx/src/types/walletConnect'
 import { hexToNumber } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
 import { generateBatchId } from 'wallet/src/features/batchedTransactions/utils'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { EthMethod, EthSignMethod, WalletConnectEthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { DappRequestInfo, DappRequestType } from '@luxexchange/lx/src/types/walletConnect'
+import { hexToNumber } from '@luxfi/utilities/src/addresses/hex'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { generateBatchId } from '@luxfi/wallet/src/features/batchedTransactions/utils'
+>>>>>>> Stashed changes
 import {
   Capability,
   DappVerificationStatus,

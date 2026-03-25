@@ -1,6 +1,11 @@
 import { Currency, Price } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { PriceOrdering } from '~/components/Liquidity/types'
 import useIsTickAtLimit, { Bound } from '~/hooks/useIsTickAtLimit'
 

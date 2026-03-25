@@ -7,12 +7,21 @@ import {
 import { ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
 import { type TriggerCondition } from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
 import { type MobileState } from 'src/app/mobileReducer'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { ONE_DAY_MS } from 'utilities/src/time/time'
 import { selectBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/selectors'
 import { setBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/slice'
 import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
 import { selectActiveAccount } from 'wallet/src/features/wallet/selectors'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
+import { selectBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 /**
  * Minimum portfolio value in USD to show the backup reminder

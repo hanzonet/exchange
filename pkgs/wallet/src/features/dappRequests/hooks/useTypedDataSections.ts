@@ -1,0 +1,77 @@
+import type { BlockaidScanJsonRpcRequest } from '@luxexchange/api'
+import { useMemo } from 'react'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isDEXSwapRequest, DEXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
+import { useBlockaidJsonRpcScan } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
+import { useParseDEXSwap } from '@luxfi/wallet/src/features/dappRequests/hooks/useParseDEXSwap'
+import type { ParsedTransactionData } from '@luxfi/wallet/src/features/dappRequests/types'
+import { parseTransactionSections } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
+import { buildBlockaidScanJsonRpcRequest } from '@luxfi/wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
+
+interface UseTypedDataSectionsParams {
+  parsedTypedData: unknown
+  chainId: UniverseChainId
+  account: string
+  method: BlockaidScanJsonRpcRequest['data']['method']
+  params: unknown[]
+  dappUrl: string
+}
+
+interface UseTypedDataSectionsResult extends ParsedTransactionData {
+  isLoading: boolean
+}
+
+/**
+ * Hook that returns transaction sections for typed data requests.
+ * Handles both DEX swaps (with custom parsing) and regular typed data (via Blockaid scanning).
+ * Risk level always comes from Blockaid.
+ */
+export function useTypedDataSections({
+  parsedTypedData,
+  chainId,
+  account,
+  method,
+  params,
+  dappUrl,
+}: UseTypedDataSectionsParams): UseTypedDataSectionsResult {
+  // Detect DEX swap requests
+  const isDEX = isDEXSwapRequest(parsedTypedData)
+  const dexTypedData = isDEX ? (parsedTypedData as DEXSwapRequest) : null
+
+  // Build Blockaid scan request (always needed for risk level)
+  const blockaidRequest = useMemo(
+    () =>
+      buildBlockaidScanJsonRpcRequest({
+        chainId,
+        account,
+        method,
+        params,
+        dappUrl,
+      }),
+    [chainId, account, method, params, dappUrl],
+  )
+
+  // Scan with Blockaid (for risk level and fallback sections)
+  const { scanResult, isLoading: isBlockaidLoading } = useBlockaidJsonRpcScan(blockaidRequest, Boolean(blockaidRequest))
+
+  // Parse DEX sections (returns empty when not DEX)
+  const { sections: dexSections, isLoading: isDEXLoading } = useParseDEXSwap(dexTypedData, chainId)
+
+  // Parse Blockaid result for risk level and sections
+  const { sections: blockaidSections, riskLevel } = useMemo(
+    () => parseTransactionSections(scanResult ?? null, chainId),
+    [scanResult, chainId],
+  )
+
+  // Use DEX sections if available, otherwise fall back to Blockaid sections
+  const sections = isDEX ? dexSections : blockaidSections
+
+  // Loading: wait for Blockaid (always), plus DEX parsing if applicable
+  const isLoading = isBlockaidLoading || (isDEX && isDEXLoading)
+
+  return {
+    sections,
+    riskLevel,
+    isLoading,
+  }
+}

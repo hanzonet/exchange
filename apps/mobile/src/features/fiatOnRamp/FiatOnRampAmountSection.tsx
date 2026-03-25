@@ -12,6 +12,7 @@ import {
   useIsShortMobileDevice,
   useShakeAnimation,
   useSporeColors,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { ArrowDownArrowUp } from 'ui/src/components/icons'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
@@ -31,6 +32,27 @@ import { TransactionType } from 'lx/src/features/transactions/types/transactionD
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { usePrevious } from 'utilities/src/react/hooks'
 import { DEFAULT_DELAY, useDebounce } from 'utilities/src/time/timing'
+=======
+} from '@luxfi/ui/src'
+import { ArrowDownArrowUp } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { useDynamicFontSizing } from '@luxfi/ui/src/hooks/useDynamicFontSizing'
+import { fonts, spacing } from '@luxfi/ui/src/theme'
+import { AmountInput } from '@luxexchange/lx/src/components/AmountInput/AmountInput'
+import { TextInput } from '@luxexchange/lx/src/components/input/TextInput'
+import { Pill } from '@luxexchange/lx/src/components/pill/Pill'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useFormatExactCurrencyAmount } from '@luxexchange/lx/src/features/fiatOnRamp/hooks'
+import { FiatCurrencyInfo, FiatOnRampCurrency } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { useMaxAmountSpend } from '@luxexchange/lx/src/features/gas/hooks/useMaxAmountSpend'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { DEFAULT_DELAY, useDebounce } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 
 const MAX_INPUT_FONT_SIZE = 52
 const MIN_INPUT_FONT_SIZE = 32

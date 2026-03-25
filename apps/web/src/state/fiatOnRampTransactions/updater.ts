@@ -1,12 +1,21 @@
 import { GraphQLApi } from '@universe/api'
 import ms from 'ms'
 import { useEffect } from 'react'
+<<<<<<< Updated upstream
 import { ForApiClient } from 'lx/src/data/apiClients/forApi/ForApiClient'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { FiatOnRampEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { ForApiClient } from '@luxexchange/lx/src/data/apiClients/forApi/ForApiClient'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { FiatOnRampEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
 import useInterval from '~/lib/hooks/useInterval'

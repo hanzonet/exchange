@@ -1,12 +1,21 @@
 import { Cell, flexRender, Row, RowData } from '@tanstack/react-table'
 import { memo, useMemo } from 'react'
 import { LinkProps } from 'react-router'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { useSporeColors } from 'ui/src/hooks/useSporeColors'
 import { breakpoints } from 'ui/src/theme'
 import { ElementName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
+import { breakpoints } from '@luxfi/ui/src/theme'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { ROW_HEIGHT_DESKTOP, ROW_HEIGHT_MOBILE_WEB } from '~/components/Table/constants'
 import { CellContainer, DataRow, TableRowLink } from '~/components/Table/styled'
 import { useTableSize } from '~/components/Table/TableSizeProvider'

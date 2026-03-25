@@ -1,5 +1,5 @@
 import { Trans } from 'react-i18next'
-import { Text } from 'ui/src'
+import { Text } from '@luxfi/ui/src'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 import { ExternalLink } from '~/theme/components/Links'
 

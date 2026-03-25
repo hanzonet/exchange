@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useSettingsStackNavigation } from 'src/app/navigation/types'
 import { clearOnboardingTimestamp } from 'src/features/analytics/onboardingTimestamp'
 import { useAppStateResetter } from 'src/features/appState/appStateResetter'
+<<<<<<< Updated upstream
 import { Flex, type IconProps, Text, TouchableArea } from 'ui/src'
 import { RotatableChevron, LuxLogo } from 'ui/src/components/icons'
 import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
@@ -12,6 +13,17 @@ import { logger } from 'utilities/src/logger/logger'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
 import { resetWallet, setFinishedOnboarding } from 'wallet/src/features/wallet/slice'
+=======
+import { Flex, type IconProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { RotatableChevron, LuxLogo } from '@luxfi/ui/src/components/icons'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { resetWallet, setFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 export function OnboardingRow({ iconProps }: { iconProps: IconProps }): JSX.Element {
   const dispatch = useDispatch()

@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxfi/api'
 import { useMemo } from 'react'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 
 export function useRecentTokenTransfers(address?: string) {
   const { gqlChains } = useEnabledChains()

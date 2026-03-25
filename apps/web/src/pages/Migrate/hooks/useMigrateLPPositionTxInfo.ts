@@ -7,15 +7,16 @@ import {
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { Dispatch, SetStateAction, useEffect, useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { liquidityQueries } from 'lx/src/data/apiClients/liquidityService/liquidityQueries'
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { DelegatedState } from 'lx/src/features/smartWallet/delegation/types'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { DelegatedState } from '@luxexchange/lx/src/features/smartWallet/delegation/types'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import {
   LiquidityTransactionType,
   MigratePositionTxAndGasInfo,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/liquidity/types'
 import { getErrorMessageToDisplay, parseErrorMessageTitle } from 'lx/src/features/transactions/liquidity/utils'
 import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
@@ -23,6 +24,15 @@ import { PermitMethod } from 'lx/src/features/transactions/swap/types/swapTxAndG
 import { validatePermit, validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { PermitMethod } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { validatePermit, validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { PositionFlowStep } from '~/components/Liquidity/Create/types'
 import { V2PairInfo, V3PositionInfo } from '~/components/Liquidity/types'
 import { getCurrencyForProtocol } from '~/components/Liquidity/utils/currency'

@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import { zIndexes } from 'ui/src/theme'
 import { isWebAndroid, isWebIOS } from 'utilities/src/platform'
+=======
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { isWebAndroid, isWebIOS } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 import { createConnector } from 'wagmi'
 import { walletConnect } from 'wagmi/connectors'
 

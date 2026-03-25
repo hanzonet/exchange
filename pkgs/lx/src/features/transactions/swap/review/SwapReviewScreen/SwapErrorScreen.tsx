@@ -1,0 +1,104 @@
+import { TradingApi } from '@luxfi/api'
+import { useTranslation } from 'react-i18next'
+import { Button, Flex, IconButton, Text } from '@luxfi/ui/src'
+import { HelpCenter } from '@luxfi/ui/src/components/icons/HelpCenter'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModalContent } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import {
+  useTransactionSettingsActions,
+  useTransactionSettingsStore,
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { TransactionModalInnerContainer } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { getErrorContent, TransactionStepFailedError } from '@luxexchange/lx/src/features/transactions/errors'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
+
+export function SwapErrorScreen({
+  submissionError,
+  setSubmissionError,
+  onPressRetry,
+  resubmitSwap,
+  onClose,
+}: {
+  submissionError: Error
+  setSubmissionError: (e: Error | undefined) => void
+  resubmitSwap: () => void
+  onPressRetry: (() => void) | undefined
+  onClose: () => void
+}): JSX.Element {
+  const { t } = useTranslation()
+  const { bottomSheetViewStyles } = useTransactionModalContext()
+  const { selectedProtocols } = useTransactionSettingsStore((s) => ({
+    selectedProtocols: s.selectedProtocols,
+  }))
+  const { setSelectedProtocols } = useTransactionSettingsActions()
+
+  const { title, message, supportArticleURL, buttonText } = getErrorContent(t, submissionError)
+
+  const isDEXBackendError =
+    submissionError instanceof TransactionStepFailedError &&
+    submissionError.isBackendRejection &&
+    submissionError.step.type === TransactionStepType.DEXSignature
+
+  const handleTryAgain = (): void => {
+    if (onPressRetry) {
+      onPressRetry()
+    } else if (isDEXBackendError) {
+      // TODO(WEB-7668): move this into onPressRetry logic.
+      // Update swap preferences for this session to exclude DEX if Lux x failed
+      const updatedProtocols = selectedProtocols.filter((protocol) => protocol !== TradingApi.ProtocolItems.LUXX_V2)
+      setSelectedProtocols(updatedProtocols)
+    } else {
+      resubmitSwap()
+    }
+    setSubmissionError(undefined)
+  }
+
+  const onPressGetHelp = async (): Promise<void> => {
+    await openUri({ uri: supportArticleURL ?? luxUrls.helpUrl })
+  }
+
+  const caption = supportArticleURL ? (
+    <Flex gap="$spacing8" alignItems="center">
+      <Text color="$neutral2" textAlign="center" variant="body3">
+        {message}
+      </Text>
+      <LearnMoreLink url={supportArticleURL} />
+    </Flex>
+  ) : (
+    <Text color="$neutral2" textAlign="center" variant="body3">
+      {message}
+    </Text>
+  )
+
+  return (
+    <TransactionModalInnerContainer bottomSheetViewStyles={bottomSheetViewStyles} fullscreen={false}>
+      <Flex gap="$spacing16">
+        {isWebPlatform && (
+          <Flex row justifyContent="flex-end" m="$spacing12" gap="$spacing8">
+            <Button fill={false} emphasis="tertiary" size="xxsmall" icon={<HelpCenter />} onPress={onPressGetHelp}>
+              {t('common.getHelp.button')}
+            </Button>
+            <IconButton size="xxsmall" variant="default" emphasis="text-only" icon={<X />} onPress={onClose} />
+          </Flex>
+        )}
+        <Flex animation="quick" enterStyle={{ opacity: 0 }} exitStyle={{ opacity: 0 }}>
+          <WarningModalContent
+            modalName={ModalName.SwapError}
+            title={title}
+            captionComponent={caption}
+            severity={WarningSeverity.Low}
+            rejectText={buttonText ?? t('common.button.tryAgain')}
+            onReject={handleTryAgain}
+          />
+        </Flex>
+      </Flex>
+    </TransactionModalInnerContainer>
+  )
+}

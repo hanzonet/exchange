@@ -1,11 +1,19 @@
 import { Currency, Percent } from '@uniswap/sdk-core'
 import { PropsWithChildren, ReactNode, useMemo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Flex, Separator, Text } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { ElementName, SwapEventName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Button, Flex, Separator, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { ElementName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { ReactComponent as ExpandoIconClosed } from '~/assets/svg/expando-icon-closed.svg'
 import { ReactComponent as ExpandoIconOpened } from '~/assets/svg/expando-icon-opened.svg'
 import Column from '~/components/deprecated/Column'

@@ -1,10 +1,17 @@
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { useState } from 'react'
 import { Trans } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Image, Text } from 'ui/src'
 import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Image, Text } from '@luxfi/ui/src'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import UNIWALLET_ICON from '~/assets/wallets/lux-wallet-icon.png'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { OptionContainer } from '~/components/WalletModal/LuxWalletOptions'

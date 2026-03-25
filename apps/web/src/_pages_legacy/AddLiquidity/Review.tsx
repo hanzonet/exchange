@@ -1,5 +1,5 @@
-import { Currency, CurrencyAmount, Price } from '@luxamm/sdk-core'
-import { Position } from '@luxamm/v3-sdk'
+import { Currency, CurrencyAmount, Price } from '@luxfi/amm-core'
+import { Position } from '@luxfi/amm-v3'
 import { AutoColumn } from 'components/Column'
 import { PositionPreview } from 'components/PositionPreview'
 import styled from 'styled-components/macro'

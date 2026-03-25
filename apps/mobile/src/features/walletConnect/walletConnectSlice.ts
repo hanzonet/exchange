@@ -1,10 +1,18 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ProposalTypes, type SessionTypes } from '@walletconnect/types'
+<<<<<<< Updated upstream
 import { type UniverseChainId } from 'lx/src/features/chains/types'
 import { EthMethod, type EthSignMethod } from 'lx/src/features/dappRequests/types'
 import { type DappRequestInfo, type EthTransaction, UwULinkMethod } from 'lx/src/types/walletConnect'
 import { logger } from 'utilities/src/logger/logger'
 import { type Call, type Capability, type DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
+=======
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { EthMethod, type EthSignMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { type DappRequestInfo, type EthTransaction, UwULinkMethod } from '@luxexchange/lx/src/types/walletConnect'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { type Call, type Capability, type DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
+>>>>>>> Stashed changes
 
 export type WalletConnectPendingSession = {
   id: string

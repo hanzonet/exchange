@@ -1,6 +1,6 @@
 import { BUTTON_PADDING, NUM_GRAPHS } from 'src/components/PriceExplorer/constants'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { heightBreakpoints } from 'ui/src/theme'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { heightBreakpoints } from '@luxfi/ui/src/theme'
 
 type ChartDimensions = {
   chartHeight: number

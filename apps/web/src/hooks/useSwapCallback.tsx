@@ -6,9 +6,9 @@ import type { FeeOptions } from '@uniswap/v3-sdk'
 import { TradingApi } from '@universe/api'
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
-import { useSupportedChainId } from 'lx/src/features/chains/hooks/useSupportedChainId'
-import { isEVMChain } from 'lx/src/features/platforms/utils/chains'
-import { addTransaction } from 'lx/src/features/transactions/slice'
+import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { isEVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { addTransaction } from '@luxexchange/lx/src/features/transactions/slice'
 import {
   InterfaceTransactionDetails,
   QueuedOrderStatus,
@@ -16,8 +16,8 @@ import {
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { useAccount } from '~/hooks/useAccount'
 import type { PermitSignature } from '~/hooks/usePermitAllowance'
 import useSelectChain from '~/hooks/useSelectChain'

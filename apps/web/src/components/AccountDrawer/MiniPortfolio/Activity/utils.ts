@@ -2,6 +2,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { GraphQLApi, TradingApi } from '@universe/api'
 import { getYear, isSameDay, isSameMonth, isSameWeek, isSameYear } from 'date-fns'
 import { parseUnits } from 'ethers/lib/utils'
+<<<<<<< Updated upstream
 import { getNativeAddress } from 'lx/src/constants/addresses'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
@@ -9,6 +10,15 @@ import i18n from 'lx/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { DEFAULT_ERC20_DECIMALS } from 'utilities/src/tokens/constants'
+=======
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { DEFAULT_ERC20_DECIMALS } from '@luxfi/utilities/src/tokens/constants'
+>>>>>>> Stashed changes
 import { Activity, ActivityMap } from '~/components/AccountDrawer/MiniPortfolio/Activity/types'
 
 interface ActivityGroup {

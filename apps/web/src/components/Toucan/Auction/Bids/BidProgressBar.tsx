@@ -1,5 +1,5 @@
-import { Flex, Text, useSporeColors } from 'ui/src'
-import { colorsDark } from 'ui/src/theme/color/colors'
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { colorsDark } from '@luxfi/ui/src/theme/color/colors'
 import {
   GRADIENT_BADGE_BORDER_COLOR,
   GRADIENT_BORDER_COLOR,

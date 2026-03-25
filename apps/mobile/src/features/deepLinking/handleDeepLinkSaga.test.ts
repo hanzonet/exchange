@@ -16,18 +16,25 @@ import { handleLuxAppDeepLink } from 'src/features/deepLinking/handleLuxAppDeepL
 import { LinkSource } from 'src/features/deepLinking/types'
 import { openModal } from 'src/features/modals/modalSlice'
 import { waitForWcWeb3WalletIsReady } from 'src/features/walletConnect/walletConnectClient'
-import { LUX_WEB_URL } from 'lx/src/constants/urls'
-import { MobileEventName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { LUX_WEB_URL } from '@luxexchange/lx/src/constants/urls'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import {
   SAMPLE_CURRENCY_ID_1,
   SAMPLE_CURRENCY_ID_2,
   SAMPLE_SEED_ADDRESS_1,
   SAMPLE_SEED_ADDRESS_2,
+<<<<<<< Updated upstream
 } from 'lx/src/test/fixtures'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
 import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+=======
+} from '@luxexchange/lx/src/test/fixtures'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+>>>>>>> Stashed changes
 
 jest.mock('@walletconnect/utils', () => ({
   parseUri: jest.fn(() => ({

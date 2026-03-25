@@ -5,9 +5,15 @@ import { tickToPrice as tickToPriceV4 } from '@uniswap/v4-sdk'
 import JSBI from 'jsbi'
 import { ISeriesApi, UTCTimestamp } from 'lightweight-charts'
 import { useEffect, useState } from 'react'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { ChartHoverData, ChartModel, ChartModelParams } from '~/components/Charts/ChartModel'
 import { LiquidityBarSeries } from '~/components/Charts/LiquidityChart/liquidity-bar-series'
 import {

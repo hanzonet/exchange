@@ -1,12 +1,21 @@
 import { useQuery } from '@tanstack/react-query'
 import { GetBidsByWalletRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useCallback, useEffect, useMemo, useRef } from 'react'
+<<<<<<< Updated upstream
 import { auctionQueries } from 'lx/src/data/rest/auctions/auctionQueries'
 import { EVMUniverseChainId } from 'lx/src/features/chains/types'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTxStatus } from 'lx/src/features/transactions/types/utils'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTxStatus } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { areUserBidsEqual, sortUserBidsById } from '~/components/Toucan/Auction/BidDistributionChart/utils/equality'
 import { AuctionBidStatus, AuctionProgressState } from '~/components/Toucan/Auction/store/types'
 import { useAuctionStore, useAuctionStoreActions } from '~/components/Toucan/Auction/store/useAuctionStore'

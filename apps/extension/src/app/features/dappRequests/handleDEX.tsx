@@ -1,22 +1,30 @@
 import { TradingApi } from '@luxfi/api'
 import { Dispatch } from 'redux'
-import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
-import { isUniverseChainId } from 'lx/src/features/chains/utils'
-import { transactionActions } from 'lx/src/features/transactions/slice'
+import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { isUniverseChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { transactionActions } from '@luxexchange/lx/src/features/transactions/slice'
 import {
   QueuedOrderStatus,
   TransactionOriginType,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   convertOrderStatusToTransactionStatus,
   convertOrderTypeToRouting,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/utils/dex.utils'
 import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { sleep } from 'utilities/src/time/timing'
+=======
+} from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { sleep } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 
 /**
  * Factory function that creates a handler for externally submitted DEX orders.

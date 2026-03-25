@@ -1,6 +1,11 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { BidProgressBar } from '~/components/Toucan/Auction/Bids/BidProgressBar'
 import { BidStatusIndicator } from '~/components/Toucan/Auction/Bids/BidStatusIndicator'
 import { BidListItem } from '~/components/Toucan/Auction/hooks/useBidsListData'

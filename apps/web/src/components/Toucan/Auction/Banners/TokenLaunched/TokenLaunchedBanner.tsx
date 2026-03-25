@@ -1,9 +1,15 @@
 import { useQuery } from '@tanstack/react-query'
 import { GetClearingPriceHistoryRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { useSporeColors } from 'ui/src'
 import { auctionQueries } from 'lx/src/data/rest/auctions/auctionQueries'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { useSporeColors } from '@luxfi/ui/src'
+import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { TokenLaunchedBannerInner } from '~/components/Toucan/Auction/Banners/TokenLaunched/TokenLaunchedBannerInner'
 import { TokenLaunchedBannerSkeleton } from '~/components/Toucan/Auction/Banners/TokenLaunched/TokenLaunchedBannerSkeleton'
 import { TokenLaunchFailedBannerContent } from '~/components/Toucan/Auction/Banners/TokenLaunched/TokenLaunchFailedBannerContent'

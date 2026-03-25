@@ -1,7 +1,12 @@
 import { Token } from '@uniswap/sdk-core'
 import { createMigrate } from 'redux-persist'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { createThrowingProxy } from 'utilities/src/test/utils'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
+>>>>>>> Stashed changes
 import { vi } from 'vitest'
 import { migration1 } from '~/state/migrations/1'
 import { migration2 } from '~/state/migrations/2'

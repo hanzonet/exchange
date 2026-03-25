@@ -1,12 +1,21 @@
 import { SharedEventName } from '@uniswap/analytics-events'
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, TouchableArea } from 'ui/src'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Flex, TouchableArea } from '@luxfi/ui/src'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { Table } from '~/components/Table'
 import { PORTFOLIO_TABLE_ROW_HEIGHT } from '~/pages/Portfolio/constants'
 import { usePortfolioRoutes } from '~/pages/Portfolio/Header/hooks/usePortfolioRoutes'

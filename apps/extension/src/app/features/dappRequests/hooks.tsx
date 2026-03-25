@@ -7,10 +7,17 @@ import {
   isRequestPermissionsRequest,
 } from 'src/app/features/dappRequests/types/DappRequestTypes'
 import { ExtensionState } from 'src/store/extensionReducer'
+<<<<<<< Updated upstream
 import { getBridgingDappUrls } from 'lx/src/features/bridging/constants'
 import { useBridgingSupportedChainIds, useNumBridgingChains } from 'lx/src/features/bridging/hooks/chains'
 import { selectHasViewedDappRequestBridgingBanner } from 'wallet/src/features/behaviorHistory/selectors'
 import { WalletState } from 'wallet/src/state/walletReducer'
+=======
+import { getBridgingDappUrls } from '@luxexchange/lx/src/features/bridging/constants'
+import { useBridgingSupportedChainIds, useNumBridgingChains } from '@luxexchange/lx/src/features/bridging/hooks/chains'
+import { selectHasViewedDappRequestBridgingBanner } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
+>>>>>>> Stashed changes
 
 export function useShouldShowBridgingRequestCard(
   request: DappRequestStoreItem | undefined,

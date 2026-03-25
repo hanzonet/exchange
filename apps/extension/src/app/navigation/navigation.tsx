@@ -17,6 +17,7 @@ import { HideContentsWhenSidebarBecomesInactive } from 'src/app/navigation/HideC
 import { SidebarNavigationProvider } from 'src/app/navigation/providers'
 import { useRouterState } from 'src/app/navigation/state'
 import { isOnboardedSelector } from 'src/app/utils/isOnboardedSelector'
+<<<<<<< Updated upstream
 import { AnimatePresence, Flex, SpinningLoader, styled } from 'ui/src'
 import { TestnetModeBanner } from 'lx/src/components/banners/TestnetModeBanner'
 import { useIsChromeWindowFocusedWithTimeout } from 'lx/src/extension/useIsChromeWindowFocused'
@@ -30,6 +31,21 @@ import { WalletLuxProvider } from 'wallet/src/features/transactions/contexts/Wal
 import { QueuedOrderModal } from 'wallet/src/features/transactions/swap/modals/QueuedOrderModal'
 import { TransactionHistoryUpdater } from 'wallet/src/features/transactions/TransactionHistoryUpdater'
 import { NativeWalletProvider } from 'wallet/src/features/wallet/providers/NativeWalletProvider'
+=======
+import { AnimatePresence, Flex, SpinningLoader, styled } from '@luxfi/ui/src'
+import { TestnetModeBanner } from '@luxexchange/lx/src/components/banners/TestnetModeBanner'
+import { useIsChromeWindowFocusedWithTimeout } from '@luxexchange/lx/src/extension/useIsChromeWindowFocused'
+import { TokenPriceProvider } from '@luxexchange/lx/src/features/prices/TokenPriceContext'
+import { useEvent, usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { AccountsStoreContextProvider } from '@luxfi/wallet/src/features/accounts/store/provider'
+import { useHeartbeatReporter } from '@luxfi/wallet/src/features/telemetry/hooks/useHeartbeatReporter'
+import { useLastBalancesReporter } from '@luxfi/wallet/src/features/telemetry/hooks/useLastBalancesReporter'
+import { WalletLuxProvider } from '@luxfi/wallet/src/features/transactions/contexts/WalletLuxContext'
+import { QueuedOrderModal } from '@luxfi/wallet/src/features/transactions/swap/modals/QueuedOrderModal'
+import { TransactionHistoryUpdater } from '@luxfi/wallet/src/features/transactions/TransactionHistoryUpdater'
+import { NativeWalletProvider } from '@luxfi/wallet/src/features/wallet/providers/NativeWalletProvider'
+>>>>>>> Stashed changes
 
 export function MainContent(): JSX.Element {
   const isOnboarded = useSelector(isOnboardedSelector)

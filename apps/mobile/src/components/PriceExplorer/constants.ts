@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxfi/api'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import i18n from 'lx/src/i18n'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import i18n from '@luxexchange/lx/src/i18n'
 
 export const BUTTON_PADDING = 20
 

@@ -1,5 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
 import { Interface } from 'ethers/lib/utils'
+<<<<<<< Updated upstream
 import ERC20_ABI from 'lx/src/abis/erc20.json'
 import { Erc20Interface } from 'lx/src/abis/types/Erc20'
 import { Erc20Bytes32Interface } from 'lx/src/abis/types/Erc20Bytes32'
@@ -8,6 +9,16 @@ import { UniverseChainId } from 'lx/src/features/chains/types'
 import { getValidAddress } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import { DEFAULT_ERC20_DECIMALS } from 'utilities/src/tokens/constants'
+=======
+import ERC20_ABI from '@luxexchange/lx/src/abis/erc20.json'
+import { Erc20Interface } from '@luxexchange/lx/src/abis/types/Erc20'
+import { Erc20Bytes32Interface } from '@luxexchange/lx/src/abis/types/Erc20Bytes32'
+import { LuxInterfaceMulticall } from '@luxexchange/lx/src/abis/types/v3'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { DEFAULT_ERC20_DECIMALS } from '@luxfi/utilities/src/tokens/constants'
+>>>>>>> Stashed changes
 import { INTERNAL_JSON_RPC_ERROR_CODE } from '~/constants/misc'
 import { arrayToSlices } from '~/utils/arrays'
 import { buildCurrencyKey, CurrencyKey, currencyKey } from '~/utils/currencyKey'

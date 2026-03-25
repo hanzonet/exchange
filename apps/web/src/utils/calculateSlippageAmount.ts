@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@luxfi/amm-core'
 import JSBI from 'jsbi'
 
 const ONE = new Fraction(1, 1)

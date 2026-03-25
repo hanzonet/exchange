@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { type LogEntry, useHashcashBenchmarkStore } from 'src/screens/stores/hashcashBenchmarkStore'
-import { Flex, Text, TouchableArea } from 'ui/src'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
 
 function formatTime(date: Date): string {
   return date.toLocaleTimeString('en-US', {

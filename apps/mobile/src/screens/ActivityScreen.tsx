@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { ESTIMATED_BOTTOM_TABS_HEIGHT } from 'src/app/navigation/tabs/CustomTabBar/constants'
 import { ActivityContent } from 'src/components/activity/ActivityContent'
 import { Screen } from 'src/components/layout/Screen'
+<<<<<<< Updated upstream
 import { Text } from 'ui/src'
 import { spacing } from 'ui/src/theme'
 import { AccountType } from 'lx/src/features/accounts/types'
@@ -13,6 +14,15 @@ import { useSelectAddressHasNotifications } from 'lx/src/features/notifications/
 import { setNotificationStatus } from 'lx/src/features/notifications/slice/slice'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Text } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { useSelectAddressHasNotifications } from '@luxexchange/lx/src/features/notifications/slice/hooks'
+import { setNotificationStatus } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function ActivityScreen(): JSX.Element {
   const { t } = useTranslation()

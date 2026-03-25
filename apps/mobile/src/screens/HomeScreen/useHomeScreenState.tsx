@@ -1,6 +1,7 @@
 import { GraphQLApi } from '@luxfi/api'
 import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+<<<<<<< Updated upstream
 import { useFormattedTransactionDataForActivity } from 'lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { usePortfolioBalances } from 'lx/src/features/dataApi/balances/balances'
@@ -10,6 +11,17 @@ import { useAccounts, useActiveAccountWithThrow } from 'wallet/src/features/wall
 import { selectHasBalanceOrActivityForAddress } from 'wallet/src/features/wallet/selectors'
 import { setHasBalanceOrActivity } from 'wallet/src/features/wallet/slice'
 import { WalletState } from 'wallet/src/state/walletReducer'
+=======
+import { useFormattedTransactionDataForActivity } from '@luxexchange/lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { usePortfolioBalances } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { useRestOnRampAuth } from '@luxfi/wallet/src/features/activity/useRestOnRampAuth'
+import { useAccounts, useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectHasBalanceOrActivityForAddress } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setHasBalanceOrActivity } from '@luxfi/wallet/src/features/wallet/slice'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
+>>>>>>> Stashed changes
 
 /**
  * This is the interval at which the NFTs tab will poll for new NFTs

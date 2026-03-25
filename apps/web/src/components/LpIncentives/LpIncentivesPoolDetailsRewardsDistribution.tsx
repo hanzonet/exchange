@@ -5,11 +5,19 @@ import JSBI from 'jsbi'
 import ms from 'ms'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { useCurrentLanguage } from 'lx/src/features/language/hooks'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { useCurrentLanguage } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { LP_INCENTIVES_REWARD_TOKEN } from '~/components/LpIncentives/constants'
 
 function formatDateRange({

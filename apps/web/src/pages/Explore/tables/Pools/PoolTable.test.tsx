@@ -1,8 +1,13 @@
 import '~/test-utils/tokens/mocks'
 
 import { Percent } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { DEFAULT_TICK_SPACING } from 'lx/src/constants/pools'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'
+>>>>>>> Stashed changes
 import { ExploreTablesFilterStoreContextProvider } from '~/pages/Explore/exploreTablesFilterStore'
 import { ExploreTopPoolTable } from '~/pages/Explore/tables/Pools/PoolTable'
 import { useTopPools } from '~/state/explore/topPools/useTopPools'

@@ -37,29 +37,35 @@
     "types": ["node"],
     "useUnknownInCatchVariables": true,
     "paths": {
-      "@universe/api/*": ["./packages/api/*"],
-      "@universe/cli/*": ["./apps/cli/*"],
-      "@universe/config/*": ["./packages/config/*"],
-      "@universe/gating/*": ["./packages/gating/*"],
-      "@universe/notifications/*": ["./packages/notifications/*"],
-      "@universe/sessions/*": ["./packages/sessions/*"],
-      "@universe/hashcash-native": ["./packages/hashcash-native/src/index.ts"],
-      "@universe/hashcash-native/*": ["./packages/hashcash-native/*"],
-      "ui/*": ["./packages/ui/*"],
-      "lx/*": ["./packages/lx/*"],
-      "utilities/*": ["./packages/utilities/*"],
-      "wallet/*": ["./packages/wallet/*"],
-      "@universe/transactional/*": ["./packages/transactional/*"],
-      "@universe/mycelium/*": ["./packages/mycelium/*"],
-      "@universe/websocket/*": ["./packages/websocket/*"],
-      "@universe/prices/*": ["./packages/prices/*"],
+      "@luxexchange/api/*": ["./pkgs/api/*"],
+      "@luxexchange/config/*": ["./pkgs/config/*"],
+      "@luxexchange/gating/*": ["./pkgs/gating/*"],
+      "@luxexchange/notifications/*": ["./pkgs/notifications/*"],
+      "@luxexchange/sessions/*": ["./pkgs/sessions/*"],
+      "@luxexchange/hashcash-native": ["./pkgs/hashcash-native/src/index.ts"],
+      "@luxexchange/hashcash-native/*": ["./pkgs/hashcash-native/*"],
+      "@luxexchange/lx/*": ["./pkgs/lx/*"],
+      "@luxexchange/mycelium/*": ["./pkgs/mycelium/*"],
+      "@luxexchange/websocket/*": ["./pkgs/websocket/*"],
+      "@luxexchange/prices/*": ["./pkgs/prices/*"],
+      "@luxfi/ui/*": ["./pkgs/ui/*"],
+      "@luxfi/wallet/*": ["./pkgs/wallet/*"],
+      "@luxfi/utilities/*": ["./pkgs/utilities/*"],
+      "@luxfi/exchange/*": ["./pkgs/exchange/*"],
+      "@luxfi/dex/*": ["./pkgs/dex/*"],
+      "@luxfi/amm-core/*": ["./pkgs/amm-core/*"],
+      "@luxfi/amm-v2/*": ["./pkgs/amm-v2/*"],
+      "@luxfi/amm-v3/*": ["./pkgs/amm-v3/*"],
+      "@luxdex/v4-sdk/*": ["./pkgs/dex-v4/*"],
+      "@luxdex/analytics/*": ["./pkgs/dex-analytics/*"],
+      "@luxdex/sdk/*": ["./pkgs/dex-sdk/*"],
       "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb": [
         "./node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb",
-        "./packages/api/stubs/privy-service-pb"
+        "./pkgs/api/stubs/privy-service-pb"
       ],
       "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_connect": [
         "./node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_connect",
-        "./packages/api/stubs/privy-service-connect"
+        "./pkgs/api/stubs/privy-service-connect"
       ]
     }
   }

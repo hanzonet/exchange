@@ -1,9 +1,15 @@
 import { useQuery } from '@tanstack/react-query'
 import { GetAuctionActivityRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { auctionQueries } from 'lx/src/data/rest/auctions/auctionQueries'
 import { EVMUniverseChainId } from 'lx/src/features/chains/types'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { AuctionProgressState } from '~/components/Toucan/Auction/store/types'
 import { useAuctionStore } from '~/components/Toucan/Auction/store/useAuctionStore'
 

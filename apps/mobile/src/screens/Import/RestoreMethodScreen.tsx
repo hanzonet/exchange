@@ -11,6 +11,7 @@ import {
   restoreWalletWithSeedPhraseOption,
 } from 'src/screens/Import/constants'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { WalletFilled } from 'ui/src/components/icons'
 import { useIsDarkMode } from 'ui/src/hooks/useIsDarkMode'
@@ -20,6 +21,17 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { ImportType } from 'lx/src/types/onboarding'
 import { OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { WalletFilled } from '@luxfi/ui/src/components/icons'
+import { useIsDarkMode } from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 const options: ImportMethodOption[] = [restoreFromCloudBackupOption, restoreWalletWithSeedPhraseOption]
 

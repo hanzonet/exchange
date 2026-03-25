@@ -2,12 +2,21 @@ import { useTranslation } from 'react-i18next'
 import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { SCREEN_ITEM_HORIZONTAL_PAD } from 'src/app/constants'
 import { useExtensionNavigation } from 'src/app/navigation/utils'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { X } from 'ui/src/components/icons'
 import { ReceiveQRCode } from 'lx/src/components/ReceiveQRCode/ReceiveQRCode'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons'
+import { ReceiveQRCode } from '@luxexchange/lx/src/components/ReceiveQRCode/ReceiveQRCode'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function ReceiveScreen(): JSX.Element {
   const { t } = useTranslation()

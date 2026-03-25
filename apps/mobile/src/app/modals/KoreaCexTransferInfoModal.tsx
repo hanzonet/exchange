@@ -2,12 +2,12 @@ import React, { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { useOpenReceiveModal } from 'src/features/modals/hooks/useOpenReceiveModal'
-import { Button, Flex, Image, Text, useIsDarkMode, useSporeColors } from 'ui/src'
-import { CEX_TRANSFER_MODAL_BG_DARK, CEX_TRANSFER_MODAL_BG_LIGHT } from 'ui/src/assets'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { openUri } from 'lx/src/utils/linking'
+import { Button, Flex, Image, Text, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
+import { CEX_TRANSFER_MODAL_BG_DARK, CEX_TRANSFER_MODAL_BG_LIGHT } from '@luxfi/ui/src/assets'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
 
 const BG_IMAGE_MAX_HEIGHT = 80
 

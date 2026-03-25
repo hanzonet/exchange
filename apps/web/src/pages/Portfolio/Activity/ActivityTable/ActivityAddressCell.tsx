@@ -1,5 +1,6 @@
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { getChainInfo } from 'lx/src/features/chains/chainInfo'
@@ -7,6 +8,15 @@ import { TransactionDetails, TransactionType } from 'lx/src/features/transaction
 import { isPlanTransactionInfo } from 'lx/src/features/transactions/types/utils'
 import { getValidAddress } from 'lx/src/utils/addresses'
 import { shortenHash } from 'utilities/src/addresses'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { TransactionDetails, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { shortenHash } from '@luxfi/utilities/src/addresses'
+>>>>>>> Stashed changes
 import { AddressHoverCard } from '~/components/AddressHoverCard/AddressHoverCard'
 import { InternalLink } from '~/components/InternalLink'
 import { AddressWithAvatar } from '~/pages/Portfolio/Activity/ActivityTable/AddressWithAvatar'

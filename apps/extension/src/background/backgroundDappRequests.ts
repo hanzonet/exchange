@@ -25,6 +25,7 @@ import {
   type DappRequestMessage,
 } from 'src/background/messagePassing/types/requests'
 import { checkAreMigrationsPending, readReduxStateFromStorage } from 'src/background/utils/persistedStateUtils'
+<<<<<<< Updated upstream
 import { getFeatureFlaggedChainIds } from 'lx/src/features/chains/hooks/useFeatureFlaggedChainIds'
 import { getEnabledChains, hexadecimalStringToInt, toSupportedChainId } from 'lx/src/features/chains/utils'
 import { DappRequestType, DappResponseType, EthMethod } from 'lx/src/features/dappRequests/types'
@@ -36,6 +37,19 @@ import { logger } from 'utilities/src/logger/logger'
 import { getCapabilitiesResponse } from 'wallet/src/features/batchedTransactions/utils'
 import { walletContextValue } from 'wallet/src/features/wallet/context'
 import { selectHasSmartWalletConsent } from 'wallet/src/features/wallet/selectors'
+=======
+import { getFeatureFlaggedChainIds } from '@luxexchange/lx/src/features/chains/hooks/useFeatureFlaggedChainIds'
+import { getEnabledChains, hexadecimalStringToInt, toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { DappRequestType, DappResponseType, EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { type WindowEthereumRequestProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { extractBaseUrl } from '@luxfi/utilities/src/format/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { getCapabilitiesResponse } from '@luxfi/wallet/src/features/batchedTransactions/utils'
+import { walletContextValue } from '@luxfi/wallet/src/features/wallet/context'
+import { selectHasSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 // Request classification constants for determining which requests need user interaction
 const REQUEST_CLASSIFICATION = {

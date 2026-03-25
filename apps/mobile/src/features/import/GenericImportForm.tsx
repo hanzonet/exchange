@@ -2,11 +2,11 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 // biome-ignore lint/style/noRestrictedImports: Keyboard addListener is allowed for this use case
 import { Keyboard, TextInput as NativeTextInput } from 'react-native'
 import InputWithSuffix from 'src/features/import/InputWithSuffix'
-import { ColorTokens, Flex, Text, useMedia } from 'ui/src'
-import { fonts } from 'ui/src/theme'
-import PasteButton from 'lx/src/components/buttons/PasteButton'
-import { SectionName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { ColorTokens, Flex, Text, useMedia } from '@luxfi/ui/src'
+import { fonts } from '@luxfi/ui/src/theme'
+import PasteButton from '@luxexchange/lx/src/components/buttons/PasteButton'
+import { SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 
 interface Props {
   value: string | undefined

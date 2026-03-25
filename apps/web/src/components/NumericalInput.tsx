@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
-import { Locale } from 'lx/src/features/language/constants'
-import { useCurrentLocale } from 'lx/src/features/language/hooks'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
 import { loadingOpacityMixin } from '~/components/Loader/styled'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 import { escapeRegExp } from '~/utils/escapeRegExp'

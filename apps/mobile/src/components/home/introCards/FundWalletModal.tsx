@@ -7,6 +7,7 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { useOpenReceiveModal } from 'src/features/modals/hooks/useOpenReceiveModal'
 import { openModal } from 'src/features/modals/modalSlice'
+<<<<<<< Updated upstream
 import { Flex, UniversalImage, useShadowPropsShort } from 'ui/src'
 import { ArrowDownCircle, Buy } from 'ui/src/components/icons'
 import { UniversalImageResizeMode } from 'ui/src/components/UniversalImage/types'
@@ -16,6 +17,17 @@ import { Modal } from 'lx/src/components/modals/Modal'
 import { useCexTransferProviders } from 'lx/src/features/fiatOnRamp/useCexTransferProviders'
 import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
 import { usePortfolioEmptyStateBackground } from 'wallet/src/components/portfolio/empty'
+=======
+import { Flex, UniversalImage, useShadowPropsShort } from '@luxfi/ui/src'
+import { ArrowDownCircle, Buy } from '@luxfi/ui/src/components/icons'
+import { UniversalImageResizeMode } from '@luxfi/ui/src/components/UniversalImage/types'
+import { borderRadii, iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { ActionCard, type ActionCardItem } from '@luxexchange/lx/src/components/misc/ActionCard'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useCexTransferProviders } from '@luxexchange/lx/src/features/fiatOnRamp/useCexTransferProviders'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { usePortfolioEmptyStateBackground } from '@luxfi/wallet/src/components/portfolio/empty'
+>>>>>>> Stashed changes
 
 export function FundWalletModal(): JSX.Element {
   const shadowProps = useShadowPropsShort()

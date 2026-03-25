@@ -2,9 +2,9 @@ import { BlurView } from 'expo-blur'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { FadeIn } from 'react-native-reanimated'
-import { Flex } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
+import { Flex } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
 
 /**
  * Renders a blurred image background combined with a color overlay for a given image uri.

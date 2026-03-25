@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 import { createNotificationTelemetry, type NotificationTelemetry } from '@universe/notifications'
 import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+=======
+import { createNotificationTelemetry, type NotificationTelemetry } from '@luxexchange/notifications'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+>>>>>>> Stashed changes
 
 /**
  * Creates a NotificationTelemetry implementation that sends events to Amplitude

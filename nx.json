@@ -235,8 +235,8 @@
       "{workspaceRoot}/.biome*",
       "{workspaceRoot}/.eslint*",
       "{workspaceRoot}/.depcheckrc*",
-      "{workspaceRoot}/packages/biome-config/**/*",
-      "{workspaceRoot}/packages/eslint-config/**/*"
+      "{workspaceRoot}/pkgs/biome-config/**/*",
+      "{workspaceRoot}/pkgs/eslint-config/**/*"
     ],
     "mobileGlobals": [
       "{workspaceRoot}/metro.config.*",
@@ -254,13 +254,13 @@
   },
   "workspaceLayout": {
     "appsDir": "apps",
-    "libsDir": "packages"
+    "libsDir": "pkgs"
   },
   "sync": {
     "applyChanges": true
   },
   "parallel": 3,
-  "defaultProject": "@luxfi/web",
+  "defaultProject": "@luxexchange/web",
   "generators": {
     "@nx/js:library": {
       "buildable": false

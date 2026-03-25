@@ -14,6 +14,7 @@ import {
 } from 'src/screens/Import/SeedPhraseInputScreen/SeedPhraseInput/types'
 import { useFunctionAfterNavigationTransitionEndWithDelay } from 'src/utils/hooks'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Button, Flex, MobileDeviceHeight, Text, TouchableArea, useIsShortMobileDevice } from 'ui/src'
 import { PapersText, QuestionInCircleFilled } from 'ui/src/components/icons'
 import { luxUrls } from 'lx/src/constants/urls'
@@ -29,6 +30,23 @@ import { useBooleanState } from 'utilities/src/react/useBooleanState'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, MobileDeviceHeight, Text, TouchableArea, useIsShortMobileDevice } from '@luxfi/ui/src'
+import { PapersText, QuestionInCircleFilled } from '@luxfi/ui/src/components/icons'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName, MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type SeedPhraseInputScreenProps = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.SeedPhraseInput>
 

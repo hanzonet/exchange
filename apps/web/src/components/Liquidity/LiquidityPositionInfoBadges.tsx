@@ -2,6 +2,7 @@ import { ProtocolVersion as RestProtocolVersion } from '@uniswap/client-data-api
 import { GraphQLApi } from '@universe/api'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, Text, Tooltip } from 'ui/src'
 import { DocumentList } from 'ui/src/components/icons/DocumentList'
 import { zIndexes } from 'ui/src/theme'
@@ -9,6 +10,15 @@ import { BIPS_BASE, ZERO_ADDRESS } from 'lx/src/constants/misc'
 import { V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
 import { shortenAddress } from 'utilities/src/addresses'
 import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+=======
+import { Flex, styled, Text, Tooltip } from '@luxfi/ui/src'
+import { DocumentList } from '@luxfi/ui/src/components/icons/DocumentList'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { BIPS_BASE, ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
+import { V2_DEFAULT_FEE_TIER } from '@luxexchange/lx/src/constants/pools'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
+>>>>>>> Stashed changes
 import { FeeData } from '~/components/Liquidity/Create/types'
 import { isDynamicFeeTier } from '~/components/Liquidity/utils/feeTiers'
 import { getProtocolVersionLabel } from '~/components/Liquidity/utils/protocolVersion'

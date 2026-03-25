@@ -1,8 +1,8 @@
 import { getAccount } from '@wagmi/core'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { createEVMWalletService } from 'lx/src/features/wallet/services/createEVMWalletService'
-import type { WalletService } from 'lx/src/features/wallet/services/IWalletService'
-import { WalletMeta } from 'lx/src/features/wallet/types/WalletMeta'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { createEVMWalletService } from '@luxexchange/lx/src/features/wallet/services/createEVMWalletService'
+import type { WalletService } from '@luxexchange/lx/src/features/wallet/services/IWalletService'
+import { WalletMeta } from '@luxexchange/lx/src/features/wallet/types/WalletMeta'
 import { wagmiConfig } from '~/components/Web3Provider/wagmiConfig'
 
 export function getExternalEVMWalletService(): WalletService {

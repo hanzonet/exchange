@@ -7,24 +7,32 @@ import { TokenItemChart } from 'src/components/explore/TokenItemChart'
 import { TokenItemData } from 'src/components/explore/TokenItemData'
 import { useTokenDetailsNavigation } from 'src/components/TokenDetails/hooks'
 import { TokenMetadata } from 'src/components/tokens/TokenMetadata'
-import { Flex, FlexProps, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { spacing } from 'ui/src/theme'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
-import { RelativeChange } from 'lx/src/components/RelativeChange/RelativeChange'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { MobileEventName, SectionName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { Flex, FlexProps, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { spacing } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { RelativeChange } from '@luxexchange/lx/src/components/RelativeChange/RelativeChange'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { MobileEventName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import {
   buildCurrencyId,
   buildNativeCurrencyId,
   currencyIdToAddress,
   currencyIdToChain,
+<<<<<<< Updated upstream
 } from 'lx/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
 import { useEvent } from 'utilities/src/react/hooks'
 import { noop } from 'utilities/src/react/noop'
 import { TokenMetadataDisplayType } from 'wallet/src/features/wallet/types'
+=======
+} from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { noop } from '@luxfi/utilities/src/react/noop'
+import { TokenMetadataDisplayType } from '@luxfi/wallet/src/features/wallet/types'
+>>>>>>> Stashed changes
 
 interface TokenItemProps {
   tokenItemData: TokenItemData

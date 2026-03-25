@@ -19,29 +19,37 @@ import { TestnetSwitchModalState } from 'src/features/testnetMode/TestnetSwitchM
 import { HomeScreenTabIndex } from 'src/screens/HomeScreen/HomeScreenTabIndex'
 import { ReceiveCryptoModalState } from 'src/screens/ReceiveCryptoModalState'
 import { ViewPrivateKeysScreenState } from 'src/screens/ViewPrivateKeys/ViewPrivateKeysScreenState'
-import { BridgedAssetModalProps } from 'lx/src/components/BridgedAsset/BridgedAssetModal'
-import { WormholeModalProps } from 'lx/src/components/BridgedAsset/WormholeModal'
-import { ReportTokenDataModalProps } from 'lx/src/components/reporting/ReportTokenDataModal'
-import { ReportTokenModalProps } from 'lx/src/components/reporting/ReportTokenIssueModal'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { FORServiceProvider } from 'lx/src/features/fiatOnRamp/types'
-import { NFTItem } from 'lx/src/features/nfts/types'
-import { PasskeyManagementModalState } from 'lx/src/features/passkey/PasskeyManagementModal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TestnetModeModalState } from 'lx/src/features/testnets/TestnetModeModal'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
-import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
+import { BridgedAssetModalProps } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetModal'
+import { WormholeModalProps } from '@luxexchange/lx/src/components/BridgedAsset/WormholeModal'
+import { ReportTokenDataModalProps } from '@luxexchange/lx/src/components/reporting/ReportTokenDataModal'
+import { ReportTokenModalProps } from '@luxexchange/lx/src/components/reporting/ReportTokenIssueModal'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { FORServiceProvider } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { NFTItem } from '@luxexchange/lx/src/features/nfts/types'
+import { PasskeyManagementModalState } from '@luxexchange/lx/src/features/passkey/PasskeyManagementModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestnetModeModalState } from '@luxexchange/lx/src/features/testnets/TestnetModeModal'
+import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
 import {
   FiatOnRampScreens,
   MobileScreens,
   OnboardingScreens,
   SharedUnitagScreenParams,
   UnitagStackParamList,
+<<<<<<< Updated upstream
 } from 'lx/src/types/screens/mobile'
 import { SmartWalletAdvancedSettingsModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
 import { SmartWalletEnabledModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
 import { SmartWalletNudgeState } from 'wallet/src/components/smartWallet/modals/SmartWalletNudge'
 import { ExploreOrderBy } from 'wallet/src/features/wallet/types'
+=======
+} from '@luxexchange/lx/src/types/screens/mobile'
+import { SmartWalletAdvancedSettingsModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { SmartWalletEnabledModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
+import { SmartWalletNudgeState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletNudge'
+import { ExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
+>>>>>>> Stashed changes
 
 type NFTItemScreenParams = {
   owner?: Address

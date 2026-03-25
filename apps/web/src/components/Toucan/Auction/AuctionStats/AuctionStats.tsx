@@ -1,11 +1,19 @@
 import { TFunction, t } from 'i18next'
 import { ReactNode, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, Text, Tooltip, useMedia } from 'ui/src'
 import { Globe } from 'ui/src/components/icons/Globe'
 import { XTwitter } from 'ui/src/components/icons/XTwitter'
 import { zIndexes } from 'ui/src/theme/zIndexes'
 import { shortenAddress } from 'utilities/src/addresses'
+=======
+import { Flex, styled, Text, Tooltip, useMedia } from '@luxfi/ui/src'
+import { Globe } from '@luxfi/ui/src/components/icons/Globe'
+import { XTwitter } from '@luxfi/ui/src/components/icons/XTwitter'
+import { zIndexes } from '@luxfi/ui/src/theme/zIndexes'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+>>>>>>> Stashed changes
 import { useAuctionStatsData } from '~/components/Toucan/Auction/hooks/useAuctionStatsData'
 import { formatTimestampToDate } from '~/components/Toucan/Auction/utils/formatting'
 import { deprecatedStyled } from '~/lib/deprecated-styled'

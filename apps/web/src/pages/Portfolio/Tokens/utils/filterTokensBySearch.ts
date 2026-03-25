@@ -1,5 +1,5 @@
-import { Currency } from '@luxamm/sdk-core'
-import { doesTokenMatchSearchTerm } from 'lx/src/utils/search/doesTokenMatchSearchTerm'
+import { Currency } from '@luxfi/amm-core'
+import { doesTokenMatchSearchTerm } from '@luxexchange/lx/src/utils/search/doesTokenMatchSearchTerm'
 
 /**
  * Filters tokens based on search criteria (name, symbol, address, chain name).

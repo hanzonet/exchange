@@ -1,6 +1,11 @@
 import { createMigrate } from 'redux-persist'
+<<<<<<< Updated upstream
 import { PreV55SearchResultType } from 'lx/src/state/oldTypes'
 import { createThrowingProxy } from 'utilities/src/test/utils'
+=======
+import { PreV55SearchResultType } from '@luxexchange/lx/src/state/oldTypes'
+import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
+>>>>>>> Stashed changes
 import { vi } from 'vitest'
 import { migration1 } from '~/state/migrations/1'
 import { migration2 } from '~/state/migrations/2'

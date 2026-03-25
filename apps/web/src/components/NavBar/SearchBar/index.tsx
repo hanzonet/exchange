@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { Search } from 'ui/src/components/icons/Search'
 import { ElementName, InterfaceEventName, ModalName, SectionName } from 'lx/src/features/telemetry/constants'
@@ -7,6 +8,16 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { KeyAction } from 'utilities/src/device/keyboard/types'
 import { useKeyDown } from 'utilities/src/device/keyboard/useKeyDown'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Search } from '@luxfi/ui/src/components/icons/Search'
+import { ElementName, InterfaceEventName, ModalName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { KeyAction } from '@luxfi/utilities/src/device/keyboard/types'
+import { useKeyDown } from '@luxfi/utilities/src/device/keyboard/useKeyDown'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { NavIcon } from '~/components/NavBar/NavIcon'
 import { SearchModal } from '~/components/NavBar/SearchBar/SearchModal'
 import { useIsSearchBarVisible } from '~/components/NavBar/SearchBar/useIsSearchBarVisible'

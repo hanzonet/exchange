@@ -1,9 +1,17 @@
 import { lazy, Suspense } from 'react'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { Flag } from 'ui/src/components/icons/Flag'
 import { Modal } from 'lx/src/components/modals/Modal'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { Flag } from '@luxfi/ui/src/components/icons/Flag'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+>>>>>>> Stashed changes
 
 const DevMenuScreen = lazy(() =>
   import('src/app/features/settings/DevMenuScreen').then((module) => ({ default: module.DevMenuScreen })),

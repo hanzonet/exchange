@@ -1,6 +1,11 @@
 import { Percent } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { BIPS_BASE } from 'lx/src/constants/misc'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
+>>>>>>> Stashed changes
 import { OrderDirection } from '~/appGraphql/data/util'
 import { FeeData } from '~/components/Liquidity/Create/types'
 

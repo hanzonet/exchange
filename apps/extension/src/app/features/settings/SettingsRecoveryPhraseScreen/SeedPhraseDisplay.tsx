@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useEffect, useState } from 'react'
 import { LayoutChangeEvent } from 'react-native'
 import { CopyButton } from 'src/app/components/buttons/CopyButton'
+<<<<<<< Updated upstream
 import { Flex, Separator, Text } from 'ui/src'
 import { spacing } from 'ui/src/theme'
 import { WalletEventName } from 'lx/src/features/telemetry/constants'
@@ -9,6 +10,15 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
 import { logger } from 'utilities/src/logger/logger'
 import { mnemonicUnlockedQuery } from 'wallet/src/features/wallet/Keyring/queries'
+=======
+import { Flex, Separator, Text } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { mnemonicUnlockedQuery } from '@luxfi/wallet/src/features/wallet/Keyring/queries'
+>>>>>>> Stashed changes
 
 function SeedPhraseColumnGroup({ recoveryPhraseArray }: { recoveryPhraseArray: string[] }): JSX.Element {
   const [largestIndexWidth, setLargestIndexWidth] = useState(0)

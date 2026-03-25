@@ -6,6 +6,7 @@ import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { CloudStorageMnemonicBackup } from 'src/features/CloudBackup/types'
 import { OnboardingScreen } from 'src/features/onboarding/OnboardingScreen'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea, useIsDarkMode } from 'ui/src'
 import { DownloadAlt, RotatableChevron, Unitag } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
@@ -16,6 +17,18 @@ import { OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { getCloudProviderName } from 'lx/src/utils/cloud-backup/getCloudProviderName'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, Text, TouchableArea, useIsDarkMode } from '@luxfi/ui/src'
+import { DownloadAlt, RotatableChevron, Unitag } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { FORMAT_DATE_TIME_SHORT, useLocalizedDayjs } from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.RestoreCloudBackup>
 

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
+import { Text } from '@luxfi/ui/src'
 import { useAbbreviatedTimeString } from '~/components/Table/utils'
 
 interface TimeCellProps {

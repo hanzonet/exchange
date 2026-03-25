@@ -1,10 +1,19 @@
 import { useEffect } from 'react'
+<<<<<<< Updated upstream
 import { WalletEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { MobileUserPropertyName, setUserProperty } from 'lx/src/features/telemetry/user'
 import { logger } from 'utilities/src/logger/logger'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+=======
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { MobileUserPropertyName, setUserProperty } from '@luxexchange/lx/src/features/telemetry/user'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+>>>>>>> Stashed changes
 
 // WALL-6234
 export function useLogMissingMnemonic(): void {

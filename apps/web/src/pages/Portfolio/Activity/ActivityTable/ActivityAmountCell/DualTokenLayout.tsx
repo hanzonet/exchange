@@ -1,6 +1,6 @@
-import { Flex, Text } from 'ui/src'
-import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { EmptyCell } from '~/pages/Portfolio/Activity/ActivityTable/ActivityAmountCell/EmptyCell'
 import { TokenAmountDisplay } from '~/pages/Portfolio/Activity/ActivityTable/TokenAmountDisplay'
 

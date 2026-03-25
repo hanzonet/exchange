@@ -1,0 +1,33 @@
+import { useTranslation } from 'react-i18next'
+import { UniversalImage } from '@luxfi/ui/src'
+import { borderRadii, iconSizes } from '@luxfi/ui/src/theme'
+import { NotificationToast } from '@luxexchange/lx/src/components/notifications/NotificationToast'
+import { DappConnectedNotification as DappConnectedNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+
+export function DappConnectedNotification({
+  notification: { hideDelay = 2000, dappIconUrl },
+}: {
+  notification: DappConnectedNotificationType
+}): JSX.Element | null {
+  const { t } = useTranslation()
+
+  return (
+    <NotificationToast
+      smallToast
+      hideDelay={hideDelay}
+      icon={
+        dappIconUrl ? (
+          <UniversalImage
+            uri={dappIconUrl}
+            style={{ image: { borderRadius: borderRadii.rounded8 } }}
+            size={{
+              width: iconSizes.icon20,
+              height: iconSizes.icon20,
+            }}
+          />
+        ) : undefined
+      }
+      title={t('common.text.connected')}
+    />
+  )
+}

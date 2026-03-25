@@ -5,6 +5,7 @@ import { useDappLastChainId } from 'src/app/features/dapp/hooks'
 import { DappRequestContent } from 'src/app/features/dappRequests/DappRequestContent'
 import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRequestQueueContext'
 import { SignMessageRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
+<<<<<<< Updated upstream
 import { EthMethod } from 'lx/src/features/dappRequests/types'
 import { logger } from 'utilities/src/logger/logger'
 import { containsNonPrintableChars } from 'utilities/src/primitives/string'
@@ -12,6 +13,15 @@ import { useBooleanState } from 'utilities/src/react/useBooleanState'
 import { DappPersonalSignContent } from 'wallet/src/components/dappRequests/DappPersonalSignContent'
 import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
 import { shouldDisableConfirm } from 'wallet/src/features/dappRequests/utils/riskUtils'
+=======
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { containsNonPrintableChars } from '@luxfi/utilities/src/primitives/string'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { DappPersonalSignContent } from '@luxfi/wallet/src/components/dappRequests/DappPersonalSignContent'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { shouldDisableConfirm } from '@luxfi/wallet/src/features/dappRequests/utils/riskUtils'
+>>>>>>> Stashed changes
 
 interface PersonalSignRequestProps {
   dappRequest: SignMessageRequest

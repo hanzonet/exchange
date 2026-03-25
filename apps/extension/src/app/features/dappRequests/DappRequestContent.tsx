@@ -10,6 +10,7 @@ import { useIsDappRequestConfirming } from 'src/app/features/dappRequests/hooks'
 import { useIsRequestStale } from 'src/app/features/dappRequests/hooks/useIsRequestStale'
 import { type DappRequestStoreItem } from 'src/app/features/dappRequests/shared'
 import { type DappRequest, isBatchedSwapRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
+<<<<<<< Updated upstream
 import { AnimatePresence, Button, Flex, type GetThemeValueForKey, styled, Text } from 'ui/src'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { type UniverseChainId } from 'lx/src/features/chains/types'
@@ -28,6 +29,26 @@ import { type DappVerificationStatus } from 'wallet/src/features/dappRequests/ty
 import { AddressFooter } from 'wallet/src/features/transactions/TransactionRequest/AddressFooter'
 import { NetworkFeeFooter } from 'wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter'
 import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { AnimatePresence, Button, Flex, type GetThemeValueForKey, styled, Text } from '@luxfi/ui/src'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { DappRequestType } from '@luxexchange/lx/src/features/dappRequests/types'
+import { hasGasEstimationFailed, hasSufficientFundsIncludingGas } from '@luxexchange/lx/src/features/gas/utils'
+import { useOnChainNativeCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
+import { type TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useThrottledCallback } from '@luxfi/utilities/src/react/useThrottledCallback'
+import { MAX_HIDDEN_CALLS_BY_DEFAULT } from '@luxfi/wallet/src/components/BatchedTransactions/BatchedTransactionDetails'
+import { DappRequestHeader } from '@luxfi/wallet/src/components/dappRequests/DappRequestHeader'
+import { WarningBox } from '@luxfi/wallet/src/components/WarningBox/WarningBox'
+import { type DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
+import { AddressFooter } from '@luxfi/wallet/src/features/transactions/TransactionRequest/AddressFooter'
+import { NetworkFeeFooter } from '@luxfi/wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 interface DappRequestHeaderProps {
   title: string

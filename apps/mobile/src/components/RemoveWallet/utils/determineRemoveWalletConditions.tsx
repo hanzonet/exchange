@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { areAddressesEqual } from 'lx/src/utils/addresses'
 import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+=======
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+>>>>>>> Stashed changes
 
 type RemoveWalletConditions = {
   /**

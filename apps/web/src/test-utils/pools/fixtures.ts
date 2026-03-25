@@ -1,10 +1,17 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { Currency, WETH9 } from '@uniswap/sdk-core'
 import { FeeAmount, Pool, Position } from '@uniswap/v3-sdk'
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { DEFAULT_TICK_SPACING } from 'lx/src/constants/pools'
 import { USDC_MAINNET } from 'lx/src/constants/tokens'
 import { UniverseChainId } from 'lx/src/features/chains/types'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+>>>>>>> Stashed changes
 import { PoolData } from '~/appGraphql/data/pools/usePoolData'
 import { PoolStat } from '~/state/explore/types'
 

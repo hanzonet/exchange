@@ -2,12 +2,17 @@ import {
   AuctionBidAnalyticsProperties,
   AuctionBidInputtedAnalyticsProperties,
   AuctionWithdrawAnalyticsProperties,
-} from 'lx/src/features/telemetry/types'
+} from '@luxexchange/lx/src/features/telemetry/types'
 import {
   ToucanBidTransactionInfo,
   ToucanWithdrawBidAndClaimTokensTransactionInfo,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 
 /**
  * Returns base analytics properties for auction withdraw, excluding transaction_hash

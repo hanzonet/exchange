@@ -1,11 +1,11 @@
 import { NetworkStatus } from '@apollo/client'
 import { useMemo } from 'react'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useSortedPortfolioBalances } from 'lx/src/features/dataApi/balances/balances'
-import type { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useSortedPortfolioBalances } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import type { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { usePortfolioAddresses } from '~/pages/Portfolio/hooks/usePortfolioAddresses'
 
 export interface TokenData {

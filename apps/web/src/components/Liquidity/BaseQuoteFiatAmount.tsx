@@ -1,8 +1,15 @@
 import { Currency, Price } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { Text, TextProps } from 'ui/src'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Text, TextProps } from '@luxfi/ui/src'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import tryParseCurrencyAmount from '~/lib/utils/tryParseCurrencyAmount'
 
 export function BaseQuoteFiatAmount({

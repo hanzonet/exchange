@@ -1,7 +1,7 @@
 import { createColumnHelper } from '@tanstack/react-table'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
+import { Text } from '@luxfi/ui/src'
 import { Cell } from '~/components/Table/Cell'
 import { HeaderCell } from '~/components/Table/styled'
 import { hasRow } from '~/components/Table/utils/hasRow'

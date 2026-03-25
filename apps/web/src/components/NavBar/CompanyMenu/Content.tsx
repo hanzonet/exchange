@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LayerGroup } from 'ui/src/components/icons/LayerGroup'
-import { Unichain } from 'ui/src/components/icons/Unichain'
-import { LuxLogo } from 'ui/src/components/icons/LuxLogo'
-import { DEXGeneric } from 'ui/src/components/icons/DEXGeneric'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ElementName } from 'lx/src/features/telemetry/constants'
+import { LayerGroup } from '@luxfi/ui/src/components/icons/LayerGroup'
+import { Unichain } from '@luxfi/ui/src/components/icons/Unichain'
+import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
+import { DEXGeneric } from '@luxfi/ui/src/components/icons/DEXGeneric'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 export interface MenuItem {
   label: string

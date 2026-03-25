@@ -1,5 +1,5 @@
-import type { TextProps } from 'ui/src'
-import { Flex, Text } from 'ui/src'
+import type { TextProps } from '@luxfi/ui/src'
+import { Flex, Text } from '@luxfi/ui/src'
 
 interface HeaderActionRowContentProps {
   title: string

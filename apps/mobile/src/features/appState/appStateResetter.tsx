@@ -9,9 +9,15 @@ import { resetModals } from 'src/features/modals/modalSlice'
 import { resetPushNotifications } from 'src/features/notifications/slice'
 import { resetTweaks } from 'src/features/tweaks/slice'
 import { resetWalletConnect } from 'src/features/walletConnect/walletConnectSlice'
+<<<<<<< Updated upstream
 import { type AppStateResetter } from 'lx/src/state/createAppStateResetter'
 import { createLogger } from 'utilities/src/logger/logger'
 import { createWalletStateResetter } from 'wallet/src/state/createWalletStateResetter'
+=======
+import { type AppStateResetter } from '@luxexchange/lx/src/state/createAppStateResetter'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
+import { createWalletStateResetter } from '@luxfi/wallet/src/state/createWalletStateResetter'
+>>>>>>> Stashed changes
 
 /**
  * Creates the mobile app's state resetter instance.

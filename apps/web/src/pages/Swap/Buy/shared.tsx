@@ -1,5 +1,6 @@
 import { Currency } from '@uniswap/sdk-core'
 import { PropsWithChildren } from 'react'
+<<<<<<< Updated upstream
 import { Flex, ModalCloseIcon, styled, TouchableArea, useSporeColors } from 'ui/src'
 import { ReactComponent as ForConnectingBackground } from 'ui/src/assets/backgrounds/for-connecting-v2.svg'
 import { ArrowLeft } from 'ui/src/components/icons/ArrowLeft'
@@ -8,6 +9,16 @@ import { LocalizedFormatter } from 'lx/src/features/language/formatter'
 import { navigatorLocale } from 'lx/src/features/language/navigatorLocale'
 import { NumberType } from 'utilities/src/format/types'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Flex, ModalCloseIcon, styled, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { ReactComponent as ForConnectingBackground } from '@luxfi/ui/src/assets/backgrounds/for-connecting-v2.svg'
+import { ArrowLeft } from '@luxfi/ui/src/components/icons/ArrowLeft'
+import { FiatCurrencyInfo, FORCountry, RampDirection } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { LocalizedFormatter } from '@luxexchange/lx/src/features/language/formatter'
+import { navigatorLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 export const ContentWrapper = styled(Flex, {
   backgroundColor: '$surface1',

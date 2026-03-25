@@ -4,11 +4,19 @@ import {
   getOrderedConnectedAddresses,
   isConnectedAccount,
 } from 'src/app/features/dapp/utils'
+<<<<<<< Updated upstream
 import { SAMPLE_SEED_ADDRESS_1, SAMPLE_SEED_ADDRESS_2, SAMPLE_SEED_ADDRESS_3 } from 'lx/src/test/fixtures'
 import { extractNameFromUrl } from 'utilities/src/format/extractNameFromUrl'
 import { promiseTimeout } from 'utilities/src/time/timing'
 import { Account } from 'wallet/src/features/wallet/accounts/types'
 import { ACCOUNT, ACCOUNT2, ACCOUNT3, readOnlyAccount } from 'wallet/src/test/fixtures'
+=======
+import { SAMPLE_SEED_ADDRESS_1, SAMPLE_SEED_ADDRESS_2, SAMPLE_SEED_ADDRESS_3 } from '@luxexchange/lx/src/test/fixtures'
+import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'
+import { promiseTimeout } from '@luxfi/utilities/src/time/timing'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { ACCOUNT, ACCOUNT2, ACCOUNT3, readOnlyAccount } from '@luxfi/wallet/src/test/fixtures'
+>>>>>>> Stashed changes
 
 jest.mock('utilities/src/format/extractNameFromUrl', () => ({
   extractNameFromUrl: jest.fn(),

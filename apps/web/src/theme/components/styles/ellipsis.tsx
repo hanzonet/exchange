@@ -1,4 +1,4 @@
-import { TextStyle } from 'ui/src'
+import { TextStyle } from '@luxfi/ui/src'
 import { css } from '~/lib/deprecated-styled'
 
 /** @deprecated use gui and EllipsisGuiStyle instead */

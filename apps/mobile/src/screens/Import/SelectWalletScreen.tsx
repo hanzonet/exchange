@@ -7,6 +7,7 @@ import Animated, { useAnimatedStyle, withTiming } from 'react-native-reanimated'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { OnboardingScreen } from 'src/features/onboarding/OnboardingScreen'
+<<<<<<< Updated upstream
 import { Button, Flex, Loader, Text, TouchableArea, useLayoutAnimationOnChange } from 'ui/src'
 import { WalletFilled } from 'ui/src/components/icons'
 import { spacing } from 'ui/src/theme'
@@ -20,6 +21,21 @@ import WalletPreviewCard from 'wallet/src/components/WalletPreviewCard/WalletPre
 import { useImportableAccounts } from 'wallet/src/features/onboarding/hooks/useImportableAccounts'
 import { useSelectAccounts } from 'wallet/src/features/onboarding/hooks/useSelectAccounts'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
+=======
+import { Button, Flex, Loader, Text, TouchableArea, useLayoutAnimationOnChange } from '@luxfi/ui/src'
+import { WalletFilled } from '@luxfi/ui/src/components/icons'
+import { spacing } from '@luxfi/ui/src/theme'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import WalletPreviewCard from '@luxfi/wallet/src/components/WalletPreviewCard/WalletPreviewCard'
+import { useImportableAccounts } from '@luxfi/wallet/src/features/onboarding/hooks/useImportableAccounts'
+import { useSelectAccounts } from '@luxfi/wallet/src/features/onboarding/hooks/useSelectAccounts'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+>>>>>>> Stashed changes
 
 const ANIMATION_DURATION = 300
 

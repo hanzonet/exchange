@@ -1,0 +1,413 @@
+import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { Percent } from '@uniswap/sdk-core'
+import { useTranslation } from 'react-i18next'
+import { Flex, HeightAnimator, Separator, Text, TouchableArea, DEXText } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { AnglesDownUp } from '@luxfi/ui/src/components/icons/AnglesDownUp'
+import { SortVertical } from '@luxfi/ui/src/components/icons/SortVertical'
+import { AnimatedDEX } from '@luxfi/ui/src/components/icons/DEX'
+import { AcrossLogo } from '@luxfi/ui/src/components/logos/AcrossLogo'
+import type { WarningWithStyle } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningLabel } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useSlippageSettings } from '@luxexchange/lx/src/features/transactions/components/settings/settingsConfigurations/slippage/useSlippageSettings'
+import { useTransactionSettingsStore } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { AcrossRoutingInfoTooltip } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/AcrossRoutingTooltip'
+import {
+  BestRouteTooltip,
+  BestRouteDEXTooltip,
+} from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/BestRouteTooltip'
+import { SwapFeeOnTransferTooltip } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/FeeDetailsTooltip'
+import { LargePriceDifferenceTooltip } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/LargePriceDifferenceTooltip'
+import {
+  AutoSlippageBadge,
+  MaxSlippageTooltip,
+} from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/MaxSlippageTooltip'
+import { YouReceiveDetailsTooltip } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/YouReceiveDetailsTooltip'
+import { SwapDetailsRow } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/YouReceiveDetails/SwapDetailsRow'
+import type { YouReceiveDetailsProps } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/YouReceiveDetails/YouReceiveDetails'
+import { useFeeOnTransferAmounts } from '@luxexchange/lx/src/features/transactions/swap/hooks/useFeeOnTransferAmount'
+import type { UsePriceDifferenceReturnType } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceDifference'
+import { usePriceDifference } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceDifference'
+import { useParsedSwapWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useSwapTxStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import type { FeeOnTransferFeeGroupProps } from '@luxexchange/lx/src/features/transactions/TransactionDetails/types'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { useIsBlocked } from '@luxexchange/lx/src/features/trm/hooks'
+import { useRoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/routingRegistry'
+// biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
+import { formatCurrencyAmount } from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isWebAppDesktop, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+
+const ZERO_PERCENT = new Percent(0, 100)
+const MAX_TOOLTIP_WIDTH = 300
+
+function YouReceiveDisplay({
+  isBridge,
+  outputAmountUserWillReceive,
+  formattedPostFeesAmount,
+  priceDifference,
+  feeOnTransferProps,
+  isIndicative,
+  isLoading,
+  isLoadingIndicative,
+  isOpen,
+}: {
+  isBridge: boolean
+  outputAmountUserWillReceive: Maybe<CurrencyAmount<Currency>>
+  formattedPostFeesAmount?: string
+  priceDifference?: UsePriceDifferenceReturnType
+  feeOnTransferProps?: FeeOnTransferFeeGroupProps
+  isIndicative: boolean
+  isLoading: boolean
+  isLoadingIndicative: boolean
+  isOpen: boolean
+}): JSX.Element {
+  const { t } = useTranslation()
+  const ExpandoIcon = isOpen ? AnglesDownUp : SortVertical
+
+  return (
+    <SwapDetailsRow.Outer>
+      <SwapDetailsRow.Label
+        label={t('common.youReceive')}
+        analyticsTitle="You receive"
+        tooltip={
+          isBridge ? (
+            <AcrossRoutingInfoTooltip />
+          ) : (
+            <YouReceiveDetailsTooltip
+              receivedAmount={formattedPostFeesAmount ?? '-'}
+              feeOnTransferProps={feeOnTransferProps}
+            />
+          )
+        }
+      />
+      <Flex row gap="$spacing6" alignItems="center">
+        <SwapDetailsRow.ReceivingAmount
+          amount={outputAmountUserWillReceive}
+          formattedAmount={formattedPostFeesAmount}
+          priceDifferenceWarning={priceDifference}
+          isIndicative={isIndicative}
+          isLoading={isLoading}
+          feeOnTransferProps={feeOnTransferProps}
+          isLoadingIndicative={isLoadingIndicative}
+        />
+        {isWebAppDesktop && (
+          <Flex rotate={isOpen ? '180deg' : '0deg'} animation="simple" transition="ease-in-out">
+            <ExpandoIcon color="$neutral2" size="$icon.24" />
+          </Flex>
+        )}
+      </Flex>
+    </SwapDetailsRow.Outer>
+  )
+}
+
+function FeeOnTransferDisplay({
+  feeOnTransferProps,
+}: {
+  feeOnTransferProps?: FeeOnTransferFeeGroupProps
+}): JSX.Element {
+  const { t } = useTranslation()
+  const { formatPercent } = useLocalizationContext()
+
+  return (
+    <>
+      {feeOnTransferProps?.inputTokenInfo.fee.greaterThan(0) && (
+        <SwapDetailsRow.Outer>
+          <SwapDetailsRow.Label
+            label={t('swap.details.feeOnTransfer.symbol', {
+              tokenSymbol: feeOnTransferProps.inputTokenInfo.tokenSymbol,
+            })}
+            analyticsTitle="Token fee (input)"
+            tooltip={
+              <SwapFeeOnTransferTooltip
+                {...feeOnTransferProps}
+                outputTokenInfo={{
+                  ...feeOnTransferProps.outputTokenInfo,
+                  fee: ZERO_PERCENT,
+                }}
+              />
+            }
+          />
+          <Flex row gap="$spacing6" alignItems="center">
+            <AlertTriangleFilled color="$neutral2" size="$icon.16" />
+            <SwapDetailsRow.ValueLabel value={formatPercent(feeOnTransferProps.inputTokenInfo.fee.toFixed(8))} />
+          </Flex>
+        </SwapDetailsRow.Outer>
+      )}
+      {feeOnTransferProps?.outputTokenInfo.fee.greaterThan(0) && (
+        <SwapDetailsRow.Outer>
+          <SwapDetailsRow.Label
+            analyticsTitle="Token fee (output)"
+            label={t('swap.details.feeOnTransfer.symbol', {
+              tokenSymbol: feeOnTransferProps.outputTokenInfo.tokenSymbol,
+            })}
+            tooltip={
+              <SwapFeeOnTransferTooltip
+                {...feeOnTransferProps}
+                inputTokenInfo={{
+                  ...feeOnTransferProps.inputTokenInfo,
+                  fee: ZERO_PERCENT,
+                }}
+              />
+            }
+          />
+          <Flex row gap="$spacing6" alignItems="center">
+            <AlertTriangleFilled color="$neutral2" size="$icon.16" />
+            <SwapDetailsRow.ValueLabel value={formatPercent(feeOnTransferProps.outputTokenInfo.fee.toFixed(8))} />
+          </Flex>
+        </SwapDetailsRow.Outer>
+      )}
+    </>
+  )
+}
+
+function PriceDifferenceDisplay({
+  priceDifference,
+}: {
+  priceDifference: UsePriceDifferenceReturnType
+}): JSX.Element | null {
+  const { t } = useTranslation()
+  const { formatPercent } = useLocalizationContext()
+
+  if (!priceDifference.showPriceDifferenceWarning) {
+    return null
+  }
+
+  return (
+    <SwapDetailsRow.Outer>
+      <SwapDetailsRow.Label
+        label={t('large.price.difference')}
+        analyticsTitle="Large price difference"
+        tooltip={<LargePriceDifferenceTooltip />}
+      />
+      <Flex row gap="$spacing4" alignItems="center">
+        <AlertTriangleFilled color={priceDifference.priceDifferenceColor} size="$icon.16" />
+        <SwapDetailsRow.ValueLabel
+          value={formatPercent(priceDifference.priceDifferencePercentage)}
+          color={priceDifference.priceDifferenceColor}
+        />
+      </Flex>
+    </SwapDetailsRow.Outer>
+  )
+}
+
+function MaxSlippageDisplay({
+  formattedPostFeesAmount,
+  formattedMinimumAmount,
+  currentSlippageTolerance,
+  autoSlippageEnabled,
+}: {
+  formattedPostFeesAmount?: string
+  formattedMinimumAmount: string
+  currentSlippageTolerance: number
+  autoSlippageEnabled: boolean
+}): JSX.Element {
+  const { t } = useTranslation()
+
+  const formatter = useLocalizationContext()
+  const { formatPercent } = formatter
+
+  return (
+    <SwapDetailsRow.Outer>
+      <SwapDetailsRow.Label
+        label={t('settings.maxSlippage')}
+        analyticsTitle="Max slippage"
+        tooltip={
+          <MaxSlippageTooltip
+            receivedAmount={formattedPostFeesAmount ?? '-'}
+            minimumAmount={formattedMinimumAmount}
+            autoSlippageEnabled={autoSlippageEnabled}
+            currentSlippageTolerance={formatPercent(currentSlippageTolerance)}
+          />
+        }
+      />
+      <Flex row gap="$spacing6" alignItems="center">
+        {autoSlippageEnabled && <AutoSlippageBadge />}
+        <SwapDetailsRow.ValueLabel
+          value={currentSlippageTolerance === 0 ? t('common.none') : formatPercent(currentSlippageTolerance)}
+        />
+      </Flex>
+    </SwapDetailsRow.Outer>
+  )
+}
+
+function RouteDisplay({
+  isBridge,
+  isDEXContext,
+  loading,
+}: {
+  isBridge: boolean
+  isDEXContext: boolean
+  loading: boolean
+}): JSX.Element {
+  const { t } = useTranslation()
+  const trade = useSwapTxStore((s) => s.trade)
+
+  const routingProvider = useRoutingProvider({ routing: trade?.routing })
+
+  const tooltip = isBridge ? (
+    <AcrossRoutingInfoTooltip />
+  ) : isDEXContext ? (
+    <BestRouteDEXTooltip />
+  ) : (
+    <BestRouteTooltip />
+  )
+
+  return (
+    <SwapDetailsRow.Outer>
+      <SwapDetailsRow.Label label={t('common.bestRoute')} analyticsTitle="Route" tooltip={tooltip} />
+      {isBridge ? (
+        <Flex row gap="$spacing6" alignItems="center">
+          <AcrossLogo size="$icon.16" />
+          <SwapDetailsRow.ValueLabel color={loading ? '$neutral2' : '$neutral1'} value="Across API" />
+        </Flex>
+      ) : isDEXContext ? (
+        <Flex row gap="$spacing1">
+          <AnimatedDEX size="$icon.16" opacity={loading ? 0 : 1} animation="simple" />
+          <DEXText variant="body3" color={loading ? '$neutral2' : undefined}>
+            Lux X
+          </DEXText>
+        </Flex>
+      ) : (
+        <Flex row gap="$spacing6" alignItems="center">
+          {routingProvider?.icon && <routingProvider.icon size="$icon.16" color={routingProvider.iconColor} />}
+          <SwapDetailsRow.ValueLabel color={loading ? '$neutral2' : '$neutral1'} value={routingProvider?.name ?? ''} />
+        </Flex>
+      )}
+    </SwapDetailsRow.Outer>
+  )
+}
+
+function InlineWarningDisplay({ warning }: { warning: WarningWithStyle }): JSX.Element {
+  return (
+    <SwapDetailsRow.Outer>
+      <Flex row gap="$spacing6" alignItems="center">
+        {isWebPlatform && (
+          <InfoTooltip
+            text={warning.warning.message}
+            placement="top"
+            maxWidth={MAX_TOOLTIP_WIDTH}
+            trigger={<AlertTriangleFilled color="$neutral2" size="$icon.16" />}
+          />
+        )}
+        <Text variant="body3" color="$neutral2">
+          {warning.warning.title}
+        </Text>
+      </Flex>
+    </SwapDetailsRow.Outer>
+  )
+}
+
+export function YouReceiveDetails({
+  isIndicative,
+  isLoading,
+  isLoadingIndicative,
+  isBridge,
+}: YouReceiveDetailsProps): JSX.Element | null {
+  const { value: isOpen, toggle } = useBooleanState(false)
+
+  const { currentSlippageTolerance } = useSlippageSettings()
+  const { customSlippageTolerance } = useTransactionSettingsStore((s) => ({
+    customSlippageTolerance: s.customSlippageTolerance,
+  }))
+  const derivedSwapInfo = useSwapFormStore((s) => s.derivedSwapInfo)
+  const priceDifference = usePriceDifference(derivedSwapInfo)
+
+  const address = useActiveAddress(derivedSwapInfo.chainId)
+  const { isBlocked } = useIsBlocked(address)
+
+  const { formScreenWarning } = useParsedSwapWarnings()
+  const inlineWarning =
+    formScreenWarning && formScreenWarning.displayedInline && !isBlocked ? formScreenWarning : undefined
+  const isPriceImpactWarning =
+    inlineWarning?.warning.type === WarningLabel.PriceImpactHigh ||
+    inlineWarning?.warning.type === WarningLabel.PriceImpactMedium
+  const feeOnTransferProps = useFeeOnTransferAmounts(derivedSwapInfo)
+  const isDEXContext = useSwapTxStore((s) => isDEX({ routing: s.routing }))
+  const trade = useSwapTxStore((s) => s.trade)
+  const receivedAmountPostFees = derivedSwapInfo.outputAmountUserWillReceive
+    ? formatCurrencyAmount({
+        amount: derivedSwapInfo.outputAmountUserWillReceive,
+        locale: 'en-US',
+        type: NumberType.TokenTx,
+        placeholder: '',
+      })
+    : undefined
+
+  const outputCurrency = derivedSwapInfo.currencies.output
+  const formattedPostFeesAmount =
+    outputCurrency && receivedAmountPostFees ? `${receivedAmountPostFees} ${outputCurrency.currency.symbol}` : undefined
+  const minimumAmount = trade?.minAmountOut
+  const formattedMinimumAmount = `${formatCurrencyAmount({
+    amount: minimumAmount,
+    locale: 'en-US',
+    type: NumberType.TokenTx,
+    placeholder: '-',
+  })} ${outputCurrency?.currency.symbol}`
+
+  const showDropdown =
+    derivedSwapInfo.wrapType === WrapType.NotApplicable &&
+    !!derivedSwapInfo.currencies.output &&
+    !!derivedSwapInfo.currencies.input &&
+    derivedSwapInfo.currencyAmounts[derivedSwapInfo.exactCurrencyField]
+
+  return (
+    <TouchableArea
+      transition="all 0.3s ease-in-out"
+      maxHeight={showDropdown ? 300 : 0}
+      opacity={showDropdown ? 1 : 0}
+      mb={showDropdown ? '$spacing4' : '$none'}
+      onPress={toggle}
+    >
+      <Flex
+        borderRadius="$rounded20"
+        borderWidth="$spacing1"
+        borderColor="$surface3"
+        backgroundColor="$surface1"
+        p="$spacing16"
+        hoverStyle={{
+          borderColor: '$surface3Hovered',
+        }}
+      >
+        {inlineWarning && !isPriceImpactWarning ? (
+          <InlineWarningDisplay warning={inlineWarning} />
+        ) : (
+          <YouReceiveDisplay
+            isBridge={isBridge}
+            outputAmountUserWillReceive={derivedSwapInfo.outputAmountUserWillReceive}
+            formattedPostFeesAmount={formattedPostFeesAmount}
+            priceDifference={priceDifference}
+            feeOnTransferProps={feeOnTransferProps}
+            isIndicative={isIndicative}
+            isLoading={isLoading}
+            isLoadingIndicative={isLoadingIndicative}
+            isOpen={isOpen}
+          />
+        )}
+        <HeightAnimator open={isOpen}>
+          <Separator my="$spacing16" />
+          <Flex gap="$spacing12">
+            <FeeOnTransferDisplay feeOnTransferProps={feeOnTransferProps} />
+            <PriceDifferenceDisplay priceDifference={priceDifference} />
+            {!isBridge && (
+              <MaxSlippageDisplay
+                formattedPostFeesAmount={formattedPostFeesAmount}
+                formattedMinimumAmount={formattedMinimumAmount}
+                currentSlippageTolerance={currentSlippageTolerance}
+                autoSlippageEnabled={!customSlippageTolerance}
+              />
+            )}
+            <RouteDisplay isBridge={isBridge} isDEXContext={isDEXContext} loading={!trade} />
+          </Flex>
+        </HeightAnimator>
+      </Flex>
+    </TouchableArea>
+  )
+}

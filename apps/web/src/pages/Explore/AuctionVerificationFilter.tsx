@@ -1,11 +1,11 @@
 import { useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, Tooltip, useMedia } from 'ui/src'
-import { Check } from 'ui/src/components/icons/Check'
-import { zIndexes } from 'ui/src/theme'
-import { ModalName, LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { Flex, Text, Tooltip, useMedia } from '@luxfi/ui/src'
+import { Check } from '@luxfi/ui/src/components/icons/Check'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { ModalName, LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { Dropdown, InternalMenuItem } from '~/components/Dropdowns/Dropdown'
 import {
   AuctionVerificationFilter as AuctionVerificationFilterEnum,

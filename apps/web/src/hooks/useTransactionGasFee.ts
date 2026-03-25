@@ -1,8 +1,8 @@
 import { type TransactionRequest } from '@ethersproject/abstract-provider'
 import type { GasFeeResult } from '@universe/api'
 import { useMemo } from 'react'
-import { useGasFeeQuery } from 'lx/src/data/apiClients/luxApi/useGasFeeQuery'
-import { GAS_SPEED_STRATEGIES, GasSpeed } from 'lx/src/features/gas/utils'
+import { useGasFeeQuery } from '@luxexchange/lx/src/data/apiClients/luxApi/useGasFeeQuery'
+import { GAS_SPEED_STRATEGIES, GasSpeed } from '@luxexchange/lx/src/features/gas/utils'
 
 export function useTransactionGasFee(tx?: TransactionRequest, speed: GasSpeed = GasSpeed.Urgent): GasFeeResult {
   const gasStrategy = GAS_SPEED_STRATEGIES[speed]

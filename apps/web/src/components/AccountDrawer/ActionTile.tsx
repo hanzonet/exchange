@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Flex, FlexProps, styled, Text, useSporeColors } from 'ui/src'
+import { Flex, FlexProps, styled, Text, useSporeColors } from '@luxfi/ui/src'
 import { SpinnerSVG } from '~/theme/components/icons/spinner'
 
 const LoadingButtonSpinner = (props: React.ComponentPropsWithoutRef<'svg'>) => (

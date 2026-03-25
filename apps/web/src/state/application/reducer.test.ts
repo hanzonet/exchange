@@ -1,5 +1,5 @@
 import { createStore, Store } from 'redux'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import reducer, { ApplicationState, setCloseModal, setOpenModal, updateChainId } from '~/state/application/reducer'
 
 describe('application reducer', () => {

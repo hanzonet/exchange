@@ -28,6 +28,7 @@ import { pairWithWalletConnectURI } from 'src/features/walletConnect/utils'
 import { waitForWcWeb3WalletIsReady } from 'src/features/walletConnect/walletConnectClient'
 import { addRequest, setDidOpenFromDeepLink } from 'src/features/walletConnect/walletConnectSlice'
 import { call, delay, put, select, takeLatest } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { MobileEventName, ModalName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
@@ -41,6 +42,21 @@ import { ScantasticParams } from 'wallet/src/features/scantastic/types'
 import { getContractManager, getProviderManager } from 'wallet/src/features/wallet/context'
 import { selectAccounts, selectActiveAccount } from 'wallet/src/features/wallet/selectors'
 import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import i18n from '@luxexchange/lx/src/i18n'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { UwULinkRequest } from '@luxexchange/lx/src/types/walletConnect'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { ScantasticParams } from '@luxfi/wallet/src/features/scantastic/types'
+import { getContractManager, getProviderManager } from '@luxfi/wallet/src/features/wallet/context'
+import { selectAccounts, selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 interface DeepLink {
   url: string

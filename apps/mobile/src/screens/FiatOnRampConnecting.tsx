@@ -7,17 +7,18 @@ import { type FiatOnRampStackParamList } from 'src/app/navigation/types'
 import { Screen } from 'src/components/layout/Screen'
 import { useFiatOnRampContext } from 'src/features/fiatOnRamp/FiatOnRampContext'
 import { closeModal } from 'src/features/modals/modalSlice'
-import { Flex, Text, UniversalImage, useIsDarkMode } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { luxUrls } from 'lx/src/constants/urls'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useLocalFiatToUSDConverter } from 'lx/src/features/fiatCurrency/hooks'
-import { ServiceProviderLogoStyles } from 'lx/src/features/fiatOnRamp/constants'
-import { FiatOnRampConnectingView } from 'lx/src/features/fiatOnRamp/FiatOnRampConnectingView'
-import { useFiatOnRampTransactionCreator } from 'lx/src/features/fiatOnRamp/hooks'
+import { Flex, Text, UniversalImage, useIsDarkMode } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useLocalFiatToUSDConverter } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { ServiceProviderLogoStyles } from '@luxexchange/lx/src/features/fiatOnRamp/constants'
+import { FiatOnRampConnectingView } from '@luxexchange/lx/src/features/fiatOnRamp/FiatOnRampConnectingView'
+import { useFiatOnRampTransactionCreator } from '@luxexchange/lx/src/features/fiatOnRamp/hooks'
 import {
   useFiatOnRampAggregatorOffRampWidgetQuery,
   useFiatOnRampAggregatorWidgetQuery,
+<<<<<<< Updated upstream
 } from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
 import { getOptionalServiceProviderLogo } from 'lx/src/features/fiatOnRamp/utils'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
@@ -31,6 +32,21 @@ import { openUri } from 'lx/src/utils/linking'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { useTimeout } from 'utilities/src/time/timing'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { getOptionalServiceProviderLogo } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { FiatOffRampEventName, FiatOnRampEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { forceFetchFiatOnRampTransactions } from '@luxexchange/lx/src/features/transactions/slice'
+import { type FiatOnRampScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 // Design decision
 const CONNECTING_TIMEOUT = 2 * ONE_SECOND_MS

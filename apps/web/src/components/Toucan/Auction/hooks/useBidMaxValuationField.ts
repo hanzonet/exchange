@@ -2,12 +2,21 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { getPrimaryStablecoin } from 'lx/src/features/chains/utils'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
 import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import { useUSDCPrice, useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useUSDCPrice, useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { priceToQ96WithDecimals, q96ToPriceString } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import { snapToNearestTick } from '~/components/Toucan/Auction/utils/ticks'
 import tryParseCurrencyAmount from '~/lib/utils/tryParseCurrencyAmount'

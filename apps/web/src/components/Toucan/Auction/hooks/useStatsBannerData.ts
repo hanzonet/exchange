@@ -1,6 +1,11 @@
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { fromQ96ToDecimalWithTokenDecimals } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import { useBidTokenInfo } from '~/components/Toucan/Auction/hooks/useBidTokenInfo'
 import { useCurrencyRaisedFormatted } from '~/components/Toucan/Auction/hooks/useCurrencyRaisedFormatted'

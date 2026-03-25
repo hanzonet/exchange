@@ -4,12 +4,13 @@ import { useTranslation } from 'react-i18next'
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated'
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
 import { LongText } from 'src/components/text/LongText'
-import { Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { ChartBar, ChartPie, ChartPyramid, Language as LanguageIcon, TrendDown, TrendUp } from 'ui/src/components/icons'
-import { DEP_accentColors, validColor } from 'ui/src/theme'
+import { Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { ChartBar, ChartPie, ChartPyramid, Language as LanguageIcon, TrendDown, TrendUp } from '@luxfi/ui/src/components/icons'
+import { DEP_accentColors, validColor } from '@luxfi/ui/src/theme'
 import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
+<<<<<<< Updated upstream
 } from 'lx/src/data/graphql/lux-data-api/fragments'
 import { useTokenMarketStats } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
 import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
@@ -18,6 +19,16 @@ import { useCurrentLanguage, useCurrentLanguageInfo } from 'lx/src/features/lang
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { NumberType } from 'utilities/src/format/types'
+=======
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { useTokenMarketStats } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { useCurrentLanguage, useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 const StatsRow = memo(function _StatsRow({
   label,

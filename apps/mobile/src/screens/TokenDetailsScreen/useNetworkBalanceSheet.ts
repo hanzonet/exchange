@@ -1,5 +1,6 @@
 import { GraphQLApi } from '@universe/api'
 import { useMemo, useState } from 'react'
+<<<<<<< Updated upstream
 import { getNativeAddress } from 'lx/src/constants/addresses'
 import { useCrossChainBalances } from 'lx/src/data/balances/hooks/useCrossChainBalances'
 import { useTokenBasicProjectPartsFragment } from 'lx/src/data/graphql/lux-data-api/fragments'
@@ -10,6 +11,18 @@ import { CurrencyField } from 'lx/src/types/currency'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { useCrossChainBalances } from '@luxexchange/lx/src/data/balances/hooks/useCrossChainBalances'
+import { useTokenBasicProjectPartsFragment } from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type NetworkSheetAction = 'sell' | 'send'
 

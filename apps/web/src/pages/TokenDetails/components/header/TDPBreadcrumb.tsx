@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
 import { BreadcrumbNavContainer, BreadcrumbNavLink, CurrentPageBreadcrumb } from '~/components/BreadcrumbNav'
 import { useTDPContext } from '~/pages/TokenDetails/context/TDPContext'
 

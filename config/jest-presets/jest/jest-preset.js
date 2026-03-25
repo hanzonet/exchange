@@ -16,7 +16,7 @@ module.exports = {
   // coverageDirectory: '<rootDir>/coverage',
   // coverageReporters: ['json','lcov','html'],
   // collectCoverageFrom: [
-  //   '<rootDir>/packages/**/src/**/*.ts',
+  //   '<rootDir>/pkgs/**/src/**/*.ts',
   // ],
   moduleDirectories: ['node_modules', 'src'],
   moduleFileExtensions: [

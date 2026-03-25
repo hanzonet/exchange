@@ -2,10 +2,17 @@ import { skipToken } from '@reduxjs/toolkit/query/react'
 import { renderHook } from '@testing-library/react'
 import { CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import ms from 'ms'
+<<<<<<< Updated upstream
 import { USDC_MAINNET } from 'lx/src/constants/tokens'
 import { useIsMismatchAccountQuery } from 'lx/src/features/smartWallet/mismatch/hooks'
 import { AVERAGE_L1_BLOCK_TIME_MS } from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
 import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+=======
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { useIsMismatchAccountQuery } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { AVERAGE_L1_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
+>>>>>>> Stashed changes
 import { useGetQuoteQuery, useGetQuoteQueryState } from '~/state/routing/slice'
 import { GetQuoteArgs, INTERNAL_ROUTER_PREFERENCE_PRICE, RouterPreference, URAQuoteType } from '~/state/routing/types'
 import { useRoutingAPITrade } from '~/state/routing/useRoutingAPITrade'

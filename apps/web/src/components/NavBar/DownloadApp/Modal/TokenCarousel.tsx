@@ -1,5 +1,5 @@
-import { Flex, useSporeColors } from 'ui/src'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
 import { approvedERC20 } from '~/pages/Landing/assets/approvedTokens'
 
 const TOKEN_SIZE = 40

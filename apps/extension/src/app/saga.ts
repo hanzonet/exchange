@@ -8,11 +8,19 @@ import {
 import { dappRequestApprovalWatcher } from 'src/app/features/dappRequests/dappRequestApprovalWatcherSaga'
 import { dappRequestWatcher } from 'src/app/features/dappRequests/saga'
 import { call, spawn } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { getMonitoredSagaReducers, type MonitoredSaga } from 'lx/src/utils/saga'
 import { apolloClientRef } from 'wallet/src/data/apollo/usePersistedApolloClient'
 import { authActions, authReducer, authSaga, authSagaName } from 'wallet/src/features/auth/saga'
 import { deviceLocaleWatcher } from 'wallet/src/features/i18n/deviceLocaleWatcherSaga'
 import { initProviders } from 'wallet/src/features/providers/saga'
+=======
+import { getMonitoredSagaReducers, type MonitoredSaga } from '@luxexchange/lx/src/utils/saga'
+import { apolloClientRef } from '@luxfi/wallet/src/data/apollo/usePersistedApolloClient'
+import { authActions, authReducer, authSaga, authSagaName } from '@luxfi/wallet/src/features/auth/saga'
+import { deviceLocaleWatcher } from '@luxfi/wallet/src/features/i18n/deviceLocaleWatcherSaga'
+import { initProviders } from '@luxfi/wallet/src/features/providers/saga'
+>>>>>>> Stashed changes
 import {
   removeDelegationActions,
   removeDelegationReducer,

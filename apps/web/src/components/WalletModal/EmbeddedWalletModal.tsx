@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { LuxLogo } from 'ui/src/components/icons/LuxLogo'
+import { Flex, Text } from '@luxfi/ui/src'
+import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
 import { DownloadHeader } from '~/components/WalletModal/DownloadHeader'
 import { WalletModalLayout } from '~/components/WalletModal/WalletModalLayout'
 import { WalletOptionsGrid } from '~/components/WalletModal/WalletOptionsGrid'

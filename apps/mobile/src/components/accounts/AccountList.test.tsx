@@ -1,5 +1,6 @@
 import { AccountList } from 'src/components/accounts/AccountList'
 import { cleanup, fireEvent, render, screen } from 'src/test/test-utils'
+<<<<<<< Updated upstream
 import { Locale } from 'lx/src/features/language/constants'
 import { amounts, ON_PRESS_EVENT_PAYLOAD, portfolio } from 'lx/src/test/fixtures'
 import { mockLocalizedFormatter } from 'lx/src/test/mocks'
@@ -8,6 +9,16 @@ import { sanitizeAddressText } from 'lx/src/utils/addresses'
 import { shortenAddress } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
 import { ACCOUNT, readOnlyAccount, signerMnemonicAccount } from 'wallet/src/test/fixtures'
+=======
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { amounts, ON_PRESS_EVENT_PAYLOAD, portfolio } from '@luxexchange/lx/src/test/fixtures'
+import { mockLocalizedFormatter } from '@luxexchange/lx/src/test/mocks'
+import { createArray, queryResolvers } from '@luxexchange/lx/src/test/utils'
+import { sanitizeAddressText } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { ACCOUNT, readOnlyAccount, signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+>>>>>>> Stashed changes
 
 const tokensTotalDenominatedValue = amounts.md()
 const { resolvers } = queryResolvers({

@@ -11,8 +11,8 @@ import { ExternalProfileScreen } from 'src/screens/ExternalProfileScreen'
 import { NFTCollectionScreen } from 'src/screens/NFTCollectionScreen'
 import { NFTItemScreen } from 'src/screens/NFTItemScreen'
 import { TokenDetailsScreen } from 'src/screens/TokenDetailsScreen/TokenDetailsScreen'
-import { useSporeColors } from 'ui/src'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
+import { useSporeColors } from '@luxfi/ui/src'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 const ExploreStack = createNativeStackNavigator<ExploreStackParamList>()
 

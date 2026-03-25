@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useCurrencyInfos } from 'lx/src/features/tokens/useCurrencyInfo'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useCurrencyInfos } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import type { AuctionWithCurrencyInfo } from '~/state/explore/topAuctions/useTopAuctions'
 
 /**

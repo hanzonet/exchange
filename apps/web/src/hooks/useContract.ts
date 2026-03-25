@@ -3,6 +3,7 @@ import { CHAIN_TO_ADDRESSES_MAP, MULTICALL_ADDRESSES, NONFUNGIBLE_POSITION_MANAG
 import LuxInterfaceMulticallJson from '@uniswap/v3-periphery/artifacts/contracts/lens/UniswapInterfaceMulticall.sol/UniswapInterfaceMulticall.json'
 import NonfungiblePositionManagerJson from '@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json'
 import { useEffect, useMemo } from 'react'
+<<<<<<< Updated upstream
 import ERC20_ABI from 'lx/src/abis/erc20.json'
 import { Erc20, Erc721, Weth } from 'lx/src/abis/types'
 import { NonfungiblePositionManager, LuxInterfaceMulticall } from 'lx/src/abis/types/v3'
@@ -13,6 +14,18 @@ import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { getContract } from 'utilities/src/contracts/getContract'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import ERC20_ABI from '@luxexchange/lx/src/abis/erc20.json'
+import { Erc20, Erc721, Weth } from '@luxexchange/lx/src/abis/types'
+import { NonfungiblePositionManager, LuxInterfaceMulticall } from '@luxexchange/lx/src/abis/types/v3'
+import WETH_ABI from '@luxexchange/lx/src/abis/weth.json'
+import { WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
+import { EVMUniverseChainId, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { getContract } from '@luxfi/utilities/src/contracts/getContract'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { useAccount } from '~/hooks/useAccount'
 import { useEthersProvider } from '~/hooks/useEthersProvider'
 

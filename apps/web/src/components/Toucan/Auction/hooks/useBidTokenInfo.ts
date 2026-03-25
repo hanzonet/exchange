@@ -1,9 +1,9 @@
 import { useMemo, useRef } from 'react'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isStablecoinAddress } from 'lx/src/features/chains/utils'
-import { useCurrencyInfoWithLoading } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isStablecoinAddress } from '@luxexchange/lx/src/features/chains/utils'
+import { useCurrencyInfoWithLoading } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { BidTokenInfo } from '~/components/Toucan/Auction/store/types'
 
 interface UseBidTokenInfoOptions {

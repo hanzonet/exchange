@@ -1,6 +1,7 @@
 import { Currency } from '@uniswap/sdk-core'
 import { ReactNode } from 'react'
 import { Trans } from 'react-i18next'
+<<<<<<< Updated upstream
 import { nativeOnChain } from 'lx/src/constants/tokens'
 import { luxUrls } from 'lx/src/constants/urls'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
@@ -8,6 +9,15 @@ import { useSupportedChainId } from 'lx/src/features/chains/hooks/useSupportedCh
 import { getChainLabel } from 'lx/src/features/chains/utils'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { AutoColumn } from '~/components/deprecated/Column'
 import Row from '~/components/deprecated/Row'
 import DEXRouterLabel, { DEXGradient } from '~/components/RouterLabel/DEXRouterLabel'

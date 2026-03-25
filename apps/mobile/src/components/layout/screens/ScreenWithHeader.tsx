@@ -3,9 +3,9 @@ import { Edge } from 'react-native-safe-area-context'
 import { BackButton } from 'src/components/buttons/BackButton'
 import { Screen } from 'src/components/layout/Screen'
 import { HorizontalEdgeGestureTarget } from 'src/components/layout/screens/EdgeGestureTarget'
-import { ColorTokens, Flex, flexStyles } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
+import { ColorTokens, Flex, flexStyles } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
 
 type ScreenWithHeaderProps = {
   centerElement?: JSX.Element

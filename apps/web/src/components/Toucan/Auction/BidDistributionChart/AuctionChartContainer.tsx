@@ -1,8 +1,14 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Flex, useIsDarkMode, useMedia } from 'ui/src'
 import { ElementName } from 'lx/src/features/telemetry/constants'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Button, Flex, useIsDarkMode, useMedia } from '@luxfi/ui/src'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import ErrorBoundary from '~/components/ErrorBoundary'
 import { BidDistributionChartTab } from '~/components/Toucan/Auction/AuctionChartShared'
 import { ChartFooter } from '~/components/Toucan/Auction/BidDistributionChart/BidDistributionChartFooter'

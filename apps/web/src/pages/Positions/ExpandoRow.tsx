@@ -1,8 +1,14 @@
 import { PropsWithChildren, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Flex, HeightAnimator, Text } from 'ui/src'
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { useTimeout } from 'utilities/src/time/timing'
+=======
+import { Button, Flex, HeightAnimator, Text } from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 
 type ExpandoRowProps = PropsWithChildren<{
   title?: string

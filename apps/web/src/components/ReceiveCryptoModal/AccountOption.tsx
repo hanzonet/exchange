@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Text } from 'ui/src'
 import { MAINNET_CHAIN_INFO } from 'lx/src/features/chains/evm/info/mainnet'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
@@ -7,6 +8,15 @@ import { SOLANA_CHAIN_INFO } from 'lx/src/features/chains/svm/info/solana'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { shortenAddress } from 'utilities/src/addresses'
 import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+=======
+import { Text } from '@luxfi/ui/src'
+import { MAINNET_CHAIN_INFO } from '@luxexchange/lx/src/features/chains/evm/info/mainnet'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { SOLANA_CHAIN_INFO } from '@luxexchange/lx/src/features/chains/svm/info/solana'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
+>>>>>>> Stashed changes
 import { AddressDisplay } from '~/components/AccountDetails/AddressDisplay'
 import StatusIcon from '~/components/StatusIcon'
 import { deprecatedStyled } from '~/lib/deprecated-styled'

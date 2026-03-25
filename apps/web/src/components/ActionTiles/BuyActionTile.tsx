@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Bank } from 'ui/src/components/icons/Bank'
 import { FlexProps } from 'ui/src/components/layout/Flex'
 import { useLuxContext } from 'lx/src/contexts/LuxContext'
@@ -6,6 +7,15 @@ import { ElementName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Bank } from '@luxfi/ui/src/components/icons/Bank'
+import { FlexProps } from '@luxfi/ui/src/components/layout/Flex'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { ActionTileWithIconAnimation } from '~/components/ActionTiles/ActionTileWithIconAnimation'
 
 export function BuyActionTile({ padding = '$spacing12' }: { padding?: FlexProps['p'] }) {

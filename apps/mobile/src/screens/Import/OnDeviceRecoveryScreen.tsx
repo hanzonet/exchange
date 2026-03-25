@@ -14,6 +14,7 @@ import {
   OnDeviceRecoveryWalletCardLoader,
 } from 'src/screens/Import/OnDeviceRecoveryWalletCard'
 import { RecoveryWalletInfo } from 'src/screens/Import/useOnDeviceRecoveryData'
+<<<<<<< Updated upstream
 import { Flex, Image, Text, TouchableArea } from 'ui/src'
 import { LUX_LOGO } from 'ui/src/assets'
 import { PapersText } from 'ui/src/components/icons'
@@ -34,6 +35,28 @@ import { logger } from 'utilities/src/logger/logger'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+=======
+import { Flex, Image, Text, TouchableArea } from '@luxfi/ui/src'
+import { LUX_LOGO } from '@luxfi/ui/src/assets'
+import { PapersText } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.OnDeviceRecovery>
 

@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 import { FeatureFlags } from '@universe/gating'
 import { DAI, USDT } from 'lx/src/constants/tokens'
 import { luxUrls } from 'lx/src/constants/urls'
 import { WETH } from 'lx/src/test/fixtures/lib/sdk'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
+=======
+import { FeatureFlags } from '@luxexchange/gating'
+import { DAI, USDT } from '@luxexchange/lx/src/constants/tokens'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { WETH } from '@luxexchange/lx/src/test/fixtures/lib/sdk'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+>>>>>>> Stashed changes
 import { DEFAULT_FEE_DATA, DYNAMIC_FEE_DATA } from '~/components/Liquidity/Create/types'
 import { expect, getTest, type Page } from '~/playwright/fixtures'
 import { stubTradingApiEndpoint } from '~/playwright/fixtures/tradingApi'

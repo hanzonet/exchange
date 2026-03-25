@@ -1,19 +1,25 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
-import { Flex, ModalCloseIcon, Text } from 'ui/src'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { nativeOnChain } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { InterfacePageName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { TransactionModal } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { Flex, ModalCloseIcon, Text } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { InterfacePageName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TransactionModal } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
 import {
   TransactionScreen,
   useTransactionModalContext,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { SwapTab } from 'lx/src/types/screens/interface'
 import { noop } from 'utilities/src/react/noop'
+=======
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'
+import { noop } from '@luxfi/utilities/src/react/noop'
+>>>>>>> Stashed changes
 import { useCurrency } from '~/hooks/Tokens'
 import { SendForm, SendFormProps } from '~/pages/Swap/Send/SendForm'
 import { SendContextProvider } from '~/state/send/SendContext'

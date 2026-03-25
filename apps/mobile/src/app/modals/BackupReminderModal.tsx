@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { LockPreviewImage } from 'src/features/onboarding/LockPreviewImage'
+<<<<<<< Updated upstream
 import { Button, Flex, Text } from 'ui/src'
 import { Modal } from 'lx/src/components/modals/Modal'
 import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
@@ -17,6 +18,21 @@ import { MobileScreens, OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { NumberType } from 'utilities/src/format/types'
 import { setBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/slice'
 import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import WarningIcon from '@luxexchange/lx/src/components/warnings/WarningIcon'
+import { usePortfolioTotalValue } from '@luxexchange/lx/src/features/dataApi/balances/balancesRest'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { setBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 interface BackupReminderModalProps {
   /** Optional close handler provided by notification service renderer */

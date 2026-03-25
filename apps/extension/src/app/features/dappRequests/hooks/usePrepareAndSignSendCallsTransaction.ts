@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 import { usePrepareAndSignDappTransaction } from 'src/app/features/dappRequests/hooks/usePrepareAndSignDappTransaction'
 import { useTransactionGasEstimation } from 'src/app/features/dappRequests/hooks/useTransactionGasEstimation'
 import { DappRequestStoreItemForSendCallsTxn } from 'src/app/features/dappRequests/slice'
+<<<<<<< Updated upstream
 import { LUX_DELEGATION_ADDRESS } from 'lx/src/constants/addresses'
 import { useWalletEncode7702Query } from 'lx/src/data/apiClients/tradingApi/useWalletEncode7702Query'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -11,6 +12,16 @@ import { transformCallsToTransactionRequests } from 'wallet/src/features/batched
 import { useLiveAccountDelegationDetails } from 'wallet/src/features/smartWallet/hooks/useLiveAccountDelegationDetails'
 import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
 import { Account } from 'wallet/src/features/wallet/accounts/types'
+=======
+import { LUX_DELEGATION_ADDRESS } from '@luxexchange/lx/src/constants/addresses'
+import { useWalletEncode7702Query } from '@luxexchange/lx/src/data/apiClients/tradingApi/useWalletEncode7702Query'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { EthTransaction } from '@luxexchange/lx/src/types/walletConnect'
+import { transformCallsToTransactionRequests } from '@luxfi/wallet/src/features/batchedTransactions/utils'
+import { useLiveAccountDelegationDetails } from '@luxfi/wallet/src/features/smartWallet/hooks/useLiveAccountDelegationDetails'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+>>>>>>> Stashed changes
 
 interface UsePrepareAndSignSendCallsTransactionParams {
   request: DappRequestStoreItemForSendCallsTxn

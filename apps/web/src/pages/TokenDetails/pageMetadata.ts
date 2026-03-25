@@ -1,10 +1,10 @@
 import { Currency } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@universe/api'
 import { TFunction } from 'i18next'
-import { luxUrls } from 'lx/src/constants/urls'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain, getChainLabel } from 'lx/src/features/chains/utils'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain, getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
 import { NATIVE_CHAIN_ID } from '~/constants/tokens'
 
 export function getTokenStructuredData({

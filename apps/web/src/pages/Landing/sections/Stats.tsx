@@ -1,10 +1,17 @@
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { parseToRgb } from 'polished'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, Text, useSporeColors } from 'ui/src'
 import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, styled, Text, useSporeColors } from '@luxfi/ui/src'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { LiveIcon, StatCard } from '~/pages/Landing/components/StatCard'
 import { useInView } from '~/pages/Landing/sections/useInView'
 import { use24hProtocolVolume, useDailyTVLWithChange } from '~/state/explore/protocolStats'

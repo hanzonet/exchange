@@ -1,5 +1,5 @@
 import { SVGProps } from 'react'
-import { Flex, styled, useSporeColors } from 'ui/src'
+import { Flex, styled, useSporeColors } from '@luxfi/ui/src'
 
 // Lux Logo - White upside-down triangle
 function Logo({ color, onClick }: { color: string; onClick?: () => void }) {

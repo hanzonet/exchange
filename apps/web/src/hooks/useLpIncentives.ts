@@ -1,8 +1,8 @@
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 import { useCallback, useState } from 'react'
-import { useGetPoolsRewards } from 'lx/src/data/rest/getPoolsRewards'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useGetPoolsRewards } from '@luxexchange/lx/src/data/rest/getPoolsRewards'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useAccount } from '~/hooks/useAccount'
 import { useLpIncentivesTransactionState } from '~/hooks/useLpIncentivesTransactionState'
 

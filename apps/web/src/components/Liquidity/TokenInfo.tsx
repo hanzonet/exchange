@@ -1,10 +1,18 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { getSymbolDisplayText } from 'lx/src/utils/currency'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { getCurrencyForProtocol } from '~/components/Liquidity/utils/currency'
 import CurrencyLogo from '~/components/Logo/CurrencyLogo'
 

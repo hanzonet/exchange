@@ -114,20 +114,26 @@ import { SettingsWalletManageConnection } from 'src/screens/SettingsWalletManage
 import { TokenDetailsScreen } from 'src/screens/TokenDetailsScreen/TokenDetailsScreen'
 import { ViewPrivateKeysScreen } from 'src/screens/ViewPrivateKeys/ViewPrivateKeysScreen'
 import { WebViewScreen } from 'src/screens/WebViewScreen'
-import { useSporeColors } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { OnboardingEntryPoint } from 'lx/src/types/onboarding'
+import { useSporeColors } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
 import {
   FiatOnRampScreens,
   MobileScreens,
   OnboardingScreens,
   UnitagScreens,
   type UnitagStackParamList,
+<<<<<<< Updated upstream
 } from 'lx/src/types/screens/mobile'
 import { OnboardingContextProvider } from 'wallet/src/features/onboarding/OnboardingContext'
 import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
+=======
+} from '@luxexchange/lx/src/types/screens/mobile'
+import { OnboardingContextProvider } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 /**
  * Note that we need to explicitly check for the imports from 'react-native-dotenv'

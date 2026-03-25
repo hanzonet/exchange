@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Image, Text, TouchableArea, useSporeColors } from 'ui/src'
-import toucanIntroBackground from 'ui/src/assets/backgrounds/toucan-intro.png'
-import { Rocket } from 'ui/src/components/icons/Rocket'
-import { X } from 'ui/src/components/icons/X'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Button, Flex, Image, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import toucanIntroBackground from '@luxfi/ui/src/assets/backgrounds/toucan-intro.png'
+import { Rocket } from '@luxfi/ui/src/components/icons/Rocket'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { ExternalLink } from '~/theme/components/Links'
 
 const LEARN_MORE_URL = luxUrls.helpArticleUrls.toucanIntro

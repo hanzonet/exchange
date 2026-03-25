@@ -2,17 +2,18 @@ import { useCallback, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { RecipientPanel } from 'src/app/features/send/SendFormScreen/RecipientPanel'
 import { ReviewButton } from 'src/app/features/send/SendFormScreen/ReviewButton'
-import { Flex, Separator, useSporeColors } from 'ui/src'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { selectHasDismissedLowNetworkTokenWarning } from 'lx/src/features/behaviorHistory/selectors'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ModalName, SectionName, LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { InsufficientNativeTokenWarning } from 'lx/src/features/transactions/components/InsufficientNativeTokenWarning/InsufficientNativeTokenWarning'
+import { Flex, Separator, useSporeColors } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { selectHasDismissedLowNetworkTokenWarning } from '@luxexchange/lx/src/features/behaviorHistory/selectors'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName, SectionName, LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { InsufficientNativeTokenWarning } from '@luxexchange/lx/src/features/transactions/components/InsufficientNativeTokenWarning/InsufficientNativeTokenWarning'
 import {
   TransactionScreen,
   useTransactionModalContext,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { useUSDTokenUpdater } from 'lx/src/features/transactions/hooks/useUSDTokenUpdater'
@@ -31,6 +32,26 @@ import { SendReviewDetails } from 'wallet/src/features/transactions/send/SendRev
 import { TokenSelectorPanel } from 'wallet/src/features/transactions/send/TokenSelectorPanel'
 import { isAmountGreaterThanZero } from 'wallet/src/features/transactions/utils'
 import { useIsBlockedActiveAddress } from 'wallet/src/features/trm/hooks'
+=======
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { useUSDTokenUpdater } from '@luxexchange/lx/src/features/transactions/hooks/useUSDTokenUpdater'
+import { BlockedAddressWarning } from '@luxexchange/lx/src/features/transactions/modals/BlockedAddressWarning'
+import { LowNativeBalanceModal } from '@luxexchange/lx/src/features/transactions/modals/LowNativeBalanceModal'
+import { useIsBlocked } from '@luxexchange/lx/src/features/trm/hooks'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { createTransactionId } from '@luxexchange/lx/src/utils/createTransactionId'
+import { isSafeNumber } from '@luxfi/utilities/src/primitives/integer'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
+import { GasFeeRow } from '@luxfi/wallet/src/features/transactions/send/GasFeeRow'
+import { useShowSendNetworkNotification } from '@luxfi/wallet/src/features/transactions/send/hooks/useShowSendNetworkNotification'
+import { SendAmountInput } from '@luxfi/wallet/src/features/transactions/send/SendAmountInput'
+import { SendReviewDetails } from '@luxfi/wallet/src/features/transactions/send/SendReviewDetails'
+import { TokenSelectorPanel } from '@luxfi/wallet/src/features/transactions/send/TokenSelectorPanel'
+import { isAmountGreaterThanZero } from '@luxfi/wallet/src/features/transactions/utils'
+import { useIsBlockedActiveAddress } from '@luxfi/wallet/src/features/trm/hooks'
+>>>>>>> Stashed changes
 
 export function SendFormScreen(): JSX.Element {
   const colors = useSporeColors()

@@ -18,6 +18,7 @@ import {
   TouchableArea,
   UniversalImage,
   UniversalImageResizeMode,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { Power, RotatableChevron, X } from 'ui/src/components/icons'
 import { borderRadii, iconSizes } from 'ui/src/theme'
@@ -32,6 +33,22 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { extractNameFromUrl } from 'utilities/src/format/extractNameFromUrl'
 import { extractUrlHost } from 'utilities/src/format/urls'
 import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxfi/ui/src'
+import { Power, RotatableChevron, X } from '@luxfi/ui/src/components/icons'
+import { borderRadii, iconSizes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { DappIconPlaceholder } from '@luxexchange/lx/src/components/dapps/DappIconPlaceholder'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'
+import { extractUrlHost } from '@luxfi/utilities/src/format/urls'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function ConnectPopupContent({
   onClose,

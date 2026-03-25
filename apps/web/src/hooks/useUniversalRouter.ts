@@ -10,11 +10,19 @@ import {
 import { FeeOptions, toHex } from '@uniswap/v3-sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { SwapEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import i18n from 'lx/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { useTotalBalancesUsdForAnalytics } from '~/appGraphql/data/apollo/useTotalBalancesUsdForAnalytics'
 import { useAccount } from '~/hooks/useAccount'
 import { useEthersWeb3Provider } from '~/hooks/useEthersProvider'

@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Flex, Popover, TouchableArea, useMedia } from 'ui/src'
-import { QuestionInCircleFilled } from 'ui/src/components/icons/QuestionInCircleFilled'
-import { zIndexes } from 'ui/src/theme'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex, Popover, TouchableArea, useMedia } from '@luxfi/ui/src'
+import { QuestionInCircleFilled } from '@luxfi/ui/src/components/icons/QuestionInCircleFilled'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { HelpContent } from '~/components/HelpModal/HelpContent'
 import { ClickableGuiStyle } from '~/theme/components/styles'
 

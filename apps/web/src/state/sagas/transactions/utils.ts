@@ -9,26 +9,26 @@ import ms from 'ms'
 import type { Action } from 'redux'
 import type { SagaGenerator } from 'typed-redux-saga'
 import { call, cancel, delay, fork, put, race, select, spawn, take } from 'typed-redux-saga'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isL2ChainId, isUniverseChainId } from 'lx/src/features/chains/utils'
-import { AppNotification, AppNotificationType } from 'lx/src/features/notifications/slice/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId, isUniverseChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { AppNotification, AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
 import {
   ApprovalEditedInWalletError,
   HandledTransactionInterrupt,
   TransactionError,
   TransactionStepFailedError,
   UnexpectedTransactionStateError,
-} from 'lx/src/features/transactions/errors'
+} from '@luxexchange/lx/src/features/transactions/errors'
 import {
   addTransaction,
   finalizeTransaction,
   interfaceApplyTransactionHashToBatch,
   interfaceUpdateTransactionInfo,
   type TransactionsState,
-} from 'lx/src/features/transactions/slice'
-import { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
-import type { Permit2TransactionStep } from 'lx/src/features/transactions/steps/permit2Transaction'
-import { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
+} from '@luxexchange/lx/src/features/transactions/slice'
+import { TokenApprovalTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/approve'
+import type { Permit2TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/permit2Transaction'
+import { TokenRevocationTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/revoke'
 import type {
   HandleApprovalStepParams,
   HandleOnChainPermit2TransactionStep,
@@ -36,16 +36,16 @@ import type {
   HandleSignatureStepParams,
   OnChainTransactionStep,
   TransactionStep,
-} from 'lx/src/features/transactions/steps/types'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { SolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
+} from '@luxexchange/lx/src/features/transactions/steps/types'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { SolanaTrade } from '@luxexchange/lx/src/features/transactions/swap/types/solana'
 import type {
   BridgeTrade,
   ChainedActionTrade,
   ClassicTrade,
   DEXTrade,
-} from 'lx/src/features/transactions/swap/types/trade'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+} from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import type {
   ApproveTransactionInfo,
   BridgeTransactionInfo,
@@ -54,11 +54,12 @@ import type {
   InterfaceTransactionDetails,
   Permit2ApproveTransactionInfo,
   PlanSwapTransactionInfoFields,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { getInterfaceTransaction, isInterfaceTransaction } from 'lx/src/features/transactions/types/utils'
 import { areAddressesEqual } from 'lx/src/utils/addresses'
@@ -69,6 +70,18 @@ import { HexString, isValidHexString } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
 import { noop } from 'utilities/src/react/noop'
 import { hexlifyTransaction } from 'utilities/src/transactions/hexlifyTransaction'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getInterfaceTransaction, isInterfaceTransaction } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { parseERC20ApproveCalldata } from '@luxexchange/lx/src/utils/approvals'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { interruptTransactionFlow } from '@luxexchange/lx/src/utils/saga'
+import { HexString, isValidHexString } from '@luxfi/utilities/src/addresses/hex'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { noop } from '@luxfi/utilities/src/react/noop'
+import { hexlifyTransaction } from '@luxfi/utilities/src/transactions/hexlifyTransaction'
+>>>>>>> Stashed changes
 import type { Transaction } from 'viem'
 import { getConnectorClient, getTransaction } from 'wagmi/actions'
 import { popupRegistry } from '~/components/Popups/registry'

@@ -10,6 +10,7 @@ import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { Screen } from 'src/components/layout/Screen'
 import { useHideSplashScreen } from 'src/features/splashScreen/useHideSplashScreen'
 import { TermsOfService } from 'src/screens/Onboarding/TermsOfService'
+<<<<<<< Updated upstream
 import { Button, Flex, Text, TouchableArea } from 'ui/src'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
@@ -25,6 +26,23 @@ import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import { LANDING_ANIMATION_DURATION, LandingBackground } from 'wallet/src/components/landing/LandingBackground'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { useCanAddressClaimUnitag } from 'wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
+=======
+import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { setIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/slice'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens, UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { LANDING_ANIMATION_DURATION, LandingBackground } from '@luxfi/wallet/src/components/landing/LandingBackground'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { useCanAddressClaimUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.Landing>
 

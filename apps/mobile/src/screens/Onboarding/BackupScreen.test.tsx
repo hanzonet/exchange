@@ -7,10 +7,17 @@ import { AppStackParamList, OnboardingStackParamList } from 'src/app/navigation/
 import { BackupScreen } from 'src/screens/Onboarding/BackupScreen'
 import { renderWithProviders } from 'src/test/render'
 import { render } from 'src/test/test-utils'
+<<<<<<< Updated upstream
 import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
 import { MobileScreens, OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { GuiProvider } from 'wallet/src/providers/gui-provider'
 import { ACCOUNT, preloadedWalletPackageState } from 'wallet/src/test/fixtures'
+=======
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { GuiProvider } from '@luxfi/wallet/src/providers/gui-provider'
+import { ACCOUNT, preloadedWalletPackageState } from '@luxfi/wallet/src/test/fixtures'
+>>>>>>> Stashed changes
 
 jest.mock('wallet/src/features/wallet/accounts/utils', () => ({
   hasExternalBackup: jest.fn(),

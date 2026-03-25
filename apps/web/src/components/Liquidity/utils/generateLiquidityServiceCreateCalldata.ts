@@ -14,8 +14,13 @@ import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { Pool as V3Pool } from '@uniswap/v3-sdk'
 import { Pool as V4Pool } from '@uniswap/v4-sdk'
+<<<<<<< Updated upstream
 import { TradingApi } from '@universe/api'
 import { getTradeSettingsDeadline } from 'lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
+=======
+import { TradingApi } from '@luxexchange/api'
+import { getTradeSettingsDeadline } from '@luxexchange/lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
+>>>>>>> Stashed changes
 import { DYNAMIC_FEE_DATA, PositionState } from '~/components/Liquidity/Create/types'
 import { getTokenOrZeroAddress, validateCurrencyInput } from '~/components/Liquidity/utils/currency'
 import { PositionField } from '~/types/position'

@@ -1,6 +1,6 @@
 import { PositionStatus } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { FeeAmount, TICK_SPACINGS } from '@luxamm/v3-sdk'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { FeeAmount, TICK_SPACINGS } from '@luxfi/amm-v3'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 interface FeeDataWithChain {
   feeData: {

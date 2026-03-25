@@ -1,6 +1,7 @@
 import { navigationRef } from 'src/app/navigation/navigationRef'
 import { store } from 'src/app/store'
 import { MOBILE_NAV_PREFIX, UNITAG_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'
+<<<<<<< Updated upstream
 import { getNativeAddress } from 'lx/src/constants/addresses'
 import { AssetType } from 'lx/src/entities/assets'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -10,6 +11,17 @@ import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
 import { MobileScreens, OnboardingScreens, UnitagScreens } from 'lx/src/types/screens/mobile'
 import { openUri } from 'lx/src/utils/linking'
 import { getLogger } from 'utilities/src/logger/logger'
+=======
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens, UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 /**
  * Chain name to UniverseChainId mapping for swap navigation

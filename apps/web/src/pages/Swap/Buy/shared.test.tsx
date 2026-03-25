@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import { FORCountry } from 'lx/src/features/fiatOnRamp/types'
 import 'utilities/src/logger/mocks'
+=======
+import { FORCountry } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import '@luxfi/utilities/src/logger/mocks'
+>>>>>>> Stashed changes
 
 // Mock the navigatorLocale function
 vi.mock('lx/src/features/language/navigatorLocale', () => ({
@@ -19,8 +24,8 @@ vi.mock('ui/src/assets/backgrounds/for-connecting-v2.svg', () => ({
   ReactComponent: 'svg',
 }))
 
-import { Locale } from 'lx/src/features/language/constants'
-import { navigatorLocale } from 'lx/src/features/language/navigatorLocale'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { navigatorLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
 // Import after mocks
 import { getCountryFromLocale } from '~/pages/Swap/Buy/shared'
 

@@ -1,10 +1,18 @@
 import { Currency, Percent } from '@uniswap/sdk-core'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, FlexProps, Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, FlexProps, Text } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { LiquidityBarData } from '~/components/Charts/LiquidityChart/types'
 import { ChartEntry } from '~/components/Charts/LiquidityRangeInput/types'
 import { DoubleCurrencyLogo } from '~/components/Logo/DoubleLogo'

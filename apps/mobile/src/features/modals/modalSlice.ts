@@ -1,11 +1,19 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type ModalsState } from 'src/features/modals/ModalsState'
 import { type FiatOnRampModalState } from 'src/screens/FiatOnRampModalState'
+<<<<<<< Updated upstream
 import { ScannerModalState } from 'lx/src/components/ReceiveQRCode/constants'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { type TransactionScreen } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { type TransactionState } from 'lx/src/features/transactions/types/transactionState'
 import { getKeys } from 'utilities/src/primitives/objects'
+=======
+import { ScannerModalState } from '@luxexchange/lx/src/components/ReceiveQRCode/constants'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { type TransactionScreen } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { type TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { getKeys } from '@luxfi/utilities/src/primitives/objects'
+>>>>>>> Stashed changes
 
 /**
  * *********** DEPRECATION NOTICE ***********

@@ -10,9 +10,15 @@ import {
   useShadowPropsMedium,
   VisuallyHidden,
   WebBottomSheet,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { INTERFACE_NAV_HEIGHT, zIndexes } from 'ui/src/theme'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+} from '@luxfi/ui/src'
+import { INTERFACE_NAV_HEIGHT, zIndexes } from '@luxfi/ui/src/theme'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { MouseoverTooltip, TooltipSize } from '~/components/Tooltip'
 import { useOnClickOutside } from '~/hooks/useOnClickOutside'
 

@@ -14,6 +14,7 @@ import { useTokenDetailsCurrentChainBalance } from 'src/components/TokenDetails/
 import { NetworkBalanceSheetContent } from 'src/screens/TokenDetailsScreen/NetworkBalanceSheetContent'
 import { useNetworkBalanceSheet } from 'src/screens/TokenDetailsScreen/useNetworkBalanceSheet'
 import { useIsScreenNavigationReady } from 'src/utils/useIsScreenNavigationReady'
+<<<<<<< Updated upstream
 import { ArrowDownCircle, ArrowUpCircle, Bank, SendRoundedAirplane } from 'ui/src/components/icons'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import type { MenuOptionItem } from 'lx/src/components/menus/ContextMenu'
@@ -32,6 +33,26 @@ import { buildCurrencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyI
 import { useEvent } from 'utilities/src/react/hooks'
 import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { ArrowDownCircle, ArrowUpCircle, Bank, SendRoundedAirplane } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import type { MenuOptionItem } from '@luxexchange/lx/src/components/menus/ContextMenu'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useTokenBasicInfoPartsFragment } from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { useBridgingTokenWithHighestBalance } from '@luxexchange/lx/src/features/bridging/hooks/tokens'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { useIsSupportedFiatOnRampCurrency } from '@luxexchange/lx/src/features/fiatOnRamp/hooks'
+import { useOnChainNativeCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export const TokenDetailsActionButtonsWrapper = memo(function _TokenDetailsActionButtonsWrapper(): JSX.Element | null {
   const { t } = useTranslation()

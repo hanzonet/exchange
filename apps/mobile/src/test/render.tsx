@@ -15,11 +15,19 @@ import { MobileWalletNavigationProvider } from 'src/app/MobileWalletNavigationPr
 import type { MobileState } from 'src/app/mobileReducer'
 import { navigationRef } from 'src/app/navigation/navigationRef'
 import { store as appStore, persistedReducer } from 'src/app/store'
+<<<<<<< Updated upstream
 import { LuxProvider } from 'lx/src/contexts/LuxContext'
 import { BlankUrlProvider } from 'lx/src/contexts/UrlContext'
 import { AutoMockedApolloProvider } from 'lx/src/test/mocks'
 import { mockLuxContext } from 'lx/src/test/render'
 import { SharedWalletProvider } from 'wallet/src/providers/SharedWalletProvider'
+=======
+import { LuxProvider } from '@luxexchange/lx/src/contexts/LuxContext'
+import { BlankUrlProvider } from '@luxexchange/lx/src/contexts/UrlContext'
+import { AutoMockedApolloProvider } from '@luxexchange/lx/src/test/mocks'
+import { mockLuxContext } from '@luxexchange/lx/src/test/render'
+import { SharedWalletProvider } from '@luxfi/wallet/src/providers/SharedWalletProvider'
+>>>>>>> Stashed changes
 
 type AppStore = typeof appStore
 

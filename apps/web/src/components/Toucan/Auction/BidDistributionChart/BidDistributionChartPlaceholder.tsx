@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, styled, Text } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, styled, Text } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 const PlaceholderBar = styled(Flex, {
   width: '100%',

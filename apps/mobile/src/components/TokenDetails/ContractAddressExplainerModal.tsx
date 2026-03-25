@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Text } from '@luxfi/ui/src'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export function ContractAddressExplainerModal({
   onAcknowledge,

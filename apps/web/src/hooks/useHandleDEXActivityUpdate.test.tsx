@@ -1,13 +1,19 @@
+<<<<<<< Updated upstream
 import { TradingApi } from '@universe/api'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { finalizeTransaction, updateTransaction } from 'lx/src/features/transactions/slice'
+=======
+import { TradingApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { finalizeTransaction, updateTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+>>>>>>> Stashed changes
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   type DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isFinalizedTx } from 'lx/src/features/transactions/types/utils'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTx } from '@luxexchange/lx/src/features/transactions/types/utils'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
 import { useHandleDEXActivityUpdate } from '~/hooks/useHandleDEXActivityUpdate'

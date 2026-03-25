@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import { iconSizes } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   PercentageAllocationChart,
   PercentageAllocationItem,

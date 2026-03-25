@@ -11,6 +11,7 @@ import { useDeviceSupportsBiometricAuth } from 'src/features/biometrics/useDevic
 import { useOsBiometricAuthEnabled } from 'src/features/biometrics/useOsBiometricAuthEnabled'
 import { useBiometricName, useBiometricPrompt } from 'src/features/biometricsSettings/hooks'
 import { useLockScreenState } from 'src/features/lockScreen/hooks/useLockScreenState'
+<<<<<<< Updated upstream
 import { Button, Flex, flexStyles, TouchableArea, useIsDarkMode } from 'ui/src'
 import { LUX_MONO_LOGO_LARGE } from 'ui/src/assets'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
@@ -19,6 +20,16 @@ import { spacing, zIndexes } from 'ui/src/theme'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { isAndroid } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Button, Flex, flexStyles, TouchableArea, useIsDarkMode } from '@luxfi/ui/src'
+import { LUX_MONO_LOGO_LARGE } from '@luxfi/ui/src/assets'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing, zIndexes } from '@luxfi/ui/src/theme'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 
 const fadeIn = FadeIn.duration(250)
 const fadeOut = FadeOut.duration(250)

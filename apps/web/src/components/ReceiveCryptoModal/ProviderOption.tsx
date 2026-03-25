@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { LUX_WEB_URL } from 'lx/src/constants/urls'
 import { FORQuoteItem } from 'lx/src/features/fiatOnRamp/FORQuoteItem'
 import { useFiatOnRampAggregatorTransferWidgetQuery } from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
@@ -6,6 +7,15 @@ import { FORServiceProvider } from 'lx/src/features/fiatOnRamp/types'
 import { FiatOnRampEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { LUX_WEB_URL } from '@luxexchange/lx/src/constants/urls'
+import { FORQuoteItem } from '@luxexchange/lx/src/features/fiatOnRamp/FORQuoteItem'
+import { useFiatOnRampAggregatorTransferWidgetQuery } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { FORServiceProvider } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { FiatOnRampEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { v4 as uuid } from 'uuid'
 import { ReceiveModalState } from '~/components/ReceiveCryptoModal/types'
 import { useOpenReceiveCryptoModal } from '~/components/ReceiveCryptoModal/useOpenReceiveCryptoModal'

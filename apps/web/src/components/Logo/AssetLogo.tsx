@@ -1,4 +1,4 @@
-import { Currency } from '@luxamm/sdk-core'
+import { Currency } from '@luxfi/amm-core'
 import React from 'react'
 
 export type AssetLogoBaseProps = {

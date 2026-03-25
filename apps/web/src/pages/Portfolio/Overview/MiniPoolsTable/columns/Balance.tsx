@@ -1,9 +1,17 @@
 import { memo } from 'react'
+<<<<<<< Updated upstream
 import { Text } from 'ui/src'
 import { PollingInterval } from 'lx/src/constants/misc'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Text } from '@luxfi/ui/src'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { PositionInfo } from '~/components/Liquidity/types'
 import { EmptyTableCell } from '~/pages/Portfolio/EmptyTableCell'
 

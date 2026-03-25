@@ -2,11 +2,19 @@ import { useEffect, useMemo, useReducer, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TextInput } from 'react-native'
 import { Input } from 'src/app/components/Input'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { Check } from 'ui/src/components/icons'
 import { zIndexes } from 'ui/src/theme'
 import { useDebounce } from 'utilities/src/time/timing'
 import { PASSWORD_VALIDATION_DEBOUNCE_MS } from 'wallet/src/utils/password'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { Check } from '@luxfi/ui/src/components/icons'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
+import { PASSWORD_VALIDATION_DEBOUNCE_MS } from '@luxfi/wallet/src/utils/password'
+>>>>>>> Stashed changes
 
 type InputStackBaseProps = {
   value?: string

@@ -1,5 +1,6 @@
 import { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, type Input, Text, TouchableArea, useMedia, useScrollbarStyles, useSporeColors } from 'ui/src'
 import { Modal } from 'lx/src/components/modals/Modal'
 import { useUpdateScrollLock } from 'lx/src/components/modals/ScrollLock'
@@ -15,6 +16,23 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { Trace } from 'lx/src/features/telemetry/Trace'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
 import { useDebounce } from 'utilities/src/time/timing'
+=======
+import { Flex, type Input, Text, TouchableArea, useMedia, useScrollbarStyles, useSporeColors } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useUpdateScrollLock } from '@luxexchange/lx/src/components/modals/ScrollLock'
+import { NetworkFilter } from '@luxexchange/lx/src/components/network/NetworkFilter'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useFilterCallbacks } from '@luxexchange/lx/src/features/search/SearchModal/hooks/useFilterCallbacks'
+import { SearchModalNoQueryList } from '@luxexchange/lx/src/features/search/SearchModal/SearchModalNoQueryList'
+import { SearchModalResultsList } from '@luxexchange/lx/src/features/search/SearchModal/SearchModalResultsList'
+import { SearchTab, WEB_SEARCH_TABS } from '@luxexchange/lx/src/features/search/SearchModal/types'
+import { SearchTextInput } from '@luxexchange/lx/src/features/search/SearchTextInput'
+import { ElementName, InterfaceEventName, ModalName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 import { useModalState } from '~/hooks/useModalState'
 
 export const SearchModal = memo(function _SearchModal(): JSX.Element {

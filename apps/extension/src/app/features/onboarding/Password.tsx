@@ -7,6 +7,7 @@ import { OnboardingScreen } from 'src/app/features/onboarding/OnboardingScreen'
 import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { TopLevelRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
+<<<<<<< Updated upstream
 import { Flex, Square, Text } from 'ui/src'
 import { Lock } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
@@ -15,6 +16,16 @@ import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from 'lx/src/type
 import { useEvent } from 'utilities/src/react/hooks'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { usePasswordForm } from 'wallet/src/utils/password'
+=======
+import { Flex, Square, Text } from '@luxfi/ui/src'
+import { Lock } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { usePasswordForm } from '@luxfi/wallet/src/utils/password'
+>>>>>>> Stashed changes
 
 export function Password({
   flow,

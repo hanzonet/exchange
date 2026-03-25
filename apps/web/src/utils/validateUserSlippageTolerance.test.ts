@@ -1,4 +1,4 @@
-import { Percent } from '@luxamm/sdk-core'
+import { Percent } from '@luxfi/amm-core'
 import validateUserSlippageTolerance, {
   MAXIMUM_RECOMMENDED_SLIPPAGE,
   MINIMUM_RECOMMENDED_SLIPPAGE,

@@ -4,10 +4,17 @@ import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingStepsC
 import { Terms } from 'src/app/features/onboarding/Terms'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
+<<<<<<< Updated upstream
 import { Button, Flex, GeneratedIcon, Text } from 'ui/src'
 import { Bolt, Coupon, Person } from 'ui/src/components/icons'
 import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
 import { useAccountAddressFromUrlWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, GeneratedIcon, Text } from '@luxfi/ui/src'
+import { Bolt, Coupon, Person } from '@luxfi/ui/src/components/icons'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { useAccountAddressFromUrlWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const CONTAINER_WIDTH = 531
 const TERMS_WIDTH = 300

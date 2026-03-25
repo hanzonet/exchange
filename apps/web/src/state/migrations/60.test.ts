@@ -1,6 +1,6 @@
-import { USDC } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { testMigrateDismissedTokenWarnings } from 'lx/src/state/luxMigrationTests'
+import { USDC } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { testMigrateDismissedTokenWarnings } from '@luxexchange/lx/src/state/luxMigrationTests'
 import { migration60 } from '~/state/migrations/60'
 
 const previousState = {

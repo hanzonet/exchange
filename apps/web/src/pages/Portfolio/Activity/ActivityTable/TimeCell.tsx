@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react'
-import { Flex, Text, TextProps } from 'ui/src'
-import { useFormattedTimeForActivity } from 'lx/src/components/activity/hooks/useFormattedTime'
-import { FORMAT_TIME_SHORT, useLocalizedDayjs } from 'lx/src/features/language/localizedDayjs'
+import { Flex, Text, TextProps } from '@luxfi/ui/src'
+import { useFormattedTimeForActivity } from '@luxexchange/lx/src/components/activity/hooks/useFormattedTime'
+import { FORMAT_TIME_SHORT, useLocalizedDayjs } from '@luxexchange/lx/src/features/language/localizedDayjs'
 import { GroupHoverTransition } from '~/components/GroupHoverTransition'
 
 const FORMAT_DATE_WITH_WEEKDAY = 'ddd MMM D, YYYY'

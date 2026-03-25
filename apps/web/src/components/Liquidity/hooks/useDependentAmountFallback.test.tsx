@@ -11,10 +11,17 @@ import {
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
+<<<<<<< Updated upstream
 import { USDC_MAINNET } from 'lx/src/constants/tokens'
 import { liquidityQueries } from 'lx/src/data/apiClients/liquidityService/liquidityQueries'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { vi } from 'vitest'
 import {
   useCreatePositionDependentAmountFallback,

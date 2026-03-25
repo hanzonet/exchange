@@ -1,10 +1,17 @@
 import { ContractTransaction } from '@ethersproject/contracts'
 import { CurrencyAmount, MaxUint256, Token } from '@uniswap/sdk-core'
 import { useCallback, useMemo, useRef } from 'react'
+<<<<<<< Updated upstream
 import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { ApproveTransactionInfo, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { ApproveTransactionInfo, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 import { erc20Abi } from 'viem'
 import { useReadContract } from 'wagmi'
 import { useTokenContract } from '~/hooks/useContract'

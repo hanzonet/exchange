@@ -18,6 +18,7 @@ import {
   Text,
   TouchableArea,
   useSporeColors,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { ArrowLeft } from 'ui/src/components/icons/ArrowLeft'
 import { ExchangeHorizontal } from 'ui/src/components/icons/ExchangeHorizontal'
@@ -45,6 +46,35 @@ import { buildCurrencyId, currencyId, currencyIdToAddress } from 'lx/src/utils/c
 import { NumberType } from 'utilities/src/format/types'
 import { isMobileWeb } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+} from '@luxfi/ui/src'
+import { ArrowLeft } from '@luxfi/ui/src/components/icons/ArrowLeft'
+import { ExchangeHorizontal } from '@luxfi/ui/src/components/icons/ExchangeHorizontal'
+import { Flag } from '@luxfi/ui/src/components/icons/Flag'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { breakpoints } from '@luxfi/ui/src/theme/breakpoints'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { PollingInterval, ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
+import { useGetPositionQuery } from '@luxexchange/lx/src/data/rest/getPosition'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { EVMUniverseChainId, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { isEVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { InterfacePageName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useCurrencyInfos } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { usePositionVisibilityCheck } from '@luxexchange/lx/src/features/visibility/hooks/usePositionVisibilityCheck'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { buildCurrencyId, currencyId, currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { BreadcrumbNavContainer, BreadcrumbNavLink } from '~/components/BreadcrumbNav'
 import { WrappedLiquidityPositionRangeChart } from '~/components/Charts/LiquidityPositionRangeChart/LiquidityPositionRangeChart'
 import { Dropdown } from '~/components/Dropdowns/Dropdown'

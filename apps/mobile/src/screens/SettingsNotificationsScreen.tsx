@@ -7,6 +7,7 @@ import {
   useAddressNotificationToggle,
   useSettingNotificationToggle,
 } from 'src/features/notifications/hooks/useNotificationsToggle'
+<<<<<<< Updated upstream
 import { Flex, Switch, Text } from 'ui/src'
 import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
 import { iconSizes, spacing } from 'ui/src/theme'
@@ -17,6 +18,18 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { NotificationToggleLoggingType } from 'lx/src/features/telemetry/types'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { useAccountsList } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, Switch, Text } from '@luxfi/ui/src'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { NotificationToggleLoggingType } from '@luxexchange/lx/src/features/telemetry/types'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { useAccountsList } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const ROW_ITEM_HEIGHT = 40
 

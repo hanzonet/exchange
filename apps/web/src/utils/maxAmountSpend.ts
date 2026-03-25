@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount } from '@luxfi/amm-core'
 import JSBI from 'jsbi'
 
 const MIN_NATIVE_CURRENCY_FOR_GAS: JSBI = JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(16)) // .01 ETH

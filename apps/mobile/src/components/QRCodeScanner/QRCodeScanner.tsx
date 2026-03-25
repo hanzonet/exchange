@@ -9,6 +9,7 @@ import { Defs, LinearGradient, Path, Rect, Stop, Svg } from 'react-native-svg'
 import RNQRGenerator from 'rn-qr-generator'
 import { useCameraPermissionQuery } from 'src/components/QRCodeScanner/hooks/useCameraPermissionQuery'
 import { useRequestCameraPermissionOnMountEffect } from 'src/components/QRCodeScanner/hooks/useRequestCameraPermissionOnMountEffect'
+<<<<<<< Updated upstream
 import { Button, Flex, SpinningLoader, Text, ThemeName, useSporeColors } from 'ui/src'
 import { CameraScan, Global, PhotoStacked } from 'ui/src/components/icons'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
@@ -17,6 +18,16 @@ import { useSporeColorsForTheme } from 'ui/src/hooks/useSporeColors'
 import { iconSizes, spacing } from 'ui/src/theme'
 import PasteButton from 'lx/src/components/buttons/PasteButton'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Button, Flex, SpinningLoader, Text, ThemeName, useSporeColors } from '@luxfi/ui/src'
+import { CameraScan, Global, PhotoStacked } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { useSporeColorsForTheme } from '@luxfi/ui/src/hooks/useSporeColors'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import PasteButton from '@luxexchange/lx/src/components/buttons/PasteButton'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 enum BarcodeType {
   QR = 'qr',

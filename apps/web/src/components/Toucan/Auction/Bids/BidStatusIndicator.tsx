@@ -1,6 +1,6 @@
-import { ColorTokens, Flex, SpinningLoader } from 'ui/src'
-import { ArrowUpCircle } from 'ui/src/components/icons/ArrowUpCircle'
-import { CheckCircleFilled } from 'ui/src/components/icons/CheckCircleFilled'
+import { ColorTokens, Flex, SpinningLoader } from '@luxfi/ui/src'
+import { ArrowUpCircle } from '@luxfi/ui/src/components/icons/ArrowUpCircle'
+import { CheckCircleFilled } from '@luxfi/ui/src/components/icons/CheckCircleFilled'
 import { useBidStatusColors } from '~/components/Toucan/Auction/hooks/useBidStatusColors'
 import { type BidDisplayState } from '~/components/Toucan/Auction/utils/bidDetails'
 

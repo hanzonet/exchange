@@ -1,10 +1,18 @@
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { useCallback, useMemo } from 'react'
+<<<<<<< Updated upstream
 import { CONNECTION_PROVIDER_IDS, CONNECTION_PROVIDER_NAMES } from 'lx/src/constants/web3'
 import { AccessPattern } from 'lx/src/features/accounts/store/types/Connector'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { isPlaywrightEnv } from 'utilities/src/environment/env'
 import { isMobileWeb } from 'utilities/src/platform'
+=======
+import { CONNECTION_PROVIDER_IDS, CONNECTION_PROVIDER_NAMES } from '@luxexchange/lx/src/constants/web3'
+import { AccessPattern } from '@luxexchange/lx/src/features/accounts/store/types/Connector'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 import { useRecentConnectorId } from '~/components/Web3Provider/constants'
 import { useAccountsStore } from '~/features/accounts/store/hooks'
 import { ExternalWallet } from '~/features/accounts/store/types'

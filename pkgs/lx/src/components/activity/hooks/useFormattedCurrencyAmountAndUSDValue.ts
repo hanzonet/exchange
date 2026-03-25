@@ -1,0 +1,50 @@
+import { Currency } from '@uniswap/sdk-core'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+
+export function useFormattedCurrencyAmountAndUSDValue({
+  currency,
+  currencyAmountRaw,
+  formatter,
+  isApproximateAmount = false,
+  valueType = ValueType.Raw,
+  isDEX = false,
+  pollInterval = PollingInterval.Fast,
+}: {
+  currency: Maybe<Currency>
+  currencyAmountRaw: string | undefined
+  formatter: LocalizationContextState
+  isApproximateAmount?: boolean
+  valueType?: ValueType
+  isDEX?: boolean
+  pollInterval?: PollingInterval
+}): { amount: string; value: string; tilde: string } {
+  const currencyAmount = getCurrencyAmount({
+    value: currencyAmountRaw,
+    valueType,
+    currency,
+  })
+
+  const value = useUSDCValue(currencyAmount, pollInterval)
+
+  if (isDEX) {
+    return {
+      tilde: '',
+      amount: `${formatter.formatNumberOrString({ value: 0 })}`,
+      value: formatter.convertFiatAmountFormatted(0, NumberType.FiatTokenQuantity),
+    }
+  }
+
+  const formattedAmount = formatter.formatCurrencyAmount({ value: currencyAmount })
+
+  return {
+    tilde: isApproximateAmount ? '~' : '',
+    amount: formattedAmount,
+    value: value
+      ? formatter.convertFiatAmountFormatted(parseFloat(value.toExact()), NumberType.FiatTokenQuantity)
+      : '-', // default placeholder string for when value is loading
+  }
+}

@@ -1,10 +1,17 @@
 import { GraphQLApi } from '@universe/api'
 import ms from 'ms'
 import { PropsWithChildren, useEffect, useMemo, useState } from 'react'
+<<<<<<< Updated upstream
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useInterval } from 'utilities/src/time/timing'
+=======
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useInterval } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 import { createAdaptiveRefetchContext } from '~/appGraphql/data/apollo/AdaptiveRefetch'
 import { useAccount } from '~/hooks/useAccount'
 import usePrevious from '~/hooks/usePrevious'

@@ -12,6 +12,7 @@ import { MnemonicDisplay } from 'src/components/mnemonic/MnemonicDisplay'
 import { useLockScreenOnBlur } from 'src/features/lockScreen/hooks/useLockScreenOnBlur'
 import { BackupSpeedBumpModal } from 'src/features/onboarding/BackupSpeedBumpModal'
 import { OnboardingScreen } from 'src/features/onboarding/OnboardingScreen'
+<<<<<<< Updated upstream
 import { Button, Flex, Text, useMedia, useSporeColors } from 'ui/src'
 import { EyeSlash, FileListLock, GraduationCap, Key, Lock, PapersText, Pen } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
@@ -27,6 +28,23 @@ import { EditAccountAction, editAccountActions } from 'wallet/src/features/walle
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
 import { hasBackup } from 'wallet/src/features/wallet/accounts/utils'
 import { useSignerAccount } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, Text, useMedia, useSporeColors } from '@luxfi/ui/src'
+import { EyeSlash, FileListLock, GraduationCap, Key, Lock, PapersText, Pen } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { ManualPageViewScreen, MobileScreens, OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { hasBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { useSignerAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.BackupManual>
 

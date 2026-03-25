@@ -4,10 +4,10 @@ import { StyleProp, ViewStyle } from 'react-native'
 import Animated, { Extrapolate, interpolate, SharedValue, useAnimatedStyle } from 'react-native-reanimated'
 import { BackButton } from 'src/components/buttons/BackButton'
 import { WithScrollToTop } from 'src/components/layout/screens/WithScrollToTop'
-import { ColorTokens, Flex } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { iconSizes, zIndexes } from 'ui/src/theme'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
+import { ColorTokens, Flex } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
 
 type ScrollHeaderProps = {
   scrollY: SharedValue<number>

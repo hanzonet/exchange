@@ -26,6 +26,7 @@ import {
   setDidOpenFromDeepLink,
   WalletConnectSigningRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
+<<<<<<< Updated upstream
 import { spacing } from 'ui/src/theme'
 import { EthMethod } from 'lx/src/features/dappRequests/types'
 import { isSelfCallWithData, isSignTypedDataRequest } from 'lx/src/features/dappRequests/utils'
@@ -42,6 +43,24 @@ import { shouldDisableConfirm } from 'wallet/src/features/dappRequests/utils/ris
 import { formatExternalTxnWithGasEstimates } from 'wallet/src/features/gas/formatExternalTxnWithGasEstimates'
 import { useLiveAccountDelegationDetails } from 'wallet/src/features/smartWallet/hooks/useLiveAccountDelegationDetails'
 import { useHasSmartWalletConsent, useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { spacing } from '@luxfi/ui/src/theme'
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { isSelfCallWithData, isSignTypedDataRequest } from '@luxexchange/lx/src/features/dappRequests/utils'
+import { useTransactionGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useHasAccountMismatchCallback } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { DappRequestType, UwULinkMethod, WCEventType, WCRequestOutcome } from '@luxexchange/lx/src/types/walletConnect'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { shouldDisableConfirm } from '@luxfi/wallet/src/features/dappRequests/utils/riskUtils'
+import { formatExternalTxnWithGasEstimates } from '@luxfi/wallet/src/features/gas/formatExternalTxnWithGasEstimates'
+import { useLiveAccountDelegationDetails } from '@luxfi/wallet/src/features/smartWallet/hooks/useLiveAccountDelegationDetails'
+import { useHasSmartWalletConsent, useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 interface Props {
   onClose: () => void

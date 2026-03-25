@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js'
 import React from 'react'
-import { Flex, Text, TextProps } from 'ui/src'
-import { TextVariantTokens } from 'ui/src/theme'
+import { Flex, Text, TextProps } from '@luxfi/ui/src'
+import { TextVariantTokens } from '@luxfi/ui/src/theme'
 
 interface TextWithFuseMatchesProps {
   text: string

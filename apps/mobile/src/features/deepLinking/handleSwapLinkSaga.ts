@@ -1,10 +1,18 @@
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { createSwapTransactionState, ParseSwapLinkFunction } from 'src/features/deepLinking/parseSwapLink'
+<<<<<<< Updated upstream
 import { isTestnetChain } from 'lx/src/features/chains/utils'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { getEnabledChainIdsSaga } from 'lx/src/features/settings/saga'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { isTestnetChain } from '@luxexchange/lx/src/features/chains/utils'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEnabledChainIdsSaga } from '@luxexchange/lx/src/features/settings/saga'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 /**
  * Opens swap modal with the provided swap link parameters; prompts testnet switch modal if necessary.

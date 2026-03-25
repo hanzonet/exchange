@@ -1,6 +1,11 @@
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { q96ToPriceString } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import { calculateMinValidBidQ96, isBidBelowMinimum } from '~/components/Toucan/Auction/utils/ticks'
 

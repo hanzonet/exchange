@@ -1,6 +1,6 @@
-import { GuiProvider as OGGuiProvider, GuiProviderProps } from 'ui/src'
-import config from 'ui/src/gui.config'
-import { useSelectedColorScheme } from 'lx/src/features/appearance/hooks'
+import { GuiProvider as OGGuiProvider, GuiProviderProps } from '@luxfi/ui/src'
+import config from '@luxfi/ui/src/gui.config'
+import { useSelectedColorScheme } from '@luxexchange/lx/src/features/appearance/hooks'
 
 export function GuiProvider({ children, ...rest }: Omit<GuiProviderProps, 'config'>): JSX.Element {
   const darkMode = useSelectedColorScheme() === 'dark'

@@ -1,5 +1,6 @@
 import { Currency } from '@uniswap/sdk-core'
 import { memo } from 'react'
+<<<<<<< Updated upstream
 import { Flex, useColorSchemeFromSeed } from 'ui/src'
 import { zIndexes } from 'ui/src/theme'
 import { STATUS_RATIO } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
@@ -10,6 +11,18 @@ import { UniverseChainId } from 'lx/src/features/chains/types'
 import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import { buildCurrencyId, currencyAddress } from 'lx/src/utils/currencyId'
 import { isMobileApp } from 'utilities/src/platform'
+=======
+import { Flex, useColorSchemeFromSeed } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { STATUS_RATIO } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { SplitLogo } from '@luxexchange/lx/src/components/CurrencyLogo/SplitLogo'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { buildCurrencyId, currencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 
 const MissingImageLogo = deprecatedStyled.div<{ $size?: string; $textColor: string; $backgroundColor: string }>`

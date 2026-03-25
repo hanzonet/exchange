@@ -3,8 +3,8 @@ import dayjs from 'dayjs'
 import React from 'react'
 import { ListRenderItemInfo, StyleSheet } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
-import { Flex, Text, useSporeColors } from 'ui/src'
-import { spacing } from 'ui/src/theme'
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
 
 const formatTraitValue = (trait: GraphQLApi.NftAssetTrait): string | undefined => {
   if (!trait.value) {

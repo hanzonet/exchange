@@ -10,12 +10,21 @@ import {
   createBackupReminderTrigger,
   isBackupReminderNotification,
 } from 'src/notification-service/triggers/backupReminderTrigger'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { ONE_DAY_MS } from 'utilities/src/time/time'
 import { selectBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/selectors'
 import { setBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/slice'
 import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
 import { selectActiveAccount } from 'wallet/src/features/wallet/selectors'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
+import { selectBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 jest.mock('wallet/src/features/behaviorHistory/selectors')
 jest.mock('wallet/src/features/wallet/selectors')

@@ -1,10 +1,17 @@
 import React from 'react'
 import { AutoLockProvider } from 'src/app/components/AutoLockProvider'
 import { render } from 'src/test/test-utils'
+<<<<<<< Updated upstream
 import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
 import { Language } from 'lx/src/features/language/constants'
 import { DeviceAccessTimeout } from 'lx/src/features/settings/constants'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { DeviceAccessTimeout } from '@luxexchange/lx/src/features/settings/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 // Mock dependencies
 jest.mock('lx/src/extension/useIsChromeWindowFocused')
@@ -16,7 +23,7 @@ jest.mock('src/app/hooks/useIsWalletUnlocked', () => ({
 
 // Import mocked modules
 import { useIsWalletUnlocked } from 'src/app/hooks/useIsWalletUnlocked'
-import { useIsChromeWindowFocused } from 'lx/src/extension/useIsChromeWindowFocused'
+import { useIsChromeWindowFocused } from '@luxexchange/lx/src/extension/useIsChromeWindowFocused'
 
 const mockUseIsChromeWindowFocused = jest.mocked(useIsChromeWindowFocused)
 const mockUseIsWalletUnlocked = jest.mocked(useIsWalletUnlocked)

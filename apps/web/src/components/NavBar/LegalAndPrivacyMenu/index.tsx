@@ -1,11 +1,20 @@
 import { Fragment, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Anchor, AnchorProps, Flex, Text, TouchableArea } from 'ui/src'
 import { spacing } from 'ui/src/theme'
 import { luxUrls } from 'lx/src/constants/urls'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { isMobileWeb } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
+=======
+import { Anchor, AnchorProps, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+>>>>>>> Stashed changes
 import Expand from '~/components/Expand'
 import { PrivacyOptions } from '~/components/Icons/PrivacyOptions'
 import { useModalState } from '~/hooks/useModalState'

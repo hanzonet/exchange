@@ -1,6 +1,11 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { StorageHelpIcon, StorageSettingsContent } from 'lx/src/features/settings/storage/StorageSettingsContent'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { StorageHelpIcon, StorageSettingsContent } from '@luxexchange/lx/src/features/settings/storage/StorageSettingsContent'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { SlideOutMenu } from '~/components/AccountDrawer/SlideOutMenu'
 import { useAppStateResetter } from '~/state/reset/appResetter'
 

@@ -2,9 +2,15 @@
 import { ContentStyle, type InAppNotification } from '@universe/api'
 import { type NotificationClickTarget } from '@universe/notifications'
 import { useEffect, useMemo } from 'react'
+<<<<<<< Updated upstream
 import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { type StoreApi, type UseBoundStore } from 'zustand'
 import { SystemBannerNotification } from '~/notification-service/notification-renderer/components/SystemBannerNotification'
 import {

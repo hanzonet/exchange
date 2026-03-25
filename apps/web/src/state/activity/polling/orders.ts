@@ -2,19 +2,26 @@ import { TradeType } from '@uniswap/sdk-core'
 import { TradingApi } from '@universe/api'
 import ms from 'ms'
 import { useEffect, useRef, useState } from 'react'
-import { luxUrls } from 'lx/src/constants/urls'
-import { isL2ChainId } from 'lx/src/features/chains/utils'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { tradeRoutingToFillType } from 'lx/src/features/transactions/swap/analytics'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { tradeRoutingToFillType } from '@luxexchange/lx/src/features/transactions/swap/analytics'
 import {
   ExactInputSwapTransactionInfo,
   TransactionStatus,
   DEXOrderDetails,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTxStatus } from 'lx/src/features/transactions/types/utils'
 import { convertOrderStatusToTransactionStatus } from 'lx/src/features/transactions/utils/dex.utils'
 import { logger } from 'utilities/src/logger/logger'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTxStatus } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { convertOrderStatusToTransactionStatus } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { useAccount } from '~/hooks/useAccount'
 import { ActivityUpdateTransactionType, OnActivityUpdate } from '~/state/activity/types'
 import { usePendingDEXOrders } from '~/state/transactions/hooks'

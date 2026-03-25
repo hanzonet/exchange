@@ -3,6 +3,7 @@ import { memo, useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { KeyboardAvoidingView } from 'react-native-keyboard-controller'
 import { ESTIMATED_BOTTOM_TABS_HEIGHT } from 'src/app/navigation/tabs/CustomTabBar/constants'
+<<<<<<< Updated upstream
 import { Flex, flexStyles, Text, TouchableArea } from 'ui/src'
 import { spacing } from 'ui/src/theme'
 import type { UniverseChainId } from 'lx/src/features/chains/types'
@@ -13,6 +14,18 @@ import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { useDebounce } from 'utilities/src/time/timing'
+=======
+import { Flex, flexStyles, Text, TouchableArea } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { SearchModalNoQueryList } from '@luxexchange/lx/src/features/search/SearchModal/SearchModalNoQueryList'
+import { SearchModalResultsList } from '@luxexchange/lx/src/features/search/SearchModal/SearchModalResultsList'
+import { MOBILE_SEARCH_TABS, SearchTab } from '@luxexchange/lx/src/features/search/SearchModal/types'
+import { ElementName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 
 const MobileSearchTab = ({
   tab,

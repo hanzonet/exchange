@@ -1,11 +1,19 @@
 import { ErrorBoundary as DatadogErrorBoundary } from '@datadog/browser-rum-react'
 import { type PropsWithChildren, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Flex, Switch, Text, TouchableArea } from 'ui/src'
 import { CopyAlt } from 'ui/src/components/icons/CopyAlt'
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { luxUrls } from 'lx/src/constants/urls'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Button, Flex, Switch, Text, TouchableArea } from '@luxfi/ui/src'
+import { CopyAlt } from '@luxfi/ui/src/components/icons/CopyAlt'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { useIsMobile } from '~/hooks/screenSize/useIsMobile'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 import { persistor } from '~/state'

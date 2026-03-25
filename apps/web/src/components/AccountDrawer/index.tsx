@@ -1,9 +1,16 @@
 import { useAtom } from 'jotai'
 import { useEffect, useMemo } from 'react'
+<<<<<<< Updated upstream
 import { Flex, RemoveScroll } from 'ui/src'
 import { zIndexes } from 'ui/src/theme'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { isMobileWeb } from 'utilities/src/platform'
+=======
+import { Flex, RemoveScroll } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 import { DefaultMenu } from '~/components/AccountDrawer/DefaultMenu'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { AdaptiveDropdown } from '~/components/Dropdowns/AdaptiveDropdown'

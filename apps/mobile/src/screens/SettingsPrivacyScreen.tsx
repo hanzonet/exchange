@@ -2,8 +2,13 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { BackHeader } from 'src/components/layout/BackHeader'
 import { Screen } from 'src/components/layout/Screen'
+<<<<<<< Updated upstream
 import { Text } from 'ui/src'
 import { AnalyticsToggleLineSwitch } from 'wallet/src/components/settings/AnalyticsToggleLineSwitch'
+=======
+import { Text } from '@luxfi/ui/src'
+import { AnalyticsToggleLineSwitch } from '@luxfi/wallet/src/components/settings/AnalyticsToggleLineSwitch'
+>>>>>>> Stashed changes
 
 export function SettingsPrivacyScreen(): JSX.Element {
   const { t } = useTranslation()

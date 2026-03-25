@@ -1,4 +1,5 @@
 import { memo, useMemo } from 'react'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { borderRadii, iconSizes } from 'ui/src/theme'
 import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
@@ -8,6 +9,17 @@ import { useLocalizationContext } from 'lx/src/features/language/LocalizationCon
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { getSymbolDisplayText } from 'lx/src/utils/currency'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { borderRadii, iconSizes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 interface NetworkBalanceRowProps {
   balance: PortfolioBalance

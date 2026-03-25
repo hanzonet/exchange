@@ -5,12 +5,21 @@ import { useBiometricUnlockSetupMutation } from 'src/app/features/biometricUnloc
 import { OnboardingScreen } from 'src/app/features/onboarding/OnboardingScreen'
 import { SettingsToggleRow } from 'src/app/features/settings/components/SettingsToggleRow'
 import { builtInBiometricCapabilitiesQuery } from 'src/app/utils/device/builtInBiometricCapabilitiesQuery'
+<<<<<<< Updated upstream
 import { Flex, Loader, Square } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from 'lx/src/types/screens/extension'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Loader, Square } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 
 export function BiometricUnlockSetUp({
   flow,

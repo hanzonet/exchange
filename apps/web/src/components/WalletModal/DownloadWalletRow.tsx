@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Anchor, Flex, FlexProps, Text, TextProps, TouchableArea } from 'ui/src'
 import { AppStoreLogo } from 'ui/src/components/icons/AppStoreLogo'
 import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
@@ -7,6 +8,16 @@ import { luxUrls } from 'lx/src/constants/urls'
 import { ElementName } from 'lx/src/features/telemetry/constants'
 import { Trace } from 'lx/src/features/telemetry/Trace'
 import { isMobileWeb, isWebAndroid, isWebIOS } from 'utilities/src/platform'
+=======
+import { Anchor, Flex, FlexProps, Text, TextProps, TouchableArea } from '@luxfi/ui/src'
+import { AppStoreLogo } from '@luxfi/ui/src/components/icons/AppStoreLogo'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { GoogleChromeLogo } from '@luxfi/ui/src/components/logos/GoogleChromeLogo'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
+import { isMobileWeb, isWebAndroid, isWebIOS } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 import { Wiggle } from '~/components/animations/Wiggle'
 import { GooglePlayStoreLogo } from '~/components/Icons/GooglePlayStoreLogo'
 

@@ -11,11 +11,19 @@ import { AppRatingModalRenderer } from 'src/notification-service/renderers/AppRa
 import { StorageWarningModalRenderer } from 'src/notification-service/renderers/StorageWarningModalRenderer'
 import { isAppRatingNotification } from 'src/notification-service/triggers/appRatingTrigger'
 import { isLocalTriggerNotification } from 'src/notification-service/triggers/createExtensionLocalTriggerDataSource'
+<<<<<<< Updated upstream
 import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { type IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
 import { IntroCardStack } from 'wallet/src/components/introCards/IntroCardStack'
+=======
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { type IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCardStack'
+>>>>>>> Stashed changes
 import {
   convertNotificationToIntroCard,
   shouldRenderAsIntroCard,

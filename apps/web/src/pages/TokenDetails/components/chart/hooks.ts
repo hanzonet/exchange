@@ -1,9 +1,9 @@
 import { GraphQLApi } from '@universe/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { useMemo, useReducer } from 'react'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { PriceChartData } from '~/components/Charts/PriceChart'
 import { StackedLineData } from '~/components/Charts/StackedLineChart'
 import {

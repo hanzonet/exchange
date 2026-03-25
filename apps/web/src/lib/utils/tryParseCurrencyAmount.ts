@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
+import { Currency, CurrencyAmount } from '@luxfi/amm-core'
 import JSBI from 'jsbi'
 import { logger } from 'utilities/src/logger/logger'
 

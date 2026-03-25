@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Flex, styled } from 'ui/src'
+import { Flex, styled } from '@luxfi/ui/src'
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '~/constants/breakpoints'
 import useSimplePagination from '~/hooks/useSimplePagination'
 import { TokenTable } from '~/pages/Explore/tables/Tokens/TokensTable'

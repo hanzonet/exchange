@@ -1,9 +1,17 @@
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { ActivityItem } from 'lx/src/components/activity/generateActivityItemRenderer'
 import { ActivityRenderData } from 'lx/src/features/activity/hooks/useActivityData'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
 import { ONE_DAY_MS } from 'utilities/src/time/time'
+=======
+import { ActivityItem } from '@luxexchange/lx/src/components/activity/generateActivityItemRenderer'
+import { ActivityRenderData } from '@luxexchange/lx/src/features/activity/hooks/useActivityData'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import {
   ActivityFilterType,
   filterTransactionDetailsFromActivityItems,

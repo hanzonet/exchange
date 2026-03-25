@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Checkbox, Flex, HeightAnimator, Separator, Text, TouchableArea } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { ContractInteraction } from 'ui/src/components/icons/ContractInteraction'
@@ -14,6 +15,22 @@ import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { shortenAddress } from 'utilities/src/addresses'
+=======
+import { Button, Checkbox, Flex, HeightAnimator, Separator, Text, TouchableArea } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { ContractInteraction } from '@luxfi/ui/src/components/icons/ContractInteraction'
+import { DocumentList } from '@luxfi/ui/src/components/icons/DocumentList'
+import { Page } from '@luxfi/ui/src/components/icons/Page'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+>>>>>>> Stashed changes
 import {
   type FlagWarning,
   getFlagsFromContractAddress,

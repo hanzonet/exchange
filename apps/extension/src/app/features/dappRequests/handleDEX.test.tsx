@@ -1,13 +1,18 @@
 import { TradingApi } from '@luxfi/api'
 import { createExternallySubmittedDEXOrder } from 'src/app/features/dappRequests/handleDEX'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   QueuedOrderStatus,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 jest.mock('utilities/src/logger/logger', () => ({
   logger: {

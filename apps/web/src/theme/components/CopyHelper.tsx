@@ -1,6 +1,6 @@
 import { forwardRef, PropsWithChildren, ReactNode, useCallback, useImperativeHandle, useRef, useState } from 'react'
 import { Trans } from 'react-i18next'
-import { AnimatableCopyIcon, ColorTokens, Flex, isTouchable, Text, TextProps } from 'ui/src'
+import { AnimatableCopyIcon, ColorTokens, Flex, isTouchable, Text, TextProps } from '@luxfi/ui/src'
 import { ReactComponent as TooltipTriangle } from '~/assets/svg/tooltip_triangle.svg'
 import useCopyClipboard from '~/hooks/useCopyClipboard'
 import { ClickableGuiStyle, EllipsisGuiStyle } from '~/theme/components/styles'

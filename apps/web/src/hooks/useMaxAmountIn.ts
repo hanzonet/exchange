@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Token } from '@luxamm/sdk-core'
+import { CurrencyAmount, Percent, Token } from '@luxfi/amm-core'
 import { useMemo } from 'react'
 import { InterfaceTrade } from '~/state/routing/types'
 

@@ -16,14 +16,15 @@ import { TokenDetailsStats } from 'src/components/TokenDetails/TokenDetailsStats
 import { TokenDetailsActionButtonsWrapper } from 'src/screens/TokenDetailsScreen/TokenDetailsActionButtonsWrapper'
 import { HeaderRightElement, HeaderTitleElement } from 'src/screens/TokenDetailsScreen/TokenDetailsHeaders'
 import { TokenDetailsModals } from 'src/screens/TokenDetailsScreen/TokenDetailsModals'
-import { Flex, Separator } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { useCrossChainBalances } from 'lx/src/data/balances/hooks/useCrossChainBalances'
+import { Flex, Separator } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useCrossChainBalances } from '@luxexchange/lx/src/data/balances/hooks/useCrossChainBalances'
 import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
+<<<<<<< Updated upstream
 } from 'lx/src/data/graphql/lux-data-api/fragments'
 import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
 import Trace from 'lx/src/features/telemetry/Trace'
@@ -33,6 +34,17 @@ import { AddressStringFormat, normalizeAddress } from 'lx/src/utils/addresses'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useDelayedRender } from 'utilities/src/react/useDelayedRender'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TokenWarningCard } from '@luxexchange/lx/src/features/tokens/warnings/TokenWarningCard'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { AddressStringFormat, normalizeAddress } from '@luxexchange/lx/src/utils/addresses'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useDelayedRender } from '@luxfi/utilities/src/react/useDelayedRender'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const CONTEXT_MENU_RENDER_DELAY_MS = 1000
 

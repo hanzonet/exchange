@@ -4,9 +4,9 @@ import { OpenSidebarButton } from 'src/app/components/buttons/OpenSidebarButton'
 import { useFinishExtensionOnboarding } from 'src/app/features/onboarding/hooks/useFinishExtensionOnboarding'
 import { useOpenSidebar } from 'src/app/features/onboarding/hooks/useOpenSidebar'
 import { terminateStoreSynchronization } from 'src/store/storeSynchronization'
-import { Flex, Text } from 'ui/src'
-import { Check, GraduationCap } from 'ui/src/components/icons'
-import { luxUrls } from 'lx/src/constants/urls'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Check, GraduationCap } from '@luxfi/ui/src/components/icons'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 
 export function ResetComplete(): JSX.Element {
   const { t } = useTranslation()

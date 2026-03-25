@@ -2,7 +2,7 @@ import { Group } from '@visx/group'
 import { LinePath } from '@visx/shape'
 import { CurveFactory } from 'd3'
 import React, { ReactNode } from 'react'
-import { ColorTokens } from 'ui/src'
+import { ColorTokens } from '@luxfi/ui/src'
 
 interface LineChartProps<T> {
   data: T[]

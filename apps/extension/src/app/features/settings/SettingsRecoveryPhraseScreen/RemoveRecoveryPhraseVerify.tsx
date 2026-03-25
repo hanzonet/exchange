@@ -6,6 +6,7 @@ import { PasswordInput } from 'src/app/components/PasswordInput'
 import { removeAllDappConnectionsFromExtension } from 'src/app/features/dapp/actions'
 import { SettingsRecoveryPhrase } from 'src/app/features/settings/SettingsRecoveryPhraseScreen/SettingsRecoveryPhrase'
 import { focusOrCreateOnboardingTab } from 'src/app/navigation/focusOrCreateOnboardingTab'
+<<<<<<< Updated upstream
 import { Flex, inputStyles, LabeledCheckbox, Text } from 'ui/src'
 import { TrashFilled } from 'ui/src/components/icons'
 import { setIsTestnetModeEnabled } from 'lx/src/features/settings/slice'
@@ -15,6 +16,17 @@ import { logger } from 'utilities/src/logger/logger'
 import { EditAccountAction, editAccountActions } from 'wallet/src/features/wallet/accounts/editAccountSaga'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+=======
+import { Flex, inputStyles, LabeledCheckbox, Text } from '@luxfi/ui/src'
+import { TrashFilled } from '@luxfi/ui/src/components/icons'
+import { setIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/slice'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+>>>>>>> Stashed changes
 
 export function RemoveRecoveryPhraseVerify(): JSX.Element {
   const { t } = useTranslation()

@@ -7,6 +7,7 @@ import {
   SignRequest,
   WalletConnectSigningRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { ContentRow } from 'lx/src/components/transactions/requests/ContentRow'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -16,6 +17,17 @@ import { EthTransaction } from 'lx/src/types/walletConnect'
 import { getValidAddress } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import { AddressButton } from 'wallet/src/components/buttons/AddressButton'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { ContentRow } from '@luxexchange/lx/src/components/transactions/requests/ContentRow'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { EthTransaction } from '@luxexchange/lx/src/types/walletConnect'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { AddressButton } from '@luxfi/wallet/src/components/buttons/AddressButton'
+>>>>>>> Stashed changes
 import {
   SpendingDetails,
   SpendingEthDetails,

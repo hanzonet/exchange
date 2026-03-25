@@ -3,12 +3,21 @@ import { AuctionActivityEntry } from '@uniswap/client-data-api/dist/data/v1/auct
 import { AnimatePresence, motion } from 'framer-motion'
 import { type ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text, Unicon, useMedia } from 'ui/src'
 import { useColorHexFromThemeKey } from 'ui/src/hooks/useColorHexFromThemeKey'
 import { opacifyRaw } from 'ui/src/theme'
 import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { shortenAddress } from 'utilities/src/addresses'
+=======
+import { Flex, Text, Unicon, useMedia } from '@luxfi/ui/src'
+import { useColorHexFromThemeKey } from '@luxfi/ui/src/hooks/useColorHexFromThemeKey'
+import { opacifyRaw } from '@luxfi/ui/src/theme'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+>>>>>>> Stashed changes
 import { Table } from '~/components/Table'
 import { Cell } from '~/components/Table/Cell'
 import { HeaderCell, TableText } from '~/components/Table/styled'

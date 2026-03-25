@@ -10,6 +10,7 @@ import { navigateToOnboardingImportMethod } from 'src/components/RemoveWallet/ut
 import { clearOnboardingTimestamp } from 'src/features/analytics/onboardingTimestamp'
 import { useBiometricAppSettings } from 'src/features/biometrics/useBiometricAppSettings'
 import { useBiometricPrompt } from 'src/features/biometricsSettings/hooks'
+<<<<<<< Updated upstream
 import { Button, Flex, Text, ThemeKeys, useSporeColors } from 'ui/src'
 import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
 import { spacing } from 'ui/src/theme'
@@ -23,6 +24,21 @@ import { EditAccountAction, editAccountActions } from 'wallet/src/features/walle
 import { useAccounts, useSignerAccounts } from 'wallet/src/features/wallet/hooks'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
 import { setFinishedOnboarding } from 'wallet/src/features/wallet/slice'
+=======
+import { Button, Flex, Text, ThemeKeys, useSporeColors } from '@luxfi/ui/src'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing } from '@luxfi/ui/src/theme'
+import { ElementName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { useAccounts, useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { setFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 type RemoveWalletContentProps = {
   address?: Address

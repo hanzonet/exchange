@@ -1,9 +1,15 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Percent } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import i18n from 'lx/src/i18n'
 import { PercentNumberDecimals } from 'utilities/src/format/types'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import i18n from '@luxexchange/lx/src/i18n'
+import { PercentNumberDecimals } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { DYNAMIC_FEE_DATA, DynamicFeeData, FeeData } from '~/components/Liquidity/Create/types'
 import { defaultFeeTiers } from '~/components/Liquidity/constants'
 import { FeeTierData } from '~/components/Liquidity/types'

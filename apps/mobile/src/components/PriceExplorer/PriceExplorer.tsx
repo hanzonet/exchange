@@ -13,6 +13,7 @@ import { useLineChartPrice } from 'src/components/PriceExplorer/usePrice'
 import { PriceNumberOfDigits, TokenSpotData, useTokenPriceHistory } from 'src/components/PriceExplorer/usePriceHistory'
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
 import { useIsScreenNavigationReady } from 'src/utils/useIsScreenNavigationReady'
+<<<<<<< Updated upstream
 import { Flex, SegmentedControl, Text } from 'ui/src'
 import { useLayoutAnimationOnChange } from 'ui/src/animations'
 import GraphCurve from 'ui/src/assets/backgrounds/graph-curve.svg'
@@ -27,6 +28,22 @@ import Trace from 'lx/src/features/telemetry/Trace'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { logger } from 'utilities/src/logger/logger'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import { Flex, SegmentedControl, Text } from '@luxfi/ui/src'
+import { useLayoutAnimationOnChange } from '@luxfi/ui/src/animations'
+import GraphCurve from '@luxfi/ui/src/assets/backgrounds/graph-curve.svg'
+import { spacing } from '@luxfi/ui/src/theme'
+import { isLowVarianceRange } from '@luxexchange/lx/src/components/charts/utils'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useHapticFeedback } from '@luxexchange/lx/src/features/settings/useHapticFeedback/useHapticFeedback'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 const DEFAULT_Y_PADDING = 20
 const LOW_VARIANCE_Y_PADDING = 100

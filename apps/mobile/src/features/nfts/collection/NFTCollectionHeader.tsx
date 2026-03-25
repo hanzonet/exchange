@@ -6,6 +6,7 @@ import { Loader } from 'src/components/loading/loaders'
 import { LongMarkdownText } from 'src/components/text/LongMarkdownText'
 import { NFTCollectionContextMenu } from 'src/features/nfts/collection/NFTCollectionContextMenu'
 import { NFTCollectionData } from 'src/features/nfts/collection/types'
+<<<<<<< Updated upstream
 import { Flex, FlexProps, Text, UniversalImage, useExtractedColors, useSporeColors } from 'ui/src'
 import { Verified } from 'ui/src/components/icons'
 import { Ethereum } from 'ui/src/components/logos/Ethereum'
@@ -15,6 +16,17 @@ import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, FlexProps, Text, UniversalImage, useExtractedColors, useSporeColors } from '@luxfi/ui/src'
+import { Verified } from '@luxfi/ui/src/components/icons'
+import { Ethereum } from '@luxfi/ui/src/components/logos/Ethereum'
+import { UniversalImageResizeMode } from '@luxfi/ui/src/components/UniversalImage/types'
+import { spacing } from '@luxfi/ui/src/theme'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 const PROFILE_IMAGE_SIZE = 72
 const PROFILE_IMAGE_WRAPPER_SIZE = PROFILE_IMAGE_SIZE + spacing.spacing4

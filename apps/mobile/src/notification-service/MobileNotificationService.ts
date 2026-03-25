@@ -29,6 +29,7 @@ import { createMobileNotificationRenderer } from 'src/notification-service/notif
 import { mobileNotificationStore } from 'src/notification-service/notification-renderer/notificationStore'
 import { getNotificationTelemetry } from 'src/notification-service/notification-telemetry/getNotificationTelemetry'
 import { createMobileLocalTriggerDataSource } from 'src/notification-service/triggers/createMobileLocalTriggerDataSource'
+<<<<<<< Updated upstream
 import { getPortfolioQuery } from 'lx/src/data/rest/getPortfolio'
 import { AppearanceSettingType } from 'lx/src/features/appearance/slice'
 import { mapLocaleToBackendLocale } from 'lx/src/features/language/constants'
@@ -40,6 +41,19 @@ import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 import { ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
 import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+=======
+import { getPortfolioQuery } from '@luxexchange/lx/src/data/rest/getPortfolio'
+import { AppearanceSettingType } from '@luxexchange/lx/src/features/appearance/slice'
+import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
+import { ONE_MINUTE_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
+>>>>>>> Stashed changes
 
 /**
  * Creates the notification service with all necessary dependencies

@@ -1,7 +1,13 @@
 import { connect, getConnectors } from '@wagmi/core'
+<<<<<<< Updated upstream
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { isPlaywrightEnv } from 'utilities/src/environment/env'
 import { sleep } from 'utilities/src/time/timing'
+=======
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { sleep } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 import { wagmiConfig } from '~/components/Web3Provider/wagmiConfig'
 import { ExternalConnector } from '~/features/accounts/store/types'
 import { createConnectionService, GetConnectorFn } from '~/features/wallet/connection/services/createConnectionService'

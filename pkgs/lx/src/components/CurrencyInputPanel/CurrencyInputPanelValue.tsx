@@ -1,0 +1,100 @@
+import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
+import { memo, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
+import { Flex, Text, TextProps, TouchableArea } from '@luxfi/ui/src'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { useTokenAndFiatDisplayAmounts } from '@luxexchange/lx/src/features/transactions/hooks/useTokenAndFiatDisplayAmounts'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+
+interface CurrencyInputPanelValueProps {
+  disabled: boolean
+  value: string | undefined
+  usdValue: Maybe<CurrencyAmount<Currency>>
+  priceDifferencePercentage?: number
+  onPressDisabledWithShakeAnimation: () => void
+  onToggleIsFiatMode: (currencyField: CurrencyField) => void
+  currencyField: CurrencyField
+  currencyInfo: Maybe<CurrencyInfo>
+  currencyAmount: Maybe<CurrencyAmount<Currency>>
+  isFiatMode: boolean
+  fiatValueVariant?: TextProps['variant']
+}
+
+export const CurrencyInputPanelValue = memo(function _CurrencyInputPanelValue({
+  disabled,
+  value,
+  usdValue,
+  priceDifferencePercentage,
+  onPressDisabledWithShakeAnimation,
+  onToggleIsFiatMode,
+  currencyField,
+  currencyInfo,
+  currencyAmount,
+  isFiatMode,
+  fiatValueVariant = 'body3',
+}: CurrencyInputPanelValueProps): JSX.Element {
+  const { t } = useTranslation()
+  const dispatch = useDispatch()
+  const { formatPercent } = useLocalizationContext()
+  const { isTestnetModeEnabled } = useEnabledChains()
+  const priceUXEnabled = usePriceUXEnabled()
+  const isOutput = currencyField === CurrencyField.OUTPUT
+  const showPriceDifference = isOutput && !!currencyInfo && !!currencyAmount
+  const { price: usdPrice } = useUSDCPrice(currencyInfo?.currency)
+  const { code: fiatCurrencyCode } = useAppFiatCurrencyInfo()
+  const _onToggleIsFiatMode = useCallback(() => {
+    if (!usdPrice) {
+      dispatch(
+        pushNotification({
+          type: AppNotificationType.Error,
+          errorMessage: t('swap.error.fiatInputUnavailable', { fiatCurrencyCode }),
+          hideDelay: ONE_SECOND_MS * 3,
+        }),
+      )
+    } else {
+      onToggleIsFiatMode(currencyField)
+    }
+  }, [currencyField, dispatch, fiatCurrencyCode, onToggleIsFiatMode, t, usdPrice])
+  // In fiat mode, show equivalent token amount. In token mode, show equivalent fiat amount
+  const inputPanelFormattedValue = useTokenAndFiatDisplayAmounts({
+    value,
+    currencyInfo,
+    currencyAmount,
+    usdValue,
+    isFiatMode,
+  })
+  return (
+    <TouchableArea
+      group="item"
+      flexShrink={1}
+      onPress={disabled || isTestnetModeEnabled ? onPressDisabledWithShakeAnimation : _onToggleIsFiatMode}
+    >
+      {!isTestnetModeEnabled && (
+        <Flex centered row shrink gap="$spacing4" width="max-content">
+          <Text
+            color="$neutral2"
+            $group-item-hover={{ color: '$neutral2Hovered' }}
+            numberOfLines={1}
+            variant={fiatValueVariant}
+          >
+            {inputPanelFormattedValue}
+          </Text>
+          {priceUXEnabled && showPriceDifference && (
+            <Text color="$neutral3" variant={fiatValueVariant}>
+              ({formatPercent(priceDifferencePercentage)})
+            </Text>
+          )}
+        </Flex>
+      )}
+    </TouchableArea>
+  )
+})

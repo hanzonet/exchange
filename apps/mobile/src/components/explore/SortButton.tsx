@@ -2,6 +2,7 @@ import { CustomRankingType, RankingType } from '@luxfi/api'
 import React, { memo, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getTokensOrderByMenuLabel, getTokensOrderBySelectedLabel } from 'src/features/explore/utils'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { Chart, ChartPie, ChartPyramid, CheckCircleFilled, TrendDown, TrendUp } from 'ui/src/components/icons'
 import { ActionSheetDropdown } from 'lx/src/components/dropdowns/ActionSheetDropdown'
@@ -11,6 +12,17 @@ import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { logger } from 'utilities/src/logger/logger'
 import { ExploreOrderBy } from 'wallet/src/features/wallet/types'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { Chart, ChartPie, ChartPyramid, CheckCircleFilled, TrendDown, TrendUp } from '@luxfi/ui/src/components/icons'
+import { ActionSheetDropdown } from '@luxexchange/lx/src/components/dropdowns/ActionSheetDropdown'
+import { MenuItemProp } from '@luxexchange/lx/src/components/modals/ActionSheetModal'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
+>>>>>>> Stashed changes
 
 const MIN_MENU_ITEM_WIDTH = 220
 

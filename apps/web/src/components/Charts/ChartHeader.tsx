@@ -1,10 +1,17 @@
 import { GraphQLApi } from '@universe/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { ReactElement, ReactNode } from 'react'
+<<<<<<< Updated upstream
 import { Flex, LinearGradient, styled, Text, useSporeColors } from 'ui/src'
 import { zIndexes } from 'ui/src/theme'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { FiatNumberType, NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, LinearGradient, styled, Text, useSporeColors } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FiatNumberType, NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { getProtocolColor, getProtocolName } from '~/appGraphql/data/util'
 import { useHeaderDateFormatter } from '~/components/Charts/hooks/useHeaderDateFormatter'
 import { PROTOCOL_LEGEND_ELEMENT_ID } from '~/components/Charts/types'

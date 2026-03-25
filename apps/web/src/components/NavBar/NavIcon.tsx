@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, styled, Text, TouchableArea } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, styled, Text, TouchableArea } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 const Container = styled(Flex, {
   position: 'relative',

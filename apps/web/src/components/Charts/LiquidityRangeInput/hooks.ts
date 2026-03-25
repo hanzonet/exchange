@@ -3,8 +3,13 @@ import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes
 import { Currency } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+>>>>>>> Stashed changes
 import { calculateTokensLocked } from '~/components/Charts/LiquidityChart/utils/calculateTokensLocked'
 import { ChartEntry } from '~/components/Charts/LiquidityRangeInput/types'
 import { usePoolActiveLiquidity } from '~/hooks/usePoolTickData'

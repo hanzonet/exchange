@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Button, Flex } from 'ui/src'
 import { WarningLabel } from 'lx/src/components/modals/WarningModal/types'
 import { nativeOnChain } from 'lx/src/constants/tokens'
@@ -7,6 +8,16 @@ import Trace from 'lx/src/features/telemetry/Trace'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { isWebPlatform } from 'utilities/src/platform'
 import { useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
+=======
+import { Button, Flex } from '@luxfi/ui/src'
+import { WarningLabel } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
+import { useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
+>>>>>>> Stashed changes
 
 type ReviewButtonProps = {
   onPress: () => void

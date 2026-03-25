@@ -1,6 +1,7 @@
 import { type ComponentType, memo } from 'react'
 import type { AppStackParamList, AppStackScreenProp } from 'src/app/navigation/types'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
+<<<<<<< Updated upstream
 import type { GetProps } from 'ui/src'
 import { BridgedAssetModal } from 'lx/src/components/BridgedAsset/BridgedAssetModal'
 import { WormholeModal } from 'lx/src/components/BridgedAsset/WormholeModal'
@@ -17,6 +18,24 @@ import { PortfolioBalanceModal } from 'wallet/src/components/settings/portfolioB
 import { SmartWalletAdvancedSettingsModal } from 'wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
 import { SmartWalletEnabledModal } from 'wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
 import { SmartWalletNudge } from 'wallet/src/components/smartWallet/modals/SmartWalletNudge'
+=======
+import type { GetProps } from '@luxfi/ui/src'
+import { BridgedAssetModal } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetModal'
+import { WormholeModal } from '@luxexchange/lx/src/components/BridgedAsset/WormholeModal'
+import { ReportTokenDataModal } from '@luxexchange/lx/src/components/reporting/ReportTokenDataModal'
+import { ReportTokenIssueModal } from '@luxexchange/lx/src/components/reporting/ReportTokenIssueModal'
+import { PasskeyManagementModal } from '@luxexchange/lx/src/features/passkey/PasskeyManagementModal'
+import { PasskeysHelpModal } from '@luxexchange/lx/src/features/passkey/PasskeysHelpModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestnetModeModal } from '@luxexchange/lx/src/features/testnets/TestnetModeModal'
+import { HiddenTokenInfoModal } from '@luxexchange/lx/src/features/transactions/modals/HiddenTokenInfoModal'
+import { SettingsLanguageModal } from '@luxfi/wallet/src/components/settings/language/SettingsLanguageModal'
+import { PermissionsModal } from '@luxfi/wallet/src/components/settings/permissions/PermissionsModal'
+import { PortfolioBalanceModal } from '@luxfi/wallet/src/components/settings/portfolioBalance/PortfolioBalanceModal'
+import { SmartWalletAdvancedSettingsModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { SmartWalletEnabledModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
+import { SmartWalletNudge } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletNudge'
+>>>>>>> Stashed changes
 
 // Define names of shared modals we're explicitly supporting on mobile
 type ValidModalNames = keyof Pick<

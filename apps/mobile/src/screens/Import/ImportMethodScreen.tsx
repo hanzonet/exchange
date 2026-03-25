@@ -14,6 +14,7 @@ import {
   seedPhraseImportOption,
 } from 'src/screens/Import/constants'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Flex, SpinningLoader, Text, TouchableArea } from 'ui/src'
 import { Eye, WalletFilled } from 'ui/src/components/icons'
 import { useIsDarkMode } from 'ui/src/hooks/useIsDarkMode'
@@ -25,6 +26,19 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
 import { OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Flex, SpinningLoader, Text, TouchableArea } from '@luxfi/ui/src'
+import { Eye, WalletFilled } from '@luxfi/ui/src/components/icons'
+import { useIsDarkMode } from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { authenticateWithPasskeyForSeedPhraseExport } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 const options: ImportMethodOption[] = [seedPhraseImportOption, importFromCloudBackupOption, passKeySignInOption]
 

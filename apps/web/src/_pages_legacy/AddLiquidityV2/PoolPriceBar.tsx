@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { Currency, Percent, Price } from '@luxamm/sdk-core'
+import { Currency, Percent, Price } from '@luxfi/amm-core'
 import { Text } from 'rebass'
 import { useTheme } from 'styled-components/macro'
 

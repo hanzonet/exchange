@@ -1,8 +1,8 @@
 import { memo } from 'react'
-import { EM_DASH, Flex, Text } from 'ui/src'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { EM_DASH, Flex, Text } from '@luxfi/ui/src'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
 import { EmptyTableCell } from '~/pages/Portfolio/EmptyTableCell'
 
 export const TokenDisplay = memo(function TokenDisplay({ currencyInfo }: { currencyInfo: CurrencyInfo | null }) {

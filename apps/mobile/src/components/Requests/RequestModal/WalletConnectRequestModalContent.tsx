@@ -9,6 +9,7 @@ import {
   isTransactionRequest,
   WalletConnectSigningRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons'
 import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
@@ -25,6 +26,24 @@ import { DappSignTypedDataContent } from 'wallet/src/components/dappRequests/Dap
 import { DappTransactionScanningContent } from 'wallet/src/components/dappRequests/DappTransactionScanningContent'
 import { WarningBox } from 'wallet/src/components/WarningBox/WarningBox'
 import { TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { hasGasEstimationFailed } from '@luxexchange/lx/src/features/gas/utils'
+import { isPrimaryTypePermit, UwULinkMethod } from '@luxexchange/lx/src/types/walletConnect'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { MAX_HIDDEN_CALLS_BY_DEFAULT } from '@luxfi/wallet/src/components/BatchedTransactions/BatchedTransactionDetails'
+import { DappPersonalSignContent } from '@luxfi/wallet/src/components/dappRequests/DappPersonalSignContent'
+import { DappSendCallsScanningContent } from '@luxfi/wallet/src/components/dappRequests/DappSendCallsScanningContent'
+import { DappSignTypedDataContent } from '@luxfi/wallet/src/components/dappRequests/DappSignTypedDataContent'
+import { DappTransactionScanningContent } from '@luxfi/wallet/src/components/dappRequests/DappTransactionScanningContent'
+import { WarningBox } from '@luxfi/wallet/src/components/WarningBox/WarningBox'
+import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+>>>>>>> Stashed changes
 
 const isPotentiallyUnsafe = (request: WalletConnectSigningRequest): boolean => request.type !== EthMethod.PersonalSign
 

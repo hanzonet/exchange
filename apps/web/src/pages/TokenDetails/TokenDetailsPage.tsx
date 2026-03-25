@@ -2,9 +2,15 @@ import { useEffect, useMemo } from 'react'
 import { Helmet } from 'react-helmet-async/lib/index'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { useScroll } from '~/hooks/useScroll'
 import { useScrollCompact } from '~/hooks/useScrollCompact'
 import { ExploreTab } from '~/pages/Explore/constants'

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
+import { Flex } from '@luxfi/ui/src'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TableText } from '~/components/Table/styled'
 import { useAuctionTimeRemaining } from '~/components/Toucan/Auction/hooks/useAuctionTimeRemaining'
 

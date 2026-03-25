@@ -1,26 +1,35 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Anchor, Button, Flex, Loader, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { Buoy } from 'ui/src/components/icons/Buoy'
-import { Passkey } from 'ui/src/components/icons/Passkey'
-import { Trash } from 'ui/src/components/icons/Trash'
-import { Windows } from 'ui/src/components/icons/Windows'
-import { GoogleChromeLogo } from 'ui/src/components/logos/GoogleChromeLogo'
-import { UseSporeColorsReturn } from 'ui/src/hooks/useSporeColors'
-import { iconSizes } from 'ui/src/theme'
-import { luxUrls } from 'lx/src/constants/urls'
+import { Anchor, Button, Flex, Loader, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { Buoy } from '@luxfi/ui/src/components/icons/Buoy'
+import { Passkey } from '@luxfi/ui/src/components/icons/Passkey'
+import { Trash } from '@luxfi/ui/src/components/icons/Trash'
+import { Windows } from '@luxfi/ui/src/components/icons/Windows'
+import { GoogleChromeLogo } from '@luxfi/ui/src/components/logos/GoogleChromeLogo'
+import { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import {
   Authenticator,
   AuthenticatorNameType,
   authenticateWithPasskey,
   getPrivyEnums,
   listAuthenticators,
+<<<<<<< Updated upstream
 } from 'lx/src/features/passkey/embeddedWallet'
 import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
 import i18n from 'lx/src/i18n'
 import { isMobileWeb } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+} from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import i18n from '@luxexchange/lx/src/i18n'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { AddPasskeyMenu } from '~/components/AccountDrawer/PasskeyMenu/AddPasskeyMenu'
 import { DeletePasskeyMenu } from '~/components/AccountDrawer/PasskeyMenu/DeletePasskeyMenu'
 import { DeletePasskeySpeedbumpMenu } from '~/components/AccountDrawer/PasskeyMenu/DeletePasskeySpeedbumpMenu'

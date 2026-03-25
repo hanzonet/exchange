@@ -1,8 +1,15 @@
 import { Percent } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { Flex, Text } from 'ui/src'
 import { shortenHash } from 'utilities/src/addresses'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { Flex, Text } from '@luxfi/ui/src'
+import { shortenHash } from '@luxfi/utilities/src/addresses'
+>>>>>>> Stashed changes
 import { FeeData } from '~/components/Liquidity/Create/types'
 import { LpIncentivesAprDisplay } from '~/components/LpIncentives/LpIncentivesAprDisplay'
 import { AnimatedDoubleLogo } from '~/pages/PoolDetails/components/PoolDetailsHeader/AnimatedDoubleLogo'

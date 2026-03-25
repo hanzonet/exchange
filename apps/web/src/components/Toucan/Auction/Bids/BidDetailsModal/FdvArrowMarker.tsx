@@ -1,4 +1,4 @@
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
 
 interface FdvArrowMarkerProps {
   width?: number

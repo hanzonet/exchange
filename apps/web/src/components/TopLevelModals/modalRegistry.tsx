@@ -1,6 +1,11 @@
 import { memo, Suspense } from 'react'
+<<<<<<< Updated upstream
 import { ModalName, ModalNameType } from 'lx/src/features/telemetry/constants'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { ModalName, ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import ErrorBoundary from '~/components/ErrorBoundary'
 import { ModalRegistry, ModalWrapperProps } from '~/components/TopLevelModals/types'
 import { useModalState } from '~/hooks/useModalState'

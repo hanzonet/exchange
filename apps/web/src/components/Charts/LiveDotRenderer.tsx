@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Flex, useSporeColors } from 'ui/src'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
 
 export interface ChartModelWithLiveDot {
   getLastPointCoordinates?: () => { x: number; y: number } | null

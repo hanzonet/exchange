@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { focusOrCreateUnitagTab } from 'src/app/navigation/utils'
+<<<<<<< Updated upstream
 import { Button, Flex, Text } from 'ui/src'
 import { Person } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
@@ -18,6 +19,23 @@ import { CardType, IntroCard, IntroCardGraphicType } from 'wallet/src/components
 import { useCanActiveAddressClaimUnitag } from 'wallet/src/features/unitags/hooks/useCanActiveAddressClaimUnitag'
 import { EditAccountAction, editAccountActions } from 'wallet/src/features/wallet/accounts/editAccountSaga'
 import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { Person } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TextInput } from '@luxexchange/lx/src/components/input/TextInput'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { OnboardingCardLoggingName } from '@luxexchange/lx/src/features/telemetry/types'
+import { UNITAG_SUFFIX_NO_LEADING_DOT } from '@luxexchange/lx/src/features/unitags/constants'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { CardType, IntroCard, IntroCardGraphicType } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { useCanActiveAddressClaimUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useCanActiveAddressClaimUnitag'
+import { EditAccountAction, editAccountActions } from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type EditLabelModalProps = {
   isOpen: boolean

@@ -14,8 +14,8 @@ import {
   WalletConnectSession,
   WalletConnectSigningRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
-import { ScannerModalState } from 'lx/src/components/ReceiveQRCode/constants'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { ScannerModalState } from '@luxexchange/lx/src/components/ReceiveQRCode/constants'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 interface WalletConnect {
   sessions: WalletConnectSession[]

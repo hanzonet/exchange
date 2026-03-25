@@ -1,8 +1,14 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { formatUnits } from 'viem'
 import { q96ToPriceString } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import { useBidTokenInfo } from '~/components/Toucan/Auction/hooks/useBidTokenInfo'

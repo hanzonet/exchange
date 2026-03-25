@@ -1,12 +1,12 @@
-import { TradeType } from '@luxamm/sdk-core'
+import { TradeType } from '@luxfi/amm-core'
 import { TradingApi } from '@luxfi/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Creates a mock DEXOrderDetails object for testing

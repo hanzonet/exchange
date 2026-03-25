@@ -1,6 +1,6 @@
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isTestnetChain } from 'lx/src/features/chains/utils'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isTestnetChain } from '@luxexchange/lx/src/features/chains/utils'
 
 export function useFilteredChainIds(chains?: UniverseChainId[]): UniverseChainId[] {
   const { isTestnetModeEnabled } = useEnabledChains()

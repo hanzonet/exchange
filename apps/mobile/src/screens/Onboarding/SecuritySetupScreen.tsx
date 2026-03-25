@@ -13,6 +13,7 @@ import { checkOsBiometricAuthEnabled, useBiometricName } from 'src/features/biom
 import { setRequiredForTransactions } from 'src/features/biometricsSettings/slice'
 import { useCompleteOnboardingCallback } from 'src/features/onboarding/hooks'
 import { OnboardingScreen } from 'src/features/onboarding/OnboardingScreen'
+<<<<<<< Updated upstream
 import { Button, Flex, useIsDarkMode, useSporeColors } from 'ui/src'
 import { SECURITY_SCREEN_BACKGROUND_DARK, SECURITY_SCREEN_BACKGROUND_LIGHT } from 'ui/src/assets'
 import { Lock } from 'ui/src/components/icons'
@@ -21,6 +22,16 @@ import Trace from 'lx/src/features/telemetry/Trace'
 import { ImportType } from 'lx/src/types/onboarding'
 import { OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { isIOS } from 'utilities/src/platform'
+=======
+import { Button, Flex, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
+import { SECURITY_SCREEN_BACKGROUND_DARK, SECURITY_SCREEN_BACKGROUND_LIGHT } from '@luxfi/ui/src/assets'
+import { Lock } from '@luxfi/ui/src/components/icons'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { isIOS } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.Security>
 

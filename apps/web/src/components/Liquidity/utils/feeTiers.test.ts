@@ -1,8 +1,13 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Percent } from '@uniswap/sdk-core'
 import { FeeAmount, TICK_SPACINGS } from '@uniswap/v3-sdk'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { PercentNumberDecimals } from 'utilities/src/format/types'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { PercentNumberDecimals } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { describe, expect, it } from 'vitest'
 import { DYNAMIC_FEE_DATA } from '~/components/Liquidity/Create/types'
 import { FeeTierData } from '~/components/Liquidity/types'

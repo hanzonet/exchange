@@ -1,0 +1,81 @@
+import { useMemo } from 'react'
+import { useLuxContextSelector } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEVMTradeRepository } from '@luxexchange/lx/src/features/repositories'
+import { useWithQuoteLogging } from '@luxexchange/lx/src/features/transactions/swap/hooks/useTrade/logging'
+import { createEVMTradeService } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/evmTradeService'
+import { createSolanaTradeService } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/svmTradeService'
+import {
+  createTradeService,
+  TradeService,
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { getMinAutoSlippageToleranceL2 } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+
+/**
+ * Services
+ *
+ * This is where we create instances of services that are used in hooks/components.
+ * Services orchestrate business logic and use repositories for data access.
+ *
+ * List of services:
+ * - Trade Service
+ */
+
+interface TradeServiceContext {
+  // dependencies from React layer
+  getIsDEXSupported?: (chainId?: number) => boolean
+  getEnabledChains: () => UniverseChainId[]
+}
+
+/**
+ * Trade Service
+ *
+ * Creates a trade service instance with the necessary dependencies.
+ * Only requires minimal context from the React layer.
+ *
+ * @param ctx - Context containing React-layer dependencies
+ * @returns A trade service that orchestrates the swap flow
+ */
+export function getTradeService(ctx: TradeServiceContext): TradeService {
+  const { getIsDEXSupported, getEnabledChains } = ctx
+
+  const evmTradeService = createEVMTradeService({
+    tradeRepository: getEVMTradeRepository(),
+    getIsDEXSupported,
+    getEnabledChains,
+    getIsL2ChainId: (chainId?: UniverseChainId) => (chainId ? isL2ChainId(chainId) : false),
+    getMinAutoSlippageToleranceL2,
+    logger: getLogger(),
+  })
+
+  const svmTradeService =
+    createSolanaTradeService(
+      // { tradeRepository: getSolanaTradeRepository() } // TODO(SWAP-383): build Solana Trade Repository
+    )
+
+  return createTradeService({
+    serviceByPlatform: {
+      [Platform.EVM]: evmTradeService,
+      [Platform.SVM]: svmTradeService,
+    },
+  })
+}
+
+export function useTradeService(): TradeService {
+  const withQuoteLogging = useWithQuoteLogging()
+  const getIsDEXSupported = useLuxContextSelector((state) => state.getIsDEXSupported)
+  const enabledChains = useEnabledChains()
+
+  return useMemo(() => {
+    const baseService = getTradeService({
+      getIsDEXSupported: getIsDEXSupported ?? ((): boolean => false),
+      getEnabledChains: () => enabledChains.chains,
+    })
+
+    return withQuoteLogging(baseService)
+  }, [getIsDEXSupported, enabledChains, withQuoteLogging])
+}

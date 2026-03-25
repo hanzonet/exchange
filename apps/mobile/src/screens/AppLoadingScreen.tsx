@@ -15,6 +15,7 @@ import {
 } from 'src/features/notifications/hooks/useNotificationOSPermissionsEnabled'
 import { useHideSplashScreen } from 'src/features/splashScreen/useHideSplashScreen'
 import { type RecoveryWalletInfo, useOnDeviceRecoveryData } from 'src/screens/Import/useOnDeviceRecoveryData'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { MobileEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
@@ -27,6 +28,20 @@ import { type SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
 import { selectAnyAddressHasNotificationsEnabled } from 'wallet/src/features/wallet/selectors'
 import { setFinishedOnboarding } from 'wallet/src/features/wallet/slice'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { type SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { selectAnyAddressHasNotificationsEnabled } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.AppLoading>
 

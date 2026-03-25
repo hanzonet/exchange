@@ -1,8 +1,13 @@
 import type { DappInfo } from 'src/app/features/dapp/store'
 import type { DappRequest, ErrorResponse } from 'src/app/features/dappRequests/types/DappRequestTypes'
 import type { DappRequestMessageSchema } from 'src/background/messagePassing/types/requests'
+<<<<<<< Updated upstream
 import type { TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
 import type { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
+=======
+import type { TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import type { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+>>>>>>> Stashed changes
 import type { z } from 'zod'
 
 export type SenderTabInfo = z.infer<typeof DappRequestMessageSchema>['senderTabInfo']

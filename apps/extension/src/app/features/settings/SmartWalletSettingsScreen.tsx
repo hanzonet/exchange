@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 import {
   SmartWalletHelpIcon,
   SmartWalletSettingsContent,

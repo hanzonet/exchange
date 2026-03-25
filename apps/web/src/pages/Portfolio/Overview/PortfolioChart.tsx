@@ -12,12 +12,21 @@ import {
   Text,
   useMedia,
   useSporeColors,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
 import { useCurrentLocale } from 'lx/src/features/language/hooks'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { NumberType } from 'utilities/src/format/types'
+=======
+} from '@luxfi/ui/src'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { ChartSkeleton } from '~/components/Charts/LoadingState'
 import { PriceChart, PriceChartData } from '~/components/Charts/PriceChart'
 import { ChartType, PriceChartType } from '~/components/Charts/utils'

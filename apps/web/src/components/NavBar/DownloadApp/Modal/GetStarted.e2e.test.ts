@@ -1,5 +1,5 @@
-import { luxUrls } from 'lx/src/constants/urls'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { setupWebAuthn } from '~/playwright/mocks/webAuthn'
 

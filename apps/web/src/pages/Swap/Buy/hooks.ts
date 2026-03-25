@@ -6,18 +6,18 @@ import {
   getFiatCurrencyName,
   useAppFiatCurrency,
   useFiatCurrencyComponents,
-} from 'lx/src/features/fiatCurrency/hooks'
+} from '@luxexchange/lx/src/features/fiatCurrency/hooks'
 import {
   useFiatOnRampAggregatorSupportedFiatCurrenciesQuery,
   useFiatOnRampAggregatorSupportedTokensQuery,
-} from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+} from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
 import {
   FiatCurrencyInfo,
   FiatOnRampCurrency,
   FORCountry,
   OffRampTransferDetailsRequest,
   RampDirection,
-} from 'lx/src/features/fiatOnRamp/types'
+} from '@luxexchange/lx/src/features/fiatOnRamp/types'
 // biome-ignore lint/style/noRestrictedImports: Buy hooks need direct SDK imports
 import { getFiatCurrencyComponents } from 'utilities/src/format/localeBased'
 import { useMeldSupportedCurrencyToCurrencyInfo } from '~/appGraphql/data/types'

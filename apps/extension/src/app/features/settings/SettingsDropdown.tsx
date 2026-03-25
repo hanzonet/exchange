@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Flex, Popover, ScrollView, Text, TouchableArea } from 'ui/src'
-import { Check, RotatableChevron } from 'ui/src/components/icons'
-import { iconSizes, zIndexes } from 'ui/src/theme'
+import { Flex, Popover, ScrollView, Text, TouchableArea } from '@luxfi/ui/src'
+import { Check, RotatableChevron } from '@luxfi/ui/src/components/icons'
+import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
 
 type DropdownItem = {
   label: string

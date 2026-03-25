@@ -7,6 +7,7 @@ import { removeAllDappConnectionsForAccount, removeDappConnection } from 'src/ap
 import { useAllDappConnectionsForAccount } from 'src/app/features/dapp/hooks'
 import { dappStore } from 'src/app/features/dapp/store'
 import { NoDappConnections } from 'src/app/features/settings/SettingsManageConnectionsScreen/internal/NoDappConnections'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea, UniversalImage } from 'ui/src'
 import { MinusCircle } from 'ui/src/components/icons'
 import { borderRadii, breakpoints, fonts, gap, iconSizes } from 'ui/src/theme'
@@ -22,6 +23,23 @@ import { extractNameFromUrl } from 'utilities/src/format/extractNameFromUrl'
 import { extractUrlHost } from 'utilities/src/format/urls'
 import { DappEllipsisDropdown } from 'wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
 import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, Text, TouchableArea, UniversalImage } from '@luxfi/ui/src'
+import { MinusCircle } from '@luxfi/ui/src/components/icons'
+import { borderRadii, breakpoints, fonts, gap, iconSizes } from '@luxfi/ui/src/theme'
+import { DappIconPlaceholder } from '@luxexchange/lx/src/components/dapps/DappIconPlaceholder'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
+import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'
+import { extractUrlHost } from '@luxfi/utilities/src/format/urls'
+import { DappEllipsisDropdown } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const MIN_SCREEN_WIDTH = breakpoints.xxs
 const HORIZONTAL_SPACING = 12

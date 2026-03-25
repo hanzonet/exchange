@@ -8,6 +8,7 @@ import {
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@universe/api'
 import type { MobileState } from 'src/app/mobileReducer'
 import { BannerId, UNITAG_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { UNITAG_SUFFIX_NO_LEADING_DOT } from 'lx/src/features/unitags/constants'
@@ -15,6 +16,15 @@ import i18n from 'lx/src/i18n'
 import { UnitagScreens } from 'lx/src/types/screens/mobile'
 import { getValidAddress } from 'lx/src/utils/addresses'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { UNITAG_SUFFIX_NO_LEADING_DOT } from '@luxexchange/lx/src/features/unitags/constants'
+import i18n from '@luxexchange/lx/src/i18n'
+import { UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+>>>>>>> Stashed changes
 
 /**
  * Check if Unitag claim prompt should be shown.

@@ -1,10 +1,18 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, Text, useMedia } from 'ui/src'
 import { ActivityRenderData } from 'lx/src/features/activity/hooks/useActivityData'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, styled, Text, useMedia } from '@luxfi/ui/src'
+import { ActivityRenderData } from '@luxexchange/lx/src/features/activity/hooks/useActivityData'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { ValueWithFadedDecimals } from '~/pages/Portfolio/components/ValueWithFadedDecimals/ValueWithFadedDecimals'
 import { useSwapsThisWeek } from '~/pages/Portfolio/Overview/hooks/useSwapsThisWeek'
 

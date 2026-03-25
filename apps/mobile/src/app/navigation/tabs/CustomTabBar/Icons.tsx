@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { Home, Search, SearchFilled, TimePast } from 'ui/src/components/icons'
 import { iconSizes } from 'ui/src/theme'
 import { useSelectAddressHasNotifications } from 'lx/src/features/notifications/slice/hooks'
 import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { Home, Search, SearchFilled, TimePast } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { useSelectAddressHasNotifications } from '@luxexchange/lx/src/features/notifications/slice/hooks'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export const TabHomeIcon = ({ color, size }: { color: string; focused: boolean; size: number }): JSX.Element => (
   <Home size={size} fill={color} color={color} />

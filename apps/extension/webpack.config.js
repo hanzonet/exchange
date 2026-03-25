@@ -272,7 +272,7 @@ module.exports = (env) => {
                 {
                   loader: 'gui-loader',
                   options: {
-                    config: '../../packages/ui/src/gui.config.ts',
+                    config: '../../pkgs/ui/src/gui.config.ts',
                     components: ['ui'],
                     // add files here that should be parsed by the compiler from within any of the apps/*
                     // for example if you have constants.ts then constants.js goes here and it will eval them

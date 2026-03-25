@@ -1,8 +1,13 @@
 import { renderHook } from '@testing-library/react'
 import { useTransactionConfirmationTracker } from 'src/app/features/dappRequests/context/TransactionConfirmationTracker'
 import { useConditionalPreSignDelay } from 'src/app/features/dappRequests/hooks/useConditionalPreSignDelay'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 // Mock the TransactionConfirmationTracker hook
 jest.mock('src/app/features/dappRequests/context/TransactionConfirmationTracker', () => ({

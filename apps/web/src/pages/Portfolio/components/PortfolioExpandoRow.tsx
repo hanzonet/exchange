@@ -1,7 +1,7 @@
-import { Flex, FlexProps, Text, TextProps, TouchableArea } from 'ui/src'
-import { AnglesDownUp } from 'ui/src/components/icons/AnglesDownUp'
-import { SortVertical } from 'ui/src/components/icons/SortVertical'
-import { IconSizeTokens } from 'ui/src/theme'
+import { Flex, FlexProps, Text, TextProps, TouchableArea } from '@luxfi/ui/src'
+import { AnglesDownUp } from '@luxfi/ui/src/components/icons/AnglesDownUp'
+import { SortVertical } from '@luxfi/ui/src/components/icons/SortVertical'
+import { IconSizeTokens } from '@luxfi/ui/src/theme'
 
 interface PortfolioExpandoRowProps {
   isExpanded: boolean

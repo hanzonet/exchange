@@ -19,10 +19,17 @@ import {
   setRequiredForTransactions,
 } from 'src/features/biometricsSettings/slice'
 import { openSettings } from 'src/utils/linking'
+<<<<<<< Updated upstream
 import { Flex, Switch, Text, TouchableArea } from 'ui/src'
 import { Modal } from 'lx/src/components/modals/Modal'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { isAndroid, isIOS } from 'utilities/src/platform'
+=======
+import { Flex, Switch, Text, TouchableArea } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isAndroid, isIOS } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 interface BiometricAuthSetting {
   onValueChange: (newValue: boolean) => void

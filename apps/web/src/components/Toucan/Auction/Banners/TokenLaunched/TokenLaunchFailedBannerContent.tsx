@@ -1,9 +1,9 @@
 import { CSSProperties, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, useSporeColors } from 'ui/src'
-import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
-import { opacifyRaw, zIndexes } from 'ui/src/theme'
-import { luxUrls } from 'lx/src/constants/urls'
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { opacifyRaw, zIndexes } from '@luxfi/ui/src/theme'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TokenLaunchedBannerWrapper } from '~/components/Toucan/Auction/Banners/TokenLaunched/TokenLaunchedBannerWrapper'
 import { ExternalLink } from '~/theme/components/Links'
 

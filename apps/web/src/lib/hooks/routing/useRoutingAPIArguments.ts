@@ -1,8 +1,8 @@
 import { SkipToken, skipToken } from '@reduxjs/toolkit/query/react'
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { useMemo } from 'react'
-import { useIsMismatchAccountQuery } from 'lx/src/features/smartWallet/mismatch/hooks'
-import { useDEXPriorityOrderFlag } from 'lx/src/features/transactions/swap/utils/protocols'
+import { useIsMismatchAccountQuery } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { useDEXPriorityOrderFlag } from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
 import { useIsDEXSupportedChain } from '~/hooks/useIsDEXSupportedChain'
 import {
   createGetRoutingAPIArguments,

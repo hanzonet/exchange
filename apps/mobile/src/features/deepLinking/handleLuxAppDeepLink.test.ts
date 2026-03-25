@@ -5,6 +5,7 @@ import { handleTopTokensDeepLink } from 'src/features/deepLinking/handleTopToken
 import { handleLuxAppDeepLink } from 'src/features/deepLinking/handleLuxAppDeepLink'
 import { LinkSource } from 'src/features/deepLinking/types'
 import { openModal } from 'src/features/modals/modalSlice'
+<<<<<<< Updated upstream
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { fromLuxWebAppLink } from 'lx/src/features/chains/utils'
 import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from 'lx/src/features/search/utils'
@@ -16,6 +17,19 @@ import { WidgetType } from 'lx/src/types/widgets'
 import { buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
 import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
 import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+=======
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromLuxWebAppLink } from '@luxexchange/lx/src/features/chains/utils'
+import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from '@luxexchange/lx/src/features/search/utils'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { ShareableEntity } from '@luxexchange/lx/src/types/sharing'
+import { WidgetType } from '@luxexchange/lx/src/types/widgets'
+import { buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
+>>>>>>> Stashed changes
 
 const account = signerMnemonicAccount()
 const SAMPLE_CONTRACT_ADDRESS = '0x1234567890abcdef1234567890abcdef12345678'

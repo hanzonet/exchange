@@ -12,6 +12,7 @@ import { Screen } from 'src/components/layout/Screen'
 import { useBiometricAppSpeedBump } from 'src/features/biometrics/useBiometricAppSpeedBump'
 import { useLockScreenOnBlur } from 'src/features/lockScreen/hooks/useLockScreenOnBlur'
 import { PrivateKeyDisplay } from 'src/screens/ViewPrivateKeys/PrivateKeyView/PrivateKeyDisplay'
+<<<<<<< Updated upstream
 import { Button, Flex, GeneratedIcon, IconButton, Spacer, Text } from 'ui/src'
 import { Eye, Key, Laptop } from 'ui/src/components/icons'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
@@ -25,6 +26,21 @@ import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { logger } from 'utilities/src/logger/logger'
 import { setHasCopiedPrivateKeys } from 'wallet/src/features/behaviorHistory/slice'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, GeneratedIcon, IconButton, Spacer, Text } from '@luxfi/ui/src'
+import { Eye, Key, Laptop } from '@luxfi/ui/src/components/icons'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { HiddenWordView } from '@luxfi/ui/src/components/placeholders/HiddenWordView'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { setHasCopiedPrivateKeys } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<AppStackParamList, MobileScreens.ViewPrivateKeys>
 

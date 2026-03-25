@@ -2,9 +2,9 @@ import { FlashList } from '@shopify/flash-list'
 import { default as React, useCallback, useMemo } from 'react'
 import { SectionData, SectionInfo, SettingsListProps } from 'src/components/Settings/lists/types'
 import { SETTINGS_ROW_HEIGHT, SettingsSection } from 'src/components/Settings/SettingsRow'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { spacing } from 'ui/src/theme'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing } from '@luxfi/ui/src/theme'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
 
 export function SettingsFlashList({
   sections,

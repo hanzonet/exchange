@@ -3,11 +3,11 @@ import { default as React } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Loader } from 'src/components/loading/loaders'
 import { PriceAmount } from 'src/features/nfts/collection/ListPriceCard'
-import { Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { RotatableChevron, Verified } from 'ui/src/components/icons'
-import { imageSizes, spacing } from 'ui/src/theme'
-import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
-import { NFTItem } from 'lx/src/features/nfts/types'
+import { Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { RotatableChevron, Verified } from '@luxfi/ui/src/components/icons'
+import { imageSizes, spacing } from '@luxfi/ui/src/theme'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
+import { NFTItem } from '@luxexchange/lx/src/features/nfts/types'
 
 type Collection = NonNullable<
   NonNullable<NonNullable<GraphQLApi.NftItemScreenQuery['nftAssets']>>['edges'][0]

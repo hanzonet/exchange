@@ -8,22 +8,22 @@ import {
   NotificationPermission,
   useNotificationOSPermissionsEnabled,
 } from 'src/features/notifications/hooks/useNotificationOSPermissionsEnabled'
-import { Flex, useIsDarkMode } from 'ui/src'
+import { Flex, useIsDarkMode } from '@luxfi/ui/src'
 import {
   BRIDGED_ASSETS_CARD_BANNER,
   BRIDGED_ASSETS_V2_CARD_BANNER_DARK,
   BRIDGED_ASSETS_V2_CARD_BANNER_LIGHT,
   PUSH_NOTIFICATIONS_CARD_BANNER,
-} from 'ui/src/assets'
-import { Buy } from 'ui/src/components/icons'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ElementName, ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { OnboardingCardLoggingName } from 'lx/src/features/telemetry/types'
-import { CurrencyField } from 'lx/src/types/currency'
-import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
-import { MobileScreens, OnboardingScreens, UnitagScreens } from 'lx/src/types/screens/mobile'
+} from '@luxfi/ui/src/assets'
+import { Buy } from '@luxfi/ui/src/components/icons'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName, ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { OnboardingCardLoggingName } from '@luxexchange/lx/src/features/telemetry/types'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens, UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
 import {
   CardType,
   IntroCardGraphicType,

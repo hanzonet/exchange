@@ -5,6 +5,7 @@ import { createColumnHelper } from '@tanstack/react-table'
 import { GraphQLApi } from '@universe/api'
 import { memo, useMemo, useReducer, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, styled, Text, useMedia } from 'ui/src'
 import { getChainInfo } from 'lx/src/features/chains/chainInfo'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -13,6 +14,16 @@ import { useLocalizationContext } from 'lx/src/features/language/LocalizationCon
 import { ExplorerDataType, getExplorerLink } from 'lx/src/utils/linking'
 import { shortenAddress } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, styled, Text, useMedia } from '@luxfi/ui/src'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ExplorerDataType, getExplorerLink } from '@luxexchange/lx/src/utils/linking'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import {
   BETypeToTransactionType,
   getTransactionTypeTranslation,

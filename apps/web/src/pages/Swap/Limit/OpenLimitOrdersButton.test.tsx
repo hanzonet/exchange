@@ -1,11 +1,16 @@
+<<<<<<< Updated upstream
 import { TradingApi } from '@universe/api'
 import { UniverseChainId } from 'lx/src/features/chains/types'
+=======
+import { TradingApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+>>>>>>> Stashed changes
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { useOpenLimitOrders } from '~/components/AccountDrawer/MiniPortfolio/Activity/hooks'
 import { OpenLimitOrdersButton } from '~/pages/Swap/Limit/OpenLimitOrdersButton'
 import { mocked } from '~/test-utils/mocked'

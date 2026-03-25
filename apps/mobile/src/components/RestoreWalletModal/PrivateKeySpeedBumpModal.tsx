@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { AppStackScreenProp } from 'src/app/navigation/types'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
+<<<<<<< Updated upstream
 import { Button, Flex, IconButton, InlineCard, Text, useSporeColors } from 'ui/src'
 import { AlertTriangleFilled, Key } from 'ui/src/components/icons'
 import { Modal } from 'lx/src/components/modals/Modal'
@@ -11,6 +12,17 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { openUri } from 'lx/src/utils/linking'
 import { SPACE_STRING } from 'utilities/src/primitives/string'
+=======
+import { Button, Flex, IconButton, InlineCard, Text, useSporeColors } from '@luxfi/ui/src'
+import { AlertTriangleFilled, Key } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { SPACE_STRING } from '@luxfi/utilities/src/primitives/string'
+>>>>>>> Stashed changes
 
 /**
  * This modal is used as an informational speedbump before the user

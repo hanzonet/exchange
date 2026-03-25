@@ -1,10 +1,17 @@
 import { useCallback, useEffect } from 'react'
 import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { Password } from 'src/app/features/onboarding/Password'
+<<<<<<< Updated upstream
 import { ExtensionOnboardingFlow } from 'lx/src/types/screens/extension'
 import { logger } from 'utilities/src/logger/logger'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { validateMnemonic } from 'wallet/src/utils/mnemonics'
+=======
+import { ExtensionOnboardingFlow } from '@luxexchange/lx/src/types/screens/extension'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { validateMnemonic } from '@luxfi/wallet/src/utils/mnemonics'
+>>>>>>> Stashed changes
 
 export function PasswordImport({
   flow,

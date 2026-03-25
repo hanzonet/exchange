@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import { Button, ButtonEmphasis, ButtonVariant, Flex, Square, Text } from 'ui/src'
+import { Button, ButtonEmphasis, ButtonVariant, Flex, Square, Text } from '@luxfi/ui/src'
 
 type SettingsRecoveryPhraseProps = {
   title: string

@@ -1,15 +1,22 @@
 import { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 import { Trans } from 'react-i18next'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import {
   FORMAT_DATE_TIME_SHORT,
   useFormattedDateTime,
   useLocalizedDayjs,
+<<<<<<< Updated upstream
 } from 'lx/src/features/language/localizedDayjs'
 import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
 import { ellipseMiddle } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
+=======
+} from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ellipseMiddle } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { DetailLineItem, LineItemData } from '~/components/swap/DetailLineItem'
 import TradePrice from '~/components/swap/TradePrice'
 import { ExternalLink } from '~/theme/components/Links'

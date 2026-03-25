@@ -8,22 +8,23 @@ import { SEND_CONTENT_RENDER_DELAY_MS } from 'src/features/send/constants'
 import { SendFormButton } from 'src/features/send/SendFormButton'
 import { SendHeader } from 'src/features/send/SendHeader'
 import { SendTokenForm } from 'src/features/send/SendTokenForm'
-import { Flex, useSporeColors } from 'ui/src'
-import { Eye } from 'ui/src/components/icons'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { TokenSelectorModal, TokenSelectorVariation } from 'lx/src/components/TokenSelector/TokenSelector'
-import { TokenSelectorFlow } from 'lx/src/components/TokenSelector/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { Eye } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { TokenSelectorModal, TokenSelectorVariation } from '@luxexchange/lx/src/components/TokenSelector/TokenSelector'
+import { TokenSelectorFlow } from '@luxexchange/lx/src/components/TokenSelector/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import {
   TransactionModalFooterContainer,
   TransactionModalInnerContainer,
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
 import {
   TransactionScreen,
   useTransactionModalContext,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { CompatibleAddressModal } from 'lx/src/features/transactions/modals/CompatibleAddressModal'
 import { LowNativeBalanceModal } from 'lx/src/features/transactions/modals/LowNativeBalanceModal'
@@ -31,6 +32,15 @@ import { CurrencyField } from 'lx/src/types/currency'
 import { createTransactionId } from 'lx/src/utils/createTransactionId'
 import { useActiveAddresses } from 'wallet/src/features/accounts/store/hooks'
 import { useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
+=======
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { CompatibleAddressModal } from '@luxexchange/lx/src/features/transactions/modals/CompatibleAddressModal'
+import { LowNativeBalanceModal } from '@luxexchange/lx/src/features/transactions/modals/LowNativeBalanceModal'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { createTransactionId } from '@luxexchange/lx/src/utils/createTransactionId'
+import { useActiveAddresses } from '@luxfi/wallet/src/features/accounts/store/hooks'
+import { useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
+>>>>>>> Stashed changes
 
 function useGoToReviewScreen(): () => void {
   const { updateSendForm } = useSendContext()

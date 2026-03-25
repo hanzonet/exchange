@@ -1,4 +1,5 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
+<<<<<<< Updated upstream
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { FeeAmount } from '@luxamm/v3-sdk'
 import { LiquidityEventName } from 'lx/src/features/telemetry/constants'
@@ -6,6 +7,15 @@ import { LiquidityAnalyticsProperties } from 'lx/src/features/telemetry/types'
 import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
 import { currencyId, currencyIdToAddress } from 'lx/src/utils/currencyId'
 import { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+=======
+import { Currency, CurrencyAmount } from '@luxfi/amm-core'
+import { FeeAmount } from '@luxfi/amm-v3'
+import { LiquidityEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { LiquidityAnalyticsProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { currencyId, currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+>>>>>>> Stashed changes
 
 export function getLPBaseAnalyticsProperties({
   trace,

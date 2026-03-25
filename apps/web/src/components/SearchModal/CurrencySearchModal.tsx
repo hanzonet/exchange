@@ -1,13 +1,13 @@
 import { Currency } from '@uniswap/sdk-core'
 import { memo } from 'react'
-import { Modal } from 'lx/src/components/modals/Modal'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
 import {
   TOKEN_SELECTOR_WEB_MAX_WIDTH,
   TokenSelectorVariation,
-} from 'lx/src/components/TokenSelector/TokenSelector'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/components/TokenSelector/TokenSelector'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import { SwitchNetworkAction } from '~/components/Popups/types'
 import { CurrencySearch } from '~/components/SearchModal/CurrencySearch'
 

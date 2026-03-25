@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
 import { SigningCapability } from 'lx/src/features/accounts/store/types/Wallet'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
+=======
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { SigningCapability } from '@luxexchange/lx/src/features/accounts/store/types/Wallet'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+>>>>>>> Stashed changes
 import { useRecentConnectorId } from '~/components/Web3Provider/constants'
 import { createAccountsStoreGetters } from '~/features/accounts/store/getters'
 import { useAccountsStore } from '~/features/accounts/store/hooks'

@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+>>>>>>> Stashed changes
 import { supportedChainIdFromGQLChain } from '~/appGraphql/data/chainUtils'
 
 export function getNativeTokenDBAddress(chain: GraphQLApi.Chain): string | undefined {

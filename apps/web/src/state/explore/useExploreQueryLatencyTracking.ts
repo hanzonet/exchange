@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 type ExploreQueryType = 'tokens' | 'pools'
 

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, styled, Text, useIsDarkMode, useSporeColors } from 'ui/src'
+import { Flex, styled, Text, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
 import { ChartTooltip } from '~/components/Charts/ChartTooltip'
 import { MissingDataBars } from '~/components/Table/icons'
 

@@ -6,6 +6,7 @@ import { Token } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@universe/api'
 import { useMemo, useReducer, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text, useMedia } from 'ui/src'
 import { getChainInfo } from 'lx/src/features/chains/chainInfo'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -16,6 +17,18 @@ import { areAddressesEqual } from 'lx/src/utils/addresses'
 import { ExplorerDataType, getExplorerLink } from 'lx/src/utils/linking'
 import { shortenAddress } from 'utilities/src/addresses'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text, useMedia } from '@luxfi/ui/src'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { ExplorerDataType, getExplorerLink } from '@luxexchange/lx/src/utils/linking'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import {
   getTokenTransactionTypeTranslation,
   TokenTransactionType,

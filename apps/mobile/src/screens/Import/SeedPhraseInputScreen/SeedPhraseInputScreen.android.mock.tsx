@@ -8,6 +8,7 @@ import { useLockScreenOnBlur } from 'src/features/lockScreen/hooks/useLockScreen
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
 import { onRestoreComplete } from 'src/screens/Import/onRestoreComplete'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Button, Flex, Text, TouchableArea } from 'ui/src'
 import { QuestionInCircleFilled } from 'ui/src/components/icons'
 import { luxUrls } from 'lx/src/constants/urls'
@@ -20,6 +21,20 @@ import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingC
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
 import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+=======
+import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { QuestionInCircleFilled } from '@luxfi/ui/src/components/icons'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+>>>>>>> Stashed changes
 import {
   MnemonicValidationError,
   translateMnemonicErrorMessage,

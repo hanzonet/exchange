@@ -1,5 +1,5 @@
-import { useSporeColors } from 'ui/src'
-import { opacify } from 'ui/src/theme'
+import { useSporeColors } from '@luxfi/ui/src'
+import { opacify } from '@luxfi/ui/src/theme'
 
 // Gradient colors for in-range bids (from Figma)
 export const GRADIENT_START_COLOR = '#21c95e'

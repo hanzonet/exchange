@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { useOpenReceiveModal } from 'src/features/modals/hooks/useOpenReceiveModal'
 import { openModal } from 'src/features/modals/modalSlice'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
 import { ArrowDownCircle, Bank, MinusCircle, PlusCircle, SendAction, SwapDotted } from 'ui/src/components/icons'
 import { iconSizes, spacing } from 'ui/src/theme'
@@ -19,6 +20,21 @@ import { selectFilteredChainIds } from 'lx/src/features/transactions/swap/state/
 import { prepareSwapFormState } from 'lx/src/features/transactions/types/transactionState'
 import { CurrencyField } from 'lx/src/types/currency'
 import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+import { Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { ArrowDownCircle, Bank, MinusCircle, PlusCircle, SendAction, SwapDotted } from '@luxfi/ui/src/components/icons'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useHighestBalanceNativeCurrencyId } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { useHapticFeedback } from '@luxexchange/lx/src/features/settings/useHapticFeedback/useHapticFeedback'
+import { ElementName, MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useIsPortfolioZero } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsPortfolioZero'
+import { selectFilteredChainIds } from '@luxexchange/lx/src/features/transactions/swap/state/selectors'
+import { prepareSwapFormState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const MIN_BUTTON_WIDTH = 102
 

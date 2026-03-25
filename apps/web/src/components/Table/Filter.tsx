@@ -1,6 +1,6 @@
 import { RefObject, useCallback, useRef } from 'react'
-import { Checkbox, Flex, styled, Text, useMedia } from 'ui/src'
-import { SortVertical } from 'ui/src/components/icons/SortVertical'
+import { Checkbox, Flex, styled, Text, useMedia } from '@luxfi/ui/src'
+import { SortVertical } from '@luxfi/ui/src/components/icons/SortVertical'
 import { Portal } from '~/components/Popups/Portal'
 import { useOnClickOutside } from '~/hooks/useOnClickOutside'
 

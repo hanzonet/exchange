@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { Pin, X } from 'ui/src/components/icons'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Pin, X } from '@luxfi/ui/src/components/icons'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 const POPUP_WIDTH = 240
 const POPUP_OFFSET = 4

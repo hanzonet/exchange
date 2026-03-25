@@ -1,4 +1,4 @@
-import { nearestUsableTick, TickMath } from '@luxamm/v3-sdk'
+import { nearestUsableTick, TickMath } from '@luxfi/amm-v3'
 import { useMemo } from 'react'
 
 export enum Bound {

@@ -3,6 +3,7 @@ import { createContext, PropsWithChildren, useCallback, useContext, useMemo, use
 import { useDispatch } from 'react-redux'
 import { AppStackParamList } from 'src/app/navigation/types'
 import { useTokenDetailsColors } from 'src/components/TokenDetails/useTokenDetailsColors'
+<<<<<<< Updated upstream
 import { setHasViewedContractAddressExplainer } from 'lx/src/features/behaviorHistory/slice'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -14,6 +15,19 @@ import { CurrencyField } from 'lx/src/types/currency'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { currencyIdToAddress, currencyIdToChain } from 'lx/src/utils/currencyId'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
+=======
+import { setHasViewedContractAddressExplainer } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType, CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { currencyIdToAddress, currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+>>>>>>> Stashed changes
 
 type TokenDetailsContextState = {
   currencyId: string

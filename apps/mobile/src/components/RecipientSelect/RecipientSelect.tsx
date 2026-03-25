@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { TextInput } from 'react-native'
 import { KeyboardAvoidingView } from 'react-native-keyboard-controller'
 import { RecipientScanModal } from 'src/components/RecipientSelect/RecipientScanModal'
+<<<<<<< Updated upstream
 import { Flex, flexStyles, Loader, Text, TouchableArea } from 'ui/src'
 import { Scan, UserSearch } from 'ui/src/components/icons'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -13,6 +14,18 @@ import { useFilteredRecipientSections } from 'wallet/src/components/RecipientSea
 import { RecipientList } from 'wallet/src/components/RecipientSearch/RecipientList'
 import { RecipientSelectSpeedBumps } from 'wallet/src/components/RecipientSearch/RecipientSelectSpeedBumps'
 import { SearchBar } from 'wallet/src/features/search/SearchBar'
+=======
+import { Flex, flexStyles, Loader, Text, TouchableArea } from '@luxfi/ui/src'
+import { Scan, UserSearch } from '@luxfi/ui/src/components/icons'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { isIOS } from '@luxfi/utilities/src/platform'
+import { useFilteredRecipientSections } from '@luxfi/wallet/src/components/RecipientSearch/hooks'
+import { RecipientList } from '@luxfi/wallet/src/components/RecipientSearch/RecipientList'
+import { RecipientSelectSpeedBumps } from '@luxfi/wallet/src/components/RecipientSearch/RecipientSelectSpeedBumps'
+import { SearchBar } from '@luxfi/wallet/src/features/search/SearchBar'
+>>>>>>> Stashed changes
 
 interface RecipientSelectProps {
   onSelectRecipient: (newRecipientAddress: string) => void

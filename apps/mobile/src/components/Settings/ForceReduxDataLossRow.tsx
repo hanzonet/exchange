@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import { DevSettings } from 'react-native'
 import { MMKV } from 'react-native-mmkv'
+<<<<<<< Updated upstream
 import { Flex, type IconProps, Text, TouchableArea } from 'ui/src'
 import { RotatableChevron, LuxLogo } from 'ui/src/components/icons'
 import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
 import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { Flex, type IconProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { RotatableChevron, LuxLogo } from '@luxfi/ui/src/components/icons'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 
 /**
  * Dev tool to simulate complete Redux data loss while keeping Keyring intact.

@@ -7,6 +7,7 @@ import { LinkSource } from 'src/features/deepLinking/types'
 import { dismissAllModalsBeforeNavigation } from 'src/features/deepLinking/utils'
 import { openModal } from 'src/features/modals/modalSlice'
 import { call, put, select } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { fromLuxWebAppLink } from 'lx/src/features/chains/utils'
 import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from 'lx/src/features/search/utils'
 import { MobileEventName, ModalName } from 'lx/src/features/telemetry/constants'
@@ -17,6 +18,18 @@ import { WidgetType } from 'lx/src/types/widgets'
 import { buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
 import { selectAccounts, selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
 import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
+=======
+import { fromLuxWebAppLink } from '@luxexchange/lx/src/features/chains/utils'
+import { BACKEND_NATIVE_CHAIN_ADDRESS_STRING } from '@luxexchange/lx/src/features/search/utils'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { ShareableEntity } from '@luxexchange/lx/src/types/sharing'
+import { WidgetType } from '@luxexchange/lx/src/types/widgets'
+import { buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { selectAccounts, selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 const NFT_ITEM_SHARE_LINK_HASH_REGEX = /^(#\/)?nfts\/asset\/(0x[a-fA-F0-9]{40})\/(\d+)$/
 const NFT_COLLECTION_SHARE_LINK_HASH_REGEX = /^(#\/)?nfts\/collection\/(0x[a-fA-F0-9]{40})$/

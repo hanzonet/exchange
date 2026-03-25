@@ -1,25 +1,31 @@
 import { VersionedTransaction } from '@solana/web3.js'
 import { JupiterExecuteResponse, TradingApi } from '@universe/api'
 import { call, delay, spawn } from 'typed-redux-saga'
-import { JupiterApiClient } from 'lx/src/data/apiClients/jupiterApi/JupiterFetchClient'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { refetchRestQueriesViaOnchainOverrideVariant } from 'lx/src/features/portfolio/portfolioUpdates/rest/refetchRestQueriesViaOnchainOverrideVariantSaga'
-import { SwapEventName } from 'lx/src/features/telemetry/constants/features'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { JupiterExecuteError } from 'lx/src/features/transactions/errors'
-import { addTransaction } from 'lx/src/features/transactions/slice'
-import { ExtractedBaseTradeAnalyticsProperties } from 'lx/src/features/transactions/swap/analytics'
-import { SolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
-import { ValidatedSolanaSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { SwapEventType, timestampTracker } from 'lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
+import { JupiterApiClient } from '@luxexchange/lx/src/data/apiClients/jupiterApi/JupiterFetchClient'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { refetchRestQueriesViaOnchainOverrideVariant } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/rest/refetchRestQueriesViaOnchainOverrideVariantSaga'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants/features'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { JupiterExecuteError } from '@luxexchange/lx/src/features/transactions/errors'
+import { addTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { ExtractedBaseTradeAnalyticsProperties } from '@luxexchange/lx/src/features/transactions/swap/analytics'
+import { SolanaTrade } from '@luxexchange/lx/src/features/transactions/swap/types/solana'
+import { ValidatedSolanaSwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { SwapEventType, timestampTracker } from '@luxexchange/lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
 import {
   InterfaceBaseTransactionDetails,
   SolanaTransactionDetails,
   TransactionOriginType,
   TransactionStatus,
+<<<<<<< Updated upstream
 } from 'lx/src/features/transactions/types/transactionDetails'
 import { tryCatch } from 'utilities/src/errors'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { tryCatch } from '@luxfi/utilities/src/errors'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
 import { signSolanaTransactionWithCurrentWallet } from '~/components/Web3Provider/signSolanaTransaction'

@@ -1,8 +1,8 @@
 import React from 'react'
 import { FadeIn, FadeOut, useAnimatedStyle, withTiming } from 'react-native-reanimated'
-import { ColorTokens, Flex, Text, TouchableArea } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
+import { ColorTokens, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
 
 export const BANNER_HEIGHT = 45
 

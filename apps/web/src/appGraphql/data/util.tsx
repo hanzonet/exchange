@@ -1,6 +1,7 @@
 import { DeepPartial } from '@apollo/client/utilities'
 import { DataTag, DefaultError, QueryKey, queryOptions, UndefinedInitialDataOptions } from '@tanstack/react-query'
 import { Currency } from '@uniswap/sdk-core'
+<<<<<<< Updated upstream
 import { GraphQLApi } from '@universe/api'
 import { ColorTokens } from 'ui/src'
 import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from 'lx/src/constants/tokens'
@@ -9,6 +10,16 @@ import { isUniverseChainId, toGraphQLChain, toSupportedChainId } from 'lx/src/fe
 import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
 import { FORSupportedToken } from 'lx/src/features/fiatOnRamp/types'
 import { areAddressesEqual } from 'lx/src/utils/addresses'
+=======
+import { GraphQLApi } from '@luxexchange/api'
+import { ColorTokens } from '@luxfi/ui/src'
+import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
+import { GqlChainId, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isUniverseChainId, toGraphQLChain, toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { buildCurrency } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { FORSupportedToken } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+>>>>>>> Stashed changes
 import { NATIVE_CHAIN_ID } from '~/constants/tokens'
 import { ExploreTab } from '~/pages/Explore/constants'
 import { TokenStat } from '~/state/explore/types'

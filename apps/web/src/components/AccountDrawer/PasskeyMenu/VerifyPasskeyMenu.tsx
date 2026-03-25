@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text } from 'ui/src'
-import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { ShieldCheck } from '@luxfi/ui/src/components/icons/ShieldCheck'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { GenericPasskeyMenuModal } from '~/components/AccountDrawer/PasskeyMenu/PasskeyMenuModal'
 
 export function VerifyPasskeyMenu({

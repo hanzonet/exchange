@@ -1,5 +1,5 @@
-import { Flex, styled } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, styled } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 const MOBILE_BAR_MAX_HEIGHT = 100 // ensure that it's translated out of view on scroll
 

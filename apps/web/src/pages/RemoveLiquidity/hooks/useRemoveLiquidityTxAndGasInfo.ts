@@ -17,6 +17,7 @@ import {
 import { Currency } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { useEffect, useMemo, useState } from 'react'
+<<<<<<< Updated upstream
 import { liquidityQueries } from 'lx/src/data/apiClients/liquidityService/liquidityQueries'
 import { getTradeSettingsDeadline } from 'lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
 import { toSupportedChainId } from 'lx/src/features/chains/utils'
@@ -28,6 +29,19 @@ import { getErrorMessageToDisplay, parseErrorMessageTitle } from 'lx/src/feature
 import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
+import { getTradeSettingsDeadline } from '@luxexchange/lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { useTransactionGasFee, useUSDCurrencyAmountOfGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useTransactionSettingsStore } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { PositionInfo } from '~/components/Liquidity/types'
 import { getTokenOrZeroAddress } from '~/components/Liquidity/utils/currency'
 import { getProtocols } from '~/components/Liquidity/utils/protocolVersion'

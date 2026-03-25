@@ -28,6 +28,7 @@ import { SortButton } from 'src/components/explore/SortButton'
 import { TokenItem } from 'src/components/explore/TokenItem'
 import { TokenItemData } from 'src/components/explore/TokenItemData'
 import { getTokenMetadataDisplayType } from 'src/features/explore/utils'
+<<<<<<< Updated upstream
 import { Flex, Loader, Text } from 'ui/src'
 import { AnimatedBottomSheetFlashList } from 'ui/src/components/AnimatedFlashList/AnimatedFlashList'
 import { NoTokens } from 'ui/src/components/icons'
@@ -47,6 +48,27 @@ import { useInitialLoadingState } from 'utilities/src/react/useInitialLoadingSta
 import { selectTokensOrderBy } from 'wallet/src/features/wallet/selectors'
 import { setTokensOrderBy } from 'wallet/src/features/wallet/slice'
 import { ExploreOrderBy, TokenMetadataDisplayType } from 'wallet/src/features/wallet/types'
+=======
+import { Flex, Loader, Text } from '@luxfi/ui/src'
+import { AnimatedBottomSheetFlashList } from '@luxfi/ui/src/components/AnimatedFlashList/AnimatedFlashList'
+import { NoTokens } from '@luxfi/ui/src/components/icons'
+import { spacing } from '@luxfi/ui/src/theme'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { useTokenRankingsQuery } from '@luxexchange/lx/src/data/rest/tokenRankings'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { DDRumManualTiming } from '@luxfi/utilities/src/logger/datadog/datadogEvents'
+import { usePerformanceLogger } from '@luxfi/utilities/src/logger/usePerformanceLogger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useInitialLoadingState } from '@luxfi/utilities/src/react/useInitialLoadingState'
+import { selectTokensOrderBy } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setTokensOrderBy } from '@luxfi/wallet/src/features/wallet/slice'
+import { ExploreOrderBy, TokenMetadataDisplayType } from '@luxfi/wallet/src/features/wallet/types'
+>>>>>>> Stashed changes
 
 const TOKEN_ITEM_SIZE = 68
 const AMOUNT_TO_DRAW = 18

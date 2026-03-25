@@ -1,8 +1,13 @@
 import { Alert } from 'react-native'
 import { isCloudStorageAvailable } from 'src/features/CloudBackup/RNCloudStorageBackupsManager'
 import { openSettings } from 'src/utils/linking'
+<<<<<<< Updated upstream
 import { AppTFunction } from 'ui/src/i18n/types'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import { AppTFunction } from '@luxfi/ui/src/i18n/types'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 /**
  * Checks whether cloud backup (iCloud/GDrive) is available. Otherwise we

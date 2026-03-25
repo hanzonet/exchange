@@ -1,15 +1,21 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import React, { ReactNode } from 'react'
 import { Trans } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { Flex } from '@luxfi/ui/src'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import {
   FORMAT_DATE_TIME_MEDIUM,
   useFormattedDateTime,
   useLocalizedDayjs,
+<<<<<<< Updated upstream
 } from 'lx/src/features/language/localizedDayjs'
 import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { NumberType } from 'utilities/src/format/types'
+=======
+} from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import Row from '~/components/deprecated/Row'
 import { LoadingRow } from '~/components/Loader/styled'
 import { DetailLineItem, LineItemData } from '~/components/swap/DetailLineItem'

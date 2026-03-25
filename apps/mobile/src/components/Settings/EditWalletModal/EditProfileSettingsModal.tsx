@@ -8,6 +8,7 @@ import { AppStackScreenProp } from 'src/app/navigation/types'
 import { BackHeader } from 'src/components/layout/BackHeader'
 import { useReactNavigationModal } from 'src/components/modals/useReactNavigationModal'
 import { navigateBackFromEditingWallet } from 'src/components/Settings/EditWalletModal/EditWalletNavigation'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { Ellipsis } from 'ui/src/components/icons'
 import { Modal } from 'lx/src/components/modals/Modal'
@@ -19,6 +20,19 @@ import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNati
 import { ChangeUnitagModal } from 'wallet/src/features/unitags/ChangeUnitagModal'
 import { DeleteUnitagModal } from 'wallet/src/features/unitags/DeleteUnitagModal'
 import { EditUnitagProfileContent } from 'wallet/src/features/unitags/EditUnitagProfileContent'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { Ellipsis } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useBottomSheetSafeKeyboard } from '@luxexchange/lx/src/components/modals/useBottomSheetSafeKeyboard'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { ChangeUnitagModal } from '@luxfi/wallet/src/features/unitags/ChangeUnitagModal'
+import { DeleteUnitagModal } from '@luxfi/wallet/src/features/unitags/DeleteUnitagModal'
+import { EditUnitagProfileContent } from '@luxfi/wallet/src/features/unitags/EditUnitagProfileContent'
+>>>>>>> Stashed changes
 
 export function EditProfileSettingsModal({
   route,

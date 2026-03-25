@@ -2,8 +2,8 @@ import { GasFeeResult } from '@universe/api'
 import { useTranslation } from 'react-i18next'
 import { DappRequestContent } from 'src/app/features/dappRequests/DappRequestContent'
 import { Permit2ApproveSendTransactionRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
-import { Flex, Text } from 'ui/src'
-import { TransactionType, TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { Flex, Text } from '@luxfi/ui/src'
+import { TransactionType, TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 interface Permit2ApproveRequestContentProps {
   transactionGasFeeResult: GasFeeResult

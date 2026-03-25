@@ -1,7 +1,7 @@
 import { Trans } from 'react-i18next'
-import { Text } from 'ui/src'
-import { luxUrls } from 'lx/src/constants/urls'
-import { openUri } from 'lx/src/utils/linking'
+import { Text } from '@luxfi/ui/src'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
 
 export function TermsOfService(): JSX.Element {
   return (

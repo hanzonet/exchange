@@ -1,9 +1,16 @@
 /* eslint-disable max-lines */
 import { RankingType } from '@luxfi/api'
+<<<<<<< Updated upstream
 import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
 import { Language } from 'lx/src/features/language/constants'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+=======
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+>>>>>>> Stashed changes
 
 // only add fields that are persisted
 export const initialSchema = {

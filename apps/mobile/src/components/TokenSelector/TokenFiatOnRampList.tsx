@@ -2,6 +2,7 @@ import { BottomSheetSectionList } from '@gorhom/bottom-sheet'
 import React, { memo, useCallback, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ListRenderItemInfo } from 'react-native'
+<<<<<<< Updated upstream
 import { Flex, Inset, Loader } from 'ui/src'
 import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
 import { TokenOptionItem } from 'lx/src/components/lists/items/tokens/TokenOptionItem'
@@ -15,6 +16,21 @@ import { useDismissedTokenWarnings } from 'lx/src/features/tokens/warnings/slice
 import { ListSeparatorToggle } from 'lx/src/features/transactions/TransactionDetails/ListSeparatorToggle'
 import { CurrencyId } from 'lx/src/types/currency'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Inset, Loader } from '@luxfi/ui/src'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { TokenOptionItem } from '@luxexchange/lx/src/components/lists/items/tokens/TokenOptionItem'
+import { OnchainItemListOptionType, TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { FiatOnRampCurrency, FORCurrencyOrBalance } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { getUnsupportedFORTokensWithBalance, isSupportedFORCurrency } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getTokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { useDismissedTokenWarnings } from '@luxexchange/lx/src/features/tokens/warnings/slice/hooks'
+import { ListSeparatorToggle } from '@luxexchange/lx/src/features/transactions/TransactionDetails/ListSeparatorToggle'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 
 interface Props {
   onSelectCurrency: (currency: FiatOnRampCurrency) => void

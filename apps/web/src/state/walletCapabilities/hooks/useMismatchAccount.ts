@@ -1,6 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit'
 import { FeatureFlags, useFeatureFlag } from '@universe/gating'
 import { useRef } from 'react'
+<<<<<<< Updated upstream
 import { selectHasShownMismatchToast } from 'lx/src/features/behaviorHistory/selectors'
 import { setHasShownMismatchToast } from 'lx/src/features/behaviorHistory/slice'
 import { createHasMismatchUtil, type HasMismatchUtil } from 'lx/src/features/smartWallet/mismatch/mismatch'
@@ -8,6 +9,15 @@ import { LuxEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { selectHasShownMismatchToast } from '@luxexchange/lx/src/features/behaviorHistory/selectors'
+import { setHasShownMismatchToast } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { createHasMismatchUtil, type HasMismatchUtil } from '@luxexchange/lx/src/features/smartWallet/mismatch/mismatch'
+import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
 import { useAppDispatch, useAppSelector } from '~/state/hooks'

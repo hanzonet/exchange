@@ -12,7 +12,7 @@ import { ThemeToggleWithLabel } from 'src/app/features/settings/ThemeToggle'
 import { AppRoutes, SettingsRoutes } from 'src/app/navigation/constants'
 import { useExtensionNavigation } from 'src/app/navigation/utils'
 import { getIsDefaultProviderFromStorage, setIsDefaultProviderToStorage } from 'src/app/utils/provider'
-import { Button, Flex, ScrollView, Text } from 'ui/src'
+import { Button, Flex, ScrollView, Text } from '@luxfi/ui/src'
 import {
   ArrowUpRight,
   Chart,
@@ -26,19 +26,20 @@ import {
   Settings,
   Sliders,
   Wrench,
-} from 'ui/src/components/icons'
-import { luxUrls } from 'lx/src/constants/urls'
-import { resetLuxBehaviorHistory } from 'lx/src/features/behaviorHistory/slice'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { FiatCurrency, ORDERED_CURRENCIES } from 'lx/src/features/fiatCurrency/constants'
-import { getFiatCurrencyName, useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { Language, WALLET_SUPPORTED_LANGUAGES } from 'lx/src/features/language/constants'
-import { getLanguageInfo, useCurrentLanguageInfo } from 'lx/src/features/language/hooks'
-import { PasskeyManagementModal } from 'lx/src/features/passkey/PasskeyManagementModal'
+} from '@luxfi/ui/src/components/icons'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { resetLuxBehaviorHistory } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { FiatCurrency, ORDERED_CURRENCIES } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { getFiatCurrencyName, useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { Language, WALLET_SUPPORTED_LANGUAGES } from '@luxexchange/lx/src/features/language/constants'
+import { getLanguageInfo, useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { PasskeyManagementModal } from '@luxexchange/lx/src/features/passkey/PasskeyManagementModal'
 import {
   setCurrentFiatCurrency,
   setCurrentLanguage,
   setIsTestnetModeEnabled,
+<<<<<<< Updated upstream
 } from 'lx/src/features/settings/slice'
 import { WalletEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
@@ -58,6 +59,27 @@ import { resetWalletBehaviorHistory } from 'wallet/src/features/behaviorHistory/
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
 import { hasBackup } from 'wallet/src/features/wallet/accounts/utils'
 import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxexchange/lx/src/features/settings/slice'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestnetModeModal } from '@luxexchange/lx/src/features/testnets/TestnetModeModal'
+import { changeLanguage } from '@luxexchange/lx/src/i18n'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ExtensionScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { PermissionsModal } from '@luxfi/wallet/src/components/settings/permissions/PermissionsModal'
+import { PortfolioBalanceModal } from '@luxfi/wallet/src/components/settings/portfolioBalance/PortfolioBalanceModal'
+import { SmartWalletAdvancedSettingsModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { authActions } from '@luxfi/wallet/src/features/auth/saga'
+import { AuthActionType } from '@luxfi/wallet/src/features/auth/types'
+import { resetWalletBehaviorHistory } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { hasBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const manifestVersion = chrome.runtime.getManifest().version
 

@@ -18,6 +18,7 @@ import { PasswordError } from 'src/features/onboarding/PasswordError'
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
 import { onRestoreComplete } from 'src/screens/Import/onRestoreComplete'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Button, Flex, Text, TouchableArea } from 'ui/src'
 import { Cloud } from 'ui/src/components/icons'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
@@ -28,6 +29,18 @@ import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNati
 import { MINUTES_IN_HOUR, ONE_HOUR_MS, ONE_MINUTE_MS } from 'utilities/src/time/time'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { BackupType } from 'wallet/src/features/wallet/accounts/types'
+=======
+import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Cloud } from '@luxfi/ui/src/components/icons'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { MINUTES_IN_HOUR, ONE_HOUR_MS, ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+>>>>>>> Stashed changes
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.RestoreCloudBackupPassword>
 

@@ -1,12 +1,21 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
 import { CheckmarkCircle } from 'ui/src/components/icons/CheckmarkCircle'
 import { iconSizes, opacifyRaw } from 'ui/src/theme'
 import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
 import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { CheckmarkCircle } from '@luxfi/ui/src/components/icons/CheckmarkCircle'
+import { iconSizes, opacifyRaw } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import { getAuctionMetadata } from '~/components/Toucan/Config/config'
 import type { CommittedVolumeTableValue } from '~/components/Toucan/utils/computeCommittedVolume'
 import type { ProjectedFdvTableValue } from '~/components/Toucan/utils/computeProjectedFdv'

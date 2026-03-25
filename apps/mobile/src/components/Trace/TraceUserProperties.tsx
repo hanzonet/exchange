@@ -11,6 +11,7 @@ import { setDatadogUserWithUniqueId } from 'src/features/datadog/user'
 import { OneSignalUserTagField } from 'src/features/notifications/constants'
 import { getAuthMethod } from 'src/features/telemetry/utils'
 import { getFullAppVersion } from 'src/utils/version'
+<<<<<<< Updated upstream
 import { useIsDarkMode } from 'ui/src'
 import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { useAppFiatCurrency } from 'lx/src/features/fiatCurrency/hooks'
@@ -19,6 +20,16 @@ import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from 'lx/src/fe
 import { MobileUserPropertyName, setUserProperty } from 'lx/src/features/telemetry/user'
 import { logger } from 'utilities/src/logger/logger'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import { useIsDarkMode } from '@luxfi/ui/src'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
+import { MobileUserPropertyName, setUserProperty } from '@luxexchange/lx/src/features/telemetry/user'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 // biome-ignore lint/style/noRestrictedImports: Required for analytics user properties
 import { analytics } from 'utilities/src/telemetry/analytics/analytics'
 import { useAccountBalances } from 'wallet/src/features/accounts/useAccountListData'

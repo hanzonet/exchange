@@ -1,9 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { ScreenWithHeader } from 'src/components/layout/screens/ScreenWithHeader'
 import { useAppStateResetter } from 'src/features/appState/appStateResetter'
+<<<<<<< Updated upstream
 import { Flex, Text } from 'ui/src'
 import { StorageHelpIcon, StorageSettingsContent } from 'lx/src/features/settings/storage/StorageSettingsContent'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Text } from '@luxfi/ui/src'
+import { StorageHelpIcon, StorageSettingsContent } from '@luxexchange/lx/src/features/settings/storage/StorageSettingsContent'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 
 export function SettingsStorageScreen(): JSX.Element {
   const { t } = useTranslation()

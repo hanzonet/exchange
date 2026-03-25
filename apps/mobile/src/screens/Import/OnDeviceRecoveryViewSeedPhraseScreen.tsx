@@ -6,9 +6,9 @@ import { BackHeader } from 'src/components/layout/BackHeader'
 import { Screen } from 'src/components/layout/Screen'
 import { SeedPhraseDisplay } from 'src/components/mnemonic/SeedPhraseDisplay'
 import { useLockScreenOnBlur } from 'src/features/lockScreen/hooks/useLockScreenOnBlur'
-import { Text } from 'ui/src'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
+import { Text } from '@luxfi/ui/src'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 type Props = NativeStackScreenProps<OnboardingStackParamList, OnboardingScreens.OnDeviceRecoveryViewSeedPhrase>
 

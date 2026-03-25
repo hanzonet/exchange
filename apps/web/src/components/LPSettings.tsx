@@ -1,16 +1,16 @@
-import { useTransactionSettingsWithSlippage } from 'lx/src/features/transactions/components/settings/hooks/useTransactionSettingsWithSlippage'
-import { useSlippageSettings } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/useSlippageSettings'
+import { useTransactionSettingsWithSlippage } from '@luxexchange/lx/src/features/transactions/components/settings/hooks/useTransactionSettingsWithSlippage'
+import { useSlippageSettings } from '@luxexchange/lx/src/features/transactions/components/settings/settingsConfigurations/slippage/useSlippageSettings'
 import {
   ModalIdWithSlippage,
   TransactionSettingsModalId,
-} from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
-import { TransactionSettingsModalStoreContextProvider } from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/TransactionSettingsModalStoreContextProvider'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
+import { TransactionSettingsModalStoreContextProvider } from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/TransactionSettingsModalStoreContextProvider'
 import {
   TransactionSettings,
   TransactionSettingsProps,
-} from 'lx/src/features/transactions/components/settings/TransactionSettings'
-import { TransactionSettingsButtonWithSlippage } from 'lx/src/features/transactions/components/settings/TransactionSettingsButtonWithSlippage'
-import SlippageWarningModal from 'lx/src/features/transactions/swap/components/SwapFormSettings/SlippageWarningModal'
+} from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettings'
+import { TransactionSettingsButtonWithSlippage } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsButtonWithSlippage'
+import SlippageWarningModal from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormSettings/SlippageWarningModal'
 
 export function LPSettings(props: TransactionSettingsProps): JSX.Element {
   return (

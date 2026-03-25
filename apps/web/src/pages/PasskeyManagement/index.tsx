@@ -1,9 +1,15 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
+<<<<<<< Updated upstream
 import { setIsTestnetModeEnabled } from 'lx/src/features/settings/slice'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { setIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/slice'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { MenuStateVariant, useSetMenu } from '~/components/AccountDrawer/menuState'
 import { useAccount } from '~/hooks/useAccount'

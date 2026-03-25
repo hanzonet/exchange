@@ -4,6 +4,7 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { UnitagStackScreenProp } from 'src/app/navigation/types'
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Flex } from 'ui/src'
 import { Photo } from 'ui/src/components/icons'
 import { UnitagEventName } from 'lx/src/features/telemetry/constants'
@@ -12,6 +13,16 @@ import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
 import { MobileScreens, OnboardingScreens, UnitagScreens } from 'lx/src/types/screens/mobile'
 import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
 import { UnitagChooseProfilePicContent } from 'wallet/src/features/unitags/UnitagChooseProfilePicContent'
+=======
+import { Flex } from '@luxfi/ui/src'
+import { Photo } from '@luxfi/ui/src/components/icons'
+import { UnitagEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens, UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { UnitagChooseProfilePicContent } from '@luxfi/wallet/src/features/unitags/UnitagChooseProfilePicContent'
+>>>>>>> Stashed changes
 
 export function UnitagChooseProfilePicScreen({
   navigation,

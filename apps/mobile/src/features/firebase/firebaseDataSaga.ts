@@ -4,6 +4,7 @@ import firestore from '@react-native-firebase/firestore'
 import { getFirebaseUidOrError, getFirestoreMetadataRef, getFirestoreUidRef } from 'src/features/firebase/utils'
 import { getOneSignalUserIdOrError } from 'src/features/notifications/Onesignal'
 import { all, call, put, select, takeEvery, takeLatest } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { AccountType } from 'lx/src/features/accounts/types'
 import { Language } from 'lx/src/features/language/constants'
 import { getLocale } from 'lx/src/features/language/navigatorLocale'
@@ -11,6 +12,15 @@ import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
 import { setCurrentLanguage } from 'lx/src/features/settings/slice'
 import { logger } from 'utilities/src/logger/logger'
 import { getKeys } from 'utilities/src/primitives/objects'
+=======
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { setCurrentLanguage } from '@luxexchange/lx/src/features/settings/slice'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { getKeys } from '@luxfi/utilities/src/primitives/objects'
+>>>>>>> Stashed changes
 import {
   EditAccountAction,
   editAccountActions,

@@ -1,10 +1,19 @@
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { Flex, useMedia } from 'ui/src'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { ElementName, InterfacePageName, LuxEventName } from 'lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, useMedia } from '@luxfi/ui/src'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName, InterfacePageName, LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { NetworkFilter } from '~/components/NetworkFilter/NetworkFilter'
 import { useActiveAddresses } from '~/features/accounts/store/hooks'
 import { useAppHeaderHeight } from '~/hooks/useAppHeaderHeight'

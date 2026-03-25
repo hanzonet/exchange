@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { Flex, TouchableArea } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
+import { Flex, TouchableArea } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
 
 export enum PasskeyMenuModalState {
   ADD_PASSKEY = 'ADD_PASSKEY',

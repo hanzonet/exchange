@@ -1,9 +1,9 @@
 import '~/test-utils/tokens/mocks'
 
-import { USDC_MAINNET } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { dismissTokenWarning } from 'lx/src/features/tokens/warnings/slice/slice'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { dismissTokenWarning } from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
 import { PoolDetailsLink } from '~/pages/PoolDetails/components/PoolDetailsLink'
 import store from '~/state'
 import { usdcWethPoolAddress, validBEPoolToken0, validBEPoolToken1 } from '~/test-utils/pools/fixtures'

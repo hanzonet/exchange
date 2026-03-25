@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { AppStackParamList, OnboardingStackParamList } from 'src/app/navigation/types'
 import { Screen } from 'src/components/layout/Screen'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
+<<<<<<< Updated upstream
 import { Button, Flex, Loader, Text, useMedia, useSporeColors } from 'ui/src'
 import { Arrow } from 'ui/src/components/arrow/Arrow'
 import { Lock } from 'ui/src/components/icons'
@@ -20,6 +21,23 @@ import i18next from 'lx/src/i18n'
 import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { MobileScreens, OnboardingScreens } from 'lx/src/types/screens/mobile'
 import { NumberType } from 'utilities/src/format/types'
+=======
+import { Button, Flex, Loader, Text, useMedia, useSporeColors } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { Lock } from '@luxfi/ui/src/components/icons'
+import { fonts, iconSizes, opacify } from '@luxfi/ui/src/theme'
+import AnimatedNumber from '@luxexchange/lx/src/components/AnimatedNumber/AnimatedNumber'
+import { DisplayNameText } from '@luxexchange/lx/src/components/accounts/DisplayNameText'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import i18next from '@luxexchange/lx/src/i18n'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens, OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+>>>>>>> Stashed changes
 import {
   useCreateOnboardingAccountIfNone,
   useOnboardingContext,

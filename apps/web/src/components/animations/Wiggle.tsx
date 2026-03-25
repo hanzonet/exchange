@@ -1,6 +1,11 @@
 import { forwardRef, PropsWithChildren } from 'react'
+<<<<<<< Updated upstream
 import { Flex, FlexProps, useSporeColors } from 'ui/src'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
+=======
+import { Flex, FlexProps, useSporeColors } from '@luxfi/ui/src'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+>>>>>>> Stashed changes
 
 const getWiggleKeyframe = ({ wiggleAmount = 20 }: { wiggleAmount?: number }) => {
   return `

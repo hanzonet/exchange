@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { AnimatableCopyIcon, Flex, FlexProps } from 'ui/src'
 import { ElementName } from 'lx/src/features/telemetry/constants'
 import Trace from 'lx/src/features/telemetry/Trace'
@@ -6,6 +7,15 @@ import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
+=======
+import { AnimatableCopyIcon, Flex, FlexProps } from '@luxfi/ui/src'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+>>>>>>> Stashed changes
 import { ActionTile } from '~/components/AccountDrawer/ActionTile'
 import { Wiggle } from '~/components/animations/Wiggle'
 import useCopyClipboard from '~/hooks/useCopyClipboard'

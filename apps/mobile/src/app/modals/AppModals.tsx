@@ -5,8 +5,13 @@ import { ForceUpgradeModal } from 'src/components/forceUpgrade/ForceUpgradeModal
 import { WalletConnectModals } from 'src/components/Requests/WalletConnectModals'
 import { FiatOnRampAggregatorModal } from 'src/features/fiatOnRamp/FiatOnRampAggregatorModal'
 import { LockScreenModal } from 'src/features/lockScreen/LockScreenModal'
+<<<<<<< Updated upstream
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { QueuedOrderModal } from 'wallet/src/features/transactions/swap/modals/QueuedOrderModal'
+=======
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { QueuedOrderModal } from '@luxfi/wallet/src/features/transactions/swap/modals/QueuedOrderModal'
+>>>>>>> Stashed changes
 
 /**
  * *********** DEPRECATION NOTICE ***********

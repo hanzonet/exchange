@@ -1,10 +1,10 @@
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isL2ChainId } from 'lx/src/features/chains/utils'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
 import {
   AVERAGE_L1_BLOCK_TIME_MS,
   AVERAGE_L2_BLOCK_TIME_MS,
-} from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
+} from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
 
 /**
  * Returns the accurate chain-specific block time for timestamp calculations.

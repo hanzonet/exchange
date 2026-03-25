@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { StyleSheet } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import { AccountCardItem } from 'src/components/accounts/AccountCardItem'
+<<<<<<< Updated upstream
 import { Flex, Text, useSporeColors } from 'ui/src'
 import { opacify, spacing } from 'ui/src/theme'
 import { PollingInterval } from 'lx/src/constants/misc'
@@ -14,6 +15,16 @@ import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useAccountListData } from 'wallet/src/features/accounts/useAccountListData'
 import { Account } from 'wallet/src/features/wallet/accounts/types'
+=======
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { opacify, spacing } from '@luxfi/ui/src/theme'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useAccountListData } from '@luxfi/wallet/src/features/accounts/useAccountListData'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+>>>>>>> Stashed changes
 
 type AccountListProps = Pick<ComponentProps<typeof AccountCardItem>, 'onPress'> & {
   accounts: Account[]

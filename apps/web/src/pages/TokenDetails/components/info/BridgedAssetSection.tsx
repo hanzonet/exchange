@@ -1,11 +1,20 @@
 import { useAtom } from 'jotai'
 import { useNavigate } from 'react-router'
+<<<<<<< Updated upstream
 import { BridgedAssetModalAtom } from 'lx/src/components/BridgedAsset/BridgedAssetModal'
 import { BridgedAssetTDPSection } from 'lx/src/components/BridgedAsset/BridgedAssetTDPSection'
 import { CurrencyInfo } from 'lx/src/features/dataApi/types'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { BridgedAssetModalAtom } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetModal'
+import { BridgedAssetTDPSection } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetTDPSection'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { TokenQueryData } from '~/appGraphql/data/Token'
 import { useModalState } from '~/hooks/useModalState'
 

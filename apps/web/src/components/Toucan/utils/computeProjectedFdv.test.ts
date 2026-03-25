@@ -1,4 +1,4 @@
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { Q96 } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import {
   computeCompletedAuctionMarketFdvUsd,

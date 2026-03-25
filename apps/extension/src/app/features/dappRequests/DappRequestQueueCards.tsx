@@ -3,12 +3,21 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRequestQueueContext'
 import { useShouldShowBridgingRequestCard } from 'src/app/features/dappRequests/hooks'
+<<<<<<< Updated upstream
 import { BRIDGING_BANNER } from 'ui/src/assets'
 import { DappRequestCardLoggingName } from 'lx/src/features/telemetry/types'
 import { CurrencyField } from 'lx/src/types/currency'
 import { CardType, IntroCard, IntroCardGraphicType, IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
 import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
 import { setHasViewedDappRequestBridgingBanner } from 'wallet/src/features/behaviorHistory/slice'
+=======
+import { BRIDGING_BANNER } from '@luxfi/ui/src/assets'
+import { DappRequestCardLoggingName } from '@luxexchange/lx/src/features/telemetry/types'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { CardType, IntroCard, IntroCardGraphicType, IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { setHasViewedDappRequestBridgingBanner } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+>>>>>>> Stashed changes
 
 export function DappRequestCards(): JSX.Element | null {
   const { t } = useTranslation()

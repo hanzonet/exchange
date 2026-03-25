@@ -14,7 +14,7 @@ import {
   migrateSearchHistory,
   removeThaiBahtFromFiatCurrency,
   unchecksumDismissedTokenWarningKeys,
-} from 'lx/src/state/luxMigrations'
+} from '@luxexchange/lx/src/state/luxMigrations'
 import {
   activatePendingAccounts,
   addBatchedTransactions,

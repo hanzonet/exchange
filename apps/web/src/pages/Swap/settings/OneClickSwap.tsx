@@ -1,9 +1,16 @@
 import { atom } from 'jotai'
 import { useAtomValue, useUpdateAtom } from 'jotai/utils'
+<<<<<<< Updated upstream
 import { Switch } from 'ui/src'
 import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Switch } from '@luxfi/ui/src'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 
 const oneClickSwapAtom = atom(true)
 

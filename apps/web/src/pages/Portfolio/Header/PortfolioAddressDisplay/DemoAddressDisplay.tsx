@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, Tooltip, useSporeColors } from 'ui/src'
-import { Eye } from 'ui/src/components/icons/Eye'
-import { iconSizes, zIndexes } from 'ui/src/theme'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex, Text, Tooltip, useSporeColors } from '@luxfi/ui/src'
+import { Eye } from '@luxfi/ui/src/components/icons/Eye'
+import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { ReactComponent as Unicon } from '~/assets/svg/demo-wallet-emblem.svg'
 
 export function DemoAddressDisplay() {

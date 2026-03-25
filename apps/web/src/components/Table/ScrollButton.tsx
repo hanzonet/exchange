@@ -1,5 +1,5 @@
-import { Flex, TouchableArea } from 'ui/src'
-import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
+import { Flex, TouchableArea } from '@luxfi/ui/src'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
 
 type ScrollButtonDirection = 'left' | 'right'
 

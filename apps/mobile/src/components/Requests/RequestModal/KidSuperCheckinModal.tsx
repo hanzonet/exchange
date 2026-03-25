@@ -5,10 +5,10 @@ import { ModalWithOverlay } from 'src/components/Requests/ModalWithOverlay/Modal
 import { RequestDetailsContent } from 'src/components/Requests/RequestModal/RequestDetails'
 import { useUwuLinkContractAllowlist } from 'src/components/Requests/Uwulink/utils'
 import { type SignRequest } from 'src/features/walletConnect/walletConnectSlice'
-import { Flex, UniversalImage, useIsDarkMode } from 'ui/src'
-import { UniversalImageResizeMode } from 'ui/src/components/UniversalImage/types'
-import { spacing } from 'ui/src/theme'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Flex, UniversalImage, useIsDarkMode } from '@luxfi/ui/src'
+import { UniversalImageResizeMode } from '@luxfi/ui/src/components/UniversalImage/types'
+import { spacing } from '@luxfi/ui/src/theme'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 type Props = {
   onClose: () => void

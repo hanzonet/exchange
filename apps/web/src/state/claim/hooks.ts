@@ -4,6 +4,7 @@ import { CurrencyAmount, MERKLE_DISTRIBUTOR_ADDRESS, Token } from '@uniswap/sdk-
 import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
 import { useEffect, useState } from 'react'
+<<<<<<< Updated upstream
 import { UNI } from 'lx/src/constants/tokens'
 import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -11,6 +12,15 @@ import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
 import { getValidAddress } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
+=======
+import { UNI } from '@luxexchange/lx/src/constants/tokens'
+import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+>>>>>>> Stashed changes
 import { useReadContract } from 'wagmi'
 import { useAccount } from '~/hooks/useAccount'
 import { useContract } from '~/hooks/useContract'

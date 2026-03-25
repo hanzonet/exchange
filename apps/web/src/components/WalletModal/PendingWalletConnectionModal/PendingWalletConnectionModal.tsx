@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { AnimatePresence, Button, Flex, HeightAnimator, Text } from 'ui/src'
 import SOLANA_ICON from 'ui/src/assets/logos/png/solana-logo.png'
 import { CloseIconWithHover } from 'ui/src/components/icons/CloseIconWithHover'
@@ -8,6 +9,16 @@ import { Platform } from 'lx/src/features/platforms/types/Platform'
 import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useDebounce } from 'utilities/src/time/timing'
+=======
+import { AnimatePresence, Button, Flex, HeightAnimator, Text } from '@luxfi/ui/src'
+import SOLANA_ICON from '@luxfi/ui/src/assets/logos/png/solana-logo.png'
+import { CloseIconWithHover } from '@luxfi/ui/src/components/icons/CloseIconWithHover'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
+>>>>>>> Stashed changes
 import {
   getWalletRequiresSeparatePrompt,
   useHasAcceptedSolanaConnectionPrompt,

@@ -1,8 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+<<<<<<< Updated upstream
 import { Flex, Text, useMedia } from 'ui/src'
 import { ElementName } from 'lx/src/features/telemetry/constants'
 import { useEvent } from 'utilities/src/react/hooks'
+=======
+import { Flex, Text, useMedia } from '@luxfi/ui/src'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+>>>>>>> Stashed changes
 import { Bid } from '~/components/Toucan/Auction/Bids/Bid'
 import { BidDetailsModal } from '~/components/Toucan/Auction/Bids/BidDetailsModal'
 import { BidsSkeleton } from '~/components/Toucan/Auction/Bids/BidsSkeleton'

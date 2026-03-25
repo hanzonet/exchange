@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { MainIntroWrapper } from 'src/app/features/onboarding/intro/MainIntroWrapper'
 import { isAndroid } from 'src/app/utils/chrome'
-import { Flex, Text } from 'ui/src'
-import { AlertTriangleFilled } from 'ui/src/components/icons'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { ExtensionScreens } from 'lx/src/types/screens/extension'
+import { Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionScreens } from '@luxexchange/lx/src/types/screens/extension'
 
 export function UnsupportedBrowserScreen(): JSX.Element {
   const { t } = useTranslation()

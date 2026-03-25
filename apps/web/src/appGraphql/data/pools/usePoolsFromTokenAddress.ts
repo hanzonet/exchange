@@ -1,11 +1,20 @@
 import { GraphQLApi } from '@universe/api'
 import { useCallback, useMemo, useRef } from 'react'
+<<<<<<< Updated upstream
 import { DEFAULT_TICK_SPACING, V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
 import { DEFAULT_NATIVE_ADDRESS } from 'lx/src/features/chains/evm/rpc'
 import { UniverseChainId } from 'lx/src/features/chains/types'
 import { toGraphQLChain } from 'lx/src/features/chains/utils'
 import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
 import { removeDuplicatesBy } from 'utilities/src/primitives/array'
+=======
+import { DEFAULT_TICK_SPACING, V2_DEFAULT_FEE_TIER } from '@luxexchange/lx/src/constants/pools'
+import { DEFAULT_NATIVE_ADDRESS } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { toGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { removeDuplicatesBy } from '@luxfi/utilities/src/primitives/array'
+>>>>>>> Stashed changes
 import {
   calculate1DVolOverTvl,
   calculateApr,

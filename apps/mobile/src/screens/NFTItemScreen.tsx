@@ -25,6 +25,7 @@ import {
   Theme,
   TouchableArea,
   useSporeColors,
+<<<<<<< Updated upstream
 } from 'ui/src'
 import { CopyAlt, Ellipsis } from 'ui/src/components/icons'
 import { colorsDark, fonts, iconSizes } from 'ui/src/theme'
@@ -52,6 +53,35 @@ import { setClipboard, setClipboardImage } from 'utilities/src/clipboard/clipboa
 import { isAndroid, isIOS } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
 import { useAccounts, useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+=======
+} from '@luxfi/ui/src'
+import { CopyAlt, Ellipsis } from '@luxfi/ui/src/components/icons'
+import { colorsDark, fonts, iconSizes } from '@luxfi/ui/src/theme'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { ContextMenu } from '@luxexchange/lx/src/components/menus/ContextMenu'
+import { ContextMenuTriggerMode } from '@luxexchange/lx/src/components/menus/types'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain, getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { useNFTContextMenuItems } from '@luxexchange/lx/src/features/nfts/hooks/useNftContextMenuItems'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType, CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { chainIdToPlatform } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { useNearestThemeColorFromImageUri } from '@luxexchange/lx/src/utils/colors'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { setClipboard, setClipboardImage } from '@luxfi/utilities/src/clipboard/clipboard'
+import { isAndroid, isIOS } from '@luxfi/utilities/src/platform'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { useAccounts, useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 const MAX_NFT_IMAGE_HEIGHT = 375
 

@@ -6,9 +6,15 @@ import {
 } from 'expo-local-authentication'
 import DeviceInfo from 'react-native-device-info'
 import { openSecuritySettings } from 'src/utils/linking'
+<<<<<<< Updated upstream
 import i18n from 'lx/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
 import { isAndroid } from 'utilities/src/platform'
+=======
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+>>>>>>> Stashed changes
 
 /**
  * Biometric authentication statuses

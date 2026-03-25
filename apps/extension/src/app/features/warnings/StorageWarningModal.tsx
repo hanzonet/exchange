@@ -3,10 +3,10 @@ import { ONBOARDING_CONTENT_WIDTH } from 'src/app/features/onboarding/utils'
 import { useCheckLowStorage } from 'src/app/features/warnings/useCheckLowStorage'
 import { AppRoutes, SettingsRoutes } from 'src/app/navigation/constants'
 import { useExtensionNavigation } from 'src/app/navigation/utils'
-import { spacing } from 'ui/src/theme'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { spacing } from '@luxfi/ui/src/theme'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 type StorageWarningModalProps = {
   isOnboarding: boolean

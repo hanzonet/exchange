@@ -8,6 +8,7 @@ import {
   WalletSendCallsEncodedRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
 import { call, put } from 'typed-redux-saga'
+<<<<<<< Updated upstream
 import { AssetType } from 'lx/src/entities/assets'
 import { SignerMnemonicAccountMeta } from 'lx/src/features/accounts/types'
 import { UniverseChainId } from 'lx/src/features/chains/types'
@@ -22,6 +23,22 @@ import { createSaga } from 'lx/src/utils/saga'
 import { logger } from 'utilities/src/logger/logger'
 import { addBatchedTransaction } from 'wallet/src/features/batchedTransactions/slice'
 import { SendCallsResult } from 'wallet/src/features/dappRequests/types'
+=======
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { SignerMnemonicAccountMeta } from '@luxexchange/lx/src/features/accounts/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { EthMethod, EthSignMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEnabledChainIdsSaga } from '@luxexchange/lx/src/features/settings/saga'
+import { TransactionOriginType, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { DappRequestInfo, DappRequestType, UwULinkMethod, WalletConnectEvent } from '@luxexchange/lx/src/types/walletConnect'
+import { createSaga } from '@luxexchange/lx/src/utils/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { addBatchedTransaction } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { SendCallsResult } from '@luxfi/wallet/src/features/dappRequests/types'
+>>>>>>> Stashed changes
 import {
   ExecuteTransactionParams,
   executeTransaction,

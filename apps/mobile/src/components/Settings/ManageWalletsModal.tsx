@@ -18,6 +18,7 @@ import {
 } from 'src/components/Settings/SettingsRow'
 import { UnitagBanner } from 'src/components/unitags/UnitagBanner'
 import { useWalletConnect } from 'src/features/walletConnect/useWalletConnect'
+<<<<<<< Updated upstream
 import { Button, Flex, IconProps, useSporeColors } from 'ui/src'
 import { Edit, Global } from 'ui/src/components/icons'
 import { Person } from 'ui/src/components/icons/Person'
@@ -32,6 +33,22 @@ import { ModalName } from 'lx/src/features/telemetry/constants'
 import { MobileScreens } from 'lx/src/types/screens/mobile'
 import { useCanAddressClaimUnitag } from 'wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
 import { useAccounts } from 'wallet/src/features/wallet/hooks'
+=======
+import { Button, Flex, IconProps, useSporeColors } from '@luxfi/ui/src'
+import { Edit, Global } from '@luxfi/ui/src/components/icons'
+import { Person } from '@luxfi/ui/src/components/icons/Person'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { AddressDisplay } from '@luxexchange/lx/src/components/accounts/AddressDisplay'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useENS } from '@luxexchange/lx/src/features/ens/useENS'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useCanAddressClaimUnitag } from '@luxfi/wallet/src/features/unitags/hooks/useCanAddressClaimUnitag'
+import { useAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+>>>>>>> Stashed changes
 
 export function ManageWalletsModal({ route }: AppStackScreenProp<typeof ModalName.ManageWalletsModal>): JSX.Element {
   const { t } = useTranslation()

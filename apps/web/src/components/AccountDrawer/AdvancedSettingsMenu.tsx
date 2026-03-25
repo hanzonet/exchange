@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 import { SettingsButton } from '~/components/AccountDrawer/SettingsButton'
 import { SlideOutMenu } from '~/components/AccountDrawer/SlideOutMenu'
 import { TestnetsToggle } from '~/components/AccountDrawer/TestnetsToggle'
