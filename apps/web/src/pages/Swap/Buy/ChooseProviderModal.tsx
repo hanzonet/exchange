@@ -17,16 +17,16 @@ import {
   type FORServiceProvider,
   RampDirection,
 <<<<<<< Updated upstream
-} from 'lx/src/features/fiatOnRamp/types'
-import { filterQuotesByPaymentMethod } from 'lx/src/features/fiatOnRamp/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { buildCurrencyId, currencyAddress } from 'lx/src/utils/currencyId'
-import { NumberType } from 'utilities/src/format/types'
-import { logger } from 'utilities/src/logger/logger'
-import { useInterval } from 'utilities/src/time/timing'
+} from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { filterQuotesByPaymentMethod } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { buildCurrencyId, currencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useInterval } from '@luxfi/utilities/src/time/timing'
 =======
 } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import { filterQuotesByPaymentMethod } from '@luxexchange/lx/src/features/fiatOnRamp/utils'

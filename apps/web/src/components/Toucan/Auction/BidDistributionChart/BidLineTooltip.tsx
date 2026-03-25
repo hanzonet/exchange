@@ -1,12 +1,12 @@
 import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { zIndexes } from '@luxfi/ui/src/theme'

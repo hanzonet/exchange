@@ -7,8 +7,8 @@ import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
 import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
-jest.mock('@universe/gating', () => ({
-  ...jest.requireActual('@universe/gating'),
+jest.mock('@luxexchange/gating', () => ({
+  ...jest.requireActual('@luxexchange/gating'),
   useFeatureFlag: jest.fn().mockReturnValue(false),
   useFeatureFlagWithLoading: jest.fn().mockReturnValue({ value: false, isLoading: false }),
   useFeatureFlagWithExposureLoggingDisabled: jest.fn().mockReturnValue(false),

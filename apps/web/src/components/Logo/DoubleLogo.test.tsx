@@ -1,11 +1,11 @@
 import { Token } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { Flex } from 'ui/src'
-import { UNI, WBTC } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { GraphQLApi } from '@luxexchange/api'
+import { Flex } from '@luxfi/ui/src'
+import { UNI, WBTC } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getCurrencySafetyInfo } from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { Flex } from '@luxfi/ui/src'

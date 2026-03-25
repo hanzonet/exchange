@@ -9,10 +9,10 @@ import {
   isValidTransactionRequest,
   ValidatedTransactionRequest,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionRequests'
-import { logger } from 'utilities/src/logger/logger'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+} from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -40,7 +40,7 @@ jest.mock('lx/src/features/transactions/types/transactionRequests', () => ({
   isValidTransactionRequest: jest.fn(),
 }))
 
-jest.mock('utilities/src/logger/logger', () => ({
+jest.mock('@luxfi/utilities/src/logger/logger', () => ({
   logger: {
     error: jest.fn(),
   },

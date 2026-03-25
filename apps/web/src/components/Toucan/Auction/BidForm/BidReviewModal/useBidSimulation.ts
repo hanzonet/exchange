@@ -1,8 +1,8 @@
 import { ChainId } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { useCallback, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { useSubmitBidMutation } from 'lx/src/data/rest/auctions/useSubmitBidMutation'
-import { logger } from 'utilities/src/logger/logger'
+import { useSubmitBidMutation } from '@luxexchange/lx/src/data/rest/auctions/useSubmitBidMutation'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { useSubmitBidMutation } from '@luxexchange/lx/src/data/rest/auctions/useSubmitBidMutation'
 import { logger } from '@luxfi/utilities/src/logger/logger'

@@ -8,10 +8,10 @@ import {
 import { DappState, dappStore } from 'src/app/features/dapp/store'
 import { act, renderHook, waitFor } from 'src/test/test-utils'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { SAMPLE_SEED_ADDRESS_1, SAMPLE_SEED_ADDRESS_3 } from 'lx/src/test/fixtures'
-import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
-import { ACCOUNT, ACCOUNT2, ACCOUNT3 } from 'wallet/src/test/fixtures'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { SAMPLE_SEED_ADDRESS_1, SAMPLE_SEED_ADDRESS_3 } from '@luxexchange/lx/src/test/fixtures'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
+import { ACCOUNT, ACCOUNT2, ACCOUNT3 } from '@luxfi/wallet/src/test/fixtures'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { SAMPLE_SEED_ADDRESS_1, SAMPLE_SEED_ADDRESS_3 } from '@luxexchange/lx/src/test/fixtures'
@@ -19,8 +19,8 @@ import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks
 import { ACCOUNT, ACCOUNT2, ACCOUNT3 } from '@luxfi/wallet/src/test/fixtures'
 >>>>>>> Stashed changes
 
-jest.mock('wallet/src/features/wallet/hooks', () => ({
-  ...jest.requireActual('wallet/src/features/wallet/hooks'),
+jest.mock('@luxfi/wallet/src/features/wallet/hooks', () => ({
+  ...jest.requireActual('@luxfi/wallet/src/features/wallet/hooks'),
   useActiveAccountAddress: jest.fn(),
 }))
 

@@ -1,11 +1,11 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useState } from 'react'
 import { Trans } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, Image, Text } from 'ui/src'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, Image, Text } from '@luxfi/ui/src'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, Image, Text } from '@luxfi/ui/src'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

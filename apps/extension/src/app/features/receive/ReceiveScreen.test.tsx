@@ -1,6 +1,6 @@
 import { ReceiveScreen } from 'src/app/features/receive/ReceiveScreen'
 import { cleanup, render, screen } from 'src/test/test-utils'
-import { ACCOUNT, preloadedWalletPackageState } from 'wallet/src/test/fixtures'
+import { ACCOUNT, preloadedWalletPackageState } from '@luxfi/wallet/src/test/fixtures'
 
 const preloadedState = preloadedWalletPackageState({
   account: ACCOUNT,

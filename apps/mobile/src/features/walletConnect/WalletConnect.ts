@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { NativeModules } from 'react-native'
-import { isAndroid } from 'utilities/src/platform'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 
 const { RNWalletConnect, RedirectToSourceApp } = NativeModules
 

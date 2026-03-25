@@ -1,10 +1,10 @@
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { DAI, nativeOnChain, USDC_MAINNET } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TokenList } from 'lx/src/features/dataApi/types'
-import { removeSafetyInfo } from 'lx/src/test/fixtures/wallet/currencies'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { GraphQLApi } from '@luxexchange/api'
+import { DAI, nativeOnChain, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { removeSafetyInfo } from '@luxexchange/lx/src/test/fixtures/wallet/currencies'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { DAI, nativeOnChain, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'

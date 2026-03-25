@@ -1,7 +1,7 @@
 import { NavigationContainer, NavigationIndependentTree } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import React, { useEffect } from 'react'
 import { DevSettings } from 'react-native'
 import { INCLUDE_PROTOTYPE_FEATURES, IS_E2E_TEST } from 'react-native-dotenv'
@@ -126,9 +126,9 @@ import {
   UnitagScreens,
   type UnitagStackParamList,
 <<<<<<< Updated upstream
-} from 'lx/src/types/screens/mobile'
-import { OnboardingContextProvider } from 'wallet/src/features/onboarding/OnboardingContext'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
+} from '@luxexchange/lx/src/types/screens/mobile'
+import { OnboardingContextProvider } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
 =======
 } from '@luxexchange/lx/src/types/screens/mobile'
 import { OnboardingContextProvider } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'

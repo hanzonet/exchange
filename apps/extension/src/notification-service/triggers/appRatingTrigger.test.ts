@@ -3,17 +3,17 @@ import {
   Metadata,
   Notification,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle } from '@universe/api'
+import { ContentStyle } from '@luxexchange/api'
 import {
   APP_RATING_NOTIFICATION_ID,
   createAppRatingTrigger,
   isAppRatingNotification,
 } from 'src/notification-service/triggers/appRatingTrigger'
 import { type ExtensionState } from 'src/store/extensionReducer'
-import { appRatingStateSelector } from 'wallet/src/features/appRating/selectors'
-import { setAppRating } from 'wallet/src/features/wallet/slice'
+import { appRatingStateSelector } from '@luxfi/wallet/src/features/appRating/selectors'
+import { setAppRating } from '@luxfi/wallet/src/features/wallet/slice'
 
-jest.mock('wallet/src/features/appRating/selectors')
+jest.mock('@luxfi/wallet/src/features/appRating/selectors')
 const mockAppRatingStateSelector = appRatingStateSelector as jest.MockedFunction<typeof appRatingStateSelector>
 
 describe('appRatingTrigger', () => {

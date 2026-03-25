@@ -18,9 +18,9 @@ import {
   TransactionScreen,
   useTransactionModalContext,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { SwapFormStoreContextProvider } from 'lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
-import { SendContextProvider, useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { SwapFormStoreContextProvider } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
+import { SendContextProvider, useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { SwapFormStoreContextProvider } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'

@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
-import { logger } from 'utilities/src/logger/logger'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { NumberType } from '@luxfi/utilities/src/format/types'

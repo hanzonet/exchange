@@ -34,12 +34,12 @@ import type {
   LiquidityIncreaseTransactionInfo,
   MigrateV3LiquidityToV4TransactionInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { SignerMnemonicAccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
-import { currencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { createSaga } from 'lx/src/utils/saga'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { SignerMnemonicAccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { currencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { createSaga } from '@luxexchange/lx/src/utils/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'

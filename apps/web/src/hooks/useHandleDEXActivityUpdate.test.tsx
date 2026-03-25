@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { TradingApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { finalizeTransaction, updateTransaction } from 'lx/src/features/transactions/slice'
+import { TradingApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { finalizeTransaction, updateTransaction } from '@luxexchange/lx/src/features/transactions/slice'
 =======
 import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

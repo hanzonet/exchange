@@ -1,11 +1,11 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { useEffect, useMemo } from 'react'
 <<<<<<< Updated upstream
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
-import { HexString } from 'utilities/src/addresses/hex'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { ONE_HOUR_MS } from 'utilities/src/time/time'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { ONE_HOUR_MS } from '@luxfi/utilities/src/time/time'
 =======
 import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { HexString } from '@luxfi/utilities/src/addresses/hex'

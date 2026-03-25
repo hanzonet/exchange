@@ -51,7 +51,7 @@ export default defineConfig({
   },
   plugins: [react()],
   optimizeDeps: {
-    include: ['ui/src', 'utilities/src', 'lux/src'],
+    include: ['ui/src', '@luxfi/utilities/src', 'lux/src'],
     exclude: ['d3-array'],
   },
   resolve: {
@@ -65,7 +65,7 @@ export default defineConfig({
         replacement: path.resolve(__dirname, '../../packages/lx/src/i18n/index.web-app.ts'),
       },
       { find: 'ui/src', replacement: path.resolve(__dirname, '../../packages/ui/src') },
-      { find: 'utilities/src', replacement: path.resolve(__dirname, '../../packages/utilities/src') },
+      { find: '@luxfi/utilities/src', replacement: path.resolve(__dirname, '../../packages/utilities/src') },
       { find: 'lux/src', replacement: path.resolve(__dirname, '../../packages/lx/src') },
       { find: 'd3-array', replacement: path.resolve(__dirname, '../../node_modules/d3-array/dist/d3-array.min.js') },
       { find: 'react-native', replacement: 'react-native-web' },

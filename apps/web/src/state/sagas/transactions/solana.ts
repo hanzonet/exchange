@@ -1,5 +1,5 @@
 import { VersionedTransaction } from '@solana/web3.js'
-import { JupiterExecuteResponse, TradingApi } from '@universe/api'
+import { JupiterExecuteResponse, TradingApi } from '@luxexchange/api'
 import { call, delay, spawn } from 'typed-redux-saga'
 import { JupiterApiClient } from '@luxexchange/lx/src/data/apiClients/jupiterApi/JupiterFetchClient'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -18,9 +18,9 @@ import {
   TransactionOriginType,
   TransactionStatus,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { tryCatch } from 'utilities/src/errors'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { tryCatch } from '@luxfi/utilities/src/errors'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { tryCatch } from '@luxfi/utilities/src/errors'

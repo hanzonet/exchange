@@ -10,13 +10,13 @@
  */
 
 import { base64 } from '@scure/base'
-import { HashcashNative } from '@universe/hashcash-native'
-import type { ProofResult } from '@universe/sessions/src/challenge-solvers/hashcash/core'
+import { HashcashNative } from '@luxexchange/hashcash-native'
+import type { ProofResult } from '@luxexchange/sessions/src/challenge-solvers/hashcash/core'
 import type {
   FindProofParams,
   HashcashWorkerAPI,
   HashcashWorkerChannel,
-} from '@universe/sessions/src/challenge-solvers/hashcash/worker/types'
+} from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
 
 /**
  * Creates a channel to the native hashcash solver.

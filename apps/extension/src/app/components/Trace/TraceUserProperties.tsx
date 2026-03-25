@@ -1,7 +1,7 @@
 import { datadogRum } from '@datadog/browser-rum'
 import { useQuery } from '@tanstack/react-query'
-import { provideLuxIdentifierService } from '@universe/api'
-import { luxIdentifierQuery } from '@universe/sessions'
+import { provideLuxIdentifierService } from '@luxexchange/api'
+import { luxIdentifierQuery } from '@luxexchange/sessions'
 import { useEffect } from 'react'
 import { useIsDarkMode } from '@luxfi/ui/src'
 import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
@@ -11,14 +11,14 @@ import { useCurrentLanguage } from '@luxexchange/lx/src/features/language/hooks'
 import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
 import { ExtensionUserPropertyName, setUserProperty } from '@luxexchange/lx/src/features/telemetry/user'
 // biome-ignore lint/style/noRestrictedImports: Direct analytics import required for user property tracking
-import { analytics } from 'utilities/src/telemetry/analytics/analytics'
-import { useGatingUserPropertyUsernames } from 'wallet/src/features/gating/userPropertyHooks'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
+import { useGatingUserPropertyUsernames } from '@luxfi/wallet/src/features/gating/userPropertyHooks'
 import {
   useActiveAccount,
   useDisplayName,
   useSignerAccounts,
   useViewOnlyAccounts,
-} from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/wallet/hooks'
 
 /** Component that tracks UserProperties during the lifetime of the app */
 export function TraceUserProperties(): null {

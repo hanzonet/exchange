@@ -2,9 +2,9 @@
 // gui-ignore
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Button, Flex, Text } from 'ui/src'
-import { UserLock } from 'ui/src/components/icons/UserLock'
-import { noop } from 'utilities/src/react/noop'
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { UserLock } from '@luxfi/ui/src/components/icons/UserLock'
+import { noop } from '@luxfi/utilities/src/react/noop'
 =======
 import { Button, Flex, Text } from '@luxfi/ui/src'
 import { UserLock } from '@luxfi/ui/src/components/icons/UserLock'

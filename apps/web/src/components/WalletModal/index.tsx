@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 =======
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'

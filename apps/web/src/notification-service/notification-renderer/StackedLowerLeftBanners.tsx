@@ -5,9 +5,9 @@ import { InlineBannerNotification, type NotificationClickTarget } from '@luxfi/n
 import { AnimatePresence, motion } from 'framer-motion'
 import { memo, useEffect } from 'react'
 <<<<<<< Updated upstream
-import { Portal, useMedia } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Portal, useMedia } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Portal, useMedia } from '@luxfi/ui/src'
 import { zIndexes } from '@luxfi/ui/src/theme'

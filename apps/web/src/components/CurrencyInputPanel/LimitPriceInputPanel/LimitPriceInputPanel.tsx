@@ -8,9 +8,9 @@ import { useLocalizationContext } from '@luxexchange/lx/src/features/language/Lo
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 // biome-ignore lint/style/noRestrictedImports: We need to import this directly so we can format with `en-US` locale
-import { formatCurrencyAmount as formatCurrencyAmountRaw } from 'utilities/src/format/localeBased'
-import { NumberType } from 'utilities/src/format/types'
-import { isSafeNumber } from 'utilities/src/primitives/integer'
+import { formatCurrencyAmount as formatCurrencyAmountRaw } from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isSafeNumber } from '@luxfi/utilities/src/primitives/integer'
 import { PrefetchBalancesWrapper } from '~/appGraphql/data/apollo/AdaptiveTokenBalancesProvider'
 import {
   LimitCustomMarketPriceButton,

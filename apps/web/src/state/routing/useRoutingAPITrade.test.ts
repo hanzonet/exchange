@@ -3,10 +3,10 @@ import { renderHook } from '@testing-library/react'
 import { CurrencyAmount, TradeType } from '@uniswap/sdk-core'
 import ms from 'ms'
 <<<<<<< Updated upstream
-import { USDC_MAINNET } from 'lx/src/constants/tokens'
-import { useIsMismatchAccountQuery } from 'lx/src/features/smartWallet/mismatch/hooks'
-import { AVERAGE_L1_BLOCK_TIME_MS } from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
-import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { useIsMismatchAccountQuery } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { AVERAGE_L1_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
 =======
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { useIsMismatchAccountQuery } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
@@ -23,7 +23,7 @@ import { mocked } from '~/test-utils/mocked'
 
 const USDCAmount = CurrencyAmount.fromRawAmount(USDC_MAINNET, '10000')
 
-vi.mock('utilities/src/react/useIsWindowVisible')
+vi.mock('@luxfi/utilities/src/react/useIsWindowVisible')
 vi.mock('./slice', () => {
   return {
     useGetQuoteQuery: vi.fn(),
@@ -31,7 +31,7 @@ vi.mock('./slice', () => {
   }
 })
 vi.mock('~/state/user/hooks')
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

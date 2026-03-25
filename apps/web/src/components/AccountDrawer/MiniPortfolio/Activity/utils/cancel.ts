@@ -9,11 +9,11 @@ import {
   LimitOrdersFetcher,
   trackOrderCancellation,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/cancel/cancelMultipleOrders'
-import { validateOrdersForCancellation } from 'lx/src/features/transactions/cancel/validation'
-import { updateTransaction } from 'lx/src/features/transactions/slice'
-import { TransactionStatus, DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
+import { validateOrdersForCancellation } from '@luxexchange/lx/src/features/transactions/cancel/validation'
+import { updateTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { TransactionStatus, DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
 import { validateOrdersForCancellation } from '@luxexchange/lx/src/features/transactions/cancel/validation'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { Flex, Text } from '@luxfi/ui/src'
 import { ItemPoint } from '@luxexchange/lx/src/components/IconCloud/IconCloud'

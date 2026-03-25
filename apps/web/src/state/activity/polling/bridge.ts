@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { useCallback, useEffect, useMemo } from 'react'
 import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
@@ -8,9 +8,9 @@ import type {
   BridgeTransactionInfo,
   InterfaceTransactionDetails,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'

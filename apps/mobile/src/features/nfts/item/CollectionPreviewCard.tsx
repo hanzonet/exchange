@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { default as React } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Loader } from 'src/components/loading/loaders'

@@ -4,10 +4,10 @@ import { EthSendTransactionRPCActions } from 'src/app/features/dappRequests/type
 import { parseCalldata as parseNfPMCalldata } from 'src/app/features/dappRequests/types/NonfungiblePositionManager'
 import { type NonfungiblePositionManagerCall } from 'src/app/features/dappRequests/types/NonfungiblePositionManagerTypes'
 <<<<<<< Updated upstream
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { wrappedNativeCurrency } from 'lx/src/utils/currency'
-import methodHashToFunctionSignature from 'utilities/src/calldata/methodHashToFunctionSignature'
-import { noop } from 'utilities/src/react/noop'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { wrappedNativeCurrency } from '@luxexchange/lx/src/utils/currency'
+import methodHashToFunctionSignature from '@luxfi/utilities/src/calldata/methodHashToFunctionSignature'
+import { noop } from '@luxfi/utilities/src/react/noop'
 =======
 import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { wrappedNativeCurrency } from '@luxexchange/lx/src/utils/currency'

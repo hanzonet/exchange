@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import type { HashcashSolveAnalytics, SessionInitAnalytics, TurnstileSolveAnalytics } from '@universe/sessions'
-import { SessionsEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import type { HashcashSolveAnalytics, SessionInitAnalytics, TurnstileSolveAnalytics } from '@luxexchange/sessions'
+import { SessionsEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 =======
 import type { HashcashSolveAnalytics, SessionInitAnalytics, TurnstileSolveAnalytics } from '@luxexchange/sessions'
 import { SessionsEventName } from '@luxexchange/lx/src/features/telemetry/constants'

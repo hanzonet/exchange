@@ -15,17 +15,17 @@ import {
   resetDismissedCompatibleAddressWarnings,
   resetDismissedWarnings,
 <<<<<<< Updated upstream
-} from 'lx/src/features/tokens/warnings/slice/slice'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { setClipboard } from 'utilities/src/clipboard/clipboard'
-import { logger } from 'utilities/src/logger/logger'
-import { UniconSampleSheet } from 'wallet/src/components/DevelopmentOnly/UniconSampleSheet'
-import { createOnboardingAccount } from 'wallet/src/features/onboarding/createOnboardingAccount'
-import { createAccountsActions } from 'wallet/src/features/wallet/create/createAccountsSaga'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
-import { selectSortedSignerMnemonicAccounts } from 'wallet/src/features/wallet/selectors'
-import { resetWallet } from 'wallet/src/features/wallet/slice'
+} from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { UniconSampleSheet } from '@luxfi/wallet/src/components/DevelopmentOnly/UniconSampleSheet'
+import { createOnboardingAccount } from '@luxfi/wallet/src/features/onboarding/createOnboardingAccount'
+import { createAccountsActions } from '@luxfi/wallet/src/features/wallet/create/createAccountsSaga'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { selectSortedSignerMnemonicAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
+import { resetWallet } from '@luxfi/wallet/src/features/wallet/slice'
 =======
 } from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
 import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'

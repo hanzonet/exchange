@@ -1,5 +1,5 @@
 import { StackActions } from '@react-navigation/native'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { PropsWithChildren, useCallback } from 'react'
 import { Share } from 'react-native'
 import { useDispatch } from 'react-redux'
@@ -16,18 +16,18 @@ import {
   useFiatOnRampAggregatorCountryListQuery,
   useFiatOnRampAggregatorGetCountryQuery,
 <<<<<<< Updated upstream
-} from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
-import { RampDirection } from 'lx/src/features/fiatOnRamp/types'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { ShareableEntity } from 'lx/src/types/sharing'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { getTokenUrl } from 'lx/src/utils/linking'
-import { closeKeyboardBeforeCallback } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { logger } from 'utilities/src/logger/logger'
-import { noop } from 'utilities/src/react/noop'
+} from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { RampDirection } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { ShareableEntity } from '@luxexchange/lx/src/types/sharing'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { getTokenUrl } from '@luxexchange/lx/src/utils/linking'
+import { closeKeyboardBeforeCallback } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { noop } from '@luxfi/utilities/src/react/noop'
 =======
 } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
 import { RampDirection } from '@luxexchange/lx/src/features/fiatOnRamp/types'
@@ -53,7 +53,7 @@ import {
   NavigateToSwapFlowArgs,
   ShareTokenArgs,
   WalletNavigationProvider,
-} from 'wallet/src/contexts/WalletNavigationContext'
+} from '@luxfi/wallet/src/contexts/WalletNavigationContext'
 
 export function MobileWalletNavigationProvider({ children }: PropsWithChildren): JSX.Element {
   const handleShareToken = useHandleShareToken()

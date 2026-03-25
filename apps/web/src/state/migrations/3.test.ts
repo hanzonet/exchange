@@ -1,8 +1,8 @@
 import { Token } from '@uniswap/sdk-core'
 import { createMigrate } from 'redux-persist'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { createThrowingProxy } from 'utilities/src/test/utils'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'

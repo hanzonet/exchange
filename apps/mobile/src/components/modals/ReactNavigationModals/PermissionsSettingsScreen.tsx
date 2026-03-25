@@ -1,8 +1,8 @@
 import { AppStackScreenProp } from 'src/app/navigation/types'
 import { ReactNavigationModal } from 'src/components/modals/ReactNavigationModals/ReactNavigationModal'
 <<<<<<< Updated upstream
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { PermissionsModal } from 'wallet/src/components/settings/permissions/PermissionsModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { PermissionsModal } from '@luxfi/wallet/src/components/settings/permissions/PermissionsModal'
 =======
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { PermissionsModal } from '@luxfi/wallet/src/components/settings/permissions/PermissionsModal'

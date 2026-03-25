@@ -1,9 +1,9 @@
 <<<<<<< Updated upstream
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { Flex, styled, Nav as GuiNav, useMedia } from 'ui/src'
-import { breakpoints, INTERFACE_NAV_HEIGHT, zIndexes } from 'ui/src/theme'
-import { useConnectionStatus } from 'lx/src/features/accounts/store/hooks'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { Flex, styled, Nav as GuiNav, useMedia } from '@luxfi/ui/src'
+import { breakpoints, INTERFACE_NAV_HEIGHT, zIndexes } from '@luxfi/ui/src/theme'
+import { useConnectionStatus } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 =======
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Flex, styled, Nav as GuiNav, useMedia } from '@luxfi/ui/src'

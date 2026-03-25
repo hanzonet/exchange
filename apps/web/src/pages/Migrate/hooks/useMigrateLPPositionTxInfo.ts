@@ -17,13 +17,13 @@ import {
   LiquidityTransactionType,
   MigratePositionTxAndGasInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/liquidity/types'
-import { getErrorMessageToDisplay, parseErrorMessageTitle } from 'lx/src/features/transactions/liquidity/utils'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { PermitMethod } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { validatePermit, validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { PermitMethod } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { validatePermit, validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 =======
 } from '@luxexchange/lx/src/features/transactions/liquidity/types'
 import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'

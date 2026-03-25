@@ -15,14 +15,14 @@ import {
   PasskeyRequestSchema,
   PasskeySignInFlowOpened,
 <<<<<<< Updated upstream
-} from 'lx/src/extension/messagePassing/types/requests'
-import { authenticatePasskey } from 'lx/src/features/passkey/passkey'
-import { InterfacePageName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { getChromeRuntime, getChromeRuntimeWithThrow } from 'utilities/src/chrome/chrome'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { useTimeout } from 'utilities/src/time/timing'
+} from '@luxexchange/lx/src/extension/messagePassing/types/requests'
+import { authenticatePasskey } from '@luxexchange/lx/src/features/passkey/passkey'
+import { InterfacePageName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { getChromeRuntime, getChromeRuntimeWithThrow } from '@luxfi/utilities/src/chrome/chrome'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
 =======
 } from '@luxexchange/lx/src/extension/messagePassing/types/requests'
 import { authenticatePasskey } from '@luxexchange/lx/src/features/passkey/passkey'

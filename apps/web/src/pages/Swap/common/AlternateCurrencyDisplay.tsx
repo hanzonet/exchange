@@ -1,10 +1,10 @@
 import { Currency } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { ArrowDownArrowUp } from 'ui/src/components/icons/ArrowDownArrowUp'
-import { useAppFiatCurrency } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { ArrowDownArrowUp } from '@luxfi/ui/src/components/icons/ArrowDownArrowUp'
+import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { ArrowDownArrowUp } from '@luxfi/ui/src/components/icons/ArrowDownArrowUp'

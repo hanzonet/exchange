@@ -7,14 +7,14 @@ import {
   TransactionStatus,
   TransactionType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 >>>>>>> Stashed changes
 
-jest.mock('utilities/src/logger/logger', () => ({
+jest.mock('@luxfi/utilities/src/logger/logger', () => ({
   logger: {
     error: jest.fn(),
   },

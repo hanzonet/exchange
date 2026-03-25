@@ -1,7 +1,7 @@
 import { createMigrate } from 'redux-persist'
 <<<<<<< Updated upstream
-import { PreV55SearchResultType } from 'lx/src/state/oldTypes'
-import { createThrowingProxy } from 'utilities/src/test/utils'
+import { PreV55SearchResultType } from '@luxexchange/lx/src/state/oldTypes'
+import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
 =======
 import { PreV55SearchResultType } from '@luxexchange/lx/src/state/oldTypes'
 import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'

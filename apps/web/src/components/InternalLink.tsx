@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 import { useNavigate } from 'react-router'
 <<<<<<< Updated upstream
-import { TouchableArea } from 'ui/src'
-import { useEvent } from 'utilities/src/react/hooks'
+import { TouchableArea } from '@luxfi/ui/src'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { TouchableArea } from '@luxfi/ui/src'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'

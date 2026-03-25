@@ -6,8 +6,8 @@ import {
   getEntryGatewayUrl,
   provideSessionService,
   SharedQueryClient,
-} from '@universe/api'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -16,7 +16,7 @@ import {
   createReactiveDataSource,
   getNotificationQueryOptions,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import { Appearance } from 'react-native'
 import { MobileState } from 'src/app/mobileReducer'
 import { store } from 'src/app/store'
@@ -30,17 +30,17 @@ import { mobileNotificationStore } from 'src/notification-service/notification-r
 import { getNotificationTelemetry } from 'src/notification-service/notification-telemetry/getNotificationTelemetry'
 import { createMobileLocalTriggerDataSource } from 'src/notification-service/triggers/createMobileLocalTriggerDataSource'
 <<<<<<< Updated upstream
-import { getPortfolioQuery } from 'lx/src/data/rest/getPortfolio'
-import { AppearanceSettingType } from 'lx/src/features/appearance/slice'
-import { mapLocaleToBackendLocale } from 'lx/src/features/language/constants'
-import { getLocale } from 'lx/src/features/language/navigatorLocale'
-import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
-import { isDevEnv } from 'utilities/src/environment/env'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
-import { ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
-import { selectActiveAccountAddress } from 'wallet/src/features/wallet/selectors'
+import { getPortfolioQuery } from '@luxexchange/lx/src/data/rest/getPortfolio'
+import { AppearanceSettingType } from '@luxexchange/lx/src/features/appearance/slice'
+import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
+import { ONE_MINUTE_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
 =======
 import { getPortfolioQuery } from '@luxexchange/lx/src/data/rest/getPortfolio'
 import { AppearanceSettingType } from '@luxexchange/lx/src/features/appearance/slice'

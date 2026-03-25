@@ -24,7 +24,7 @@ jest.mock('lx/src/utils/linking', () => ({
 
 const mockLoggerWarn = jest.fn()
 const mockLoggerError = jest.fn()
-jest.mock('utilities/src/logger/logger', () => ({
+jest.mock('@luxfi/utilities/src/logger/logger', () => ({
   getLogger: (): { warn: jest.Mock; error: jest.Mock } => ({
     warn: mockLoggerWarn,
     error: mockLoggerError,
@@ -53,7 +53,7 @@ describe('handleNotificationNavigation', () => {
     jest.doMock('lx/src/utils/linking', () => ({
       openUri: mockOpenUri,
     }))
-    jest.doMock('utilities/src/logger/logger', () => ({
+    jest.doMock('@luxfi/utilities/src/logger/logger', () => ({
       getLogger: (): { warn: jest.Mock; error: jest.Mock } => ({
         warn: mockLoggerWarn,
         error: mockLoggerError,

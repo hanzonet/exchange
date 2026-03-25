@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { sleep } from 'utilities/src/time/timing'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 =======
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { sleep } from '@luxfi/utilities/src/time/timing'

@@ -4,9 +4,9 @@ import { Currency, CurrencyAmount, Percent, TradeType } from '@uniswap/sdk-core'
 import ms from 'ms'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { AVERAGE_L1_BLOCK_TIME_MS } from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
-import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { AVERAGE_L1_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { AVERAGE_L1_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'

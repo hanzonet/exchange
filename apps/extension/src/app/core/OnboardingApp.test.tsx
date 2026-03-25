@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 import OnboardingApp from 'src/app/core/OnboardingApp'
 import { initializeReduxStore } from 'src/store/store'
 
-jest.mock('wallet/src/features/transactions/contexts/WalletLuxContext', () => ({
+jest.mock('@luxfi/wallet/src/features/transactions/contexts/WalletLuxContext', () => ({
   WalletLuxProvider: ({ children }: { children: React.ReactNode }) => children,
 }))
 

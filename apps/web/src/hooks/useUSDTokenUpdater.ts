@@ -1,11 +1,11 @@
 import { Currency } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { useSupportedChainId } from 'lx/src/features/chains/hooks/useSupportedChainId'
-import { getPrimaryStablecoin } from 'lx/src/features/chains/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { NumberType } from 'utilities/src/format/types'
+import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'

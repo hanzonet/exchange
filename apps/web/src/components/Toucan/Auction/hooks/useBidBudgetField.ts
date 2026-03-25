@@ -1,12 +1,12 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { useEffect, useState } from 'react'
 <<<<<<< Updated upstream
-import { getPrimaryStablecoin } from 'lx/src/features/chains/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useUSDCPrice, useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { useEvent } from 'utilities/src/react/hooks'
+import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useUSDCPrice, useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

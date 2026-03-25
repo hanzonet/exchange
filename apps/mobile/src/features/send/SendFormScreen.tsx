@@ -25,13 +25,13 @@ import {
   TransactionScreen,
   useTransactionModalContext,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { CompatibleAddressModal } from 'lx/src/features/transactions/modals/CompatibleAddressModal'
-import { LowNativeBalanceModal } from 'lx/src/features/transactions/modals/LowNativeBalanceModal'
-import { CurrencyField } from 'lx/src/types/currency'
-import { createTransactionId } from 'lx/src/utils/createTransactionId'
-import { useActiveAddresses } from 'wallet/src/features/accounts/store/hooks'
-import { useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { CompatibleAddressModal } from '@luxexchange/lx/src/features/transactions/modals/CompatibleAddressModal'
+import { LowNativeBalanceModal } from '@luxexchange/lx/src/features/transactions/modals/LowNativeBalanceModal'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { createTransactionId } from '@luxexchange/lx/src/utils/createTransactionId'
+import { useActiveAddresses } from '@luxfi/wallet/src/features/accounts/store/hooks'
+import { useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { CompatibleAddressModal } from '@luxexchange/lx/src/features/transactions/modals/CompatibleAddressModal'

@@ -1,6 +1,6 @@
-import { ContentStyle, type InAppNotification } from '@universe/api'
-import { type NotificationClickTarget } from '@universe/notifications'
-import { InlineBannerNotification } from '@universe/notifications/src/notification-renderer/components/InlineBannerNotification'
+import { ContentStyle, type InAppNotification } from '@luxexchange/api'
+import { type NotificationClickTarget } from '@luxexchange/notifications'
+import { InlineBannerNotification } from '@luxexchange/notifications/src/notification-renderer/components/InlineBannerNotification'
 import { memo, useEffect, useMemo } from 'react'
 import { isStorageWarningNotification } from 'src/notification-service/data-sources/reactive/storageWarningCondition'
 import {
@@ -12,11 +12,11 @@ import { StorageWarningModalRenderer } from 'src/notification-service/renderers/
 import { isAppRatingNotification } from 'src/notification-service/triggers/appRatingTrigger'
 import { isLocalTriggerNotification } from 'src/notification-service/triggers/createExtensionLocalTriggerDataSource'
 <<<<<<< Updated upstream
-import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
-import { getLogger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { type IntroCardProps } from 'wallet/src/components/introCards/IntroCard'
-import { IntroCardStack } from 'wallet/src/components/introCards/IntroCardStack'
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { type IntroCardProps } from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCardStack'
 =======
 import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
 import { getLogger } from '@luxfi/utilities/src/logger/logger'
@@ -27,7 +27,7 @@ import { IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCar
 import {
   convertNotificationToIntroCard,
   shouldRenderAsIntroCard,
-} from 'wallet/src/features/notifications/convertNotificationToIntroCard'
+} from '@luxfi/wallet/src/features/notifications/convertNotificationToIntroCard'
 import { type StoreApi, type UseBoundStore } from 'zustand'
 
 /**

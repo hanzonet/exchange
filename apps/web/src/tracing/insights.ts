@@ -1,5 +1,5 @@
-import { isTestEnv } from 'utilities/src/environment/env'
-import { logger } from 'utilities/src/logger/logger'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const INSIGHTS_API_KEY = process.env.REACT_APP_INSIGHTS_API_KEY || 'hi_a5316882b930d11c9183007d70c3955b'
 const INSIGHTS_HOST = process.env.REACT_APP_INSIGHTS_HOST || 'https://insights.hanzo.ai'

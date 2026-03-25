@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { type AnimationType } from 'ui/src/animations'
-import { usePrevious } from 'utilities/src/react/hooks'
+import { type AnimationType } from '@luxfi/ui/src/animations'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
 =======
 import { type AnimationType } from '@luxfi/ui/src/animations'
 import { usePrevious } from '@luxfi/utilities/src/react/hooks'

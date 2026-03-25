@@ -1,8 +1,8 @@
 <<<<<<< Updated upstream
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { SigningCapability } from 'lx/src/features/accounts/store/types/Wallet'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { SigningCapability } from '@luxexchange/lx/src/features/accounts/store/types/Wallet'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 =======
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
@@ -19,8 +19,8 @@ import { renderHook } from '~/test-utils/render'
 
 // biome-ignore lint/suspicious/noVar: Testing variable hoisting behavior requires var
 var mockIsMobileWeb = false
-vi.mock('utilities/src/platform', async () => {
-  const actual = await vi.importActual('utilities/src/platform')
+vi.mock('@luxfi/utilities/src/platform', async () => {
+  const actual = await vi.importActual('@luxfi/utilities/src/platform')
   return {
     ...actual,
     get isMobileWeb() {
@@ -44,7 +44,7 @@ vi.mock('~/components/Web3Provider/constants', async () => {
   }
 })
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

@@ -6,12 +6,12 @@ import {
   signInWithPasskey as signInWithPasskeyAPI,
   signMessageWithPasskey,
 <<<<<<< Updated upstream
-} from 'lx/src/features/passkey/embeddedWallet'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { WalletConnectionResult } from 'lx/src/features/telemetry/types'
-import { useClaimUnitag } from 'lx/src/features/unitags/hooks/useClaimUnitag'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { WalletConnectionResult } from '@luxexchange/lx/src/features/telemetry/types'
+import { useClaimUnitag } from '@luxexchange/lx/src/features/unitags/hooks/useClaimUnitag'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'

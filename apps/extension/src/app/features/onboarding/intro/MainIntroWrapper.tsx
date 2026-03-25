@@ -1,8 +1,8 @@
 import { PropsWithChildren, ReactNode } from 'react'
 import { ONBOARDING_CONTENT_WIDTH } from 'src/app/features/onboarding/utils'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { LandingBackground } from 'wallet/src/components/landing/LandingBackground'
+import { Flex } from '@luxfi/ui/src'
+import { LandingBackground } from '@luxfi/wallet/src/components/landing/LandingBackground'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { LandingBackground } from '@luxfi/wallet/src/components/landing/LandingBackground'

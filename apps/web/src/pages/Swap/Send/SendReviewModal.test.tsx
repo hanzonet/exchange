@@ -1,9 +1,9 @@
 import '~/test-utils/tokens/mocks'
 
 <<<<<<< Updated upstream
-import { DAI } from 'lx/src/constants/tokens'
-import { SwapTab } from 'lx/src/types/screens/interface'
-import { shortenAddress } from 'utilities/src/addresses'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
+import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 =======
 import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'

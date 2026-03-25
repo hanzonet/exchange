@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

@@ -2,9 +2,9 @@ import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes
 import { Percent } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import i18n from 'lx/src/i18n'
-import { PercentNumberDecimals } from 'utilities/src/format/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import i18n from '@luxexchange/lx/src/i18n'
+import { PercentNumberDecimals } from '@luxfi/utilities/src/format/types'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import i18n from '@luxexchange/lx/src/i18n'

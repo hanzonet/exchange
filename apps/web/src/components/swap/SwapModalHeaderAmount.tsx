@@ -1,12 +1,12 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { type ComponentProps, PropsWithChildren, ReactNode } from 'react'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { breakpoints } from 'ui/src/theme'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { CurrencyField } from 'lx/src/types/currency'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { breakpoints } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'

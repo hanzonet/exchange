@@ -13,10 +13,10 @@ import {
 } from 'lightweight-charts'
 import { ReactElement, TouchEvent, useEffect, useMemo, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { assertWebElement, ColorTokens, Flex, GuiElement, useMedia, useSporeColors } from 'ui/src'
-import { useCurrentLocale } from 'lx/src/features/language/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { assertWebElement, ColorTokens, Flex, GuiElement, useMedia, useSporeColors } from '@luxfi/ui/src'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { assertWebElement, ColorTokens, Flex, GuiElement, useMedia, useSporeColors } from '@luxfi/ui/src'
 import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'

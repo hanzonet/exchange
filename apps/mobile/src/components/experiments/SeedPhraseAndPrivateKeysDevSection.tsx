@@ -1,11 +1,11 @@
 import React from 'react'
 import { Alert } from 'react-native'
 <<<<<<< Updated upstream
-import { Accordion, Flex } from 'ui/src'
-import { GatingButton } from 'lx/src/components/gating/GatingButton'
-import { AccordionHeader } from 'lx/src/components/gating/GatingOverrides'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { Accordion, Flex } from '@luxfi/ui/src'
+import { GatingButton } from '@luxexchange/lx/src/components/gating/GatingButton'
+import { AccordionHeader } from '@luxexchange/lx/src/components/gating/GatingOverrides'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 =======
 import { Accordion, Flex } from '@luxfi/ui/src'
 import { GatingButton } from '@luxexchange/lx/src/components/gating/GatingButton'

@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query'
 <<<<<<< Updated upstream
-import { LimitOrderResponse } from 'lx/src/features/transactions/cancel/cancelMultipleOrders'
-import { logger } from 'utilities/src/logger/logger'
+import { LimitOrderResponse } from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { LimitOrderResponse } from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
 import { logger } from '@luxfi/utilities/src/logger/logger'

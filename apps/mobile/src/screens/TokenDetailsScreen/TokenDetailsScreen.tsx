@@ -1,6 +1,6 @@
 import { useApolloClient } from '@apollo/client'
 import { ReactNavigationPerformanceView } from '@shopify/react-native-performance-navigation'
-import { GQLQueries, GraphQLApi } from '@universe/api'
+import { GQLQueries, GraphQLApi } from '@luxexchange/api'
 import React, { memo, useEffect, useMemo } from 'react'
 import { FadeInDown, FadeOutDown } from 'react-native-reanimated'
 import type { AppStackScreenProp } from 'src/app/navigation/types'
@@ -25,15 +25,15 @@ import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
 <<<<<<< Updated upstream
-} from 'lx/src/data/graphql/lux-data-api/fragments'
-import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { TokenWarningCard } from 'lx/src/features/tokens/warnings/TokenWarningCard'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { AddressStringFormat, normalizeAddress } from 'lx/src/utils/addresses'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useDelayedRender } from 'utilities/src/react/useDelayedRender'
-import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TokenWarningCard } from '@luxexchange/lx/src/features/tokens/warnings/TokenWarningCard'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { AddressStringFormat, normalizeAddress } from '@luxexchange/lx/src/utils/addresses'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useDelayedRender } from '@luxfi/utilities/src/react/useDelayedRender'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 } from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
 import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'

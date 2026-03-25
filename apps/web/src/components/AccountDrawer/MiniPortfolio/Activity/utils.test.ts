@@ -1,10 +1,10 @@
-import 'utilities/src/logger/mocks'
+import '@luxfi/utilities/src/logger/mocks'
 import { BigNumber } from '@ethersproject/bignumber'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
-import { DEFAULT_ERC20_DECIMALS } from 'utilities/src/tokens/constants'
+import { GraphQLApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { DEFAULT_ERC20_DECIMALS } from '@luxfi/utilities/src/tokens/constants'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

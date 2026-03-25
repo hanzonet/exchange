@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import { Experiments } from '@universe/gating'
+import { TradingApi } from '@luxexchange/api'
+import { Experiments } from '@luxexchange/gating'
 import ms from 'ms'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -54,12 +54,12 @@ import {
   requireRouting,
   LUXX_ROUTING_VARIANTS,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/swap/utils/routing'
-import { getClassicQuoteFromResponse } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { createMonitoredSaga } from 'lx/src/utils/saga'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { getClassicQuoteFromResponse } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { createMonitoredSaga } from '@luxexchange/lx/src/utils/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { getClassicQuoteFromResponse } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'

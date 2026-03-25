@@ -4,8 +4,8 @@ import { Currency } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'

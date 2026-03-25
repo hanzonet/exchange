@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { Flex, Text, TouchableArea, useIsTouchDevice, WebBottomSheet } from 'ui/src'
-import { MoreHorizontal } from 'ui/src/components/icons/MoreHorizontal'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { Flex, Text, TouchableArea, useIsTouchDevice, WebBottomSheet } from '@luxfi/ui/src'
+import { MoreHorizontal } from '@luxfi/ui/src/components/icons/MoreHorizontal'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 =======
 import { Flex, Text, TouchableArea, useIsTouchDevice, WebBottomSheet } from '@luxfi/ui/src'
 import { MoreHorizontal } from '@luxfi/ui/src/components/icons/MoreHorizontal'

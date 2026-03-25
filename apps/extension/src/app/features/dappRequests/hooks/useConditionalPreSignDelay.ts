@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { useTransactionConfirmationTracker } from 'src/app/features/dappRequests/context/TransactionConfirmationTracker'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { logger } from '@luxfi/utilities/src/logger/logger'

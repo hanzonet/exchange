@@ -3,7 +3,7 @@ import {
   Metadata,
   Notification,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle } from '@universe/api'
+import { ContentStyle } from '@luxexchange/api'
 import { type MobileState } from 'src/app/mobileReducer'
 import {
   BACKUP_REMINDER_NOTIFICATION_ID,
@@ -11,12 +11,12 @@ import {
   isBackupReminderNotification,
 } from 'src/notification-service/triggers/backupReminderTrigger'
 <<<<<<< Updated upstream
-import { AccountType } from 'lx/src/features/accounts/types'
-import { ONE_DAY_MS } from 'utilities/src/time/time'
-import { selectBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/selectors'
-import { setBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/slice'
-import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
-import { selectActiveAccount } from 'wallet/src/features/wallet/selectors'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
+import { selectBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
+import { selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
 =======
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
 import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
@@ -26,9 +26,9 @@ import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/ut
 import { selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
 >>>>>>> Stashed changes
 
-jest.mock('wallet/src/features/behaviorHistory/selectors')
-jest.mock('wallet/src/features/wallet/selectors')
-jest.mock('wallet/src/features/wallet/accounts/utils')
+jest.mock('@luxfi/wallet/src/features/behaviorHistory/selectors')
+jest.mock('@luxfi/wallet/src/features/wallet/selectors')
+jest.mock('@luxfi/wallet/src/features/wallet/accounts/utils')
 
 const mockSelectBackupReminderLastSeenTs = selectBackupReminderLastSeenTs as jest.MockedFunction<
   typeof selectBackupReminderLastSeenTs

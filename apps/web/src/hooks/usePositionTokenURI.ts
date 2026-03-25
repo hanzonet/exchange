@@ -4,10 +4,10 @@ import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { Erc721 } from 'lx/src/abis/types/Erc721'
-import { NonfungiblePositionManager } from 'lx/src/abis/types/v3/NonfungiblePositionManager'
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { Erc721 } from '@luxexchange/lx/src/abis/types/Erc721'
+import { NonfungiblePositionManager } from '@luxexchange/lx/src/abis/types/v3/NonfungiblePositionManager'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 =======
 import { Erc721 } from '@luxexchange/lx/src/abis/types/Erc721'
 import { NonfungiblePositionManager } from '@luxexchange/lx/src/abis/types/v3/NonfungiblePositionManager'

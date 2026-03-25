@@ -13,7 +13,7 @@ jest.mock('src/app/features/dapp/DappContext', () => {
 })
 
 jest.mock('src/app/features/dapp/hooks', () => {
-  const { ACCOUNT, ACCOUNT3 } = require('wallet/src/test/fixtures')
+  const { ACCOUNT, ACCOUNT3 } = require('@luxfi/wallet/src/test/fixtures')
   return { useDappConnectedAccounts: jest.fn(() => [ACCOUNT, ACCOUNT3]) }
 })
 

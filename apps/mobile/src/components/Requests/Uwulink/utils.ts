@@ -19,12 +19,12 @@ import {
   UwULinkRequest,
   UwULinkRequestInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/types/walletConnect'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { ContractManager } from 'wallet/src/features/contracts/ContractManager'
-import { ProviderManager } from 'wallet/src/features/providers/ProviderManager'
-import { getTokenSendRequest } from 'wallet/src/features/transactions/send/hooks/useSendTransactionRequest'
-import { SendCurrencyParams } from 'wallet/src/features/transactions/send/types'
+} from '@luxexchange/lx/src/types/walletConnect'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { ContractManager } from '@luxfi/wallet/src/features/contracts/ContractManager'
+import { ProviderManager } from '@luxfi/wallet/src/features/providers/ProviderManager'
+import { getTokenSendRequest } from '@luxfi/wallet/src/features/transactions/send/hooks/useSendTransactionRequest'
+import { SendCurrencyParams } from '@luxfi/wallet/src/features/transactions/send/types'
 =======
 } from '@luxexchange/lx/src/types/walletConnect'
 import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'

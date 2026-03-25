@@ -1,4 +1,4 @@
-import { noop } from 'utilities/src/react/noop'
+import { noop } from '@luxfi/utilities/src/react/noop'
 import Expand from '~/components/Expand'
 import { fireEvent, render, screen } from '~/test-utils/render'
 

@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isBackendSupportedChain } from 'lx/src/features/chains/utils'
+import { GraphQLApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isBackendSupportedChain } from '@luxexchange/lx/src/features/chains/utils'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

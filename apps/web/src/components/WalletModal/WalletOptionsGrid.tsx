@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
 <<<<<<< Updated upstream
-import { Flex, Separator } from 'ui/src'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { isMobileWeb } from 'utilities/src/platform'
+import { Flex, Separator } from '@luxfi/ui/src'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 =======
 import { Flex, Separator } from '@luxfi/ui/src'
 import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'

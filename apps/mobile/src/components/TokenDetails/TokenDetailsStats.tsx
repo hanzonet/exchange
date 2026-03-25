@@ -11,14 +11,14 @@ import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
 <<<<<<< Updated upstream
-} from 'lx/src/data/graphql/lux-data-api/fragments'
-import { useTokenMarketStats } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
-import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import { Language } from 'lx/src/features/language/constants'
-import { useCurrentLanguage, useCurrentLanguageInfo } from 'lx/src/features/language/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { useTokenMarketStats } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { useCurrentLanguage, useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 } from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
 import { useTokenMarketStats } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'

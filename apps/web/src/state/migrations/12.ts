@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { PersistState } from 'redux-persist'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { createPersistState, createSafeMigration } from '@luxexchange/lx/src/state/createSafeMigration'

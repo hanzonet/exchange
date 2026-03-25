@@ -7,8 +7,8 @@ import {
   ToucanBidTransactionInfo,
   ToucanWithdrawBidAndClaimTokensTransactionInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'

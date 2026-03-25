@@ -7,10 +7,10 @@ import {
   UpdateConnectionRequest,
 } from 'src/background/messagePassing/types/requests'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { chainIdToHexadecimalString } from 'lx/src/features/chains/utils'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { getProviderSync } from 'wallet/src/features/wallet/context'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { chainIdToHexadecimalString } from '@luxexchange/lx/src/features/chains/utils'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { getProviderSync } from '@luxfi/wallet/src/features/wallet/context'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { chainIdToHexadecimalString } from '@luxexchange/lx/src/features/chains/utils'

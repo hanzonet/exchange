@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { usePrevious } from 'utilities/src/react/hooks'
-import { useAccountListData } from 'wallet/src/features/accounts/useAccountListData'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { useAccountListData } from '@luxfi/wallet/src/features/accounts/useAccountListData'
 
 interface AddressWithBalance {
   address: Address

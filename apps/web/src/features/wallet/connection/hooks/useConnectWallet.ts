@@ -1,10 +1,10 @@
 <<<<<<< Updated upstream
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { WalletConnectionResult } from 'lx/src/features/telemetry/types'
-import { logger } from 'utilities/src/logger/logger'
-import { pipe } from 'utilities/src/primitives/array'
-import { useEvent } from 'utilities/src/react/hooks'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { WalletConnectionResult } from '@luxexchange/lx/src/features/telemetry/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { pipe } from '@luxfi/utilities/src/primitives/array'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'

@@ -1,9 +1,9 @@
 import { Currency, CurrencyAmount, Percent, Price, Token } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { TradingApi } from '@universe/api'
-import { SwapTradeBaseProperties } from 'lx/src/features/telemetry/types'
-import { getRouteAnalyticsData, tradeRoutingToFillType } from 'lx/src/features/transactions/swap/analytics'
-import { planAnalyticsToSnakeCase } from 'lx/src/features/transactions/swap/plan/types'
+import { TradingApi } from '@luxexchange/api'
+import { SwapTradeBaseProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { getRouteAnalyticsData, tradeRoutingToFillType } from '@luxexchange/lx/src/features/transactions/swap/analytics'
+import { planAnalyticsToSnakeCase } from '@luxexchange/lx/src/features/transactions/swap/plan/types'
 =======
 import { TradingApi } from '@luxexchange/api'
 import { SwapTradeBaseProperties } from '@luxexchange/lx/src/features/telemetry/types'
@@ -24,8 +24,8 @@ import {
   type PlanSwapTransactionInfoFields,
   TransactionOriginType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'

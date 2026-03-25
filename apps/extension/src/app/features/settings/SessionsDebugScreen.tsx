@@ -1,19 +1,19 @@
 /* eslint-disable max-lines */
-import { getEntryGatewayUrl, provideSessionService } from '@universe/api'
+import { getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
 import {
   ChallengeType,
   createHashcashSolver,
   createHashcashWorkerChannel,
   type SessionService,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { memo, useCallback, useEffect, useRef } from 'react'
 import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { type LogEntry, useSessionsDebugStore } from 'src/app/features/settings/stores/sessionsDebugStore'
 <<<<<<< Updated upstream
-import { Button, Flex, ScrollView, Text, TouchableArea } from 'ui/src'
-import { CopyAlt } from 'ui/src/components/icons'
-import { setClipboard } from 'utilities/src/clipboard/clipboard'
-import { logger } from 'utilities/src/logger/logger'
+import { Button, Flex, ScrollView, Text, TouchableArea } from '@luxfi/ui/src'
+import { CopyAlt } from '@luxfi/ui/src/components/icons'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { Button, Flex, ScrollView, Text, TouchableArea } from '@luxfi/ui/src'
 import { CopyAlt } from '@luxfi/ui/src/components/icons'
@@ -373,7 +373,7 @@ export function SessionsDebugScreen(): JSX.Element {
           createHashcashWorkerChannel({
             getWorker: () =>
               new Worker(
-                new URL('@universe/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
+                new URL('@luxexchange/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
                 { type: 'module' },
               ),
           }),

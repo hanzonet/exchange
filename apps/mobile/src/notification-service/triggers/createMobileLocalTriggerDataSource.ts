@@ -1,12 +1,12 @@
 import {
   createLocalTriggerDataSource,
   type TriggerCondition,
-} from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
-import { type NotificationDataSource } from '@universe/notifications/src/notification-data-source/NotificationDataSource'
-import { type NotificationTracker } from '@universe/notifications/src/notification-tracker/NotificationTracker'
+} from '@luxexchange/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
+import { type NotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/NotificationDataSource'
+import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
 import { type MobileState } from 'src/app/mobileReducer'
 import { createBackupReminderTrigger } from 'src/notification-service/triggers/backupReminderTrigger'
-import { setBackupReminderLastSeenTs } from 'wallet/src/features/behaviorHistory/slice'
+import { setBackupReminderLastSeenTs } from '@luxfi/wallet/src/features/behaviorHistory/slice'
 
 /**
  * Context required to create the mobile local trigger data source.

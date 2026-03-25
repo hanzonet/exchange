@@ -5,8 +5,8 @@ import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { RestoreCloudBackupPasswordScreen } from 'src/screens/Import/RestoreCloudBackupPasswordScreen'
 import { render } from 'src/test/test-utils'
 <<<<<<< Updated upstream
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
-import { GuiProvider } from 'wallet/src/providers/gui-provider'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { GuiProvider } from '@luxfi/wallet/src/providers/gui-provider'
 =======
 import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
 import { GuiProvider } from '@luxfi/wallet/src/providers/gui-provider'

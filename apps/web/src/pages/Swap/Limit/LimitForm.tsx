@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 import { Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
 import { UNIVERSAL_ROUTER_ADDRESS, UniversalRouterVersion } from '@uniswap/universal-router-sdk'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Anchor, Button, Flex, styled, Text, useIsShortMobileDevice } from '@luxfi/ui/src'
@@ -20,9 +20,9 @@ import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { useUSDCValueWithStatus } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 // biome-ignore lint/style/noRestrictedImports: We need to import this directly so we can format with `en-US` locale
-import { formatCurrencyAmount as formatCurrencyAmountRaw } from 'utilities/src/format/localeBased'
-import { NumberType } from 'utilities/src/format/types'
-import { isSafeNumber } from 'utilities/src/primitives/integer'
+import { formatCurrencyAmount as formatCurrencyAmountRaw } from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isSafeNumber } from '@luxfi/utilities/src/primitives/integer'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { LimitPriceInputPanel } from '~/components/CurrencyInputPanel/LimitPriceInputPanel/LimitPriceInputPanel'
 import {

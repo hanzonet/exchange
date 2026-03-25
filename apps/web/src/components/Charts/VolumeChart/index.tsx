@@ -1,12 +1,12 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { useSporeColors } from 'ui/src'
-import { BIPS_BASE } from 'lx/src/constants/misc'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { useSporeColors } from '@luxfi/ui/src'
+import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { useSporeColors } from '@luxfi/ui/src'
 import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'

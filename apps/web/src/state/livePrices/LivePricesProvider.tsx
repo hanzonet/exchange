@@ -4,9 +4,9 @@ import {
   getWebSocketUrl,
   provideSessionService,
   SharedQueryClient,
-} from '@universe/api'
-import { FeatureFlags, getIsSessionServiceEnabled, useFeatureFlag } from '@universe/gating'
-import type { TokenPriceMessage, TokenSubscriptionParams } from '@universe/prices'
+} from '@luxexchange/api'
+import { FeatureFlags, getIsSessionServiceEnabled, useFeatureFlag } from '@luxexchange/gating'
+import type { TokenPriceMessage, TokenSubscriptionParams } from '@luxexchange/prices'
 import {
   createPriceKey,
   createPriceSubscriptionHandler,
@@ -14,14 +14,14 @@ import {
   parseConnectionMessage,
   parseTokenPriceMessage,
   priceKeys,
-} from '@universe/prices'
-import type { WebSocketClient } from '@universe/websocket'
-import { createWebSocketClient, createZustandConnectionStore } from '@universe/websocket'
+} from '@luxexchange/prices'
+import type { WebSocketClient } from '@luxexchange/websocket'
+import { createWebSocketClient, createZustandConnectionStore } from '@luxexchange/websocket'
 import type { ReactElement, ReactNode } from 'react'
 import { useState } from 'react'
-import { isDevEnv } from 'utilities/src/environment/env'
-import { logger } from 'utilities/src/logger/logger'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
 
 function createLivePricesClient(): WebSocketClient<TokenSubscriptionParams, TokenPriceMessage['data']> | null {
   const wsUrl = getWebSocketUrl()

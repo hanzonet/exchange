@@ -4,10 +4,10 @@ import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unit
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 // biome-ignore lint/style/noRestrictedImports: Direct access needed for custom portfolio query with multiple addresses
 <<<<<<< Updated upstream
-import { usePortfolioValueModifiers } from 'lx/src/features/dataApi/balances/balances'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { logger } from 'utilities/src/logger/logger'
+import { usePortfolioValueModifiers } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { usePortfolioValueModifiers } from '@luxexchange/lx/src/features/dataApi/balances/balances'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
@@ -18,9 +18,9 @@ import {
   AddressWithBalanceAndName,
   hasBalanceOrName,
   useAddressesEnsNames,
-} from 'wallet/src/features/onboarding/hooks/useImportableAccounts'
-import { NUMBER_OF_WALLETS_TO_GENERATE } from 'wallet/src/features/onboarding/OnboardingContext'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+} from '@luxfi/wallet/src/features/onboarding/hooks/useImportableAccounts'
+import { NUMBER_OF_WALLETS_TO_GENERATE } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 export interface RecoveryWalletInfo extends AddressWithBalanceAndName {
   derivationIndex: number

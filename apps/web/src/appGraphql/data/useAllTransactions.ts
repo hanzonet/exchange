@@ -1,10 +1,10 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo, useRef } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import i18n from 'lx/src/i18n'
-import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import i18n from '@luxexchange/lx/src/i18n'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'

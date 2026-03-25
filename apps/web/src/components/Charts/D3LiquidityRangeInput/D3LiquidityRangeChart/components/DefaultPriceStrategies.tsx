@@ -1,9 +1,9 @@
 <<<<<<< Updated upstream
-import { Flex, Shine, styled, Text } from 'ui/src'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import i18n from 'lx/src/i18n'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, Shine, styled, Text } from '@luxfi/ui/src'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import i18n from '@luxexchange/lx/src/i18n'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, Shine, styled, Text } from '@luxfi/ui/src'
 import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'

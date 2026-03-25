@@ -1,8 +1,8 @@
 import { focusOrCreateDappRequestWindow } from 'src/app/navigation/utils'
 <<<<<<< Updated upstream
-import { ExtensionEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { logger } from 'utilities/src/logger/logger'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'

@@ -8,12 +8,12 @@ import {
   isValidLiquidityTxContext,
   MigratePositionTxAndGasInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/liquidity/types'
-import { getErrorMessageToDisplay } from 'lx/src/features/transactions/liquidity/utils'
-import { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { isSignerMnemonicAccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { getErrorMessageToDisplay } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { isSignerMnemonicAccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/liquidity/types'
 import { getErrorMessageToDisplay } from '@luxexchange/lx/src/features/transactions/liquidity/utils'

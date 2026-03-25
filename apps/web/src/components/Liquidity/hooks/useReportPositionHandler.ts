@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
 <<<<<<< Updated upstream
-import { submitPoolSpamReport } from 'lx/src/features/reporting/reports'
-import { setPositionVisibility } from 'lx/src/features/visibility/slice'
-import { useEvent } from 'utilities/src/react/hooks'
+import { submitPoolSpamReport } from '@luxexchange/lx/src/features/reporting/reports'
+import { setPositionVisibility } from '@luxexchange/lx/src/features/visibility/slice'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { submitPoolSpamReport } from '@luxexchange/lx/src/features/reporting/reports'
 import { setPositionVisibility } from '@luxexchange/lx/src/features/visibility/slice'

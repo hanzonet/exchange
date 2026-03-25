@@ -1,11 +1,11 @@
 import { Currency } from '@uniswap/sdk-core'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

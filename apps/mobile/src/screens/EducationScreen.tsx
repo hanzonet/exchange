@@ -4,8 +4,8 @@ import { Carousel } from 'src/components/carousel/Carousel'
 import { SeedPhraseEducationContent } from 'src/components/education/SeedPhrase'
 import { Screen } from 'src/components/layout/Screen'
 <<<<<<< Updated upstream
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { isIOS } from 'utilities/src/platform'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { isIOS } from '@luxfi/utilities/src/platform'
 =======
 import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 import { isIOS } from '@luxfi/utilities/src/platform'

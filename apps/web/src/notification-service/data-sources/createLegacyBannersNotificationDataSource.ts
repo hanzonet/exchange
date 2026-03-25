@@ -8,13 +8,13 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import {
   createNotificationDataSource,
   type NotificationDataSource,
   type NotificationTracker,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import {
   BRIDGED_ASSETS_V2_WEB_BANNER,
   NO_FEES_ICON,
@@ -24,10 +24,10 @@ import {
   SOLANA_BANNER_LIGHT,
   SOLANA_LOGO,
 <<<<<<< Updated upstream
-} from 'ui/src/assets'
-import { luxUrls } from 'lx/src/constants/urls'
-import i18n from 'lx/src/i18n'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxfi/ui/src/assets'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxfi/ui/src/assets'
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'

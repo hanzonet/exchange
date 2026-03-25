@@ -1,8 +1,8 @@
 import { connect, getConnectors } from '@wagmi/core'
 <<<<<<< Updated upstream
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { isPlaywrightEnv } from 'utilities/src/environment/env'
-import { sleep } from 'utilities/src/time/timing'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 =======
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'

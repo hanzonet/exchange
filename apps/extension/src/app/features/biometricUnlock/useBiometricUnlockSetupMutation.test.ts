@@ -4,12 +4,12 @@ import { BiometricUnlockStorage } from 'src/app/features/biometricUnlock/Biometr
 import { useBiometricUnlockSetupMutation } from 'src/app/features/biometricUnlock/useBiometricUnlockSetupMutation'
 import { isUserVerifyingPlatformAuthenticatorAvailable } from 'src/app/utils/device/builtInBiometricCapabilitiesQuery'
 import { renderHookWithProviders } from 'src/test/render'
-import { decodeFromStorage, decrypt } from 'wallet/src/features/wallet/Keyring/crypto'
+import { decodeFromStorage, decrypt } from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
 
 jest.mock('src/app/features/biometricUnlock/BiometricUnlockStorage')
 jest.mock('src/app/utils/device/builtInBiometricCapabilitiesQuery')
-jest.mock('wallet/src/features/wallet/Keyring/crypto', () => ({
-  ...jest.requireActual('wallet/src/features/wallet/Keyring/crypto'),
+jest.mock('@luxfi/wallet/src/features/wallet/Keyring/crypto', () => ({
+  ...jest.requireActual('@luxfi/wallet/src/features/wallet/Keyring/crypto'),
   createEmptySecretPayload: jest.fn(),
   getEncryptionKeyFromBuffer: jest.fn(),
 }))
@@ -34,10 +34,10 @@ const mockIsUserVerifyingPlatformAuthenticatorAvailable =
 
 // Mock crypto functions
 const mockCreateEmptySecretPayload = jest.requireMock(
-  'wallet/src/features/wallet/Keyring/crypto',
+  '@luxfi/wallet/src/features/wallet/Keyring/crypto',
 ).createEmptySecretPayload
 const mockGetEncryptionKeyFromBuffer = jest.requireMock(
-  'wallet/src/features/wallet/Keyring/crypto',
+  '@luxfi/wallet/src/features/wallet/Keyring/crypto',
 ).getEncryptionKeyFromBuffer
 
 // Mock PublicKeyCredential (doesn't exist in Jest environment)

@@ -20,10 +20,10 @@ import {
   isSignerMnemonicAccountDetails,
   SignerMnemonicAccountDetails,
 <<<<<<< Updated upstream
-} from 'lx/src/features/wallet/types/AccountDetails'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
 import { logger } from '@luxfi/utilities/src/logger/logger'

@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useTranslation } from 'react-i18next'
 import { Flex, useMedia } from '@luxfi/ui/src'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

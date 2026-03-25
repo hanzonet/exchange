@@ -26,17 +26,17 @@ import {
   TokenBalanceListContextProvider,
   useTokenBalanceListContext,
 <<<<<<< Updated upstream
-} from 'lx/src/features/portfolio/TokenBalanceListContext'
-import { isHiddenTokenBalancesRow, TokenBalanceListRow } from 'lx/src/features/portfolio/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { CurrencyId } from 'lx/src/types/currency'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { setClipboard } from 'utilities/src/clipboard/clipboard'
-import { DDRumManualTiming } from 'utilities/src/logger/datadog/datadogEvents'
-import { usePerformanceLogger } from 'utilities/src/logger/usePerformanceLogger'
-import { isAndroid } from 'utilities/src/platform'
-import { noop } from 'utilities/src/react/noop'
+} from '@luxexchange/lx/src/features/portfolio/TokenBalanceListContext'
+import { isHiddenTokenBalancesRow, TokenBalanceListRow } from '@luxexchange/lx/src/features/portfolio/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { DDRumManualTiming } from '@luxfi/utilities/src/logger/datadog/datadogEvents'
+import { usePerformanceLogger } from '@luxfi/utilities/src/logger/usePerformanceLogger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { noop } from '@luxfi/utilities/src/react/noop'
 =======
 } from '@luxexchange/lx/src/features/portfolio/TokenBalanceListContext'
 import { isHiddenTokenBalancesRow, TokenBalanceListRow } from '@luxexchange/lx/src/features/portfolio/types'

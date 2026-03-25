@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import ethereumLogo from '~/assets/images/ethereum-logo.png'
 import luxLogo from '~/assets/svg/lux_logo.svg'
 import zooLogo from '~/assets/svg/zoo_logo.svg'

@@ -23,11 +23,11 @@ import {
   TokenMenuActionType,
   useTokenContextMenuOptions,
 <<<<<<< Updated upstream
-} from 'lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+} from '@luxexchange/lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 =======
 } from '@luxexchange/lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

@@ -16,12 +16,12 @@ import {
   getPrivyEnums,
   listAuthenticators,
 <<<<<<< Updated upstream
-} from 'lx/src/features/passkey/embeddedWallet'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import i18n from 'lx/src/i18n'
-import { isMobileWeb } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import i18n from '@luxexchange/lx/src/i18n'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

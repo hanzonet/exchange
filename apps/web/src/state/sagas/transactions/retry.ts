@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { TransactionStepFailedError } from 'lx/src/features/transactions/errors'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { TransactionStepFailedError } from '@luxexchange/lx/src/features/transactions/errors'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { TransactionStepFailedError } from '@luxexchange/lx/src/features/transactions/errors'
 import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'

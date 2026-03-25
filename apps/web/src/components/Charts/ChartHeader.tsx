@@ -1,11 +1,11 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { ReactElement, ReactNode } from 'react'
 <<<<<<< Updated upstream
-import { Flex, LinearGradient, styled, Text, useSporeColors } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { FiatNumberType, NumberType } from 'utilities/src/format/types'
+import { Flex, LinearGradient, styled, Text, useSporeColors } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FiatNumberType, NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, LinearGradient, styled, Text, useSporeColors } from '@luxfi/ui/src'
 import { zIndexes } from '@luxfi/ui/src/theme'

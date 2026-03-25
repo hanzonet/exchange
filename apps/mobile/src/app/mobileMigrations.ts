@@ -18,11 +18,11 @@ import {
   TransactionStatus,
   TransactionType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { createSafeMigrationFactory } from 'lx/src/state/createSafeMigration'
-import { DappRequestType } from 'lx/src/types/walletConnect'
-import { type Account } from 'wallet/src/features/wallet/accounts/types'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { createSafeMigrationFactory } from '@luxexchange/lx/src/state/createSafeMigration'
+import { DappRequestType } from '@luxexchange/lx/src/types/walletConnect'
+import { type Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { createSafeMigrationFactory } from '@luxexchange/lx/src/state/createSafeMigration'

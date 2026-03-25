@@ -17,11 +17,11 @@ import {
 import { PropsWithChildren, default as React, useEffect, useState } from 'react'
 import { DatadogContext } from 'src/features/datadog/DatadogContext'
 <<<<<<< Updated upstream
-import { config } from 'lx/src/config'
-import { datadogEnabledBuild, isTestRun, localDevDatadogEnabled } from 'utilities/src/environment/constants'
-import { setAttributesToDatadog } from 'utilities/src/logger/datadog/Datadog'
-import { getDatadogEnvironment } from 'utilities/src/logger/datadog/env'
-import { logger } from 'utilities/src/logger/logger'
+import { config } from '@luxexchange/lx/src/config'
+import { datadogEnabledBuild, isTestRun, localDevDatadogEnabled } from '@luxfi/utilities/src/environment/constants'
+import { setAttributesToDatadog } from '@luxfi/utilities/src/logger/datadog/Datadog'
+import { getDatadogEnvironment } from '@luxfi/utilities/src/logger/datadog/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { config } from '@luxexchange/lx/src/config'
 import { datadogEnabledBuild, isTestRun, localDevDatadogEnabled } from '@luxfi/utilities/src/environment/constants'

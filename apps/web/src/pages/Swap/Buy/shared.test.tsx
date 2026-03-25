@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { FORCountry } from 'lx/src/features/fiatOnRamp/types'
-import 'utilities/src/logger/mocks'
+import { FORCountry } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import '@luxfi/utilities/src/logger/mocks'
 =======
 import { FORCountry } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import '@luxfi/utilities/src/logger/mocks'

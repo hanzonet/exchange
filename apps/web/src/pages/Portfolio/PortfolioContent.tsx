@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useLocation } from 'react-router'
 import { Flex } from '@luxfi/ui/src'
 import { TransitionItem } from '@luxfi/ui/src/animations/components/AnimatePresencePager'

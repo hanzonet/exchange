@@ -1,10 +1,10 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useNativeCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { NumberType } from 'utilities/src/format/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useNativeCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

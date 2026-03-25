@@ -1,7 +1,7 @@
 import { capitalize } from 'tsafe/capitalize'
 <<<<<<< Updated upstream
-import i18n from 'lx/src/i18n'
-import { logger } from 'utilities/src/logger/logger'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import i18n from '@luxexchange/lx/src/i18n'
 import { logger } from '@luxfi/utilities/src/logger/logger'

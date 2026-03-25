@@ -13,7 +13,7 @@ import {
   CapabilitySchema,
   GetCallsStatusResultSchema,
   SendCallsResultSchema,
-} from 'wallet/src/features/dappRequests/types'
+} from '@luxfi/wallet/src/features/dappRequests/types'
 import { z } from 'zod'
 
 // SCHEMAS + TYPES

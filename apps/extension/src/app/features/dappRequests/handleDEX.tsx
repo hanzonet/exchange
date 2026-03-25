@@ -13,11 +13,11 @@ import {
   convertOrderStatusToTransactionStatus,
   convertOrderTypeToRouting,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/utils/dex.utils'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { sleep } from 'utilities/src/time/timing'
+} from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 =======
 } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
 import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'

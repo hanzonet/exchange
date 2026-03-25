@@ -1,4 +1,4 @@
-import 'utilities/src/logger/mocks'
+import '@luxfi/utilities/src/logger/mocks'
 import { Price, WETH9 } from '@uniswap/sdk-core'
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import TradePrice from '~/components/swap/TradePrice'

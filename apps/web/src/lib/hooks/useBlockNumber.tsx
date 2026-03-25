@@ -5,8 +5,8 @@ import { atom } from 'jotai'
 import { useAtomValue } from 'jotai/utils'
 import { createContext, PropsWithChildren, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'

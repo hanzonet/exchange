@@ -14,8 +14,8 @@ import {
   setLanguageToNavigatorLanguage,
 } from 'src/store/extensionMigrations'
 <<<<<<< Updated upstream
-import { Language } from 'lx/src/features/language/constants'
-import { createThrowingProxy } from 'utilities/src/test/utils'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
 =======
 import { Language } from '@luxexchange/lx/src/features/language/constants'
 import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'

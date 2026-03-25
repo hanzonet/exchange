@@ -1,5 +1,5 @@
 import { SharedEventName } from '@uniswap/analytics-events'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import React, { useCallback, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
@@ -29,21 +29,21 @@ import {
   IntroCardGraphicType,
   IntroCardProps,
   isOnboardingCardLoggingName,
-} from 'wallet/src/components/introCards/IntroCard'
-import { INTRO_CARD_MIN_HEIGHT, IntroCardStack } from 'wallet/src/components/introCards/IntroCardStack'
-import { useSharedIntroCards } from 'wallet/src/components/introCards/useSharedIntroCards'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
+} from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { INTRO_CARD_MIN_HEIGHT, IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCardStack'
+import { useSharedIntroCards } from '@luxfi/wallet/src/components/introCards/useSharedIntroCards'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
 import {
   selectHasViewedBridgedAssetsCard,
   selectHasViewedBridgedAssetsV2Card,
   selectHasViewedNotificationsCard,
-} from 'wallet/src/features/behaviorHistory/selectors'
+} from '@luxfi/wallet/src/features/behaviorHistory/selectors'
 import {
   setHasViewedBridgedAssetsCard,
   setHasViewedBridgedAssetsV2Card,
   setHasViewedNotificationsCard,
-} from 'wallet/src/features/behaviorHistory/slice'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type OnboardingIntroCardStackProps = {
   isLoading?: boolean

@@ -19,7 +19,7 @@ import {
 import {
   useCreateOnboardingAccountIfNone,
   useOnboardingContext,
-} from 'wallet/src/features/onboarding/OnboardingContext'
+} from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 
 type Props = NativeStackScreenProps<UnitagStackParamList, UnitagScreens.ClaimUnitag>
 

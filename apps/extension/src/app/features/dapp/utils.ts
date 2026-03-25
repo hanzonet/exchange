@@ -1,10 +1,10 @@
 <<<<<<< Updated upstream
-import { AccountType } from 'lx/src/features/accounts/types'
-import { extractNameFromUrl } from 'utilities/src/format/extractNameFromUrl'
-import { bubbleToTop } from 'utilities/src/primitives/array'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { promiseTimeout } from 'utilities/src/time/timing'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'
+import { bubbleToTop } from '@luxfi/utilities/src/primitives/array'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { promiseTimeout } from '@luxfi/utilities/src/time/timing'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 =======
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
 import { extractNameFromUrl } from '@luxfi/utilities/src/format/extractNameFromUrl'

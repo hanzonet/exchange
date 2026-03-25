@@ -1,4 +1,4 @@
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { WalletConnectorMeta } from '~/features/wallet/connection/types/WalletConnectorMeta'
 
 const NORMALIZATION_RULES = [
@@ -32,7 +32,7 @@ function mergeWalletConnectorMeta(
   const mergedWalletConnector = restWalletConnectors.reduce((acc, walletConnector) => {
     if (acc.isInjected !== walletConnector.isInjected) {
       logger.warn(
-        'wallet/connectors/multiplatform.ts',
+        '@luxfi/wallet/connectors/multiplatform.ts',
         'mergeWalletConnectorMeta',
         'walletConnector isInjected mismatch',
         {

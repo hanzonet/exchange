@@ -6,9 +6,9 @@ import {
   getEntryGatewayUrl,
   provideSessionService,
   SharedQueryClient,
-} from '@universe/api'
-import { SESSION_INIT_QUERY_KEY } from '@universe/api/src/components/ApiInit'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { SESSION_INIT_QUERY_KEY } from '@luxexchange/api/src/components/ApiInit'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -17,7 +17,7 @@ import {
   createReactiveDataSource,
   getNotificationQueryOptions,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import ms from 'ms'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { focusOrCreateLuxInterfaceTab, focusOrCreateUnitagTab } from 'src/app/navigation/utils'
@@ -30,14 +30,14 @@ import { getNotificationTelemetry } from 'src/notification-service/notification-
 import { createExtensionLocalTriggerDataSource } from 'src/notification-service/triggers/createExtensionLocalTriggerDataSource'
 import { getReduxStore } from 'src/store/store'
 <<<<<<< Updated upstream
-import { luxUrls } from 'lx/src/constants/urls'
-import { mapLocaleToBackendLocale } from 'lx/src/features/language/constants'
-import { getLocale } from 'lx/src/features/language/navigatorLocale'
-import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
-import { getLogger } from 'utilities/src/logger/logger'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 =======
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'

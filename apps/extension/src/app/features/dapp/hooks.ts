@@ -1,9 +1,9 @@
 import { useEffect, useReducer, useState } from 'react'
 import { DappInfo, DappStoreEvent, dappStore } from 'src/app/features/dapp/store'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'

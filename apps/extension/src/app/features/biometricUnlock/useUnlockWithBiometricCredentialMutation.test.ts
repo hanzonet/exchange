@@ -3,7 +3,7 @@ import { waitFor } from '@testing-library/react'
 import { BiometricUnlockStorage } from 'src/app/features/biometricUnlock/BiometricUnlockStorage'
 import { useUnlockWithBiometricCredentialMutation } from 'src/app/features/biometricUnlock/useUnlockWithBiometricCredentialMutation'
 import { renderHookWithProviders } from 'src/test/render'
-import { encodeForStorage, encrypt, generateNew256BitRandomBuffer } from 'wallet/src/features/wallet/Keyring/crypto'
+import { encodeForStorage, encrypt, generateNew256BitRandomBuffer } from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
 
 jest.mock('src/app/features/biometricUnlock/BiometricUnlockStorage')
 

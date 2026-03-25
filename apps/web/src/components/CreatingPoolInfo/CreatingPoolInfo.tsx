@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
-import { usePrevious } from 'utilities/src/react/hooks'
+import { Flex, Text } from '@luxfi/ui/src'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'

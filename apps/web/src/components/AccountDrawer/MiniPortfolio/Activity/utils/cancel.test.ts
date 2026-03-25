@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import 'utilities/src/logger/mocks'
-import { TradingApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import '@luxfi/utilities/src/logger/mocks'
+import { TradingApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 =======
 import '@luxfi/utilities/src/logger/mocks'
 import { TradingApi } from '@luxexchange/api'

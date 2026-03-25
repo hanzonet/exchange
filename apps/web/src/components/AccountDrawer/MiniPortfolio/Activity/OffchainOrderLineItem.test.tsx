@@ -1,9 +1,9 @@
-import 'utilities/src/logger/mocks'
+import '@luxfi/utilities/src/logger/mocks'
 import { CurrencyAmount, WETH9 } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { TradingApi } from '@universe/api'
-import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { TradingApi } from '@luxexchange/api'
+import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 =======
 import { TradingApi } from '@luxexchange/api'
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'

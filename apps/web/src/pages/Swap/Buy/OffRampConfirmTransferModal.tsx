@@ -20,16 +20,16 @@ import {
   OffRampTransferDetailsRequest,
   OffRampTransferDetailsResponse,
 <<<<<<< Updated upstream
-} from 'lx/src/features/fiatOnRamp/types'
-import { useUSDValueOfGasFee } from 'lx/src/features/gas/hooks'
-import { GasSpeed } from 'lx/src/features/gas/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { FiatOffRampEventName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { shortenAddress } from 'utilities/src/addresses'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { useUSDValueOfGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { GasSpeed } from '@luxexchange/lx/src/features/gas/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FiatOffRampEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import { useUSDValueOfGasFee } from '@luxexchange/lx/src/features/gas/hooks'

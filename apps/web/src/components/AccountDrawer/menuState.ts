@@ -1,8 +1,8 @@
 import { atom, useAtom } from 'jotai'
 import { useUpdateAtom } from 'jotai/utils'
 <<<<<<< Updated upstream
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'

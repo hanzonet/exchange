@@ -1,5 +1,5 @@
 import { Currency } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'

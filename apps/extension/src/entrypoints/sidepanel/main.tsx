@@ -14,9 +14,9 @@ import { OnboardingMessageType } from 'src/background/messagePassing/types/Exten
 import { getReduxStore } from 'src/store/store'
 import { ExtensionAppLocation, StoreSynchronization } from 'src/store/storeSynchronization'
 <<<<<<< Updated upstream
-import { initializeScrollWatcher } from 'lx/src/components/modals/ScrollLock'
-import { initializePortfolioQueryOverrides } from 'lx/src/data/rest/portfolioBalanceOverrides'
-import { logger } from 'utilities/src/logger/logger'
+import { initializeScrollWatcher } from '@luxexchange/lx/src/components/modals/ScrollLock'
+import { initializePortfolioQueryOverrides } from '@luxexchange/lx/src/data/rest/portfolioBalanceOverrides'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { initializeScrollWatcher } from '@luxexchange/lx/src/components/modals/ScrollLock'
 import { initializePortfolioQueryOverrides } from '@luxexchange/lx/src/data/rest/portfolioBalanceOverrides'

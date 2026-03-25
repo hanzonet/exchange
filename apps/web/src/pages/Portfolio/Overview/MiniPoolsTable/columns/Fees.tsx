@@ -1,11 +1,11 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { memo } from 'react'
 <<<<<<< Updated upstream
-import { EM_DASH, Text } from 'ui/src'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { NumberType } from 'utilities/src/format/types'
+import { EM_DASH, Text } from '@luxfi/ui/src'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { EM_DASH, Text } from '@luxfi/ui/src'
 import { PollingInterval } from '@luxexchange/lx/src/constants/misc'

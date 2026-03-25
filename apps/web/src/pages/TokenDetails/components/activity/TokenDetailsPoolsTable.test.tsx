@@ -3,9 +3,9 @@ import '~/test-utils/tokens/mocks'
 import { ApolloError } from '@apollo/client'
 import { type Currency, Percent, Token } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { DEFAULT_TICK_SPACING } from 'lx/src/constants/pools'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { GraphQLApi } from '@luxexchange/api'
+import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'

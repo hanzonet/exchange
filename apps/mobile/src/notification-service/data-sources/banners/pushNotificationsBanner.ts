@@ -5,8 +5,8 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { checkNotifications, type PermissionStatus } from 'react-native-permissions'
 import { BannerId } from 'src/notification-service/data-sources/banners/types'
 import { PUSH_NOTIFICATIONS_CARD_BANNER } from '@luxfi/ui/src/assets'

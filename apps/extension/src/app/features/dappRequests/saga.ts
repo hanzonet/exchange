@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 import { type Provider } from '@ethersproject/providers'
 import { providerErrors, rpcErrors, serializeError } from '@metamask/rpc-errors'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { createSearchParams } from 'react-router'
 import { changeChain } from 'src/app/features/dapp/changeChain'
 import { type DappInfo, dappStore } from 'src/app/features/dapp/store'
@@ -57,13 +57,13 @@ import {
   TransactionType,
   type TransactionTypeInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { extractBaseUrl } from 'utilities/src/format/urls'
-import { logger } from 'utilities/src/logger/logger'
-import { getCallsStatusHelper } from 'wallet/src/features/batchedTransactions/eip5792Utils'
-import { addBatchedTransaction } from 'wallet/src/features/batchedTransactions/slice'
-import { generateBatchId, getCapabilitiesResponse } from 'wallet/src/features/batchedTransactions/utils'
-import { type Call } from 'wallet/src/features/dappRequests/types'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { extractBaseUrl } from '@luxfi/utilities/src/format/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { getCallsStatusHelper } from '@luxfi/wallet/src/features/batchedTransactions/eip5792Utils'
+import { addBatchedTransaction } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { generateBatchId, getCapabilitiesResponse } from '@luxfi/wallet/src/features/batchedTransactions/utils'
+import { type Call } from '@luxfi/wallet/src/features/dappRequests/types'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { extractBaseUrl } from '@luxfi/utilities/src/format/urls'
@@ -76,11 +76,11 @@ import { type Call } from '@luxfi/wallet/src/features/dappRequests/types'
 import {
   type ExecuteTransactionParams,
   executeTransaction,
-} from 'wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
-import { type SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
-import { getProvider, getSignerManager } from 'wallet/src/features/wallet/context'
-import { selectActiveAccount, selectHasSmartWalletConsent } from 'wallet/src/features/wallet/selectors'
-import { signMessage, signTypedDataMessage } from 'wallet/src/features/wallet/signing/signing'
+} from '@luxfi/wallet/src/features/transactions/executeTransaction/executeTransactionSaga'
+import { type SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
+import { getProvider, getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
+import { selectActiveAccount, selectHasSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/selectors'
+import { signMessage, signTypedDataMessage } from '@luxfi/wallet/src/features/wallet/signing/signing'
 
 export function isDappRequestWithDappInfo(
   request: DappRequestNoDappInfo | DappRequestWithDappInfo,

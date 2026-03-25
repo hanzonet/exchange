@@ -1,5 +1,5 @@
 import type { BrowserContext, Page } from '@playwright/test'
-import { sleep } from 'utilities/src/time/timing'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 
 export async function openExtensionSidebar(context: BrowserContext, extensionId: string): Promise<Page> {
   const sidebarUrl = `chrome-extension://${extensionId}/sidepanel.html`

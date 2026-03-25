@@ -4,11 +4,11 @@ import { selectAllPushNotificationSettings } from 'src/features/notifications/se
 import { initNotifsForNewUser, updateNotifSettings } from 'src/features/notifications/slice'
 import { call, select, takeEvery } from 'typed-redux-saga'
 <<<<<<< Updated upstream
-import { finalizeTransaction } from 'lx/src/features/transactions/slice'
-import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { selectActiveAccountAddress, selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
-import { removeAccounts, setAccountAsActive } from 'wallet/src/features/wallet/slice'
+import { finalizeTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { selectActiveAccountAddress, selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
+import { removeAccounts, setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
 =======
 import { finalizeTransaction } from '@luxexchange/lx/src/features/transactions/slice'
 import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'

@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@luxfi/ui/src'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

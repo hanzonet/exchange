@@ -20,9 +20,9 @@ import {
   SendElement,
   SwapElement,
   TextElement,
-} from 'wallet/src/components/landing/elements'
-import { AnimatedArcCircle } from 'wallet/src/components/landing/shapes/AnimatedArcCircle'
-import { UnitagWithProfilePicture } from 'wallet/src/features/unitags/UnitagWithProfilePicture'
+} from '@luxfi/wallet/src/components/landing/elements'
+import { AnimatedArcCircle } from '@luxfi/wallet/src/components/landing/shapes/AnimatedArcCircle'
+import { UnitagWithProfilePicture } from '@luxfi/wallet/src/features/unitags/UnitagWithProfilePicture'
 
 const OUTER_CIRCLE_ARCS = [
   { startAngle: -130, endAngle: -50 }, // Upper arc

@@ -1,12 +1,12 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { GraphQLApi, parseRestProtocolVersion } from '@universe/api'
+import { GraphQLApi, parseRestProtocolVersion } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, useMedia } from 'ui/src'
-import { ReportPoolDataModal } from 'lx/src/components/reporting/ReportPoolDataModal'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { Flex, useMedia } from '@luxfi/ui/src'
+import { ReportPoolDataModal } from '@luxexchange/lx/src/components/reporting/ReportPoolDataModal'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 =======
 import { Flex, useMedia } from '@luxfi/ui/src'
 import { ReportPoolDataModal } from '@luxexchange/lx/src/components/reporting/ReportPoolDataModal'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useLocation, useParams } from 'react-router'
 import { useSporeColors } from '@luxfi/ui/src'

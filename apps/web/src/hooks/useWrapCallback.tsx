@@ -1,12 +1,12 @@
 import { Currency } from '@uniswap/sdk-core'
 import { useMemo, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { WRAPPED_NATIVE_CURRENCY } from 'lx/src/constants/tokens'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { logger } from 'utilities/src/logger/logger'
+import { WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'

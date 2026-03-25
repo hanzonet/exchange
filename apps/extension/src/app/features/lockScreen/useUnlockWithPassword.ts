@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
-import { useEvent } from 'utilities/src/react/hooks'
-import { authActions } from 'wallet/src/features/auth/saga'
-import { AuthActionType } from 'wallet/src/features/auth/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { authActions } from '@luxfi/wallet/src/features/auth/saga'
+import { AuthActionType } from '@luxfi/wallet/src/features/auth/types'
 
 export function useUnlockWithPassword(): (params: { password: string }) => void {
   const dispatch = useDispatch()

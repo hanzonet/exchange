@@ -26,7 +26,7 @@ vi.mock('~/state', () => ({
   default: mockAppStore,
 }))
 
-vi.mock('utilities/src/logger/logger', () => ({
+vi.mock('@luxfi/utilities/src/logger/logger', () => ({
   logger: mockLogger,
 }))
 

@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { disconnectWallet } from 'lx/src/features/passkey/embeddedWallet'
-import { logger } from 'utilities/src/logger/logger'
+import { disconnectWallet } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { disconnectWallet } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
 import { logger } from '@luxfi/utilities/src/logger/logger'

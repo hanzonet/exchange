@@ -4,10 +4,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { WalletRestoreType } from 'src/components/RestoreWalletModal/RestoreWalletModalState'
 <<<<<<< Updated upstream
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { logger } from 'utilities/src/logger/logger'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 =======
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -59,7 +59,7 @@ export function useWalletRestore(params?: Props): {
       .then((result) => {
         setWalletRestoreType(result)
       })
-      .catch((error) => logger.error(error, { tags: { file: 'wallet/hooks', function: 'useWalletRestore' } }))
+      .catch((error) => logger.error(error, { tags: { file: '@luxfi/wallet/hooks', function: 'useWalletRestore' } }))
   }, [mnemonicIdFromLocalState, shouldRestoreSeedPhraseFF])
 
   useFocusEffect(

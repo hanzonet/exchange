@@ -12,7 +12,7 @@ import {
   type WalletName,
   WalletReadyState,
 } from '@solana/wallet-adapter-base'
-import { useFeatureFlag } from '@universe/gating'
+import { useFeatureFlag } from '@luxexchange/gating'
 import { useWeb3React } from '@web3-react/core'
 import { config as loadEnv } from 'dotenv'
 import failOnConsole from 'jest-fail-on-console'
@@ -215,7 +215,7 @@ vi.mock('@uniswap/analytics', () => ({
   __esModule: true,
 }))
 
-vi.mock('utilities/src/telemetry/analytics/constants', () => ({
+vi.mock('@luxfi/utilities/src/telemetry/analytics/constants', () => ({
   ANALYTICS_FLUSH_TIMEOUT: 5000,
   ANALYTICS_REQUEST_TIMEOUT: 10000,
   ANALYTICS_BATCH_SIZE: 100,
@@ -224,8 +224,8 @@ vi.mock('utilities/src/telemetry/analytics/constants', () => ({
   __esModule: true,
 }))
 
-vi.mock('utilities/src/platform', async () => {
-  const actual = await vi.importActual('utilities/src/platform')
+vi.mock('@luxfi/utilities/src/platform', async () => {
+  const actual = await vi.importActual('@luxfi/utilities/src/platform')
   return {
     ...actual,
     isWebPlatform: true,
@@ -420,7 +420,7 @@ failOnConsole({
   },
 })
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

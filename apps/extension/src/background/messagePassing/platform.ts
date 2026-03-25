@@ -1,7 +1,7 @@
 /* biome-ignore-all lint/suspicious/noExplicitAny: Chrome extension message passing requires flexible typing for arbitrary message payloads */
 <<<<<<< Updated upstream
-import { MessageParsers } from 'lx/src/extension/messagePassing/platform'
-import { logger } from 'utilities/src/logger/logger'
+import { MessageParsers } from '@luxexchange/lx/src/extension/messagePassing/platform'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { MessageParsers } from '@luxexchange/lx/src/extension/messagePassing/platform'
 import { logger } from '@luxfi/utilities/src/logger/logger'

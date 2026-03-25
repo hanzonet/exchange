@@ -4,11 +4,11 @@ import {
   Notification,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { type TriggerCondition } from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
+import { ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { type TriggerCondition } from '@luxexchange/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
 import { type ExtensionState } from 'src/store/extensionReducer'
-import { appRatingStateSelector } from 'wallet/src/features/appRating/selectors'
-import { setAppRating } from 'wallet/src/features/wallet/slice'
+import { appRatingStateSelector } from '@luxfi/wallet/src/features/appRating/selectors'
+import { setAppRating } from '@luxfi/wallet/src/features/wallet/slice'
 
 /**
  * Unique ID for the app rating notification.

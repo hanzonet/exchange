@@ -38,7 +38,7 @@ import {
   removeUniconV2BehaviorState,
   removeWalletIsUnlockedState,
   updateExploreOrderByType,
-} from 'wallet/src/state/walletMigrations'
+} from '@luxfi/wallet/src/state/walletMigrations'
 
 export const migrations = {
   0: removeWalletIsUnlockedState,

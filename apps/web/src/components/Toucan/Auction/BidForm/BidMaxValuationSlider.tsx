@@ -1,11 +1,11 @@
 import { memo, useEffect, useMemo, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, getContrastPassingTextColor, Slider, Text, Tooltip, styled as guiStyled } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, getContrastPassingTextColor, Slider, Text, Tooltip, styled as guiStyled } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, getContrastPassingTextColor, Slider, Text, Tooltip, styled as guiStyled } from '@luxfi/ui/src'
 import { zIndexes } from '@luxfi/ui/src/theme'

@@ -13,10 +13,10 @@ import {
   sendTokenTransactionInfo,
   transactionDetails,
 <<<<<<< Updated upstream
-} from 'lx/src/test/fixtures'
-import { useRecipients } from 'wallet/src/components/RecipientSearch/hooks'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxexchange/lx/src/test/fixtures'
+import { useRecipients } from '@luxfi/wallet/src/components/RecipientSearch/hooks'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 =======
 } from '@luxexchange/lx/src/test/fixtures'
 import { useRecipients } from '@luxfi/wallet/src/components/RecipientSearch/hooks'

@@ -36,7 +36,7 @@ jest.mock('lx/src/features/portfolio/api', () => ({
   })),
 }))
 
-jest.mock('wallet/src/features/wallet/hooks', () => ({
+jest.mock('@luxfi/wallet/src/features/wallet/hooks', () => ({
   useActiveAccountWithThrow: jest.fn(() => ({
     address: '0x123',
     type: 'readonly',
@@ -56,11 +56,11 @@ jest.mock('src/app/features/dappRequests/hooks', () => ({
 }))
 
 // Mock the NetworkFeeFooter to avoid complex currency parsing
-jest.mock('wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter', () => ({
+jest.mock('@luxfi/wallet/src/features/transactions/TransactionRequest/NetworkFeeFooter', () => ({
   NetworkFeeFooter: () => null,
 }))
 
-jest.mock('wallet/src/features/transactions/TransactionRequest/AddressFooter', () => ({
+jest.mock('@luxfi/wallet/src/features/transactions/TransactionRequest/AddressFooter', () => ({
   AddressFooter: () => null,
 }))
 

@@ -25,7 +25,7 @@ import { migration20 } from '~/state/migrations/20'
 import { migration21 } from '~/state/migrations/21'
 import { migration22 } from '~/state/migrations/22'
 
-vi.mock('utilities/src/platform', () => ({
+vi.mock('@luxfi/utilities/src/platform', () => ({
   isWebApp: true,
   isMobileApp: false,
   isExtensionApp: false,

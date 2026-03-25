@@ -1,9 +1,9 @@
 import userEvent from '@testing-library/user-event'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { USDC_MAINNET } from 'lx/src/constants/tokens'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { GraphQLApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
@@ -25,7 +25,7 @@ vi.mock('~/pages/TokenDetails/context/TDPContext', () => ({
   useTDPContext: vi.fn(),
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

@@ -2,8 +2,8 @@ import { Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
 =======
 import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
 import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'

@@ -2,9 +2,9 @@ import { useAtom } from 'jotai'
 import { useAtomValue } from 'jotai/utils'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Anchor, Flex, styled, Text, TouchableArea } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { isWebAndroid, isWebIOS } from 'utilities/src/platform'
+import { Anchor, Flex, styled, Text, TouchableArea } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { isWebAndroid, isWebIOS } from '@luxfi/utilities/src/platform'
 =======
 import { Anchor, Flex, styled, Text, TouchableArea } from '@luxfi/ui/src'
 import { X } from '@luxfi/ui/src/components/icons/X'

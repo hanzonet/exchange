@@ -5,25 +5,25 @@ import {
   NotificationVersion,
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@universe/api'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@luxexchange/api'
 import {
   createNotificationDataSource,
   type NotificationDataSource,
   type NotificationTracker,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import { AppRoutes, SettingsRoutes, UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { getReduxStore } from 'src/store/store'
 
 <<<<<<< Updated upstream
-import { AccountType } from 'lx/src/features/accounts/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { UNITAG_SUFFIX_NO_LEADING_DOT } from 'lx/src/features/unitags/constants'
-import i18n from 'lx/src/i18n'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { selectHasSkippedUnitagPrompt } from 'wallet/src/features/behaviorHistory/selectors'
-import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { UNITAG_SUFFIX_NO_LEADING_DOT } from '@luxexchange/lx/src/features/unitags/constants'
+import i18n from '@luxexchange/lx/src/i18n'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { selectHasSkippedUnitagPrompt } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
 =======
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'

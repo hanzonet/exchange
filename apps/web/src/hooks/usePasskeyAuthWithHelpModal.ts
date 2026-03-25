@@ -2,9 +2,9 @@ import { MutationFunctionContext, UseMutationOptions, UseMutationResult, useMuta
 import { atom } from 'jotai'
 import { useUpdateAtom } from 'jotai/utils'
 <<<<<<< Updated upstream
-import { PasskeysHelpModalTypes } from 'lx/src/features/passkey/PasskeysHelpModal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { logger } from 'utilities/src/logger/logger'
+import { PasskeysHelpModalTypes } from '@luxexchange/lx/src/features/passkey/PasskeysHelpModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { PasskeysHelpModalTypes } from '@luxexchange/lx/src/features/passkey/PasskeysHelpModal'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'

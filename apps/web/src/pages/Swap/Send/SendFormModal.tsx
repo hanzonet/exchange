@@ -12,9 +12,9 @@ import {
   TransactionScreen,
   useTransactionModalContext,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { SwapTab } from 'lx/src/types/screens/interface'
-import { noop } from 'utilities/src/react/noop'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'
+import { noop } from '@luxfi/utilities/src/react/noop'
 =======
 } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'

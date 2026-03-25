@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import { chainIdToPlatform } from '@luxexchange/lx/src/features/platforms/utils/chains'
 import { filterSettingsByPlatformAndTradeRouting } from '@luxexchange/lx/src/features/transactions/components/settings/utils'

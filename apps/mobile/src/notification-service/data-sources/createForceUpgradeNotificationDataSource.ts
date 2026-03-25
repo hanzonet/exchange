@@ -7,13 +7,13 @@ import {
   OnClick,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
 <<<<<<< Updated upstream
-import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { DynamicConfigs, ForceUpgradeConfigKey, type ForceUpgradeStatus, getDynamicConfigValue } from '@universe/gating'
-import { createIntervalNotificationDataSource, type NotificationDataSource } from '@universe/notifications'
-import { LUX_LOGO } from 'ui/src/assets'
-import i18n from 'lx/src/i18n'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { MOBILE_APP_STORE_LINK } from 'wallet/src/constants/urls'
+import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { DynamicConfigs, ForceUpgradeConfigKey, type ForceUpgradeStatus, getDynamicConfigValue } from '@luxexchange/gating'
+import { createIntervalNotificationDataSource, type NotificationDataSource } from '@luxexchange/notifications'
+import { LUX_LOGO } from '@luxfi/ui/src/assets'
+import i18n from '@luxexchange/lx/src/i18n'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { MOBILE_APP_STORE_LINK } from '@luxfi/wallet/src/constants/urls'
 =======
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { DynamicConfigs, ForceUpgradeConfigKey, type ForceUpgradeStatus, getDynamicConfigValue } from '@luxexchange/gating'

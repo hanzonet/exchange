@@ -7,7 +7,7 @@ import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 const mockNavigateToSwapFlow = jest.fn()
 const mockNavigateToSend = jest.fn()
 
-jest.mock('wallet/src/contexts/WalletNavigationContext', () => ({
+jest.mock('@luxfi/wallet/src/contexts/WalletNavigationContext', () => ({
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   useWalletNavigation: () => ({
     navigateToSwapFlow: mockNavigateToSwapFlow,
@@ -15,7 +15,7 @@ jest.mock('wallet/src/contexts/WalletNavigationContext', () => ({
   }),
 }))
 
-jest.mock('wallet/src/features/wallet/hooks', () => ({
+jest.mock('@luxfi/wallet/src/features/wallet/hooks', () => ({
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   useActiveAccountAddressWithThrow: () => '0xTestAddress',
 }))

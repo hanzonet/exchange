@@ -2,8 +2,8 @@ import { nanoid } from '@reduxjs/toolkit'
 import { TokenList } from '@uniswap/token-lists'
 import { useCallback } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { logger } from '@luxfi/utilities/src/logger/logger'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { Flex, useMedia } from '@luxfi/ui/src'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'

@@ -1,5 +1,5 @@
 import { TradeType } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { useEffect, useRef, useState } from 'react'
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
@@ -12,10 +12,10 @@ import {
   TransactionStatus,
   DEXOrderDetails,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isFinalizedTxStatus } from 'lx/src/features/transactions/types/utils'
-import { convertOrderStatusToTransactionStatus } from 'lx/src/features/transactions/utils/dex.utils'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTxStatus } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { convertOrderStatusToTransactionStatus } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTxStatus } from '@luxexchange/lx/src/features/transactions/types/utils'

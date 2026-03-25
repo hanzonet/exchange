@@ -1,7 +1,7 @@
 import { SkeletonBox } from 'src/app/components/loading/SkeletonBox'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { WALLET_PREVIEW_CARD_MIN_HEIGHT } from 'wallet/src/components/WalletPreviewCard/WalletPreviewCard'
+import { Flex } from '@luxfi/ui/src'
+import { WALLET_PREVIEW_CARD_MIN_HEIGHT } from '@luxfi/wallet/src/components/WalletPreviewCard/WalletPreviewCard'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { WALLET_PREVIEW_CARD_MIN_HEIGHT } from '@luxfi/wallet/src/components/WalletPreviewCard/WalletPreviewCard'

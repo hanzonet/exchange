@@ -17,22 +17,22 @@ import {
   WalletConnectPendingSession,
 } from 'src/features/walletConnect/walletConnectSlice'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { pushNotification } from 'lx/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
-import { MobileEventName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { DappRequestType, WalletConnectEvent, WCEventType, WCRequestOutcome } from 'lx/src/types/walletConnect'
-import { useEvent } from 'utilities/src/react/hooks'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { DappConnectionContent } from 'wallet/src/components/dappRequests/DappConnectionContent'
-import { DappRequestHeader } from 'wallet/src/components/dappRequests/DappRequestHeader'
-import { getCapabilitiesCore } from 'wallet/src/features/batchedTransactions/utils'
-import { useBlockaidVerification } from 'wallet/src/features/dappRequests/hooks/useBlockaidVerification'
-import { useDappConnectionConfirmation } from 'wallet/src/features/dappRequests/hooks/useDappConnectionConfirmation'
-import { DappConnectionInfo, DappVerificationStatus } from 'wallet/src/features/dappRequests/types'
-import { mergeVerificationStatuses } from 'wallet/src/features/dappRequests/verification'
+import { Flex } from '@luxfi/ui/src'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { MobileEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { DappRequestType, WalletConnectEvent, WCEventType, WCRequestOutcome } from '@luxexchange/lx/src/types/walletConnect'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { DappConnectionContent } from '@luxfi/wallet/src/components/dappRequests/DappConnectionContent'
+import { DappRequestHeader } from '@luxfi/wallet/src/components/dappRequests/DappRequestHeader'
+import { getCapabilitiesCore } from '@luxfi/wallet/src/features/batchedTransactions/utils'
+import { useBlockaidVerification } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidVerification'
+import { useDappConnectionConfirmation } from '@luxfi/wallet/src/features/dappRequests/hooks/useDappConnectionConfirmation'
+import { DappConnectionInfo, DappVerificationStatus } from '@luxfi/wallet/src/features/dappRequests/types'
+import { mergeVerificationStatuses } from '@luxfi/wallet/src/features/dappRequests/verification'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
@@ -55,7 +55,7 @@ import {
   useActiveAccountWithThrow,
   useHasSmartWalletConsent,
   useSignerAccounts,
-} from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/features/wallet/hooks'
 
 type Props = {
   pendingSession: WalletConnectPendingSession

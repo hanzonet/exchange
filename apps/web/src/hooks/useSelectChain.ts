@@ -1,9 +1,9 @@
 <<<<<<< Updated upstream
-import { useIsSupportedChainIdCallback } from 'lx/src/features/chains/hooks/useSupportedChainId'
-import { EVMUniverseChainId, UniverseChainId } from 'lx/src/features/chains/types'
-import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useIsSupportedChainIdCallback } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
+import { EVMUniverseChainId, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { useIsSupportedChainIdCallback } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { EVMUniverseChainId, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

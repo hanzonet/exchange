@@ -1,9 +1,9 @@
 import { useAtom } from 'jotai'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex } from '@luxfi/ui/src'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'

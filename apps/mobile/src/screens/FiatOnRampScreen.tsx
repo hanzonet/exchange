@@ -56,17 +56,17 @@ import {
   DecimalPadInput,
   DecimalPadInputRef,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
-import { useUSDTokenUpdater } from 'lx/src/features/transactions/hooks/useUSDTokenUpdater'
-import { CurrencyField } from 'lx/src/types/currency'
-import { FiatOnRampScreens } from 'lx/src/types/screens/mobile'
-import { currencyIdToAddress } from 'lx/src/utils/currencyId'
-import { truncateToMaxDecimals } from 'utilities/src/format/truncateToMaxDecimals'
-import { isIOS, isWebPlatform } from 'utilities/src/platform'
-import { usePrevious } from 'utilities/src/react/hooks'
-import { DEFAULT_DELAY, useDebounce } from 'utilities/src/time/timing'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+} from '@luxexchange/lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
+import { useUSDTokenUpdater } from '@luxexchange/lx/src/features/transactions/hooks/useUSDTokenUpdater'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { FiatOnRampScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { truncateToMaxDecimals } from '@luxfi/utilities/src/format/truncateToMaxDecimals'
+import { isIOS, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { DEFAULT_DELAY, useDebounce } from '@luxfi/utilities/src/time/timing'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 } from '@luxexchange/lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
 import { useUSDTokenUpdater } from '@luxexchange/lx/src/features/transactions/hooks/useUSDTokenUpdater'

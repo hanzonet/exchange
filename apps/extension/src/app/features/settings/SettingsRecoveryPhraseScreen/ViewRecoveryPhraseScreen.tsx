@@ -7,9 +7,9 @@ import { SettingsRecoveryPhrase } from 'src/app/features/settings/SettingsRecove
 import { AppRoutes, RemoveRecoveryPhraseRoutes, SettingsRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
 <<<<<<< Updated upstream
-import { Button, Flex, Text } from 'ui/src'
-import { AlertTriangleFilled, Eye, Key, Laptop } from 'ui/src/components/icons'
-import { useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled, Eye, Key, Laptop } from '@luxfi/ui/src/components/icons'
+import { useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 import { Button, Flex, Text } from '@luxfi/ui/src'
 import { AlertTriangleFilled, Eye, Key, Laptop } from '@luxfi/ui/src/components/icons'

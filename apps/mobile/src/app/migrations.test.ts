@@ -195,17 +195,17 @@ import {
   testMigrateSearchHistory,
   testRemoveTHBFromCurrency,
 <<<<<<< Updated upstream
-} from 'lx/src/state/luxMigrationTests'
-import { transactionDetails } from 'lx/src/test/fixtures'
-import { DappRequestType } from 'lx/src/types/walletConnect'
-import { getAllKeysOfNestedObject } from 'utilities/src/primitives/objects'
-import { initialBatchedTransactionsState } from 'wallet/src/features/batchedTransactions/slice'
-import { initialBehaviorHistoryState } from 'wallet/src/features/behaviorHistory/slice'
-import { initialTelemetryState } from 'wallet/src/features/telemetry/slice'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
-import { initialWalletState, SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
-import { createMigrate } from 'wallet/src/state/createMigrate'
-import { HAYDEN_ETH_ADDRESS } from 'wallet/src/state/walletMigrations'
+} from '@luxexchange/lx/src/state/luxMigrationTests'
+import { transactionDetails } from '@luxexchange/lx/src/test/fixtures'
+import { DappRequestType } from '@luxexchange/lx/src/types/walletConnect'
+import { getAllKeysOfNestedObject } from '@luxfi/utilities/src/primitives/objects'
+import { initialBatchedTransactionsState } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { initialBehaviorHistoryState } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { initialTelemetryState } from '@luxfi/wallet/src/features/telemetry/slice'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { initialWalletState, SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
+import { createMigrate } from '@luxfi/wallet/src/state/createMigrate'
+import { HAYDEN_ETH_ADDRESS } from '@luxfi/wallet/src/state/walletMigrations'
 =======
 } from '@luxexchange/lx/src/state/luxMigrationTests'
 import { transactionDetails } from '@luxexchange/lx/src/test/fixtures'
@@ -244,8 +244,8 @@ import {
   testRemoveWalletIsUnlockedState,
   testUnchecksumDismissedTokenWarningKeys,
   testUpdateExploreOrderByType,
-} from 'wallet/src/state/walletMigrationsTests'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxfi/wallet/src/state/walletMigrationsTests'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 expect.extend({ toIncludeSameMembers })
 

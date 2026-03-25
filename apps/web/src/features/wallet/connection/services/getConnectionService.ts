@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { useEvent } from 'utilities/src/react/hooks'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'

@@ -1,12 +1,12 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { InterfaceEventName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { InterfaceEventName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { spacing } from '@luxfi/ui/src/theme'

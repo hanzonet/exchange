@@ -1,11 +1,11 @@
 import { Currency } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { Flex, FlexProps, Text } from 'ui/src'
-import { Chevron } from 'ui/src/components/icons/Chevron'
-import { iconSizes } from 'ui/src/theme'
-import { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, FlexProps, Text } from '@luxfi/ui/src'
+import { Chevron } from '@luxfi/ui/src/components/icons/Chevron'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, FlexProps, Text } from '@luxfi/ui/src'
 import { Chevron } from '@luxfi/ui/src/components/icons/Chevron'

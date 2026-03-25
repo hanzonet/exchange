@@ -25,10 +25,10 @@ import {
   SAMPLE_SEED_ADDRESS_1,
   SAMPLE_SEED_ADDRESS_2,
 <<<<<<< Updated upstream
-} from 'lx/src/test/fixtures'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+} from '@luxexchange/lx/src/test/fixtures'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 =======
 } from '@luxexchange/lx/src/test/fixtures'
 import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'

@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test'
 <<<<<<< Updated upstream
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { shortenAddress } from 'utilities/src/addresses'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 =======
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { shortenAddress } from '@luxfi/utilities/src/addresses'

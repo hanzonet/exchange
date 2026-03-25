@@ -15,11 +15,11 @@ import {
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { InterfaceEventName, SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { logger } from 'utilities/src/logger/logger'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+import { InterfaceEventName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 import { InterfaceEventName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'

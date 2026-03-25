@@ -61,13 +61,13 @@ import {
   testMigrateSearchHistory,
   testRemoveTHBFromCurrency,
 <<<<<<< Updated upstream
-} from 'lx/src/state/luxMigrationTests'
-import { getAllKeysOfNestedObject } from 'utilities/src/primitives/objects'
-import { initialBatchedTransactionsState } from 'wallet/src/features/batchedTransactions/slice'
-import { initialBehaviorHistoryState } from 'wallet/src/features/behaviorHistory/slice'
-import { initialWalletState } from 'wallet/src/features/wallet/slice'
-import { createMigrate } from 'wallet/src/state/createMigrate'
-import { HAYDEN_ETH_ADDRESS } from 'wallet/src/state/walletMigrations'
+} from '@luxexchange/lx/src/state/luxMigrationTests'
+import { getAllKeysOfNestedObject } from '@luxfi/utilities/src/primitives/objects'
+import { initialBatchedTransactionsState } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { initialBehaviorHistoryState } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { initialWalletState } from '@luxfi/wallet/src/features/wallet/slice'
+import { createMigrate } from '@luxfi/wallet/src/state/createMigrate'
+import { HAYDEN_ETH_ADDRESS } from '@luxfi/wallet/src/state/walletMigrations'
 =======
 } from '@luxexchange/lx/src/state/luxMigrationTests'
 import { getAllKeysOfNestedObject } from '@luxfi/utilities/src/primitives/objects'
@@ -94,7 +94,7 @@ import {
   testRemoveHoldToSwap,
   testUnchecksumDismissedTokenWarningKeys,
   testUpdateExploreOrderByType,
-} from 'wallet/src/state/walletMigrationsTests'
+} from '@luxfi/wallet/src/state/walletMigrationsTests'
 
 expect.extend({ toIncludeSameMembers })
 

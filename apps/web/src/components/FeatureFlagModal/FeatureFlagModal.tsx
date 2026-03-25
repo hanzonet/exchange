@@ -1,4 +1,4 @@
-import type { DynamicConfigKeys } from '@universe/gating'
+import type { DynamicConfigKeys } from '@luxexchange/gating'
 import {
   DynamicConfigs,
   ExternallyConnectableExtensionConfigKey,
@@ -9,17 +9,17 @@ import {
   NetworkRequestsConfigKey,
   useDynamicConfigValue,
   useFeatureFlagWithExposureLoggingDisabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import type { ChangeEvent, PropsWithChildren } from 'react'
 import { memo } from 'react'
 <<<<<<< Updated upstream
-import { Button, Flex, ModalCloseIcon, styled, Text } from 'ui/src'
-import { LayerRow } from 'lx/src/components/gating/Rows'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { isPlaywrightEnv } from 'utilities/src/environment/env'
-import { TRUSTED_CHROME_EXTENSION_IDS } from 'utilities/src/environment/extensionId'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Button, Flex, ModalCloseIcon, styled, Text } from '@luxfi/ui/src'
+import { LayerRow } from '@luxexchange/lx/src/components/gating/Rows'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { TRUSTED_CHROME_EXTENSION_IDS } from '@luxfi/utilities/src/environment/extensionId'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Button, Flex, ModalCloseIcon, styled, Text } from '@luxfi/ui/src'
 import { LayerRow } from '@luxexchange/lx/src/components/gating/Rows'

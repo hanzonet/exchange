@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import i18n from 'lx/src/i18n'
-import { logger } from 'utilities/src/logger/logger'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import i18n from '@luxexchange/lx/src/i18n'

@@ -4,9 +4,9 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { useBiometricAppSettings } from 'src/features/biometrics/useBiometricAppSettings'
 import { useBiometricPrompt } from 'src/features/biometricsSettings/hooks'
 <<<<<<< Updated upstream
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
-import { setSmartWalletConsent } from 'wallet/src/features/wallet/slice'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
+import { setSmartWalletConsent } from '@luxfi/wallet/src/features/wallet/slice'
 =======
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'

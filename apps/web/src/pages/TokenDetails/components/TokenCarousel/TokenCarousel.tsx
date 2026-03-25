@@ -1,10 +1,10 @@
 import { ComponentProps, useEffect, useMemo, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { Flex, GeneratedIcon, LinearGradient, Text, TouchableArea } from 'ui/src'
-import { ArrowLeft } from 'ui/src/components/icons/ArrowLeft'
-import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, GeneratedIcon, LinearGradient, Text, TouchableArea } from '@luxfi/ui/src'
+import { ArrowLeft } from '@luxfi/ui/src/components/icons/ArrowLeft'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, GeneratedIcon, LinearGradient, Text, TouchableArea } from '@luxfi/ui/src'
 import { ArrowLeft } from '@luxfi/ui/src/components/icons/ArrowLeft'

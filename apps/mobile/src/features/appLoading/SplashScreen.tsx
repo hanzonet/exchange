@@ -1,10 +1,10 @@
 import React from 'react'
 import { Image, StyleSheet } from 'react-native'
 <<<<<<< Updated upstream
-import { Flex, useIsDarkMode } from 'ui/src'
-import { LUX_MONO_LOGO_LARGE } from 'ui/src/assets'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { isAndroid } from 'utilities/src/platform'
+import { Flex, useIsDarkMode } from '@luxfi/ui/src'
+import { LUX_MONO_LOGO_LARGE } from '@luxfi/ui/src/assets'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 =======
 import { Flex, useIsDarkMode } from '@luxfi/ui/src'
 import { LUX_MONO_LOGO_LARGE } from '@luxfi/ui/src/assets'

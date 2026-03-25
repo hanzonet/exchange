@@ -1,5 +1,5 @@
 import { ChartPeriod, GetPortfolioChartResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -13,12 +13,12 @@ import {
   useMedia,
   useSporeColors,
 <<<<<<< Updated upstream
-} from 'ui/src'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useCurrentLocale } from 'lx/src/features/language/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxfi/ui/src'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 } from '@luxfi/ui/src'
 import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'

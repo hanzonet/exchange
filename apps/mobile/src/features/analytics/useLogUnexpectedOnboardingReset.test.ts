@@ -1,11 +1,11 @@
 import * as onboardingTimestamp from 'src/features/analytics/onboardingTimestamp'
 import { useLogUnexpectedOnboardingReset } from 'src/features/analytics/useLogUnexpectedOnboardingReset'
 import { renderHook } from 'src/test/test-utils'
-import { logger } from 'utilities/src/logger/logger'
-import { initialWalletState } from 'wallet/src/features/wallet/slice'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { initialWalletState } from '@luxfi/wallet/src/features/wallet/slice'
 
 jest.mock('src/features/analytics/onboardingTimestamp')
-jest.mock('utilities/src/logger/logger', () => ({
+jest.mock('@luxfi/utilities/src/logger/logger', () => ({
   logger: {
     debug: jest.fn(),
     error: jest.fn(),

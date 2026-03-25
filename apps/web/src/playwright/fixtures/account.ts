@@ -1,8 +1,8 @@
 import { getPortfolio } from '@uniswap/client-data-api/dist/data/v1/api-DataApiService_connectquery'
 <<<<<<< Updated upstream
-import { luxUrls } from 'lx/src/constants/urls'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { shortenAddress } from 'utilities/src/addresses'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 =======
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'

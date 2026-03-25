@@ -1,9 +1,9 @@
 import { Currency, Price } from '@uniswap/sdk-core'
 import { useCallback, useMemo, useState } from 'react'
 <<<<<<< Updated upstream
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { NumberType } from 'utilities/src/format/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

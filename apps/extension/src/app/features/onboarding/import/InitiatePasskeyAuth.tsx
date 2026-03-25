@@ -21,15 +21,15 @@ import {
   PasskeyRequest,
   PasskeySignInFlowOpenedSchema,
 <<<<<<< Updated upstream
-} from 'lx/src/extension/messagePassing/types/requests'
-import { EXTENSION_PASSKEY_AUTH_PATH } from 'lx/src/features/passkey/constants'
-import { getPrivyEnums } from 'lx/src/features/passkey/embeddedWallet'
-import { useEmbeddedWalletBaseUrl } from 'lx/src/features/passkey/hooks/useEmbeddedWalletBaseUrl'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from 'lx/src/types/screens/extension'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useInterval } from 'utilities/src/time/timing'
+} from '@luxexchange/lx/src/extension/messagePassing/types/requests'
+import { EXTENSION_PASSKEY_AUTH_PATH } from '@luxexchange/lx/src/features/passkey/constants'
+import { getPrivyEnums } from '@luxexchange/lx/src/features/passkey/embeddedWallet'
+import { useEmbeddedWalletBaseUrl } from '@luxexchange/lx/src/features/passkey/hooks/useEmbeddedWalletBaseUrl'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useInterval } from '@luxfi/utilities/src/time/timing'
 =======
 } from '@luxexchange/lx/src/extension/messagePassing/types/requests'
 import { EXTENSION_PASSKEY_AUTH_PATH } from '@luxexchange/lx/src/features/passkey/constants'

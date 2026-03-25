@@ -4,7 +4,7 @@ import {
   IncreaseLPPositionRequest,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import {
   createContext,
   Dispatch,
@@ -33,14 +33,14 @@ import {
   type IncreasePositionTxAndGasInfo,
   LiquidityTransactionType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/liquidity/types'
-import { getErrorMessageToDisplay, parseErrorMessageTitle } from 'lx/src/features/transactions/liquidity/utils'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { PermitMethod } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { validatePermit, validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { PermitMethod } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { validatePermit, validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 =======
 } from '@luxexchange/lx/src/features/transactions/liquidity/types'
 import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'

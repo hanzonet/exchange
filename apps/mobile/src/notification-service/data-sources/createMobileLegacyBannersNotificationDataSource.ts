@@ -1,9 +1,9 @@
-import { type InAppNotification } from '@universe/api'
+import { type InAppNotification } from '@luxexchange/api'
 import {
   createIntervalNotificationDataSource,
   type NotificationDataSource,
   type NotificationTracker,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import type { MobileState } from 'src/app/mobileReducer'
 import {
   checkBridgedAssetsBanner,
@@ -16,14 +16,14 @@ import { checkPushNotificationsBanner } from 'src/notification-service/data-sour
 import { checkRecoveryBackup } from 'src/notification-service/data-sources/banners/recoveryBackupBanner'
 import { BannerId } from 'src/notification-service/data-sources/banners/types'
 import { checkUnitagClaim } from 'src/notification-service/data-sources/banners/unitagClaimBanner'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import {
   selectHasDismissedNoAppFeesAnnouncement,
   selectHasSkippedUnitagPrompt,
   selectHasViewedBridgedAssetsCard,
   selectHasViewedBridgedAssetsV2Card,
   selectHasViewedNotificationsCard,
-} from 'wallet/src/features/behaviorHistory/selectors'
+} from '@luxfi/wallet/src/features/behaviorHistory/selectors'
 
 interface CreateMobileLegacyBannersNotificationDataSourceContext {
   tracker: NotificationTracker

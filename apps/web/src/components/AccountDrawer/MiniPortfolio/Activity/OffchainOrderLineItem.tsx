@@ -7,10 +7,10 @@ import {
   useFormattedDateTime,
   useLocalizedDayjs,
 <<<<<<< Updated upstream
-} from 'lx/src/features/language/localizedDayjs'
-import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { ellipseMiddle } from 'utilities/src/addresses'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ellipseMiddle } from '@luxfi/utilities/src/addresses'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 } from '@luxexchange/lx/src/features/language/localizedDayjs'
 import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'

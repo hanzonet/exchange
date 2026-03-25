@@ -1,12 +1,12 @@
 import { ReactNode, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, FlexProps, Text } from 'ui/src'
-import { useTokenMarketStats } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { FiatNumberType, NumberType } from 'utilities/src/format/types'
+import { Flex, FlexProps, Text } from '@luxfi/ui/src'
+import { useTokenMarketStats } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { FiatNumberType, NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, FlexProps, Text } from '@luxfi/ui/src'
 import { useTokenMarketStats } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'

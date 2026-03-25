@@ -2,11 +2,11 @@
 
 import type { Currency } from '@uniswap/sdk-core'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { Flex, styled, Text } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { iconSizes } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { GraphQLApi } from '@luxexchange/api'
+import { Flex, styled, Text } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { Flex, styled, Text } from '@luxfi/ui/src'

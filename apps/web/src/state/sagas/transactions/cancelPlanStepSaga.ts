@@ -1,12 +1,12 @@
 import type { TransactionRequest } from '@ethersproject/abstract-provider'
 import { call, take } from 'typed-redux-saga'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CancelableStepInfo } from 'lx/src/features/transactions/hooks/useIsCancelable'
-import { cancelPlanStep } from 'lx/src/features/transactions/slice'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { signalPlanCancellation } from 'lx/src/utils/saga'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CancelableStepInfo } from '@luxexchange/lx/src/features/transactions/hooks/useIsCancelable'
+import { cancelPlanStep } from '@luxexchange/lx/src/features/transactions/slice'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { signalPlanCancellation } from '@luxexchange/lx/src/utils/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { CancelableStepInfo } from '@luxexchange/lx/src/features/transactions/hooks/useIsCancelable'

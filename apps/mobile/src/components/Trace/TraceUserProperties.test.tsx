@@ -7,17 +7,17 @@ import * as deviceBiometricHooks from 'src/features/biometrics/useDeviceSupports
 import { AuthMethod } from 'src/features/telemetry/utils'
 import * as versionUtils from 'src/utils/version'
 <<<<<<< Updated upstream
-import * as useIsDarkModeFile from 'ui/src/hooks/useIsDarkMode'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import * as fiatCurrencyHooks from 'lx/src/features/fiatCurrency/hooks'
-import * as languageHooks from 'lx/src/features/language/hooks'
-import * as userSettingsHooks from 'lx/src/features/settings/hooks'
-import { MobileUserPropertyName } from 'lx/src/features/telemetry/user'
-import { analytics } from 'utilities/src/telemetry/analytics/analytics'
-import { BackupType, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
-import * as walletHooks from 'wallet/src/features/wallet/hooks'
-import { SwapProtectionSetting } from 'wallet/src/features/wallet/slice'
+import * as useIsDarkModeFile from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import * as fiatCurrencyHooks from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import * as languageHooks from '@luxexchange/lx/src/features/language/hooks'
+import * as userSettingsHooks from '@luxexchange/lx/src/features/settings/hooks'
+import { MobileUserPropertyName } from '@luxexchange/lx/src/features/telemetry/user'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
+import { BackupType, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import * as walletHooks from '@luxfi/wallet/src/features/wallet/hooks'
+import { SwapProtectionSetting } from '@luxfi/wallet/src/features/wallet/slice'
 =======
 import * as useIsDarkModeFile from '@luxfi/ui/src/hooks/useIsDarkMode'
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
@@ -42,16 +42,16 @@ jest.mock('@tanstack/react-query', () => ({
   ...jest.requireActual('@tanstack/react-query'),
   useQuery: jest.fn().mockReturnValue({ data: undefined }),
 }))
-jest.mock('@universe/api', () => ({
-  ...jest.requireActual('@universe/api'),
+jest.mock('@luxexchange/api', () => ({
+  ...jest.requireActual('@luxexchange/api'),
   provideLuxIdentifierService: {},
 }))
-jest.mock('@universe/sessions', () => ({
+jest.mock('@luxexchange/sessions', () => ({
   luxIdentifierQuery: jest.fn().mockReturnValue({}),
 }))
 jest.mock('react-native/Libraries/Utilities/useColorScheme')
-jest.mock('wallet/src/features/gating/userPropertyHooks')
-jest.mock('wallet/src/features/wallet/Keyring/Keyring', () => {
+jest.mock('@luxfi/wallet/src/features/gating/userPropertyHooks')
+jest.mock('@luxfi/wallet/src/features/wallet/Keyring/Keyring', () => {
   return {
     Keyring: {
       getMnemonicIds: (): Promise<string[]> => Promise.resolve([]),
@@ -59,7 +59,7 @@ jest.mock('wallet/src/features/wallet/Keyring/Keyring', () => {
     },
   }
 })
-jest.mock('wallet/src/features/accounts/useAccountListData', () => {
+jest.mock('@luxfi/wallet/src/features/accounts/useAccountListData', () => {
   return {
     useAccountBalances: jest.fn().mockReturnValue({ totalBalance: 0 }),
   }

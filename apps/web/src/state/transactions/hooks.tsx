@@ -28,11 +28,11 @@ import {
   isPlanTransactionDetails,
   isPlanTransactionInfo,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/utils'
-import { isDEXOrderPending } from 'lx/src/features/transactions/utils/dex.utils'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { usePrevious } from 'utilities/src/react/hooks'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/types/utils'
+import { isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/utils'
 import { isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'

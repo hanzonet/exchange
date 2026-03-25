@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
-import { isSVMAddress } from 'utilities/src/addresses/svm/svm'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
+import { isSVMAddress } from '@luxfi/utilities/src/addresses/svm/svm'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'

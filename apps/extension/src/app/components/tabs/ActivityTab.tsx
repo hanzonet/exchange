@@ -1,8 +1,8 @@
 import { memo } from 'react'
 <<<<<<< Updated upstream
-import { Flex, Loader, ScrollView } from 'ui/src'
-import { useInfiniteScroll } from 'utilities/src/react/useInfiniteScroll'
-import { useActivityDataWallet } from 'wallet/src/features/activity/useActivityDataWallet'
+import { Flex, Loader, ScrollView } from '@luxfi/ui/src'
+import { useInfiniteScroll } from '@luxfi/utilities/src/react/useInfiniteScroll'
+import { useActivityDataWallet } from '@luxfi/wallet/src/features/activity/useActivityDataWallet'
 =======
 import { Flex, Loader, ScrollView } from '@luxfi/ui/src'
 import { useInfiniteScroll } from '@luxfi/utilities/src/react/useInfiniteScroll'

@@ -4,11 +4,11 @@ import 'symbol-observable' // Needed by `reduxed-chrome-storage` as polyfill, or
 
 import { EXTENSION_ORIGIN_APPLICATION } from 'src/app/version'
 <<<<<<< Updated upstream
-import { luxUrls } from 'lx/src/constants/urls'
-import { getUniqueId } from 'utilities/src/device/uniqueId'
-import { isTestEnv } from 'utilities/src/environment/env'
-import { logger } from 'utilities/src/logger/logger'
-import { ApplicationTransport } from 'utilities/src/telemetry/analytics/ApplicationTransport'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getUniqueId } from '@luxfi/utilities/src/device/uniqueId'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ApplicationTransport } from '@luxfi/utilities/src/telemetry/analytics/ApplicationTransport'
 =======
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { getUniqueId } from '@luxfi/utilities/src/device/uniqueId'
@@ -17,7 +17,7 @@ import { logger } from '@luxfi/utilities/src/logger/logger'
 import { ApplicationTransport } from '@luxfi/utilities/src/telemetry/analytics/ApplicationTransport'
 >>>>>>> Stashed changes
 // biome-ignore lint/style/noRestrictedImports: Direct utilities import required for analytics initialization
-import { analytics, getAnalyticsAtomDirect } from 'utilities/src/telemetry/analytics/analytics'
+import { analytics, getAnalyticsAtomDirect } from '@luxfi/utilities/src/telemetry/analytics/analytics'
 
 export async function initExtensionAnalytics(): Promise<void> {
   if (isTestEnv()) {

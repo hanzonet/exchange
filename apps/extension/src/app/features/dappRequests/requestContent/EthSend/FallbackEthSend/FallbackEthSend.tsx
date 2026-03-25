@@ -1,4 +1,4 @@
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDappLastChainId } from 'src/app/features/dapp/hooks'
@@ -7,13 +7,13 @@ import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRe
 import { isNonZeroBigNumber } from 'src/app/features/dappRequests/requestContent/EthSend/Swap/utils'
 import { SendTransactionRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
 <<<<<<< Updated upstream
-import { Anchor, Flex, Text, TouchableArea } from 'ui/src'
-import { AnimatedCopySheets, ExternalLink } from 'ui/src/components/icons'
-import { ContentRow } from 'lx/src/components/transactions/requests/ContentRow'
-import { CopyNotificationType } from 'lx/src/features/notifications/slice/types'
-import { ExplorerDataType, getExplorerLink } from 'lx/src/utils/linking'
-import { ellipseMiddle, shortenAddress } from 'utilities/src/addresses'
-import { useCopyToClipboard } from 'wallet/src/components/copy/useCopyToClipboard'
+import { Anchor, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { AnimatedCopySheets, ExternalLink } from '@luxfi/ui/src/components/icons'
+import { ContentRow } from '@luxexchange/lx/src/components/transactions/requests/ContentRow'
+import { CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ExplorerDataType, getExplorerLink } from '@luxexchange/lx/src/utils/linking'
+import { ellipseMiddle, shortenAddress } from '@luxfi/utilities/src/addresses'
+import { useCopyToClipboard } from '@luxfi/wallet/src/components/copy/useCopyToClipboard'
 =======
 import { Anchor, Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { AnimatedCopySheets, ExternalLink } from '@luxfi/ui/src/components/icons'
@@ -26,9 +26,9 @@ import { useCopyToClipboard } from '@luxfi/wallet/src/components/copy/useCopyToC
 import {
   SpendingDetails,
   SpendingEthDetails,
-} from 'wallet/src/features/transactions/TransactionRequest/SpendingDetails'
-import { useNoYoloParser } from 'wallet/src/utils/useNoYoloParser'
-import { useTransactionCurrencies } from 'wallet/src/utils/useTransactionCurrencies'
+} from '@luxfi/wallet/src/features/transactions/TransactionRequest/SpendingDetails'
+import { useNoYoloParser } from '@luxfi/wallet/src/utils/useNoYoloParser'
+import { useTransactionCurrencies } from '@luxfi/wallet/src/utils/useTransactionCurrencies'
 
 interface FallbackEthSendRequestProps {
   transactionGasFeeResult: GasFeeResult

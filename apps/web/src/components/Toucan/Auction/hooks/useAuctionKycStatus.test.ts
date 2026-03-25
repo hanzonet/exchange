@@ -6,8 +6,8 @@ import {
   ValidationType,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 <<<<<<< Updated upstream
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 =======
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -22,7 +22,7 @@ vi.mock('react-i18next', () => ({
   }),
 }))
 
-vi.mock('@universe/gating', () => ({
+vi.mock('@luxexchange/gating', () => ({
   useFeatureFlag: vi.fn(),
   FeatureFlags: {
     ToucanAuctionKYC: 'toucan_auction_kyc',

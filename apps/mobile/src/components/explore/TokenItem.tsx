@@ -21,11 +21,11 @@ import {
   currencyIdToAddress,
   currencyIdToChain,
 <<<<<<< Updated upstream
-} from 'lx/src/utils/currencyId'
-import { NumberType } from 'utilities/src/format/types'
-import { useEvent } from 'utilities/src/react/hooks'
-import { noop } from 'utilities/src/react/noop'
-import { TokenMetadataDisplayType } from 'wallet/src/features/wallet/types'
+} from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { noop } from '@luxfi/utilities/src/react/noop'
+import { TokenMetadataDisplayType } from '@luxfi/wallet/src/features/wallet/types'
 =======
 } from '@luxexchange/lx/src/utils/currencyId'
 import { NumberType } from '@luxfi/utilities/src/format/types'

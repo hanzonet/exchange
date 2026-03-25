@@ -4,9 +4,9 @@ import { onboardingMessageChannel } from 'src/background/messagePassing/messageC
 import { OnboardingMessageType } from 'src/background/messagePassing/types/ExtensionMessages'
 import { openSidePanel } from 'src/background/utils/chromeSidePanelUtils'
 <<<<<<< Updated upstream
-import { luxUrls } from 'lx/src/constants/urls'
-import { logger } from 'utilities/src/logger/logger'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 =======
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { logger } from '@luxfi/utilities/src/logger/logger'

@@ -2,9 +2,9 @@ import { useQuery } from '@tanstack/react-query'
 import { TokenCountAllocatedToLpForAuctionRequest } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
 import { useMemo } from 'react'
 <<<<<<< Updated upstream
-import { AuctionMutationClient } from 'lx/src/data/apiClients/liquidityService/AuctionMutationClient'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { AuctionMutationClient } from '@luxexchange/lx/src/data/apiClients/liquidityService/AuctionMutationClient'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 =======
 import { AuctionMutationClient } from '@luxexchange/lx/src/data/apiClients/liquidityService/AuctionMutationClient'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

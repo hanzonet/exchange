@@ -1,8 +1,8 @@
 <<<<<<< Updated upstream
-import { TradingApi } from '@universe/api'
-import { SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { maybeLogFirstSwapAction } from 'lx/src/features/transactions/swap/utils/maybeLogFirstSwapAction'
+import { TradingApi } from '@luxexchange/api'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { maybeLogFirstSwapAction } from '@luxexchange/lx/src/features/transactions/swap/utils/maybeLogFirstSwapAction'
 =======
 import { TradingApi } from '@luxexchange/api'
 import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'

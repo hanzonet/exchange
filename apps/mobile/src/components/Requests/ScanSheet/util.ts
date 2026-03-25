@@ -12,10 +12,10 @@ import {
   LUX_WALLETCONNECT_URL,
 } from 'src/features/deepLinking/constants'
 <<<<<<< Updated upstream
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { logger } from 'utilities/src/logger/logger'
-import { ScantasticParams, ScantasticParamsSchema } from 'wallet/src/features/scantastic/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ScantasticParams, ScantasticParamsSchema } from '@luxfi/wallet/src/features/scantastic/types'
 =======
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'

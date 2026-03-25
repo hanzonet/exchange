@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import React from 'react'
 import { Link } from 'react-router'
 import { Flex, styled, Text, TouchableArea, useMedia } from '@luxfi/ui/src'

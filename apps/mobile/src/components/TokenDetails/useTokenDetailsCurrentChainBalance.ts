@@ -1,8 +1,8 @@
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
 <<<<<<< Updated upstream
-import { useBalances } from 'lx/src/data/balances/hooks/useBalances'
-import { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useBalances } from '@luxexchange/lx/src/data/balances/hooks/useBalances'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 import { useBalances } from '@luxexchange/lx/src/data/balances/hooks/useBalances'
 import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'

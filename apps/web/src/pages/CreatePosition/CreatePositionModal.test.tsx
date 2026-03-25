@@ -39,7 +39,7 @@ vi.mock('lx/src/features/passkey/hooks/useGetPasskeyAuthStatus', () => ({
   useGetPasskeyAuthStatus: vi.fn(),
 }))
 
-vi.mock('utilities/src/telemetry/trace/TraceContext', () => ({
+vi.mock('@luxfi/utilities/src/telemetry/trace/TraceContext', () => ({
   useTrace: vi.fn(),
 }))
 
@@ -52,11 +52,11 @@ import { CurrencyAmount } from '@uniswap/sdk-core'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router'
 <<<<<<< Updated upstream
-import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useGetPasskeyAuthStatus } from 'lx/src/features/passkey/hooks/useGetPasskeyAuthStatus'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useGetPasskeyAuthStatus } from '@luxexchange/lx/src/features/passkey/hooks/useGetPasskeyAuthStatus'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

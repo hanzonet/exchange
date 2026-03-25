@@ -1,11 +1,11 @@
 /* eslint-disable import/no-unused-modules */
-import { ContentStyle, type InAppNotification } from '@universe/api'
-import { type NotificationClickTarget } from '@universe/notifications'
+import { ContentStyle, type InAppNotification } from '@luxexchange/api'
+import { type NotificationClickTarget } from '@luxexchange/notifications'
 import { useEffect, useMemo } from 'react'
 <<<<<<< Updated upstream
-import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
-import { getLogger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
 import { getLogger } from '@luxfi/utilities/src/logger/logger'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo, useRef } from 'react'
 import { WRAPPED_NATIVE_CURRENCY } from '@luxexchange/lx/src/constants/tokens'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'

@@ -1,4 +1,4 @@
-import type { GasFeeResult } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
 import { useCallback } from 'react'
 import { useDappLastChainId } from 'src/app/features/dapp/hooks'
 import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRequestQueueContext'
@@ -20,9 +20,9 @@ import {
   SendTransactionRequest,
 } from 'src/app/features/dappRequests/types/DappRequestTypes'
 <<<<<<< Updated upstream
-import { TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
-import { ErrorBoundary } from 'wallet/src/components/ErrorBoundary/ErrorBoundary'
+import { TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ErrorBoundary } from '@luxfi/wallet/src/components/ErrorBoundary/ErrorBoundary'
 =======
 import { TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { logger } from '@luxfi/utilities/src/logger/logger'

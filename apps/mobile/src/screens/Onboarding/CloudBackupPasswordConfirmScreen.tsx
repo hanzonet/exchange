@@ -6,12 +6,12 @@ import { CloudBackupPassword } from 'src/features/CloudBackup/CloudBackupForm/Cl
 import { BackupSpeedBumpModal } from 'src/features/onboarding/BackupSpeedBumpModal'
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { Cloud } from 'ui/src/components/icons'
-import { OnboardingEntryPoint } from 'lx/src/types/onboarding'
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { BackupType } from 'wallet/src/features/wallet/accounts/types'
+import { Flex } from '@luxfi/ui/src'
+import { Cloud } from '@luxfi/ui/src/components/icons'
+import { OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { Cloud } from '@luxfi/ui/src/components/icons'

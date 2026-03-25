@@ -34,17 +34,17 @@ import {
   isValidLiquidityTxContext,
   LiquidityTransactionType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/liquidity/types'
-import { getErrorMessageToDisplay, parseErrorMessageTitle } from 'lx/src/features/transactions/liquidity/utils'
-import { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { isSignerMnemonicAccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { NumberType } from 'utilities/src/format/types'
-import { logger } from 'utilities/src/logger/logger'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'
+import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { isSignerMnemonicAccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/liquidity/types'
 import { getErrorMessageToDisplay, parseErrorMessageTitle } from '@luxexchange/lx/src/features/transactions/liquidity/utils'

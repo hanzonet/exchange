@@ -3,18 +3,18 @@ import { waitFor } from '@testing-library/react'
 import { BiometricUnlockStorage } from 'src/app/features/biometricUnlock/BiometricUnlockStorage'
 import { useChangePasswordWithBiometricMutation } from 'src/app/features/biometricUnlock/useChangePasswordWithBiometricMutation'
 import { renderHookWithProviders } from 'src/test/render'
-import { logger } from 'utilities/src/logger/logger'
-import { encodeForStorage, encrypt, generateNew256BitRandomBuffer } from 'wallet/src/features/wallet/Keyring/crypto'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { encodeForStorage, encrypt, generateNew256BitRandomBuffer } from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 // Mock dependencies
 jest.mock('src/app/features/biometricUnlock/BiometricUnlockStorage')
-jest.mock('wallet/src/features/wallet/Keyring/Keyring', () => ({
+jest.mock('@luxfi/wallet/src/features/wallet/Keyring/Keyring', () => ({
   Keyring: {
     changePassword: jest.fn(),
   },
 }))
-jest.mock('utilities/src/logger/logger', () => ({
+jest.mock('@luxfi/utilities/src/logger/logger', () => ({
   logger: {
     error: jest.fn(),
   },

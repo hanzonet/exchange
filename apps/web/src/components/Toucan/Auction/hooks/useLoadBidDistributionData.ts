@@ -2,9 +2,9 @@ import { useQuery } from '@tanstack/react-query'
 import { GetBidsRequest } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
 import { useEffect, useMemo, useRef } from 'react'
 <<<<<<< Updated upstream
-import { auctionQueries } from 'lx/src/data/rest/auctions/auctionQueries'
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
-import { logger } from 'utilities/src/logger/logger'
+import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { auctionQueries } from '@luxexchange/lx/src/data/rest/auctions/auctionQueries'
 import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'

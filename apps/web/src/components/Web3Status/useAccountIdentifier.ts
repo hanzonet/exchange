@@ -1,7 +1,7 @@
 <<<<<<< Updated upstream
-import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { shortenAddress } from 'utilities/src/addresses'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 =======
 import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
 import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'

@@ -7,9 +7,9 @@ import {
   LUX_WALLETCONNECT_URL,
 } from 'src/features/deepLinking/constants'
 <<<<<<< Updated upstream
-import { LUX_WEB_HOSTNAME } from 'lx/src/constants/urls'
-import { isCurrencyIdValid } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+import { LUX_WEB_HOSTNAME } from '@luxexchange/lx/src/constants/urls'
+import { isCurrencyIdValid } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { LUX_WEB_HOSTNAME } from '@luxexchange/lx/src/constants/urls'
 import { isCurrencyIdValid } from '@luxexchange/lx/src/utils/currencyId'

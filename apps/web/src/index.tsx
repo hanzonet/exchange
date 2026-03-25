@@ -5,8 +5,8 @@ import { getDeviceId } from '@amplitude/analytics-browser'
 import { ApolloProvider } from '@apollo/client'
 import { InsightsProvider } from '@hanzo/insights-react'
 import { datadogRum } from '@datadog/browser-rum'
-import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@universe/api'
-import type { StatsigUser } from '@universe/gating'
+import { ApiInit, getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
+import type { StatsigUser } from '@luxexchange/gating'
 import {
   getIsHashcashSolverEnabled,
   getIsSessionServiceEnabled,
@@ -14,7 +14,7 @@ import {
   getIsSessionUpgradeAutoEnabled,
   getIsTurnstileSolverEnabled,
   useIsSessionServiceEnabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import {
   type ChallengeSolver,
   ChallengeType,
@@ -26,7 +26,7 @@ import {
   createSessionInitializationService,
   createTurnstileMockSolver,
   createTurnstileSolver,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v7'
 import type { PropsWithChildren } from 'react'
 import { StrictMode, useEffect, useMemo } from 'react'
@@ -38,17 +38,17 @@ import { configureReanimatedLogger } from 'react-native-reanimated'
 import { Provider } from 'react-redux'
 import { BrowserRouter, HashRouter, useLocation } from 'react-router'
 <<<<<<< Updated upstream
-import { PortalProvider } from 'ui/src'
-import { ReactRouterUrlProvider } from 'lx/src/contexts/UrlContext'
-import { initializePortfolioQueryOverrides } from 'lx/src/data/rest/portfolioBalanceOverrides'
-import { StatsigProviderWrapper } from 'lx/src/features/gating/StatsigProviderWrapper'
-import { LocalizationContextProvider } from 'lx/src/features/language/LocalizationContext'
-import { TokenPriceProvider } from 'lx/src/features/prices/TokenPriceContext'
-import i18n from 'lx/src/i18n'
-import { initializeDatadog } from 'lx/src/utils/datadog'
-import { localDevDatadogEnabled } from 'utilities/src/environment/constants'
-import { isDevEnv, isTestEnv } from 'utilities/src/environment/env'
-import { getLogger } from 'utilities/src/logger/logger'
+import { PortalProvider } from '@luxfi/ui/src'
+import { ReactRouterUrlProvider } from '@luxexchange/lx/src/contexts/UrlContext'
+import { initializePortfolioQueryOverrides } from '@luxexchange/lx/src/data/rest/portfolioBalanceOverrides'
+import { StatsigProviderWrapper } from '@luxexchange/lx/src/features/gating/StatsigProviderWrapper'
+import { LocalizationContextProvider } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TokenPriceProvider } from '@luxexchange/lx/src/features/prices/TokenPriceContext'
+import i18n from '@luxexchange/lx/src/i18n'
+import { initializeDatadog } from '@luxexchange/lx/src/utils/datadog'
+import { localDevDatadogEnabled } from '@luxfi/utilities/src/environment/constants'
+import { isDevEnv, isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { PortalProvider } from '@luxfi/ui/src'
 import { ReactRouterUrlProvider } from '@luxexchange/lx/src/contexts/UrlContext'
@@ -138,7 +138,7 @@ const provideSessionInitService = () => {
           createHashcashWorkerChannel({
             getWorker: () => {
               return new Worker(
-                new URL('@universe/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
+                new URL('@luxexchange/sessions/src/challenge-solvers/hashcash/worker/hashcash.worker.ts', import.meta.url),
                 { type: 'module' },
               )
             },

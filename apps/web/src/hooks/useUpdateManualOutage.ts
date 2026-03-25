@@ -1,9 +1,9 @@
 import { ApolloError } from '@apollo/client'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useEffect } from 'react'
 <<<<<<< Updated upstream
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useIsOffline } from 'utilities/src/connection/useIsOffline'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useIsOffline } from '@luxfi/utilities/src/connection/useIsOffline'
 =======
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useIsOffline } from '@luxfi/utilities/src/connection/useIsOffline'

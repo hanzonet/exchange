@@ -27,10 +27,10 @@ import {
   isInvalidRequestAmountTooHigh,
   isInvalidRequestAmountTooLow,
 <<<<<<< Updated upstream
-} from 'lx/src/features/fiatOnRamp/utils'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
-import { useDebounce } from 'utilities/src/time/timing'
+} from '@luxexchange/lx/src/features/fiatOnRamp/utils'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
 =======
 } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

@@ -2,9 +2,9 @@ import { ONBOARDING_PANE_TRANSITION_DURATION_WITH_LEEWAY } from 'src/app/feature
 import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { Password } from 'src/app/features/onboarding/Password'
 <<<<<<< Updated upstream
-import { ExtensionOnboardingFlow } from 'lx/src/types/screens/extension'
-import { sleep } from 'utilities/src/time/timing'
-import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
+import { ExtensionOnboardingFlow } from '@luxexchange/lx/src/types/screens/extension'
+import { sleep } from '@luxfi/utilities/src/time/timing'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 =======
 import { ExtensionOnboardingFlow } from '@luxexchange/lx/src/types/screens/extension'
 import { sleep } from '@luxfi/utilities/src/time/timing'

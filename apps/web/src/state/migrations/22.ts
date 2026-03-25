@@ -1,8 +1,8 @@
 import { PersistState } from 'redux-persist'
 <<<<<<< Updated upstream
-import { Language } from 'lx/src/features/language/constants'
-import { getCurrentLanguageFromNavigator } from 'lx/src/features/language/utils'
-import { isWebApp } from 'utilities/src/platform'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { getCurrentLanguageFromNavigator } from '@luxexchange/lx/src/features/language/utils'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 =======
 import { Language } from '@luxexchange/lx/src/features/language/constants'
 import { getCurrentLanguageFromNavigator } from '@luxexchange/lx/src/features/language/utils'

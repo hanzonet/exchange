@@ -4,7 +4,7 @@ import { Flex } from '@luxfi/ui/src'
 import {
   SmartWalletHelpIcon,
   SmartWalletSettingsContent,
-} from 'wallet/src/features/smartWallet/SmartWalletSettingsContent'
+} from '@luxfi/wallet/src/features/smartWallet/SmartWalletSettingsContent'
 
 export function SmartWalletSettingsScreen(): JSX.Element {
   const { t } = useTranslation()

@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useEvent } from 'utilities/src/react/hooks'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'

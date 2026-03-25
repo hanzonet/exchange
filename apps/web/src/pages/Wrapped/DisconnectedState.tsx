@@ -8,11 +8,11 @@ import {
   renderSnowflakesWeb,
   SnowflakeContainer,
 <<<<<<< Updated upstream
-} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
-import { isMobileWeb } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useSnowflakeAnimation } from '@luxexchange/lx/src/hooks/useSnowflakeAnimation'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 =======
 } from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
 import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'

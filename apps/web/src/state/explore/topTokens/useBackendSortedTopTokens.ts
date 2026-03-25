@@ -1,5 +1,5 @@
 import { type InfiniteData, useInfiniteQuery } from '@tanstack/react-query'
-import { type DataApiToken, type ListTopTokensResponse, TopTokensOrderBy } from '@universe/api'
+import { type DataApiToken, type ListTopTokensResponse, TopTokensOrderBy } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { dataApiQueries } from '@luxexchange/lx/src/data/apiClients/dataApiService/dataApiQueries'
 import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'

@@ -7,8 +7,8 @@ import {
   provideSessionService,
   SESSION_INIT_QUERY_KEY,
   SharedQueryClient,
-} from '@universe/api'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import {
   createApiNotificationTracker,
   createBaseNotificationProcessor,
@@ -17,23 +17,23 @@ import {
   getNotificationQueryOptions,
   type NotificationDataSource,
   type NotificationService,
-} from '@universe/notifications'
+} from '@luxexchange/notifications'
 import ms from 'ms'
 import { useEffect, useMemo, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router'
 <<<<<<< Updated upstream
-import { useIsDarkMode } from 'ui/src'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { mapLocaleToBackendLocale } from 'lx/src/features/language/constants'
-import { getLocale } from 'lx/src/features/language/navigatorLocale'
-import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
-import { AVERAGE_L1_BLOCK_TIME_MS } from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
-import { isPlaywrightEnv } from 'utilities/src/environment/env'
-import { getLogger } from 'utilities/src/logger/logger'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { useIsDarkMode } from '@luxfi/ui/src'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { AVERAGE_L1_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 =======
 import { useIsDarkMode } from '@luxfi/ui/src'
 import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'

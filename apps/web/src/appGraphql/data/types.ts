@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback } from 'react'
 import { useAllCommonBaseCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useAllCommonBaseCurrencies'
 import { MELD_NATIVE_SOL_ADDRESS_SOLANA } from '@luxexchange/lx/src/features/chains/svm/defaults'

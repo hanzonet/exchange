@@ -1,8 +1,8 @@
 import { createChart, type IChartApi, type UTCTimestamp } from 'lightweight-charts'
 import { useEffect, useRef, useState } from 'react'
 <<<<<<< Updated upstream
-import { Flex, useSporeColors } from 'ui/src'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 =======
 import { Flex, useSporeColors } from '@luxfi/ui/src'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'

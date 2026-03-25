@@ -8,9 +8,9 @@ import {
   useFormattedDateTime,
   useLocalizedDayjs,
 <<<<<<< Updated upstream
-} from 'lx/src/features/language/localizedDayjs'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 } from '@luxexchange/lx/src/features/language/localizedDayjs'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

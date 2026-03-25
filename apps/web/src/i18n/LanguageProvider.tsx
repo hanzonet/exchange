@@ -1,11 +1,11 @@
 import { ReactNode, useEffect } from 'react'
 <<<<<<< Updated upstream
-import { DEFAULT_LOCALE, Locale, mapLocaleToLanguage } from 'lx/src/features/language/constants'
-import { useCurrentLocale } from 'lx/src/features/language/hooks'
-import { getLocale, navigatorLocale, parseLocale } from 'lx/src/features/language/navigatorLocale'
-import { setCurrentLanguage } from 'lx/src/features/settings/slice'
-import { changeLanguage } from 'lx/src/i18n'
-import { isTestEnv } from 'utilities/src/environment/env'
+import { DEFAULT_LOCALE, Locale, mapLocaleToLanguage } from '@luxexchange/lx/src/features/language/constants'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
+import { getLocale, navigatorLocale, parseLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { setCurrentLanguage } from '@luxexchange/lx/src/features/settings/slice'
+import { changeLanguage } from '@luxexchange/lx/src/i18n'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
 =======
 import { DEFAULT_LOCALE, Locale, mapLocaleToLanguage } from '@luxexchange/lx/src/features/language/constants'
 import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'

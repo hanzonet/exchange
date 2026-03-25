@@ -9,19 +9,19 @@ import {
   SidebarLocationState,
 } from 'src/app/navigation/utils'
 <<<<<<< Updated upstream
-import { luxUrls } from 'lx/src/constants/urls'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useNavigateToNftExplorerLink } from 'lx/src/features/nfts/hooks/useNavigateToNftExplorerLink'
-import { CopyNotificationType } from 'lx/src/features/notifications/slice/types'
-import { WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { ShareableEntity } from 'lx/src/types/sharing'
-import { getPoolDetailsURL, getPortfolioUrl, getTokenUrl } from 'lx/src/utils/linking'
-import { logger } from 'utilities/src/logger/logger'
-import { escapeRegExp } from 'utilities/src/primitives/string'
-import { noop } from 'utilities/src/react/noop'
-import { useCopyToClipboard } from 'wallet/src/components/copy/useCopyToClipboard'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useNavigateToNftExplorerLink } from '@luxexchange/lx/src/features/nfts/hooks/useNavigateToNftExplorerLink'
+import { CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { ShareableEntity } from '@luxexchange/lx/src/types/sharing'
+import { getPoolDetailsURL, getPortfolioUrl, getTokenUrl } from '@luxexchange/lx/src/utils/linking'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { escapeRegExp } from '@luxfi/utilities/src/primitives/string'
+import { noop } from '@luxfi/utilities/src/react/noop'
+import { useCopyToClipboard } from '@luxfi/wallet/src/components/copy/useCopyToClipboard'
 =======
 import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
@@ -47,7 +47,7 @@ import {
   ShareTokenArgs,
   WalletNavigationContextState,
   WalletNavigationProvider,
-} from 'wallet/src/contexts/WalletNavigationContext'
+} from '@luxfi/wallet/src/contexts/WalletNavigationContext'
 
 export function OnboardingNavigationProvider({ children }: PropsWithChildren): JSX.Element {
   return (

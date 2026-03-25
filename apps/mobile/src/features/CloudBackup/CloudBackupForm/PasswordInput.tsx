@@ -5,8 +5,8 @@ import { PasswordInput } from 'src/components/input/PasswordInput'
 import { useCloudBackupPasswordFormContext } from 'src/features/CloudBackup/CloudBackupForm/CloudBackupPasswordFormContext'
 import { PasswordError } from 'src/features/onboarding/PasswordError'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { useDebounce } from 'utilities/src/time/timing'
+import { Flex, Text } from '@luxfi/ui/src'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { useDebounce } from '@luxfi/utilities/src/time/timing'
@@ -16,7 +16,7 @@ import {
   PASSWORD_VALIDATION_DEBOUNCE_MS,
   PasswordErrors,
   PasswordStrength,
-} from 'wallet/src/utils/password'
+} from '@luxfi/wallet/src/utils/password'
 
 export function CloudPasswordInput(): JSX.Element {
   const { password, error, passwordStrength, isConfirmation, onPasswordChangeText, onPasswordSubmitEditing } =

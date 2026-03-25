@@ -1,9 +1,9 @@
 <<<<<<< Updated upstream
-import { Flex, FlexProps } from 'ui/src/components/layout'
-import { breakpoints } from 'ui/src/theme'
-import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+import { Flex, FlexProps } from '@luxfi/ui/src/components/layout'
+import { breakpoints } from '@luxfi/ui/src/theme'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
 =======
 import { Flex, FlexProps } from '@luxfi/ui/src/components/layout'
 import { breakpoints } from '@luxfi/ui/src/theme'

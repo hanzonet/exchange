@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { PropsWithChildren } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'

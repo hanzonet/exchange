@@ -1,9 +1,9 @@
 import { forwardRef } from 'react'
 import { useTranslation } from 'react-i18next'
 <<<<<<< Updated upstream
-import { Flex, Text } from 'ui/src'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 =======
 import { Flex, Text } from '@luxfi/ui/src'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'

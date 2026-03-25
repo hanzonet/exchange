@@ -1,8 +1,8 @@
 import { useEffect, useMemo } from 'react'
 <<<<<<< Updated upstream
-import { useUnitagsAddressesQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { TransactionDetails, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+import { useUnitagsAddressesQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { TransactionDetails, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
 =======
 import { useUnitagsAddressesQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
 import { TransactionDetails, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'

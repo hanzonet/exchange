@@ -4,7 +4,7 @@ import {
   removeDelegationReducer,
   removeDelegationSaga,
   removeDelegationSagaName,
-} from 'wallet/src/features/smartWallet/sagas/removeDelegationSaga'
+} from '@luxfi/wallet/src/features/smartWallet/sagas/removeDelegationSaga'
 import {
   executePlanActions,
   executePlanReducer,
@@ -18,19 +18,19 @@ import {
   prepareAndSignSwapReducer,
   prepareAndSignSwapSaga,
   prepareAndSignSwapSagaName,
-} from 'wallet/src/features/transactions/swap/configuredSagas'
+} from '@luxfi/wallet/src/features/transactions/swap/configuredSagas'
 import {
   editAccountActions,
   editAccountReducer,
   editAccountSaga,
   editAccountSagaName,
-} from 'wallet/src/features/wallet/accounts/editAccountSaga'
+} from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
 import {
   createAccountsActions,
   createAccountsReducer,
   createAccountsSaga,
   createAccountsSagaName,
-} from 'wallet/src/features/wallet/create/createAccountsSaga'
+} from '@luxfi/wallet/src/features/wallet/create/createAccountsSaga'
 
 // All monitored sagas must be included here
 export const monitoredSagas: Record<string, MonitoredSaga> = {

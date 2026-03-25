@@ -1,8 +1,8 @@
 <<<<<<< Updated upstream
-import { ElementName, InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { AppDownloadPlatform } from 'lx/src/features/telemetry/types'
-import { isWebAndroid, isWebIOS } from 'utilities/src/platform'
+import { ElementName, InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { AppDownloadPlatform } from '@luxexchange/lx/src/features/telemetry/types'
+import { isWebAndroid, isWebIOS } from '@luxfi/utilities/src/platform'
 =======
 import { ElementName, InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'

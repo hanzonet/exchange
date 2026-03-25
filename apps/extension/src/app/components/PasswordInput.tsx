@@ -4,9 +4,9 @@ import { TextInput } from 'react-native'
 import { Input, InputProps } from 'src/app/components/Input'
 import { useShouldShowBiometricUnlock } from 'src/app/features/biometricUnlock/useShouldShowBiometricUnlock'
 <<<<<<< Updated upstream
-import { Flex, FlexProps, IconProps, Text, TouchableArea } from 'ui/src'
-import { Eye, EyeOff, Fingerprint } from 'ui/src/components/icons'
-import { getPasswordStrengthTextAndColor, PasswordStrength } from 'wallet/src/utils/password'
+import { Flex, FlexProps, IconProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { Eye, EyeOff, Fingerprint } from '@luxfi/ui/src/components/icons'
+import { getPasswordStrengthTextAndColor, PasswordStrength } from '@luxfi/wallet/src/utils/password'
 =======
 import { Flex, FlexProps, IconProps, Text, TouchableArea } from '@luxfi/ui/src'
 import { Eye, EyeOff, Fingerprint } from '@luxfi/ui/src/components/icons'

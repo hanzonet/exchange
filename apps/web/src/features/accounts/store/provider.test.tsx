@@ -1,11 +1,11 @@
 import { WalletReadyState as SolanaWalletReadyState } from '@solana/wallet-adapter-base'
 <<<<<<< Updated upstream
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
-import { ConnectorStatus } from 'lx/src/features/accounts/store/types/Connector'
-import { ChainScopeType } from 'lx/src/features/accounts/store/types/Session'
-import { SigningCapability } from 'lx/src/features/accounts/store/types/Wallet'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
+import { ConnectorStatus } from '@luxexchange/lx/src/features/accounts/store/types/Connector'
+import { ChainScopeType } from '@luxexchange/lx/src/features/accounts/store/types/Session'
+import { SigningCapability } from '@luxexchange/lx/src/features/accounts/store/types/Wallet'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 =======
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
@@ -34,7 +34,7 @@ vi.mock('wagmi', async () => ({
   useChainId: () => mockUseWagmiChainId(),
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
+vi.mock('@luxexchange/gating', async (importOriginal) => {
   return {
     ...(await importOriginal()),
     useFeatureFlag: vi.fn(),

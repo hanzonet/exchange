@@ -4,8 +4,8 @@ import { type QueryClient, useQueryClient } from '@tanstack/react-query'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 <<<<<<< Updated upstream
-import { type AppStateResetter, createAppStateResetter } from 'lx/src/state/createAppStateResetter'
-import { createLogger } from 'utilities/src/logger/logger'
+import { type AppStateResetter, createAppStateResetter } from '@luxexchange/lx/src/state/createAppStateResetter'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { type AppStateResetter, createAppStateResetter } from '@luxexchange/lx/src/state/createAppStateResetter'
 import { createLogger } from '@luxfi/utilities/src/logger/logger'

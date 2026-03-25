@@ -14,11 +14,11 @@ import {
   TransactionStatus,
   TransactionType,
 <<<<<<< Updated upstream
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isFinalizedTx } from 'lx/src/features/transactions/types/utils'
-import { currencyIdToChain } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTx } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 =======
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx } from '@luxexchange/lx/src/features/transactions/types/utils'

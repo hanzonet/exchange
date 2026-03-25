@@ -5,9 +5,9 @@ import Animated, { SharedValue, useAnimatedStyle, useSharedValue } from 'react-n
 import { ESTIMATED_BOTTOM_TABS_HEIGHT } from 'src/app/navigation/tabs/CustomTabBar/constants'
 import { TAB_BAR_HEIGHT } from 'src/components/layout/TabHelpers'
 <<<<<<< Updated upstream
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { useActiveAccount } from 'wallet/src/features/wallet/hooks'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 =======
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
 import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'

@@ -2,9 +2,9 @@ import React from 'react'
 import { HeaderText } from 'src/components/Requests/RequestModal/HeaderText'
 import { WalletConnectSigningRequest } from 'src/features/walletConnect/walletConnectSlice'
 <<<<<<< Updated upstream
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { DappHeaderIcon } from 'wallet/src/components/dappRequests/DappHeaderIcon'
-import { DappRequestHeader } from 'wallet/src/components/dappRequests/DappRequestHeader'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { DappHeaderIcon } from '@luxfi/wallet/src/components/dappRequests/DappHeaderIcon'
+import { DappRequestHeader } from '@luxfi/wallet/src/components/dappRequests/DappRequestHeader'
 =======
 import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 import { DappHeaderIcon } from '@luxfi/wallet/src/components/dappRequests/DappHeaderIcon'

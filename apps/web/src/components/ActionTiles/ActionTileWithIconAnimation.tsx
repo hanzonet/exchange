@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
-import { Flex, GeneratedIcon } from 'ui/src'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { Flex, GeneratedIcon } from '@luxfi/ui/src'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 =======
 import { Flex, GeneratedIcon } from '@luxfi/ui/src'
 import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'

@@ -11,9 +11,9 @@ import {
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { useEffect, useMemo, useState } from 'react'
 <<<<<<< Updated upstream
-import { liquidityQueries } from 'lx/src/data/apiClients/liquidityService/liquidityQueries'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 =======
 import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
 import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo, useState } from 'react'
 import { TimePeriod, toHistoryDuration } from '~/appGraphql/data/util'
 import { PriceChartData } from '~/components/Charts/PriceChart'

@@ -28,7 +28,7 @@ jest.mock('lx/src/features/notifications/slice/slice', () => ({
   pushNotification: jest.fn(),
 }))
 
-jest.mock('utilities/src/react/hooks', () => ({
+jest.mock('@luxfi/utilities/src/react/hooks', () => ({
   useEvent: jest.fn((fn) => fn),
 }))
 

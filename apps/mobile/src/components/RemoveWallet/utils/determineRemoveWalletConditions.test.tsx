@@ -1,7 +1,7 @@
 import { determineRemoveWalletConditions } from 'src/components/RemoveWallet/utils/determineRemoveWalletConditions'
 <<<<<<< Updated upstream
-import { AccountType } from 'lx/src/features/accounts/types'
-import { Account, SignerMnemonicAccount } from 'wallet/src/features/wallet/accounts/types'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'
 =======
 import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
 import { Account, SignerMnemonicAccount } from '@luxfi/wallet/src/features/wallet/accounts/types'

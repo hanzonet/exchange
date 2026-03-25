@@ -1,5 +1,5 @@
 import { useWallet as useSolanaWalletContext } from '@solana/wallet-adapter-react'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { PropsWithChildren, useMemo } from 'react'
 import { WalletProvider } from '@luxexchange/lx/src/features/wallet/contexts/WalletProvider'
 import { createWalletService } from '@luxexchange/lx/src/features/wallet/services/createWalletService'

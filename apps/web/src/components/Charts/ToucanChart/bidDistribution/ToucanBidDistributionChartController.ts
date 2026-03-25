@@ -2,8 +2,8 @@
 
 import { IChartApi, ISeriesApi, MouseEventParams, Time, UTCTimestamp } from 'lightweight-charts'
 <<<<<<< Updated upstream
-import { opacify } from 'ui/src/theme'
-import { logger } from 'utilities/src/logger/logger'
+import { opacify } from '@luxfi/ui/src/theme'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 =======
 import { opacify } from '@luxfi/ui/src/theme'
 import { logger } from '@luxfi/utilities/src/logger/logger'

@@ -1,9 +1,9 @@
 import { ApolloError } from '@apollo/client'
 import { renderHook } from '@testing-library/react'
 <<<<<<< Updated upstream
-import { GraphQLApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useIsOffline } from 'utilities/src/connection/useIsOffline'
+import { GraphQLApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useIsOffline } from '@luxfi/utilities/src/connection/useIsOffline'
 =======
 import { GraphQLApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -14,7 +14,7 @@ import { useUpdateManualOutage } from '~/hooks/useUpdateManualOutage'
 import { useManualChainOutageStore } from '~/state/outage/store'
 import { mocked } from '~/test-utils/mocked'
 
-vi.mock('utilities/src/connection/useIsOffline', () => ({
+vi.mock('@luxfi/utilities/src/connection/useIsOffline', () => ({
   useIsOffline: vi.fn(),
 }))
 

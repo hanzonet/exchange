@@ -1,10 +1,10 @@
 <<<<<<< Updated upstream
-import { Flex } from 'ui/src'
-import { Unitag } from 'ui/src/components/icons/Unitag'
-import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { useENSName } from 'lx/src/features/ens/api'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { shortenAddress } from 'utilities/src/addresses'
+import { Flex } from '@luxfi/ui/src'
+import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { useENSName } from '@luxexchange/lx/src/features/ens/api'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 =======
 import { Flex } from '@luxfi/ui/src'
 import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'

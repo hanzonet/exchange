@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import ms from 'ms'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -20,9 +20,9 @@ import { LiquidityEventName, ModalName } from '@luxexchange/lx/src/features/tele
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { FeePoolSelectAction } from '@luxexchange/lx/src/features/telemetry/types'
 import useResizeObserver from 'use-resize-observer'
-import { NumberType } from 'utilities/src/format/types'
-import { isMobileWeb } from 'utilities/src/platform'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 import { useAllFeeTierPoolData } from '~/components/Liquidity/hooks/useAllFeeTierPoolData'
 import {
   calculateTickSpacingFromFeeAmount,

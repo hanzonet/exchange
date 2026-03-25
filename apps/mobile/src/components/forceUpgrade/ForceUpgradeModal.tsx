@@ -1,12 +1,12 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { getIsNotificationServiceLocalOverrideEnabled } from '@universe/notifications'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { getIsNotificationServiceLocalOverrideEnabled } from '@luxexchange/notifications'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { BackButtonView } from 'src/components/layout/BackButtonView'
 import { SeedPhraseDisplay } from 'src/components/mnemonic/SeedPhraseDisplay'
 <<<<<<< Updated upstream
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { ForceUpgrade } from 'wallet/src/features/forceUpgrade/ForceUpgrade'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { ForceUpgrade } from '@luxfi/wallet/src/features/forceUpgrade/ForceUpgrade'
 =======
 import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { ForceUpgrade } from '@luxfi/wallet/src/features/forceUpgrade/ForceUpgrade'
