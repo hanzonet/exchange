@@ -154,7 +154,7 @@
     "lfg": "bun run g:prepare && bun run mobile env:local:download && bun run extension env:local:download && bun run g:build && bun run mobile pod && bun run mobile ios",
     "local:check": "./scripts/local-version-check.sh",
     "preinstall": "echo ok",
-    "postinstall": "lefthook install || true && (bun g:prepare || npx turbo run prepare || true) && touch node_modules/.install-marker",
+    "postinstall": "lefthook install || true; pnpm run g:prepare || true; touch node_modules/.install-marker",
     "g:build": "./scripts/check-deps-sync.sh; NODE_OPTIONS=--max_old_space_size=8192 nx run-many -t build --parallel",
     "g:build:storybook": "nx run-many -t storybook:build --skip-nx-cache --parallel",
     "g:check:deps:usage": "./scripts/check-deps-with-vue-fix.sh && nx run-many -t check:deps:usage",
