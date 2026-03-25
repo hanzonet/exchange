@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unused-modules */
 
-import type { InAppNotification } from '@luxfi/api'
+import type { InAppNotification } from '@luxexchange/api'
 import { InlineBannerNotification, type NotificationClickTarget } from '@luxfi/notifications'
 import { AnimatePresence, motion } from 'framer-motion'
 import { memo, useEffect } from 'react'

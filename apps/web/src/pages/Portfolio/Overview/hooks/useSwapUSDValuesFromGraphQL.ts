@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { parseUSDValueFromAssetChange } from '@luxexchange/lx/src/features/activity/utils/remote'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

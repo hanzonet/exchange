@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 
 export default function getNetworkLogoUrl(network: string, origin: string) {
   switch (network) {

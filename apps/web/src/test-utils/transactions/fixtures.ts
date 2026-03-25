@@ -1,5 +1,5 @@
 import { TradeType } from '@luxamm/sdk-core'
-import { TradingApi } from '@luxfi/api'
+import { TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   TransactionOriginType,

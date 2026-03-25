@@ -7,7 +7,7 @@
  */
 import { useQuery } from '@tanstack/react-query'
 import { ExploreStatsResponse } from '@luxdex/client-explore/dist/uniswap/explore/v1/service_pb'
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { isLuxChain } from '@luxexchange/lx/src/data/rest/luxGateway'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {

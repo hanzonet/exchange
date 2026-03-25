@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo, useRef } from 'react'
 import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'

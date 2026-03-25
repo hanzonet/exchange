@@ -1,4 +1,4 @@
-import { TradingApi } from '@luxfi/api'
+import { TradingApi } from '@luxexchange/api'
 import { TransactionType, TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**

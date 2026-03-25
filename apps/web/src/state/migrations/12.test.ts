@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { createMigrate } from 'redux-persist'
 import { createThrowingProxy } from '@luxfi/utilities/src/test/utils'
 import { vi } from 'vitest'

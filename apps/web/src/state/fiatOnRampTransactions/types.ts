@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 
 export enum FiatOnRampTransactionStatus {
   INITIATED = 'INITIATED',

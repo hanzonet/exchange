@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 

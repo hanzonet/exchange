@@ -1,6 +1,6 @@
 import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister'
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client'
-import { SharedQueryClient } from '@luxfi/api'
+import { SharedQueryClient } from '@luxexchange/api'
 import { type PropsWithChildren } from 'react'
 import { sharedDehydrateOptions } from '@luxexchange/lx/src/data/apiClients/sharedDehydrateOptions'
 import { MAX_REACT_QUERY_CACHE_TIME_MS } from '@luxfi/utilities/src/time/time'

@@ -1,5 +1,5 @@
 import { QueryResult } from '@apollo/client'
-import { GraphQLApi } from '@luxfi/api'
+import { GraphQLApi } from '@luxexchange/api'
 
 export const validTokenProjectResponse = {
   data: {

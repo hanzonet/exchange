@@ -1,4 +1,4 @@
-import { TradingApi } from '@luxfi/api'
+import { TradingApi } from '@luxexchange/api'
 import { ContractTransaction } from 'ethers/lib/ethers'
 import { useCallback, useMemo } from 'react'
 import {
