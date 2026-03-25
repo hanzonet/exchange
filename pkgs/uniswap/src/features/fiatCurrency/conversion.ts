@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo } from 'react'
 import { PollingInterval } from 'uniswap/src/constants/misc'
 import { FiatCurrency } from 'uniswap/src/features/fiatCurrency/constants'

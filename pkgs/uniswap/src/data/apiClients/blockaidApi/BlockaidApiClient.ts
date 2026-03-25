@@ -1,4 +1,4 @@
-import { type BlockaidApiClient as BlockaidApiClientType, createBlockaidApiClient } from '@universe/api'
+import { type BlockaidApiClient as BlockaidApiClientType, createBlockaidApiClient } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
 import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 

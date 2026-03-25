@@ -1,12 +1,19 @@
 {
   "extends": "../../config/tsconfig/app.json",
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.json", "src/**/*.mts", "env.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.json",
+    "src/**/*.mts",
+    "env.d.ts"
+  ],
   "references": [
     {
-      "path": "../utilities"
+      "path": "../ui"
     },
     {
-      "path": "../ui"
+      "path": "../utilities"
     },
     {
       "path": "../prices"
@@ -25,6 +32,9 @@
     },
     {
       "path": "../../config/vitest-presets"
+    },
+    {
+      "path": "../eslint-config"
     }
   ],
   "compilerOptions": {

@@ -1,4 +1,4 @@
-import { ALL_NETWORKS_ARG, CustomRankingType } from '@universe/api'
+import { ALL_NETWORKS_ARG, CustomRankingType } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { tokenRankingsStatToCurrencyInfo, useTokenRankingsQuery } from 'uniswap/src/data/rest/tokenRankings'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

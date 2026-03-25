@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { chainIdToPlatform } from 'uniswap/src/features/platforms/utils/chains'
 import { UniswapEventName } from 'uniswap/src/features/telemetry/constants'

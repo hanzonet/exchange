@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { call, cancel, delay, fork } from 'typed-redux-saga'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'

@@ -1,4 +1,4 @@
-import { GqlResult, GraphQLApi } from '@universe/api'
+import { GqlResult, GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { getCommonBase } from 'uniswap/src/constants/routing'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

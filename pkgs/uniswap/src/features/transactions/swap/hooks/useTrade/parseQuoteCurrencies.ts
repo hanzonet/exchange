@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, TradeType as SdkTradeType } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { areCurrencyIdsEqual, currencyId } from 'uniswap/src/utils/currencyId'
 
 interface ParseQuoteCurrenciesInput {

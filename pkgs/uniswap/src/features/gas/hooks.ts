@@ -1,6 +1,6 @@
 import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
-import { type FormattedUniswapXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@universe/api'
-import { type GasStrategyType, useStatsigClientStatus } from '@universe/gating'
+import { type FormattedUniswapXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
+import { type GasStrategyType, useStatsigClientStatus } from '@luxexchange/gating'
 import { BigNumber, type providers } from 'ethers/lib/ethers'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

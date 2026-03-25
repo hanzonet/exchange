@@ -1,4 +1,4 @@
-import { UnitagAvatarUploadCredentials } from '@universe/api'
+import { UnitagAvatarUploadCredentials } from '@luxexchange/api'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export function isLocalFileUri(_imageUri: string): boolean {

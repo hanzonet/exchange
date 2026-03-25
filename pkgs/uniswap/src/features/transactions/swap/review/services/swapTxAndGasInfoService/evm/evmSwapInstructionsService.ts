@@ -5,7 +5,7 @@ import type {
   TradingApi,
   UnwrapQuoteResponse,
   WrapQuoteResponse,
-} from '@universe/api'
+} from '@luxexchange/api'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import type { SwapDelegationInfo } from 'uniswap/src/features/smartWallet/delegation/types'
 import type { TransactionSettings } from 'uniswap/src/features/transactions/components/settings/types'

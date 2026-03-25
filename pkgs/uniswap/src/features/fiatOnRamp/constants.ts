@@ -1,4 +1,4 @@
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { getVersionHeader } from 'uniswap/src/data/getVersionHeader'

@@ -1,6 +1,6 @@
 import { ContentStyle } from '@shopify/flash-list'
-import { GqlResult } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { GqlResult } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, useCallback, useEffect, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { usePoolSearchResultsToPoolOptions } from 'uniswap/src/components/lists/items/pools/usePoolSearchResultsToPoolOptions'

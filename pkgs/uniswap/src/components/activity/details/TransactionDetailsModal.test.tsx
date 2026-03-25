@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api/src'
+import { TradingApi } from '@luxexchange/api/src'
 import { TransactionDetailsContent } from 'uniswap/src/components/activity/details/TransactionDetailsContent'
 import { TransactionDetailsHeader } from 'uniswap/src/components/activity/details/TransactionDetailsHeader'
 import { TransactionDetailsInfoRows } from 'uniswap/src/components/activity/details/TransactionDetailsInfoRows'
@@ -88,8 +88,8 @@ vi.mock('uniswap/src/features/tokens/useCurrencyInfo', () => ({
   },
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

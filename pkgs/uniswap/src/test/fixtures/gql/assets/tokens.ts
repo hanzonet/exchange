@@ -1,5 +1,5 @@
 import { Token as SDKToken } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import {
   DAI,
   USDC,

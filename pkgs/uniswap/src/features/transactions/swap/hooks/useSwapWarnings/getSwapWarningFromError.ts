@@ -1,4 +1,4 @@
-import { FetchError, isRateLimitFetchError, TradingApi } from '@universe/api'
+import { FetchError, isRateLimitFetchError, TradingApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import { Warning, WarningAction, WarningLabel, WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 

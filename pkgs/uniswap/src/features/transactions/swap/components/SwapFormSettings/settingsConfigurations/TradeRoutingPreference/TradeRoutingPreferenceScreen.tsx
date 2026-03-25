@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { TradingApi } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import type { TFunction } from 'i18next'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'

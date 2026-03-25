@@ -1,4 +1,4 @@
-import { SignMessageFunc, UnitagGetAvatarUploadUrlResponse } from '@universe/api'
+import { SignMessageFunc, UnitagGetAvatarUploadUrlResponse } from '@luxexchange/api'
 import { UnitagsApiClient } from 'uniswap/src/data/apiClients/unitagsApi/UnitagsApiClient'
 import { isLocalFileUri, uploadFileToS3 } from 'uniswap/src/features/unitags/fileUtils'
 import { logger } from 'utilities/src/logger/logger'

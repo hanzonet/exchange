@@ -1,4 +1,4 @@
-import { type GasFeeResult, type JupiterOrderResponse, TradingApi } from '@universe/api'
+import { type GasFeeResult, type JupiterOrderResponse, TradingApi } from '@luxexchange/api'
 import { type SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import { type SolanaTrade } from 'uniswap/src/features/transactions/swap/types/solana'
 

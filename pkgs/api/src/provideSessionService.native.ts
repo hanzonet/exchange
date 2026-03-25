@@ -1,14 +1,14 @@
-import { provideDeviceIdService } from '@universe/api/src/provideDeviceIdService'
-import { provideSessionStorage } from '@universe/api/src/provideSessionStorage'
-import { provideUniswapIdentifierService } from '@universe/api/src/provideUniswapIdentifierService'
-import { getTransport } from '@universe/api/src/transport'
+import { provideDeviceIdService } from '@luxexchange/api/src/provideDeviceIdService'
+import { provideSessionStorage } from '@luxexchange/api/src/provideSessionStorage'
+import { provideUniswapIdentifierService } from '@luxexchange/api/src/provideUniswapIdentifierService'
+import { getTransport } from '@luxexchange/api/src/transport'
 import {
   createNoopSessionService,
   createSessionClient,
   createSessionRepository,
   createSessionService,
   type SessionService,
-} from '@universe/sessions'
+} from '@luxexchange/sessions'
 import type { Logger } from 'utilities/src/logger/logger'
 import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
 

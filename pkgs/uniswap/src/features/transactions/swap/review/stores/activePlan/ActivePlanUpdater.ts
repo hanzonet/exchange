@@ -1,5 +1,5 @@
 import { UseQueryResult, useQuery } from '@tanstack/react-query'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
 import { useEffect } from 'react'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'

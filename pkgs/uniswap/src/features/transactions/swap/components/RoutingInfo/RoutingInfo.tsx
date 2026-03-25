@@ -1,4 +1,4 @@
-import type { GasFeeResult } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { AcrossRoutingInfo } from 'uniswap/src/features/transactions/swap/components/RoutingInfo/AcrossRoutingInfo'
 import { PlanRoutingInfo } from 'uniswap/src/features/transactions/swap/components/RoutingInfo/ChainedRoutingInfo'

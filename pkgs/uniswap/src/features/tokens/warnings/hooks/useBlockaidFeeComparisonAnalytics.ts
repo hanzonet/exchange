@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useEffect, useRef } from 'react'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'

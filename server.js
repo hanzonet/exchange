@@ -1,20 +1,57 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const { ethers } = require('ethers');
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+// F3: Fail fast if required subgraph env vars are not set
+const REQUIRED_ENV = [
+  'SUBGRAPH_V3_URL',
+  'SUBGRAPH_ZOO_V3_URL',
+];
+
+// Accept SUBGRAPH_URL or SUBGRAPH_V2_URL for V2
+const SUBGRAPH_V2_URL = process.env.SUBGRAPH_URL || process.env.SUBGRAPH_V2_URL;
+const SUBGRAPH_V3_URL = process.env.SUBGRAPH_V3_URL;
+const ZOO_SUBGRAPH_V3_URL = process.env.ZOO_SUBGRAPH_V3_URL;
+const SUBGRAPH_ZOO_V2_URL = process.env.SUBGRAPH_ZOO_V2_URL;
+const SUBGRAPH_PARS_V2_URL = process.env.SUBGRAPH_PARS_V2_URL;
+const SUBGRAPH_HANZO_V2_URL = process.env.SUBGRAPH_HANZO_V2_URL;
+
+for (const key of REQUIRED_ENV) {
+  if (!process.env[key]) {
+    console.error(`FATAL: missing required env var ${key}`);
+    process.exit(1);
+  }
+}
 
 // Configuration from environment
 const RPC_URL = process.env.RPC_URL || 'https://api.lux.network/ext/bc/C/rpc';
-const SUBGRAPH_V2_URL = process.env.SUBGRAPH_URL || process.env.SUBGRAPH_V2_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/uniswap-v2';
-const SUBGRAPH_V3_URL = process.env.SUBGRAPH_V3_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/amm-v3';
-const ZOO_SUBGRAPH_V3_URL = process.env.ZOO_SUBGRAPH_V3_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/zoo-amm-v3';
-const SUBGRAPH_ZOO_V2_URL = process.env.SUBGRAPH_ZOO_V2_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/zoo-amm-v2';
-const SUBGRAPH_PARS_V2_URL = process.env.SUBGRAPH_PARS_V2_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/pars-amm-v2';
-const SUBGRAPH_HANZO_V2_URL = process.env.SUBGRAPH_HANZO_V2_URL || 'http://graph-node.lux-explorer.svc:8000/subgraphs/name/luxfi/hanzo-amm-v2';
 const BLOCKSCOUT_API = process.env.BLOCKSCOUT_API || 'https://api-explore.lux.network';
+
+const app = express();
+
+// F2: Restrict CORS to known origins
+app.use(cors({
+  origin: [
+    'https://lux.exchange',
+    /\.lux\.(exchange|network)$/,
+    /\.lux\.org$/,
+  ],
+}));
+
+// F4: Security headers and rate limiting
+app.use(helmet());
+app.disable('x-powered-by');
+app.use(express.json({ limit: '100kb' }));
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use(limiter);
 
 // Ethereum provider for on-chain queries
 let provider;
@@ -123,35 +160,63 @@ app.get('/api/pools', async (req, res) => {
       }`);
       res.json({ pools: data.pairs || [], total: (data.pairs || []).length, source: 'v2' });
     } catch (e2) {
-      res.status(503).json({ error: 'Subgraphs syncing', detail: error.message });
+      res.status(503).json({ error: 'Subgraphs unavailable' });
     }
   }
 });
 
-// Swaps — query V3 subgraph for trade history
+// F1: Swaps — use GraphQL variables, not string interpolation
 app.get('/api/trades', async (req, res) => {
   try {
     const { pool, limit = 50 } = req.query;
-    const where = pool ? `where: { pool: "${pool}" }` : '';
-    const data = await cached(`trades:${pool}:${limit}`, 15000, () =>
-      querySubgraph(SUBGRAPH_V3_URL, `{
-        swaps(first: ${Number(limit)}, orderBy: timestamp, orderDirection: desc, ${where}) {
-          id
-          timestamp
-          pool { id token0 { symbol } token1 { symbol } }
-          sender
-          recipient
-          amount0
-          amount1
-          amountUSD
-          sqrtPriceX96
-          tick
+    const safeLimit = Math.min(Math.max(Number(limit) || 50, 1), 1000);
+    const variables = { limit: safeLimit };
+
+    // Use separate queries for filtered vs unfiltered to keep GraphQL variables clean
+    let query;
+    if (pool) {
+      variables.pool = String(pool);
+      query = `
+        query GetSwaps($limit: Int!, $pool: String!) {
+          swaps(first: $limit, orderBy: timestamp, orderDirection: desc, where: { pool: $pool }) {
+            id
+            timestamp
+            pool { id token0 { symbol } token1 { symbol } }
+            sender
+            recipient
+            amount0
+            amount1
+            amountUSD
+            sqrtPriceX96
+            tick
+          }
         }
-      }`)
+      `;
+    } else {
+      query = `
+        query GetSwaps($limit: Int!) {
+          swaps(first: $limit, orderBy: timestamp, orderDirection: desc) {
+            id
+            timestamp
+            pool { id token0 { symbol } token1 { symbol } }
+            sender
+            recipient
+            amount0
+            amount1
+            amountUSD
+            sqrtPriceX96
+            tick
+          }
+        }
+      `;
+    }
+
+    const data = await cached(`trades:${pool}:${safeLimit}`, 15000, () =>
+      querySubgraph(SUBGRAPH_V3_URL, query, variables)
     );
     res.json({ trades: data.swaps || [] });
   } catch (error) {
-    res.status(503).json({ error: 'Subgraph syncing', detail: error.message });
+    res.status(503).json({ error: 'Subgraph unavailable' });
   }
 });
 
@@ -210,29 +275,34 @@ app.get('/api/price/:symbol', async (req, res) => {
 
     res.json({ symbol: req.params.symbol.toUpperCase(), priceUSD: price, timestamp: Date.now() });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: 'Price lookup failed' });
   }
 });
 
-// Token day data from subgraph
+// F1: Token day data — use GraphQL variables, not string interpolation
 app.get('/api/token/:address/history', async (req, res) => {
   try {
     const { address } = req.params;
     const { days = 30 } = req.query;
-    const data = await cached(`history:${address}:${days}`, 60000, () =>
-      querySubgraph(SUBGRAPH_V3_URL, `{
-        tokenDayDatas(first: ${Number(days)}, orderBy: date, orderDirection: desc, where: { token: "${address.toLowerCase()}" }) {
-          date
-          priceUSD
-          volumeUSD
-          totalValueLockedUSD
-          open high low close
+    const safeDays = Math.min(Math.max(Number(days) || 30, 1), 365);
+    const safeAddress = String(address).toLowerCase();
+
+    const data = await cached(`history:${safeAddress}:${safeDays}`, 60000, () =>
+      querySubgraph(SUBGRAPH_V3_URL, `
+        query GetTokenHistory($days: Int!, $token: String!) {
+          tokenDayDatas(first: $days, orderBy: date, orderDirection: desc, where: { token: $token }) {
+            date
+            priceUSD
+            volumeUSD
+            totalValueLockedUSD
+            open high low close
+          }
         }
-      }`)
+      `, { days: safeDays, token: safeAddress })
     );
     res.json(data.tokenDayDatas || []);
   } catch (error) {
-    res.status(503).json({ error: 'Subgraph syncing' });
+    res.status(503).json({ error: 'Subgraph unavailable' });
   }
 });
 
@@ -259,7 +329,7 @@ app.get('/api/portfolio/:address', async (req, res) => {
 
     res.json({ address, tokens: balances.filter(b => b.balance !== '0') });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: 'Portfolio lookup failed' });
   }
 });
 
@@ -269,7 +339,7 @@ app.post('/subgraph/v3', async (req, res) => {
     const data = await querySubgraph(SUBGRAPH_V3_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -279,7 +349,7 @@ app.post('/subgraph/v2', async (req, res) => {
     const data = await querySubgraph(SUBGRAPH_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -289,7 +359,7 @@ app.post('/subgraph/zoo/v3', async (req, res) => {
     const data = await querySubgraph(ZOO_SUBGRAPH_V3_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -299,7 +369,7 @@ app.post('/subgraph/zoo/v2', async (req, res) => {
     const data = await querySubgraph(SUBGRAPH_ZOO_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -309,7 +379,7 @@ app.post('/subgraph/pars/v2', async (req, res) => {
     const data = await querySubgraph(SUBGRAPH_PARS_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -319,7 +389,7 @@ app.post('/subgraph/hanzo/v2', async (req, res) => {
     const data = await querySubgraph(SUBGRAPH_HANZO_V2_URL, req.body.query, req.body.variables);
     res.json({ data });
   } catch (error) {
-    res.status(502).json({ errors: [{ message: error.message }] });
+    res.status(502).json({ errors: [{ message: 'Subgraph request failed' }] });
   }
 });
 
@@ -327,10 +397,10 @@ const PORT = process.env.PORT || 3010;
 app.listen(PORT, () => {
   console.log(`Exchange API running on port ${PORT}`);
   console.log(`  RPC: ${RPC_URL}`);
-  console.log(`  Lux V2 Subgraph: ${SUBGRAPH_V2_URL}`);
+  console.log(`  Lux V2 Subgraph: ${SUBGRAPH_V2_URL || '(not configured)'}`);
   console.log(`  Lux V3 Subgraph: ${SUBGRAPH_V3_URL}`);
   console.log(`  Zoo V3 Subgraph: ${ZOO_SUBGRAPH_V3_URL}`);
-  console.log(`  Zoo V2 Subgraph: ${SUBGRAPH_ZOO_V2_URL}`);
-  console.log(`  Pars V2 Subgraph: ${SUBGRAPH_PARS_V2_URL}`);
-  console.log(`  Hanzo V2 Subgraph: ${SUBGRAPH_HANZO_V2_URL}`);
+  console.log(`  Zoo V2 Subgraph: ${SUBGRAPH_ZOO_V2_URL || '(not configured)'}`);
+  console.log(`  Pars V2 Subgraph: ${SUBGRAPH_PARS_V2_URL || '(not configured)'}`);
+  console.log(`  Hanzo V2 Subgraph: ${SUBGRAPH_HANZO_V2_URL || '(not configured)'}`);
 });

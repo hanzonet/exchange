@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import invariant from 'tiny-invariant'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { UnexpectedTransactionStateError } from 'uniswap/src/features/transactions/errors'

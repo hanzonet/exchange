@@ -1,6 +1,6 @@
 import { SpamCode as RestSpamCode, TokenType } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { Token as SdkToken } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
 import { AssetType } from 'uniswap/src/entities/assets'

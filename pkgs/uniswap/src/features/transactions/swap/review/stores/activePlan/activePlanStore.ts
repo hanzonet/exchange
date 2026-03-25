@@ -1,4 +1,4 @@
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { TransactionAndPlanStep } from 'uniswap/src/features/transactions/swap/plan/planStepTransformer'
 import { SwapFormState } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/types'

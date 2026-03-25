@@ -1,5 +1,5 @@
 import { Percent } from '@uniswap/sdk-core'
-import { ClassicQuoteResponse, DiscriminatedQuoteResponse, TradingApi } from '@universe/api'
+import { ClassicQuoteResponse, DiscriminatedQuoteResponse, TradingApi } from '@luxexchange/api'
 import { getTradingApiSwapFee } from 'uniswap/src/features/transactions/swap/types/getTradingApiSwapFee'
 import { CurrencyField } from 'uniswap/src/types/currency'
 

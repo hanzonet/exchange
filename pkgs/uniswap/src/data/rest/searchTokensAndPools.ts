@@ -12,7 +12,7 @@ import {
   SearchType,
 } from '@uniswap/client-search/dist/search/v1/api_pb'
 import { searchTokens } from '@uniswap/client-search/dist/search/v1/api-searchService_connectquery'
-import { parseProtectionInfo, parseRestProtocolVersion, parseSafetyLevel, SharedQueryClient } from '@universe/api'
+import { parseProtectionInfo, parseRestProtocolVersion, parseSafetyLevel, SharedQueryClient } from '@luxexchange/api'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { uniswapPostTransport } from 'uniswap/src/data/rest/base'
 import { createLogger } from 'utilities/src/logger/logger'

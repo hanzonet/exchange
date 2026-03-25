@@ -1,4 +1,4 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import type { AddressGroup } from 'uniswap/src/features/accounts/store/types/AccountsState'
 import { usePortfolioBalances } from 'uniswap/src/features/dataApi/balances/balances'

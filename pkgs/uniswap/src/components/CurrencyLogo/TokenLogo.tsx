@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, useState } from 'react'
 import {
   Flex,

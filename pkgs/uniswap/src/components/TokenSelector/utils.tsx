@@ -1,4 +1,4 @@
-import { GraphQLApi, TradingApi } from '@universe/api'
+import { GraphQLApi, TradingApi } from '@luxexchange/api'
 import {
   type OnchainItemListOption,
   OnchainItemListOptionType,

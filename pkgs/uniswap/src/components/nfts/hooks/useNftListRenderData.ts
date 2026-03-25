@@ -1,5 +1,5 @@
 import { NetworkStatus } from '@apollo/client'
-import { GraphQLApi, isError } from '@universe/api'
+import { GraphQLApi, isError } from '@luxexchange/api'
 import { useCallback, useState } from 'react'
 import { NUM_FIRST_NFTS } from 'uniswap/src/components/nfts/constants'
 import type { NftsNextFetchPolicy } from 'uniswap/src/components/nfts/types'

@@ -1,5 +1,5 @@
 import { TransactionRequest } from '@ethersproject/providers'
-import { GasEstimate, TradingApi } from '@universe/api'
+import { GasEstimate, TradingApi } from '@luxexchange/api'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { SwapDelegationInfo } from 'uniswap/src/features/smartWallet/delegation/types'

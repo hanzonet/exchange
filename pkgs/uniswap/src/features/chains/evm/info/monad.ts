@@ -1,6 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
-import { SwapConfigKey } from '@universe/gating'
+import { GraphQLApi } from '@luxexchange/api'
+import { SwapConfigKey } from '@luxexchange/gating'
 import { MONAD_LOGO_FILLED } from 'ui/src/assets'
 import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
 import {

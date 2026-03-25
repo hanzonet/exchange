@@ -1,5 +1,5 @@
 import { Currency, Token, WETH9 } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import type { ImageSourcePropType } from 'react-native'
 import { CELO_LOGO, ETH_LOGO } from 'ui/src/assets'
 import {

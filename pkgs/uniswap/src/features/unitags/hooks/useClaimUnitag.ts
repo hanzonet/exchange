@@ -1,4 +1,4 @@
-import { SignMessageFunc, UnitagClaim, UnitagClaimContext } from '@universe/api'
+import { SignMessageFunc, UnitagClaim, UnitagClaimContext } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { UnitagsApiClient } from 'uniswap/src/data/apiClients/unitagsApi/UnitagsApiClient'

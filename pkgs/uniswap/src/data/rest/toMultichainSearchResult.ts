@@ -1,5 +1,5 @@
 import { type MultichainToken } from '@uniswap/client-search/dist/search/v1/api_pb'
-import { parseProtectionInfo, parseSafetyLevel } from '@universe/api'
+import { parseProtectionInfo, parseSafetyLevel } from '@luxexchange/api'
 import { chainTokenToCurrencyInfo } from 'uniswap/src/data/rest/searchTokensAndPools'
 import { type CurrencyInfo, type MultichainSearchResult } from 'uniswap/src/features/dataApi/types'
 import { getCurrencySafetyInfo } from 'uniswap/src/features/dataApi/utils/getCurrencySafetyInfo'

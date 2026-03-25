@@ -1,4 +1,4 @@
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 import { mergeGasFeeResults, sumGasFees } from 'uniswap/src/features/transactions/swap/utils/gas'
 
 describe('sumGasFees', () => {

@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import type { TransactionSettings } from 'uniswap/src/features/transactions/components/settings/types'
 import type { SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import { createLogSwapRequestErrors } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'

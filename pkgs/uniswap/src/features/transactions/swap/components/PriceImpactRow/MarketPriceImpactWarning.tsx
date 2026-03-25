@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { TFunction } from 'i18next'
 import { PropsWithChildren } from 'react'
 import { useTranslation } from 'react-i18next'

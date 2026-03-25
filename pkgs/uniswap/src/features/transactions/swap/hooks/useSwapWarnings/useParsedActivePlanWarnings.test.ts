@@ -1,5 +1,5 @@
 import { CurrencyAmount, NativeCurrency } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { WarningLabel } from 'uniswap/src/components/modals/WarningModal/types'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

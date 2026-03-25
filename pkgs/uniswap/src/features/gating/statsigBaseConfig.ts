@@ -1,4 +1,4 @@
-import { getOverrideAdapter, getStatsigEnvName, StatsigOptions } from '@universe/gating'
+import { getOverrideAdapter, getStatsigEnvName, StatsigOptions } from '@luxexchange/gating'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 
 export const statsigBaseConfig: StatsigOptions = {

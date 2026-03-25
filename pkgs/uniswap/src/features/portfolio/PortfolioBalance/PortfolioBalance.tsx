@@ -1,5 +1,5 @@
 import { ChartPeriod } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { isWarmLoadingStatus } from '@universe/api'
+import { isWarmLoadingStatus } from '@luxexchange/api'
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, RefreshButton, Shine, Text, useIsDarkMode } from 'ui/src'

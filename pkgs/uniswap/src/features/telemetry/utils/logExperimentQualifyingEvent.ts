@@ -1,4 +1,4 @@
-import { Experiments } from '@universe/gating'
+import { Experiments } from '@luxexchange/gating'
 import { UniswapEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 

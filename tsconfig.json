@@ -75,6 +75,9 @@
     },
     {
       "path": "./pkgs/trpc"
+    },
+    {
+      "path": "./pkgs/eslint-config"
     }
   ]
 }

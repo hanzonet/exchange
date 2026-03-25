@@ -1,4 +1,4 @@
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 
 /**

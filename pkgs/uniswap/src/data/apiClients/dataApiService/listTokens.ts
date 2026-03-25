@@ -3,7 +3,7 @@ import { createPromiseClient } from '@connectrpc/connect'
 import { infiniteQueryOptions } from '@tanstack/react-query'
 import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
 import type { ListTokensRequest, ListTokensResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { createDataApiServiceClient } from '@universe/api'
+import { createDataApiServiceClient } from '@luxexchange/api'
 import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 

@@ -8,7 +8,7 @@ import {
   TokenRankingsStat,
 } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
 import { tokenRankings } from '@uniswap/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
-import { parseProtectionInfo, parseSafetyLevel } from '@universe/api'
+import { parseProtectionInfo, parseSafetyLevel } from '@luxexchange/api'
 import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
-import { FeeType, GasEstimate, TradingApi } from '@universe/api'
+import { FeeType, GasEstimate, TradingApi } from '@luxexchange/api'
 import { DAI, USDC } from 'uniswap/src/constants/tokens'
 import { useCheckApprovalQuery } from 'uniswap/src/data/apiClients/tradingApi/useCheckApprovalQuery'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

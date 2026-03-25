@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import * as WebBrowser from 'expo-web-browser'
 import { colorsLight } from 'ui/src/theme'
 import { NATIVE_TOKEN_PLACEHOLDER } from 'uniswap/src/constants/addresses'

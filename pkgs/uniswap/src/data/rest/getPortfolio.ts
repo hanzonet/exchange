@@ -10,7 +10,7 @@ import {
   SharedQueryClient,
   transformInput,
   type WithoutWalletAccount,
-} from '@universe/api'
+} from '@luxexchange/api'
 import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
 import { buildAccountAddressesByPlatform } from 'uniswap/src/data/rest/buildAccountAddressesByPlatform'
 import {

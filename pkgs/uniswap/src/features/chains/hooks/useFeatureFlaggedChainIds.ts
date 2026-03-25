@@ -1,4 +1,4 @@
-import { FeatureFlags, getFeatureFlag, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, getFeatureFlag, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { filterChainIdsByFeatureFlag } from 'uniswap/src/features/chains/utils'

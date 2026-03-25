@@ -1,6 +1,6 @@
 import type { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import type { GasFeeResult } from '@universe/api'
-import { TradingApi } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import type { PropsWithChildren, ReactNode } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'

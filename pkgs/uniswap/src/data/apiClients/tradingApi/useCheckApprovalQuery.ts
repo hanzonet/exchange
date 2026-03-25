@@ -3,7 +3,7 @@ import {
   type TradingApi,
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
-} from '@universe/api'
+} from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'

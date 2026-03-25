@@ -1,4 +1,4 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { TokenOption } from 'uniswap/src/components/lists/items/types'
 import { type OnchainItemSection, OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'

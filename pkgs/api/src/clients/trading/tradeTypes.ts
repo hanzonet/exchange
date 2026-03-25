@@ -10,7 +10,7 @@ import type {
   Routing,
   UpdatePlanRequest,
   WrapUnwrapQuote,
-} from '@universe/api/src/clients/trading/__generated__'
+} from '@luxexchange/api/src/clients/trading/__generated__'
 
 export interface ExistingPlanRequest {
   planId: string

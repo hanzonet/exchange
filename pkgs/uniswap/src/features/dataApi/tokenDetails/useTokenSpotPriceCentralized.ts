@@ -1,4 +1,4 @@
-import { usePrice } from '@universe/prices'
+import { usePrice } from '@luxexchange/prices'
 import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
 import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'uniswap/src/features/dataApi/tokenDetails/useTokenDetailsData'
 import { isPriceServiceSupportedChain } from 'uniswap/src/features/prices/isPriceServiceSupportedChain'

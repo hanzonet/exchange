@@ -1,6 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
-import { SwapConfigKey } from '@universe/gating'
+import { GraphQLApi } from '@luxexchange/api'
+import { SwapConfigKey } from '@luxexchange/gating'
 import { AVALANCHE_LOGO } from 'ui/src/assets'
 import { config } from 'uniswap/src/config'
 import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'

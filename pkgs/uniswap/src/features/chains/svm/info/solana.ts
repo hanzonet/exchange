@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { SOLANA_LOGO } from 'ui/src/assets'
 import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
 import { getQuicknodeEndpointUrl } from 'uniswap/src/features/chains/evm/rpc'

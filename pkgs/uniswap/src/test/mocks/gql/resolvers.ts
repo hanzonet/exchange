@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { GraphQLJSON } from 'graphql-scalars'
 import { priceHistory, tokenProject } from 'uniswap/src/test/fixtures'
 

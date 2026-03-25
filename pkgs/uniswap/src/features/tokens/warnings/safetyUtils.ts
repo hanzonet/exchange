@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 import { Currency, NativeCurrency } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { ColorTokens } from 'ui/src'
 import { getAlertColor } from 'uniswap/src/components/modals/WarningModal/getAlertColor'

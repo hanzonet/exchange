@@ -51,8 +51,8 @@ vi.mock('uniswap/src/features/tokens/useCurrencyInfo', () => ({
   },
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 
 // Shorter timeframes use higher thresholds since stablecoins naturally show more price noise on smaller windows
 const STABLECOIN_VARIANCE_THRESHOLDS: Record<GraphQLApi.HistoryDuration, number> = {

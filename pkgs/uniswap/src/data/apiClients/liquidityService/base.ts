@@ -1,4 +1,4 @@
-import { createConnectTransportWithDefaults } from '@universe/api'
+import { createConnectTransportWithDefaults } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 

@@ -1,4 +1,4 @@
-import { GraphQLApi, SpamCode, TradingApi } from '@universe/api'
+import { GraphQLApi, SpamCode, TradingApi } from '@luxexchange/api'
 import parseApproveTransaction from 'uniswap/src/features/activity/parse/parseApproveTransaction'
 import parseBridgingTransaction from 'uniswap/src/features/activity/parse/parseBridgingTransaction'
 import parseNFTMintTransaction from 'uniswap/src/features/activity/parse/parseMintTransaction'

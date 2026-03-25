@@ -3,7 +3,7 @@ import {
   OnChainTransactionLabel,
   OnChainTransactionStatus,
 } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 
 import { parseRestApproveTransaction } from 'uniswap/src/features/activity/parse/parseApproveTransaction'
 import { parseRestAuctionTransaction } from 'uniswap/src/features/activity/parse/parseAuctionTransaction'

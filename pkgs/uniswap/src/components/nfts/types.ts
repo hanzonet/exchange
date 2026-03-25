@@ -1,4 +1,4 @@
-import { useNftsTabQuery } from '@universe/api/src/clients/graphql/generated'
+import { useNftsTabQuery } from '@luxexchange/api/src/clients/graphql/generated'
 import { GetThemeValueForKey } from 'ui/src'
 
 /**

@@ -1,4 +1,4 @@
-import { FormattedUniswapXGasFeeInfo } from '@universe/api'
+import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { UniswapX } from 'ui/src/components/icons/UniswapX'

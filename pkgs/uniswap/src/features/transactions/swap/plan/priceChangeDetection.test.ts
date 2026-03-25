@@ -1,5 +1,5 @@
 import { CurrencyAmount } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { UNI, WBTC } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { buildTradeFromPlanResponse } from 'uniswap/src/features/transactions/swap/plan/planSagaUtils'

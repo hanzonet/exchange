@@ -1,5 +1,5 @@
-import { createTradingApiClient, TradingApi, type TradingApiClient as TradingApiClientType } from '@universe/api'
-import { TRADING_API_PATHS } from '@universe/api/src/clients/trading/createTradingApiClient'
+import { createTradingApiClient, TradingApi, type TradingApiClient as TradingApiClientType } from '@luxexchange/api'
+import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
   EthAsErc20UniswapXProperties,
   Experiments,
@@ -7,7 +7,7 @@ import {
   getExperimentValueFromLayer,
   getFeatureFlag,
   Layers,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
 import { tradingApiVersionPrefix, uniswapUrls } from 'uniswap/src/constants/urls'
 import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'

@@ -1,5 +1,5 @@
 import { act, waitFor } from '@testing-library/react'
-import { SharedQueryClient } from '@universe/api'
+import { SharedQueryClient } from '@luxexchange/api'
 import { BehaviorType, useDialogVisibility } from 'uniswap/src/components/dialog/hooks/useDialogVisibility'
 import { type DialogPreferencesService } from 'uniswap/src/dialog-preferences'
 import { DialogVisibilityId } from 'uniswap/src/dialog-preferences/types'

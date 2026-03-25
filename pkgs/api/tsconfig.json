@@ -9,12 +9,17 @@
     "src/**/*.tsx",
     "src/**/*.mts"
   ],
-  "exclude": ["src/**/*.spec.ts", "src/**/*.spec.tsx", "src/**/*.test.ts", "src/**/*.test.tsx"],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
   "compilerOptions": {
     "emitDeclarationOnly": true,
     "noEmit": false,
     "paths": {
-      "@universe/api/*": ["./src/*"],
+      "@luxexchange/api/*": ["./src/*"],
       "@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb": [
         "../../node_modules/@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb",
         "./stubs/privy-service-pb"
@@ -32,6 +37,9 @@
     },
     {
       "path": "../config"
+    },
+    {
+      "path": "../eslint-config"
     }
   ]
 }

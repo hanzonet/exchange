@@ -1,4 +1,4 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useCallback } from 'react'
 import { TokenOption } from 'uniswap/src/components/lists/items/types'
 import { useCurrencyInfosToTokenOptions } from 'uniswap/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'

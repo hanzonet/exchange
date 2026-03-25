@@ -1,5 +1,5 @@
 import { type QueryFunction, type QueryKey, skipToken, type UseQueryResult, useQuery } from '@tanstack/react-query'
-import { type TradingApi, type UseQueryApiHelperHookArgs } from '@universe/api'
+import { type TradingApi, type UseQueryApiHelperHookArgs } from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'

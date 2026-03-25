@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { createApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
 import { createPermit2SignatureStep } from 'uniswap/src/features/transactions/steps/permit2Signature'
 import { TransactionStep } from 'uniswap/src/features/transactions/steps/types'

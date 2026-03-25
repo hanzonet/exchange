@@ -7,7 +7,7 @@ import {
   SpamCode as RestSpamCode,
   TokenType,
 } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { getNativeAddress, getWrappedNativeAddress } from 'uniswap/src/constants/addresses'
 import { DAI } from 'uniswap/src/constants/tokens'
 

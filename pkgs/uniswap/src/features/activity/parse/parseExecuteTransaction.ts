@@ -1,5 +1,5 @@
 import { OnChainTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { parseRestApproveTransaction } from 'uniswap/src/features/activity/parse/parseApproveTransaction'
 import { parseRestSwapTransaction } from 'uniswap/src/features/activity/parse/parseTradeTransaction'
 import { ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'

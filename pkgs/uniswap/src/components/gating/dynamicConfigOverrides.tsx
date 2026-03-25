@@ -1,4 +1,4 @@
-import { ForceUpgradeStatus, ForceUpgradeTranslations } from '@universe/gating'
+import { ForceUpgradeStatus, ForceUpgradeTranslations } from '@luxexchange/gating'
 import { ComponentProps } from 'react'
 import { DynamicConfigDropdown } from 'uniswap/src/components/gating/DynamicConfigDropdown'
 

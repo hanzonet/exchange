@@ -1,5 +1,5 @@
 import { UseMutationResult, useMutation } from '@tanstack/react-query'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
 import { NavigateToSwapFlowArgs, useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'
 import { AssetType } from 'uniswap/src/entities/assets'

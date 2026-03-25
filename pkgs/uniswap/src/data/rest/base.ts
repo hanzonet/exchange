@@ -1,6 +1,6 @@
 import { Transport } from '@connectrpc/connect'
 import { ConnectTransportOptions } from '@connectrpc/connect-web'
-import { getEntryGatewayUrl, getTransport } from '@universe/api'
+import { getEntryGatewayUrl, getTransport } from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { BASE_UNISWAP_HEADERS } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { isWebApp } from 'utilities/src/platform'

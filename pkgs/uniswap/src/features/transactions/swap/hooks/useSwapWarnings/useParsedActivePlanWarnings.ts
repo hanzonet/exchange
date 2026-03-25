@@ -1,5 +1,5 @@
 import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import type { TFunction } from 'i18next'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

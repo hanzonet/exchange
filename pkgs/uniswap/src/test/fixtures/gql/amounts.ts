@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { faker, MAX_FIXTURE_TIMESTAMP } from 'uniswap/src/test/shared'
 import { createFixture, randomEnumValue } from 'uniswap/src/test/utils'
 

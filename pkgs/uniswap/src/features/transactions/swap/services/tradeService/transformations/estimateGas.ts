@@ -1,4 +1,4 @@
-import { type DiscriminatedQuoteResponse, type GasEstimate } from '@universe/api'
+import { type DiscriminatedQuoteResponse, type GasEstimate } from '@luxexchange/api'
 
 export function getGasEstimate(data: DiscriminatedQuoteResponse | null): GasEstimate | undefined {
   if (!data?.quote || !('gasEstimates' in data.quote) || !data.quote.gasEstimates) {

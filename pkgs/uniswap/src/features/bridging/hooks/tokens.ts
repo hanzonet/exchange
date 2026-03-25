@@ -1,4 +1,4 @@
-import { GqlResult, GraphQLApi, TradingApi } from '@universe/api'
+import { GqlResult, GraphQLApi, TradingApi } from '@luxexchange/api'
 import { useCallback, useMemo } from 'react'
 import { OnchainItemListOptionType, TokenOption } from 'uniswap/src/components/lists/items/types'
 import { filter } from 'uniswap/src/components/TokenSelector/filter'

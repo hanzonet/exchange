@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@universe/gating'
+import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@luxexchange/gating'
 import JSBI from 'jsbi'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { GENERIC_L2_GAS_CONFIG } from 'uniswap/src/features/chains/gasDefaults'

@@ -1,5 +1,5 @@
 import type { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { createContext, type ReactNode, useContext } from 'react'
 import type { PollingInterval } from 'uniswap/src/constants/misc'
 import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'uniswap/src/features/dataApi/tokenDetails/useTokenDetailsData'

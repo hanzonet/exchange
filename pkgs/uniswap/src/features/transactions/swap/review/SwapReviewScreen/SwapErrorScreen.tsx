@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, IconButton, Text } from 'ui/src'
 import { HelpCenter } from 'ui/src/components/icons/HelpCenter'

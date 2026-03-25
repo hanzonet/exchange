@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { GasFeeResult, TradingApi } from '@universe/api'
+import { GasFeeResult, TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
 import { useCheckApprovalQuery } from 'uniswap/src/data/apiClients/tradingApi/useCheckApprovalQuery'

@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { GasStrategy, TradingApi } from '@universe/api'
+import { GasStrategy, TradingApi } from '@luxexchange/api'
 import { getActiveGasStrategy } from 'uniswap/src/features/gas/utils'
 import {
   isZeroAmount,

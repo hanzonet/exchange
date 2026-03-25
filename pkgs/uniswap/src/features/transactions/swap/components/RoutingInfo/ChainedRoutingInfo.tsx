@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { Fragment, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, HorizontalDottedLineSeparator, Text, useSporeColors } from 'ui/src'

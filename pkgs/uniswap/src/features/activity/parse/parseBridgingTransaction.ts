@@ -1,6 +1,6 @@
 import type { OnChainTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { Direction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { extractDappInfo } from 'uniswap/src/features/activity/utils/extractDappInfo'
 import { deriveCurrencyAmountFromAssetResponse } from 'uniswap/src/features/activity/utils/remote'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'

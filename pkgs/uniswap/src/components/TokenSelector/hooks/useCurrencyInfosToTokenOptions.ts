@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client'
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { OnchainItemListOptionType, TokenOption } from 'uniswap/src/components/lists/items/types'
 import { BRIDGED_BASE_ADDRESSES } from 'uniswap/src/constants/addresses'

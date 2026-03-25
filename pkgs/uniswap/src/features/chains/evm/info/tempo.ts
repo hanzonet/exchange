@@ -1,5 +1,5 @@
 import { Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { TEMPO_LOGO } from 'ui/src/assets'
 import {
   DEFAULT_MS_BEFORE_WARNING,

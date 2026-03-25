@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { USDC, WBTC } from 'uniswap/src/constants/tokens'
 import { TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
 import {

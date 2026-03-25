@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import type { FeatureFlags } from '@universe/gating'
+import { TradingApi } from '@luxexchange/api'
+import type { FeatureFlags } from '@luxexchange/gating'
 import type { AppTFunction } from 'ui/src/i18n/types'
 import type { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import type { FrontendSupportedProtocol } from 'uniswap/src/features/transactions/swap/utils/protocols'

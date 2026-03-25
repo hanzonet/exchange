@@ -1,4 +1,4 @@
-import { createDataServiceApiClient } from '@universe/api'
+import { createDataServiceApiClient } from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 

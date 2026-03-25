@@ -1,5 +1,5 @@
-import type { GasFeeResult } from '@universe/api'
-import { TradingApi } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import type { Warning, WarningWithStyle } from 'uniswap/src/components/modals/WarningModal/types'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'

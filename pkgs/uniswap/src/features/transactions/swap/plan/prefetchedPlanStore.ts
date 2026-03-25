@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
+import { TradingApi } from '@luxexchange/api'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'
 import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { isChained } from 'uniswap/src/features/transactions/swap/utils/routing'

@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import type { GasFeeResult } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
 import { useTradingApiSwapQuery } from 'uniswap/src/data/apiClients/tradingApi/useTradingApiSwapQuery'
 import { useIsSmartContractAddress } from 'uniswap/src/features/address/useIsSmartContractAddress'
@@ -26,8 +26,8 @@ vi.mock(
     useAllTransactionSettings: vi.fn(),
   }),
 )
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

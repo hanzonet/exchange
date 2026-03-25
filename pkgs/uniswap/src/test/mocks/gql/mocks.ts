@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { GQL_CHAINS } from 'uniswap/src/test/fixtures'
 import { faker, MAX_FIXTURE_TIMESTAMP } from 'uniswap/src/test/shared'

@@ -1,5 +1,5 @@
 import { datadogRum } from '@datadog/browser-rum'
-import { FetchError, is401Error } from '@universe/api'
+import { FetchError, is401Error } from '@luxexchange/api'
 import { AppTFunction } from 'ui/src/i18n/types'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { TokenApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'

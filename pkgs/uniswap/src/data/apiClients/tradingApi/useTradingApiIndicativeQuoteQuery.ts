@@ -1,5 +1,5 @@
 import { type QueryClient, type QueryKey, skipToken, type UseQueryResult, useQuery } from '@tanstack/react-query'
-import { is404Error, SharedQueryClient, TradingApi, type UseQueryApiHelperHookArgs } from '@universe/api'
+import { is404Error, SharedQueryClient, TradingApi, type UseQueryApiHelperHookArgs } from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { logSwapQuoteFetch } from 'uniswap/src/features/transactions/swap/analytics'

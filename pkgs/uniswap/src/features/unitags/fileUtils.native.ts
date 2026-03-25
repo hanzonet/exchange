@@ -1,4 +1,4 @@
-import { UnitagAvatarUploadCredentials } from '@universe/api'
+import { UnitagAvatarUploadCredentials } from '@luxexchange/api'
 import { Platform } from 'react-native'
 import { logger } from 'utilities/src/logger/logger'
 

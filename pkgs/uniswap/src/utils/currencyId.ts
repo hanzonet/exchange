@@ -1,5 +1,5 @@
 import { Currency } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { getNativeAddress, getWrappedNativeAddress } from 'uniswap/src/constants/addresses'
 import { normalizeCurrencyIdForMapLookup, normalizeTokenAddressForCache } from 'uniswap/src/data/cache'
 import { TradeableAsset } from 'uniswap/src/entities/assets'

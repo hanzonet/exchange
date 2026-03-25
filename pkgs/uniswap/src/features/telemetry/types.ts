@@ -11,8 +11,8 @@ import {
   type IncreaseLPPositionRequest,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
 import { type Currency, type TradeType } from '@uniswap/sdk-core'
-import { type TradingApi, type UnitagClaimContext } from '@universe/api'
-import { type Experiments } from '@universe/gating'
+import { type TradingApi, type UnitagClaimContext } from '@luxexchange/api'
+import { type Experiments } from '@luxexchange/gating'
 import type { PresetPercentage } from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/types'
 import { type OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'
 import { type UniverseChainId } from 'uniswap/src/features/chains/types'

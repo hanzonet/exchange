@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { toGqlSafetyLevel } from 'uniswap/src/components/TokenSelector/utils'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { toSupportedChainId } from 'uniswap/src/features/chains/utils'

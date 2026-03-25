@@ -1,4 +1,4 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useCurrencies } from 'uniswap/src/components/TokenSelector/hooks/useCurrencies'
 import { USDC, USDT, WBTC } from 'uniswap/src/constants/tokens'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'

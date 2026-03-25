@@ -1,5 +1,5 @@
 import { WatchQueryFetchPolicy } from '@apollo/client'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useBalances } from 'uniswap/src/data/balances/hooks/useBalances'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'

@@ -1,6 +1,6 @@
 import { CurrencyAmount } from '@uniswap/sdk-core'
-import type { ClassicQuoteResponse, GasFeeResult } from '@universe/api'
-import { FeeType, TradingApi } from '@universe/api'
+import type { ClassicQuoteResponse, GasFeeResult } from '@luxexchange/api'
+import { FeeType, TradingApi } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
 import { DAI, USDC } from 'uniswap/src/constants/tokens'
 import { DEFAULT_GAS_STRATEGY } from 'uniswap/src/features/gas/consts'

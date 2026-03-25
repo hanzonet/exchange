@@ -1,7 +1,7 @@
 import { BackgroundType } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import type { InAppNotification } from '@universe/api'
-import { NotificationContent } from '@universe/api/src/clients/notifications/types'
-import type { NotificationClickTarget } from '@universe/notifications'
+import type { InAppNotification } from '@luxexchange/api'
+import { NotificationContent } from '@luxexchange/api/src/clients/notifications/types'
+import type { NotificationClickTarget } from '@luxexchange/notifications'
 import { memo, useEffect, useMemo } from 'react'
 import {
   type ModalFeatureItem,

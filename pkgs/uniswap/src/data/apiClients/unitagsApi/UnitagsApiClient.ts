@@ -4,9 +4,9 @@ import {
   getCloudflareApiBaseUrl,
   provideSessionService,
   TrafficFlows,
-} from '@universe/api'
-import { getConfig } from '@universe/config'
-import { getIsSessionServiceEnabled } from '@universe/gating'
+} from '@luxexchange/api'
+import { getConfig } from '@luxexchange/config'
+import { getIsSessionServiceEnabled } from '@luxexchange/gating'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 
 const UnitagsApiFetchClient = createFetchClient({

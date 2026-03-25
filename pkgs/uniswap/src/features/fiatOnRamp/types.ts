@@ -15,7 +15,7 @@ export type {
   FORSupportedFiatCurrency,
   FORSupportedToken,
   FORTransaction,
-} from '@universe/api'
+} from '@luxexchange/api'
 
 // Re-export protobuf values (enums/classes) for consumer packages
 export {
@@ -24,7 +24,7 @@ export {
   OffRampTransferDetailsResponse,
   RampDirection,
   SupportedCountriesResponse,
-} from '@universe/api'
+} from '@luxexchange/api'
 
 import { CurrencyInfo, PortfolioBalance } from 'uniswap/src/features/dataApi/types'
 import {

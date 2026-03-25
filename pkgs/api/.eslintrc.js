@@ -21,7 +21,7 @@ module.exports = {
           'error',
           {
             allowSameFolder: false,
-            prefix: '@universe/api',
+            prefix: '@luxexchange/api',
           },
         ],
       },

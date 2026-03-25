@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { STALE_TRANSACTION_TIME_MS } from 'uniswap/src/features/notifications/constants'
 import {
   erc20ApproveAssetChange,

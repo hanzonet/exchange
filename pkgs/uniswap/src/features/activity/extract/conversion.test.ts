@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { getNativeAddress, getWrappedNativeAddress } from 'uniswap/src/constants/addresses'
 import { DAI } from 'uniswap/src/constants/tokens'
 import { extractOnRampTransactionDetails } from 'uniswap/src/features/activity/extract/extractFiatOnRampTransactionDetails'

@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { findFirstActiveStep } from 'uniswap/src/features/transactions/swap/plan/utils'
 
 describe('findFirstActiveStep', () => {

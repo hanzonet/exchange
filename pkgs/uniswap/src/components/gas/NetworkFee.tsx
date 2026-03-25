@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, UniswapXText } from 'ui/src'
 import { UniswapX } from 'ui/src/components/icons/UniswapX'

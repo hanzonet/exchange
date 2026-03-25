@@ -1,4 +1,4 @@
-import { GqlResult, GraphQLApi } from '@universe/api'
+import { GqlResult, GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo } from 'react'
 import { tokenProjectToCurrencyInfos } from 'uniswap/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'

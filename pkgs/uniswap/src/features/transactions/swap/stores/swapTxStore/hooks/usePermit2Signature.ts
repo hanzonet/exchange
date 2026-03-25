@@ -1,6 +1,6 @@
 import type { UseQueryResult } from '@tanstack/react-query'
 import { useQuery } from '@tanstack/react-query'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import type { TypedDataField } from 'ethers/lib/ethers'
 import { useCallback } from 'react'
 import { useSigner } from 'uniswap/src/contexts/UniswapContext'

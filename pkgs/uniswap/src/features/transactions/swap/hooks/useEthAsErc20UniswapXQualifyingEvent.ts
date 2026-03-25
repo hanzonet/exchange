@@ -3,7 +3,7 @@ import {
   EthAsErc20UniswapXProperties,
   Experiments,
   useExperimentValueWithExposureLoggingDisabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import { BigNumber, Contract } from 'ethers/lib/ethers'
 import { useEffect, useRef } from 'react'
 import { ERC20_ETH_ADDRESS } from 'uniswap/src/constants/addresses'

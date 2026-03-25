@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { Signer } from 'ethers/lib/ethers'
 import { useCallback } from 'react'
 import { useSigner } from 'uniswap/src/contexts/UniswapContext'

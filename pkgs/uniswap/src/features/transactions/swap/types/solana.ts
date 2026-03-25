@@ -1,6 +1,6 @@
 import { ZERO_PERCENT } from '@uniswap/router-sdk'
 import { Currency, CurrencyAmount, Percent, Price, TradeType } from '@uniswap/sdk-core'
-import { JupiterOrderResponse, TradingApi } from '@universe/api'
+import { JupiterOrderResponse, TradingApi } from '@luxexchange/api'
 import { BIPS_BASE } from 'uniswap/src/constants/misc'
 import { BlockingTradeError } from 'uniswap/src/features/transactions/swap/types/BlockingTradeError'
 import { SwapFee } from 'uniswap/src/features/transactions/swap/types/trade'

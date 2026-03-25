@@ -9,8 +9,8 @@ import {
 } from '@tanstack/react-query'
 import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
 import { ListTransactionsRequest, ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { transformInput, WithoutWalletAccount } from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { transformInput, WithoutWalletAccount } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { dataApiGetTransport } from 'uniswap/src/data/rest/base'
 import {
   AccountAddressesByPlatform,

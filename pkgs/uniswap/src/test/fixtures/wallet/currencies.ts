@@ -1,5 +1,5 @@
 import { Currency } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { CurrencyInfo, SafetyInfo, TokenList } from 'uniswap/src/features/dataApi/types'

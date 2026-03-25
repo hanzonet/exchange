@@ -1,6 +1,6 @@
 import { ADDRESS_ZERO } from '@uniswap/v3-sdk'
-import type { ChainedQuoteResponse } from '@universe/api'
-import { TradingApi } from '@universe/api'
+import type { ChainedQuoteResponse } from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import { UnexpectedTransactionStateError } from 'uniswap/src/features/transactions/errors'
 import { type SwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { type ValidatedTransactionRequest } from 'uniswap/src/features/transactions/types/transactionRequests'

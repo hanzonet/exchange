@@ -5,8 +5,8 @@ import {
   type GasStrategy,
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
-} from '@universe/api'
-import { FeatureFlags, getFeatureFlag, useStatsigClientStatus } from '@universe/gating'
+} from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag, useStatsigClientStatus } from '@luxexchange/gating'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { fetchGasFeeV2 } from 'uniswap/src/data/apiClients/gasService/fetchGasFeeV2'
 import { UniswapApiClient } from 'uniswap/src/data/apiClients/uniswapApi/UniswapApiClient'

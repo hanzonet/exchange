@@ -23,8 +23,8 @@ vi.mock('utilities/src/platform', async (importOriginal) => {
   }
 })
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useFeatureFlag: vi.fn(),

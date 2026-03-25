@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { faker } from 'uniswap/src/test/shared'
 import { createFixture } from 'uniswap/src/test/utils'
 

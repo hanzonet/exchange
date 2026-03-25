@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { NetworkStatus } from '@apollo/client'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import dayjs from 'dayjs'
 import { useFormattedTransactionDataForActivity } from 'uniswap/src/features/activity/hooks/useFormattedTransactionDataForActivity'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

@@ -1,4 +1,4 @@
-import { createUniswapApiClient, type GasFeeResponse, type GasStrategy } from '@universe/api'
+import { createUniswapApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'

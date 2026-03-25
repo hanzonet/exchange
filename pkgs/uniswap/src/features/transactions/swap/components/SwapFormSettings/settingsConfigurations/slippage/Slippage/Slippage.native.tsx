@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import { SlippageWarning } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageWarning'
 import type { TransactionSettingConfig } from 'uniswap/src/features/transactions/components/settings/types'

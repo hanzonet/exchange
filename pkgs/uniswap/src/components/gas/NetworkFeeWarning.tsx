@@ -1,4 +1,4 @@
-import { FormattedUniswapXGasFeeInfo } from '@universe/api'
+import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
 import { PropsWithChildren } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Text, UniswapXText, useSporeColors } from 'ui/src'

@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { ContractTransaction, providers } from 'ethers/lib/ethers'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { InterfaceEventName } from 'uniswap/src/features/telemetry/constants'

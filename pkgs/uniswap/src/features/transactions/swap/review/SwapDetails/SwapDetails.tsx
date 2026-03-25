@@ -1,5 +1,5 @@
-import type { GasFeeResult } from '@universe/api'
-import { type TradingApi } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
+import { type TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, HeightAnimator, Text } from 'ui/src'

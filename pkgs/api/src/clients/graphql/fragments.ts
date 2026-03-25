@@ -5,15 +5,15 @@ import type {
   TokenMarketPartsFragment,
   TokenProjectMarketsPartsFragment,
   TokenProjectUrlsPartsFragment,
-} from '@universe/api/src/clients/graphql/__generated__/operations'
+} from '@luxexchange/api/src/clients/graphql/__generated__/operations'
 import {
   TokenBasicInfoPartsFragmentDoc,
   TokenBasicProjectPartsFragmentDoc,
   TokenMarketPartsFragmentDoc,
   TokenProjectMarketsPartsFragmentDoc,
   TokenProjectUrlsPartsFragmentDoc,
-} from '@universe/api/src/clients/graphql/__generated__/react-hooks'
-import type { Token } from '@universe/api/src/clients/graphql/__generated__/schema-types'
+} from '@luxexchange/api/src/clients/graphql/__generated__/react-hooks'
+import type { Token } from '@luxexchange/api/src/clients/graphql/__generated__/schema-types'
 
 export interface UseTokenFragmentParams {
   address: string | null

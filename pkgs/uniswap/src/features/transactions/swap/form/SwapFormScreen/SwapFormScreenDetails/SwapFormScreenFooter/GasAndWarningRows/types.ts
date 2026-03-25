@@ -1,4 +1,4 @@
-import { FormattedUniswapXGasFeeInfo, GasFeeResult } from '@universe/api'
+import { FormattedUniswapXGasFeeInfo, GasFeeResult } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 
 export type GasInfo = {

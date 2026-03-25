@@ -26,8 +26,8 @@ jest.mock('uniswap/src/data/getVersionHeader', () => {
   return jest.requireActual('uniswap/src/data/getVersionHeader.web')
 })
 
-jest.mock('@universe/gating', () => {
-  const actual = jest.requireActual('@universe/gating')
+jest.mock('@luxexchange/gating', () => {
+  const actual = jest.requireActual('@luxexchange/gating')
   return {
     ...actual,
     useClientAsyncInit: jest.fn(() => ({

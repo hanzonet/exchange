@@ -1,4 +1,4 @@
-import { FeeType, GasEstimateLegacy } from '@universe/api'
+import { FeeType, GasEstimateLegacy } from '@luxexchange/api'
 
 export const createGasEstimate = (): GasEstimateLegacy => {
   return {

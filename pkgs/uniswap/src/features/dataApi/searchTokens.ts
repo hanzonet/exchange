@@ -1,6 +1,6 @@
 import { SearchTokensResponse, SearchType } from '@uniswap/client-search/dist/search/v1/api_pb'
-import { GqlResult } from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { GqlResult } from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import {
   multichainTokenToCurrencyInfos,

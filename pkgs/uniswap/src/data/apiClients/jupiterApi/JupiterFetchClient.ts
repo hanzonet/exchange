@@ -1,4 +1,4 @@
-import { createJupiterApiClient, JupiterApiClient as JupiterApiClientType } from '@universe/api'
+import { createJupiterApiClient, JupiterApiClient as JupiterApiClientType } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
 import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 

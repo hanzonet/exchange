@@ -1,6 +1,6 @@
 import { ApolloCache, NormalizedCacheObject } from '@apollo/client'
 import { CurrencyAmount, NativeCurrency, Token } from '@uniswap/sdk-core'
-import { GraphQLApi, TradingApi } from '@universe/api'
+import { GraphQLApi, TradingApi } from '@luxexchange/api'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { fetchTradingApiIndicativeQuoteIgnoring404 } from 'uniswap/src/data/apiClients/tradingApi/useTradingApiIndicativeQuoteQuery'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

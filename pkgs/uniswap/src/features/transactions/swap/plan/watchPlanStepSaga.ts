@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { call, delay, race, type SagaGenerator, spawn, take } from 'typed-redux-saga'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'
 import extractPlanResponseDetails from 'uniswap/src/features/activity/extract/extractPlanResponseDetails'

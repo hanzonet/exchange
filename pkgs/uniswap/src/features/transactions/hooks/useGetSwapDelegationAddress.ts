@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useEvent } from 'utilities/src/react/hooks'
 

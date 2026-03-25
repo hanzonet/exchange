@@ -1,5 +1,5 @@
 import { Currency, NativeCurrency, Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { AttackType, CurrencyInfo, SafetyInfo, TokenList } from 'uniswap/src/features/dataApi/types'
 import {

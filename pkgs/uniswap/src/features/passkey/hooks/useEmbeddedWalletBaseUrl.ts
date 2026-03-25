@@ -1,4 +1,4 @@
-import { DynamicConfigs, EmbeddedWalletConfigKey, useDynamicConfigValue } from '@universe/gating'
+import { DynamicConfigs, EmbeddedWalletConfigKey, useDynamicConfigValue } from '@luxexchange/gating'
 import { UNISWAP_WEB_URL } from 'uniswap/src/constants/urls'
 
 export function useEmbeddedWalletBaseUrl(): string {

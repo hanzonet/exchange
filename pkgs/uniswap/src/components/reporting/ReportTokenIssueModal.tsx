@@ -1,5 +1,5 @@
 import { Currency } from '@uniswap/sdk-core'
-import { ReportAssetType, TokenReportEventType } from '@universe/api'
+import { ReportAssetType, TokenReportEventType } from '@luxexchange/api'
 import { atom } from 'jotai'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'

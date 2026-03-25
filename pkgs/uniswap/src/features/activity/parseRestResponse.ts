@@ -1,5 +1,5 @@
 import { ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { extractOnRampTransactionDetails } from 'uniswap/src/features/activity/extract/extractFiatOnRampTransactionDetails'
 import extractRestOnChainTransactionDetails from 'uniswap/src/features/activity/extract/extractOnChainTransactionDetails'
 import extractPlanDetails from 'uniswap/src/features/activity/extract/extractPlanDetails'

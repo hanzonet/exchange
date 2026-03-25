@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button, CustomButtonFrame, Flex, ThemedSpinningLoader, useIsShortMobileDevice, useSporeColors } from 'ui/src'
 import type { Warning } from 'uniswap/src/components/modals/WarningModal/types'

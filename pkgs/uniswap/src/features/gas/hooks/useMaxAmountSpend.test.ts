@@ -8,8 +8,8 @@ import { MAINNET_CURRENCY } from 'uniswap/src/test/fixtures/wallet/currencies'
 
 const mockUseDynamicConfigValue = vi.fn()
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: (params: { config: unknown; key: unknown; defaultValue: unknown }): unknown =>

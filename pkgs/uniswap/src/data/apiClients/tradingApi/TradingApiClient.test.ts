@@ -1,5 +1,5 @@
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     getFeatureFlag: vi.fn(),
@@ -7,9 +7,9 @@ vi.mock('@universe/gating', async (importOriginal) => {
   }
 })
 
-vi.mock('@universe/config', async () => {
-  const { getConfig } = await vi.importActual<typeof import('@universe/config/src/getConfig.web')>(
-    '@universe/config/src/getConfig.web',
+vi.mock('@luxexchange/config', async () => {
+  const { getConfig } = await vi.importActual<typeof import('@luxexchange/config/src/getConfig.web')>(
+    '@luxexchange/config/src/getConfig.web',
   )
   return {
     getConfig,
@@ -19,15 +19,15 @@ vi.mock('@universe/config', async () => {
 const mockFetch = vi.fn()
 global.fetch = mockFetch
 
-import { TradingApi } from '@universe/api'
-import { TRADING_API_PATHS } from '@universe/api/src/clients/trading/createTradingApiClient'
+import { TradingApi } from '@luxexchange/api'
+import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
   EthAsErc20UniswapXProperties,
   FeatureFlags,
   getExperimentValueFromLayer,
   getFeatureFlag,
   Layers,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import {
   checkWalletDelegation,
   getFeatureFlaggedHeaders,

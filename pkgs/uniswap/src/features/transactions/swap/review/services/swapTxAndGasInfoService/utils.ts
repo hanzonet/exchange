@@ -9,8 +9,8 @@ import type {
   GasStrategy,
   UnwrapQuoteResponse,
   WrapQuoteResponse,
-} from '@universe/api'
-import { TradingApi } from '@universe/api'
+} from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
 import { useMemo } from 'react'
 import { getTradeSettingsDeadline } from 'uniswap/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'

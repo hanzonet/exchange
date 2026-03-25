@@ -1,4 +1,4 @@
-import { Experiments, getOverrideAdapter, LayerProperties, Layers, useExperiment, useLayer } from '@universe/gating'
+import { Experiments, getOverrideAdapter, LayerProperties, Layers, useExperiment, useLayer } from '@luxexchange/gating'
 import { useCallback } from 'react'
 import { Flex, Input, Switch, Text } from 'ui/src'
 

@@ -1,5 +1,5 @@
-import { createFetchClient, createForApiClient, provideSessionService } from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+import { createFetchClient, createForApiClient, provideSessionService } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { getForApiUrl } from 'uniswap/src/constants/urls'
 import { getForApiHeaders } from 'uniswap/src/features/fiatOnRamp/constants'
 

@@ -1,5 +1,5 @@
 import { queryOptions, type UseQueryOptions } from '@tanstack/react-query'
-import { type DiscriminatedQuoteResponse, type TradingApi } from '@universe/api'
+import { type DiscriminatedQuoteResponse, type TradingApi } from '@luxexchange/api'
 import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { type TradeRepository } from 'uniswap/src/features/transactions/swap/services/tradeService/tradeRepository'
 import { type QuoteWithTradeAndGasEstimate } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/transformQuoteToTrade'

@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
 import { PortfolioBalance } from 'uniswap/src/features/dataApi/types'
 import { buildCurrency } from 'uniswap/src/features/dataApi/utils/buildCurrency'

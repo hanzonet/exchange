@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { ColorTokens, Flex, IconProps } from 'ui/src'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import {

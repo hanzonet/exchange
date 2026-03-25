@@ -22,8 +22,8 @@ import type {
   PriorityQuoteResponse,
   UnwrapQuoteResponse,
   WrapQuoteResponse,
-} from '@universe/api'
-import { TradingApi } from '@universe/api'
+} from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import { BigNumber, providers } from 'ethers/lib/ethers'
 import { PollingInterval } from 'uniswap/src/constants/misc'
 import { MAX_AUTO_SLIPPAGE_TOLERANCE } from 'uniswap/src/constants/transactions'

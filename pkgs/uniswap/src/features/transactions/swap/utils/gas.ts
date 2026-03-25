@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { GasFeeResult } from '@universe/api'
+import { GasFeeResult } from '@luxexchange/api'
 
 export function sumGasFees(gasFees: (string | undefined)[]): string | undefined {
   if (gasFees.length === 0) {

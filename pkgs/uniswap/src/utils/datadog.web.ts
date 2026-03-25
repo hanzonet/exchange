@@ -11,7 +11,7 @@ import {
   getStatsigClient,
   WALLET_FEATURE_FLAG_NAMES,
   WEB_FEATURE_FLAG_NAMES,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
 import { getUniqueId } from 'utilities/src/device/uniqueId'
 import { datadogEnabledBuild, localDevDatadogEnabled } from 'utilities/src/environment/constants'

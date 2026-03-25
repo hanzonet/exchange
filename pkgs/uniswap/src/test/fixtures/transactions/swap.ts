@@ -1,6 +1,6 @@
 import { type Currency, CurrencyAmount, type Token, TradeType } from '@uniswap/sdk-core'
 import { FeeAmount, Pool, Route } from '@uniswap/v3-sdk'
-import { type ClassicQuoteResponse, TradingApi } from '@universe/api'
+import { type ClassicQuoteResponse, TradingApi } from '@luxexchange/api'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { type DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
 import {

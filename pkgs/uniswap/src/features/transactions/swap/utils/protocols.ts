@@ -1,5 +1,5 @@
-import { TradingApi } from '@universe/api'
-import { FeatureFlags, getFeatureFlag, useFeatureFlag } from '@universe/gating'
+import { TradingApi } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import { useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
 import { createGetSupportedChainId } from 'uniswap/src/features/chains/hooks/useSupportedChainId'

@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { providers } from 'ethers/lib/ethers'
 import { buildSingleCancellation } from 'uniswap/src/features/transactions/cancel/cancelOrderFactory'
 import { getOrders } from 'uniswap/src/features/transactions/swap/orders'

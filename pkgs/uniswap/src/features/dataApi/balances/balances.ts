@@ -2,7 +2,7 @@
 
 import { NetworkStatus } from '@apollo/client'
 import { QueryHookOptions } from '@apollo/client/react/types/types'
-import { GqlResult, GraphQLApi, SpamCode } from '@universe/api'
+import { GqlResult, GraphQLApi, SpamCode } from '@luxexchange/api'
 import isEqual from 'lodash/isEqual'
 import { useMemo } from 'react'
 import { PollingInterval } from 'uniswap/src/constants/misc'

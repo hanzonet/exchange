@@ -1,4 +1,4 @@
-import { DynamicConfigKeys, DynamicConfigs, getOverrideAdapter, useDynamicConfigValue } from '@universe/gating'
+import { DynamicConfigKeys, DynamicConfigs, getOverrideAdapter, useDynamicConfigValue } from '@luxexchange/gating'
 import { Flex, Text } from 'ui/src'
 import { ActionSheetDropdown } from 'uniswap/src/components/dropdowns/ActionSheetDropdown'
 

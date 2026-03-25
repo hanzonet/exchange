@@ -1,4 +1,4 @@
-import { GasStrategy, TradingApi } from '@universe/api'
+import { GasStrategy, TradingApi } from '@luxexchange/api'
 import {
   createBuildQuoteRequest,
   flattenQuoteRequestResult,

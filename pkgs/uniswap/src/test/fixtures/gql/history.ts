@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { amount, timestampedAmount } from 'uniswap/src/test/fixtures/gql/amounts'
 import { faker } from 'uniswap/src/test/shared'
 import { createArray, createFixture, randomEnumValue } from 'uniswap/src/test/utils'

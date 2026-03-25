@@ -1,6 +1,6 @@
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
-import type { GasStrategy } from '@universe/api'
-import { DynamicConfigs, type GasStrategies, getStatsigClient } from '@universe/gating'
+import type { GasStrategy } from '@luxexchange/api'
+import { DynamicConfigs, type GasStrategies, getStatsigClient } from '@luxexchange/gating'
 import { DAI } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { DEFAULT_GAS_STRATEGY } from 'uniswap/src/features/gas/consts'
@@ -12,8 +12,8 @@ import {
 } from 'uniswap/src/features/gas/utils'
 import { MAINNET_CURRENCY } from 'uniswap/src/test/fixtures'
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     getStatsigClient: vi.fn(() => ({

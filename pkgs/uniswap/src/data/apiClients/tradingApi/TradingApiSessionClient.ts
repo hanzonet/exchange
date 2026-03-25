@@ -5,10 +5,10 @@ import {
   getEntryGatewayUrl,
   provideSessionService,
   reinitializeSession,
-} from '@universe/api'
-import type { PlanEndpoints } from '@universe/api/src/clients/trading/createTradingApiClient'
-import { getConfig } from '@universe/config'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
+} from '@luxexchange/api'
+import type { PlanEndpoints } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
+import { getConfig } from '@luxexchange/config'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import { BASE_UNISWAP_HEADERS } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { getFeatureFlaggedHeaders } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { logger } from 'utilities/src/logger/logger'

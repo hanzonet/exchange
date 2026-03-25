@@ -1,4 +1,4 @@
-import { ChainedQuoteResponse, TradingApi } from '@universe/api'
+import { ChainedQuoteResponse, TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { getPlanCompoundSlippageTolerance } from 'uniswap/src/features/transactions/swap/plan/slippage'
 import { activePlanStore } from 'uniswap/src/features/transactions/swap/review/stores/activePlan/activePlanStore'

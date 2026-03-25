@@ -1,4 +1,4 @@
-import { type DiscriminatedQuoteResponse, type TradingApi, type TradingApiClient } from '@universe/api'
+import { type DiscriminatedQuoteResponse, type TradingApi, type TradingApiClient } from '@luxexchange/api'
 import { logSwapQuoteFetch } from 'uniswap/src/features/transactions/swap/analytics'
 import { type Logger } from 'utilities/src/logger/logger'
 

@@ -1,4 +1,4 @@
-import { GraphQLApi, TradingApi } from '@universe/api'
+import { GraphQLApi, TradingApi } from '@luxexchange/api'
 import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,

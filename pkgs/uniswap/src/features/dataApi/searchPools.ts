@@ -1,5 +1,5 @@
 import { Pool, SearchTokensResponse, SearchType } from '@uniswap/client-search/dist/search/v1/api_pb'
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { searchPoolToPoolSearchResult, useSearchTokensAndPoolsQuery } from 'uniswap/src/data/rest/searchTokensAndPools'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'

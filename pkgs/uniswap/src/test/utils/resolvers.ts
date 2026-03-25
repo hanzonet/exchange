@@ -1,5 +1,5 @@
 /* biome-ignore-all lint/suspicious/noExplicitAny: legacy code needs review */
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import cloneDeepWith from 'lodash/cloneDeepWith'
 
 type UndefinedToNull<T> = T extends undefined ? null : T
