@@ -22,7 +22,7 @@ interface CancelOrderPayload {
  * For classic/bridge transactions, this submits a replacement transaction.
  *
  * This is the web equivalent of the mobile `cancelTransactionSaga` in
- * `packages/wallet/src/features/transactions/cancelTransactionSaga.ts`.
+ * `pkgs/wallet/src/features/transactions/cancelTransactionSaga.ts`.
  */
 export function* cancelOrderSaga() {
   while (true) {

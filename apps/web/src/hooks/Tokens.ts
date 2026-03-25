@@ -58,7 +58,7 @@ export function useCurrencyWithLoading(
 }
 
 /**
- * @deprecated useCurrencyInfo from packages/lux instead
+ * @deprecated useCurrencyInfo from pkgs/lux instead
  * Returns a CurrencyInfo from the tokenAddress+chainId pair.
  */
 export function useCurrencyInfo(currency?: Currency, chainId?: UniverseChainId, skip?: boolean): Maybe<CurrencyInfo>

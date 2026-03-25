@@ -448,28 +448,28 @@ importers:
         version: '@tamagui/core@2.0.0-rc.31(fwfmu6dae5kkwqwbkpgutaxl6a)'
       '@luxexchange/api':
         specifier: workspace:^
-        version: link:../../packages/api
+        version: link:../../pkgs/api
       '@luxexchange/gating':
         specifier: workspace:^
-        version: link:../../packages/gating
+        version: link:../../pkgs/gating
       '@luxexchange/lx':
         specifier: workspace:^
-        version: link:../../packages/lx
+        version: link:../../pkgs/lx
       '@luxexchange/notifications':
         specifier: workspace:^
-        version: link:../../packages/notifications
+        version: link:../../pkgs/notifications
       '@luxexchange/sessions':
         specifier: workspace:^
-        version: link:../../packages/sessions
+        version: link:../../pkgs/sessions
       '@luxfi/ui':
         specifier: workspace:^
-        version: link:../../packages/ui
+        version: link:../../pkgs/ui
       '@luxfi/utilities':
         specifier: workspace:^
-        version: link:../../packages/utilities
+        version: link:../../pkgs/utilities
       '@luxfi/wallet':
         specifier: workspace:^
-        version: link:../../packages/wallet
+        version: link:../../pkgs/wallet
       '@metamask/rpc-errors':
         specifier: 6.2.1
         version: 6.2.1
@@ -617,7 +617,7 @@ importers:
         version: 2.0.3(lgm3oystxevq355xau6tjlqwoa)
       '@luxfi/eslint-config':
         specifier: workspace:^
-        version: link:../../packages/eslint-config
+        version: link:../../pkgs/eslint-config
       '@playwright/test':
         specifier: 1.58.2
         version: 1.58.2
@@ -773,28 +773,28 @@ importers:
         version: 1.1.4(react-native@0.79.5(@babel/core@7.26.0)(@react-native-community/cli@18.0.0(bufferutil@4.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.0.10)(bufferutil@4.1.0)(react@19.0.3)(utf-8-validate@5.0.10))(react@19.0.3)
       '@luxexchange/api':
         specifier: workspace:^
-        version: link:../../packages/api
+        version: link:../../pkgs/api
       '@luxexchange/gating':
         specifier: workspace:^
-        version: link:../../packages/gating
+        version: link:../../pkgs/gating
       '@luxexchange/hashcash-native':
         specifier: workspace:^
-        version: link:../../packages/hashcash-native
+        version: link:../../pkgs/hashcash-native
       '@luxexchange/lx':
         specifier: workspace:^
-        version: link:../../packages/lx
+        version: link:../../pkgs/lx
       '@luxexchange/notifications':
         specifier: workspace:^
-        version: link:../../packages/notifications
+        version: link:../../pkgs/notifications
       '@luxexchange/sessions':
         specifier: workspace:^
-        version: link:../../packages/sessions
+        version: link:../../pkgs/sessions
       '@luxfi/utilities':
         specifier: workspace:^
-        version: link:../../packages/utilities
+        version: link:../../pkgs/utilities
       '@luxfi/wallet':
         specifier: workspace:^
-        version: link:../../packages/wallet
+        version: link:../../pkgs/wallet
       '@react-native-async-storage/async-storage':
         specifier: 2.1.2
         version: 2.1.2(react-native@0.79.5(@babel/core@7.26.0)(@react-native-community/cli@18.0.0(bufferutil@4.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10))(@types/react@19.0.10)(bufferutil@4.1.0)(react@19.0.3)(utf-8-validate@5.0.10))
@@ -1140,7 +1140,7 @@ importers:
         version: '@tamagui/babel-plugin@2.0.0-rc.31(omhfzpghbbveact2zjqdrqm4hy)'
       '@luxfi/eslint-config':
         specifier: workspace:^
-        version: link:../../packages/eslint-config
+        version: link:../../pkgs/eslint-config
       '@react-native-community/cli':
         specifier: 18.0.0
         version: 18.0.0(bufferutil@4.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)
@@ -1371,31 +1371,31 @@ importers:
         version: 3.4.0
       '@luxexchange/api':
         specifier: workspace:^
-        version: link:../../packages/api
+        version: link:../../pkgs/api
       '@luxexchange/gating':
         specifier: workspace:^
-        version: link:../../packages/gating
+        version: link:../../pkgs/gating
       '@luxexchange/lx':
         specifier: workspace:^
-        version: link:../../packages/lx
+        version: link:../../pkgs/lx
       '@luxexchange/notifications':
         specifier: workspace:^
-        version: link:../../packages/notifications
+        version: link:../../pkgs/notifications
       '@luxexchange/prices':
         specifier: workspace:^
-        version: link:../../packages/prices
+        version: link:../../pkgs/prices
       '@luxexchange/sessions':
         specifier: workspace:^
-        version: link:../../packages/sessions
+        version: link:../../pkgs/sessions
       '@luxexchange/websocket':
         specifier: workspace:^
-        version: link:../../packages/websocket
+        version: link:../../pkgs/websocket
       '@luxfi/ui':
         specifier: workspace:^
-        version: link:../../packages/ui
+        version: link:../../pkgs/ui
       '@luxfi/utilities':
         specifier: workspace:^
-        version: link:../../packages/utilities
+        version: link:../../pkgs/utilities
       '@popperjs/core':
         specifier: 2.11.8
         version: 2.11.8
@@ -2028,7 +2028,7 @@ importers:
         specifier: 3.2.1
         version: 3.2.1(@edge-runtime/vm@5.0.0)(@types/debug@4.1.13)(@types/node@25.5.0)(@vitest/browser@3.2.1)(happy-dom@20.0.10)(jiti@2.6.1)(jsdom@20.0.3(bufferutil@4.1.0)(utf-8-validate@6.0.6))(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.2.2)
 
-  packages/analytics:
+  pkgs/analytics:
     dependencies:
       '@amplitude/analytics-node':
         specifier: 1.5.36
@@ -2053,7 +2053,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/api:
+  pkgs/api:
     dependencies:
       '@apollo/client':
         specifier: 3.11.10
@@ -2174,7 +2174,7 @@ importers:
         specifier: 4.3.6
         version: 4.3.6
 
-  packages/config:
+  pkgs/config:
     dependencies:
       '@luxfi/utilities':
         specifier: workspace:^
@@ -2202,7 +2202,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/datadog-cloud:
+  pkgs/datadog-cloud:
     dependencies:
       '@pulumi/datadog':
         specifier: 4.60.0
@@ -2218,7 +2218,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/dex:
+  pkgs/dex:
     dependencies:
       react:
         specifier: 19.0.3
@@ -2243,7 +2243,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/eslint-config:
+  pkgs/eslint-config:
     dependencies:
       '@jambit/eslint-plugin-typed-redux-saga':
         specifier: 0.4.0
@@ -2340,7 +2340,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/exchange:
+  pkgs/exchange:
     dependencies:
       '@tanstack/react-query':
         specifier: ^5.90.12
@@ -2371,7 +2371,7 @@ importers:
         specifier: ^4.0.16
         version: 4.1.1(@edge-runtime/vm@5.0.0)(@opentelemetry/api@1.9.0)(@types/node@25.5.0)(happy-dom@20.0.10)(jsdom@20.0.3(bufferutil@4.1.0)(utf-8-validate@6.0.6))(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.2.2))
 
-  packages/gating:
+  pkgs/gating:
     dependencies:
       '@luxexchange/api':
         specifier: workspace:*
@@ -2417,7 +2417,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/hashcash-native:
+  pkgs/hashcash-native:
     devDependencies:
       '@luxfi/eslint-config':
         specifier: workspace:^
@@ -2444,7 +2444,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/logger:
+  pkgs/logger:
     dependencies:
       '@luxexchange/privacy':
         specifier: workspace:*
@@ -2472,7 +2472,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/lx:
+  pkgs/lx:
     dependencies:
       '@apollo/client':
         specifier: 3.11.10
@@ -2872,7 +2872,7 @@ importers:
         specifier: workspace:^
         version: link:../../config/vitest-presets
 
-  packages/mycelium:
+  pkgs/mycelium:
     dependencies:
       clsx:
         specifier: 2.1.1
@@ -2906,7 +2906,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/notifications:
+  pkgs/notifications:
     dependencies:
       '@bufbuild/protobuf':
         specifier: 1.10.0
@@ -2958,7 +2958,7 @@ importers:
         specifier: 3.2.1
         version: 3.2.1(@edge-runtime/vm@5.0.0)(@types/debug@4.1.13)(@types/node@22.13.1)(@vitest/browser@3.2.1)(happy-dom@20.0.10)(jiti@2.6.1)(jsdom@20.0.3(bufferutil@4.1.0)(utf-8-validate@6.0.6))(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.2.2)
 
-  packages/prices:
+  pkgs/prices:
     dependencies:
       '@luxexchange/api':
         specifier: workspace:^
@@ -3007,7 +3007,7 @@ importers:
         specifier: 3.2.1
         version: 3.2.1(@edge-runtime/vm@5.0.0)(@types/debug@4.1.13)(@types/node@22.13.1)(@vitest/browser@3.2.1)(happy-dom@20.0.10)(jiti@2.6.1)(jsdom@20.0.3(bufferutil@4.1.0)(utf-8-validate@6.0.6))(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.2.2)
 
-  packages/privacy:
+  pkgs/privacy:
     dependencies:
       fast-redact:
         specifier: 3.5.0
@@ -3032,7 +3032,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/react-query:
+  pkgs/react-query:
     dependencies:
       '@tanstack/react-query':
         specifier: 5.90.20
@@ -3057,7 +3057,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/sessions:
+  pkgs/sessions:
     dependencies:
       '@connectrpc/connect':
         specifier: 1.5.0
@@ -3127,7 +3127,7 @@ importers:
         specifier: 3.2.1
         version: 3.2.1(@edge-runtime/vm@5.0.0)(@types/debug@4.1.13)(@types/node@22.13.1)(@vitest/browser@3.2.1)(happy-dom@20.0.10)(jiti@2.6.1)(jsdom@20.0.3(bufferutil@4.1.0)(utf-8-validate@6.0.6))(lightningcss@1.32.0)(terser@5.46.1)(yaml@2.2.2)
 
-  packages/trpc:
+  pkgs/trpc:
     devDependencies:
       '@luxfi/eslint-config':
         specifier: workspace:^
@@ -3148,7 +3148,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/ui:
+  pkgs/ui:
     dependencies:
       '@gorhom/bottom-sheet':
         specifier: 4.6.4
@@ -3323,7 +3323,7 @@ importers:
         specifier: workspace:^
         version: link:../../config/vitest-presets
 
-  packages/uniswap:
+  pkgs/uniswap:
     dependencies:
       '@apollo/client':
         specifier: 3.11.10
@@ -3738,7 +3738,7 @@ importers:
         specifier: workspace:^
         version: link:../../config/vitest-presets
 
-  packages/utilities:
+  pkgs/utilities:
     dependencies:
       '@amplitude/analytics-browser':
         specifier: 1.12.1
@@ -3883,7 +3883,7 @@ importers:
         specifier: workspace:^
         version: link:../../config/vitest-presets
 
-  packages/wallet:
+  pkgs/wallet:
     dependencies:
       '@apollo/client':
         specifier: 3.11.10
@@ -4097,7 +4097,7 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
 
-  packages/websocket:
+  pkgs/websocket:
     dependencies:
       partysocket:
         specifier: 1.1.10

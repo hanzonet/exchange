@@ -103,7 +103,7 @@ export function createApp({ fetchSpaHtml, getEntryGatewayUrl, getWebSocketUrl, g
 
   // ── BFF proxy: WebSocket ────────────────────────────────────────────
   // In production, clients connect directly to the backend WebSocket
-  // service — see getWebSocketUrl() in packages/api/src/getWebSocketUrl.ts.
+  // service — see getWebSocketUrl() in pkgs/api/src/getWebSocketUrl.ts.
   // This proxy is used in local dev (Vite + @cloudflare/vite-plugin) and
   // on Cloudflare Workers staging, where the CF Workers runtime handles
   // the WebSocket upgrade natively via fetch().

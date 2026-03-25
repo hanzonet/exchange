@@ -74,7 +74,7 @@ export function useTDPPriceChartData({
     // IMPORTANT: Must use no-cache to prevent infinite query loop.
     //
     // TokenPriceHistory returns Token objects (with chain/address) nested inside tokenProjects.
-    // Apollo normalizes these into the shared Token[chain, address] cache (defined in packages/lx/src/data/cache.ts).
+    // Apollo normalizes these into the shared Token[chain, address] cache (defined in pkgs/lx/src/data/cache.ts).
     // This triggers watchers on TokenWeb and TokenPrice queries (which use the same cache keys),
     // causing them to re-emit, which triggers re-renders, which re-executes this query → infinite loop.
     fetchPolicy: 'no-cache',

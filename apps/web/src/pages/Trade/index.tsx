@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router'
 import { useAccount } from '~/hooks/useAccount'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 
-// Shared theme tokens (canonical source: packages/ui/src/components/{charts,trading}/theme.ts)
+// Shared theme tokens (canonical source: pkgs/ui/src/components/{charts,trading}/theme.ts)
 import { tradingColors } from '~/theme/tradingTheme'
 import { chartColors, getChartOptions, getCandlestickOptions, getVolumeOptions } from '~/theme/chartTheme'
 

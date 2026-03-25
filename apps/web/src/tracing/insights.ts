@@ -32,7 +32,7 @@ export async function setupInsights() {
           app_version: process.env.REACT_APP_GIT_COMMIT_HASH || 'unknown',
           platform: 'web',
         })
-        // Expose capture globally so packages/lx telemetry can forward events
+        // Expose capture globally so pkgs/lx telemetry can forward events
         ;(window as any).__INSIGHTS = insights
       },
     })

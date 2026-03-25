@@ -160,7 +160,7 @@ function useGqlCurrencyBalances(
 }
 
 /**
- * @deprecated use usePortfolioBalances & getOnChainBalancesFetch from packages/lux instead
+ * @deprecated use usePortfolioBalances & getOnChainBalancesFetch from pkgs/lux instead
  *
  * Returns balances for tokens on currently-connected chainId via RPC.
  * Falls back to graphql TokenBalances if user is not connected to chain, a.k.a !isSynced.
