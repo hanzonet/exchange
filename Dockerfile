@@ -12,9 +12,12 @@ RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 # Copy entire monorepo
 COPY . .
 
-# Install dependencies — allow postinstall failures (Nx graph, native mobile deps)
-# but ensure all JS packages are properly resolved
-RUN NODE_ENV=development pnpm install --no-frozen-lockfile || true
+# Install dependencies in two phases:
+# 1. Install all packages without running lifecycle scripts (guaranteed to succeed)
+# 2. Run postinstall scripts separately, tolerating Nx/native failures
+RUN NODE_ENV=development pnpm install --no-frozen-lockfile --ignore-scripts
+RUN pnpm rebuild || true
+RUN node node_modules/@tamagui/vite-plugin/dist/cjs/index.js --help 2>/dev/null || pnpm add -w @tamagui/vite-plugin || true
 
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
