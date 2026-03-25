@@ -50,7 +50,7 @@
       }
     },
     "watch": {
-      "command": "bun run build --watch",
+      "command": "pnpm build --watch",
       "options": {
         "cwd": "{projectRoot}"
       }

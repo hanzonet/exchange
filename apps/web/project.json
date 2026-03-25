@@ -54,7 +54,7 @@
       "outputs": []
     },
     "ajv": {
-      "command": "bun run scripts/compile-ajv-validators.js",
+      "command": "node scripts/compile-ajv-validators.js",
       "options": {
         "cwd": "{projectRoot}"
       },
@@ -90,7 +90,7 @@
       }
     },
     "sitemap:generate": {
-      "command": "bun run scripts/generate-sitemap.js",
+      "command": "node scripts/generate-sitemap.js",
       "options": {
         "cwd": "{projectRoot}"
       },
@@ -147,7 +147,7 @@
       "defaultConfiguration": "staging"
     },
     "build-vercel": {
-      "command": "DEPLOY_TARGET=vercel VITE_ENABLE_ENTRY_GATEWAY_PROXY=true NODE_OPTIONS=\"--max-old-space-size=12288\" VITE_DISABLE_SOURCEMAP=true vite build --mode staging && bun scripts/build-vercel.ts",
+      "command": "DEPLOY_TARGET=vercel VITE_ENABLE_ENTRY_GATEWAY_PROXY=true NODE_OPTIONS=\"--max-old-space-size=12288\" VITE_DISABLE_SOURCEMAP=true vite build --mode staging && npx tsx scripts/build-vercel.ts",
       "options": {
         "cwd": "{projectRoot}"
       }
@@ -311,7 +311,7 @@
       }
     },
     "test:bundle": {
-      "command": "bun run -r esbuild-register ./src/test-utils/bundle-size-test.ts",
+      "command": "node -r esbuild-register ./src/test-utils/bundle-size-test.ts",
       "options": {
         "cwd": "{projectRoot}"
       }
@@ -329,7 +329,7 @@
       }
     },
     "deduplicate": {
-      "command": "echo 'Bun automatically deduplicates dependencies'",
+      "command": "pnpm dedupe",
       "options": {
         "cwd": "{projectRoot}"
       }
@@ -341,7 +341,7 @@
       }
     },
     "storybook:run:with-tests": {
-      "command": "concurrently -s second -n \"SB RUN,SB TEST WATCH\" -c \"magenta,blue\" \"bun run storybook:run --quiet\" \"wait-on tcp:127.0.0.1:6006 -t 600000 && bun run storybook:test --watch\"",
+      "command": "concurrently -s second -n \"SB RUN,SB TEST WATCH\" -c \"magenta,blue\" \"pnpm storybook:run --quiet\" \"wait-on tcp:127.0.0.1:6006 -t 600000 && pnpm storybook:test --watch\"",
       "options": {
         "cwd": "{projectRoot}"
       }
@@ -359,7 +359,7 @@
       }
     },
     "storybook:test:standalone": {
-      "command": "concurrently -k -s first -n \"SB BUILD,SB TEST\" -c \"magenta,blue\" \"bun run storybook:build && http-server storybook-static --port 6006 --silent\" \"wait-on --timeout 600000 tcp:127.0.0.1:6006 && bun run storybook:test --maxWorkers=2\"",
+      "command": "concurrently -k -s first -n \"SB BUILD,SB TEST\" -c \"magenta,blue\" \"pnpm storybook:build && http-server storybook-static --port 6006 --silent\" \"wait-on --timeout 600000 tcp:127.0.0.1:6006 && pnpm storybook:test --maxWorkers=2\"",
       "options": {
         "cwd": "{projectRoot}"
       }
