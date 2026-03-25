@@ -17,8 +17,8 @@ describe('getTsconfigAliases', () => {
     expect(result).toHaveProperty('@luxexchange/api')
 
     // Verify paths are absolute and point to the packages directory
-    expect(result['lx']).toContain('packages/lx')
-    expect(result['@luxexchange/api']).toContain('packages/api')
+    expect(result['lx']).toContain('pkgs/lx')
+    expect(result['@luxexchange/api']).toContain('pkgs/api')
     expect(path.isAbsolute(result['lx']!)).toBe(true)
     expect(path.isAbsolute(result['@luxexchange/api']!)).toBe(true)
   })

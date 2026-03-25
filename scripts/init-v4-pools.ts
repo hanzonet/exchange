@@ -14,9 +14,9 @@
 import { createPublicClient, createWalletClient, http, type Address } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 
-import { POOL_MANAGER_ABI } from '../packages/dex/src/precompile/abis'
-import { LX } from '../packages/dex/src/precompile/addresses'
-import { createPoolKey, sortCurrencies } from '../packages/dex/src/precompile/types'
+import { POOL_MANAGER_ABI } from '../pkgs/dex/src/precompile/abis'
+import { LX } from '../pkgs/dex/src/precompile/addresses'
+import { createPoolKey, sortCurrencies } from '../pkgs/dex/src/precompile/types'
 
 // ---------------------------------------------------------------------------
 // Chain

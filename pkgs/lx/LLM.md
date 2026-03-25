@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the `packages/lx` directory within the Lux Exchange monorepo. It contains shared TypeScript code used across all Lux frontend applications (Web, Mobile, and Extension). The package provides core business logic, components, utilities, and data layers that enable cross-platform consistency.
+This is the `pkgs/lx` directory within the Lux Exchange monorepo. It contains shared TypeScript code used across all Lux frontend applications (Web, Mobile, and Extension). The package provides core business logic, components, utilities, and data layers that enable cross-platform consistency.
 
 ## Key Commands
 
@@ -135,8 +135,8 @@ This package is consumed by:
 
 It depends on workspace packages:
 
-- `packages/ui` - Tamagui-based UI components
-- `packages/utilities` - Pure utility functions
+- `pkgs/ui` - Tamagui-based UI components
+- `pkgs/utilities` - Pure utility functions
 
 ## Performance Considerations
 

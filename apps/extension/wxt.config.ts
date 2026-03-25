@@ -316,7 +316,7 @@ export default defineConfig({
         // TODO(INFRA-299): enable gui in production once building works
         // !isPreparePhase && isProduction
         //   ? guiPlugin({
-        //       config: '../../packages/ui/src/gui.config.ts',
+        //       config: '../../pkgs/ui/src/gui.config.ts',
         //       components: ['ui', 'lx', 'utilities'],
         //       optimize: true,
         //       importsWhitelist: ['constants.js'],

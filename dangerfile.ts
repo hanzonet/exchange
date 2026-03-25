@@ -74,7 +74,7 @@ function checkGeneralizedHookFiles() {
 }
 
 // Put any files here that we explicitly want to ignore!
-const IGNORED_SPLIT_RULE_FILES: string[] = ['packages/gating/src/sdk/statsig.native.ts']
+const IGNORED_SPLIT_RULE_FILES: string[] = ['pkgs/gating/src/sdk/statsig.native.ts']
 
 function checkSplitFiles() {
   const touchedFiles = danger.git.modified_files.concat(danger.git.created_files)
@@ -136,7 +136,7 @@ async function processAddChanges() {
     .concat(danger.git.created_files)
     .filter((file) => (file.endsWith('.ts') || file.endsWith('.tsx')) && !file.includes('dangerfile.ts'))
 
-  const updatedNonUITsFiles = updatedTsFiles.filter((file) => !file.includes('packages/ui'))
+  const updatedNonUITsFiles = updatedTsFiles.filter((file) => !file.includes('pkgs/ui'))
 
   const linesAddedByFile = await getLinesAddedByFile(updatedTsFiles)
   const allLinesAdded = linesAddedByFile.flatMap((x) => x)

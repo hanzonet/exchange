@@ -8,7 +8,7 @@ const config = {
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "../../packages/ui/src/**/*.{ts,tsx}",
+    "../../pkgs/ui/src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

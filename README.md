@@ -69,7 +69,7 @@ Best execution routing between:
 | ----------- | ------------------------------------------------------------------------------ |
 | `apps/`     | The home for each standalone application.                                      |
 | `config/`   | Shared infrastructure packages and configurations.                             |
-| `packages/` | Shared code packages covering UI, shared functionality, and shared utilities.  |
+| `pkgs/`     | Shared code packages covering UI, shared functionality, and shared utilities.  |
 
 ## License
 

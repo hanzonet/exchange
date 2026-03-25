@@ -279,7 +279,7 @@ These are some tools you might want to familiarize yourself with to understand t
 
 ## Migrations
 
-We use `redux-persist` to persist the Redux state between user sessions. Most of this state is shared between the mobile app and the extension. Please review the [Wallet Migrations README](../../packages/wallet/src/state//README.md) for details on how to write migrations when you add or remove anything from the Redux state structure.
+We use `redux-persist` to persist the Redux state between user sessions. Most of this state is shared between the mobile app and the extension. Please review the [Wallet Migrations README](../../pkgs/wallet/src/state//README.md) for details on how to write migrations when you add or remove anything from the Redux state structure.
 
 ## Testing & Performance
 

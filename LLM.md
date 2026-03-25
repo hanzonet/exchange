@@ -35,7 +35,7 @@ Lux Exchange is a full-featured, cross-chain DEX for the Lux Network ecosystem. 
 │       ├── e2e/                # Playwright tests
 │       └── public/             # Static assets
 │
-├── packages/
+├── pkgs/
 │   ├── config/                 # Shared configuration
 │   │   └── src/
 │   │       ├── chains.ts       # Chain definitions (Lux, Zoo)
@@ -180,9 +180,9 @@ Add to `~/.lux/chain-configs/C/config.json`:
 
 ### Lux & Zoo Chain Integration
 - Added Lux C-Chain (chainId: 96369) and Zoo Network (chainId: 200200) as native chains
-- Created chain info files: `lux.ts` and `zoo.ts` in `/packages/uniswap/src/features/chains/evm/info/`
+- Created chain info files: `lux.ts` and `zoo.ts` in `/pkgs/uniswap/src/features/chains/evm/info/`
 - Chains prioritized in ORDERED_CHAINS array for primary display
-- Added LUX_LOGO, LUX_NETWORK_LOGO assets in `/packages/ui/src/assets/logos/`
+- Added LUX_LOGO, LUX_NETWORK_LOGO assets in `/pkgs/ui/src/assets/logos/`
 - Fixed `testnet: false` property in chain configurations
 
 ### Branding Update (Uniswap → Lux)
@@ -219,7 +219,7 @@ Add to `~/.lux/chain-configs/C/config.json`:
 **Compliance email updated:**
 - `compliance@uniswap.org` → `compliance@lux.exchange` (en-US.json + all 14 translation files)
 
-**Additional Package Updates (packages/uniswap):**
+**Additional Package Updates (pkgs/uniswap):**
 - dynamicConfigOverrides.tsx → `lux.exchange` embedded wallet URL
 - mainnet.ts → `https://docs.lux.exchange/` for Ethereum Mainnet and Sepolia docs
 - conversionTracking/constants.ts → `.lux.exchange` cookie domain
@@ -322,11 +322,11 @@ LUX_GATEWAY_URL=http://localhost:8085  # Override default URL selection
 
 | File | Purpose |
 |------|---------|
-| `packages/config/src/config-types.ts` | Added `luxGatewayUrlOverride` field |
-| `packages/config/src/getConfig.web.ts` | Added env var handling for web |
-| `packages/config/src/getConfig.native.ts` | Added env var handling for mobile |
-| `packages/config/src/global.d.ts` | Added `LUX_GATEWAY_URL` type declaration |
-| `packages/uniswap/src/constants/urls.ts` | Added gateway URL constants and `getLuxGatewayUrl()` |
+| `pkgs/config/src/config-types.ts` | Added `luxGatewayUrlOverride` field |
+| `pkgs/config/src/getConfig.web.ts` | Added env var handling for web |
+| `pkgs/config/src/getConfig.native.ts` | Added env var handling for mobile |
+| `pkgs/config/src/global.d.ts` | Added `LUX_GATEWAY_URL` type declaration |
+| `pkgs/uniswap/src/constants/urls.ts` | Added gateway URL constants and `getLuxGatewayUrl()` |
 | `.env.defaults` | Added gateway URL documentation |
 
 ### Gateway Endpoints
@@ -372,7 +372,7 @@ POST /v1/events           - Track conversion event
 The `TradingApiClient` is now wrapped with `LuxGatewayClient` to route Lux/Zoo chain requests to the gateway:
 
 **Files Added:**
-- `packages/uniswap/src/data/apiClients/tradingApi/LuxGatewayClient.ts` - Gateway client wrapper
+- `pkgs/uniswap/src/data/apiClients/tradingApi/LuxGatewayClient.ts` - Gateway client wrapper
 
 **Key Functions:**
 - `isLuxChain(chainId)` - Checks if chain is Lux (96369) or Zoo (200200)
@@ -455,18 +455,18 @@ curl 'http://localhost:8080/v1/quote?chainId=96369&tokenIn=0x0&tokenOut=0xA0b869
 ## SDK Type Compatibility Status (2025-12-28)
 
 ### Core Packages (All Typecheck Successfully)
-- `packages/exchange` ✓ - AMM/DEX hooks, tokens, contracts
-- `packages/lx` ✓ - Business logic, swap utilities
-- `packages/ui` ✓ - UI components
-- `packages/config` ✓ - Chain and contract configuration
+- `pkgs/exchange` ✓ - AMM/DEX hooks, tokens, contracts
+- `pkgs/lx` ✓ - Business logic, swap utilities
+- `pkgs/ui` ✓ - UI components
+- `pkgs/config` ✓ - Chain and contract configuration
 
 ### Known SDK Type Mismatches
 The codebase uses `@luxamm/*` SDKs (forked from Uniswap) but `@uniswap/router-sdk` internally depends on `@uniswap/*` SDKs. This causes TypeScript errors when types cross boundaries.
 
 **Solution Applied**: Type assertions (`as unknown as`) in:
-- `packages/lx/src/features/transactions/swap/analytics.ts`
-- `packages/lx/src/features/transactions/swap/types/trade.ts`
-- `packages/lx/src/features/transactions/swap/utils/tradingApi.ts`
+- `pkgs/lx/src/features/transactions/swap/analytics.ts`
+- `pkgs/lx/src/features/transactions/swap/types/trade.ts`
+- `pkgs/lx/src/features/transactions/swap/utils/tradingApi.ts`
 - `apps/web/src/utils/getTickToPrice.ts`
 - `apps/web/src/utils/computeSurroundingTicks.ts`
 
@@ -494,18 +494,18 @@ G-Chain is a read-only GraphQL interface that provides unified access to blockch
 
 ### Files Added
 
-**Exchange Frontend (`packages/lx/src/data/gchain/`):**
+**Exchange Frontend (`pkgs/lx/src/data/gchain/`):**
 - `client.ts` - Apollo client, queries, types, helper functions
 - `hooks.ts` - React Query hooks for G-Chain data
 - `useLuxBalance.ts` - Lux-specific balance and account hooks
 - `index.ts` - Exports and documentation
 
 **Configuration:**
-- `packages/config/src/config-types.ts` - Added `gChainGraphqlUrl` field
-- `packages/config/src/getConfig.web.ts` - G-Chain URL config for web
-- `packages/config/src/getConfig.native.ts` - G-Chain URL config for mobile
-- `packages/lx/src/constants/urls.ts` - G-Chain URL exports
-- `packages/lx/src/data/links.ts` - Apollo link for G-Chain
+- `pkgs/config/src/config-types.ts` - Added `gChainGraphqlUrl` field
+- `pkgs/config/src/getConfig.web.ts` - G-Chain URL config for web
+- `pkgs/config/src/getConfig.native.ts` - G-Chain URL config for mobile
+- `pkgs/lx/src/constants/urls.ts` - G-Chain URL exports
+- `pkgs/lx/src/data/links.ts` - Apollo link for G-Chain
 
 **Node DEX Resolvers (`node/vms/graphvm/`):**
 - `dex_resolvers.go` - Comprehensive v2/v3 subgraph-compatible resolvers
@@ -907,7 +907,7 @@ Security: Poseidon2 is PQ-safe, Pedersen is NOT
    `isZooChain`. Subnet chains (Hanzo/SPC/Pars) fell through to Ethereum case, tried to find
    USDC which doesn't exist on those chains. Fixed to check `isLuxEcosystem` and try LUSDC/wrapped native.
 
-4. **Missing chain colors**: `packages/ui/src/theme/color/colors.ts` had no entries for
+4. **Missing chain colors**: `pkgs/ui/src/theme/color/colors.ts` had no entries for
    chain_36963, chain_36911, chain_494949.
 
 **Working RPC URLs** (verified 2026-03-22):
@@ -935,12 +935,12 @@ Subnet chains (Hanzo/SPC/Pars) all use `LUSDC`. Keep this in mind when writing t
 - The `<Swap />` component has its own internal provider, but the outer wrapper ensures the context is available before child components render
 
 **Subnet chains added to chain selector (Vite SPA):**
-- Added `Hanzo = 36963`, `SPC = 36911`, `Pars = 494949` to `UniverseChainId` enum in `packages/lx/src/features/chains/types.ts`
-- Created chain info files: `packages/lx/src/features/chains/evm/info/{hanzo,spc,pars}.ts`
+- Added `Hanzo = 36963`, `SPC = 36911`, `Pars = 494949` to `UniverseChainId` enum in `pkgs/lx/src/features/chains/types.ts`
+- Created chain info files: `pkgs/lx/src/features/chains/evm/info/{hanzo,spc,pars}.ts`
 - Added `ChainHanzo`, `ChainSPC`, `ChainPars` to `ElementName` enum
 - Registered in `ORDERED_CHAINS`, `UNIVERSE_CHAIN_INFO`, block explorer logos, and GraphQL/URL mapping functions
 - No feature flag gating (enabled by default via `filterChainIdsByFeatureFlag` default behavior)
-- Chain colors already existed in `packages/ui/src/theme/color/colors.ts`
+- Chain colors already existed in `pkgs/ui/src/theme/color/colors.ts`
 
 **Architecture notes:**
 - The exchange has TWO UIs: Vite SPA (production, `apps/web/src/`) and Next.js App Router (experimental, `apps/web/app/`)

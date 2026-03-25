@@ -9,10 +9,10 @@
  */
 import { createPublicClient, http, formatEther, type Address } from 'viem'
 
-import { POOL_MANAGER_ABI } from '../packages/dex/src/precompile/abis'
-import { LX } from '../packages/dex/src/precompile/addresses'
-import { createPoolKey } from '../packages/dex/src/precompile/types'
-import { OmnichainRouter } from '../packages/dex/src/router/router'
+import { POOL_MANAGER_ABI } from '../pkgs/dex/src/precompile/abis'
+import { LX } from '../pkgs/dex/src/precompile/addresses'
+import { createPoolKey } from '../pkgs/dex/src/precompile/types'
+import { OmnichainRouter } from '../pkgs/dex/src/router/router'
 
 // ---------------------------------------------------------------------------
 // Chain

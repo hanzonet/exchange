@@ -64,7 +64,7 @@ bun i18n:extract                # Extract localized strings (run after changing 
 
 - **NX** for build orchestration
 - **Bun workspaces** for package management
-- Shared code in `packages/` directory
+- Shared code in `pkgs/` directory
 - App-specific code in `apps/` directory
 
 ### Key Technologies
@@ -128,10 +128,10 @@ bun i18n:extract                # Extract localized strings (run after changing 
 
 Core shared packages:
 
-- `packages/ui/` - Cross-platform UI components and theme
-- `packages/uniswap/` - Core business logic and utilities
-- `packages/wallet/` - Wallet functionality
-- `packages/utilities/` - Common utilities
+- `pkgs/ui/` - Cross-platform UI components and theme
+- `pkgs/uniswap/` - Core business logic and utilities
+- `pkgs/wallet/` - Wallet functionality
+- `pkgs/utilities/` - Common utilities
 
 ## Blockchain Integration
 

@@ -22,7 +22,7 @@ This directory contains fixtures, mocks and utilities useful while writing tests
 
 #### 2.1.1. Basics
 
-`createFixture` is the core function used to create fixtures which is declared in the `packages/wallet/src/test/utils/factory.ts` file.
+`createFixture` is the core function used to create fixtures which is declared in the `pkgs/wallet/src/test/utils/factory.ts` file.
 
 Take a look at the usage example:
 
