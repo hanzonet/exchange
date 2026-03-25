@@ -15,7 +15,7 @@ jobs:
   # E2E tests must pass before publishing
   e2e-gate:
     name: E2E Gate Tests
-    runs-on: ubuntu-latest
+    runs-on: lux-build-linux-amd64
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -53,7 +53,7 @@ jobs:
 
   build-and-push:
     needs: [e2e-gate]
-    runs-on: ubuntu-latest
+    runs-on: lux-build-linux-amd64
     permissions:
       contents: read
       packages: write
