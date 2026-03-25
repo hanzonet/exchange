@@ -30,7 +30,24 @@ ENV REACT_APP_AWS_API_ENDPOINT=https://api-exchange.lux.network/v1/graphql
 ENV REACT_APP_INSIGHTS_HOST=https://insights.hanzo.ai
 ENV REACT_APP_INSIGHTS_API_KEY=hi_a5316882b930d11c9183007d70c3955b
 
-# Generate AJV validators (git-ignored, must be created before build)
+# Generate gitignored types before build
+# 1. Trading API types from OpenAPI spec + model patches
+RUN cd pkgs/api && \
+    (npx openapi \
+      --input ./src/clients/trading/api.json \
+      --output ./src/clients/trading/__generated__ \
+      --useOptions --exportServices true --exportModels true && \
+     node --no-warnings=ExperimentalWarning --loader ts-node/esm ./scripts/modifyTradingApiTypes.mts) \
+    || (mkdir -p src/clients/trading/__generated__/models src/clients/trading/__generated__/core src/clients/trading/__generated__/services && \
+        echo 'export {}' > src/clients/trading/__generated__/index.ts)
+# 3. V3 contract types stub (no @lux artifacts in Docker)
+RUN mkdir -p pkgs/lx/src/abis/types/v3 && \
+    echo 'export {}' > pkgs/lx/src/abis/types/v3/index.ts
+# 4. ABI types
+RUN cd pkgs/lx && \
+    (test -f src/abis/types/index.ts || npx typechain --target ethers-v5 --out-dir src/abis/types "./src/abis/**/*.json") \
+    || true
+# 5. AJV validators
 RUN NODE_PATH=/app/node_modules node apps/web/scripts/compile-ajv-validators.js
 
 # Build the web app (Vite SPA)
