@@ -266,11 +266,10 @@ export default defineConfig(({ mode }) => {
     'wallet': path.resolve(__dirname, '../../pkgs/wallet'),
     'lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
     'lx': path.resolve(__dirname, '../../pkgs/lx'),
-    // @luxamm package aliases (handle renamed packages or thin wrappers missing artifacts)
-    '@luxamm/sdk': path.resolve(__dirname, '../../node_modules/@luxamm/luxswap-sdk'),
-    '@luxamm/merkle-distributor/build': path.resolve(__dirname, '../../node_modules/@uniswap/merkle-distributor/build'),
-    '@luxamm/v3-core/artifacts': path.resolve(__dirname, '../../node_modules/@uniswap/v3-core/artifacts'),
-    '@luxamm/v3-periphery/artifacts': path.resolve(__dirname, '../../node_modules/@uniswap/v3-periphery/artifacts'),
+    // @luxamm artifact subpath aliases (Solidity contract artifacts)
+    '@luxamm/merkle-distributor/build': path.resolve(__dirname, '../../node_modules/@luxamm/merkle-distributor/build'),
+    '@luxamm/v3-core/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-core/artifacts'),
+    '@luxamm/v3-periphery/artifacts': path.resolve(__dirname, '../../node_modules/@luxamm/v3-periphery/artifacts'),
     // tsconfig path alias ~ → src/
     '~': path.resolve(__dirname, 'src'),
     // Bare src-relative imports (CRA baseUrl convention — pnpm strict mode needs explicit aliases)
@@ -293,32 +292,7 @@ export default defineConfig(({ mode }) => {
     'gui/linear-gradient': '@tamagui/linear-gradient',
     // Force JSBI to use ESM build so transform plugin can add __esModule marker
     jsbi: path.resolve(__dirname, '../../node_modules/jsbi/dist/jsbi.mjs'),
-    // @luxamm/* → node_modules (pnpm overrides resolve to @uniswap/*)
-    '@luxamm/sdk-core': path.resolve(__dirname, '../../node_modules/@luxamm/sdk-core'),
-    '@luxamm/v2-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v2-sdk'),
-    '@luxamm/v3-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v3-sdk'),
-    '@luxamm/v4-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v4-sdk'),
-    '@luxamm/router-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/router-sdk'),
-    '@luxamm/permit2-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/permit2-sdk'),
-    '@luxamm/universal-router-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/universal-router-sdk'),
-    '@luxamm/swap-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/swap-sdk'),
-    '@luxamm/analytics': path.resolve(__dirname, '../../node_modules/@luxamm/analytics'),
-    '@luxamm/analytics-events': path.resolve(__dirname, '../../node_modules/@luxamm/analytics-events'),
-    '@luxamm/client-data-api': path.resolve(__dirname, '../../node_modules/@luxamm/client-data-api'),
-    '@luxamm/client-explore': path.resolve(__dirname, '../../node_modules/@luxamm/client-explore'),
-    '@luxamm/client-for': path.resolve(__dirname, '../../node_modules/@luxamm/client-for'),
-    '@luxamm/client-liquidity': path.resolve(__dirname, '../../node_modules/@luxamm/client-liquidity'),
-    '@luxamm/client-search': path.resolve(__dirname, '../../node_modules/@luxamm/client-search'),
-    '@luxamm/client-trading': path.resolve(__dirname, '../../node_modules/@luxamm/client-trading'),
-    '@luxamm/client-notification-service': path.resolve(__dirname, '../../node_modules/@luxamm/client-notification-service'),
-    '@luxamm/client-platform-service': path.resolve(__dirname, '../../node_modules/@luxamm/client-platform-service'),
-    '@luxamm/client-embeddedwallet': path.resolve(__dirname, '../../node_modules/@luxamm/client-embeddedwallet'),
-    '@luxamm/client-unirpc-v2': path.resolve(__dirname, '../../node_modules/@luxamm/client-unirpc-v2'),
-    '@luxamm/default-token-list': path.resolve(__dirname, '../../node_modules/@luxamm/default-token-list'),
-    '@luxamm/token-lists': path.resolve(__dirname, '../../node_modules/@luxamm/token-lists'),
-    '@luxamm/merkle-distributor': path.resolve(__dirname, '../../node_modules/@luxamm/merkle-distributor'),
-    '@luxamm/v3-core': path.resolve(__dirname, '../../node_modules/@luxamm/v3-core'),
-    '@luxamm/v3-periphery': path.resolve(__dirname, '../../node_modules/@luxamm/v3-periphery'),
+    // @luxamm/* packages resolve directly from npm (real forks, no overrides needed)
     '@luxdex/sdk': path.resolve(__dirname, '../../pkgs/luxdex-sdk/dist/esm/src/index.js'),
     '@luxamm/conedison/format': path.resolve(__dirname, 'src/lib/conedison-format-stub.ts'),
     // react-router v7 merged react-router-dom into react-router
