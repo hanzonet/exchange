@@ -34,7 +34,9 @@ const app = express();
 // F2: Restrict CORS to known origins
 const ALLOWED_ORIGINS = [
   'https://lux.exchange',
+  'https://zoo.exchange',
   /^https:\/\/[a-z0-9-]+\.lux\.(exchange|network)$/,
+  /^https:\/\/[a-z0-9-]+\.zoo\.(exchange|network|ngo)$/,
   /^https:\/\/[a-z0-9-]+\.liquidity\.io$/,
 ];
 // Allow localhost in development only

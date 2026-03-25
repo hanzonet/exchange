@@ -1,6 +1,12 @@
 {
-  "defaultSrc": ["'self'"],
-  "scriptSrc": ["'self'", "'wasm-unsafe-eval'", "https://challenges.cloudflare.com"],
+  "defaultSrc": [
+    "'self'"
+  ],
+  "scriptSrc": [
+    "'self'",
+    "'wasm-unsafe-eval'",
+    "https://challenges.cloudflare.com"
+  ],
   "styleSrc": [
     "'self'",
     "'unsafe-inline'",
@@ -17,6 +23,7 @@
     "blob:",
     "data:",
     "https://*.lux.exchange",
+    "https://*.zoo.exchange",
     "https://*.lux.network",
     "https://*.zoo.network",
     "https://assets.coingecko.com",
@@ -36,14 +43,18 @@
     "https://verify.walletconnect.org/",
     "https://id.porto.sh",
     "https://wrapped.lux.exchange",
+    "https://wrapped.zoo.exchange",
     "https://auth.privy.io"
   ],
   "mediaSrc": [
     "'self'",
     "https://*.lux.exchange",
+    "https://*.zoo.exchange",
     "https://*.lux.network"
   ],
-  "formAction": ["'none'"],
+  "formAction": [
+    "'none'"
+  ],
   "connectSrc": [
     "'self'",
     "blob:",
@@ -61,6 +72,7 @@
     "https://*.optimism.io",
     "https://*.quiknode.pro",
     "https://*.lux.exchange",
+    "https://*.zoo.exchange",
     "https://*.walletconnect.com",
     "https://*.walletconnect.org",
     "https://api.avax.network/ext/bc/C/rpc",
@@ -96,6 +108,7 @@
     "https://statsigapi.net",
     "https://trustwallet.com",
     "https://lux.exchange",
+    "https://zoo.exchange",
     "https://valid.rpki.cloudflare.com",
     "https://vercel.com",
     "https://vercel.live/",
@@ -103,6 +116,8 @@
     "https://mainnet.era.zksync.io/",
     "https://8mr3mthjba.execute-api.us-east-2.amazonaws.com",
     "https://mainnet.unichain.org/",
+    "https://rpc.degen.tips",
+    "https://rpc-mainnet.maticvigil.com",
     "https://api.lux.network/",
     "https://api.lux-test.network/",
     "https://api.zoo.network/",
@@ -124,12 +139,20 @@
     "https://invalid.rpki.cloudflare.com/",
     "https://insights.hanzo.ai",
     "https://gw.lux.exchange",
+    "https://gw.zoo.exchange",
     "wss://*.lux.exchange",
+    "wss://*.zoo.exchange",
     "wss://relay.walletconnect.com",
     "wss://relay.walletconnect.org",
     "wss://ws-us3.pusher.com/",
     "wss://nbstream.binance.com"
   ],
-  "workerSrc": ["'self'", "blob:"],
-  "reportUri": ["https://gw.lux.exchange/csp-report"]
+  "workerSrc": [
+    "'self'",
+    "blob:"
+  ],
+  "reportUri": [
+    "https://gw.lux.exchange/csp-report",
+    "https://gw.zoo.exchange/csp-report"
+  ]
 }
