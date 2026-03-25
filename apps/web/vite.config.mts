@@ -236,16 +236,17 @@ export default defineConfig(({ mode }) => {
     '@luxexchange/lx': path.resolve(__dirname, '../../pkgs/lx'),
     '@luxexchange/config': path.resolve(__dirname, '../../pkgs/config'),
     '@luxexchange/sessions': path.resolve(__dirname, '../../pkgs/sessions'),
-    // @luxfi/* aliases (our custom scope that maps to workspace packages)
-    '@luxfi/api': path.resolve(__dirname, '../../pkgs/api'),
-    '@luxfi/config': path.resolve(__dirname, '../../pkgs/config'),
-    '@luxfi/dex': path.resolve(__dirname, '../../pkgs/dex'),
-    '@luxfi/exchange': path.resolve(__dirname, '../../pkgs/exchange'),
-    '@luxfi/gating': path.resolve(__dirname, '../../pkgs/gating'),
-    '@luxfi/notifications': path.resolve(__dirname, '../../pkgs/notifications'),
-    '@luxfi/sessions': path.resolve(__dirname, '../../pkgs/sessions'),
+    // @luxfi/* aliases (shared ecosystem packages)
+    '@luxfi/ui/src': path.resolve(__dirname, '../../pkgs/ui/src'),
     '@luxfi/ui': path.resolve(__dirname, '../../pkgs/ui'),
+    '@luxfi/utilities/src': path.resolve(__dirname, '../../pkgs/utilities/src'),
+    '@luxfi/utilities': path.resolve(__dirname, '../../pkgs/utilities'),
+    '@luxfi/wallet/src': path.resolve(__dirname, '../../pkgs/wallet/src'),
     '@luxfi/wallet': path.resolve(__dirname, '../../pkgs/wallet'),
+    '@luxfi/dex/src': path.resolve(__dirname, '../../pkgs/dex/src'),
+    '@luxfi/dex': path.resolve(__dirname, '../../pkgs/dex'),
+    '@luxfi/exchange/src': path.resolve(__dirname, '../../pkgs/exchange/src'),
+    '@luxfi/exchange': path.resolve(__dirname, '../../pkgs/exchange'),
     // tsconfig path alias ~ → src/
     '~': path.resolve(__dirname, 'src'),
     // Bare src-relative imports (CRA baseUrl convention — pnpm strict mode needs explicit aliases)
