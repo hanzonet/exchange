@@ -12,49 +12,7 @@ env:
   IMAGE_NAME: luxfi/exchange
 
 jobs:
-  # E2E tests must pass before publishing
-  e2e-gate:
-    name: E2E Gate Tests
-    runs-on: lux-build-linux-amd64
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - uses: pnpm/action-setup@v4
-
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Install Playwright browsers
-        run: npx playwright install chromium
-
-      - name: Run critical e2e tests
-        run: |
-          npx playwright test \
-            e2e/advanced.spec.ts \
-            e2e/lux-explore.spec.ts \
-            --grep "@critical" \
-            --reporter=list \
-            --retries=2
-        env:
-          BASE_URL: https://exchange.lux.network
-
-      - name: Upload test results on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: e2e-gate-results
-          path: apps/web/test-results/
-          retention-days: 7
-
   build-and-push:
-    # E2E gate runs in parallel but does not block the Docker build.
-    # The e2e.yml workflow provides the real E2E coverage.
-    if: always()
     runs-on: lux-build-linux-amd64
     permissions:
       contents: read
