@@ -10,7 +10,7 @@ import {
   HandleDEXPlanSignatureStepParams,
 } from '@luxexchange/lx/src/features/transactions/steps/types'
 import { DEXSignatureStep } from '@luxexchange/lx/src/features/transactions/swap/steps/signOrder'
-import { DEXTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { UniswapXTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 import { slippageToleranceToPercent } from '@luxexchange/lx/src/features/transactions/swap/utils/format'
 import {
   QueuedOrderStatus,
@@ -29,7 +29,7 @@ import {
 } from '~/state/sagas/transactions/utils'
 
 interface HandleDEXSignatureStepParams extends HandleSignatureStepParams<DEXSignatureStep> {
-  trade: DEXTrade
+  trade: UniswapXTrade
   analytics: SwapTradeBaseProperties
 }
 

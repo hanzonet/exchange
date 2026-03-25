@@ -16,15 +16,15 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-  LXOrderDetails,
+  UniswapXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
 import { currencyId } from 'uniswap/src/utils/currencyId'
 import {
   ORDER_STALENESS_THRESHOLD,
-  SubmitLXOrderParams,
-  submitLXOrder,
+  SubmitUniswapXOrderParams,
+  submitUniswapXOrder,
 } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import { getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
 import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
@@ -62,9 +62,9 @@ const baseSubmitOrderParams = {
     orderInfo: {} as TradingApi.DutchOrderInfo,
   } as unknown as TradingApi.DutchQuoteV2,
   permit: mockPermit.typedData,
-} satisfies SubmitLXOrderParams
+} satisfies SubmitUniswapXOrderParams
 
-const baseExpectedInitialOrderDetails: LXOrderDetails = {
+const baseExpectedInitialOrderDetails: UniswapXOrderDetails = {
   routing: TradingApi.Routing.DUTCH_V2,
   orderHash: '0xMockOrderHash',
   id: baseSubmitOrderParams.txId,
@@ -83,7 +83,7 @@ const expectedOrderRequest: TradingApi.OrderRequest = {
   routing: TradingApi.Routing.DUTCH_V2,
 }
 
-describe(submitLXOrder, () => {
+describe(submitUniswapXOrder, () => {
   beforeEach(() => {
     let mockTimestamp = 1
     Date.now = jest.fn(() => mockTimestamp++)
@@ -95,9 +95,9 @@ describe(submitLXOrder, () => {
         ...baseExpectedInitialOrderDetails,
         addedTime: 2,
         queueStatus: QueuedOrderStatus.Submitted,
-      } satisfies LXOrderDetails
+      } satisfies UniswapXOrderDetails
 
-      testSaga(submitLXOrder, baseSubmitOrderParams)
+      testSaga(submitUniswapXOrder, baseSubmitOrderParams)
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -141,7 +141,7 @@ describe(submitLXOrder, () => {
         queueStatus: QueuedOrderStatus.Submitted,
       }
 
-      testSaga(submitLXOrder, baseSubmitOrderParams)
+      testSaga(submitUniswapXOrder, baseSubmitOrderParams)
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -190,9 +190,9 @@ describe(submitLXOrder, () => {
         ...baseExpectedInitialOrderDetails,
         addedTime: 2,
         queueStatus: QueuedOrderStatus.Submitted,
-      } satisfies LXOrderDetails
+      } satisfies UniswapXOrderDetails
 
-      testSaga(submitLXOrder, signedPermitParams)
+      testSaga(submitUniswapXOrder, signedPermitParams)
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -227,7 +227,7 @@ describe(submitLXOrder, () => {
         queueStatus: QueuedOrderStatus.Submitted,
       }
 
-      testSaga(submitLXOrder, signedPermitParams)
+      testSaga(submitUniswapXOrder, signedPermitParams)
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -257,9 +257,9 @@ describe(submitLXOrder, () => {
         ...baseExpectedInitialOrderDetails,
         addedTime: 4,
         queueStatus: QueuedOrderStatus.Submitted,
-      } satisfies LXOrderDetails
+      } satisfies UniswapXOrderDetails
 
-      testSaga(submitLXOrder, { ...baseSubmitOrderParams, approveTxHash })
+      testSaga(submitUniswapXOrder, { ...baseSubmitOrderParams, approveTxHash })
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -301,7 +301,7 @@ describe(submitLXOrder, () => {
     })
 
     it('updates state if an approval fails', async () => {
-      testSaga(submitLXOrder, { ...baseSubmitOrderParams, approveTxHash })
+      testSaga(submitUniswapXOrder, { ...baseSubmitOrderParams, approveTxHash })
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()
@@ -329,7 +329,7 @@ describe(submitLXOrder, () => {
         return timestamp
       })
 
-      testSaga(submitLXOrder, { ...baseSubmitOrderParams, approveTxHash })
+      testSaga(submitUniswapXOrder, { ...baseSubmitOrderParams, approveTxHash })
         .next()
         .put({ type: addTransaction.type, payload: baseExpectedInitialOrderDetails })
         .next()

@@ -16,7 +16,7 @@ import {
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { SubmitTransactionParamsWithTypeInfo } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionService/transactionService'
 import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
-import { SubmitLXOrderParams } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
+import { SubmitUniswapXOrderParams } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import { SignedPermit } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 import { BaseTransactionContext } from '@luxfi/wallet/src/features/transactions/swap/types/transactionExecutor'
 
@@ -46,7 +46,7 @@ export interface WrapTransactionData {
   gasEstimate?: GasEstimate
 }
 
-export interface LXOrderTransactionData {
+export interface UniswapXOrderTransactionData {
   signedPermit: SignedPermit
   quote: TradingApi.DutchQuoteV2 | TradingApi.DutchQuoteV3 | TradingApi.PriorityQuote
   routing: TradingApi.Routing.DUTCH_V2 | TradingApi.Routing.DUTCH_V3 | TradingApi.Routing.PRIORITY
@@ -81,7 +81,7 @@ export interface TransactionParamsFactory {
   createPermitParams(data: PermitTransactionData): SubmitTransactionParamsWithTypeInfo
   createSwapParams(data: SwapTransactionData): SubmitTransactionParamsWithTypeInfo
   createWrapParams(data: WrapTransactionData): SubmitTransactionParamsWithTypeInfo
-  createLXOrderParams(data: LXOrderTransactionData): SubmitLXOrderParams
+  createUniswapXOrderParams(data: UniswapXOrderTransactionData): SubmitUniswapXOrderParams
 }
 
 /**
@@ -201,7 +201,7 @@ export function createTransactionParamsFactory(context: BaseTransactionContext):
     })
   }
 
-  function createLXOrderParams(data: LXOrderTransactionData): SubmitLXOrderParams {
+  function createUniswapXOrderParams(data: UniswapXOrderTransactionData): SubmitUniswapXOrderParams {
     const {
       signedPermit,
       quote,
@@ -223,7 +223,7 @@ export function createTransactionParamsFactory(context: BaseTransactionContext):
       isFinalStep: context.analytics.is_final_step,
     })
 
-    const submitOrderParams: SubmitLXOrderParams = {
+    const submitOrderParams: SubmitUniswapXOrderParams = {
       account: context.account,
       analytics: context.analytics,
       approveTxHash,
@@ -245,6 +245,6 @@ export function createTransactionParamsFactory(context: BaseTransactionContext):
     createPermitParams,
     createSwapParams,
     createWrapParams,
-    createLXOrderParams,
+    createUniswapXOrderParams,
   }
 }

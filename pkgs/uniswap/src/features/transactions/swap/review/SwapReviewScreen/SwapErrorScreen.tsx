@@ -6,7 +6,7 @@ import { X } from 'ui/src/components/icons/X'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningModalContent } from 'uniswap/src/components/modals/WarningModal/WarningModal'
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import {
   useTransactionSettingsActions,
@@ -61,7 +61,7 @@ export function SwapErrorScreen({
   }
 
   const onPressGetHelp = async (): Promise<void> => {
-    await openUri({ uri: supportArticleURL ?? luxUrls.helpUrl })
+    await openUri({ uri: supportArticleURL ?? uniswapUrls.helpUrl })
   }
 
   const caption = supportArticleURL ? (

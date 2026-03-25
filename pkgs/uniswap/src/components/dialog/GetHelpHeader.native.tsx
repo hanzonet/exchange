@@ -2,12 +2,12 @@ import { TouchableArea } from 'ui/src'
 import { GetHelpButtonUI } from 'uniswap/src/components/dialog/GetHelpButtonUI'
 import type { GetHelpHeaderProps } from 'uniswap/src/components/dialog/GetHelpHeader'
 import { type GetHelpButtonProps, GetHelpHeaderContent } from 'uniswap/src/components/dialog/GetHelpHeaderContent'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { openUri } from 'uniswap/src/utils/linking'
 
 function NativeGetHelpButton({ url }: GetHelpButtonProps): JSX.Element {
   const handlePress = async (): Promise<void> => {
-    await openUri({ uri: url ?? luxUrls.helpUrl })
+    await openUri({ uri: url ?? uniswapUrls.helpUrl })
   }
 
   return (

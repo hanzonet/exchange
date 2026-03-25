@@ -1,7 +1,7 @@
 import { createTradingApiClient, TradingApi, type TradingApiClient as TradingApiClientType } from '@luxexchange/api'
 import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
-  EthAsErc20LXProperties,
+  EthAsErc20DEXProperties,
   Experiments,
   FeatureFlags,
   getExperimentValueFromLayer,
@@ -9,13 +9,13 @@ import {
   Layers,
 } from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
-import { tradingApiVersionPrefix, luxUrls } from 'uniswap/src/constants/urls'
-import { createLuxFetchClient } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { tradingApiVersionPrefix, uniswapUrls } from 'uniswap/src/constants/urls'
+import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { filterChainIdsByPlatform } from 'uniswap/src/features/chains/utils'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 
-const TradingFetchClient = createLuxFetchClient({
-  baseUrl: luxUrls.tradingApiUrl,
+const TradingFetchClient = createUniswapFetchClient({
+  baseUrl: uniswapUrls.tradingApiUrl,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,
   },
@@ -64,11 +64,11 @@ export const getFeatureFlaggedHeaders = (
   const uniroutePulumiEnabled = getFeatureFlag(FeatureFlags.UniroutePulumiEnabled)
   const ethAsErc20LXEnabled = getExperimentValueFromLayer<
     typeof Layers.SwapPage,
-    Experiments.EthAsErc20LX,
+    Experiments.EthAsErc20DEX,
     boolean
   >({
     layerName: Layers.SwapPage,
-    param: EthAsErc20LXProperties.EthAsErc20LXEnabled,
+    param: EthAsErc20DEXProperties.EthAsErc20DEXEnabled,
     defaultValue: false,
   })
   const disableUniswapInterfaceFees = getFeatureFlag(FeatureFlags.NoUniswapInterfaceFees)

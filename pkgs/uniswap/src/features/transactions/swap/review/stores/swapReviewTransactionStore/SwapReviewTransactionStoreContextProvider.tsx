@@ -10,7 +10,7 @@ import type { SwapReviewTransactionState } from 'uniswap/src/features/transactio
 import { createSwapReviewTransactionStore } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewTransactionStore/createSwapReviewTransactionStore'
 import { SwapReviewTransactionStoreContext } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewTransactionStore/SwapReviewTransactionStoreContext'
 import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { isClassic, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { isWrapAction } from 'uniswap/src/features/transactions/swap/utils/wrap'
 import { getRelevantTokenWarningSeverity } from 'uniswap/src/features/transactions/TransactionDetails/utils/getRelevantTokenWarningSeverity'
 import { CurrencyField } from 'uniswap/src/types/currency'
@@ -40,7 +40,7 @@ export const SwapReviewTransactionStoreContextProvider = ({
       ),
   )
 
-  const uniswapXGasBreakdown = isLX(swapTxContext) ? swapTxContext.gasFeeBreakdown : undefined
+  const uniswapXGasBreakdown = isUniswapX(swapTxContext) ? swapTxContext.gasFeeBreakdown : undefined
 
   const {
     chainId,

@@ -4,7 +4,7 @@ import { useQuery } from '@connectrpc/connect-query'
 import { UseQueryResult } from '@tanstack/react-query'
 import { ExploreStatsRequest, ExploreStatsResponse } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
 import { exploreStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
-import { luxGetTransport } from 'uniswap/src/data/rest/base'
+import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
 
 /**
  * Wrapper around Tanstack useQuery for the Uniswap REST BE service ExploreStats
@@ -22,5 +22,5 @@ export function useExploreStatsQuery<TSelectType>({
   enabled?: boolean
   select?: ((data: ExploreStatsResponse) => TSelectType) | undefined
 }): UseQueryResult<TSelectType, ConnectError> {
-  return useQuery(exploreStats, input, { transport: luxGetTransport, enabled, select })
+  return useQuery(exploreStats, input, { transport: uniswapGetTransport, enabled, select })
 }

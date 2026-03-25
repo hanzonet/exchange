@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Trace } from '@luxdex/analytics'
-import { InterfacePageName } from '@luxdex/analytics-events'
+import { Trace } from '@luxamm/analytics'
+import { InterfacePageName } from '@luxamm/analytics-events'
 import { Pair } from '@luxamm/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { UNSUPPORTED_V2POOL_CHAIN_IDS } from 'constants/chains'

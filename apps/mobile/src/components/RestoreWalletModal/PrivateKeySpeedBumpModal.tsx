@@ -5,7 +5,7 @@ import { useReactNavigationModal } from 'src/components/modals/useReactNavigatio
 import { Button, Flex, IconButton, InlineCard, Text, useSporeColors } from '@luxfi/ui/src'
 import { AlertTriangleFilled, Key } from '@luxfi/ui/src/components/icons'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
@@ -82,5 +82,5 @@ const PrivateKeySpeedBumpModalContent = ({
 }
 
 const openLearnMore = async (): Promise<void> => {
-  await openUri({ uri: luxUrls.helpArticleUrls.whatIsPrivateKey })
+  await openUri({ uri: uniswapUrls.helpArticleUrls.whatIsPrivateKey })
 }

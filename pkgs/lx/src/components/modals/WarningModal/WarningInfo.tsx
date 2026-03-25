@@ -52,7 +52,7 @@ export function WarningInfo({
       }
 
       hasHoverBeenTracked.current = true
-      sendAnalyticsEvent(LuxEventName.TooltipOpened, {
+      sendAnalyticsEvent(UniswapEventName.TooltipOpened, {
         ...trace,
         tooltip_name: analyticsTitle,
       })

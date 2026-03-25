@@ -28,7 +28,7 @@ import {
 } from 'uniswap/src/features/transactions/swap/plan/planSagaUtils'
 import {
   logPlanStepTradeAnalytics,
-  logLXPlanOrderSubmitted,
+  logUniswapXPlanOrderSubmitted,
 } from 'uniswap/src/features/transactions/swap/plan/planStepAnalytics'
 import { TransactionAndPlanStep } from 'uniswap/src/features/transactions/swap/plan/planStepTransformer'
 import {
@@ -79,7 +79,7 @@ export function* plan(params: PlanParams) {
     handleSwapTransactionStep,
     handleSwapTransactionBatchedStep,
     handleSignatureStep,
-    handleLXPlanSignatureStep,
+    handleUniswapXPlanSignatureStep,
     getDisplayableError,
     sendToast,
     caip25Info,
@@ -220,8 +220,8 @@ export function* plan(params: PlanParams) {
           })
           break
         }
-        case TransactionStepType.LXPlanSignature: {
-          signature = yield* call(handleLXPlanSignatureStep, {
+        case TransactionStepType.UniswapXPlanSignature: {
+          signature = yield* call(handleUniswapXPlanSignatureStep, {
             address,
             step: currentStep,
             setCurrentStep: setCurrentStepIfActive,
@@ -306,9 +306,9 @@ export function* plan(params: PlanParams) {
           },
         })
 
-        // Log LXOrderSubmitted after signature is successfully submitted to TAPI
-        if (currentStep.type === TransactionStepType.LXPlanSignature) {
-          logLXPlanOrderSubmitted({ analyticsWithPlanStepContext })
+        // Log UniswapXOrderSubmitted after signature is successfully submitted to TAPI
+        if (currentStep.type === TransactionStepType.UniswapXPlanSignature) {
+          logUniswapXPlanOrderSubmitted({ analyticsWithPlanStepContext })
         }
       } else {
         throw new AbortPlanError('No hash or signature found. Do not retry plan.')

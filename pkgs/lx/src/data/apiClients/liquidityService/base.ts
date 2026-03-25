@@ -1,10 +1,10 @@
 import { createConnectTransportWithDefaults } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 
 export const liquidityServiceTransport = createConnectTransportWithDefaults(
   {
-    baseUrl: luxUrls.liquidityServiceUrl,
+    baseUrl: uniswapUrls.liquidityServiceUrl,
     additionalHeaders: {
       'x-api-key': config.tradingApiKey,
     },

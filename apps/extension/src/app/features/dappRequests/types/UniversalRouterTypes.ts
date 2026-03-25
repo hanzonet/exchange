@@ -1,5 +1,5 @@
 import { CommandType } from '@luxamm/universal-router-sdk'
-import { FeeAmount as FeeAmountV3 } from '@luxdex/v3-sdk'
+import { FeeAmount as FeeAmountV3 } from '@luxamm/v3-sdk'
 import { BigNumberSchema } from 'src/app/features/dappRequests/types/EthersTypes'
 import { z } from 'zod'
 

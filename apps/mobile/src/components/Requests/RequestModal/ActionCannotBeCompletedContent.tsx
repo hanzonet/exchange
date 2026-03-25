@@ -8,7 +8,7 @@ import { WalletConnectSigningRequest } from 'src/features/walletConnect/walletCo
 import { Flex, Text } from '@luxfi/ui/src'
 import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons'
 import { spacing } from '@luxfi/ui/src/theme'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
 import { AddressFooter } from '@luxfi/wallet/src/features/transactions/TransactionRequest/AddressFooter'
@@ -21,7 +21,7 @@ export function ActionCannotBeCompletedContent({
   onReject: () => void
 }): JSX.Element {
   const handleLearnMore = async (): Promise<void> => {
-    await openUri({ uri: luxUrls.helpArticleUrls.mismatchedImports })
+    await openUri({ uri: uniswapUrls.helpArticleUrls.mismatchedImports })
   }
 
   return (

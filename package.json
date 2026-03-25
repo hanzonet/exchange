@@ -420,7 +420,8 @@
       "@uniswap/v4-sdk": "npm:@uniswap/v4-sdk@1.29.2",
       "@uniswap/router-sdk": "npm:@uniswap/router-sdk@2.7.2",
       "@uniswap/client-privy-embedded-wallet": "npm:@luxamm/client-privy-embedded-wallet@0.0.6",
-      "@luxamm/client-privy-embedded-wallet": "npm:@uniswap/client-privy-embedded-wallet@*"
+      "@luxamm/client-privy-embedded-wallet": "npm:@uniswap/client-privy-embedded-wallet@*",
+      "@luxamm/sdk": "npm:@luxamm/luxswap-sdk@3.0.0-beta.8"
     }
   },
   "packageManager": "pnpm@9.15.9"

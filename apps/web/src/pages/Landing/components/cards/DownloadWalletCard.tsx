@@ -3,7 +3,7 @@ import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { Trans, useTranslation } from 'react-i18next'
 import { Flex, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
 import { Star } from '@luxfi/ui/src/components/icons/Star'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { PillButton } from '~/pages/Landing/components/cards/PillButton'
 import ValuePropCard from '~/pages/Landing/components/cards/ValuePropCard'
 import { Wallet } from '~/pages/Landing/components/Icons'
@@ -30,7 +30,7 @@ export function DownloadWalletCard() {
 
   return (
     <ValuePropCard
-      href={luxUrls.downloadWalletUrl}
+      href={uniswapUrls.downloadWalletUrl}
       minHeight={500}
       color="$accent1"
       backgroundColor="rgba(252, 114, 255, 0.12)"

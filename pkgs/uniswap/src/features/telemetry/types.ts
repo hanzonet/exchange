@@ -255,7 +255,7 @@ type LXTransactionResultProperties = BaseSwapTransactionResultProperties & {
 
 type BridgeSwapTransactionResultProperties = BaseSwapTransactionResultProperties
 
-type FailedLXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
+type FailedUniswapXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type FailedClassicSwapResultProperties = Omit<ClassicSwapTransactionResultProperties, 'hash'> & {
   hash: string | undefined
@@ -267,7 +267,7 @@ type FailedBridgeSwapResultProperties = Omit<BridgeSwapTransactionResultProperti
   hash: string | undefined
 }
 
-type CancelledLXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
+type CancelledUniswapXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type CancelledClassicSwapResultProperties = ClassicSwapTransactionResultProperties & {
   replaced_transaction_hash: string | undefined
@@ -706,10 +706,10 @@ export type UniverseEventProperties = {
     wallet_type: string
   }
   [InterfaceEventName.PortfolioMenuOpened]: { name: string } | { name: string; platform: Platform }
-  [InterfaceEventName.LXOrderDetailsSheetOpened]: {
+  [InterfaceEventName.UniswapXOrderDetailsSheetOpened]: {
     order: string
   }
-  [InterfaceEventName.LXOrderCancelInitiated]: {
+  [InterfaceEventName.UniswapXOrderCancelInitiated]: {
     orders: string[]
   }
   [InterfaceEventName.LimitPresetRateSelected]: {
@@ -751,8 +751,8 @@ export type UniverseEventProperties = {
     resultTime: number
   }
   [InterfaceEventName.LXSignatureRequested]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.LXOrderPostError]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.LXOrderSubmitted]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.UniswapXOrderPostError]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.UniswapXOrderSubmitted]: Record<string, unknown> // TODO specific type
   [InterfaceEventName.CreatePositionFailed]: {
     message: string
   } & PartialMessage<CreateLPPositionRequest>
@@ -1015,11 +1015,11 @@ export type UniverseEventProperties = {
     | BridgeSwapTransactionResultProperties
   [SwapEventName.SwapTransactionFailed]:
     | FailedClassicSwapResultProperties
-    | FailedLXOrderResultProperties
+    | FailedUniswapXOrderResultProperties
     | FailedBridgeSwapResultProperties
   [WalletEventName.SwapTransactionCancelled]:
     | CancelledClassicSwapResultProperties
-    | CancelledLXOrderResultProperties
+    | CancelledUniswapXOrderResultProperties
     | CancelledBridgeSwapResultProperties
   [SwapEventName.SwapDetailsExpanded]: ITraceContext | undefined
   [SwapEventName.SwapAutorouterVisualizationExpanded]: ITraceContext

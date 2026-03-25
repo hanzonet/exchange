@@ -8,7 +8,7 @@ import { Anchor, Button, Flex, styled, Text, useIsShortMobileDevice } from '@lux
 import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
 import { ArrowDown } from '@luxfi/ui/src/components/icons/ArrowDown'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { LIMIT_SUPPORTED_CHAINS } from '@luxexchange/lx/src/features/chains/chainInfo'
 import { useIsSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
@@ -419,7 +419,7 @@ function LimitForm({ onCurrencyChange }: LimitFormProps) {
                   link: (
                     <Anchor
                       textDecorationLine="none"
-                      href={luxUrls.helpArticleUrls.limitsNetworkSupport}
+                      href={uniswapUrls.helpArticleUrls.limitsNetworkSupport}
                       target="_blank"
                     >
                       <LearnMore>
@@ -434,7 +434,7 @@ function LimitForm({ onCurrencyChange }: LimitFormProps) {
                 i18nKey="limits.form.disclaimer.dex"
                 components={{
                   link: (
-                    <Anchor textDecorationLine="none" href={luxUrls.helpArticleUrls.limitsFailure} target="_blank">
+                    <Anchor textDecorationLine="none" href={uniswapUrls.helpArticleUrls.limitsFailure} target="_blank">
                       <LearnMore>
                         <Trans i18nKey="common.button.learn" />
                       </LearnMore>

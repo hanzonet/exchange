@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxdex/analytics-events'
+import { SharedEventName } from '@luxamm/analytics-events'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import 'react-native-reanimated'

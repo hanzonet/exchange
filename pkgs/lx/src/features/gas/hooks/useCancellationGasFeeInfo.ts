@@ -14,14 +14,14 @@ import {
 } from 'uniswap/src/features/gas/utils/cancel'
 import {
   extractCancellationData,
-  getCancelMultipleLXOrdersTransaction,
+  getCancelMultipleUniswapXOrdersTransaction,
 } from 'uniswap/src/features/transactions/cancel/cancelMultipleOrders'
 import { getCancelOrderTxRequest } from 'uniswap/src/features/transactions/cancel/getCancelOrderTxRequest'
-import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionDetails,
   TransactionDetails,
-  LXOrderDetails,
+  UniswapXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isPlanTransactionDetails } from 'uniswap/src/features/transactions/types/utils'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
@@ -36,7 +36,7 @@ import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
  */
 export function useCancellationGasFeeInfo(
   transaction: TransactionDetails,
-  orders?: LXOrderDetails[],
+  orders?: UniswapXOrderDetails[],
 ): CancellationGasFeeDetails | PlanCancellationGasFeeDetails | undefined {
   const isPlan = isPlanTransactionDetails(transaction)
   const planCancellation = usePlanCancellationGasFeeInfo(isPlan ? (transaction as PlanTransactionDetails) : undefined)
@@ -93,7 +93,7 @@ function useLXCancelRequest({
   cancellationType,
 }: {
   transaction: TransactionDetails
-  orders: LXOrderDetails[] | undefined
+  orders: UniswapXOrderDetails[] | undefined
   cancellationType: CancellationType
 }): providers.TransactionRequest | undefined {
   const cancelRequestFetcher = useCallback(async (): Promise<providers.TransactionRequest | null> => {
@@ -107,7 +107,7 @@ function useLXCancelRequest({
       }
 
       try {
-        const cancelRequest = await getCancelMultipleLXOrdersTransaction({
+        const cancelRequest = await getCancelMultipleUniswapXOrdersTransaction({
           orders: ordersWithEncodedData.map((order) => ({
             encodedOrder: order.encodedOrder,
             routing: order.routing,
@@ -121,9 +121,9 @@ function useLXCancelRequest({
       }
     }
 
-    if (isLX(transaction)) {
+    if (isUniswapX(transaction)) {
       try {
-        const cancelRequest = await getCancelOrderTxRequest(transaction as LXOrderDetails)
+        const cancelRequest = await getCancelOrderTxRequest(transaction as UniswapXOrderDetails)
         return cancelRequest
       } catch {
         return null

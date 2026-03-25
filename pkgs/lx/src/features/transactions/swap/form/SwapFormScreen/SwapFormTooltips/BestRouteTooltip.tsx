@@ -5,7 +5,7 @@ import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
 import { DEX } from 'ui/src/components/icons/DEX'
 import { RoutingDiagram } from '@luxexchange/lx/src/components/RoutingDiagram/RoutingDiagram'
 import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useSwapTxStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
 import { useRoutingEntries, useRoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/routingRegistry'
 
@@ -45,7 +45,7 @@ export function BestRouteTooltip(): JSX.Element | null {
       <Tooltip.Separator />
       {routingProvider.getDescription && (
         <Tooltip.Description
-          learnMoreUrl={luxUrls.helpArticleUrls.routingSettings}
+          learnMoreUrl={uniswapUrls.helpArticleUrls.routingSettings}
           text={routingProvider.getDescription(t)}
         />
       )}
@@ -72,9 +72,11 @@ export function BestRouteDEXTooltip(): JSX.Element {
         </Tooltip.Row>
       </Tooltip.Content>
       <Tooltip.Description
-        learnMoreUrl={luxUrls.helpArticleUrls.uniswapXInfo}
+        learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo}
         text={t('routing.aggregateLiquidity.lx')}
       />
     </Tooltip.Outer>
   )
 }
+
+export const BestRouteUniswapXTooltip = BestRouteDEXTooltip

@@ -14,7 +14,7 @@ import {
   isChained,
   isClassic,
   isJupiter,
-  isLX,
+  isUniswapX,
   isWrap,
 } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { ValidatedPermit } from 'uniswap/src/features/transactions/swap/utils/trade'
@@ -51,7 +51,7 @@ export type SwapGasFeeEstimation = {
   wrapEstimate?: GasEstimate
 }
 
-export type LXGasBreakdown = {
+export type UniswapXGasBreakdown = {
   classicGasUseEstimateUSD?: string
   approvalCost?: string
   inputTokenSymbol?: string
@@ -105,7 +105,7 @@ export interface LXSwapTxAndGasInfo extends BaseSwapTxAndGasInfo {
   routing: TradingApi.Routing.DUTCH_V2 | TradingApi.Routing.DUTCH_V3 | TradingApi.Routing.PRIORITY
   trade: LXTrade
   permit: PermitTypedData | undefined
-  gasFeeBreakdown: LXGasBreakdown
+  gasFeeBreakdown: UniswapXGasBreakdown
 }
 
 export interface BridgeSwapTxAndGasInfo extends BaseSwapTxAndGasInfo {
@@ -224,7 +224,7 @@ function validateSwapTxContext(swapTxContext: SwapTxAndGasInfo): ValidatedSwapTx
       } else {
         return undefined
       }
-    } else if (isLX(swapTxContext) && swapTxContext.permit) {
+    } else if (isUniswapX(swapTxContext) && swapTxContext.permit) {
       const { trade, permit } = swapTxContext
       return { ...swapTxContext, trade, gasFee, permit, includesDelegation: false }
     } else if (isWrap(swapTxContext)) {

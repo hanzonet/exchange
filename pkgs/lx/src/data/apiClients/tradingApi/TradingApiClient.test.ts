@@ -22,7 +22,7 @@ global.fetch = mockFetch
 import { TradingApi } from '@luxexchange/api'
 import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
-  EthAsErc20LXProperties,
+  EthAsErc20DEXProperties,
   FeatureFlags,
   getExperimentValueFromLayer,
   getFeatureFlag,
@@ -532,7 +532,7 @@ describe('getFeatureFlaggedHeaders', () => {
     it(`Endpoint: ${path} should/should not include Erc20EthEnabled header when experiment is enabled`, () => {
       mockGetExperimentValueFromLayer.mockImplementation(
         ({ layerName, param }: { layerName: string; param: string }) => {
-          if (layerName === Layers.SwapPage && param === EthAsErc20LXProperties.EthAsErc20LXEnabled) {
+          if (layerName === Layers.SwapPage && param === EthAsErc20DEXProperties.EthAsErc20DEXEnabled) {
             return true
           }
           return false

@@ -13,31 +13,31 @@ const IS_CI = process.env.CI === 'true'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const Module = require('module')
 
-// Mirror Vite alias mappings for @luxdex/* → @lux/* so Playwright can resolve them
+// Mirror Vite alias mappings for @luxamm/* → @lux/* so Playwright can resolve them
 const LUXDEX_ALIAS_MAP: Record<string, string> = {
   '@luxamm/sdk-core': '@luxamm/sdk-core',
   '@luxamm/universal-router-sdk': '@luxamm/universal-router-sdk',
-  '@luxdex/permit2-sdk': '@luxamm/permit2-sdk',
+  '@luxamm/permit2-sdk': '@luxamm/permit2-sdk',
   '@luxamm/v2-sdk': '@luxamm/v2-sdk',
-  '@luxdex/v3-sdk': '@luxamm/v3-sdk',
+  '@luxamm/v3-sdk': '@luxamm/v3-sdk',
   '@luxamm/v4-sdk': '@luxamm/v4-sdk',
-  '@luxdex/client-platform-service': '@luxamm/client-platform-service',
-  '@luxdex/client-notification-service': '@luxamm/client-notification-service',
+  '@luxamm/client-platform-service': '@luxamm/client-platform-service',
+  '@luxamm/client-notification-service': '@luxamm/client-notification-service',
   '@luxamm/client-data-api': '@luxamm/client-data-api',
-  '@luxdex/client-trading': '@luxamm/client-trading',
-  '@luxdex/client-for': '@luxamm/client-for',
-  '@luxdex/client-liquidity': '@luxamm/client-liquidity',
-  '@luxdex/permit': '@luxamm/permit2-sdk',
-  '@luxdex/client-explore': '@luxamm/client-explore',
-  '@luxdex/client-search': '@luxamm/client-search',
-  '@luxdex/analytics-events': '@luxamm/analytics-events',
+  '@luxamm/client-trading': '@luxamm/client-trading',
+  '@luxamm/client-for': '@luxamm/client-for',
+  '@luxamm/client-liquidity': '@luxamm/client-liquidity',
+  '@luxamm/permit': '@luxamm/permit2-sdk',
+  '@luxamm/client-explore': '@luxamm/client-explore',
+  '@luxamm/client-search': '@luxamm/client-search',
+  '@luxamm/analytics-events': '@luxamm/analytics-events',
   '@luxamm/conedison': '@luxamm/analytics',
 }
 
 // Override module resolution to handle platform-specific files like Vite does
 const originalResolveFilename = Module._resolveFilename
 Module._resolveFilename = function (request: string, parent: any) {
-  // Resolve @luxdex/* → @lux/* aliases (mirrors vite.config.mts resolve.alias)
+  // Resolve @luxamm/* → @lux/* aliases (mirrors vite.config.mts resolve.alias)
   for (const [prefix, target] of Object.entries(LUXDEX_ALIAS_MAP)) {
     if (request === prefix || request.startsWith(prefix + '/')) {
       request = request.replace(prefix, target)

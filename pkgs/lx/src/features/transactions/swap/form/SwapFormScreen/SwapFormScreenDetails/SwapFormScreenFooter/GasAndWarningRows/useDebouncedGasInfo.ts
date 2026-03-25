@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
 import {
-  useFormattedLXGasFeeInfo,
+  useFormattedUniswapXGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
 } from 'uniswap/src/features/gas/hooks'
 import type { GasInfo } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
 import { useSwapFormStoreDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { usePrevious } from 'utilities/src/react/hooks'
 
@@ -25,7 +25,7 @@ export function useDebouncedGasInfo(): GasInfo {
   const outputUSDValue = currencyAmountsUSDValue[CurrencyField.OUTPUT]
 
   const { gasFee, gasFeeBreakdown } = useSwapTxStore((s) => {
-    if (isLX(s)) {
+    if (isUniswapX(s)) {
       return {
         gasFee: s.gasFee,
         gasFeeBreakdown: s.gasFeeBreakdown,
@@ -38,7 +38,7 @@ export function useDebouncedGasInfo(): GasInfo {
     }
   })
 
-  const uniswapXGasFeeInfo = useFormattedLXGasFeeInfo(gasFeeBreakdown, chainId)
+  const uniswapXGasFeeInfo = useFormattedUniswapXGasFeeInfo(gasFeeBreakdown, chainId)
 
   const { gasFeeFormatted, gasFeeUSD } = useGasFeeFormattedDisplayAmounts({
     gasFee,

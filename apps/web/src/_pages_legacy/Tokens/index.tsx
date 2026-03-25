@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Trace } from '@luxdex/analytics'
-import { InterfacePageName } from '@luxdex/analytics-events'
+import { Trace } from '@luxamm/analytics'
+import { InterfacePageName } from '@luxamm/analytics-events'
 import { MAX_WIDTH_MEDIA_BREAKPOINT, MEDIUM_MEDIA_BREAKPOINT } from 'components/Tokens/constants'
 import { filterStringAtom } from 'components/Tokens/state'
 import NetworkFilter from 'components/Tokens/TokenTable/NetworkFilter'

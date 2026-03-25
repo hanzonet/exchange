@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxdex/analytics-events'
+import { SharedEventName } from '@luxamm/analytics-events'
 import React from 'react'
 import { Route, TabView, TabViewProps } from 'react-native-tab-view'
 import { SectionName } from '@luxexchange/lx/src/features/telemetry/constants'

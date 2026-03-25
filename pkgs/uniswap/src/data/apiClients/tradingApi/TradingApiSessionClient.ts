@@ -9,7 +9,7 @@ import {
 import type { PlanEndpoints } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import { getConfig } from '@luxexchange/config'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
-import { BASE_LUX_HEADERS } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { BASE_UNISWAP_HEADERS } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { getFeatureFlaggedHeaders } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { logger } from 'utilities/src/logger/logger'
 
@@ -17,11 +17,11 @@ function getHeaders(): HeadersInit {
   // Use API key auth instead of session auth, if the flag is enabled.
   if (getFeatureFlag(FeatureFlags.DisableSessionsForPlan)) {
     return {
-      ...BASE_LUX_HEADERS,
+      ...BASE_UNISWAP_HEADERS,
       'x-api-key': getConfig().tradingApiKey,
     }
   }
-  return BASE_LUX_HEADERS
+  return BASE_UNISWAP_HEADERS
 }
 
 const withSessionRetry = createWithSessionRetry({

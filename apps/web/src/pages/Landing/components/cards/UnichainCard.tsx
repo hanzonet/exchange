@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Image } from '@luxfi/ui/src'
 import { Unichain } from '@luxfi/ui/src/components/icons/Unichain'
 import { opacify } from '@luxfi/ui/src/theme'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { CardContents } from '~/pages/Landing/components/cards/CardContents'
 import { PillButton } from '~/pages/Landing/components/cards/PillButton'
 import ValuePropCard from '~/pages/Landing/components/cards/ValuePropCard'
@@ -14,7 +14,7 @@ export function UnichainCard() {
 
   return (
     <ValuePropCard
-      href={luxUrls.unichainUrl}
+      href={uniswapUrls.unichainUrl}
       color={primary}
       backgroundColor={opacify(6, primary)}
       $theme-dark={{ backgroundColor: opacify(12, primary) }}

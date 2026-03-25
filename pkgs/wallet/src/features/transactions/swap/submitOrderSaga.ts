@@ -17,7 +17,7 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionTypeInfo,
-  LXOrderDetails,
+  UniswapXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import { createTransactionId } from 'uniswap/src/utils/createTransactionId'
@@ -33,7 +33,7 @@ import { getSignerManager } from '@luxfi/wallet/src/features/wallet/context'
 // the order should not be submitted if too much time has passed as it may be stale.
 export const ORDER_STALENESS_THRESHOLD = 45 * ONE_SECOND_MS
 
-export interface SubmitLXOrderParams {
+export interface SubmitUniswapXOrderParams {
   // internal id used for tracking transactions before they're submitted
   txId?: string
   quote: TradingApi.DutchQuoteV2 | TradingApi.DutchQuoteV3 | TradingApi.PriorityQuote
@@ -48,7 +48,7 @@ export interface SubmitLXOrderParams {
   onFailure: () => void
 }
 
-export function* submitLXOrder(params: SubmitLXOrderParams) {
+export function* submitUniswapXOrder(params: SubmitUniswapXOrderParams) {
   const { quote, routing, permit, approveTxHash, txId, chainId, typeInfo, account, analytics, onSuccess, onFailure } =
     params
 
@@ -65,7 +65,7 @@ export function* submitLXOrder(params: SubmitLXOrderParams) {
     status: TransactionStatus.Pending,
     queueStatus: QueuedOrderStatus.Waiting,
     transactionOriginType: TransactionOriginType.Internal,
-  } satisfies LXOrderDetails
+  } satisfies UniswapXOrderDetails
 
   yield* put(transactionActions.addTransaction(order))
   logger.debug('submitOrder', 'addOrder', 'order added:', { chainId, orderHash, ...typeInfo })

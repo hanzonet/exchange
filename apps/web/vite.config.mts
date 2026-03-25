@@ -232,8 +232,8 @@ export default defineConfig(({ mode }) => {
     '@luxexchange/websocket/src': path.resolve(__dirname, '../../pkgs/websocket/src'),
     '@luxexchange/websocket': path.resolve(__dirname, '../../pkgs/websocket'),
     // @luxexchange/* aliases (workspace package scope)
-    '@luxexchange/lx/src': path.resolve(__dirname, '../../pkgs/uniswap/src'),
-    '@luxexchange/lx': path.resolve(__dirname, '../../pkgs/uniswap'),
+    '@luxexchange/lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
+    '@luxexchange/lx': path.resolve(__dirname, '../../pkgs/lx'),
     '@luxexchange/config': path.resolve(__dirname, '../../pkgs/config'),
     '@luxexchange/sessions': path.resolve(__dirname, '../../pkgs/sessions'),
     // @luxfi/* aliases (shared ecosystem packages)
@@ -266,6 +266,11 @@ export default defineConfig(({ mode }) => {
     'wallet': path.resolve(__dirname, '../../pkgs/wallet'),
     'lx/src': path.resolve(__dirname, '../../pkgs/lx/src'),
     'lx': path.resolve(__dirname, '../../pkgs/lx'),
+    // @luxamm package aliases (handle renamed packages or thin wrappers missing artifacts)
+    '@luxamm/sdk': path.resolve(__dirname, '../../node_modules/@luxamm/luxswap-sdk'),
+    '@luxamm/merkle-distributor/build': path.resolve(__dirname, '../../node_modules/@uniswap/merkle-distributor/build'),
+    '@luxamm/v3-core/artifacts': path.resolve(__dirname, '../../node_modules/@uniswap/v3-core/artifacts'),
+    '@luxamm/v3-periphery/artifacts': path.resolve(__dirname, '../../node_modules/@uniswap/v3-periphery/artifacts'),
     // tsconfig path alias ~ → src/
     '~': path.resolve(__dirname, 'src'),
     // Bare src-relative imports (CRA baseUrl convention — pnpm strict mode needs explicit aliases)

@@ -1,5 +1,5 @@
 import { DAI, USDT } from 'uniswap/src/constants/tokens'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { WETH } from 'uniswap/src/test/fixtures/lib/sdk'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { DEFAULT_FEE_DATA, DYNAMIC_FEE_DATA } from '~/components/Liquidity/Create/types'
@@ -386,7 +386,7 @@ test.describe(
       })
 
       test('V3 can increment/decrement price range correctly', async ({ page, graphql }) => {
-        await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.quote })
+        await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.quote })
         await page.goto(
           buildUrl({
             subPath: '/v3',

@@ -1,11 +1,11 @@
 import DEXRouterLabel from '~/components/RouterLabel/DEXRouterLabel'
 import type { DefaultTheme } from '~/lib/deprecated-styled'
 import { QuoteMethod, SubmittableTrade } from '~/state/routing/types'
-import { isLXTrade } from '~/state/routing/utils'
+import { isUniswapXTrade } from '~/state/routing/utils'
 import { ThemedText } from '~/theme/components'
 
 export default function RouterLabel({ trade, color }: { trade: SubmittableTrade; color?: keyof DefaultTheme }) {
-  if (isLXTrade(trade)) {
+  if (isUniswapXTrade(trade)) {
     return (
       <DEXRouterLabel>
         <ThemedText.BodySmall>Lux X</ThemedText.BodySmall>

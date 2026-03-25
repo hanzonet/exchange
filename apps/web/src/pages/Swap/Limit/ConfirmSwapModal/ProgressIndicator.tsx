@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, useSporeColors } from '@luxfi/ui/src'
 import { DEP_accentColors } from '@luxfi/ui/src/theme'
 import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import Column from '~/components/deprecated/Column'
 import { Sign } from '~/components/Icons/Sign'
@@ -118,7 +118,7 @@ export default function ProgressIndicator({
         actionRequiredTitle: t('common.wrapIn', { symbol: nativeCurrency.symbol }),
         inProgressTitle: t('common.wrappingToken', { symbol: nativeCurrency.symbol }),
         learnMoreLinkText: t('common.whyWrap', { symbol: nativeCurrency.symbol }),
-        learnMoreLinkHref: luxUrls.helpArticleUrls.wethExplainer,
+        learnMoreLinkHref: uniswapUrls.helpArticleUrls.wethExplainer,
       },
       [ConfirmModalState.RESETTING_TOKEN_ALLOWANCE]: {
         icon: <CurrencyLogo currency={trade?.inputAmount.currency} size={ICON_SIZE} />,
@@ -134,7 +134,7 @@ export default function ProgressIndicator({
         actionRequiredTitle: t('common.wallet.approve'),
         inProgressTitle: t('common.approvePending'),
         learnMoreLinkText: t('common.whyApprove'),
-        learnMoreLinkHref: luxUrls.helpArticleUrls.approvalsExplainer,
+        learnMoreLinkHref: uniswapUrls.helpArticleUrls.approvalsExplainer,
       },
       [ConfirmModalState.PERMITTING]: {
         icon: <Sign />,
@@ -142,7 +142,7 @@ export default function ProgressIndicator({
         previewTitle: t('common.signMessage'),
         actionRequiredTitle: t('common.signMessageWallet'),
         learnMoreLinkText: t('common.whySign'),
-        learnMoreLinkHref: luxUrls.helpArticleUrls.approvalsExplainer,
+        learnMoreLinkHref: uniswapUrls.helpArticleUrls.approvalsExplainer,
       },
       [ConfirmModalState.PENDING_CONFIRMATION]: {
         icon: <Swap />,
@@ -156,8 +156,8 @@ export default function ProgressIndicator({
         }),
         learnMoreLinkText: isLimitTrade(trade) ? t('limits.learnMore') : t('common.learnMoreSwap'),
         learnMoreLinkHref: isLimitTrade(trade)
-          ? luxUrls.helpArticleUrls.limitsInfo
-          : luxUrls.helpArticleUrls.howToSwapTokens,
+          ? uniswapUrls.helpArticleUrls.limitsInfo
+          : uniswapUrls.helpArticleUrls.howToSwapTokens,
       },
     }),
     [trade, inputTokenColor, t, nativeCurrency.symbol, colors],

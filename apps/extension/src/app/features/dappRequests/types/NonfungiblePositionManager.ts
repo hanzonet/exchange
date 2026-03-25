@@ -1,4 +1,4 @@
-import { NonfungiblePositionManager } from '@luxdex/v3-sdk'
+import { NonfungiblePositionManager } from '@luxamm/v3-sdk'
 import {
   NFPMCommand,
   NfpmCommandSchema,

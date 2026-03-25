@@ -28,7 +28,7 @@ import {
   TransactionReceipt,
   TransactionStatus,
   TransactionType,
-  LXOrderDetails,
+  UniswapXOrderDetails,
   UnknownTransactionInfo,
   WCConfirmInfo,
   WrapTransactionInfo,
@@ -176,7 +176,7 @@ export const finalizedTransactionAction = createFixture<ReturnType<typeof finali
   type: 'transactions/finalizeTransaction',
 }))
 
-export const uniswapXOrderDetails = createFixture<LXOrderDetails>()(() => {
+export const uniswapXOrderDetails = createFixture<UniswapXOrderDetails>()(() => {
   const outputCurrency = USDC_MAINNET
 
   return {
@@ -184,7 +184,7 @@ export const uniswapXOrderDetails = createFixture<LXOrderDetails>()(() => {
     orderHash: faker.datatype.uuid(),
     status: TransactionStatus.Pending,
     typeInfo: {
-      isLXOrder: true,
+      isUniswapXOrder: true,
       type: TransactionType.Swap,
       tradeType: TradeType.EXACT_INPUT,
       inputCurrencyId: currencyId(DAI),

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import {
-  EthAsErc20LXProperties,
+  EthAsErc20DEXProperties,
   Experiments,
   useExperimentValueWithExposureLoggingDisabled,
 } from '@luxexchange/gating'
@@ -49,8 +49,8 @@ function statsigThresholdsObjectToChainIdObject(
 
 function useMinUsdThresholds(): Partial<Record<UniverseChainId, number>> {
   const thresholds = useExperimentValueWithExposureLoggingDisabled({
-    experiment: Experiments.EthAsErc20LX,
-    param: EthAsErc20LXProperties.MinEthErc20USDValueThresholdByChain,
+    experiment: Experiments.EthAsErc20DEX,
+    param: EthAsErc20DEXProperties.MinEthErc20USDValueThresholdByChain,
     defaultValue: DEFAULT_MIN_USD_THRESHOLDS,
   })
 
@@ -59,7 +59,7 @@ function useMinUsdThresholds(): Partial<Record<UniverseChainId, number>> {
   } catch (error) {
     logger.error(error, {
       tags: {
-        file: 'useEthAsErc20LXQualifyingEvent',
+        file: 'useEthAsErc20UniswapXQualifyingEvent',
         function: 'useMinUsdThresholds',
       },
       extra: {
@@ -178,7 +178,7 @@ function useNativeAllowanceCheck({
 }
 
 /**
- * Logs a qualifying event for the EthAsErc20LX experiment once per
+ * Logs a qualifying event for the EthAsErc20DEX experiment once per
  * unique quote, when all eligibility conditions are met:
  *
  * 1. EVM wallet is connected
@@ -190,7 +190,7 @@ function useNativeAllowanceCheck({
  * 7. Wallet is delegated to Uniswap (via /check_delegation API)
  * 8. Wallet has native allowance > 0 for the ERC20 ETH contract (on-chain check)
  */
-export function useEthAsErc20LXQualifyingEvent(derivedSwapInfo: DerivedSwapInfo): void {
+export function useEthAsErc20UniswapXQualifyingEvent(derivedSwapInfo: DerivedSwapInfo): void {
   const { evmAccount } = useWallet()
   const walletAddress = evmAccount?.address
   const { chainId } = derivedSwapInfo
@@ -239,6 +239,6 @@ export function useEthAsErc20LXQualifyingEvent(derivedSwapInfo: DerivedSwapInfo)
     }
 
     lastLoggedPairKeyRef.current = pairKey
-    logExperimentQualifyingEvent({ experiment: Experiments.EthAsErc20LX })
+    logExperimentQualifyingEvent({ experiment: Experiments.EthAsErc20DEX })
   }, [allConditionsMet, pairKey])
 }

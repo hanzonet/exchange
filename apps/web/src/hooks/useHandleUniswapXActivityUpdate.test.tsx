@@ -5,16 +5,16 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-  type LXOrderDetails,
+  type UniswapXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx } from 'uniswap/src/features/transactions/types/utils'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
 import { useHandleLXActivityUpdate } from '~/hooks/useHandleLXActivityUpdate'
-import { ActivityUpdateTransactionType, type LXOrderUpdate } from '~/state/activity/types'
+import { ActivityUpdateTransactionType, type UniswapXOrderUpdate } from '~/state/activity/types'
 import { mocked } from '~/test-utils/mocked'
 import { renderHook } from '~/test-utils/render'
-import { logLXSwapFinalized } from '~/tracing/swapFlowLoggers'
+import { logUniswapXSwapFinalized } from '~/tracing/swapFlowLoggers'
 
 const dispatchMock = vi.fn()
 vi.mock('~/state/hooks', async () => {
@@ -36,7 +36,7 @@ vi.mock('~/components/Popups/registry', () => ({
 }))
 
 vi.mock('~/tracing/swapFlowLoggers', () => ({
-  logLXSwapFinalized: vi.fn(),
+  logUniswapXSwapFinalized: vi.fn(),
 }))
 
 vi.mock('uniswap/src/features/transactions/types/utils', () => ({
@@ -48,7 +48,7 @@ describe('useHandleLXActivityUpdate', () => {
     vi.clearAllMocks()
   })
 
-  const createMockLXOrderDetails = (overrides?: Partial<LXOrderDetails>): LXOrderDetails => ({
+  const createMockUniswapXOrderDetails = (overrides?: Partial<UniswapXOrderDetails>): UniswapXOrderDetails => ({
     id: 'order-id',
     from: '0xSenderAddress',
     chainId: UniverseChainId.Mainnet,
@@ -80,13 +80,13 @@ describe('useHandleLXActivityUpdate', () => {
   })
 
   const createMockActivity = (
-    originalOverrides?: Partial<LXOrderDetails>,
-    updateOverrides?: Partial<LXOrderDetails>,
-  ): LXOrderUpdate => ({
-    type: ActivityUpdateTransactionType.LXOrder,
+    originalOverrides?: Partial<UniswapXOrderDetails>,
+    updateOverrides?: Partial<UniswapXOrderDetails>,
+  ): UniswapXOrderUpdate => ({
+    type: ActivityUpdateTransactionType.UniswapXOrder,
     chainId: UniverseChainId.Mainnet,
-    original: createMockLXOrderDetails(originalOverrides),
-    update: createMockLXOrderDetails({
+    original: createMockUniswapXOrderDetails(originalOverrides),
+    update: createMockUniswapXOrderDetails({
       ...originalOverrides,
       ...updateOverrides,
     }),
@@ -262,7 +262,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).toHaveBeenCalledWith({
+      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: '0xSuccessHash',
         orderHash: '0xOrderHash',
@@ -299,7 +299,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).not.toHaveBeenCalled()
+      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
     })
 
     it('should log canceled order', () => {
@@ -318,7 +318,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).toHaveBeenCalledWith({
+      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: '0xCancelHash',
         orderHash: '0xOrderHash',
@@ -355,7 +355,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).toHaveBeenCalledWith({
+      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: undefined,
         orderHash: '0xOrderHash',
@@ -389,7 +389,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).not.toHaveBeenCalled()
+      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
     })
 
     it('should not log for pending status', () => {
@@ -405,7 +405,7 @@ describe('useHandleLXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logLXSwapFinalized).not.toHaveBeenCalled()
+      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
     })
   })
 })

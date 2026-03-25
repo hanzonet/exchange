@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Trace, TraceEvent } from '@luxdex/analytics'
-import { BrowserEvent, InterfaceElementName, InterfacePageName, SharedEventName } from '@luxdex/analytics-events'
+import { Trace, TraceEvent } from '@luxamm/analytics'
+import { BrowserEvent, InterfaceElementName, InterfacePageName, SharedEventName } from '@luxamm/analytics-events'
 import { AboutFooter } from 'components/About/AboutFooter'
 import Card, { CardType } from 'components/About/Card'
 import { MAIN_CARDS, MORE_CARDS } from 'components/About/constants'

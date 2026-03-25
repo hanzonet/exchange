@@ -1,9 +1,9 @@
 import { createDataServiceApiClient } from '@luxexchange/api'
-import { luxUrls } from 'uniswap/src/constants/urls'
-import { createLuxFetchClient } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 
-const DataServiceFetchClient = createLuxFetchClient({
-  baseUrl: luxUrls.dataApiServiceUrl,
+const DataServiceFetchClient = createUniswapFetchClient({
+  baseUrl: uniswapUrls.dataApiServiceUrl,
 })
 
 export const DataServiceApiClient = createDataServiceApiClient({

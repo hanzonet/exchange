@@ -9,11 +9,11 @@ import { NetworkFeeWarning } from 'uniswap/src/components/gas/NetworkFeeWarning'
 import { IndicativeLoadingWrapper } from 'uniswap/src/components/misc/IndicativeLoadingWrapper'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import {
-  useFormattedLXGasFeeInfo,
+  useFormattedDEXGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
 } from 'uniswap/src/features/gas/hooks'
-import { LXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { isZero } from 'uniswap/src/utils/number'
 import { isWebApp } from 'utilities/src/platform'
 
@@ -28,7 +28,7 @@ export function NetworkFee({
 }: {
   chainId: UniverseChainId
   gasFee: GasFeeResult
-  uniswapXGasBreakdown?: LXGasBreakdown
+  uniswapXGasBreakdown?: UniswapXGasBreakdown
   transactionUSDValue?: Maybe<CurrencyAmount<Currency>>
   indicative?: boolean
   includesDelegation?: boolean
@@ -43,7 +43,7 @@ export function NetworkFee({
     includesDelegation,
   })
 
-  const uniswapXGasFeeInfo = useFormattedLXGasFeeInfo(uniswapXGasBreakdown, chainId)
+  const uniswapXGasFeeInfo = useFormattedDEXGasFeeInfo(uniswapXGasBreakdown, chainId)
   const isGasFeeFree = gasFee.value !== undefined && isZero(gasFee.value)
 
   const gasFeeHighRelativeToValue = useGasFeeHighRelativeToValue(gasFeeUSD, transactionUSDValue)
@@ -72,7 +72,7 @@ export function NetworkFee({
                 {t('common.text.notAvailable')}
               </Text>
             ) : uniswapXGasBreakdown ? (
-              <LXFee
+              <UniswapXFee
                 gasFee={gasFeeFormatted}
                 isFree={isGasFeeFree}
                 preSavingsGasFee={uniswapXGasFeeInfo?.preSavingsGasFeeFormatted}
@@ -97,14 +97,14 @@ export function NetworkFee({
   )
 }
 
-type LXFeeProps = {
+type UniswapXFeeProps = {
   gasFee: string
   isFree?: boolean
   preSavingsGasFee?: string
   smaller?: boolean
   loading?: boolean
 }
-export function LXFee({ gasFee, isFree, preSavingsGasFee, smaller = false }: LXFeeProps): JSX.Element {
+export function UniswapXFee({ gasFee, isFree, preSavingsGasFee, smaller = false }: UniswapXFeeProps): JSX.Element {
   const { t } = useTranslation()
   const gasFeeDisplayed = isFree ? t('common.free') : gasFee
 

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
 import { Blocked } from '@luxfi/ui/src/components/icons/Blocked'
 import { Dialog } from '@luxexchange/lx/src/components/dialog/Dialog'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
@@ -99,7 +99,7 @@ function DelegationMismatchModal({ onClose }: DelegationMismatchModalProps) {
         icon={<WalletAlertBadge walletIcon={iconSrc} />}
         primaryButton={primaryButton}
         secondaryButton={secondaryButton}
-        learnMoreUrl={luxUrls.helpArticleUrls.mismatchedImports}
+        learnMoreUrl={uniswapUrls.helpArticleUrls.mismatchedImports}
         learnMoreTextColor="$accent1"
         learnMoreTextVariant="buttonLabel3"
         onClose={onClose}

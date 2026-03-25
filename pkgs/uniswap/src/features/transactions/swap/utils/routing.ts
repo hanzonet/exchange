@@ -13,7 +13,7 @@ export const UNISWAPX_ROUTING_VARIANTS = [
 ] as const
 type LXRouting = (typeof UNISWAPX_ROUTING_VARIANTS)[number]
 
-export function isLX<T extends { routing: TradingApi.Routing }>(
+export function isUniswapX<T extends { routing: TradingApi.Routing }>(
   obj: T,
 ): obj is Extract<T, { routing: LXRouting }> {
   return UNISWAPX_ROUTING_VARIANTS.includes(obj.routing as LXRouting)
@@ -77,7 +77,7 @@ export function isMultiChainGasQuote(quote: { routing: TradingApi.Routing } | un
 
 // Returns the first EVM txRequest in a SwapTxAndGasInfo object if it exists, otherwise undefined
 export function getEVMTxRequest(swapTxContext: SwapTxAndGasInfo): ValidatedTransactionRequest | undefined {
-  if (isJupiter(swapTxContext) || isLX(swapTxContext)) {
+  if (isJupiter(swapTxContext) || isUniswapX(swapTxContext)) {
     return undefined
   }
   return swapTxContext.txRequests?.[0]

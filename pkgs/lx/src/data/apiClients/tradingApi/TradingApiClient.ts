@@ -9,13 +9,13 @@ import {
   Layers,
 } from '@luxexchange/gating'
 import { config } from '@luxexchange/lx/src/config'
-import { tradingApiVersionPrefix, luxUrls } from '@luxexchange/lx/src/constants/urls'
-import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { tradingApiVersionPrefix, uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { createUniswapFetchClient } from '@luxexchange/lx/src/data/apiClients/createUniswapFetchClient'
 import { filterChainIdsByPlatform } from '@luxexchange/lx/src/features/chains/utils'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 
-const TradingFetchClient = createLuxFetchClient({
-  baseUrl: luxUrls.tradingApiUrl,
+const TradingFetchClient = createUniswapFetchClient({
+  baseUrl: uniswapUrls.tradingApiUrl,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,
   },
@@ -64,11 +64,11 @@ export const getFeatureFlaggedHeaders = (
   const uniroutePulumiEnabled = getFeatureFlag(FeatureFlags.UniroutePulumiEnabled)
   const ethAsErc20LXEnabled = getExperimentValueFromLayer<
     typeof Layers.SwapPage,
-    Experiments.EthAsErc20LX,
+    Experiments.EthAsErc20DEX,
     boolean
   >({
     layerName: Layers.SwapPage,
-    param: EthAsErc20LXProperties.EthAsErc20LXEnabled,
+    param: EthAsErc20DEXProperties.EthAsErc20DEXEnabled,
     defaultValue: false,
   })
   const disableLuxInterfaceFees = getFeatureFlag(FeatureFlags.NoLuxInterfaceFees)

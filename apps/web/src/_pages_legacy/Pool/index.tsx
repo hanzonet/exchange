@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { Trace, TraceEvent } from '@luxdex/analytics'
-import { BrowserEvent, InterfaceElementName, InterfaceEventName, InterfacePageName } from '@luxdex/analytics-events'
+import { Trace, TraceEvent } from '@luxamm/analytics'
+import { BrowserEvent, InterfaceElementName, InterfaceEventName, InterfacePageName } from '@luxamm/analytics-events'
 import { useWeb3React } from '@web3-react/core'
 import { ButtonGray, ButtonPrimary, ButtonText } from 'components/Button'
 import { AutoColumn } from 'components/Column'

@@ -9,7 +9,7 @@ import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/type
 import { WarningModalContent } from 'uniswap/src/components/modals/WarningModal/WarningModal'
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import WarningIcon from 'uniswap/src/components/warnings/WarningIcon'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { submitTokenWarningDataReport } from 'uniswap/src/features/reporting/reports'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
@@ -209,7 +209,7 @@ function TokenWarningModalContent({
                 display="inline"
                 textColor="$neutral1"
                 textVariant="buttonLabel3"
-                url={luxUrls.helpArticleUrls.tokenWarning}
+                url={uniswapUrls.helpArticleUrls.tokenWarning}
               />
             </Text>
           }

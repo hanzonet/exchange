@@ -80,3 +80,5 @@ export function uniswapWalletConnect(): CreateConnectorFn {
     }
   })
 }
+
+export const luxWalletConnect = uniswapWalletConnect

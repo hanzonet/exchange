@@ -1,7 +1,7 @@
 import { useFormattedCurrencyAmountAndUSDValue } from '@luxexchange/lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
-import { isLX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx } from '@luxexchange/lx/src/features/transactions/types/utils'
 import { buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
@@ -31,6 +31,6 @@ export function useNetworkFee(transactionDetails: TransactionDetails): {
     valueType: transactionDetails.networkFee?.valueType,
     formatter,
     isApproximateAmount: false,
-    isLX: isLX(transactionDetails),
+    isUniswapX: isUniswapX(transactionDetails),
   })
 }

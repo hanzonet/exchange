@@ -27,7 +27,7 @@ import type {
   SwapTxAndGasInfoService,
 } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import { createSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { createLXSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lx/uniswapXSwapTxAndGasInfoService'
+import { createUniswapXSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/uniswapXSwapTxAndGasInfoService'
 import { createWrapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/wrap/wrapTxAndGasInfoService'
 import {
   useSwapFormStore,
@@ -113,7 +113,7 @@ export function useSwapTxAndGasInfoService(): SwapTxAndGasInfoService {
   }, [swapConfig, transactionSettings, instructionService, decorateWithEVMLogging])
 
   const uniswapXSwapTxInfoService = useMemo(() => {
-    return createLXSwapTxAndGasInfoService()
+    return createUniswapXSwapTxAndGasInfoService()
   }, [])
 
   const chainedSwapTxInfoService = useMemo(() => {

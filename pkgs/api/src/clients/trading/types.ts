@@ -52,7 +52,7 @@ export type GasFeeResponse = {
   gasEstimates: GasEstimate[]
 }
 
-export type FormattedLXGasFeeInfo = {
+export type FormattedUniswapXGasFeeInfo = {
   approvalFeeFormatted?: string
   swapFeeFormatted: string
   preSavingsGasFeeFormatted: string

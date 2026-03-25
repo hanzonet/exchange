@@ -2,7 +2,7 @@ import { ApolloLink, createHttpLink } from '@apollo/client'
 import { onError } from '@apollo/client/link/error'
 import { RestLink } from 'apollo-link-rest'
 import { config } from 'uniswap/src/config'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { getVersionHeader } from 'uniswap/src/data/getVersionHeader'
 import { logger } from 'utilities/src/logger/logger'
 import { isMobileApp } from 'utilities/src/platform'
@@ -11,7 +11,7 @@ import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
 // Handles fetching data from REST APIs
 // Responses will be stored in graphql cache
 export const getRestLink = (): ApolloLink => {
-  const restUri = luxUrls.apiBaseUrl
+  const restUri = uniswapUrls.apiBaseUrl
 
   return new RestLink({
     uri: restUri,
@@ -20,7 +20,7 @@ export const getRestLink = (): ApolloLink => {
       'X-API-KEY': config.uniswapApiKey,
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
-      Origin: luxUrls.requestOriginUrl,
+      Origin: uniswapUrls.requestOriginUrl,
     },
   })
 }
@@ -39,20 +39,20 @@ export const getCustomGraphqlHttpLink = (endpoint: CustomEndpoint): ApolloLink =
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
       // TODO: [MOB-3883] remove once API gateway supports mobile origin URL
-      Origin: luxUrls.apiOrigin,
+      Origin: uniswapUrls.apiOrigin,
     },
   })
 
 export const getGraphqlHttpLink = (): ApolloLink =>
   createHttpLink({
-    uri: luxUrls.graphQLUrl,
+    uri: uniswapUrls.graphQLUrl,
     headers: {
       'Content-Type': 'application/json',
       'X-API-KEY': config.uniswapApiKey,
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
       // TODO: [MOB-3883] remove once API gateway supports mobile origin URL
-      Origin: luxUrls.apiOrigin,
+      Origin: uniswapUrls.apiOrigin,
     },
   })
 

@@ -9,7 +9,7 @@ import { StepRowProps, StepRowSkeleton } from 'uniswap/src/components/ConfirmSwa
 import { StepStatus } from 'uniswap/src/components/ConfirmSwapModal/types'
 import { useSecondsUntilDeadline } from 'uniswap/src/components/ConfirmSwapModal/useSecondsUntilDeadline'
 import { SplitLogo } from 'uniswap/src/components/CurrencyLogo/SplitLogo'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
@@ -98,8 +98,8 @@ export function SwapTransactionPlanStepRow({
       learnMore={{
         url:
           step.type === TransactionStepType.SwapTransactionBatched
-            ? luxUrls.helpArticleUrls.batchedSwaps
-            : luxUrls.helpArticleUrls.howToSwapTokens,
+            ? uniswapUrls.helpArticleUrls.batchedSwaps
+            : uniswapUrls.helpArticleUrls.howToSwapTokens,
         text: t('common.learnMoreSwap'),
       }}
       status={status}

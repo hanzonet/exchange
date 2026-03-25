@@ -4,7 +4,7 @@ import { Button, Flex, Text, useSporeColors } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { Passkey } from 'ui/src/components/icons/Passkey'
 import { Modal } from 'uniswap/src/components/modals/Modal'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
@@ -67,7 +67,7 @@ export function PasskeysHelpModal({
   const { t } = useTranslation()
   const colors = useSporeColors()
   const onPressGetHelp = async (): Promise<void> => {
-    await openUri({ uri: luxUrls.helpArticleUrls.passkeysInfo })
+    await openUri({ uri: uniswapUrls.helpArticleUrls.passkeysInfo })
   }
   const displayName = accountName ?? t('common.thisAccount')
   const modalContent = passkeysHelpModalContent[type]

@@ -7,7 +7,7 @@ import {
   UNISWAP_URL_SCHEME_WALLETCONNECT_AS_PARAM,
   UNISWAP_WALLETCONNECT_URL,
 } from 'src/features/deepLinking/constants'
-import { LUX_WEB_HOSTNAME } from '@luxexchange/lx/src/constants/urls'
+import { UNISWAP_WEB_HOSTNAME } from '@luxexchange/lx/src/constants/urls'
 import { isCurrencyIdValid } from '@luxexchange/lx/src/utils/currencyId'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 
@@ -251,8 +251,8 @@ export function parseDeepLinkUrl(urlString: string): DeepLinkActionResult {
   return { action: DeepLinkAction.Unknown, data }
 }
 const handlers: Record<string, DeepLinkHandler> = {
-  [LUX_WEB_HOSTNAME]: (url, data) => {
-    const urlParts = url.href.split(`${LUX_WEB_HOSTNAME}/`)
+  [UNISWAP_WEB_HOSTNAME]: (url, data) => {
+    const urlParts = url.href.split(`${UNISWAP_WEB_HOSTNAME}/`)
     const urlPath = urlParts.length >= 1 ? urlParts[1] : ''
     return { action: DeepLinkAction.LuxWebLink, data: { ...data, urlPath: urlPath ?? '' } }
   },

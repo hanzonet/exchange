@@ -7,13 +7,13 @@ import {
 } from '@luxexchange/api'
 import { getConfig } from '@luxexchange/config'
 import { getIsSessionServiceEnabled } from '@luxexchange/gating'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 
 const UnitagsApiFetchClient = createFetchClient({
   baseUrl:
     getConfig().unitagsApiUrlOverride || getCloudflareApiBaseUrl({ flow: TrafficFlows.Unitags, postfix: 'v2/unitags' }),
   getSessionService: () =>
-    provideSessionService({ getBaseUrl: () => luxUrls.apiBaseUrlV2, getIsSessionServiceEnabled }),
+    provideSessionService({ getBaseUrl: () => uniswapUrls.apiBaseUrlV2, getIsSessionServiceEnabled }),
 })
 
 export const UnitagsApiClient = createUnitagsApiClient({

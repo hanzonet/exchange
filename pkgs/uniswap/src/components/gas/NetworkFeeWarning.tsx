@@ -1,4 +1,4 @@
-import { FormattedLXGasFeeInfo } from '@luxexchange/api'
+import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
 import { PropsWithChildren } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Text, LXText, useSporeColors } from 'ui/src'
@@ -9,7 +9,7 @@ import { NetworkCostTooltip, NetworkCostTooltipLX } from 'uniswap/src/components
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
 import { InfoTooltipProps } from 'uniswap/src/components/tooltip/InfoTooltipProps'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { NetworkCostBanner } from 'uniswap/src/features/smartWallet/banner/NetworkCostBanner'
@@ -30,7 +30,7 @@ export function NetworkFeeWarning({
   disabled?: boolean
   tooltipTrigger?: InfoTooltipProps['trigger']
   placement?: InfoTooltipProps['placement']
-  uniswapXGasFeeInfo?: FormattedLXGasFeeInfo
+  uniswapXGasFeeInfo?: FormattedUniswapXGasFeeInfo
   chainId: UniverseChainId
   includesDelegation?: boolean
 }>): JSX.Element {
@@ -46,7 +46,7 @@ export function NetworkFeeWarning({
         isMobileApp && (
           <NetworkCostBanner
             bannerText={t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })}
-            url={luxUrls.helpArticleUrls.smartWalletDelegation}
+            url={uniswapUrls.helpArticleUrls.smartWalletDelegation}
           />
         )
       }
@@ -98,7 +98,7 @@ function NetworkFeeText({
 }: {
   includesDelegation?: boolean
   showHighGasFeeUI?: boolean
-  uniswapXGasFeeInfo?: FormattedLXGasFeeInfo
+  uniswapXGasFeeInfo?: FormattedUniswapXGasFeeInfo
   chainId: UniverseChainId
 }): JSX.Element {
   const { t } = useTranslation()

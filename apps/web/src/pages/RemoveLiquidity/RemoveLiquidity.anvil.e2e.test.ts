@@ -1,7 +1,7 @@
 import { getPosition } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
 import { LiquidityService } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
 import { USDT } from '@luxexchange/lx/src/constants/tokens'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ONE_MILLION_USDT } from '~/playwright/anvil/utils'
 import { expect, getTest } from '~/playwright/fixtures'
 import { stubLiquidityServiceEndpoint } from '~/playwright/fixtures/liquidityService'
@@ -33,7 +33,7 @@ test.describe(
       })
       await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
       await page.route(
-        `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+        `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
         async (route) => {
           await route.fulfill({ path: Mocks.Positions.get_v4_position })
         },

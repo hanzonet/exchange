@@ -23,10 +23,10 @@ import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFille
 import { iconSizes } from '@luxfi/ui/src/theme'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
 import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useGetPoolsRewards } from '@luxexchange/lx/src/data/rest/getPoolsRewards'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
-import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
 import { HexString } from '@luxfi/utilities/src/addresses/hex'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -246,8 +246,8 @@ function LpIncentiveRewardsCard({
                           : t('pool.incentives.administeredRewards')}
                       </Text>
                       {!rewardsError && (
-                        <Trace logPress eventOnTrigger={LuxEventName.LpIncentiveLearnMoreCtaClicked}>
-                          <LearnMoreLink textVariant="buttonLabel4" url={luxUrls.helpArticleUrls.lpIncentiveInfo} />
+                        <Trace logPress eventOnTrigger={UniswapEventName.LpIncentiveLearnMoreCtaClicked}>
+                          <LearnMoreLink textVariant="buttonLabel4" url={uniswapUrls.helpArticleUrls.lpIncentiveInfo} />
                         </Trace>
                       )}
                     </Flex>
@@ -258,7 +258,7 @@ function LpIncentiveRewardsCard({
           </Flex>
         </Flex>
         <Flex gap="$spacing2">
-          <Trace logPress eventOnTrigger={LuxEventName.LpIncentiveLearnMoreCtaClicked}>
+          <Trace logPress eventOnTrigger={UniswapEventName.LpIncentiveLearnMoreCtaClicked}>
             <TouchableArea
               group="item"
               animation={null}

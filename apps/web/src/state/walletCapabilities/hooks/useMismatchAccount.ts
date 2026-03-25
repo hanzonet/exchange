@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { selectHasShownMismatchToast } from '@luxexchange/lx/src/features/behaviorHistory/selectors'
 import { setHasShownMismatchToast } from '@luxexchange/lx/src/features/behaviorHistory/slice'
 import { createHasMismatchUtil, type HasMismatchUtil } from '@luxexchange/lx/src/features/smartWallet/mismatch/mismatch'
-import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { getLogger } from '@luxfi/utilities/src/logger/logger'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'
@@ -55,7 +55,7 @@ export function useHasMismatchCallback(): HasMismatchUtil {
 
   const onMismatchDetected = useEvent(
     (payload: { chainId: number; isDelegated: boolean; delegatedAddress: Address }) => {
-      sendAnalyticsEvent(LuxEventName.SmartWalletMismatchDetected, {
+      sendAnalyticsEvent(UniswapEventName.SmartWalletMismatchDetected, {
         chainId: String(payload.chainId),
         delegatedAddress: payload.delegatedAddress,
       })

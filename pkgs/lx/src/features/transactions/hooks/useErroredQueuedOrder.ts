@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useSelectAddressTransactions } from 'uniswap/src/features/transactions/selectors'
-import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   QueuedOrderStatus,
   TransactionDetails,
   TransactionStatus,
-  LXOrderDetails,
+  UniswapXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 
 const ERRORED_QUEUE_STATUSES = [
@@ -15,14 +15,14 @@ const ERRORED_QUEUE_STATUSES = [
   QueuedOrderStatus.Stale,
 ] as const
 export type ErroredQueuedOrderStatus = (typeof ERRORED_QUEUE_STATUSES)[number]
-export type ErroredQueuedOrder = LXOrderDetails & {
+export type ErroredQueuedOrder = UniswapXOrderDetails & {
   status: TransactionStatus.Pending
   queueStatus: ErroredQueuedOrderStatus
 }
 
 function isErroredQueuedOrder(tx: TransactionDetails): tx is ErroredQueuedOrder {
   return Boolean(
-    isLX(tx) &&
+    isUniswapX(tx) &&
       tx.status === TransactionStatus.Pending &&
       tx.queueStatus &&
       ERRORED_QUEUE_STATUSES.some((status) => status === tx.queueStatus),

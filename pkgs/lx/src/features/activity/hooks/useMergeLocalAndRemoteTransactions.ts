@@ -7,7 +7,7 @@ import {
   type ActivePlanState,
   activePlanStore,
 } from 'uniswap/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { isBridge, isClassic, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isBridge, isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
@@ -119,7 +119,7 @@ export function useMergeLocalAndRemoteTransactions({
     // has a filled order (orderHash + txHash), while the other has it pending (orderHash only).
     const orderHashToTxHashMap = new Map<string, string>()
     function populateOrderHashToTxHashMap(tx: TransactionDetails): void {
-      if (isLX(tx) && tx.hash && tx.orderHash) {
+      if (isUniswapX(tx) && tx.hash && tx.orderHash) {
         const txHash = ensureLeading0x(tx.hash.toLowerCase())
         const orderHash = ensureLeading0x(tx.orderHash.toLowerCase())
         orderHashToTxHashMap.set(orderHash, txHash)
@@ -139,7 +139,7 @@ export function useMergeLocalAndRemoteTransactions({
     function getTrackingHash(tx: TransactionDetails): string | undefined {
       if (tx.hash) {
         return ensureLeading0x(tx.hash.toLowerCase())
-      } else if (isLX(tx) && tx.orderHash) {
+      } else if (isUniswapX(tx) && tx.orderHash) {
         const orderHash = ensureLeading0x(tx.orderHash.toLowerCase())
         return orderHashToTxHashMap.get(orderHash) ?? orderHash
       } else if (tx.typeInfo.type === TransactionType.Plan) {

@@ -32,7 +32,7 @@ import {
   type SessionsEventName,
   type SwapBlockedCategory,
   type SwapEventName,
-  type LuxEventName,
+  type UniswapEventName,
   type UnitagEventName,
   type WalletEventName,
 } from '@luxexchange/lx/src/features/telemetry/constants'
@@ -1085,34 +1085,34 @@ export type UniverseEventProperties = {
     output?: Currency
   }
   [SwapEventName.SwapTokensReversed]: undefined
-  [LuxEventName.TooltipOpened]: ITraceContext & {
+  [UniswapEventName.TooltipOpened]: ITraceContext & {
     tooltip_name: string
   }
-  [LuxEventName.DelegationDetected]: {
+  [UniswapEventName.DelegationDetected]: {
     chainId: number
     delegationAddress: string
     isActiveChain?: boolean
   }
-  [LuxEventName.ExperimentQualifyingEvent]: {
+  [UniswapEventName.ExperimentQualifyingEvent]: {
     experiment: Experiments
   }
-  [LuxEventName.BalancesReport]: {
+  [UniswapEventName.BalancesReport]: {
     total_balances_usd: number
     wallets: string[]
     balances: number[]
   }
-  [LuxEventName.BalancesReportPerChain]: {
+  [UniswapEventName.BalancesReportPerChain]: {
     total_balances_usd_per_chain: Record<string, number>
     wallet: string
     view_only: boolean
   }
-  [LuxEventName.ConversionEventSubmitted]: {
+  [UniswapEventName.ConversionEventSubmitted]: {
     id: string
     eventId: string
     eventName: string
     platformIdType: string
   }
-  [LuxEventName.DataReportSubmitted]:
+  [UniswapEventName.DataReportSubmitted]:
     | (TokenReportProperties & {
         type: 'data'
         price?: boolean
@@ -1135,7 +1135,7 @@ export type UniverseEventProperties = {
         something_else: boolean
         text?: string
       })
-  [LuxEventName.TokenSelected]:
+  [UniswapEventName.TokenSelected]:
     | (ITraceContext &
         AssetDetailsBaseProperties &
         SearchResultContextProperties & {
@@ -1144,7 +1144,7 @@ export type UniverseEventProperties = {
           tokenSection?: OnchainItemSectionName
         })
     | { token_balance_usd?: number | string }
-  [LuxEventName.BlockaidFeesMismatch]: {
+  [UniswapEventName.BlockaidFeesMismatch]: {
     symbol: string
     address: string
     chainId: number
@@ -1155,31 +1155,31 @@ export type UniverseEventProperties = {
     attackType?: string
     protectionResult?: string
   }
-  [LuxEventName.ContextMenuClosed]: ITraceContext
-  [LuxEventName.ContextMenuItemClicked]: ITraceContext & {
+  [UniswapEventName.ContextMenuClosed]: ITraceContext
+  [UniswapEventName.ContextMenuItemClicked]: ITraceContext & {
     menu_item: string
     menu_item_index: number
   }
-  [LuxEventName.ContextMenuOpened]: ITraceContext
-  [LuxEventName.LowNetworkTokenInfoModalOpened]: {
+  [UniswapEventName.ContextMenuOpened]: ITraceContext
+  [UniswapEventName.LowNetworkTokenInfoModalOpened]: {
     location: 'send' | 'swap'
   }
-  [LuxEventName.LpIncentiveCollectRewardsButtonClicked]: undefined
-  [LuxEventName.LpIncentiveCollectRewardsErrorThrown]: { error: string }
-  [LuxEventName.LpIncentiveCollectRewardsRetry]: undefined
-  [LuxEventName.LpIncentiveCollectRewardsSuccess]: { token_rewards: string }
-  [LuxEventName.LpIncentiveLearnMoreCtaClicked]: undefined
-  [LuxEventName.AuctionFilterSelected]: {
+  [UniswapEventName.LpIncentiveCollectRewardsButtonClicked]: undefined
+  [UniswapEventName.LpIncentiveCollectRewardsErrorThrown]: { error: string }
+  [UniswapEventName.LpIncentiveCollectRewardsRetry]: undefined
+  [UniswapEventName.LpIncentiveCollectRewardsSuccess]: { token_rewards: string }
+  [UniswapEventName.LpIncentiveLearnMoreCtaClicked]: undefined
+  [UniswapEventName.AuctionFilterSelected]: {
     filter: 'all' | 'verified' | 'unverified' | 'active' | 'complete'
   }
-  [LuxEventName.NetworkFilterSelected]: ITraceContext & {
+  [UniswapEventName.NetworkFilterSelected]: ITraceContext & {
     chain: UniverseChainId | 'All'
   }
-  [LuxEventName.SmartWalletMismatchDetected]: {
+  [UniswapEventName.SmartWalletMismatchDetected]: {
     chainId: string
     delegatedAddress: string
   }
-  [LuxEventName.SpamReportSubmitted]:
+  [UniswapEventName.SpamReportSubmitted]:
     | (TokenReportProperties & {
         type: 'token'
         source: 'portfolio' | 'token-details'

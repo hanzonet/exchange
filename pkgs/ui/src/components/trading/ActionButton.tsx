@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from '@tamagui/core'
+import { Button, type ButtonProps } from 'tamagui'
 
 export type ActionButtonProps = ButtonProps & {
   variant?: 'primary' | 'secondary' | 'critical'

@@ -20,7 +20,7 @@ import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHead
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
 import { PollingInterval, ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
@@ -351,7 +351,7 @@ export function ClaimFeeModal() {
     <Modal name={ModalName.ClaimFee} onClose={closeModal} isDismissible>
       <Flex gap="$gap16">
         <GetHelpHeader
-          link={luxUrls.helpRequestUrl}
+          link={uniswapUrls.helpRequestUrl}
           title={t('pool.collectFees')}
           closeModal={closeModal}
           closeDataTestId="ClaimFeeModal-close-icon"

@@ -1,8 +1,8 @@
 import { createJupiterApiClient, JupiterApiClient as JupiterApiClientType } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
-import { createLuxFetchClient } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 
-const JupiterFetchClient = createLuxFetchClient({
+const JupiterFetchClient = createUniswapFetchClient({
   baseUrl: `${config.jupiterProxyUrl}/ultra/v1`,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,

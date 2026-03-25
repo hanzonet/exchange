@@ -1,7 +1,7 @@
 import '@hanzogui/core/reset.css'
 import 'src/app/Global.css'
 
-import { SharedEventName } from '@luxdex/analytics-events'
+import { SharedEventName } from '@luxamm/analytics-events'
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createHashRouter, RouterProvider } from 'react-router'

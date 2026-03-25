@@ -4,9 +4,9 @@ import { extractOnRampTransactionDetails } from 'uniswap/src/features/activity/e
 import extractRestOnChainTransactionDetails from 'uniswap/src/features/activity/extract/extractOnChainTransactionDetails'
 import extractPlanDetails from 'uniswap/src/features/activity/extract/extractPlanDetails'
 import extractRestFiatOnRampDetails from 'uniswap/src/features/activity/extract/extractRestFiatOnRampDetails'
-import extractRestLXOrderDetails from 'uniswap/src/features/activity/extract/extractRestLXOrderDetails'
+import extractRestUniswapXOrderDetails from 'uniswap/src/features/activity/extract/extractRestUniswapXOrderDetails'
 import extractTransactionDetails from 'uniswap/src/features/activity/extract/extractTransactionDetails'
-import { extractLXOrderDetails } from 'uniswap/src/features/activity/extract/extractLXOrderDetails'
+import { extractUniswapXOrderDetails } from 'uniswap/src/features/activity/extract/extractUniswapXOrderDetails'
 import { getIsNftHidden } from 'uniswap/src/features/nfts/utils'
 import {
   TransactionDetails,
@@ -61,8 +61,8 @@ export function parseDataResponseToTransactionDetails({
         if (parsed) {
           accum.push(parsed)
         }
-      } else if (t?.details.__typename === TransactionDetailsType.LXOrder) {
-        const parsed = extractLXOrderDetails(t as TransactionListQueryResponse)
+      } else if (t?.details.__typename === TransactionDetailsType.UniswapXOrder) {
+        const parsed = extractUniswapXOrderDetails(t as TransactionListQueryResponse)
         if (parsed) {
           accum.push(parsed)
         }
@@ -113,7 +113,7 @@ export function parseRestResponseToTransactionDetails({
         break
       }
       case RestTransactionType.LX: {
-        const parsed = extractRestLXOrderDetails(transaction.transaction.value)
+        const parsed = extractRestUniswapXOrderDetails(transaction.transaction.value)
         if (parsed) {
           accum.push(parsed)
         }

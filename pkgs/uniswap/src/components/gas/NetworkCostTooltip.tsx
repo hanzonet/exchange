@@ -1,11 +1,11 @@
-import { FormattedLXGasFeeInfo } from '@luxexchange/api'
+import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { LX } from 'ui/src/components/icons/LX'
 import { LXText } from 'ui/src/components/text/LXText'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
 import { TransactionDetailsTooltip as Tooltip } from 'uniswap/src/components/TransactionDetailsTooltip'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 
@@ -19,8 +19,8 @@ export function NetworkCostTooltip({
   const { t } = useTranslation()
 
   const learnMoreUrl = includesDelegation
-    ? luxUrls.helpArticleUrls.smartWalletDelegation
-    : luxUrls.helpArticleUrls.networkFeeInfo
+    ? uniswapUrls.helpArticleUrls.smartWalletDelegation
+    : uniswapUrls.helpArticleUrls.networkFeeInfo
   const text = includesDelegation
     ? t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })
     : t('transaction.networkCost.description')
@@ -38,7 +38,7 @@ export function NetworkCostTooltip({
 export function NetworkCostTooltipLX({
   uniswapXGasFeeInfo,
 }: {
-  uniswapXGasFeeInfo: FormattedLXGasFeeInfo
+  uniswapXGasFeeInfo: FormattedUniswapXGasFeeInfo
 }): JSX.Element {
   const { t } = useTranslation()
   const { approvalFeeFormatted, swapFeeFormatted, inputTokenSymbol } = uniswapXGasFeeInfo
@@ -69,7 +69,7 @@ export function NetworkCostTooltipLX({
         )}
       </Tooltip.Content>
       <Tooltip.Separator />
-      <Tooltip.Description learnMoreUrl={luxUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
+      <Tooltip.Description learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
     </Tooltip.Outer>
   )
 }

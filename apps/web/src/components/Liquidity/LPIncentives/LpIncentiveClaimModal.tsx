@@ -11,7 +11,7 @@ import { Dialog } from '@luxexchange/lx/src/components/dialog/Dialog'
 import { InlineWarningCard } from '@luxexchange/lx/src/components/InlineWarningCard/InlineWarningCard'
 import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 import { liquidityQueries } from '@luxexchange/lx/src/data/apiClients/liquidityService/liquidityQueries'
-import { ModalName, LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { ModalName, UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -73,7 +73,7 @@ export function LpIncentiveClaimModal({
 
   useEffect(() => {
     if (calldataError) {
-      sendAnalyticsEvent(LuxEventName.LpIncentiveCollectRewardsErrorThrown, {
+      sendAnalyticsEvent(UniswapEventName.LpIncentiveCollectRewardsErrorThrown, {
         error: calldataError.message,
       })
     }
@@ -85,7 +85,7 @@ export function LpIncentiveClaimModal({
     }
 
     if (!skipAnalytics) {
-      sendAnalyticsEvent(LuxEventName.LpIncentiveCollectRewardsRetry)
+      sendAnalyticsEvent(UniswapEventName.LpIncentiveCollectRewardsRetry)
     }
 
     setError(null)

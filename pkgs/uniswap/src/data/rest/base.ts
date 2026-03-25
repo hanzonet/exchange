@@ -1,8 +1,8 @@
 import { Transport } from '@connectrpc/connect'
 import { ConnectTransportOptions } from '@connectrpc/connect-web'
 import { getEntryGatewayUrl, getTransport } from '@luxexchange/api'
-import { luxUrls } from 'uniswap/src/constants/urls'
-import { BASE_LUX_HEADERS } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { BASE_UNISWAP_HEADERS } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { isWebApp } from 'utilities/src/platform'
 
 export function createConnectTransportWithDefaults({
@@ -13,8 +13,8 @@ export function createConnectTransportWithDefaults({
   getBaseUrlOverride?: () => string
 }): Transport {
   return getTransport({
-    getBaseUrl: getBaseUrlOverride ?? ((): string => luxUrls.apiBaseUrlV2),
-    getHeaders: () => BASE_LUX_HEADERS,
+    getBaseUrl: getBaseUrlOverride ?? ((): string => uniswapUrls.apiBaseUrlV2),
+    getHeaders: () => BASE_UNISWAP_HEADERS,
     options,
   })
 }
@@ -22,8 +22,8 @@ export function createConnectTransportWithDefaults({
 /**
  * Connectrpc transports for Uniswap REST BE service
  */
-export const luxGetTransport = createConnectTransportWithDefaults({ options: { useHttpGet: true } })
-export const luxPostTransport = createConnectTransportWithDefaults({})
+export const uniswapGetTransport = createConnectTransportWithDefaults({ options: { useHttpGet: true } })
+export const uniswapPostTransport = createConnectTransportWithDefaults({})
 
 // The string arg to pass to the BE for chainId to get data for all networks
 export const ALL_NETWORKS_ARG = 'ALL_NETWORKS'
@@ -37,17 +37,17 @@ export const ALL_NETWORKS_ARG = 'ALL_NETWORKS'
  * export function useNewServiceQuery(
     input?: PartialMessage<NewServiceRequest>,
   ): UseQueryResult<NewServiceResponse, ConnectError> {
-    return useQuery(newService, input, { transport: luxGetTransport })
+    return useQuery(newService, input, { transport: uniswapGetTransport })
   }
  */
 
 export const dataApiGetTransport = createConnectTransportWithDefaults({
   options: { useHttpGet: true },
-  getBaseUrlOverride: () => luxUrls.dataApiBaseUrlV2,
+  getBaseUrlOverride: () => uniswapUrls.dataApiBaseUrlV2,
 })
 
 export const dataApiPostTransport = createConnectTransportWithDefaults({
-  getBaseUrlOverride: () => luxUrls.dataApiBaseUrlV2,
+  getBaseUrlOverride: () => uniswapUrls.dataApiBaseUrlV2,
 })
 
 /**

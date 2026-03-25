@@ -35,8 +35,8 @@ export function useTypedDataSections({
   dappUrl,
 }: UseTypedDataSectionsParams): UseTypedDataSectionsResult {
   // Detect LX swap requests
-  const isLX = isLXSwapRequest(parsedTypedData)
-  const uniswapXTypedData = isLX ? (parsedTypedData as LXSwapRequest) : null
+  const isUniswapX = isLXSwapRequest(parsedTypedData)
+  const uniswapXTypedData = isUniswapX ? (parsedTypedData as LXSwapRequest) : null
 
   // Build Blockaid scan request (always needed for risk level)
   const blockaidRequest = useMemo(
@@ -64,10 +64,10 @@ export function useTypedDataSections({
   )
 
   // Use LX sections if available, otherwise fall back to Blockaid sections
-  const sections = isLX ? uniswapXSections : blockaidSections
+  const sections = isUniswapX ? uniswapXSections : blockaidSections
 
   // Loading: wait for Blockaid (always), plus LX parsing if applicable
-  const isLoading = isBlockaidLoading || (isLX && isLXLoading)
+  const isLoading = isBlockaidLoading || (isUniswapX && isLXLoading)
 
   return {
     sections,

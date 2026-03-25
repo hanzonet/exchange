@@ -7,10 +7,10 @@ import {
   useMedia,
   type View,
 } from '@hanzo/gui'
-import { Adapt } from '@hanzogui/adapt'
-import { Dialog } from '@hanzogui/dialog'
-import { Sheet } from '@hanzogui/sheet'
-import { VisuallyHidden } from '@hanzogui/visually-hidden'
+import { Adapt } from '@tamagui/adapt'
+import { Dialog } from '@tamagui/dialog'
+import { Sheet } from '@tamagui/sheet'
+import { VisuallyHidden } from '@tamagui/visually-hidden'
 import { type CloseIconProps, CloseIconWithHover } from '@luxfi/ui/src/components/icons/CloseIconWithHover'
 import { Flex, type FlexProps } from '@luxfi/ui/src/components/layout'
 import { RemoveScroll } from '@luxfi/ui/src/components/RemoveScroll/RemoveScroll'

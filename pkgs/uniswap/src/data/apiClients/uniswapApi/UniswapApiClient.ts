@@ -1,13 +1,13 @@
 import { createUniswapApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
-import { luxUrls } from 'uniswap/src/constants/urls'
-import { createLuxFetchClient } from 'uniswap/src/data/apiClients/createLuxFetchClient'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
 import { convertGasFeeToDisplayValue } from 'uniswap/src/features/gas/hooks'
 import { estimateGasWithClientSideProvider, extractGasFeeParams } from 'uniswap/src/features/gas/utils'
 import { isWebApp } from 'utilities/src/platform'
 
-const UniswapFetchClient = createLuxFetchClient({
-  baseUrl: luxUrls.apiBaseUrl,
+const UniswapFetchClient = createUniswapFetchClient({
+  baseUrl: uniswapUrls.apiBaseUrl,
   additionalHeaders: {
     'x-api-key': config.uniswapApiKey,
   },

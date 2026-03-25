@@ -15,7 +15,7 @@ import { WarningModal } from 'uniswap/src/components/modals/WarningModal/Warning
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import { InfoTooltip } from 'uniswap/src/components/tooltip/InfoTooltip'
 import WarningIcon from 'uniswap/src/components/warnings/WarningIcon'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
@@ -392,7 +392,7 @@ function LXInfoTooltipText(props?: { onPress?: () => void }): JSX.Element {
 
   const onPress = useEvent(() => {
     if (isExtensionApp) {
-      openUri({ uri: luxUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
+      openUri({ uri: uniswapUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
     } else {
       handleOnPressLXUnsupported?.()
       handleHideTransactionSettingsModal()
@@ -466,7 +466,7 @@ function LXInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
     >
       <LearnMoreLink
         textVariant={isWebPlatform ? 'body4' : 'buttonLabel3'}
-        url={luxUrls.helpArticleUrls.multichainDelegation}
+        url={uniswapUrls.helpArticleUrls.multichainDelegation}
       />
     </WarningModal>
   )

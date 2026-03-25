@@ -4,7 +4,7 @@ import {
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
 } from '@luxexchange/api'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import {
   convertSwap5792ResponseToSwapData,
@@ -18,7 +18,7 @@ export function useTradingApiSwapQuery(
   { params, ...rest }: UseQueryWithImmediateGarbageCollectionApiHelperHookArgs<TradingApi.CreateSwapRequest, SwapData>,
   config?: { canBatchTransactions?: boolean; swapDelegationAddress?: string; includesDelegation?: boolean },
 ): UseQueryResult<SwapData> {
-  const queryKey = [ReactQueryCacheKey.TradingApi, luxUrls.tradingApiPaths.swap, params]
+  const queryKey = [ReactQueryCacheKey.TradingApi, uniswapUrls.tradingApiPaths.swap, params]
   const fetch = getFetchFn(config)
 
   return useQueryWithImmediateGarbageCollection<SwapData>({

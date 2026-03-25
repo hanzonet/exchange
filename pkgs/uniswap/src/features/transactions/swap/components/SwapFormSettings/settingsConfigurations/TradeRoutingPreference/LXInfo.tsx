@@ -7,7 +7,7 @@ import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/type
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import type { InfoTooltipProps } from 'uniswap/src/components/tooltip/InfoTooltipProps'
-import { luxUrls } from 'uniswap/src/constants/urls'
+import { uniswapUrls } from 'uniswap/src/constants/urls'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { isWebPlatform } from 'utilities/src/platform'
 
@@ -26,7 +26,7 @@ export function LXInfo({
       infoButton={
         <LearnMoreLink
           textVariant={isWebPlatform ? 'body4' : undefined}
-          url={luxUrls.helpArticleUrls.uniswapXInfo}
+          url={uniswapUrls.helpArticleUrls.uniswapXInfo}
         />
       }
       modalProps={{

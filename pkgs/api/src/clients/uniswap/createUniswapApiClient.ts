@@ -7,7 +7,7 @@ import {
 } from '@luxexchange/api/src/clients/trading/types'
 import { isWebApp } from 'utilities/src/platform'
 
-// TODO(app-infra), de-duplicate with luxUrls when other consumers are migrated to use this client
+// TODO(app-infra), de-duplicate with uniswapUrls when other consumers are migrated to use this client
 const UNISWAP_API_PATHS = {
   gasFee: '/v1/gas-fee',
 }

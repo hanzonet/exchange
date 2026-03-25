@@ -13,7 +13,7 @@ import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { TransactionSettingsModal } from 'uniswap/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModal'
 import { EstimatedSwapTime } from 'uniswap/src/features/transactions/swap/components/EstimatedBridgeTime'
 import { SlippageUpdate } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippageUpdate/SlippageUpdate'
-import type { LXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import type { SwapFee as SwapFeeType } from 'uniswap/src/features/transactions/swap/types/trade'
 import { isBridge, isChained, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { ExpectedFailureBanner } from 'uniswap/src/features/transactions/TransactionDetails/ExpectedFailureBanner'
@@ -35,7 +35,7 @@ interface TransactionDetailsProps {
   gasFee: GasFeeResult
   swapFee?: SwapFeeType
   swapFeeUsd?: number
-  uniswapXGasBreakdown?: LXGasBreakdown
+  uniswapXGasBreakdown?: UniswapXGasBreakdown
   showExpandedChildren?: boolean
   showGasFeeError?: boolean
   showNetworkLogo?: boolean

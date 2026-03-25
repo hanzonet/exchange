@@ -1,4 +1,4 @@
-import { SharedEventName } from '@luxdex/analytics-events'
+import { SharedEventName } from '@luxamm/analytics-events'
 import React from 'react'
 import { SvgProps } from 'react-native-svg'
 import { useSelector } from 'react-redux'

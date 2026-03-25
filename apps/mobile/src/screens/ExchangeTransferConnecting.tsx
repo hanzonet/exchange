@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { Screen } from 'src/components/layout/Screen'
 import { useFiatOnRampContext } from 'src/features/fiatOnRamp/FiatOnRampContext'
 import { Flex, UniversalImage, useIsDarkMode } from '@luxfi/ui/src'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { ServiceProviderLogoStyles } from '@luxexchange/lx/src/features/fiatOnRamp/constants'
 import { FiatOnRampConnectingView } from '@luxexchange/lx/src/features/fiatOnRamp/FiatOnRampConnectingView'
@@ -65,7 +65,7 @@ export function ExchangeTransferConnecting({
     serviceProvider: serviceProvider.serviceProvider,
     walletAddress: activeAccountAddress,
     externalSessionId: externalTransactionId,
-    redirectUrl: `${luxUrls.redirectUrlBase}?screen=transaction&fiatOnRamp=true&userAddress=${activeAccountAddress}`,
+    redirectUrl: `${uniswapUrls.redirectUrlBase}?screen=transaction&fiatOnRamp=true&userAddress=${activeAccountAddress}`,
   })
 
   useEffect(() => {

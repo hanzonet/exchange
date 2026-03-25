@@ -13,14 +13,14 @@ import { useParsedSwapWarnings } from 'uniswap/src/features/transactions/swap/ho
 import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
 import { getSwapFeeUsdFromDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
-import { isMultiChainGasQuote, isLX, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isMultiChainGasQuote, isUniswapX, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { TransactionDetails } from 'uniswap/src/features/transactions/TransactionDetails/TransactionDetails'
 import { CurrencyField } from 'uniswap/src/types/currency'
 
 export function ExpandableRows(): JSX.Element | null {
   const { t } = useTranslation()
   const { gasFee, gasFeeBreakdown } = useSwapTxStore((s) => {
-    if (isLX(s)) {
+    if (isUniswapX(s)) {
       return {
         gasFee: s.gasFee,
         gasFeeBreakdown: s.gasFeeBreakdown,

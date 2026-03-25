@@ -10,11 +10,11 @@ import {
   SearchTokensRequest,
   SearchTokensResponse,
   SearchType,
-} from '@luxdex/client-search/dist/search/v1/api_pb'
-import { searchTokens } from '@luxdex/client-search/dist/search/v1/api-searchService_connectquery'
+} from '@luxamm/client-search/dist/search/v1/api_pb'
+import { searchTokens } from '@luxamm/client-search/dist/search/v1/api-searchService_connectquery'
 import { parseProtectionInfo, parseRestProtocolVersion, parseSafetyLevel, SharedQueryClient } from '@luxfi/api'
 import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
-import { luxPostTransport } from '@luxexchange/lx/src/data/rest/base'
+import { uniswapPostTransport } from '@luxexchange/lx/src/data/rest/base'
 import { createLogger } from 'utilities/src/logger/logger'
 
 const FILE_NAME = 'searchTokensAndPools.ts'
@@ -43,7 +43,7 @@ export function useSearchTokensAndPoolsQuery<TSelectType>({
   select?: ((data: SearchTokensResponse) => TSelectType) | undefined
 }): UseQueryResult<TSelectType, ConnectError> {
   return useQuery(searchTokens, input, {
-    transport: luxPostTransport,
+    transport: uniswapPostTransport,
     enabled: !!input && enabled,
     select,
   })
@@ -75,7 +75,7 @@ export async function fetchTokenByAddress({
           size: 1,
           page: 1,
         },
-        { transport: luxPostTransport },
+        { transport: uniswapPostTransport },
       ),
       // Token data does not change often, so we can use stale data here.
       // This data will be refreshed when fetching the portfolio balances anyway.

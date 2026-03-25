@@ -9,7 +9,7 @@ import {
   HandleSignatureStepParams,
   HandleSwapBatchedStepParams,
   HandleSwapStepSyncParams,
-  HandleLXPlanSignatureStepParams,
+  HandleUniswapXPlanSignatureStepParams,
   SignatureTransactionStep,
   TransactionStep,
 } from 'uniswap/src/features/transactions/steps/types'
@@ -33,7 +33,7 @@ export interface PlanParams extends SwapExecutionCallbacks {
   handleSignatureStep: (
     params: HandleSignatureStepParams<SignatureTransactionStep, TradingApi.PlanStep>,
   ) => SagaGenerator<string>
-  handleLXPlanSignatureStep: (params: HandleLXPlanSignatureStepParams) => SagaGenerator<string>
+  handleUniswapXPlanSignatureStep: (params: HandleUniswapXPlanSignatureStepParams) => SagaGenerator<string>
   /**
    * General function to send a toast notification. Note that this needs to manage both
    * web and wallet so each caller will not have the same implementation.

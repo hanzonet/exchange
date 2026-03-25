@@ -7,7 +7,7 @@ import { Trade, TradeWithStatus } from '@luxexchange/lx/src/features/transaction
 import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
-const mockDEXTrade = {
+const mockUniswapXTrade = {
   quote: {
     quote: {
       classicGasUseEstimateUSD: '5.32',
@@ -53,7 +53,7 @@ describe('usePriceImpact', () => {
   it('should calculate DEX price impact correctly', () => {
     const swapInfo: DerivedSwapInfo = {
       ...baseSwapInfo,
-      trade: { trade: mockDEXTrade } as TradeWithStatus,
+      trade: { trade: mockUniswapXTrade } as TradeWithStatus,
     }
 
     const { result } = renderHook(() => usePriceImpact({ derivedSwapInfo: swapInfo }))
@@ -74,7 +74,7 @@ describe('usePriceImpact', () => {
 
   it('should handle negative price impact formatting', () => {
     const negativeImpactTrade = {
-      ...mockDEXTrade,
+      ...mockUniswapXTrade,
       quote: {
         quote: {
           classicGasUseEstimateUSD: '2.01',

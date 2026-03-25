@@ -11,7 +11,7 @@ import { Dialog } from '@luxexchange/lx/src/components/dialog/Dialog'
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 import { NetworkFeeWarning } from '@luxexchange/lx/src/components/gas/NetworkFeeWarning'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { useSupportedChainId } from '@luxexchange/lx/src/features/chains/hooks/useSupportedChainId'
 import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { useFiatOnRampAggregatorOffRampTransferDetailsQuery } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
@@ -266,7 +266,7 @@ export const OffRampConfirmTransferModal = ({
                 {t('common.youreSelling')}
               </Text>
             }
-            link={luxUrls.helpArticleUrls.fiatOffRampHelp}
+            link={uniswapUrls.helpArticleUrls.fiatOffRampHelp}
             closeModal={onClose}
           />
           <Flex py="$gap12" gap="$gap16">

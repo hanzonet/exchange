@@ -21,7 +21,7 @@ import type { TransactionSettings } from 'uniswap/src/features/transactions/comp
 import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
 import type { ClassicTrade, Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { getSwapFeeUsd } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
-import { isChained, isClassic, isJupiter, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isChained, isClassic, isJupiter, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { SwapEventType, timestampTracker } from 'uniswap/src/features/transactions/swap/utils/SwapEventTimestampTracker'
 import { getProtocolVersionFromTrade } from 'uniswap/src/features/transactions/swap/utils/trade'
 import { getClassicQuoteFromResponse } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
@@ -213,7 +213,7 @@ export function getRouteAnalyticsData({
     }
   }
 
-  if (isLX({ routing })) {
+  if (isUniswapX({ routing })) {
     // For LX trades, we don't have detailed route information in the same way
     // But we can mark it as using X
     return {
@@ -236,7 +236,7 @@ export function getRouteAnalyticsData({
 }
 
 export function getPriceImpact(trade: Trade | null | undefined): string | undefined {
-  if (!trade || isLX(trade) || isChained(trade)) {
+  if (!trade || isUniswapX(trade) || isChained(trade)) {
     return undefined
   }
   return trade.priceImpact?.multiply(100).toSignificant()
@@ -283,7 +283,7 @@ function getQuoteRequestIdFields(trade: Trade): {
   }
 
   // Backwards compatibility with old ura_request_id field
-  if (isClassic(trade) || isLX(trade)) {
+  if (isClassic(trade) || isUniswapX(trade)) {
     uraRequestId = requestId
   }
 

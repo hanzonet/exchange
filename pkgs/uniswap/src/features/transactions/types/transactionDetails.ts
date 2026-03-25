@@ -97,7 +97,7 @@ export type TransactionNetworkFee = {
 }
 
 // Transaction type extensions that can be combined with any base type
-export interface LXOrderExtension {
+export interface UniswapXOrderExtension {
   routing:
     | TradingApi.Routing.DUTCH_V3
     | TradingApi.Routing.DUTCH_V2
@@ -155,8 +155,8 @@ export interface WrapUnwrapTransactionExtension {
 }
 
 // Transaction types using intersection types for flexibility
-export type LXOrderDetails<TBase extends TransactionDetailsCore = WalletBaseTransactionDetails> = TBase &
-  LXOrderExtension
+export type UniswapXOrderDetails<TBase extends TransactionDetailsCore = WalletBaseTransactionDetails> = TBase &
+  UniswapXOrderExtension
 
 export type ClassicTransactionDetails<TBase extends TransactionDetailsCore = WalletBaseTransactionDetails> = TBase &
   ClassicTransactionExtension
@@ -187,7 +187,7 @@ export type OnChainTransactionDetails<TBase extends TransactionDetailsCore = Wal
   | WrapUnwrapTransactionDetails<TBase>
 
 export type TransactionDetails<TBase extends TransactionDetailsCore = WalletBaseTransactionDetails> =
-  | LXOrderDetails<TBase>
+  | UniswapXOrderDetails<TBase>
   | OnChainTransactionDetails<TBase>
   | SolanaTransactionDetails<TBase>
   | PlanTransactionDetails<TransactionTypeInfo, TBase>
@@ -348,7 +348,7 @@ export enum TransactionType {
   LPIncentivesClaimRewards = 'lp-incentives-claim-rewards',
   ToucanBid = 'toucan-bid',
   ToucanWithdrawBidAndClaimTokens = 'toucan-withdraw-bid-and-claim-tokens',
-  LXOrder = 'lx-order',
+  UniswapXOrder = 'lx-order',
 
   AuctionBid = 'auction-bid',
   AuctionClaimed = 'auction-claimed',
@@ -436,7 +436,7 @@ export interface BaseSwapTransactionInfo extends BaseTransactionInfo, PlanSwapTr
   /**
    * @deprecated This is used on interface only and will be deleted soon as part of WALL-7143
    * */
-  isLXOrder?: boolean
+  isUniswapXOrder?: boolean
 
   /** Timestamp when the swap flow started (from Redux timing.swap.startTimestamp) */
   swapStartTimestamp?: number
@@ -827,5 +827,5 @@ export enum TransactionDetailsType {
   Transaction = 'TransactionDetails',
   OnRamp = 'OnRampTransactionDetails',
   OffRamp = 'OffRampTransactionDetails',
-  LXOrder = 'SwapOrderDetails',
+  UniswapXOrder = 'SwapOrderDetails',
 }

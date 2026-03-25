@@ -6,7 +6,7 @@ import { BookOpen } from '@luxfi/ui/src/components/icons/BookOpen'
 import { GraduationCap } from '@luxfi/ui/src/components/icons/GraduationCap'
 import { PenLine } from '@luxfi/ui/src/components/icons/PenLine'
 import { SpeechBubbles } from '@luxfi/ui/src/components/icons/SpeechBubbles'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ClickableGuiStyle } from '~/theme/components/styles'
 
 const SectionLayout = styled(Flex, {
@@ -132,7 +132,7 @@ export function NewsletterEtc() {
           icon={<GraduationCap size="$icon.36" fill="$neutral1" />}
           title={t('common.helpCenter')}
           description={t('landing.helpCenter.body')}
-          href={luxUrls.helpCenterUrl}
+          href={uniswapUrls.helpCenterUrl}
         />
         <UniverseRow
           icon={
@@ -142,13 +142,13 @@ export function NewsletterEtc() {
           }
           title={t('common.blog')}
           description={t('landing.blog.description')}
-          href={luxUrls.blogUrl}
+          href={uniswapUrls.blogUrl}
         />
         <UniverseRow
           icon={<BookOpen size="$icon.36" fill="$neutral1" />}
           title={t('common.docs')}
           description={t('landing.docs.description')}
-          href={luxUrls.docsUrl}
+          href={uniswapUrls.docsUrl}
         />
         <UniverseRow
           icon={<SpeechBubbles size="$icon.36" color="$neutral1" />}
@@ -157,10 +157,10 @@ export function NewsletterEtc() {
             <Trans
               i18nKey="landing.socials"
               components={{
-                LinkX: <SocialLink href={luxUrls.social.x} />,
-                LinkFarcaster: <SocialLink href={luxUrls.social.farcaster} />,
-                LinkLinkedIn: <SocialLink href={luxUrls.social.linkedin} />,
-                LinkTikTok: <SocialLink href={luxUrls.social.tiktok} />,
+                LinkX: <SocialLink href={uniswapUrls.social.x} />,
+                LinkFarcaster: <SocialLink href={uniswapUrls.social.farcaster} />,
+                LinkLinkedIn: <SocialLink href={uniswapUrls.social.linkedin} />,
+                LinkTikTok: <SocialLink href={uniswapUrls.social.tiktok} />,
               }}
             />
           }

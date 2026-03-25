@@ -1,7 +1,7 @@
 /** biome-ignore-all assist/source/organizeImports: we want to manually group exports by category */
 
 /**
- * @luxexchange/api - Unified data layer for Lux Universe
+ * @luxexchange/api - Unified data layer for Uniswap Universe
  *
  * This is the ONLY public entry point for the API package.
  * All exports must be explicitly listed here.
@@ -113,7 +113,7 @@ export {
 } from '@luxexchange/api/src/clients/trading/tradeTypes'
 export {
   FeeType,
-  type FormattedDEXGasFeeInfo,
+  type FormattedUniswapXGasFeeInfo,
   type GasEstimate,
   type GasEstimateEip1559,
   type GasEstimateLegacy,
@@ -342,4 +342,4 @@ export { getEntryGatewayUrl, getMigratedForApiUrl } from '@luxexchange/api/src/g
 
 export { getWebSocketUrl } from '@luxexchange/api/src/getWebSocketUrl'
 
-export { provideLuxIdentifierService } from '@luxexchange/api/src/provideLuxIdentifierService'
+export { provideUniswapIdentifierService } from '@luxexchange/api/src/provideUniswapIdentifierService'

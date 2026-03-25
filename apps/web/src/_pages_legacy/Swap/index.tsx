@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { sendAnalyticsEvent, Trace, TraceEvent } from '@luxdex/analytics'
+import { sendAnalyticsEvent, Trace, TraceEvent } from '@luxamm/analytics'
 import {
   BrowserEvent,
   InterfaceElementName,
@@ -7,7 +7,7 @@ import {
   InterfacePageName,
   InterfaceSectionName,
   SwapEventName,
-} from '@luxdex/analytics-events'
+} from '@luxamm/analytics-events'
 import { Trade } from '@luxamm/router-sdk'
 import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@luxamm/sdk-core'
 import { UNIVERSAL_ROUTER_ADDRESS } from '@luxamm/universal-router-sdk'

@@ -12,7 +12,7 @@ import { useLocalizationContext } from 'uniswap/src/features/language/Localizati
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { CancelableStepInfo } from 'uniswap/src/features/transactions/hooks/useIsCancelable'
-import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionInfo,
   TransactionDetails,
@@ -44,7 +44,7 @@ export function CancelConfirmationView({
   const { convertFiatAmountFormatted } = useLocalizationContext()
 
   const isPlan = transactionDetails.typeInfo.type === TransactionType.Plan
-  const isLXOrder = isLX(transactionDetails)
+  const isUniswapXOrder = isUniswapX(transactionDetails)
 
   const cancellationGasFeeInfo = useCancellationGasFeeInfo(transactionDetails)
   const { value: gasFeeUSD } = useUSDValueOfGasFee(
@@ -88,16 +88,16 @@ export function CancelConfirmationView({
   }, [authTrigger, onCancelConfirm])
 
   const title = useMemo(() => {
-    if (isLXOrder) {
+    if (isUniswapXOrder) {
       return t('common.cancelOrder')
     }
     return t('transaction.action.cancel.title')
-  }, [isLXOrder, t])
+  }, [isUniswapXOrder, t])
 
   // Determine warning message based on cancellation type
   const warningMessage = useMemo(() => {
     if (!isPlan) {
-      if (isLXOrder) {
+      if (isUniswapXOrder) {
         return t('swap.cancel.cannotExecute', { count: 1 })
       }
       return t('transaction.action.cancel.description')
@@ -108,7 +108,7 @@ export function CancelConfirmationView({
     }
 
     return t('transaction.action.cancel.plan.warning')
-  }, [isPlan, isLXOrder, cancelableStepInfo, t])
+  }, [isPlan, isUniswapXOrder, cancelableStepInfo, t])
 
   const disableConfirmationButton =
     !cancellationGasFeeInfo?.cancelRequest || transactionDetails.status !== TransactionStatus.Pending

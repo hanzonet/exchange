@@ -4,8 +4,8 @@ import { providers } from 'ethers/lib/ethers'
 import { TRANSACTION_CANCELLATION_GAS_FACTOR } from 'uniswap/src/constants/transactions'
 import { FeeDetails, getAdjustedGasFeeDetails } from 'uniswap/src/features/gas/adjustGasFee'
 import { CancellationGasFeeDetails } from 'uniswap/src/features/gas/hooks'
-import { isClassic, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { TransactionDetails, LXOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { TransactionDetails, UniswapXOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
 
 export const CANCELLATION_TX_VALUE = '0x0'
@@ -20,9 +20,9 @@ export enum CancellationType {
  */
 export function getCancellationType(
   transaction: TransactionDetails,
-  orders?: LXOrderDetails[],
+  orders?: UniswapXOrderDetails[],
 ): CancellationType {
-  return isLX(transaction) || (orders !== undefined && orders.length > 0)
+  return isUniswapX(transaction) || (orders !== undefined && orders.length > 0)
     ? CancellationType.LX
     : CancellationType.Classic
 }
@@ -47,7 +47,7 @@ export function calculateCancellationGasFee(params: {
   transaction: TransactionDetails
   gasFee?: GasFeeResult
   cancelRequest?: providers.TransactionRequest
-  orders?: LXOrderDetails[]
+  orders?: UniswapXOrderDetails[]
 }): CancellationGasFeeDetails | undefined {
   const { type, transaction, gasFee, cancelRequest } = params
 

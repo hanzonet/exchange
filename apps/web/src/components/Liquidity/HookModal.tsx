@@ -9,7 +9,7 @@ import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevro
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
-import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
@@ -170,7 +170,7 @@ export function HookModal({
             <LearnMoreLink
               centered
               display="flex"
-              url={luxUrls.helpArticleUrls.addingV4Hooks}
+              url={uniswapUrls.helpArticleUrls.addingV4Hooks}
               textVariant="buttonLabel3"
             />
           </Flex>
