@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 import { cloudflare } from '@cloudflare/vite-plugin'
-import { tamaguiPlugin } from '@hanzogui/vite-plugin'
+import { guiPlugin } from '@hanzogui/vite-plugin'
 import react from '@vitejs/plugin-react'
 import { execSync } from 'child_process'
 import { config as dotenvConfig } from 'dotenv'
@@ -435,7 +435,7 @@ export default defineConfig(({ mode }) => {
       portWarningPlugin(isProduction),
       reactPlugin(),
       (isProduction || isStaging) && process.env.DISABLE_EXTRACTION !== '1'
-        ? tamaguiPlugin({
+        ? guiPlugin({
             config: '../../pkgs/ui/src/tamagui.config.ts',
             components: ['ui', 'lx', 'utilities'],
             optimize: true,
