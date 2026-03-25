@@ -3,6 +3,6 @@
   "version": "1.0.3",
   "private": false,
   "scripts": {
-    "prepare": "bun ./scripts/generate.js && biome check --write"
+    "prepare": "node ./scripts/generate.js && biome check --write"
   }
 }

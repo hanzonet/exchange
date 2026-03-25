@@ -29,6 +29,7 @@
     "types": ["chrome", "vitest/globals"],
     "useUnknownInCatchVariables": false,
     "paths": {
+      "@/*": ["./*"],
       "~/*": ["./src/*"],
       "@luxfi/ui/src/*": ["../../pkgs/ui/src/*"],
       "@luxfi/utilities/src/*": ["../../pkgs/utilities/src/*"],
@@ -37,13 +38,18 @@
     }
   },
   "include": [
+    "app/**/*",
+    "components/**/*",
+    "config/**/*",
+    "lib/**/*",
     "src/**/*",
     "src/**/*.json",
     ".storybook/preview.tsx",
     ".storybook/main.ts",
     "vite.config.mts",
     "scripts/*",
-    "vite/*"
+    "vite/*",
+    "next-env.d.ts"
   ],
   "exclude": ["scripts/build-vercel.ts"],
   "references": [

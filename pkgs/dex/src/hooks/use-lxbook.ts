@@ -149,7 +149,7 @@ export function useLXBookExecute(): UseLXBookExecuteResult {
         address: LX.LX_BOOK,
         abi: LX_BOOK_ABI,
         functionName: 'execute',
-        args: [action],
+        args: [action] as any,
       })
     },
     [writeContract]
@@ -161,7 +161,7 @@ export function useLXBookExecute(): UseLXBookExecuteResult {
         address: LX.LX_BOOK,
         abi: LX_BOOK_ABI,
         functionName: 'executeBatch',
-        args: [actions],
+        args: [actions] as any,
       })
     },
     [writeContract]

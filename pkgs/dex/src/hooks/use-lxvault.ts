@@ -276,7 +276,7 @@ export function useLXVaultLiquidate(): UseLXVaultLiquidateResult {
         address: LX.LX_VAULT,
         abi: LX_VAULT_ABI,
         functionName: 'liquidate',
-        args: [buildAccount(targetAccount, targetSubaccount), marketId, sizeX18],
+        args: [buildAccount(targetAccount, targetSubaccount), marketId, sizeX18] as any,
       })
     },
     [writeContract]

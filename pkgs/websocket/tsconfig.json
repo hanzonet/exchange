@@ -16,7 +16,9 @@
     "noEmit": false,
     "emitDeclarationOnly": true,
     "types": ["node", "vitest/globals"],
-    "paths": {}
+    "paths": {
+      "@luxexchange/websocket/src/*": ["./src/*"]
+    }
   },
   "references": [
     {
