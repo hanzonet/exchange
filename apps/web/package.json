@@ -231,7 +231,6 @@
     "@luxamm/permit2-sdk": "1.3.0",
     "@luxamm/router-sdk": "2.7.1",
     "@luxamm/sdk-core": "7.12.1",
-    "@luxamm/token-lists": "1.0.0-beta.33",
     "@luxamm/swap-sdk": "3.0.0",
     "@luxamm/universal-router-sdk": "4.33.0",
     "@luxamm/v2-sdk": "4.19.1",
