@@ -30,6 +30,16 @@ export const CHAIN_ID_TO_URL_PARAM: Record<UniverseChainId, string> = {
   [UniverseChainId.XLayer]: 'xlayer',
   [UniverseChainId.Zksync]: 'zksync',
   [UniverseChainId.Zora]: 'zora',
+  // Lux ecosystem
+  [UniverseChainId.Lux]: 'lux',
+  [UniverseChainId.LuxTestnet]: 'lux_testnet',
+  [UniverseChainId.LuxDev]: 'lux_dev',
+  [UniverseChainId.Zoo]: 'zoo',
+  [UniverseChainId.ZooTestnet]: 'zoo_testnet',
+  // Lux subnets
+  [UniverseChainId.Hanzo]: 'hanzo',
+  [UniverseChainId.SPC]: 'spc',
+  [UniverseChainId.Pars]: 'pars',
   // Liquidity chain
   [UniverseChainId.LiquidityMainnet]: 'liquidity',
   [UniverseChainId.LiquidityTestnet]: 'liquidity_testnet',

@@ -31,6 +31,16 @@ export enum UniverseChainId {
   Zksync = UniswapSDKChainId.ZKSYNC,
   Zora = UniswapSDKChainId.ZORA,
   Solana = 501000101,
+  // Lux ecosystem chains
+  Lux = 96369,
+  LuxTestnet = 96368,
+  LuxDev = 1337, // Dev mode (lux dev start) - single-node K=1 consensus on port 8545
+  Zoo = 200200,
+  ZooTestnet = 200201,
+  // Lux subnet chains
+  Hanzo = 36963,
+  SPC = 36911,
+  Pars = 494949,
   // Liquidity chain (Lux L2 subnet)
   LiquidityMainnet = 8675309,
   LiquidityTestnet = 8675310,
