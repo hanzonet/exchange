@@ -110,7 +110,7 @@ export default defineConfig({
   ],
   outputDir: './test-results',
   webServer: {
-    command: 'bun run dev',
+    command: 'pnpm dev',
     url: 'http://localhost:9000',
     reuseExistingServer: !IS_CI,
     timeout: ms('120s'),
