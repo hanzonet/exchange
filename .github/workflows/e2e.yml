@@ -35,11 +35,11 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run critical e2e tests against production
-        working-directory: apps/web
         run: |
           npx playwright test \
-            e2e/advanced.spec.ts \
-            e2e/lux-explore.spec.ts \
+            --config=playwright.config.ts \
+            apps/web/e2e/advanced.spec.ts \
+            apps/web/e2e/lux-explore.spec.ts \
             --grep "@critical" \
             --reporter=list \
             --retries=2
@@ -74,12 +74,10 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run all e2e tests
-        working-directory: apps/web
         run: |
           npx playwright test \
-            e2e/advanced.spec.ts \
-            e2e/lux-explore.spec.ts \
-            e2e/explore.spec.ts \
+            --config=playwright.config.ts \
+            apps/web/e2e/ \
             --reporter=list \
             --retries=2
         env:
