@@ -43,6 +43,9 @@ const BLOCK_EXPLORER_LOGOS_LIGHT: Record<UniverseChainId, GeneratedIcon> = {
   [UniverseChainId.WorldChain]: BlockExplorer,
   [UniverseChainId.Zksync]: BlockExplorer,
   [UniverseChainId.Zora]: BlockExplorer,
+  [UniverseChainId.LiquidityMainnet]: BlockExplorer,
+  [UniverseChainId.LiquidityTestnet]: BlockExplorer,
+  [UniverseChainId.LiquidityDevnet]: BlockExplorer,
 }
 
 const BLOCK_EXPLORER_LOGOS_DARK: Record<UniverseChainId, GeneratedIcon> = {

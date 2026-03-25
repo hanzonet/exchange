@@ -15,6 +15,11 @@ import { WORLD_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/worldchai
 import { XLAYER_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/xlayer'
 import { ZKSYNC_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/zksync'
 import { ZORA_CHAIN_INFO } from 'uniswap/src/features/chains/evm/info/zora'
+import {
+  LIQUIDITY_DEVNET_CHAIN_INFO,
+  LIQUIDITY_MAINNET_CHAIN_INFO,
+  LIQUIDITY_TESTNET_CHAIN_INFO,
+} from 'uniswap/src/features/chains/evm/info/liquidity'
 import { SOLANA_CHAIN_INFO } from 'uniswap/src/features/chains/svm/info/solana'
 import { UniverseChainId, UniverseChainInfo } from 'uniswap/src/features/chains/types'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
@@ -53,6 +58,9 @@ export const ORDERED_CHAINS = [
   LUX_TESTNET_CHAIN_INFO,
   LUX_DEV_CHAIN_INFO,
   ZOO_TESTNET_CHAIN_INFO,
+  LIQUIDITY_MAINNET_CHAIN_INFO,
+  LIQUIDITY_TESTNET_CHAIN_INFO,
+  LIQUIDITY_DEVNET_CHAIN_INFO,
 ] as const satisfies UniverseChainInfo[]
 
 type ConstChainInfo<P extends Platform = Platform> = Extract<(typeof ORDERED_CHAINS)[number], { platform: P }>
@@ -112,6 +120,11 @@ export const UNIVERSE_CHAIN_INFO = {
   [UniverseChainId.LuxTestnet]: LUX_TESTNET_CHAIN_INFO,
   [UniverseChainId.LuxDev]: LUX_DEV_CHAIN_INFO,
   [UniverseChainId.ZooTestnet]: ZOO_TESTNET_CHAIN_INFO,
+
+  // LIQUIDITY
+  [UniverseChainId.LiquidityMainnet]: LIQUIDITY_MAINNET_CHAIN_INFO,
+  [UniverseChainId.LiquidityTestnet]: LIQUIDITY_TESTNET_CHAIN_INFO,
+  [UniverseChainId.LiquidityDevnet]: LIQUIDITY_DEVNET_CHAIN_INFO,
 
   // SVM
   [UniverseChainId.Solana]: SOLANA_CHAIN_INFO,

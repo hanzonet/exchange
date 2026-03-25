@@ -2,6 +2,7 @@ import { BigNumber, BigNumberish } from '@ethersproject/bignumber'
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { getVisibleChainIds } from '@luxexchange/lx/src/features/branding/config'
 import { ALL_CHAIN_IDS, getChainInfo, ORDERED_CHAINS } from '@luxexchange/lx/src/features/chains/chainInfo'
 import { EnabledChainsInfo, GqlChainId, NetworkLayer, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
@@ -250,7 +251,14 @@ export function getEnabledChains({
   featureFlaggedChainIds: UniverseChainId[]
   includeTestnets?: boolean
 }): EnabledChainsInfo {
+  const visibleChainIds = getVisibleChainIds()
+
   const enabledChainInfos = ORDERED_CHAINS.filter((chainInfo) => {
+    // Filter by white-label brand config (NEXT_PUBLIC_CHAIN_FILTER or NEXT_PUBLIC_BRAND_NAME)
+    if (visibleChainIds !== null && !visibleChainIds.includes(chainInfo.id)) {
+      return false
+    }
+
     // Filter by platform
     if (platform !== undefined && platform !== chainInfo.platform) {
       return false
@@ -291,8 +299,13 @@ function getDefaultChainId({
   isTestnetModeEnabled: boolean
 }): UniverseChainId {
   if (platform === Platform.SVM) {
-    // TODO(Solana): is there a Solana testnet we can return here?
     return UniverseChainId.Solana
+  }
+
+  // When white-labeled for Liquidity, default to Liquidity chain
+  const visibleChains = getVisibleChainIds()
+  if (visibleChains !== null && visibleChains.includes(UniverseChainId.LiquidityMainnet)) {
+    return isTestnetModeEnabled ? UniverseChainId.LiquidityTestnet : UniverseChainId.LiquidityMainnet
   }
 
   // Lux network is the default chain

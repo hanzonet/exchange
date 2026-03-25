@@ -24,6 +24,7 @@ export const LUX_LOGO_LARGE = require('./logos/png/lux-logo-large.png')
 export const LUX_MONO_LOGO_LARGE = require('./logos/png/lux-mono-logo-large.png')
 export const LUX_APP_ICON = require('./logos/png/lux-app-icon.png')
 export const LUX_NETWORK_LOGO = require('./logos/png/lux-network-logo.png')
+export const LIQUIDITY_LOGO = require('./logos/png/lux-network-logo.png')
 export const BINANCE_WALLET_ICON = require('./logos/png/binance-icon.png')
 export const BETA_LOGO = require('./logos/png/beta-logo.png')
 

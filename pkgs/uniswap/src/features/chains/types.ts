@@ -31,6 +31,10 @@ export enum UniverseChainId {
   Zksync = UniswapSDKChainId.ZKSYNC,
   Zora = UniswapSDKChainId.ZORA,
   Solana = 501000101,
+  // Liquidity chain (Lux L2 subnet)
+  LiquidityMainnet = 8675309,
+  LiquidityTestnet = 8675310,
+  LiquidityDevnet = 8675311,
 }
 
 export type UniverseChainIdByPlatform<T extends Platform> = ((typeof UNIVERSE_CHAIN_INFO)[UniverseChainId] & {
