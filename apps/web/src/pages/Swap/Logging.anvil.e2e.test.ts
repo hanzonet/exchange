@@ -1,5 +1,5 @@
 import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { createExpectMultipleTransactions } from '~/playwright/anvil/transactions'
@@ -24,8 +24,8 @@ test.describe(
       amplitude,
       anvil,
     }) => {
-      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.swap })
-      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.quote })
+      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.swap })
+      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.quote })
       await page.goto(`/swap?inputCurrency=ETH&outputCurrency=${USDC_MAINNET.address}`)
 
       const expectMultipleTransactions = createExpectMultipleTransactions({

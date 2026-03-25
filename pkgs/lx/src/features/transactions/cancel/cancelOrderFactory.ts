@@ -6,7 +6,7 @@ import {
   DutchOrder,
   getCancelMultipleParams,
   getCancelSingleParams,
-} from '@luxamm/luxswap-sdk'
+} from '@luxamm/sdk'
 import { TradingApi } from '@luxexchange/api'
 import { providers } from 'ethers/lib/ethers'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -28,7 +28,7 @@ export interface OrderCancellationParams {
 }
 
 /**
- * Builds a transaction to cancel a single UniswapX order
+ * Builds a transaction to cancel a single LX order
  */
 export async function buildSingleCancellation(
   order: OrderCancellationParams,
@@ -59,7 +59,7 @@ export async function buildSingleCancellation(
 }
 
 /**
- * Builds transactions to cancel multiple UniswapX orders
+ * Builds transactions to cancel multiple LX orders
  * Returns array of transactions when multiple word/mask pairs are needed
  */
 export async function buildBatchCancellation(

@@ -4,7 +4,7 @@ import { GasStrategy, TradingApi } from '@luxexchange/api'
 import { SharedQueryClient } from '@luxexchange/api/src/clients/base/SharedQueryClient'
 import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@luxexchange/gating'
 import { useMemo } from 'react'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { useActiveAddress } from 'uniswap/src/features/accounts/store/hooks'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useActiveGasStrategy } from 'uniswap/src/features/gas/hooks'
@@ -27,7 +27,7 @@ import type {
   SwapTxAndGasInfoService,
 } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import { createSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { createUniswapXSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/uniswapXSwapTxAndGasInfoService'
+import { createLXSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lx/uniswapXSwapTxAndGasInfoService'
 import { createWrapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/wrap/wrapTxAndGasInfoService'
 import {
   useSwapFormStore,
@@ -68,7 +68,7 @@ function useSwapConfig(): {
   const chainId = useSwapFormStoreDerivedSwapInfo((s) => s.chainId)
   const gasStrategy = useActiveGasStrategy(chainId, 'general')
   const v4SwapEnabled = useV4SwapEnabled(chainId)
-  const { getCanBatchTransactions, getSwapDelegationInfo } = useUniswapContext()
+  const { getCanBatchTransactions, getSwapDelegationInfo } = useLuxContext()
   return useMemo(
     () => ({
       v4SwapEnabled,
@@ -113,7 +113,7 @@ export function useSwapTxAndGasInfoService(): SwapTxAndGasInfoService {
   }, [swapConfig, transactionSettings, instructionService, decorateWithEVMLogging])
 
   const uniswapXSwapTxInfoService = useMemo(() => {
-    return createUniswapXSwapTxAndGasInfoService()
+    return createLXSwapTxAndGasInfoService()
   }, [])
 
   const chainedSwapTxInfoService = useMemo(() => {

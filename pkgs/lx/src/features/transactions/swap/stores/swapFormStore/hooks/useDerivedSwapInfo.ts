@@ -1,7 +1,7 @@
 import { TradeType } from '@luxamm/sdk-core'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
-import { useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useOnChainCurrencyBalance } from 'uniswap/src/features/portfolio/api'

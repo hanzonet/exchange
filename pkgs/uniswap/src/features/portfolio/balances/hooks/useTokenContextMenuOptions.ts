@@ -13,7 +13,7 @@ import { ReceiveAlt } from 'ui/src/components/icons/ReceiveAlt'
 import { SendAction } from 'ui/src/components/icons/SendAction'
 import { ShareArrow } from 'ui/src/components/icons/ShareArrow'
 import { MenuOptionItemWithId } from 'uniswap/src/components/menus/ContextMenu'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { normalizeCurrencyIdForMapLookup } from 'uniswap/src/data/cache'
 import { useActiveAddresses } from 'uniswap/src/features/accounts/store/hooks'
 import { selectHasViewedContractAddressExplainer } from 'uniswap/src/features/behaviorHistory/selectors'
@@ -82,7 +82,7 @@ export function useTokenContextMenuOptions({
   const activeAddresses = useActiveAddresses()
 
   const { navigateToSwapFlow, navigateToReceive, navigateToSendFlow, handleShareToken, navigateToTokenDetails } =
-    useUniswapContext()
+    useLuxContext()
 
   const activeAccountHoldsToken =
     portfolioBalance && areCurrencyIdsEqual(currencyId, portfolioBalance.currencyInfo.currencyId)

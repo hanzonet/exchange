@@ -26,7 +26,7 @@ export type NavigateToSwapFlowArgs = {
 }
 
 /** Stores objects/utils that exist on all platforms, abstracting away app-level specifics for each, in order to allow usage in cross-platform code. */
-interface UniswapContextValue {
+interface LuxContextValue {
   navigateToBuyOrReceiveWithEmptyWallet?: () => void
   navigateToFiatOnRamp: (args: { prefilledCurrency?: FiatOnRampCurrency }) => void
   navigateToSwapFlow: (args: NavigateToSwapFlowArgs) => void
@@ -55,9 +55,9 @@ interface UniswapContextValue {
   isSwapTokenSelectorOpen: boolean
   setIsSwapTokenSelectorOpen: (open: boolean) => void
   getCanSignPermits?: (chainId: UniverseChainId | undefined) => boolean
-  // some wallets don't support UniswapX, so we need to check if it's supported (mismatch account)
-  getIsUniswapXSupported?: (chainId: UniverseChainId | undefined) => boolean
-  handleOnPressUniswapXUnsupported?: () => void
+  // some wallets don't support LX, so we need to check if it's supported (mismatch account)
+  getIsLXSupported?: (chainId: UniverseChainId | undefined) => boolean
+  handleOnPressLXUnsupported?: () => void
   getCanBatchTransactions?: (chainId: UniverseChainId | undefined) => boolean
   getSwapDelegationInfo?: (chainId: UniverseChainId | undefined) => SwapDelegationInfo
   useAccountsStoreContextHook: () => AccountsStore
@@ -65,9 +65,9 @@ interface UniswapContextValue {
   getCanPayGasInAnyToken?: () => boolean
 }
 
-export const UniswapContext = createContext<UniswapContextValue | null>(null)
+export const LuxContext = createContext<LuxContextValue | null>(null)
 
-export function UniswapProvider({
+export function LuxProvider({
   children,
   navigateToBuyOrReceiveWithEmptyWallet,
   navigateToFiatOnRamp,
@@ -86,20 +86,20 @@ export function UniswapProvider({
   useWalletDisplayName,
   onConnectWallet,
   getCanSignPermits,
-  getIsUniswapXSupported,
-  handleOnPressUniswapXUnsupported,
+  getIsLXSupported,
+  handleOnPressLXUnsupported,
   getCanBatchTransactions,
   getSwapDelegationInfo,
   useAccountsStoreContextHook,
   getCanPayGasInAnyToken,
 }: PropsWithChildren<
-  Omit<UniswapContextValue, 'isSwapTokenSelectorOpen' | 'setIsSwapTokenSelectorOpen' | 'setSwapOutputChainId'>
+  Omit<LuxContextValue, 'isSwapTokenSelectorOpen' | 'setIsSwapTokenSelectorOpen' | 'setSwapOutputChainId'>
 >): JSX.Element {
   const [swapInputChainId, setSwapInputChainId] = useState<UniverseChainId>()
   const [swapOutputChainId, setSwapOutputChainId] = useState<UniverseChainId>()
   const [isSwapTokenSelectorOpen, setIsSwapTokenSelectorOpen] = useState<boolean>(false)
 
-  const value: UniswapContextValue = useMemo(
+  const value: LuxContextValue = useMemo(
     () => ({
       navigateToBuyOrReceiveWithEmptyWallet,
       navigateToFiatOnRamp,
@@ -135,8 +135,8 @@ export function UniswapProvider({
       isSwapTokenSelectorOpen,
       setIsSwapTokenSelectorOpen: (open: boolean) => setIsSwapTokenSelectorOpen(open),
       getCanSignPermits,
-      getIsUniswapXSupported,
-      handleOnPressUniswapXUnsupported,
+      getIsLXSupported,
+      handleOnPressLXUnsupported,
       getCanBatchTransactions,
       getSwapDelegationInfo,
       useAccountsStoreContextHook,
@@ -162,8 +162,8 @@ export function UniswapProvider({
       swapOutputChainId,
       isSwapTokenSelectorOpen,
       getCanSignPermits,
-      getIsUniswapXSupported,
-      handleOnPressUniswapXUnsupported,
+      getIsLXSupported,
+      handleOnPressLXUnsupported,
       getCanBatchTransactions,
       getSwapDelegationInfo,
       onSwapChainsChanged,
@@ -172,31 +172,31 @@ export function UniswapProvider({
     ],
   )
 
-  return <UniswapContext.Provider value={value}>{children}</UniswapContext.Provider>
+  return <LuxContext.Provider value={value}>{children}</LuxContext.Provider>
 }
 
 /** Cross-platform util for getting items/utils that exist on all apps. */
-export function useUniswapContext(): UniswapContextValue {
-  const context = useContext(UniswapContext)
+export function useLuxContext(): LuxContextValue {
+  const context = useContext(LuxContext)
   if (!context) {
-    throw new Error('useUniswapContext must be used within a UniswapProvider')
+    throw new Error('useLuxContext must be used within a LuxProvider')
   }
 
   return context
 }
 
-export function useUniswapContextSelector<T>(selector: (ctx: UniswapContextValue) => T): T | undefined {
+export function useLuxContextSelector<T>(selector: (ctx: LuxContextValue) => T): T | undefined {
   const stableSelector = useEvent(selector)
-  const context = useContext(UniswapContext)
+  const context = useContext(LuxContext)
   return context ? stableSelector(context) : undefined
 }
 
 /** Cross-platform util for getting an RPC provider for the given `chainId`, regardless of platform/environment. */
 export function useProvider(chainId: number): JsonRpcProvider | undefined {
-  return useUniswapContext().useProviderHook(chainId)
+  return useLuxContext().useProviderHook(chainId)
 }
 
 /** Cross-platform util for getting a signer for the active account/wallet, regardless of platform/environment. */
 export function useSigner(): Signer | undefined {
-  return useUniswapContext().signer
+  return useLuxContext().signer
 }

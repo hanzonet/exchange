@@ -2,7 +2,7 @@ import { type Currency, CurrencyAmount, Percent } from '@luxamm/sdk-core'
 import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
 import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
 import { getSwapFeeUsdFromDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
-import { isClassic, isJupiter, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isClassic, isJupiter, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 
 function stringToUSDAmount(value: string | number | undefined, USDCurrency: Currency): Maybe<CurrencyAmount<Currency>> {
   if (!value) {
@@ -16,12 +16,12 @@ function stringToUSDAmount(value: string | number | undefined, USDCurrency: Curr
   })
 }
 
-/** Returns the price impact of the current trade, including UniswapX trades. UniswapX trades do not have typical pool-based price impact; we use a frontend-calculated metric. */
-function getUniswapXPriceImpact({ derivedSwapInfo }: { derivedSwapInfo: DerivedSwapInfo }): Percent | undefined {
+/** Returns the price impact of the current trade, including LX trades. LX trades do not have typical pool-based price impact; we use a frontend-calculated metric. */
+function getLXPriceImpact({ derivedSwapInfo }: { derivedSwapInfo: DerivedSwapInfo }): Percent | undefined {
   const trade = derivedSwapInfo.trade.trade
   const { input: inputUSD, output: outputUSD } = derivedSwapInfo.currencyAmountsUSDValue
 
-  if (!trade || !isUniswapX(trade) || !trade.quote.quote.classicGasUseEstimateUSD || !inputUSD || !outputUSD) {
+  if (!trade || !isLX(trade) || !trade.quote.quote.classicGasUseEstimateUSD || !inputUSD || !outputUSD) {
     return undefined
   }
 
@@ -50,8 +50,8 @@ export function getPriceImpact(derivedSwapInfo: DerivedSwapInfo): Percent | unde
     return undefined
   }
 
-  if (isUniswapX(trade)) {
-    return getUniswapXPriceImpact({ derivedSwapInfo })
+  if (isLX(trade)) {
+    return getLXPriceImpact({ derivedSwapInfo })
   } else if (isClassic(trade) || isJupiter(trade)) {
     return trade.priceImpact
   } else {

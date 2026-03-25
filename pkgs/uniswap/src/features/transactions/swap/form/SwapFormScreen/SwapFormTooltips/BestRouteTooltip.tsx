@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next'
 import { Flex } from 'ui/src'
 import { OrderRouting } from 'ui/src/components/icons/OrderRouting'
 import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
+import { LX } from 'ui/src/components/icons/LX'
 import { RoutingDiagram } from 'uniswap/src/components/RoutingDiagram/RoutingDiagram'
 import { TransactionDetailsTooltip as Tooltip } from 'uniswap/src/components/TransactionDetailsTooltip'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
 import { useRoutingEntries, useRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingRegistry'
 
@@ -45,7 +45,7 @@ export function BestRouteTooltip(): JSX.Element | null {
       <Tooltip.Separator />
       {routingProvider.getDescription && (
         <Tooltip.Description
-          learnMoreUrl={uniswapUrls.helpArticleUrls.routingSettings}
+          learnMoreUrl={luxUrls.helpArticleUrls.routingSettings}
           text={routingProvider.getDescription(t)}
         />
       )}
@@ -53,17 +53,17 @@ export function BestRouteTooltip(): JSX.Element | null {
   )
 }
 
-export function BestRouteUniswapXTooltip(): JSX.Element {
+export function BestRouteLXTooltip(): JSX.Element {
   const { t } = useTranslation()
 
   return (
     <Tooltip.Outer>
       <Tooltip.Header
         title={{
-          title: t('common.bestRoute.with', { provider: 'UniswapX' }),
+          title: t('common.bestRoute.with', { provider: 'LX' }),
           uniswapX: true,
         }}
-        Icon={UniswapX}
+        Icon={LX}
       />
       <Tooltip.Content>
         <Tooltip.Row>
@@ -72,8 +72,8 @@ export function BestRouteUniswapXTooltip(): JSX.Element {
         </Tooltip.Row>
       </Tooltip.Content>
       <Tooltip.Description
-        learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo}
-        text={t('routing.aggregateLiquidity.uniswapx')}
+        learnMoreUrl={luxUrls.helpArticleUrls.uniswapXInfo}
+        text={t('routing.aggregateLiquidity.lx')}
       />
     </Tooltip.Outer>
   )

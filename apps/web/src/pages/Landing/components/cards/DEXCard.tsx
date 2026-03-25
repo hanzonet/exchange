@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Image } from '@luxfi/ui/src'
 import { DEX } from '@luxfi/ui/src/components/icons/DEX'
 import { opacify } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { CardContents } from '~/pages/Landing/components/cards/CardContents'
 import { PillButton } from '~/pages/Landing/components/cards/PillButton'
 import ValuePropCard from '~/pages/Landing/components/cards/ValuePropCard'
@@ -14,7 +14,7 @@ export function DEXCard() {
 
   return (
     <ValuePropCard
-      href={uniswapUrls.dexUrl}
+      href={luxUrls.dexUrl}
       color={primary}
       backgroundColor={opacify(6, primary)}
       title={

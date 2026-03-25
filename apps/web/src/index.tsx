@@ -276,7 +276,7 @@ const RootApp = (): JSX.Element => {
                             <ExternalWalletProvider>
                               <ConnectWalletMutationProvider>
                                 <WebAccountsStoreProvider>
-                                  <WebUniswapProvider>
+                                  <WebLuxProvider>
                                     <TokenPriceProvider>
                                       <GraphqlProviders>
                                         <LivePricesProvider>
@@ -297,7 +297,7 @@ const RootApp = (): JSX.Element => {
                                         </LivePricesProvider>
                                       </GraphqlProviders>
                                     </TokenPriceProvider>
-                                  </WebUniswapProvider>
+                                  </WebLuxProvider>
                                 </WebAccountsStoreProvider>
                               </ConnectWalletMutationProvider>
                             </ExternalWalletProvider>

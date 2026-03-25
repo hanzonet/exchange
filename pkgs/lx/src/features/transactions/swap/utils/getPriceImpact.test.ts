@@ -4,7 +4,7 @@ import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/typ
 import type { Trade, TradeWithStatus } from 'uniswap/src/features/transactions/swap/types/trade'
 import { getPriceImpact } from 'uniswap/src/features/transactions/swap/utils/getPriceImpact'
 import { getSwapFeeUsdFromDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
-import { isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isClassic, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import type { Mock } from 'vitest'
@@ -12,7 +12,7 @@ import type { Mock } from 'vitest'
 // Mocks for routing and getSwapFeeUsd
 vi.mock('uniswap/src/features/transactions/swap/utils/routing', () => ({
   isClassic: vi.fn(),
-  isUniswapX: vi.fn(),
+  isLX: vi.fn(),
 }))
 vi.mock('uniswap/src/features/transactions/swap/utils/getSwapFeeUsd', () => ({
   getSwapFeeUsdFromDerivedSwapInfo: vi.fn(),
@@ -20,7 +20,7 @@ vi.mock('uniswap/src/features/transactions/swap/utils/getSwapFeeUsd', () => ({
 
 // Type the mocks for TypeScript
 const isClassicMock = isClassic as unknown as Mock
-const isUniswapXMock = isUniswapX as unknown as Mock
+const isLXMock = isLX as unknown as Mock
 const getSwapFeeUsdFromDerivedSwapInfoMock = getSwapFeeUsdFromDerivedSwapInfo as unknown as Mock
 
 // Minimal ClassicTrade mock
@@ -31,8 +31,8 @@ class ClassicTradeMock {
   }
 }
 
-// Minimal UniswapXTrade mock
-class UniswapXTradeMock {
+// Minimal LXTrade mock
+class LXTradeMock {
   quote: unknown
   constructor(quote: unknown) {
     this.quote = quote
@@ -108,7 +108,7 @@ describe('getPriceImpact', () => {
     const priceImpact = mockPercent(7)
     const trade = new ClassicTradeMock(priceImpact) as unknown as Trade
     isClassicMock.mockReturnValue(true)
-    isUniswapXMock.mockReturnValue(false)
+    isLXMock.mockReturnValue(false)
     const derivedSwapInfo = makeDerivedSwapInfo(trade)
     // Act
     const result = getPriceImpact(derivedSwapInfo)
@@ -116,11 +116,11 @@ describe('getPriceImpact', () => {
     expect(result).toBe(priceImpact)
   })
 
-  it('returns calculated price impact for UniswapX trades', () => {
+  it('returns calculated price impact for LX trades', () => {
     // Arrange
-    const trade = new UniswapXTradeMock({ quote: { classicGasUseEstimateUSD: '100' } }) as unknown as Trade
+    const trade = new LXTradeMock({ quote: { classicGasUseEstimateUSD: '100' } }) as unknown as Trade
     isClassicMock.mockReturnValue(false)
-    isUniswapXMock.mockReturnValue(true)
+    isLXMock.mockReturnValue(true)
     const inputUSD = mockCurrencyAmount('1000')
     const outputUSD = mockCurrencyAmount('900')
     getSwapFeeUsdFromDerivedSwapInfoMock.mockReturnValue(50)
@@ -137,11 +137,11 @@ describe('getPriceImpact', () => {
     expect(typeof result?.toFixed).toBe('function')
   })
 
-  it('returns undefined for non-classic, non-UniswapX trades', () => {
+  it('returns undefined for non-classic, non-LX trades', () => {
     // Arrange
     const trade = null
     isClassicMock.mockReturnValue(false)
-    isUniswapXMock.mockReturnValue(false)
+    isLXMock.mockReturnValue(false)
     const derivedSwapInfo = makeDerivedSwapInfo(trade)
     // Act
     const result = getPriceImpact(derivedSwapInfo)
@@ -149,11 +149,11 @@ describe('getPriceImpact', () => {
     expect(result).toBeUndefined()
   })
 
-  it('returns undefined for UniswapX trade with missing USD values', () => {
+  it('returns undefined for LX trade with missing USD values', () => {
     // Arrange
-    const trade = new UniswapXTradeMock({ quote: { classicGasUseEstimateUSD: '100' } }) as unknown as Trade
+    const trade = new LXTradeMock({ quote: { classicGasUseEstimateUSD: '100' } }) as unknown as Trade
     isClassicMock.mockReturnValue(false)
-    isUniswapXMock.mockReturnValue(true)
+    isLXMock.mockReturnValue(true)
     const derivedSwapInfo = makeDerivedSwapInfo(trade, {
       currencyAmountsUSDValue: {
         [CurrencyField.INPUT]: null,
@@ -166,11 +166,11 @@ describe('getPriceImpact', () => {
     expect(result).toBeUndefined()
   })
 
-  it('returns undefined for UniswapX trade with missing classicGasEstimateUSD', () => {
+  it('returns undefined for LX trade with missing classicGasEstimateUSD', () => {
     // Arrange
-    const trade = new UniswapXTradeMock({ quote: {} }) as unknown as Trade
+    const trade = new LXTradeMock({ quote: {} }) as unknown as Trade
     isClassicMock.mockReturnValue(false)
-    isUniswapXMock.mockReturnValue(true)
+    isLXMock.mockReturnValue(true)
     const inputUSD = mockCurrencyAmount('1000')
     const outputUSD = mockCurrencyAmount('900')
     const derivedSwapInfo = makeDerivedSwapInfo(trade, {

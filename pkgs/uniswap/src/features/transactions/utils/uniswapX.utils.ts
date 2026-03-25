@@ -1,14 +1,14 @@
 import { GraphQLApi, TradingApi } from '@luxexchange/api'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
-  UniswapXOrderDetails,
+  LXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 
 /**
  * Converts a trading API OrderType to internal Routing type.
- * Used when creating transactions from external UniswapX orders.
+ * Used when creating transactions from external LX orders.
  */
 export function convertOrderTypeToRouting(
   orderType: TradingApi.OrderType,
@@ -33,7 +33,7 @@ export function convertOrderTypeToRouting(
 
 /**
  * Converts a GraphQL GraphQLApi.SwapOrderType to internal Routing type.
- * Used when creating transactions from external UniswapX orders.
+ * Used when creating transactions from external LX orders.
  */
 export function convertSwapOrderTypeToRouting(
   orderType: GraphQLApi.SwapOrderType,
@@ -100,33 +100,33 @@ export function remoteOrderStatusToLocalTxStatus(orderStatus: GraphQLApi.SwapOrd
 
 /**
  * Checks if a transaction is a limit order.
- * Limit orders are UniswapX orders with DUTCH_LIMIT routing.
+ * Limit orders are LX orders with DUTCH_LIMIT routing.
  */
-export function isLimitOrder(tx: TransactionDetails): tx is UniswapXOrderDetails {
-  return isUniswapX(tx) && tx.routing === TradingApi.Routing.DUTCH_LIMIT
+export function isLimitOrder(tx: TransactionDetails): tx is LXOrderDetails {
+  return isLX(tx) && tx.routing === TradingApi.Routing.DUTCH_LIMIT
 }
 
 /**
- * Type guard to check if a UniswapX order has the encoded order data needed for cancellation.
+ * Type guard to check if a LX order has the encoded order data needed for cancellation.
  * Orders that have been filled won't have encodedOrder, and it's only present for orders
  * that haven't been submitted yet or are still pending.
  */
-export function hasEncodedOrder(order: UniswapXOrderDetails): order is UniswapXOrderDetails & { encodedOrder: string } {
+export function hasEncodedOrder(order: LXOrderDetails): order is LXOrderDetails & { encodedOrder: string } {
   return 'encodedOrder' in order && typeof order.encodedOrder === 'string'
 }
 
 /**
  * Check if a limit order can be cancelled
  */
-export function isLimitCancellable(order: UniswapXOrderDetails): boolean {
+export function isLimitCancellable(order: LXOrderDetails): boolean {
   return order.status === TransactionStatus.Pending || order.status === TransactionStatus.InsufficientFunds
 }
 
 /**
- * Checks if a UniswapX order is in a pending-like state.
+ * Checks if a LX order is in a pending-like state.
  * This includes orders that are actively pending, being cancelled, or have insufficient funds.
  */
-export function isUniswapXOrderPending(order: UniswapXOrderDetails): boolean {
+export function isLXOrderPending(order: LXOrderDetails): boolean {
   return (
     order.status === TransactionStatus.Pending ||
     order.status === TransactionStatus.Cancelling ||

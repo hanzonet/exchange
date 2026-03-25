@@ -4,7 +4,7 @@ import { infiniteQueryOptions } from '@tanstack/react-query'
 import { DataApiService } from '@luxamm/client-data-api/dist/data/v1/api_connect'
 import type { ListTopPoolsRequest, ListTopPoolsResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { createDataApiServiceClient } from '@luxexchange/api'
-import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
+import { luxGetTransport } from 'uniswap/src/data/rest/base'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export type ListTopPoolsInput = {
@@ -15,7 +15,7 @@ export type ListTopPoolsInput = {
 type ListTopPoolsQueryKey = readonly [ReactQueryCacheKey.DataApiService, 'listTopPools', ListTopPoolsInput['params']]
 
 const client = createDataApiServiceClient({
-  rpcClient: createPromiseClient(DataApiService, uniswapGetTransport),
+  rpcClient: createPromiseClient(DataApiService, luxGetTransport),
 })
 
 export function getListTopPoolsQueryOptions({

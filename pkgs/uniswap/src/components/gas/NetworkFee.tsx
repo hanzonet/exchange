@@ -1,19 +1,19 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { GasFeeResult } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, UniswapXText } from 'ui/src'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
+import { Flex, Text, LXText } from 'ui/src'
+import { LX } from 'ui/src/components/icons/LX'
 import { iconSizes } from 'ui/src/theme'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
 import { NetworkFeeWarning } from 'uniswap/src/components/gas/NetworkFeeWarning'
 import { IndicativeLoadingWrapper } from 'uniswap/src/components/misc/IndicativeLoadingWrapper'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import {
-  useFormattedUniswapXGasFeeInfo,
+  useFormattedLXGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
 } from 'uniswap/src/features/gas/hooks'
-import { UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { LXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { isZero } from 'uniswap/src/utils/number'
 import { isWebApp } from 'utilities/src/platform'
 
@@ -28,7 +28,7 @@ export function NetworkFee({
 }: {
   chainId: UniverseChainId
   gasFee: GasFeeResult
-  uniswapXGasBreakdown?: UniswapXGasBreakdown
+  uniswapXGasBreakdown?: LXGasBreakdown
   transactionUSDValue?: Maybe<CurrencyAmount<Currency>>
   indicative?: boolean
   includesDelegation?: boolean
@@ -43,7 +43,7 @@ export function NetworkFee({
     includesDelegation,
   })
 
-  const uniswapXGasFeeInfo = useFormattedUniswapXGasFeeInfo(uniswapXGasBreakdown, chainId)
+  const uniswapXGasFeeInfo = useFormattedLXGasFeeInfo(uniswapXGasBreakdown, chainId)
   const isGasFeeFree = gasFee.value !== undefined && isZero(gasFee.value)
 
   const gasFeeHighRelativeToValue = useGasFeeHighRelativeToValue(gasFeeUSD, transactionUSDValue)
@@ -72,7 +72,7 @@ export function NetworkFee({
                 {t('common.text.notAvailable')}
               </Text>
             ) : uniswapXGasBreakdown ? (
-              <UniswapXFee
+              <LXFee
                 gasFee={gasFeeFormatted}
                 isFree={isGasFeeFree}
                 preSavingsGasFee={uniswapXGasFeeInfo?.preSavingsGasFeeFormatted}
@@ -97,14 +97,14 @@ export function NetworkFee({
   )
 }
 
-type UniswapXFeeProps = {
+type LXFeeProps = {
   gasFee: string
   isFree?: boolean
   preSavingsGasFee?: string
   smaller?: boolean
   loading?: boolean
 }
-export function UniswapXFee({ gasFee, isFree, preSavingsGasFee, smaller = false }: UniswapXFeeProps): JSX.Element {
+export function LXFee({ gasFee, isFree, preSavingsGasFee, smaller = false }: LXFeeProps): JSX.Element {
   const { t } = useTranslation()
   const gasFeeDisplayed = isFree ? t('common.free') : gasFee
 
@@ -115,8 +115,8 @@ export function UniswapXFee({ gasFee, isFree, preSavingsGasFee, smaller = false 
           {preSavingsGasFee}
         </Text>
       )}
-      <UniswapX marginEnd="$spacing2" size={smaller ? '$icon.12' : '$icon.16'} />
-      <UniswapXText variant={smaller ? 'body4' : 'body3'}>{gasFeeDisplayed}</UniswapXText>
+      <LX marginEnd="$spacing2" size={smaller ? '$icon.12' : '$icon.16'} />
+      <LXText variant={smaller ? 'body4' : 'body3'}>{gasFeeDisplayed}</LXText>
     </Flex>
   )
 }

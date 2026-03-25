@@ -8,7 +8,7 @@ import { TransactionParticipantDisplay } from 'uniswap/src/components/activity/d
 import { TransactionParticipantRowProps } from 'uniswap/src/components/activity/details/types'
 import { ContextMenu, MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
 import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
 import { AppNotificationType, CopyNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { setClipboard } from 'utilities/src/clipboard/clipboard'
@@ -21,7 +21,7 @@ export function TransactionParticipantRow({
 }: TransactionParticipantRowProps): JSX.Element {
   const { t } = useTranslation()
   const dispatch = useDispatch()
-  const { navigateToExternalProfile } = useUniswapContext()
+  const { navigateToExternalProfile } = useLuxContext()
 
   const { value: isContextMenuOpen, setTrue: openContextMenu, setFalse: closeContextMenu } = useBooleanState(false)
 

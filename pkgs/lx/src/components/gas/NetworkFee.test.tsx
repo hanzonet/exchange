@@ -4,7 +4,7 @@ import { render } from 'uniswap/src/test/test-utils'
 
 vi.mock('uniswap/src/features/gas/hooks', () => {
   return {
-    useFormattedUniswapXGasFeeInfo: vi.fn(() => undefined),
+    useFormattedLXGasFeeInfo: vi.fn(() => undefined),
     useUSDValue: (_chainId: UniverseChainId, gasFee: string): string => gasFee,
     useGasFeeHighRelativeToValue: vi.fn(() => false),
     useGasFeeFormattedDisplayAmounts: vi.fn(() => ({

@@ -10,21 +10,21 @@ import {
 import { isFinalizedTx } from 'uniswap/src/features/transactions/types/utils'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
-import type { UniswapXOrderUpdate } from '~/state/activity/types'
+import type { LXOrderUpdate } from '~/state/activity/types'
 import { useAppDispatch } from '~/state/hooks'
-import { logUniswapXSwapFinalized } from '~/tracing/swapFlowLoggers'
+import { logLXSwapFinalized } from '~/tracing/swapFlowLoggers'
 
-interface HandleUniswapXActivityUpdateParams {
-  activity: UniswapXOrderUpdate
+interface HandleLXActivityUpdateParams {
+  activity: LXOrderUpdate
   popupDismissalTime: number
 }
 
-export function useHandleUniswapXActivityUpdate(): (params: HandleUniswapXActivityUpdateParams) => void {
+export function useHandleLXActivityUpdate(): (params: HandleLXActivityUpdateParams) => void {
   const dispatch = useAppDispatch()
   const analyticsContext = useTrace()
 
   return useCallback(
-    ({ activity, popupDismissalTime }: HandleUniswapXActivityUpdateParams): void => {
+    ({ activity, popupDismissalTime }: HandleLXActivityUpdateParams): void => {
       const { original, update } = activity
 
       // Always update the transaction first to ensure all fields are updated
@@ -64,7 +64,7 @@ export function useHandleUniswapXActivityUpdate(): (params: HandleUniswapXActivi
           update.status === TransactionStatus.Expired)
       ) {
         // Log successful non-limit orders (for swap metrics) and all cancelled/expired orders
-        logUniswapXSwapFinalized({
+        logLXSwapFinalized({
           id: original.id,
           hash: update.hash,
           orderHash: original.orderHash,

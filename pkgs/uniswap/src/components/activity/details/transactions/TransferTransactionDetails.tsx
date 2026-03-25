@@ -4,7 +4,7 @@ import { fonts, iconSizes } from 'ui/src/theme'
 import { NftTransactionDetails } from 'uniswap/src/components/activity/details/transactions/NftTransactionDetails'
 import { useFormattedCurrencyAmountAndUSDValue } from 'uniswap/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
 import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { AssetType } from 'uniswap/src/entities/assets'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
@@ -73,7 +73,7 @@ export function CurrencyTransferContent({
   showValueAsHeading?: boolean
   isLoading?: boolean
 }): JSX.Element {
-  const { navigateToTokenDetails } = useUniswapContext()
+  const { navigateToTokenDetails } = useLuxContext()
 
   const onPressToken = (): void => {
     if (currencyInfo) {

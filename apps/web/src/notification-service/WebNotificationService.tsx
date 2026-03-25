@@ -207,7 +207,7 @@ export function WebNotificationServiceManager(): JSX.Element | null {
   const isDarkMode = useIsDarkMode()
 
   // Hook values that need to be passed to system alerts data source
-  const { swapInputChainId } = useUniswapContext()
+  const { swapInputChainId } = useLuxContext()
   const blockTimestamp = useCurrentBlockTimestamp({ refetchInterval: ms('5min'), chainId: swapInputChainId })
   const machineTime = useMachineTimeMs(AVERAGE_L1_BLOCK_TIME_MS)
 

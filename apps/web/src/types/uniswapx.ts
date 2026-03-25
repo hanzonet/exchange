@@ -1,8 +1,8 @@
 import { TradingApi } from '@universe/api'
 import { OffchainOrderType } from '~/state/routing/types'
 
-// Mirrors UniswapXOrderEntity type at https://github.com/Uniswap/uniswapx-service/blob/main/lib/entities/Order.ts
-interface BaseUniswapXBackendOrder {
+// Mirrors LXOrderEntity type at https://github.com/Uniswap/lx-service/blob/main/lib/entities/Order.ts
+interface BaseLXBackendOrder {
   type: OffchainOrderType
   encodedOrder: string
   signature: string
@@ -41,7 +41,7 @@ interface BaseUniswapXBackendOrder {
   cosignature?: string
 }
 
-interface NonfilledUniswapXBackendOrder extends BaseUniswapXBackendOrder {
+interface NonfilledLXBackendOrder extends BaseLXBackendOrder {
   orderStatus:
     | TradingApi.OrderStatus.OPEN
     | TradingApi.OrderStatus.EXPIRED
@@ -50,7 +50,7 @@ interface NonfilledUniswapXBackendOrder extends BaseUniswapXBackendOrder {
     | TradingApi.OrderStatus.INSUFFICIENT_FUNDS
 }
 
-interface FilledUniswapXBackendOrder extends BaseUniswapXBackendOrder {
+interface FilledLXBackendOrder extends BaseLXBackendOrder {
   orderStatus: TradingApi.OrderStatus.FILLED
   // Filler field is defined when the order has been filled and the status tracking function has recorded the filler address.
   filler?: string
@@ -67,8 +67,8 @@ interface FilledUniswapXBackendOrder extends BaseUniswapXBackendOrder {
   ]
 }
 
-export type UniswapXBackendOrder = FilledUniswapXBackendOrder | NonfilledUniswapXBackendOrder
+export type LXBackendOrder = FilledLXBackendOrder | NonfilledLXBackendOrder
 
 export type OrderQueryResponse = {
-  orders: UniswapXBackendOrder[]
+  orders: LXBackendOrder[]
 }

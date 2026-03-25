@@ -1,7 +1,7 @@
 import { createTradingApiClient, TradingApi, type TradingApiClient as TradingApiClientType } from '@luxexchange/api'
 import { TRADING_API_PATHS } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 import {
-  EthAsErc20UniswapXProperties,
+  EthAsErc20LXProperties,
   Experiments,
   FeatureFlags,
   getExperimentValueFromLayer,
@@ -9,13 +9,13 @@ import {
   Layers,
 } from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
-import { tradingApiVersionPrefix, uniswapUrls } from 'uniswap/src/constants/urls'
-import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
+import { tradingApiVersionPrefix, luxUrls } from 'uniswap/src/constants/urls'
+import { createLuxFetchClient } from 'uniswap/src/data/apiClients/createLuxFetchClient'
 import { filterChainIdsByPlatform } from 'uniswap/src/features/chains/utils'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 
-const TradingFetchClient = createUniswapFetchClient({
-  baseUrl: uniswapUrls.tradingApiUrl,
+const TradingFetchClient = createLuxFetchClient({
+  baseUrl: luxUrls.tradingApiUrl,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,
   },
@@ -62,13 +62,13 @@ export const getFeatureFlaggedHeaders = (
   const chainedActionsEnabled = getFeatureFlag(FeatureFlags.ChainedActions)
   const unirouteEnabled = getFeatureFlag(FeatureFlags.UnirouteEnabled)
   const uniroutePulumiEnabled = getFeatureFlag(FeatureFlags.UniroutePulumiEnabled)
-  const ethAsErc20UniswapXEnabled = getExperimentValueFromLayer<
+  const ethAsErc20LXEnabled = getExperimentValueFromLayer<
     typeof Layers.SwapPage,
-    Experiments.EthAsErc20UniswapX,
+    Experiments.EthAsErc20LX,
     boolean
   >({
     layerName: Layers.SwapPage,
-    param: EthAsErc20UniswapXProperties.EthAsErc20UniswapXEnabled,
+    param: EthAsErc20LXProperties.EthAsErc20LXEnabled,
     defaultValue: false,
   })
   const disableUniswapInterfaceFees = getFeatureFlag(FeatureFlags.NoUniswapInterfaceFees)
@@ -76,7 +76,7 @@ export const getFeatureFlaggedHeaders = (
     case TRADING_API_PATHS.quote:
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.UnirouteEnabled, enabled: unirouteEnabled })
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.UniroutePulumiEnabled, enabled: uniroutePulumiEnabled })
-      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20UniswapXEnabled })
+      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20LXEnabled })
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.ChainedActionsEnabled, enabled: chainedActionsEnabled })
       addHeaderIfEnabled({
         headers,
@@ -86,15 +86,15 @@ export const getFeatureFlaggedHeaders = (
       break
     case TRADING_API_PATHS.plan:
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.ChainedActionsEnabled, enabled: chainedActionsEnabled })
-      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20UniswapXEnabled })
+      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20LXEnabled })
       break
     case TRADING_API_PATHS.order:
-      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20UniswapXEnabled })
+      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20LXEnabled })
       break
     case TRADING_API_PATHS.swap7702:
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.UnirouteEnabled, enabled: unirouteEnabled })
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.UniroutePulumiEnabled, enabled: uniroutePulumiEnabled })
-      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20UniswapXEnabled })
+      addHeaderIfEnabled({ headers, key: TradingApiHeaders.Erc20EthEnabled, enabled: ethAsErc20LXEnabled })
       break
   }
   return headers

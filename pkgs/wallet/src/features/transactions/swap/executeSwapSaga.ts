@@ -32,12 +32,12 @@ import type {
   PermitTransactionData,
   SwapTransactionData,
   TransactionParamsFactory,
-  UniswapXOrderTransactionData,
+  LXOrderTransactionData,
   WrapTransactionData,
 } from '@luxfi/wallet/src/features/transactions/swap/services/transactionParamsFactory'
-import { submitUniswapXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
+import { submitLXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import {
-  isUniswapXPreSignedSwapTransaction,
+  isLXPreSignedSwapTransaction,
   type PreSignedSwapTransaction,
 } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 import {
@@ -225,7 +225,7 @@ export function createExecuteSwapSaga(
       })
       const swapTxHasDelayedSubmission = shouldWait && getSwapTransactionCount(swapTxContext) > 1
 
-      if (isUniswapXPreSignedSwapTransaction(preSignedTransaction) || swapTxHasDelayedSubmission) {
+      if (isLXPreSignedSwapTransaction(preSignedTransaction) || swapTxHasDelayedSubmission) {
         yield* call(onPending)
       } else {
         yield* call(onSuccess)
@@ -258,13 +258,13 @@ export function createExecuteSwapSaga(
 
       let swapResult: TransactionExecutionSyncResultSuccess | undefined
 
-      if (isUniswapXPreSignedSwapTransaction(preSignedTransaction)) {
-        // UniswapX routing - submit order
+      if (isLXPreSignedSwapTransaction(preSignedTransaction)) {
+        // LX routing - submit order
         const signedPermit = preSignedTransaction.signedSwapPermit
         const { quote } = preSignedTransaction.swapTxContext.trade.quote
         const routing = preSignedTransaction.swapTxContext.routing
 
-        const uniswapXOrderData: UniswapXOrderTransactionData = {
+        const uniswapXOrderData: LXOrderTransactionData = {
           signedPermit,
           quote,
           routing,
@@ -276,8 +276,8 @@ export function createExecuteSwapSaga(
           onFailure,
         }
 
-        const uniswapXOrderParams = factory.createUniswapXOrderParams(uniswapXOrderData)
-        yield* call(submitUniswapXOrder, uniswapXOrderParams)
+        const uniswapXOrderParams = factory.createLXOrderParams(uniswapXOrderData)
+        yield* call(submitLXOrder, uniswapXOrderParams)
       } else if (isWrap(swapTxContext)) {
         // Handle wrap transactions
         const wrapData: WrapTransactionData = {

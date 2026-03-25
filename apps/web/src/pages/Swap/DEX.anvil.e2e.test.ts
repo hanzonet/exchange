@@ -2,7 +2,7 @@ import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataA
 import { WETH9 } from '@luxamm/sdk-core'
 import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
@@ -30,7 +30,7 @@ test.describe(
         address: assume0xAddress(WETH9[UniverseChainId.Mainnet].address),
         balance: parseEther('1000000'),
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.quote}`, async (route, request) => {
+      await page.route(`${luxUrls.tradingApiUrl}${luxUrls.tradingApiPaths.quote}`, async (route, request) => {
         const postData = await request.postData()
         const data = JSON.parse(postData ?? '{}')
         if (data.tokenOut === USDC_MAINNET.address) {
@@ -39,7 +39,7 @@ test.describe(
           await route.fulfill({ path: Mocks.DEX.quote })
         }
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.order}`, async (route) => {
+      await page.route(`${luxUrls.tradingApiUrl}${luxUrls.tradingApiPaths.order}`, async (route) => {
         await route.fulfill({ path: Mocks.DEX.openOrder })
       })
       await page.goto(`/swap?inputCurrency=${WETH9[UniverseChainId.Mainnet].address}&outputCurrency=${DAI.address}`)
@@ -77,12 +77,12 @@ test.describe(
       await expect(page.getByText('Cancellation successful')).toBeVisible()
     })
 
-    test('deduplicates remote vs local uniswapx orders', async ({ page, dataApi }) => {
+    test('deduplicates remote vs local lx orders', async ({ page, dataApi }) => {
       await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
-        await route.fulfill({ path: Mocks.UniswapX.filledOrders })
+        await route.fulfill({ path: Mocks.LX.filledOrders })
       })
 
-      await dataApi.intercept(listTransactions, Mocks.DataApiService.list_transactions_uniswapx)
+      await dataApi.intercept(listTransactions, Mocks.DataApiService.list_transactions_lx)
       await page.getByTestId(TestID.Web3StatusConnected).click()
       const drawer = page.getByTestId(TestID.AccountDrawer)
       await expect(drawer.getByText('Swapping')).not.toBeVisible()

@@ -259,7 +259,7 @@
               "expo-haptics": {
                 "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
               },
-              "@uniswap/analytics": {
+              "@luxamm/analytics": {
                 "importNames": [
                   "sendAnalyticsEvent"
                 ],
@@ -535,7 +535,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -653,7 +653,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -771,7 +771,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -889,7 +889,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1007,7 +1007,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1125,7 +1125,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1243,7 +1243,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1361,7 +1361,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1479,7 +1479,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1597,7 +1597,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1715,7 +1715,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -1833,7 +1833,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2008,7 +2008,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2130,7 +2130,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2263,7 +2263,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2275,11 +2275,11 @@
                   "uniswap/src": {
                     "message": "Avoid importing directly from uniswap/src from within the uniswap package which causes circular imports."
                   },
-                  "@uniswap/sdk-core": {
+                  "@luxamm/sdk-core": {
                     "importNames": [
                       "ChainId"
                     ],
-                    "message": "Don't use ChainId from @uniswap/sdk-core. Use the UniverseChainId from universe/uniswap."
+                    "message": "Don't use ChainId from @luxamm/sdk-core. Use the UniverseChainId from universe/uniswap."
                   },
                   "uniswap/src/features/chains/hooks/useOrderedChainIds": {
                     "importNames": [
@@ -2413,7 +2413,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2585,7 +2585,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2753,7 +2753,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -2978,7 +2978,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -3183,7 +3183,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
@@ -3313,7 +3313,7 @@
                   "expo-haptics": {
                     "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
-                  "@uniswap/analytics": {
+                  "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],

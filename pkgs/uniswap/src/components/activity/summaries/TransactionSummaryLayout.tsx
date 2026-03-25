@@ -5,14 +5,14 @@ import type { FlexProps, TextProps } from 'ui/src'
 import { AnimatePresence, Flex, SpinningLoader, Text, TouchableArea, useSporeColors } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
 import { SlashCircle } from 'ui/src/components/icons/SlashCircle'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
+import { LX } from 'ui/src/components/icons/LX'
 import { DisplayNameText } from 'uniswap/src/components/accounts/DisplayNameText'
 import { TransactionDetailsModal } from 'uniswap/src/components/activity/details/TransactionDetailsModal'
 import { TransactionSummaryTitle } from 'uniswap/src/components/activity/general/TransactionSummaryTitle'
 import { useFormattedTimeForActivity } from 'uniswap/src/components/activity/hooks/useFormattedTime'
 import type { TransactionSummaryLayoutProps } from 'uniswap/src/components/activity/types'
 import { TXN_HISTORY_ICON_SIZE, TXN_STATUS_ICON_SIZE } from 'uniswap/src/components/activity/utils'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { useTransactionActions } from 'uniswap/src/features/activity/hooks/useTransactionActions'
 import { getTransactionSummaryTitle } from 'uniswap/src/features/activity/utils/getTransactionSummaryTitle'
 import { ElementName } from 'uniswap/src/features/telemetry/constants'
@@ -87,7 +87,7 @@ const TransactionSummaryLayoutContent = memo(function _TransactionSummaryLayoutC
 
   const { status } = transaction
 
-  const { useWalletDisplayName } = useUniswapContext()
+  const { useWalletDisplayName } = useLuxContext()
   const walletDisplayName = useWalletDisplayName(transaction.ownerAddress)
 
   title = title ?? getTransactionSummaryTitle(transaction, t) ?? ''
@@ -154,7 +154,7 @@ const TransactionSummaryLayoutContent = memo(function _TransactionSummaryLayoutC
                       <DisplayNameText displayName={walletDisplayName} textProps={displayNameTextProps} />
                     ) : null}
                     {(transaction.routing === TradingApi.Routing.DUTCH_V2 ||
-                      transaction.routing === TradingApi.Routing.DUTCH_LIMIT) && <UniswapX size="$icon.16" />}
+                      transaction.routing === TradingApi.Routing.DUTCH_LIMIT) && <LX size="$icon.16" />}
                     <TransactionSummaryTitle title={title} transaction={transaction} />
                   </Flex>
                   {!inProgress && rightBlock}

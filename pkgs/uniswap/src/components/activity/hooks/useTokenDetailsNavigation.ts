@@ -1,13 +1,13 @@
 import { SharedEventName } from '@luxamm/analytics-events'
 import { useCallback } from 'react'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function useTokenDetailsNavigation(currency: Maybe<CurrencyInfo>, onClose?: () => void): () => void {
-  const { navigateToTokenDetails } = useUniswapContext()
+  const { navigateToTokenDetails } = useLuxContext()
 
   return useCallback(() => {
     if (currency) {

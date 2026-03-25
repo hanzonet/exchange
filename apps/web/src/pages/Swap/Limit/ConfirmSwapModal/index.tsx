@@ -22,7 +22,7 @@ import { ConfirmModalState } from '~/pages/Swap/Limit/ConfirmSwapModal/state'
 import { useConfirmModalState } from '~/pages/Swap/Limit/ConfirmSwapModal/useConfirmModalState'
 import { useSuppressPopups } from '~/state/application/hooks'
 import { InterfaceTrade } from '~/state/routing/types'
-import { isLimitTrade, isPreviewTrade, isUniswapXTradeType } from '~/state/routing/utils'
+import { isLimitTrade, isPreviewTrade, isLXTradeType } from '~/state/routing/utils'
 import { useDEXOrderByOrderHash } from '~/state/transactions/hooks'
 import { ThemeProvider } from '~/theme'
 import { FadePresence } from '~/theme/components/FadePresence'
@@ -88,7 +88,7 @@ export function ConfirmSwapModal({
   // Get status depending on swap type
   const swapStatus = useSwapTransactionStatus(swapResult)
   const dexOrder = useDEXOrderByOrderHash(
-    isUniswapXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
+    isLXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
   )
 
   // Has the transaction been confirmed onchain?

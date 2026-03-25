@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import type { TradeableAsset } from 'uniswap/src/entities/assets'
 import { useMaxAmountSpend } from 'uniswap/src/features/gas/hooks/useMaxAmountSpend'
 import { useSwapAnalytics } from 'uniswap/src/features/transactions/swap/analytics'
-import { useEthAsErc20UniswapXQualifyingEvent } from 'uniswap/src/features/transactions/swap/hooks/useEthAsErc20UniswapXQualifyingEvent'
+import { useEthAsErc20LXQualifyingEvent } from 'uniswap/src/features/transactions/swap/hooks/useEthAsErc20LXQualifyingEvent'
 import {
   createSwapFormStore,
   INITIAL_SWAP_FORM_STATE,
@@ -200,7 +200,7 @@ function SwapFormStoreContextProviderBase({
   const inputBalanceAmount = derivedSwapInfo.currencyBalances[CurrencyField.INPUT]
 
   useSwapAnalytics(derivedSwapInfo)
-  useEthAsErc20UniswapXQualifyingEvent(derivedSwapInfo)
+  useEthAsErc20LXQualifyingEvent(derivedSwapInfo)
 
   // for native transfers, this is the balance - (estimated gas fee for one transaction * multiplier from flag);
   // for ERC20 transfers, this is the balance

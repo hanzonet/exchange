@@ -2,7 +2,7 @@ import { GraphQLApi } from '@luxexchange/api'
 import * as WebBrowser from 'expo-web-browser'
 import { colorsLight } from 'ui/src/theme'
 import { NATIVE_TOKEN_PLACEHOLDER } from 'uniswap/src/constants/addresses'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { toGraphQLChain, toUniswapWebAppLink } from 'uniswap/src/features/chains/utils'
@@ -251,19 +251,19 @@ export async function openTransactionLink(hash: string | undefined, chainId: Uni
 }
 
 export async function openUniswapHelpLink(): Promise<void> {
-  return openUri({ uri: uniswapUrls.helpRequestUrl })
+  return openUri({ uri: luxUrls.helpRequestUrl })
 }
 
 export async function openFORSupportLink(serviceProvider: ServiceProviderInfo): Promise<void> {
-  return openUri({ uri: serviceProvider.supportUrl ?? uniswapUrls.helpRequestUrl })
+  return openUri({ uri: serviceProvider.supportUrl ?? luxUrls.helpRequestUrl })
 }
 
 export async function openOfframpPendingSupportLink(): Promise<void> {
-  return openUri({ uri: uniswapUrls.helpArticleUrls.fiatOffRampHelp })
+  return openUri({ uri: luxUrls.helpArticleUrls.fiatOffRampHelp })
 }
 
 export function getPortfolioUrl(walletAddress: string): string {
-  return `${uniswapUrls.webInterfacePortfolioUrl}/${walletAddress}`
+  return `${luxUrls.webInterfacePortfolioUrl}/${walletAddress}`
 }
 
 const UTM_TAGS_MOBILE = 'utm_medium=mobile&utm_source=share-tdp'
@@ -281,7 +281,7 @@ export function getTokenUrl(currencyId: string, addMobileUTMTags: boolean = fals
       // this is how web app handles native tokens
       tokenAddress = BACKEND_NATIVE_CHAIN_ADDRESS_STRING
     }
-    const tokenUrl = `${uniswapUrls.webInterfaceTokensUrl}/${network}/${tokenAddress}`
+    const tokenUrl = `${luxUrls.webInterfaceTokensUrl}/${network}/${tokenAddress}`
     return addMobileUTMTags ? tokenUrl + `?${UTM_TAGS_MOBILE}` : tokenUrl
   } catch {
     return undefined

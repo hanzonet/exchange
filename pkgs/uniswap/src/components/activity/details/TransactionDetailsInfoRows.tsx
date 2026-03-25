@@ -8,7 +8,7 @@ import {
   Loader,
   Text,
   TouchableArea,
-  UniswapXText,
+  LXText,
   UniversalImage,
   UniversalImageResizeMode,
   useIsDarkMode,
@@ -16,7 +16,7 @@ import {
 import { RotatableChevron } from 'ui/src/components/icons'
 import { CopyAlt } from 'ui/src/components/icons/CopyAlt'
 import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
+import { LX } from 'ui/src/components/icons/LX'
 import { borderRadii, fonts, iconSizes } from 'ui/src/theme'
 import { InfoRow } from 'uniswap/src/components/activity/details/InfoRow'
 import { TransactionParticipantRow } from 'uniswap/src/components/activity/details/TransactionParticipantRow'
@@ -29,7 +29,7 @@ import { FORMAT_DATE_TIME_MEDIUM, useFormattedDateTime } from 'uniswap/src/featu
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
 import { AppNotificationType, CopyNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   BridgeTransactionInfo,
   LiquidityTransactionBaseInfos,
@@ -221,19 +221,19 @@ function useTransactionDetailsInfoRows({
 /**
  * Row shown in the transaction details screen for the network fee.
  * If gas is paid on multiple chains, the logo will be hidden.
- * If it's a uniswapx transaction, the uniswapx UI will be shown.
+ * If it's a lx transaction, the lx UI will be shown.
  */
 function NetworkFeeRow({ transactionDetails }: { transactionDetails: TransactionDetails }): JSX.Element {
   const { t } = useTranslation()
   const { value: networkFeeValue, isLoading } = useNetworkFee(transactionDetails)
 
   const isPlanTransaction = isPlanTransactionDetails(transactionDetails)
-  const GasText = isUniswapX(transactionDetails) ? UniswapXText : Text
+  const GasText = isLX(transactionDetails) ? LXText : Text
   const chainIds = isPlanTransaction
     ? [...new Set(transactionDetails.typeInfo.stepDetails.map((step) => step.chainId))]
     : [transactionDetails.chainId]
   const showNetworkLogo = chainIds.length === 1
-  const Logo = isUniswapX(transactionDetails) ? UniswapX : showNetworkLogo ? NetworkLogo : undefined
+  const Logo = isLX(transactionDetails) ? LX : showNetworkLogo ? NetworkLogo : undefined
 
   return (
     <InfoRow key="networkFee" label={t('transaction.details.networkFee')}>

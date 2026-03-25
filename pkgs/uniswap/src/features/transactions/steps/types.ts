@@ -13,13 +13,13 @@ import type { TokenRevocationTransactionStep } from 'uniswap/src/features/transa
 import type { WrapTransactionStep } from 'uniswap/src/features/transactions/steps/wrap'
 import type { PlanSagaAnalytics } from 'uniswap/src/features/transactions/swap/plan/types'
 import type { ClassicSwapSteps } from 'uniswap/src/features/transactions/swap/steps/classicSteps'
-import type { UniswapXPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import type { LXPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
 import type {
   SwapTransactionStep,
   SwapTransactionStepAsync,
   SwapTransactionStepBatched,
 } from 'uniswap/src/features/transactions/swap/steps/swap'
-import type { UniswapXSwapSteps } from 'uniswap/src/features/transactions/swap/steps/uniswapxSteps'
+import type { LXSwapSteps } from 'uniswap/src/features/transactions/swap/steps/lxSteps'
 import type { SetCurrentStepFn } from 'uniswap/src/features/transactions/swap/types/swapCallback'
 import type { BridgeTrade, ChainedActionTrade, ClassicTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 import type { ToucanBidTransactionStep } from 'uniswap/src/features/transactions/toucan/steps/submitBid'
@@ -36,13 +36,13 @@ export enum TransactionStepType {
   WrapTransaction = 'WrapTransaction',
   Permit2Signature = 'Permit2Signature',
   Permit2Transaction = 'Permit2Transaction',
-  UniswapXSignature = 'UniswapXSignature',
+  LXSignature = 'LXSignature',
   /**
-   * UniswapX type for use in a /plan execution which uses a different flow
-   * than UniswapXSignatureStep. The signature is submitted to the TAPI which
+   * LX type for use in a /plan execution which uses a different flow
+   * than LXSignatureStep. The signature is submitted to the TAPI which
    * then submits the order.
    */
-  UniswapXPlanSignature = 'UniswapXPlanSignature',
+  LXPlanSignature = 'LXPlanSignature',
   IncreasePositionTransaction = 'IncreasePositionTransaction',
   IncreasePositionTransactionAsync = 'IncreasePositionTransactionAsync',
   IncreasePositionTransactionBatched = 'IncreasePositionTransactionBatched',
@@ -58,8 +58,8 @@ export enum TransactionStepType {
 // TODO: add v4 lp flow
 export type TransactionStep =
   | ClassicSwapSteps
-  | UniswapXSwapSteps
-  | UniswapXPlanSignatureStep
+  | LXSwapSteps
+  | LXPlanSignatureStep
   | IncreaseLiquiditySteps
   | DecreaseLiquiditySteps
   | MigrationSteps
@@ -149,6 +149,6 @@ export interface HandleSwapBatchedStepParams extends Omit<HandleOnChainStepParam
   analytics: PlanSagaAnalytics
   disableOneClickSwap: () => void
 }
-export interface HandleUniswapXPlanSignatureStepParams extends HandleSignatureStepParams<UniswapXPlanSignatureStep> {
+export interface HandleLXPlanSignatureStepParams extends HandleSignatureStepParams<LXPlanSignatureStep> {
   analytics: PlanSagaAnalytics
 }

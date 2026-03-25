@@ -8,7 +8,7 @@ import { iconSizes, spacing } from 'ui/src/theme'
 import { AddressDisplay } from 'uniswap/src/components/accounts/AddressDisplay'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
 import { SupportedNetworkLogosModal } from 'uniswap/src/components/network/SupportedNetworkLogosModal'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { AccountIcon } from 'uniswap/src/features/accounts/AccountIcon'
 import { DisplayNameType } from 'uniswap/src/features/accounts/types'
 import { useAddressColorProps } from 'uniswap/src/features/address/color'
@@ -40,7 +40,7 @@ export function ReceiveQRCode({ address }: { address: Address }): JSX.Element | 
   const QR_CODE_SIZE = media.short ? 220 : 240
   const UNICON_SIZE = QR_CODE_SIZE / 4
 
-  const { useWalletDisplayName } = useUniswapContext()
+  const { useWalletDisplayName } = useLuxContext()
   const displayName = useWalletDisplayName(address, { includeUnitagSuffix: true })
   const displayHeaderAddress = displayName?.type === DisplayNameType.Address
   const platformAddressLabel = isWebApp

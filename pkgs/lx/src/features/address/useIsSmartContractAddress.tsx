@@ -1,6 +1,6 @@
 import { queryOptions, useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { useProvider } from 'uniswap/src/contexts/UniswapContext'
+import { useProvider } from 'uniswap/src/contexts/LuxContext'
 import { type UniverseChainId } from 'uniswap/src/features/chains/types'
 import { isDelegatedEOA } from 'uniswap/src/features/smartWallet/delegation/isDelegatedEOA'
 import { ensure0xHex } from 'utilities/src/addresses/hex'

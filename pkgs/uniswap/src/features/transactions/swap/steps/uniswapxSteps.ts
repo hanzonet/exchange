@@ -1,17 +1,17 @@
 import { TokenApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
 import { TokenRevocationTransactionStep } from 'uniswap/src/features/transactions/steps/revoke'
-import type { UniswapXSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import type { LXSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
 
-export type UniswapXSwapFlow = {
+export type LXSwapFlow = {
   revocation?: TokenRevocationTransactionStep
   approval?: TokenApprovalTransactionStep
-  signOrder: UniswapXSignatureStep
+  signOrder: LXSignatureStep
 }
 
-export type UniswapXSwapSteps = NonNullable<UniswapXSwapFlow[keyof UniswapXSwapFlow]>
+export type LXSwapSteps = NonNullable<LXSwapFlow[keyof LXSwapFlow]>
 
-export function orderUniswapXSteps(flow: UniswapXSwapFlow): UniswapXSwapSteps[] {
-  const steps: UniswapXSwapSteps[] = []
+export function orderLXSteps(flow: LXSwapFlow): LXSwapSteps[] {
+  const steps: LXSwapSteps[] = []
 
   if (flow.revocation) {
     steps.push(flow.revocation)

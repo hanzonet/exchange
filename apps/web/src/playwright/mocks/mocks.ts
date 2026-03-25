@@ -17,7 +17,7 @@ export const Mocks = {
     supported_tokens: path.resolve(__dirname, '../mocks/fiatOnRamp/supported-tokens.json'),
     quotes: path.resolve(__dirname, '../mocks/fiatOnRamp/quotes.json'),
   },
-  UniswapX: {
+  LX: {
     quote: path.resolve(__dirname, '../mocks/rest/uniswapX/quote.json'),
     openOrder: path.resolve(__dirname, '../mocks/rest/uniswapX/open_order.json'),
     filledOrders: path.resolve(__dirname, '../mocks/rest/uniswapX/filled_orders.json'),
@@ -68,7 +68,7 @@ export const Mocks = {
     get_rewards_empty: path.resolve(__dirname, '../mocks/dataApiService/get_rewards_empty.json'),
     list_transactions: path.resolve(__dirname, '../mocks/dataApiService/list_transactions.json'),
     list_transactions_empty: path.resolve(__dirname, '../mocks/dataApiService/list_transactions_empty.json'),
-    list_transactions_uniswapx: path.resolve(__dirname, '../mocks/dataApiService/list_transactions_uniswapx.json'),
+    list_transactions_lx: path.resolve(__dirname, '../mocks/dataApiService/list_transactions_lx.json'),
   },
   PoolPriceHistory: {
     eth_weeth: path.resolve(__dirname, '../mocks/graphql/PoolPriceHistory/eth_weeth.json'),

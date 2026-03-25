@@ -4,7 +4,7 @@ import { Anchor, Flex, Text } from '@luxfi/ui/src'
 import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
 import { Tooltip } from '@luxfi/ui/src/components/tooltip/Tooltip'
 import { zIndexes } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import { buildTokenMarketPriceKey } from '~/components/Toucan/hooks/useTokenMarketPrices'
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '~/constants/breakpoints'
 import { AuctionChip } from '~/pages/Explore/tables/Auctions/AuctionChip'
@@ -80,7 +80,7 @@ export function TopVerifiedAuctionsSection() {
         <Tooltip placement="top" delay={0}>
           <Tooltip.Trigger>
             <Anchor
-              href={uniswapUrls.helpArticleUrls.toucanVerifiedAuctionsHelp}
+              href={luxUrls.helpArticleUrls.toucanVerifiedAuctionsHelp}
               target="_blank"
               onPress={(e) => e.stopPropagation()}
               display="flex"

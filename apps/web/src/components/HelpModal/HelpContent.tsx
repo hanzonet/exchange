@@ -5,7 +5,7 @@ import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
 import { GraduationCap } from '@luxfi/ui/src/components/icons/GraduationCap'
 import { SpeechBubbles } from '@luxfi/ui/src/components/icons/SpeechBubbles'
 import { X } from '@luxfi/ui/src/components/icons/X'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 interface HelpContentProps {
@@ -56,17 +56,17 @@ export function HelpContent({ onClose }: HelpContentProps) {
       <HelpItem
         icon={<GraduationCap size="$icon.20" color="$neutral2" />}
         title={t('settings.action.help')}
-        href={uniswapUrls.helpUrl}
+        href={luxUrls.helpUrl}
       />
       <HelpItem
         icon={<BookOpen size="$icon.20" color="$neutral2" />}
         title={t('common.docs')}
-        href={uniswapUrls.docsUrl}
+        href={luxUrls.docsUrl}
       />
       <HelpItem
         icon={<SpeechBubbles size="$icon.20" color="$neutral2" />}
         title={t('common.contactUs.button')}
-        href={uniswapUrls.helpRequestUrl}
+        href={luxUrls.helpRequestUrl}
       />
     </Flex>
   )

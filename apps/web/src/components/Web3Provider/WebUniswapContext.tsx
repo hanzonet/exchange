@@ -3,7 +3,7 @@ import React, { PropsWithChildren, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router'
 import { CONNECTION_PROVIDER_IDS } from 'uniswap/src/constants/web3'
-import { UniswapProvider } from 'uniswap/src/contexts/UniswapContext'
+import { LuxProvider } from 'uniswap/src/contexts/LuxContext'
 import { useOnchainDisplayName } from 'uniswap/src/features/accounts/useOnchainDisplayName'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
@@ -45,16 +45,16 @@ function useWebProvider(chainId: number) {
   return useEthersProvider({ chainId })
 }
 
-export function WebUniswapProvider({ children }: PropsWithChildren): JSX.Element {
+export function WebLuxProvider({ children }: PropsWithChildren): JSX.Element {
   return (
     <MismatchContextWrapper>
-      <WebUniswapProviderInner>{children}</WebUniswapProviderInner>
+      <WebLuxProviderInner>{children}</WebLuxProviderInner>
     </MismatchContextWrapper>
   )
 }
 
 // Abstracts web-specific transaction flow objects for usage in cross-platform flows in the `uniswap` package.
-function WebUniswapProviderInner({ children }: PropsWithChildren) {
+function WebLuxProviderInner({ children }: PropsWithChildren) {
   const account = useAccount()
 
   // Check if current wallet can pay gas fees in any token (e.g., Porto wallet)
@@ -170,7 +170,7 @@ function WebUniswapProviderInner({ children }: PropsWithChildren) {
 
   const getHasMismatch = useHasAccountMismatchCallback()
   const isPermitMismatchUxEnabled = useFeatureFlag(FeatureFlags.EnablePermitMismatchUX)
-  const getIsUniswapXSupported = useEvent((innerChainId?: UniverseChainId) => {
+  const getIsLXSupported = useEvent((innerChainId?: UniverseChainId) => {
     if (isPermitMismatchUxEnabled) {
       return !getHasMismatch(innerChainId)
     }
@@ -188,7 +188,7 @@ function WebUniswapProviderInner({ children }: PropsWithChildren) {
 
   const { openModal } = useModalState(ModalName.DelegationMismatch)
 
-  const handleOpenUniswapXUnsupportedModal = useEvent(() => {
+  const handleOpenLXUnsupportedModal = useEvent(() => {
     openModal()
   })
 
@@ -243,7 +243,7 @@ function WebUniswapProviderInner({ children }: PropsWithChildren) {
   useAccountChainIdEffect()
 
   return (
-    <UniswapProvider
+    <LuxProvider
       signer={signer}
       useProviderHook={useWebProvider}
       useWalletDisplayName={useOnchainDisplayName}
@@ -261,14 +261,14 @@ function WebUniswapProviderInner({ children }: PropsWithChildren) {
       navigateToAdvancedSettings={navigateToAdvancedSettings}
       onConnectWallet={onConnectWallet}
       getCanSignPermits={getCanSignPermits}
-      getIsUniswapXSupported={getIsUniswapXSupported}
-      handleOnPressUniswapXUnsupported={handleOpenUniswapXUnsupportedModal}
+      getIsLXSupported={getIsLXSupported}
+      handleOnPressLXUnsupported={handleOpenLXUnsupportedModal}
       getCanBatchTransactions={getCanBatchTransactions}
       useAccountsStoreContextHook={useAccountsStoreContext}
       getCanPayGasInAnyToken={getCanPayGasInAnyToken}
     >
       {children}
-    </UniswapProvider>
+    </LuxProvider>
   )
 }
 

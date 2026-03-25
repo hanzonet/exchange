@@ -10,7 +10,7 @@ import { onRestoreComplete } from 'src/screens/Import/onRestoreComplete'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
 import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { QuestionInCircleFilled } from '@luxfi/ui/src/components/icons'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { ImportType } from '@luxexchange/lx/src/types/onboarding'
@@ -114,7 +114,7 @@ export function SeedPhraseInputScreen({ navigation, route: { params } }: Props):
   }
 
   const onPressRecoveryHelpButton = (): Promise<void> =>
-    openUri({ uri: uniswapUrls.helpArticleUrls.recoveryPhraseHowToImport })
+    openUri({ uri: luxUrls.helpArticleUrls.recoveryPhraseHowToImport })
 
   const onPressTryAgainButton = (): void => {
     navigation.replace(OnboardingScreens.RestoreCloudBackupLoading, params)

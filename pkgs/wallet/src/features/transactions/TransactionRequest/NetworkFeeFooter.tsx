@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
-import { UniswapXFee } from 'uniswap/src/components/gas/NetworkFee'
+import { LXFee } from 'uniswap/src/components/gas/NetworkFee'
 import { NetworkFeeWarning } from 'uniswap/src/components/gas/NetworkFeeWarning'
 import { ContentRow } from 'uniswap/src/components/transactions/requests/ContentRow'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -15,7 +15,7 @@ interface NetworkFeeFooterProps {
   chainId: UniverseChainId
   showNetworkLogo: boolean
   gasFee: GasFeeResult | undefined
-  isUniswapX?: boolean
+  isLX?: boolean
   requestMethod?: string
   showSmartWalletActivation?: boolean
 }
@@ -40,7 +40,7 @@ export function NetworkFeeFooter({
   chainId,
   showNetworkLogo,
   gasFee,
-  isUniswapX,
+  isLX,
   requestMethod,
   showSmartWalletActivation,
 }: NetworkFeeFooterProps): JSX.Element | null {
@@ -79,8 +79,8 @@ export function NetworkFeeFooter({
       >
         <Flex centered row gap="$spacing4">
           {showNetworkLogo && <NetworkLogo chainId={chainId} size={iconSizes.icon16} />}
-          {isUniswapX ? (
-            <UniswapXFee gasFee={gasFeeFormatted} />
+          {isLX ? (
+            <LXFee gasFee={gasFeeFormatted} />
           ) : (
             <Text color="$neutral1" variant={variant}>
               {gasFeeFormatted}

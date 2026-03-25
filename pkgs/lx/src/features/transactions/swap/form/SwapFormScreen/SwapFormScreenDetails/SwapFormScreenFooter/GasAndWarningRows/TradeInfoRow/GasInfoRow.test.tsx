@@ -105,7 +105,7 @@ describe('GasInfoRow', () => {
       expect(queryAllByText('Free').length).toBeGreaterThan(0)
     })
 
-    it('should display UniswapX savings', () => {
+    it('should display LX savings', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         dexGasFeeInfo: {

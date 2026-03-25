@@ -571,7 +571,7 @@ describe(parseRestSwapTransaction, () => {
       outputCurrencyAmountRaw: '1000000000000000000',
     })
   })
-  it('Swap: parse UniswapX swap', () => {
+  it('Swap: parse LX swap', () => {
     expect(parseRestSwapTransaction(MOCK_UNISWAP_X_SWAP)).toEqual({
       type: TransactionType.Swap,
       inputCurrencyId: `1-${ERC20_ASSET_ADDRESS}`,
@@ -1225,7 +1225,7 @@ describe(extractRestOnChainTransactionDetails, () => {
     expect(txns[0]?.typeInfo.type).toEqual(TransactionType.Swap)
     expect(txns[0]?.routing).toEqual(TradingApi.Routing.CLASSIC)
   })
-  it('UniswapX swap', () => {
+  it('LX swap', () => {
     const txns = extractRestOnChainTransactionDetails(MOCK_UNISWAP_X_SWAP)
     expect(txns).toHaveLength(1)
     expect(txns[0]?.typeInfo.type).toEqual(TransactionType.Swap)

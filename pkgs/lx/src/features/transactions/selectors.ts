@@ -6,14 +6,14 @@ import { SearchableRecipient } from 'uniswap/src/features/address/types'
 import { uniqueAddressesOnly } from 'uniswap/src/features/address/utils'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { TransactionsState } from 'uniswap/src/features/transactions/slice'
-import { isBridge, isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isBridge, isClassic, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   InterfaceTransactionDetails,
   PlanTransactionDetails,
   SendTokenTransactionInfo,
   TransactionDetails,
   TransactionType,
-  UniswapXOrderDetails,
+  LXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx, isPlanTransactionDetails } from 'uniswap/src/features/transactions/types/utils'
 import { isLimitOrder } from 'uniswap/src/features/transactions/utils/uniswapX.utils'
@@ -195,18 +195,18 @@ interface MakeSelectOrderParams {
   orderHash: string
 }
 
-export const makeSelectUniswapXOrder = (): Selector<
+export const makeSelectLXOrder = (): Selector<
   UniswapState,
-  UniswapXOrderDetails | undefined,
+  LXOrderDetails | undefined,
   [MakeSelectOrderParams]
 > =>
   createSelector(
     selectTransactions,
     (_: UniswapState, { orderHash }: MakeSelectOrderParams) => ({ orderHash }),
-    (transactions, { orderHash }): UniswapXOrderDetails | undefined => {
+    (transactions, { orderHash }): LXOrderDetails | undefined => {
       for (const transactionsForChain of flattenObjectOfObjects(transactions)) {
         for (const tx of Object.values(transactionsForChain)) {
-          if (isUniswapX(tx) && tx.orderHash === orderHash) {
+          if (isLX(tx) && tx.orderHash === orderHash) {
             return tx
           }
         }

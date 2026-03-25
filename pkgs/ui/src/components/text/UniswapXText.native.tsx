@@ -3,7 +3,7 @@ import { Text } from '@luxfi/ui/src/components/text'
 import { GradientText } from '@luxfi/ui/src/components/text/GradientText'
 import { colors } from '@luxfi/ui/src/theme/color/colors'
 
-export function UniswapXText({ children, ...props }: GetProps<typeof Text>): JSX.Element {
+export function LXText({ children, ...props }: GetProps<typeof Text>): JSX.Element {
   return (
     <GradientText
       {...props}

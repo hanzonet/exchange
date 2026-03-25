@@ -8,7 +8,7 @@ import {
   isBridge,
   isChained,
   isClassic,
-  isUniswapX,
+  isLX,
   isWrap,
 } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
@@ -25,8 +25,8 @@ const L2_CANCEL_DELAY_MS = 2 * ONE_SECOND_MS
 export interface CancelableStepInfo {
   step: TransactionDetails
   stepIndex: number
-  cancellationType: 'classic' | 'uniswapx'
-  // For UniswapX steps, the orderId is extracted from step.hash (not a separate field)
+  cancellationType: 'classic' | 'lx'
+  // For LX steps, the orderId is extracted from step.hash (not a separate field)
   orderId?: string
   routing?: TradingApi.Routing
 }
@@ -35,11 +35,11 @@ export interface CancelableStepInfo {
  * Finds the cancelable step in a plan.
  *
  * Plan steps in `stepDetails` are TransactionDetails objects, NOT TradingApi.PlanStep objects.
- * They have `routing` (not `stepType`) and `hash` (which contains orderId for UniswapX steps).
+ * They have `routing` (not `stepType`) and `hash` (which contains orderId for LX steps).
  *
  * A step is cancelable if:
  * - For classic/bridge/wrap/unwrap: has hash (txHash), status is Pending
- * - For UniswapX: has hash (contains orderId), status is Pending
+ * - For LX: has hash (contains orderId), status is Pending
  */
 export function findCancelableStepInPlan(typeInfo: PlanTransactionInfo): CancelableStepInfo | undefined {
   for (let i = 0; i < typeInfo.stepDetails.length; i++) {
@@ -65,15 +65,15 @@ export function findCancelableStepInPlan(typeInfo: PlanTransactionInfo): Cancela
       }
     }
 
-    // Check for UniswapX order step
+    // Check for LX order step
     // These steps have routing: DUTCH_V2, DUTCH_V3, DUTCH_LIMIT, or PRIORITY
-    // For UniswapX steps, `step.hash` contains the orderId (not a tx hash)
-    if (isUniswapX(step)) {
+    // For LX steps, `step.hash` contains the orderId (not a tx hash)
+    if (isLX(step)) {
       return {
         step,
         stepIndex: i,
-        cancellationType: 'uniswapx',
-        orderId: step.hash, // For UniswapX plan steps, hash contains the orderId
+        cancellationType: 'lx',
+        orderId: step.hash, // For LX plan steps, hash contains the orderId
         routing: step.routing,
       }
     }
@@ -111,7 +111,7 @@ export function useIsCancelable(tx: TransactionDetails): boolean {
   if (isPlan) {
     const cancelableStep = findCancelableStepInPlan(tx.typeInfo as PlanTransactionInfo)
     if (!isNativeAccess) {
-      return cancelableStep?.cancellationType === 'uniswapx' && hasDelayPassed
+      return cancelableStep?.cancellationType === 'lx' && hasDelayPassed
     }
     return cancelableStep !== undefined && hasDelayPassed
   }
@@ -119,11 +119,11 @@ export function useIsCancelable(tx: TransactionDetails): boolean {
   // Non-plan logic
   const isSentBridge = isBridge(tx) && tx.sendConfirmed
   const isPending = tx.status === TransactionStatus.Pending
-  const wasSubmitted = isUniswapX(tx) || isChained(tx) || Object.keys(tx.options.request).length > 0
+  const wasSubmitted = isLX(tx) || isChained(tx) || Object.keys(tx.options.request).length > 0
 
-  // Non-native connectors can only cancel UniswapX orders
+  // Non-native connectors can only cancel LX orders
   if (!isNativeAccess) {
-    return isUniswapX(tx) && isPending && hasDelayPassed
+    return isLX(tx) && isPending && hasDelayPassed
   }
 
   return !isSentBridge && isPending && wasSubmitted && hasDelayPassed

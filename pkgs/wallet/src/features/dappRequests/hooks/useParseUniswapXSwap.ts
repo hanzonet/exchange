@@ -4,7 +4,7 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { useCurrencyInfoWithLoading } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { formatUnits } from 'viem'
-import { UniswapXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
+import { LXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
 import {
   ParsedTransactionData,
   TransactionAsset,
@@ -14,23 +14,23 @@ import {
 } from '@luxfi/wallet/src/features/dappRequests/types'
 import { roundToDecimals } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
 
-interface UseParseUniswapXSwapResult extends ParsedTransactionData {
+interface UseParseLXSwapResult extends ParsedTransactionData {
   /** Whether the hook is still loading currency info */
   isLoading: boolean
 }
 
 /**
- * Hook to parse UniswapX swap typed data into TransactionSection format
+ * Hook to parse LX swap typed data into TransactionSection format
  * compatible with TransactionPreviewCard display.
  *
- * @param typedData - The UniswapX swap request typed data, or null if not a UniswapX swap
+ * @param typedData - The LX swap request typed data, or null if not a LX swap
  * @param chainId - The chain ID for the swap
  * @returns ParsedTransactionData with Sending/Receiving sections, or empty sections if typedData is null
  */
-export function useParseUniswapXSwap(
-  typedData: UniswapXSwapRequest | null,
+export function useParseLXSwap(
+  typedData: LXSwapRequest | null,
   chainId: UniverseChainId,
-): UseParseUniswapXSwapResult {
+): UseParseLXSwapResult {
   // Extract token addresses and amounts from typed data (if present)
   const inputToken = typedData?.message.permitted.token
   const inputAmountRaw = typedData?.message.permitted.amount
@@ -52,7 +52,7 @@ export function useParseUniswapXSwap(
 
   // Build transaction sections
   const sections = useMemo((): TransactionSection[] => {
-    // Return empty sections if not a UniswapX swap
+    // Return empty sections if not a LX swap
     if (!typedData || !inputToken || !normalizedOutputToken) {
       return []
     }

@@ -212,7 +212,7 @@ export const ModalName = {
   UniconsV2: 'unicons-v2-intro-modal',
   UniswapWrapped: 'uniswap-wrapped-modal',
   UniswapWrappedDisconnected: 'uniswap-wrapped-disconnected-modal',
-  UniswapXInfo: 'uniswapx-info-modal',
+  LXInfo: 'lx-info-modal',
   UnitagsChange: 'unitags-change-modal',
   UnitagsChangeConfirm: 'unitags-change-confirm-modal',
   UnitagsDelete: 'unitags-delete-modal',

@@ -249,13 +249,13 @@ type BaseSwapTransactionResultProperties = {
 
 type ClassicSwapTransactionResultProperties = BaseSwapTransactionResultProperties
 
-type UniswapXTransactionResultProperties = BaseSwapTransactionResultProperties & {
+type LXTransactionResultProperties = BaseSwapTransactionResultProperties & {
   order_hash: string
 }
 
 type BridgeSwapTransactionResultProperties = BaseSwapTransactionResultProperties
 
-type FailedUniswapXOrderResultProperties = Omit<UniswapXTransactionResultProperties, 'hash'>
+type FailedLXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type FailedClassicSwapResultProperties = Omit<ClassicSwapTransactionResultProperties, 'hash'> & {
   hash: string | undefined
@@ -267,7 +267,7 @@ type FailedBridgeSwapResultProperties = Omit<BridgeSwapTransactionResultProperti
   hash: string | undefined
 }
 
-type CancelledUniswapXOrderResultProperties = Omit<UniswapXTransactionResultProperties, 'hash'>
+type CancelledLXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type CancelledClassicSwapResultProperties = ClassicSwapTransactionResultProperties & {
   replaced_transaction_hash: string | undefined
@@ -706,10 +706,10 @@ export type UniverseEventProperties = {
     wallet_type: string
   }
   [InterfaceEventName.PortfolioMenuOpened]: { name: string } | { name: string; platform: Platform }
-  [InterfaceEventName.UniswapXOrderDetailsSheetOpened]: {
+  [InterfaceEventName.LXOrderDetailsSheetOpened]: {
     order: string
   }
-  [InterfaceEventName.UniswapXOrderCancelInitiated]: {
+  [InterfaceEventName.LXOrderCancelInitiated]: {
     orders: string[]
   }
   [InterfaceEventName.LimitPresetRateSelected]: {
@@ -744,15 +744,15 @@ export type UniverseEventProperties = {
   [InterfaceEventName.NoQuoteReceivedFromRoutingAPI]: {
     requestBody: unknown
     response: unknown
-    routerPreference: 'price' | 'uniswapx' | 'api'
+    routerPreference: 'price' | 'lx' | 'api'
   }
-  [InterfaceEventName.UniswapXSignatureDeadlineExpired]: {
+  [InterfaceEventName.LXSignatureDeadlineExpired]: {
     deadline: number
     resultTime: number
   }
-  [InterfaceEventName.UniswapXSignatureRequested]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.UniswapXOrderPostError]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.UniswapXOrderSubmitted]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.LXSignatureRequested]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.LXOrderPostError]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.LXOrderSubmitted]: Record<string, unknown> // TODO specific type
   [InterfaceEventName.CreatePositionFailed]: {
     message: string
   } & PartialMessage<CreateLPPositionRequest>
@@ -1011,15 +1011,15 @@ export type UniverseEventProperties = {
   [SwapEventName.SwapPriceUpdateAcknowledged]: SwapPriceUpdateActionProperties
   [SwapEventName.SwapTransactionCompleted]:
     | ClassicSwapTransactionResultProperties
-    | UniswapXTransactionResultProperties
+    | LXTransactionResultProperties
     | BridgeSwapTransactionResultProperties
   [SwapEventName.SwapTransactionFailed]:
     | FailedClassicSwapResultProperties
-    | FailedUniswapXOrderResultProperties
+    | FailedLXOrderResultProperties
     | FailedBridgeSwapResultProperties
   [WalletEventName.SwapTransactionCancelled]:
     | CancelledClassicSwapResultProperties
-    | CancelledUniswapXOrderResultProperties
+    | CancelledLXOrderResultProperties
     | CancelledBridgeSwapResultProperties
   [SwapEventName.SwapDetailsExpanded]: ITraceContext | undefined
   [SwapEventName.SwapAutorouterVisualizationExpanded]: ITraceContext

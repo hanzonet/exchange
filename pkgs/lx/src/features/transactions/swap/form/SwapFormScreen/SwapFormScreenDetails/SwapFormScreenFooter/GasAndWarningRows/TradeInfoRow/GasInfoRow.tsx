@@ -1,6 +1,6 @@
 import { Flex, Text } from 'ui/src'
 import { Gas } from 'ui/src/components/icons/Gas'
-import { UniswapXFee } from 'uniswap/src/components/gas/NetworkFee'
+import { LXFee } from 'uniswap/src/components/gas/NetworkFee'
 import { NetworkFeeWarning } from 'uniswap/src/components/gas/NetworkFeeWarning'
 import type { GasInfo } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'

@@ -56,7 +56,7 @@ import {
   Wrench,
 } from '@luxfi/ui/src/components/icons'
 import { iconSizes } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useCurrentAppearanceSetting } from '@luxexchange/lx/src/features/appearance/hooks'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
@@ -318,7 +318,7 @@ export function SettingsScreen(): JSX.Element {
           {
             screen: MobileScreens.WebView,
             screenProps: {
-              uriLink: uniswapUrls.walletFeedbackForm,
+              uriLink: luxUrls.walletFeedbackForm,
               headerTitle: t('settings.action.feedback'),
             },
             text: t('settings.action.feedback'),
@@ -327,7 +327,7 @@ export function SettingsScreen(): JSX.Element {
           {
             screen: MobileScreens.WebView,
             screenProps: {
-              uriLink: uniswapUrls.helpArticleUrls.mobileWalletHelp,
+              uriLink: luxUrls.helpArticleUrls.mobileWalletHelp,
               headerTitle: t('settings.action.help'),
             },
             text: t('settings.action.help'),
@@ -341,7 +341,7 @@ export function SettingsScreen(): JSX.Element {
           {
             screen: MobileScreens.WebView,
             screenProps: {
-              uriLink: uniswapUrls.privacyPolicyUrl,
+              uriLink: luxUrls.privacyPolicyUrl,
               headerTitle: t('settings.action.privacy'),
             },
             text: t('settings.action.privacy'),
@@ -350,7 +350,7 @@ export function SettingsScreen(): JSX.Element {
           {
             screen: MobileScreens.WebView,
             screenProps: {
-              uriLink: uniswapUrls.termsOfServiceUrl,
+              uriLink: luxUrls.termsOfServiceUrl,
               headerTitle: t('settings.action.terms'),
             },
             text: t('settings.action.terms'),

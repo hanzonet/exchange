@@ -22,7 +22,7 @@ const mockOrderDetails: DEXOrderDetails = {
   orderHash: '0x1234',
   status: TransactionStatus.Pending,
   typeInfo: {
-    isUniswapXOrder: true,
+    isLXOrder: true,
     type: TransactionType.Swap,
     tradeType: 0,
     inputCurrencyId: currencyId(DAI),

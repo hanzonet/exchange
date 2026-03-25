@@ -7,7 +7,7 @@ import { AppNotificationType } from 'uniswap/src/features/notifications/slice/ty
 import { WalletEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import type { SwapTradeBaseProperties } from 'uniswap/src/features/telemetry/types'
-import { HandleUniswapXPlanSignatureStepParams } from 'uniswap/src/features/transactions/steps/types'
+import { HandleLXPlanSignatureStepParams } from 'uniswap/src/features/transactions/steps/types'
 import { plan } from 'uniswap/src/features/transactions/swap/plan/planSaga'
 import { PlanPriceChangeInterrupt } from 'uniswap/src/features/transactions/swap/plan/types'
 import { SwapExecutionCallbacks } from 'uniswap/src/features/transactions/swap/types/swapCallback'

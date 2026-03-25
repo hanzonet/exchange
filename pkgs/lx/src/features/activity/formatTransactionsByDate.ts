@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
 import { FORMAT_DATE_MONTH, FORMAT_DATE_MONTH_YEAR, LocalizedDayjs } from 'uniswap/src/features/language/localizedDayjs'
-import { isChained, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isChained, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { TransactionDetails, TransactionStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 
 export interface AllFormattedTransactions {
@@ -48,8 +48,8 @@ export function formatTransactionsByDate(
   )
 
   const pendingSorted = pending.sort((a, b) => {
-    // If either transaction lacks a traditional nonce (UniswapX/Chained), sort by timestamp
-    if (isChained(a) || isChained(b) || isUniswapX(a) || isUniswapX(b)) {
+    // If either transaction lacks a traditional nonce (LX/Chained), sort by timestamp
+    if (isChained(a) || isChained(b) || isLX(a) || isLX(b)) {
       return getTime(b) - getTime(a)
     }
 

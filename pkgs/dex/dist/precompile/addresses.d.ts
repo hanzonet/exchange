@@ -121,7 +121,7 @@ export declare function toLP(address: Address): number;
 /**
  * Check if address is a DEX precompile (LP-9xxx range)
  */
-export declare function isUniswapXPrecompile(address: Address): boolean;
+export declare function isLXPrecompile(address: Address): boolean;
 /**
  * Check if address is a Bridge precompile (LP-6xxx range)
  */

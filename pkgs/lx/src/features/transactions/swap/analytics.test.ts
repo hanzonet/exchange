@@ -102,7 +102,7 @@ describe('analytics', () => {
       expect(result).toBeUndefined()
     })
 
-    it('returns uniswapXUsed=true for UniswapX trade', () => {
+    it('returns uniswapXUsed=true for LX trade', () => {
       // We need to cast to Trade because the mock isn't a complete implementation
       const mockTrade = { routing: TradingApi.Routing.DUTCH_V2 } as Trade
 

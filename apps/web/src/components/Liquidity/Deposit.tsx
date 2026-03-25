@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { Button, Flex, Text } from '@luxfi/ui/src'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { SLIPPAGE_CRITICAL_TOLERANCE } from 'uniswap/src/constants/transactions'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 import {
   useTransactionSettingsActions,

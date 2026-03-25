@@ -11,12 +11,12 @@ export const UNISWAPX_ROUTING_VARIANTS = [
   TradingApi.Routing.DUTCH_LIMIT,
   TradingApi.Routing.PRIORITY,
 ] as const
-type UniswapXRouting = (typeof UNISWAPX_ROUTING_VARIANTS)[number]
+type LXRouting = (typeof UNISWAPX_ROUTING_VARIANTS)[number]
 
-export function isUniswapX<T extends { routing: TradingApi.Routing }>(
+export function isLX<T extends { routing: TradingApi.Routing }>(
   obj: T,
-): obj is Extract<T, { routing: UniswapXRouting }> {
-  return UNISWAPX_ROUTING_VARIANTS.includes(obj.routing as UniswapXRouting)
+): obj is Extract<T, { routing: LXRouting }> {
+  return UNISWAPX_ROUTING_VARIANTS.includes(obj.routing as LXRouting)
 }
 
 export function isClassic<T extends { routing: TradingApi.Routing }>(
@@ -77,7 +77,7 @@ export function isMultiChainGasQuote(quote: { routing: TradingApi.Routing } | un
 
 // Returns the first EVM txRequest in a SwapTxAndGasInfo object if it exists, otherwise undefined
 export function getEVMTxRequest(swapTxContext: SwapTxAndGasInfo): ValidatedTransactionRequest | undefined {
-  if (isJupiter(swapTxContext) || isUniswapX(swapTxContext)) {
+  if (isJupiter(swapTxContext) || isLX(swapTxContext)) {
     return undefined
   }
   return swapTxContext.txRequests?.[0]

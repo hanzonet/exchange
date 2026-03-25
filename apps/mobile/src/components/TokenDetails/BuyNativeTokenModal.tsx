@@ -7,7 +7,7 @@ import { iconSizes } from '@luxfi/ui/src/theme'
 import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useBridgingTokenWithHighestBalance } from '@luxexchange/lx/src/features/bridging/hooks/tokens'
 import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
@@ -71,7 +71,7 @@ export function BuyNativeTokenModal({
           <LearnMoreLink
             textColor="$accent3"
             textVariant="buttonLabel3"
-            url={uniswapUrls.helpArticleUrls.networkFeeInfo}
+            url={luxUrls.helpArticleUrls.networkFeeInfo}
           />
         </Flex>
         <Flex centered gap="$spacing8" width="100%">

@@ -16,7 +16,7 @@ import { PropsWithChildren } from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
 import { TamaguiProvider as OGTamaguiProvider, TamaguiProviderProps } from 'ui/src'
 import { config } from 'ui/src/tamagui.config'
-import { UniswapProvider } from 'uniswap/src/contexts/UniswapContext'
+import { LuxProvider } from 'uniswap/src/contexts/LuxContext'
 import { UrlContext } from 'uniswap/src/contexts/UrlContext'
 import { SharedPersistQueryClientProvider } from 'uniswap/src/data/apiClients/SharedPersistQueryClientProvider'
 import 'uniswap/src/i18n'
@@ -24,7 +24,7 @@ import { UniswapState, uniswapReducer } from 'uniswap/src/state/uniswapReducer'
 import { createMockFn } from 'uniswap/src/test/mockFn'
 import { AutoMockedApolloProvider } from 'uniswap/src/test/mocks'
 
-export const mockUniswapContext = {
+export const mockLuxContext = {
   navigateToBuyOrReceiveWithEmptyWallet: createMockFn(),
   navigateToFiatOnRamp: createMockFn(),
   navigateToSwapFlow: createMockFn(),
@@ -84,7 +84,7 @@ export function renderWithProviders(
     return (
       <AutoMockedApolloProvider cache={cache} resolvers={resolvers}>
         <ReduxProvider store={store}>
-          <SharedUniswapProvider>{children}</SharedUniswapProvider>
+          <SharedLuxProvider>{children}</SharedLuxProvider>
         </ReduxProvider>
       </AutoMockedApolloProvider>
     )
@@ -151,7 +151,7 @@ export function renderHookWithProviders<P extends any[], R>(
     return (
       <AutoMockedApolloProvider cache={cache} resolvers={resolvers}>
         <ReduxProvider store={store}>
-          <SharedUniswapProvider>{children}</SharedUniswapProvider>
+          <SharedLuxProvider>{children}</SharedLuxProvider>
         </ReduxProvider>
       </AutoMockedApolloProvider>
     )
@@ -173,9 +173,9 @@ export function renderHookWithProviders<P extends any[], R>(
   }
 }
 
-function SharedUniswapProvider({ children }: Pick<TamaguiProviderProps, 'children'>): JSX.Element {
+function SharedLuxProvider({ children }: Pick<TamaguiProviderProps, 'children'>): JSX.Element {
   return (
-    <UniswapProvider {...mockUniswapContext}>
+    <LuxProvider {...mockLuxContext}>
       <UrlContext.Provider value={{ useParsedQueryString: () => ({}) as ParsedQs, usePathname: () => '' }}>
         <SharedPersistQueryClientProvider>
           <OGTamaguiProvider config={config} defaultTheme="dark">
@@ -183,6 +183,6 @@ function SharedUniswapProvider({ children }: Pick<TamaguiProviderProps, 'childre
           </OGTamaguiProvider>
         </SharedPersistQueryClientProvider>
       </UrlContext.Provider>
-    </UniswapProvider>
+    </LuxProvider>
   )
 }

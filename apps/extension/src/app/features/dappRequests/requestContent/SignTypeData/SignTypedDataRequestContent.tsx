@@ -16,7 +16,7 @@ import { DappSignTypedDataContent } from '@luxfi/wallet/src/components/dappReque
 import { Permit2Content } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/Permit2Content'
 import { StandardTypedDataContent } from '@luxfi/wallet/src/components/dappRequests/SignTypedData/StandardTypedDataContent'
 import { isEIP712TypedData } from '@luxfi/wallet/src/components/dappRequests/types/EIP712Types'
-import { isPermit2, isUniswapXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
+import { isPermit2, isLXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
 import { ErrorBoundary } from '@luxfi/wallet/src/components/ErrorBoundary/ErrorBoundary'
 import { TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
 import { shouldDisableConfirm } from '@luxfi/wallet/src/features/dappRequests/utils/riskUtils'
@@ -122,7 +122,7 @@ function SignTypedDataRequestContentFallback({ dappRequest }: SignTypedDataReque
     return <ActionCanNotBeCompletedContent />
   }
 
-  if (isUniswapXSwapRequest(parsedTypedData)) {
+  if (isLXSwapRequest(parsedTypedData)) {
     return <DEXSwapRequestContent typedData={parsedTypedData} />
   }
 

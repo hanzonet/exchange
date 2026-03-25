@@ -46,7 +46,7 @@ describe('useMergeLocalAndRemoteTransactions', () => {
       ...overrides,
     })
 
-  // Helper to create UniswapX order with common defaults
+  // Helper to create LX order with common defaults
   const createTestOrder = (overrides = {}) =>
     uniswapXOrderDetails({
       chainId: UniverseChainId.Mainnet,
@@ -236,7 +236,7 @@ describe('useMergeLocalAndRemoteTransactions', () => {
     })
   })
 
-  describe('UniswapX order deduplication', () => {
+  describe('LX order deduplication', () => {
     it('should deduplicate orders using orderHash', () => {
       const ORDER_HASH = '0xorderhash123'
       const FILL_HASH = '0xfillhash456'

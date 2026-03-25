@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Button, Flex } from 'ui/src'
 import { validColor } from 'ui/src/theme'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { useIsSupportedFiatOnRampCurrency } from 'uniswap/src/features/fiatOnRamp/hooks'
@@ -25,7 +25,7 @@ export function BuyNativeTokenButton({
   const textColorFromChain = validColor(foreground)
   const backgroundColorFromChain = validColor(background)
 
-  const { navigateToFiatOnRamp } = useUniswapContext()
+  const { navigateToFiatOnRamp } = useLuxContext()
   const { currency: fiatOnRampCurrency, isLoading } = useIsSupportedFiatOnRampCurrency(
     nativeCurrencyInfo.currencyId,
     !nativeCurrencyInfo,

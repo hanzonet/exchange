@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { AnimatableCopyIcon, ColorTokens, Flex, SpaceTokens, Text, TouchableArea } from 'ui/src'
 import { fonts } from 'ui/src/theme'
 import { DisplayNameText } from 'uniswap/src/components/accounts/DisplayNameText'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { AccountIcon } from 'uniswap/src/features/accounts/AccountIcon'
 import { DisplayNameType } from 'uniswap/src/features/accounts/types'
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
@@ -99,7 +99,7 @@ export function AddressDisplay({
   grow,
 }: AddressDisplayProps): JSX.Element {
   const dispatch = useDispatch()
-  const { useWalletDisplayName } = useUniswapContext()
+  const { useWalletDisplayName } = useLuxContext()
   const displayName = useWalletDisplayName(address, { includeUnitagSuffix, overrideDisplayName })
   // TODO (CONS-431): Make a general/shared CopyHelper component
   const { value: isCopied, setTrue: setIsCopied, setFalse: setIsNotCopied } = useBooleanState(false)

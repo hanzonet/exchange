@@ -393,49 +393,15 @@ export type ResolversParentTypes = {
   V4PoolTick: V4PoolTick;
 };
 
-export type Aws_Api_KeyDirectiveArgs = { };
-
-export type Aws_Api_KeyDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_Api_KeyDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
-export type Aws_AuthDirectiveArgs = {
-  cognito_groups?: Maybe<Array<Maybe<Scalars['String']>>>;
-};
-
-export type Aws_AuthDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_AuthDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
-export type Aws_Cognito_User_PoolsDirectiveArgs = {
-  cognito_groups?: Maybe<Array<Maybe<Scalars['String']>>>;
-};
-
-export type Aws_Cognito_User_PoolsDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_Cognito_User_PoolsDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
-export type Aws_IamDirectiveArgs = { };
-
-export type Aws_IamDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_IamDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
 export type Aws_LambdaDirectiveArgs = { };
 
 export type Aws_LambdaDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_LambdaDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
-export type Aws_OidcDirectiveArgs = { };
-
-export type Aws_OidcDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_OidcDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
-export type Aws_PublishDirectiveArgs = {
-  subscriptions?: Maybe<Array<Maybe<Scalars['String']>>>;
-};
-
-export type Aws_PublishDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_PublishDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
 export type Aws_SubscribeDirectiveArgs = {
-  mutations?: Maybe<Array<Maybe<Scalars['String']>>>;
+  mutations: Array<Scalars['String']>;
 };
 
 export type Aws_SubscribeDirectiveResolver<Result, Parent, ContextType = any, Args = Aws_SubscribeDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
-
-export type DeferDirectiveArgs = { };
-
-export type DeferDirectiveResolver<Result, Parent, ContextType = any, Args = DeferDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
 export interface AwsjsonScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['AWSJSON'], any> {
   name: 'AWSJSON';
@@ -650,7 +616,7 @@ export type NftAssetResolvers<ContextType = any, ParentType extends ResolversPar
   image?: Resolver<Maybe<ResolversTypes['Image']>, ParentType, ContextType>;
   imageUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   isSpam?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
-  listings?: Resolver<Maybe<ResolversTypes['NftOrderConnection']>, ParentType, ContextType, Partial<NftAssetListingsArgs>>;
+  listings?: Resolver<Maybe<ResolversTypes['NftOrderConnection']>, ParentType, ContextType, RequireFields<NftAssetListingsArgs, 'chain'>>;
   mediaType?: Resolver<Maybe<ResolversTypes['MediaType']>, ParentType, ContextType>;
   metadataUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -1006,7 +972,7 @@ export type PoolTransactionResolvers<ContextType = any, ParentType extends Resol
 };
 
 export type PortfolioResolvers<ContextType = any, ParentType extends ResolversParentTypes['Portfolio'] = ResolversParentTypes['Portfolio']> = {
-  assetActivities?: Resolver<Maybe<Array<Maybe<ResolversTypes['AssetActivity']>>>, ParentType, ContextType, Partial<PortfolioAssetActivitiesArgs>>;
+  assetActivities?: Resolver<Maybe<Array<Maybe<ResolversTypes['AssetActivity']>>>, ParentType, ContextType, RequireFields<PortfolioAssetActivitiesArgs, '_fs'>>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   nftBalances?: Resolver<Maybe<Array<Maybe<ResolversTypes['NftBalance']>>>, ParentType, ContextType>;
   ownerAddress?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -1037,19 +1003,19 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
   dailyProtocolTvl?: Resolver<Maybe<Array<ResolversTypes['TimestampedAmount']>>, ParentType, ContextType, RequireFields<QueryDailyProtocolTvlArgs, 'chain' | 'version'>>;
   historicalProtocolVolume?: Resolver<Maybe<Array<ResolversTypes['TimestampedAmount']>>, ParentType, ContextType, RequireFields<QueryHistoricalProtocolVolumeArgs, 'chain' | 'duration' | 'version'>>;
   isV3SubgraphStale?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType, RequireFields<QueryIsV3SubgraphStaleArgs, 'chain'>>;
-  nftActivity?: Resolver<Maybe<ResolversTypes['NftActivityConnection']>, ParentType, ContextType, Partial<QueryNftActivityArgs>>;
-  nftAssets?: Resolver<Maybe<ResolversTypes['NftAssetConnection']>, ParentType, ContextType, RequireFields<QueryNftAssetsArgs, 'address'>>;
-  nftBalances?: Resolver<Maybe<ResolversTypes['NftBalanceConnection']>, ParentType, ContextType, RequireFields<QueryNftBalancesArgs, 'ownerAddress'>>;
-  nftCollectionBalances?: Resolver<Maybe<ResolversTypes['NftCollectionBalanceConnection']>, ParentType, ContextType, RequireFields<QueryNftCollectionBalancesArgs, 'ownerAddress'>>;
-  nftCollections?: Resolver<Maybe<ResolversTypes['NftCollectionConnection']>, ParentType, ContextType, Partial<QueryNftCollectionsArgs>>;
-  nftRoute?: Resolver<Maybe<ResolversTypes['NftRouteResponse']>, ParentType, ContextType, RequireFields<QueryNftRouteArgs, 'nftTrades' | 'senderAddress'>>;
+  nftActivity?: Resolver<Maybe<ResolversTypes['NftActivityConnection']>, ParentType, ContextType, RequireFields<QueryNftActivityArgs, 'chain'>>;
+  nftAssets?: Resolver<Maybe<ResolversTypes['NftAssetConnection']>, ParentType, ContextType, RequireFields<QueryNftAssetsArgs, 'address' | 'chain'>>;
+  nftBalances?: Resolver<Maybe<ResolversTypes['NftBalanceConnection']>, ParentType, ContextType, RequireFields<QueryNftBalancesArgs, 'chain' | 'ownerAddress'>>;
+  nftCollectionBalances?: Resolver<Maybe<ResolversTypes['NftCollectionBalanceConnection']>, ParentType, ContextType, RequireFields<QueryNftCollectionBalancesArgs, 'chain' | 'ownerAddress'>>;
+  nftCollections?: Resolver<Maybe<ResolversTypes['NftCollectionConnection']>, ParentType, ContextType, RequireFields<QueryNftCollectionsArgs, 'chain'>>;
+  nftRoute?: Resolver<Maybe<ResolversTypes['NftRouteResponse']>, ParentType, ContextType, RequireFields<QueryNftRouteArgs, 'chain' | 'nftTrades' | 'senderAddress'>>;
   portfolios?: Resolver<Maybe<Array<Maybe<ResolversTypes['Portfolio']>>>, ParentType, ContextType, RequireFields<QueryPortfoliosArgs, 'ownerAddresses'>>;
   searchTokens?: Resolver<Maybe<Array<Maybe<ResolversTypes['Token']>>>, ParentType, ContextType, RequireFields<QuerySearchTokensArgs, 'searchQuery'>>;
   token?: Resolver<Maybe<ResolversTypes['Token']>, ParentType, ContextType, RequireFields<QueryTokenArgs, 'chain'>>;
   tokenProjects?: Resolver<Maybe<Array<Maybe<ResolversTypes['TokenProject']>>>, ParentType, ContextType, RequireFields<QueryTokenProjectsArgs, 'contracts'>>;
   tokens?: Resolver<Maybe<Array<Maybe<ResolversTypes['Token']>>>, ParentType, ContextType, RequireFields<QueryTokensArgs, 'contracts'>>;
-  topCollections?: Resolver<Maybe<ResolversTypes['NftCollectionConnection']>, ParentType, ContextType, Partial<QueryTopCollectionsArgs>>;
-  topTokens?: Resolver<Maybe<Array<Maybe<ResolversTypes['Token']>>>, ParentType, ContextType, Partial<QueryTopTokensArgs>>;
+  topCollections?: Resolver<Maybe<ResolversTypes['NftCollectionConnection']>, ParentType, ContextType, RequireFields<QueryTopCollectionsArgs, 'chains' | 'duration' | 'orderBy'>>;
+  topTokens?: Resolver<Maybe<Array<Maybe<ResolversTypes['Token']>>>, ParentType, ContextType, RequireFields<QueryTopTokensArgs, 'chain' | 'orderBy' | 'page' | 'pageSize'>>;
   topV2Pairs?: Resolver<Maybe<Array<ResolversTypes['V2Pair']>>, ParentType, ContextType, RequireFields<QueryTopV2PairsArgs, 'chain' | 'first'>>;
   topV3Pools?: Resolver<Maybe<Array<ResolversTypes['V3Pool']>>, ParentType, ContextType, RequireFields<QueryTopV3PoolsArgs, 'chain' | 'first'>>;
   topV4Pools?: Resolver<Maybe<Array<ResolversTypes['V4Pool']>>, ParentType, ContextType, RequireFields<QueryTopV4PoolsArgs, 'chain' | 'first'>>;
@@ -1133,7 +1099,7 @@ export type TokenResolvers<ContextType = any, ParentType extends ResolversParent
   feeData?: Resolver<Maybe<ResolversTypes['FeeData']>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   isBridged?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
-  market?: Resolver<Maybe<ResolversTypes['TokenMarket']>, ParentType, ContextType, Partial<TokenMarketArgs>>;
+  market?: Resolver<Maybe<ResolversTypes['TokenMarket']>, ParentType, ContextType, RequireFields<TokenMarketArgs, 'currency' | 'multichain'>>;
   name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   project?: Resolver<Maybe<ResolversTypes['TokenProject']>, ParentType, ContextType>;
   protectionInfo?: Resolver<Maybe<ResolversTypes['ProtectionInfo']>, ParentType, ContextType>;
@@ -1188,7 +1154,7 @@ export type TokenMarketResolvers<ContextType = any, ParentType extends Resolvers
   priceSource?: Resolver<ResolversTypes['PriceSource'], ParentType, ContextType>;
   token?: Resolver<ResolversTypes['Token'], ParentType, ContextType>;
   totalValueLocked?: Resolver<Maybe<ResolversTypes['Amount']>, ParentType, ContextType>;
-  volume?: Resolver<Maybe<ResolversTypes['Amount']>, ParentType, ContextType, RequireFields<TokenMarketVolumeArgs, 'duration'>>;
+  volume?: Resolver<Maybe<ResolversTypes['Amount']>, ParentType, ContextType, RequireFields<TokenMarketVolumeArgs, 'duration' | 'multichain'>>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -1457,13 +1423,6 @@ export type Resolvers<ContextType = any> = {
 };
 
 export type DirectiveResolvers<ContextType = any> = {
-  aws_api_key?: Aws_Api_KeyDirectiveResolver<any, any, ContextType>;
-  aws_auth?: Aws_AuthDirectiveResolver<any, any, ContextType>;
-  aws_cognito_user_pools?: Aws_Cognito_User_PoolsDirectiveResolver<any, any, ContextType>;
-  aws_iam?: Aws_IamDirectiveResolver<any, any, ContextType>;
   aws_lambda?: Aws_LambdaDirectiveResolver<any, any, ContextType>;
-  aws_oidc?: Aws_OidcDirectiveResolver<any, any, ContextType>;
-  aws_publish?: Aws_PublishDirectiveResolver<any, any, ContextType>;
   aws_subscribe?: Aws_SubscribeDirectiveResolver<any, any, ContextType>;
-  defer?: DeferDirectiveResolver<any, any, ContextType>;
 };

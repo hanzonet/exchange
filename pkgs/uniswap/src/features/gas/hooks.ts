@@ -1,5 +1,5 @@
 import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
-import { type FormattedUniswapXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
+import { type FormattedLXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
 import { type GasStrategyType, useStatsigClientStatus } from '@luxexchange/gating'
 import { BigNumber, type providers } from 'ethers/lib/ethers'
 import { useMemo } from 'react'
@@ -25,7 +25,7 @@ import { usePollingIntervalByChain } from 'uniswap/src/features/transactions/hoo
 import { useUSDCValueWithStatus } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { type DerivedSendInfo } from 'uniswap/src/features/transactions/send/types'
 import { type DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { type UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { type LXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { NumberType } from 'utilities/src/format/types'
 import { isWebPlatform } from 'utilities/src/platform'
@@ -135,10 +135,10 @@ export function useUSDCurrencyAmountOfGasFee(
   return value
 }
 
-export function useFormattedUniswapXGasFeeInfo(
-  uniswapXGasBreakdown: UniswapXGasBreakdown | undefined,
+export function useFormattedLXGasFeeInfo(
+  uniswapXGasBreakdown: LXGasBreakdown | undefined,
   chainId: UniverseChainId,
-): FormattedUniswapXGasFeeInfo | undefined {
+): FormattedLXGasFeeInfo | undefined {
   const { convertFiatAmountFormatted } = useLocalizationContext()
 
   const { value: approvalCostUsd } = useUSDValueOfGasFee(chainId, uniswapXGasBreakdown?.approvalCost)

@@ -1,6 +1,6 @@
 import { UseMutationResult, useMutation } from '@tanstack/react-query'
 import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
-import { NavigateToSwapFlowArgs, useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
+import { NavigateToSwapFlowArgs, useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
 import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'
 import { AssetType } from 'uniswap/src/entities/assets'
 import { extractPlanResponseAssetDetails } from 'uniswap/src/features/activity/extract/extractPlanResponseDetails'
@@ -24,7 +24,7 @@ export function useResumePlanMutation({
 }: {
   successCallback?: () => void
 }): UseMutationResult<NavigateToSwapFlowArgs | undefined, Error, UseResumePlanParams> {
-  const navigateToSwapFlow = useUniswapContextSelector((ctx) => ctx.navigateToSwapFlow)
+  const navigateToSwapFlow = useLuxContextSelector((ctx) => ctx.navigateToSwapFlow)
 
   return useMutation({
     mutationFn: async ({

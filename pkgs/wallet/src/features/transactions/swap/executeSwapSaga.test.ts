@@ -16,7 +16,7 @@ import {
   getSwapTransactionCount,
 } from '@luxfi/wallet/src/features/transactions/swap/confirmation'
 import { createExecuteSwapSaga } from '@luxfi/wallet/src/features/transactions/swap/executeSwapSaga'
-import { submitUniswapXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
+import { submitLXOrder } from '@luxfi/wallet/src/features/transactions/swap/submitOrderSaga'
 import {
   mockSignerAccount as account,
   createMockSignedApproveTx,
@@ -33,8 +33,8 @@ import {
   prepareExecuteSwapSagaParams,
   preparePreSignedSwapTransaction,
   prepareSwapTxContext,
-  prepareUniswapXPreSignedSwapTransaction,
-  prepareUniswapXSwapTxContext,
+  prepareLXPreSignedSwapTransaction,
+  prepareLXSwapTxContext,
 } from '@luxfi/wallet/src/features/transactions/swap/types/fixtures'
 import {
   type TransactionExecutionResult,
@@ -56,7 +56,7 @@ const mockGetShouldWaitBetweenTransactions = jest.mocked(getShouldWaitBetweenTra
 const mockGetSwapTransactionCount = jest.mocked(getSwapTransactionCount) as jest.MockedFunction<
   typeof getSwapTransactionCount
 >
-const mockSubmitUniswapXOrder = jest.mocked(submitUniswapXOrder) as jest.MockedFunction<typeof submitUniswapXOrder>
+const mockSubmitLXOrder = jest.mocked(submitLXOrder) as jest.MockedFunction<typeof submitLXOrder>
 
 const mockExecutionResult: TransactionExecutionResult = {
   hash: '0xmockhash',
@@ -422,21 +422,21 @@ describe('executeSwapSaga', () => {
     })
   })
 
-  describe('UniswapX routing', () => {
-    it('should execute a UniswapX order', async () => {
+  describe('LX routing', () => {
+    it('should execute a LX order', async () => {
       const params = prepareExecuteSwapSagaParams({
-        swapTxContext: prepareUniswapXSwapTxContext(),
-        preSignedTransaction: prepareUniswapXPreSignedSwapTransaction(),
+        swapTxContext: prepareLXSwapTxContext(),
+        preSignedTransaction: prepareLXPreSignedSwapTransaction(),
       })
 
       await expectSaga(executeSwapSaga, params)
-        .provide([...sharedProviders, [call(submitUniswapXOrder, expect.any(Object)), undefined]])
+        .provide([...sharedProviders, [call(submitLXOrder, expect.any(Object)), undefined]])
         .call(params.onPending)
         .not.call(params.onSuccess)
         .not.call(params.onFailure)
         .run()
 
-      expect(mockSubmitUniswapXOrder).toHaveBeenCalledWith(
+      expect(mockSubmitLXOrder).toHaveBeenCalledWith(
         expect.objectContaining({
           permit: {
             permit: mockPermit.typedData,
@@ -452,8 +452,8 @@ describe('executeSwapSaga', () => {
       )
     })
 
-    it('should execute a UniswapX order with approval', async () => {
-      const preSignedTransaction = prepareUniswapXPreSignedSwapTransaction({
+    it('should execute a LX order with approval', async () => {
+      const preSignedTransaction = prepareLXPreSignedSwapTransaction({
         signedSwapPermit: {
           permit: mockPermit.typedData,
           signedData: '0xsignedPermit',
@@ -462,12 +462,12 @@ describe('executeSwapSaga', () => {
       })
 
       const params = prepareExecuteSwapSagaParams({
-        swapTxContext: prepareUniswapXSwapTxContext(),
+        swapTxContext: prepareLXSwapTxContext(),
         preSignedTransaction,
       })
 
       await expectSaga(executeSwapSaga, params)
-        .provide([...sharedProviders, [call(submitUniswapXOrder, expect.any(Object)), undefined]])
+        .provide([...sharedProviders, [call(submitLXOrder, expect.any(Object)), undefined]])
         .call(params.onPending)
         .not.call(params.onSuccess)
         .not.call(params.onFailure)
@@ -481,7 +481,7 @@ describe('executeSwapSaga', () => {
         }),
         shouldWait: false,
       })
-      expect(mockSubmitUniswapXOrder).toHaveBeenCalledWith(
+      expect(mockSubmitLXOrder).toHaveBeenCalledWith(
         expect.objectContaining({
           approveTxHash: '0xmockhash',
         }),
@@ -489,7 +489,7 @@ describe('executeSwapSaga', () => {
     })
 
     it('should call onFailure and log error when approval transaction fails', async () => {
-      const preSignedTransaction = prepareUniswapXPreSignedSwapTransaction({
+      const preSignedTransaction = prepareLXPreSignedSwapTransaction({
         signedSwapPermit: {
           permit: mockPermit.typedData,
           signedData: '0xsignedPermit',
@@ -498,7 +498,7 @@ describe('executeSwapSaga', () => {
       })
 
       const params = prepareExecuteSwapSagaParams({
-        swapTxContext: prepareUniswapXSwapTxContext(),
+        swapTxContext: prepareLXSwapTxContext(),
         preSignedTransaction,
       })
 

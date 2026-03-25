@@ -37,7 +37,7 @@ type TransferAssetChange = Extract<
 export default function parseTradeTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,
 ): ConfirmedSwapTransactionInfo | NFTTradeTransactionInfo | WrapTransactionInfo | undefined {
-  // ignore UniswapX transactions for now
+  // ignore LX transactions for now
   if (transaction.details.__typename !== TransactionDetailsType.Transaction) {
     return undefined
   }

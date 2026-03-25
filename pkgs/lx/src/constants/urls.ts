@@ -23,8 +23,8 @@ function getComplianceApiBaseUrl(): string {
   return PROD_ENTRY_GATEWAY_API_BASE_URL
 }
 
-export const UNISWAP_WEB_HOSTNAME = 'app.uniswap.org'
-const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : UNISWAP_WEB_HOSTNAME
+export const LUX_WEB_HOSTNAME = 'app.uniswap.org'
+const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : LUX_WEB_HOSTNAME
 
 function getPrivyEmbeddedWalletUrl(): string {
   if (isDevEnv()) {
@@ -62,7 +62,7 @@ export const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? 
 
 export const CHROME_EXTENSION_UNINSTALL_URL_PATH = '/extension/uninstall'
 
-export const uniswapUrls = {
+export const luxUrls = {
   // Help and web articles/items
   helpUrl,
   helpRequestUrl: `${helpUrl}/requests/new`,

@@ -1,4 +1,4 @@
-import { NavigateToNftItemArgs } from 'uniswap/src/contexts/UniswapContext'
+import { NavigateToNftItemArgs } from 'uniswap/src/contexts/LuxContext'
 import { getNftExplorerLink, openUri } from 'uniswap/src/utils/linking'
 import { useEvent } from 'utilities/src/react/hooks'
 

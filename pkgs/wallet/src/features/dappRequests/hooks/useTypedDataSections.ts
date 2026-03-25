@@ -1,9 +1,9 @@
 import type { BlockaidScanJsonRpcRequest } from '@luxexchange/api'
 import { useMemo } from 'react'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isUniswapXSwapRequest, UniswapXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
+import { isLXSwapRequest, LXSwapRequest } from '@luxfi/wallet/src/components/dappRequests/types/Permit2Types'
 import { useBlockaidJsonRpcScan } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidJsonRpcScan'
-import { useParseUniswapXSwap } from '@luxfi/wallet/src/features/dappRequests/hooks/useParseUniswapXSwap'
+import { useParseLXSwap } from '@luxfi/wallet/src/features/dappRequests/hooks/useParseLXSwap'
 import type { ParsedTransactionData } from '@luxfi/wallet/src/features/dappRequests/types'
 import { parseTransactionSections } from '@luxfi/wallet/src/features/dappRequests/utils/blockaidUtils'
 import { buildBlockaidScanJsonRpcRequest } from '@luxfi/wallet/src/features/dappRequests/utils/buildBlockaidScanJsonRpcRequest'
@@ -23,7 +23,7 @@ interface UseTypedDataSectionsResult extends ParsedTransactionData {
 
 /**
  * Hook that returns transaction sections for typed data requests.
- * Handles both UniswapX swaps (with custom parsing) and regular typed data (via Blockaid scanning).
+ * Handles both LX swaps (with custom parsing) and regular typed data (via Blockaid scanning).
  * Risk level always comes from Blockaid.
  */
 export function useTypedDataSections({
@@ -34,9 +34,9 @@ export function useTypedDataSections({
   params,
   dappUrl,
 }: UseTypedDataSectionsParams): UseTypedDataSectionsResult {
-  // Detect UniswapX swap requests
-  const isUniswapX = isUniswapXSwapRequest(parsedTypedData)
-  const uniswapXTypedData = isUniswapX ? (parsedTypedData as UniswapXSwapRequest) : null
+  // Detect LX swap requests
+  const isLX = isLXSwapRequest(parsedTypedData)
+  const uniswapXTypedData = isLX ? (parsedTypedData as LXSwapRequest) : null
 
   // Build Blockaid scan request (always needed for risk level)
   const blockaidRequest = useMemo(
@@ -54,8 +54,8 @@ export function useTypedDataSections({
   // Scan with Blockaid (for risk level and fallback sections)
   const { scanResult, isLoading: isBlockaidLoading } = useBlockaidJsonRpcScan(blockaidRequest, Boolean(blockaidRequest))
 
-  // Parse UniswapX sections (returns empty when not UniswapX)
-  const { sections: uniswapXSections, isLoading: isUniswapXLoading } = useParseUniswapXSwap(uniswapXTypedData, chainId)
+  // Parse LX sections (returns empty when not LX)
+  const { sections: uniswapXSections, isLoading: isLXLoading } = useParseLXSwap(uniswapXTypedData, chainId)
 
   // Parse Blockaid result for risk level and sections
   const { sections: blockaidSections, riskLevel } = useMemo(
@@ -63,11 +63,11 @@ export function useTypedDataSections({
     [scanResult, chainId],
   )
 
-  // Use UniswapX sections if available, otherwise fall back to Blockaid sections
-  const sections = isUniswapX ? uniswapXSections : blockaidSections
+  // Use LX sections if available, otherwise fall back to Blockaid sections
+  const sections = isLX ? uniswapXSections : blockaidSections
 
-  // Loading: wait for Blockaid (always), plus UniswapX parsing if applicable
-  const isLoading = isBlockaidLoading || (isUniswapX && isUniswapXLoading)
+  // Loading: wait for Blockaid (always), plus LX parsing if applicable
+  const isLoading = isBlockaidLoading || (isLX && isLXLoading)
 
   return {
     sections,

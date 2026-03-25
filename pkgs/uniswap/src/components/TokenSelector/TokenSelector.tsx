@@ -20,7 +20,7 @@ import { useTokenSelectorList } from 'uniswap/src/components/TokenSelector/hooks
 import { TokenSelectorFlow, TokenSelectorVariation } from 'uniswap/src/components/TokenSelector/types'
 import { UnsupportedChainedActionsBanner } from 'uniswap/src/components/TokenSelector/UnsupportedChainedActionsBanner'
 import { flowToModalName } from 'uniswap/src/components/TokenSelector/utils'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { TradeableAsset } from 'uniswap/src/entities/assets'
 import type { AddressGroup } from 'uniswap/src/features/accounts/store/types/AccountsState'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
@@ -106,7 +106,7 @@ export function TokenSelectorContent({
   const debouncedSearchFilter = useDebounce(searchFilter)
   const debouncedParsedSearchFilter = useDebounce(parsedSearchFilter)
   const scrollbarStyles = useScrollbarStyles()
-  const { navigateToBuyOrReceiveWithEmptyWallet } = useUniswapContext()
+  const { navigateToBuyOrReceiveWithEmptyWallet } = useLuxContext()
 
   const oppositeToken = currencyField === CurrencyField.INPUT ? output : input
 

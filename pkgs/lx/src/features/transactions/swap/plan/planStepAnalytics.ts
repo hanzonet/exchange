@@ -61,9 +61,9 @@ export function logPlanSwapStepFailed(params: {
   })
 }
 
-export function logUniswapXPlanOrderSubmitted(params: { analyticsWithPlanStepContext: PlanSagaAnalytics }): void {
+export function logLXPlanOrderSubmitted(params: { analyticsWithPlanStepContext: PlanSagaAnalytics }): void {
   const { analyticsWithPlanStepContext } = params
-  sendAnalyticsEvent(InterfaceEventName.UniswapXOrderSubmitted, {
+  sendAnalyticsEvent(InterfaceEventName.LXOrderSubmitted, {
     ...analyticsWithPlanStepContext,
   })
 }
@@ -71,7 +71,7 @@ export function logUniswapXPlanOrderSubmitted(params: { analyticsWithPlanStepCon
 const TRADE_STEP_TYPES = new Set<TransactionStepType>([
   TransactionStepType.SwapTransaction,
   TransactionStepType.SwapTransactionBatched,
-  TransactionStepType.UniswapXPlanSignature,
+  TransactionStepType.LXPlanSignature,
 ])
 
 /**
@@ -80,7 +80,7 @@ const TRADE_STEP_TYPES = new Set<TransactionStepType>([
  * SwapTransactionFailed analytics (with error logging for missing chainId/hash).
  *
  * Only logs for trade step types (SwapTransaction, SwapTransactionBatched,
- * UniswapXPlanSignature). Non-trade steps (approvals, permits) are silently skipped.
+ * LXPlanSignature). Non-trade steps (approvals, permits) are silently skipped.
  *
  * Used by both the inline non-last-step logging path and the forked last-step watcher.
  */
@@ -101,7 +101,7 @@ export function logPlanStepTradeAnalytics(params: {
     return
   }
 
-  // For UniswapX steps the proof (txHash = fill hash, orderId = order hash) is populated
+  // For LX steps the proof (txHash = fill hash, orderId = order hash) is populated
   // by TAPI after submission; for classic steps updatedProof is harmlessly undefined.
   const updatedProof = updatedSteps?.[stepIndex]?.proof
   const stepHash = hash ?? updatedProof?.txHash

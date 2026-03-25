@@ -5,16 +5,16 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-  type UniswapXOrderDetails,
+  type LXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx } from 'uniswap/src/features/transactions/types/utils'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
-import { useHandleUniswapXActivityUpdate } from '~/hooks/useHandleUniswapXActivityUpdate'
-import { ActivityUpdateTransactionType, type UniswapXOrderUpdate } from '~/state/activity/types'
+import { useHandleLXActivityUpdate } from '~/hooks/useHandleLXActivityUpdate'
+import { ActivityUpdateTransactionType, type LXOrderUpdate } from '~/state/activity/types'
 import { mocked } from '~/test-utils/mocked'
 import { renderHook } from '~/test-utils/render'
-import { logUniswapXSwapFinalized } from '~/tracing/swapFlowLoggers'
+import { logLXSwapFinalized } from '~/tracing/swapFlowLoggers'
 
 const dispatchMock = vi.fn()
 vi.mock('~/state/hooks', async () => {
@@ -36,19 +36,19 @@ vi.mock('~/components/Popups/registry', () => ({
 }))
 
 vi.mock('~/tracing/swapFlowLoggers', () => ({
-  logUniswapXSwapFinalized: vi.fn(),
+  logLXSwapFinalized: vi.fn(),
 }))
 
 vi.mock('uniswap/src/features/transactions/types/utils', () => ({
   isFinalizedTx: vi.fn(),
 }))
 
-describe('useHandleUniswapXActivityUpdate', () => {
+describe('useHandleLXActivityUpdate', () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })
 
-  const createMockUniswapXOrderDetails = (overrides?: Partial<UniswapXOrderDetails>): UniswapXOrderDetails => ({
+  const createMockLXOrderDetails = (overrides?: Partial<LXOrderDetails>): LXOrderDetails => ({
     id: 'order-id',
     from: '0xSenderAddress',
     chainId: UniverseChainId.Mainnet,
@@ -80,13 +80,13 @@ describe('useHandleUniswapXActivityUpdate', () => {
   })
 
   const createMockActivity = (
-    originalOverrides?: Partial<UniswapXOrderDetails>,
-    updateOverrides?: Partial<UniswapXOrderDetails>,
-  ): UniswapXOrderUpdate => ({
-    type: ActivityUpdateTransactionType.UniswapXOrder,
+    originalOverrides?: Partial<LXOrderDetails>,
+    updateOverrides?: Partial<LXOrderDetails>,
+  ): LXOrderUpdate => ({
+    type: ActivityUpdateTransactionType.LXOrder,
     chainId: UniverseChainId.Mainnet,
-    original: createMockUniswapXOrderDetails(originalOverrides),
-    update: createMockUniswapXOrderDetails({
+    original: createMockLXOrderDetails(originalOverrides),
+    update: createMockLXOrderDetails({
       ...originalOverrides,
       ...updateOverrides,
     }),
@@ -95,7 +95,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
   it('should finalize transaction when update is finalized', () => {
     mocked(isFinalizedTx).mockReturnValue(true)
 
-    const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+    const { result } = renderHook(() => useHandleLXActivityUpdate())
     const handleUpdate = result.current
 
     const activity = createMockActivity(
@@ -126,7 +126,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
   it('should update transaction when update is not finalized', () => {
     mocked(isFinalizedTx).mockReturnValue(false)
 
-    const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+    const { result } = renderHook(() => useHandleLXActivityUpdate())
     const handleUpdate = result.current
 
     const activity = createMockActivity({ status: TransactionStatus.Pending }, { status: TransactionStatus.Pending })
@@ -154,7 +154,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should add transaction popup when update is successful with hash', () => {
       mocked(isFinalizedTx).mockReturnValue(true)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -180,7 +180,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should add order popup when status changes and no success hash', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -206,7 +206,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should not add popup when status does not change', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity({ status: TransactionStatus.Pending }, { status: TransactionStatus.Pending })
@@ -222,7 +222,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should not add order popup when original has no orderHash', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -249,7 +249,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should log successful non-limit order', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -262,7 +262,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
+      expect(logLXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: '0xSuccessHash',
         orderHash: '0xOrderHash',
@@ -286,7 +286,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should not log successful limit order', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -299,13 +299,13 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
+      expect(logLXSwapFinalized).not.toHaveBeenCalled()
     })
 
     it('should log canceled order', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -318,7 +318,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
+      expect(logLXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: '0xCancelHash',
         orderHash: '0xOrderHash',
@@ -342,7 +342,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should log expired order', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity(
@@ -355,7 +355,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).toHaveBeenCalledWith({
+      expect(logLXSwapFinalized).toHaveBeenCalledWith({
         id: 'order-id',
         hash: undefined,
         orderHash: '0xOrderHash',
@@ -379,7 +379,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
     it('should not log when original has no orderHash', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity({ orderHash: undefined }, { status: TransactionStatus.Success })
@@ -389,13 +389,13 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
+      expect(logLXSwapFinalized).not.toHaveBeenCalled()
     })
 
     it('should not log for pending status', () => {
       mocked(isFinalizedTx).mockReturnValue(false)
 
-      const { result } = renderHook(() => useHandleUniswapXActivityUpdate())
+      const { result } = renderHook(() => useHandleLXActivityUpdate())
       const handleUpdate = result.current
 
       const activity = createMockActivity({ orderHash: '0xOrderHash' }, { status: TransactionStatus.Pending })
@@ -405,7 +405,7 @@ describe('useHandleUniswapXActivityUpdate', () => {
         popupDismissalTime: 5000,
       })
 
-      expect(logUniswapXSwapFinalized).not.toHaveBeenCalled()
+      expect(logLXSwapFinalized).not.toHaveBeenCalled()
     })
   })
 })

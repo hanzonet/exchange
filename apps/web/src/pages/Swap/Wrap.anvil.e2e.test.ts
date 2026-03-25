@@ -1,5 +1,5 @@
 import { WETH_ADDRESS } from '@luxamm/universal-router-sdk'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
@@ -30,7 +30,7 @@ test.describe(
         options: { blocks: 2 },
       })
 
-      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.swap })
+      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.swap })
 
       await anvil.setErc20Balance({
         address: assume0xAddress(WETH_ADDRESS(UniverseChainId.Mainnet)),
@@ -62,7 +62,7 @@ test.describe(
         options: { blocks: 2 },
       })
 
-      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.swap })
+      await stubTradingApiEndpoint({ page, endpoint: luxUrls.tradingApiPaths.swap })
 
       await page.goto(`/swap`)
       await page.getByTestId(TestID.ChooseOutputToken).click()

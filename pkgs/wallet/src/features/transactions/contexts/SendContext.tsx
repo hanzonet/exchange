@@ -6,7 +6,7 @@ import { createContext, ReactNode, useCallback, useContext, useMemo, useState } 
 import { useTranslation } from 'react-i18next'
 import { ParsedWarnings, WarningAction } from 'uniswap/src/components/modals/WarningModal/types'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { AssetType } from 'uniswap/src/entities/assets'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -109,7 +109,7 @@ export function SendContextProvider({
     [gasFee.params, txRequest],
   )
   // Check if current wallet can pay gas fees in any token
-  const { getCanPayGasInAnyToken } = useUniswapContext()
+  const { getCanPayGasInAnyToken } = useLuxContext()
   const skipGasCheck = getCanPayGasInAnyToken?.()
 
   const gasWarning = useTransactionGasWarning({

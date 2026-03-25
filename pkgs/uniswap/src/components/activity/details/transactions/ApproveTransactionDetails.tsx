@@ -4,7 +4,7 @@ import { Flex, Text, TouchableArea } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
 import { formatApprovalAmount } from 'uniswap/src/components/activity/utils'
 import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
@@ -30,7 +30,7 @@ export function ApproveTransactionDetails({
 }): JSX.Element | null {
   const { t } = useTranslation()
   const { formatNumberOrString } = useLocalizationContext()
-  const { navigateToTokenDetails } = useUniswapContext()
+  const { navigateToTokenDetails } = useLuxContext()
   const currencyInfo = useCurrencyInfo(buildCurrencyId(transactionDetails.chainId, typeInfo.tokenAddress ?? ''))
 
   if (!currencyInfo && typeInfo.type === TransactionType.Permit2Approve) {

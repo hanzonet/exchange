@@ -23,7 +23,7 @@ import { SelectorBaseList } from 'uniswap/src/components/lists/SelectorBaseList'
 import { ContextMenuTriggerButton } from 'uniswap/src/components/menus/ContextMenuTriggerButton'
 import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
 import { useAddToSearchHistory } from 'uniswap/src/components/TokenSelector/hooks/useAddToSearchHistory'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { sendSearchOptionItemClickedAnalytics } from 'uniswap/src/features/search/SearchModal/analytics/analytics'
 import { SearchFilterContext } from 'uniswap/src/features/search/SearchModal/analytics/SearchContext'
@@ -121,7 +121,7 @@ export const SearchModalList = memo(function _SearchModalList({
   renderedInModal,
   contentContainerStyle,
 }: SearchModalListProps): JSX.Element {
-  const { navigateToTokenDetails, navigateToExternalProfile, navigateToPoolDetails } = useUniswapContext()
+  const { navigateToTokenDetails, navigateToExternalProfile, navigateToPoolDetails } = useLuxContext()
   const { registerSearchItem } = useAddToSearchHistory()
 
   const [focusedRowIndex, setFocusedRowIndex] = useState<number | undefined>()

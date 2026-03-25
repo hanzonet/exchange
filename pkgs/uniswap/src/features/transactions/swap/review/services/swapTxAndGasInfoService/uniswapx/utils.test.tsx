@@ -1,13 +1,13 @@
-import { processUniswapXResponse } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/utils'
+import { processLXResponse } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lx/utils'
 import { createMockPermitData } from 'uniswap/src/test/fixtures/transactions/swap'
 
-describe('processUniswapXResponse', () => {
+describe('processLXResponse', () => {
   it('should return swapTxAndGasInfo with zero gas fee', () => {
     // Given
     const permitData = createMockPermitData('USDC')
 
     // When
-    const result = processUniswapXResponse({
+    const result = processLXResponse({
       permitData,
     })
 

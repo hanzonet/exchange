@@ -11,7 +11,7 @@ import {
   UnsignedV3DutchOrder,
   V2DutchOrderBuilder,
   V3DutchOrderBuilder,
-} from '@luxamm/luxswap-sdk'
+} from '@luxamm/sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { InterfaceEventName, SwapEventName } from 'uniswap/src/features/telemetry/constants'
@@ -35,7 +35,7 @@ import {
 } from '~/state/routing/types'
 import {
   SignatureExpiredError,
-  UniswapXv2HardQuoteError,
+  LXv2HardQuoteError,
   UserRejectedRequestError,
   WrongChainError,
 } from '~/utils/errors'
@@ -62,7 +62,7 @@ if (UNISWAP_GATEWAY_DNS_URL === undefined) {
   throw new Error(`UNISWAP_GATEWAY_DNS_URL must be defined environment variables`)
 }
 
-// getUpdatedNonce queries the UniswapX service for the most up-to-date nonce for a user.
+// getUpdatedNonce queries the LX service for the most up-to-date nonce for a user.
 // The `nonce` exists as part of the Swap quote response already, but if a user submits back-to-back
 // swaps without refreshing the quote (and therefore uses the same nonce), then the subsequent swaps will fail.
 //
@@ -78,7 +78,7 @@ async function getUpdatedNonce(swapper: string, chainId: number): Promise<BigNum
   } catch (e) {
     logger.error(e, {
       tags: {
-        file: 'useUniswapXSwapCallback',
+        file: 'useLXSwapCallback',
         function: 'getUpdatedNonce',
       },
     })
@@ -86,7 +86,7 @@ async function getUpdatedNonce(swapper: string, chainId: number): Promise<BigNum
   }
 }
 
-export function useUniswapXSwapCallback({
+export function useLXSwapCallback({
   trade,
   allowedSlippage,
   fiatValues,
@@ -126,7 +126,7 @@ export function useUniswapXSwapCallback({
     }
 
     sendAnalyticsEvent(
-      InterfaceEventName.UniswapXSignatureRequested,
+      InterfaceEventName.LXSignatureRequested,
       formatSwapSignedAnalyticsEventProperties({
         trade,
         allowedSlippage,
@@ -215,7 +215,7 @@ export function useUniswapXSwapCallback({
       })()
       const resultTime = Math.floor(Date.now() / 1000)
       if (deadline < resultTime) {
-        sendAnalyticsEvent(InterfaceEventName.UniswapXSignatureDeadlineExpired, {
+        sendAnalyticsEvent(InterfaceEventName.LXSignatureDeadlineExpired, {
           ...formatSwapSignedAnalyticsEventProperties({
             trade,
             allowedSlippage,
@@ -244,7 +244,7 @@ export function useUniswapXSwapCallback({
       // X v2 orders are posted to GPA; X v1 orders are posted to order-service. Their payloads are different.
       if (trade.offchainOrderType === OffchainOrderType.DUTCH_V2_AUCTION) {
         endpoint = 'rfq'
-        // Should follow HardQuoteRequestBody schema type: https://github.com/Uniswap/uniswapx-parameterization-api/blob/main/lib/handlers/hard-quote/schema.ts
+        // Should follow HardQuoteRequestBody schema type: https://github.com/Uniswap/lx-parameterization-api/blob/main/lib/handlers/hard-quote/schema.ts
         body = {
           encodedInnerOrder: encodedOrder,
           innerSig: signature,
@@ -272,10 +272,10 @@ export function useUniswapXSwapCallback({
       })
       const responseBody = (await res.json()) as DutchAuctionOrderResponse
 
-      // TODO(UniswapX): For now, `errorCode` is not always present in the response, so we have to fallback
+      // TODO(LX): For now, `errorCode` is not always present in the response, so we have to fallback
       // check for status code and perform this type narrowing.
       if (isErrorResponse(res, responseBody)) {
-        sendAnalyticsEvent(InterfaceEventName.UniswapXOrderPostError, {
+        sendAnalyticsEvent(InterfaceEventName.LXOrderPostError, {
           ...formatSwapSignedAnalyticsEventProperties({
             trade,
             allowedSlippage,
@@ -287,17 +287,17 @@ export function useUniswapXSwapCallback({
           detail: responseBody.detail,
         })
 
-        // Always retry UniswapX v2 order errors from the UniswapX Parameterization API with classic swap
-        if (trade.fillType === TradeFillType.UniswapXv2) {
-          throw new UniswapXv2HardQuoteError()
+        // Always retry LX v2 order errors from the LX Parameterization API with classic swap
+        if (trade.fillType === TradeFillType.LXv2) {
+          throw new LXv2HardQuoteError()
         }
 
-        // TODO(UniswapX): Provide a similar utility to `swapErrorToUserReadableMessage` once
+        // TODO(LX): Provide a similar utility to `swapErrorToUserReadableMessage` once
         // backend team provides a list of error codes and potential messages
         throw new Error(`${responseBody.errorCode ?? responseBody.detail ?? 'Unknown error'}`)
       }
       sendAnalyticsEvent(
-        InterfaceEventName.UniswapXOrderSubmitted,
+        InterfaceEventName.LXOrderSubmitted,
         formatSwapSignedAnalyticsEventProperties({
           trade,
           allowedSlippage,
@@ -310,8 +310,8 @@ export function useUniswapXSwapCallback({
       return {
         type:
           trade.offchainOrderType === OffchainOrderType.DUTCH_V2_AUCTION
-            ? (TradeFillType.UniswapXv2 as const)
-            : (TradeFillType.UniswapX as const),
+            ? (TradeFillType.LXv2 as const)
+            : (TradeFillType.LX as const),
         response: {
           orderHash: isV2DutchAuctionOrderSuccess(responseBody) ? responseBody.orderHash : responseBody.hash,
           deadline: updatedOrder.info.deadline,
@@ -321,7 +321,7 @@ export function useUniswapXSwapCallback({
     } catch (error) {
       if (error instanceof UserRejectedRequestError) {
         throw error
-      } else if (error instanceof SignatureExpiredError || error instanceof UniswapXv2HardQuoteError) {
+      } else if (error instanceof SignatureExpiredError || error instanceof LXv2HardQuoteError) {
         throw error
       } else {
         throw new Error(swapErrorToUserReadableMessage(t, error))

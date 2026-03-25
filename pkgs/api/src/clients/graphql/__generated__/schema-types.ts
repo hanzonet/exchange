@@ -10,23 +10,9 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  /**
-   * The `AWSJSON` scalar type provided by AWS AppSync, represents a JSON string that
-   * complies with [RFC 8259](https://tools.ietf.org/html/rfc8259).  Maps like
-   * "**{\\"upvotes\\": 10}**", lists like "**[1,2,3]**", and scalar values like
-   * "**\\"AWSJSON example string\\"**", "**1**", and "**true**" are accepted as
-   * valid JSON and will automatically be parsed and loaded in the resolver mapping
-   * templates as Maps, Lists, or Scalar values rather than as the literal input
-   * strings.  Invalid JSON strings like "**{a: 1}**", "**{'a': 1}**" and "**Unquoted
-   * string**" will throw GraphQL validation errors.
-   */
   AWSJSON: any;
 };
 
-/**
- *  Types, unions, and inputs (alphabetized):
- * These are colocated to highlight the relationship between some types and their inputs.
- */
 export type ActivityDetails = OffRampTransactionDetails | OnRampTransactionDetails | SwapOrderDetails | TransactionDetails;
 
 export type ActivityDetailsInput = {
@@ -36,10 +22,6 @@ export type ActivityDetailsInput = {
   transactionDetails?: InputMaybe<TransactionDetailsInput>;
 };
 
-/**
- *  Enums (alphabetized):
- * deprecated and replaced with TransactionType, please do not use this
- */
 export enum ActivityType {
   Approve = 'APPROVE',
   Borrow = 'BORROW',
@@ -49,7 +31,6 @@ export enum ActivityType {
   Deployment = 'DEPLOYMENT',
   Lend = 'LEND',
   Mint = 'MINT',
-  Nft = 'NFT',
   OffRamp = 'OFF_RAMP',
   OnRamp = 'ON_RAMP',
   Receive = 'RECEIVE',
@@ -58,12 +39,9 @@ export enum ActivityType {
   Stake = 'STAKE',
   Swap = 'SWAP',
   SwapOrder = 'SWAP_ORDER',
-  Staking = 'Staking',
   Unknown = 'UNKNOWN',
   Unstake = 'UNSTAKE',
-  Withdraw = 'WITHDRAW',
-  Market = 'market',
-  Money = 'money'
+  Withdraw = 'WITHDRAW'
 }
 
 export type Amount = IAmount & {
@@ -103,6 +81,7 @@ export type ApplicationContractInput = {
 
 export type AssetActivity = {
   __typename?: 'AssetActivity';
+  /** Addresses that are involved in the activity. Used internally for filtering subscriptions. */
   addresses?: Maybe<Array<Scalars['String']>>;
   /** @deprecated use assetChanges field in details */
   assetChanges: Array<Maybe<AssetChange>>;
@@ -168,15 +147,19 @@ export enum Chain {
   Ethereum = 'ETHEREUM',
   EthereumGoerli = 'ETHEREUM_GOERLI',
   EthereumSepolia = 'ETHEREUM_SEPOLIA',
+  Linea = 'LINEA',
+  Megaeth = 'MEGAETH',
   Monad = 'MONAD',
   MonadTestnet = 'MONAD_TESTNET',
   Optimism = 'OPTIMISM',
   Polygon = 'POLYGON',
   Solana = 'SOLANA',
   Soneium = 'SONEIUM',
+  Tempo = 'TEMPO',
   Unichain = 'UNICHAIN',
   UnknownChain = 'UNKNOWN_CHAIN',
   Worldchain = 'WORLDCHAIN',
+  Xlayer = 'XLAYER',
   Zksync = 'ZKSYNC',
   Zora = 'ZORA'
 }
@@ -274,7 +257,6 @@ export enum HighLow {
   Low = 'LOW'
 }
 
-/**   FIVE_MINUTE is only supported for TokenMarket.pricePercentChange */
 export enum HistoryDuration {
   Day = 'DAY',
   FiveMinute = 'FIVE_MINUTE',
@@ -285,7 +267,6 @@ export enum HistoryDuration {
   Year = 'YEAR'
 }
 
-/**   Interfaces (alphabetized): */
 export type IAmount = {
   currency?: Maybe<Currency>;
   value: Scalars['Float'];
@@ -357,8 +338,11 @@ export enum MediaType {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  /** Called by the server to send data to onAssetActivity subscriptions. */
   assetActivity: AssetActivity;
+  /** Returns true if the subscription is still alive. */
   heartbeat: Status;
+  /** Returns true if the subscription was unsubscribed, or false if it did not exist. */
   unsubscribe: Status;
 };
 
@@ -433,7 +417,6 @@ export enum NftActivityType {
 export type NftApproval = {
   __typename?: 'NftApproval';
   approvedAddress: Scalars['String'];
-  /**   can be erc721, erc1155, noncompliant */
   asset: NftAsset;
   id: Scalars['ID'];
   nftStandard: NftStandard;
@@ -448,7 +431,6 @@ export type NftApprovalInput = {
 export type NftApproveForAll = {
   __typename?: 'NftApproveForAll';
   approved: Scalars['Boolean'];
-  /**   can be erc721, erc1155, noncompliant */
   asset: NftAsset;
   id: Scalars['ID'];
   nftStandard: NftStandard;
@@ -481,7 +463,6 @@ export type NftAsset = {
   name?: Maybe<Scalars['String']>;
   nftContract?: Maybe<NftContract>;
   originalImage?: Maybe<Image>;
-  /**   TODO: may need to be array to support erc1155 cases. not needed at the moment so will revisit. */
   ownerAddress?: Maybe<Scalars['String']>;
   protectionInfo?: Maybe<ProtectionInfo>;
   rarities?: Maybe<Array<NftAssetRarity>>;
@@ -605,11 +586,7 @@ export type NftBalancesFilterInput = {
 export type NftCollection = {
   __typename?: 'NftCollection';
   bannerImage?: Maybe<Image>;
-  /**
-   *  TODO: support querying for collection assets here
-   * assets(page: Int, pageSize: Int, orderBy: NftAssetSortableField): [NftAsset]
-   * @deprecated Field no longer supported
-   */
+  /** @deprecated Field no longer supported */
   bannerImageUrl?: Maybe<Scalars['String']>;
   collectionId: Scalars['String'];
   creator?: Maybe<NftProfile>;
@@ -634,7 +611,7 @@ export type NftCollection = {
 
 
 export type NftCollectionMarketsArgs = {
-  currencies: Array<Currency>;
+  currencies?: Array<Currency>;
 };
 
 export type NftCollectionBalance = {
@@ -856,9 +833,7 @@ export type NftTrade = {
   contractAddress: Scalars['String'];
   id: Scalars['ID'];
   marketplace: NftMarketplace;
-  /**   price represents the current price of the NFT, which can be different from quotePrice */
   price: TokenAmount;
-  /**   quotePrice represents the last quoted price of the NFT */
   quotePrice?: Maybe<TokenAmount>;
   tokenId: Scalars['String'];
   tokenType?: Maybe<NftStandard>;
@@ -871,6 +846,7 @@ export type NftTradeInput = {
   marketplace: NftMarketplace;
   quotePrice?: InputMaybe<TokenAmountInput>;
   tokenId: Scalars['String'];
+  /** @deprecated not required, remove usage */
   tokenType?: InputMaybe<NftStandard>;
 };
 
@@ -1043,7 +1019,6 @@ export type PageInfo = {
   startCursor?: Maybe<Scalars['String']>;
 };
 
-/**   v2 pool parameters as defined by https://github.com/Uniswap/v2-sdk/blob/main/src/entities/pair.ts */
 export type PairInput = {
   tokenAmountA: TokenAmountInput;
   tokenAmountB: TokenAmountInput;
@@ -1063,7 +1038,6 @@ export type PermitInput = {
   spender: Scalars['String'];
 };
 
-/**   v3 pool parameters as defined by https://github.com/Uniswap/v3-sdk/blob/main/src/entities/pool.ts */
 export type PoolInput = {
   fee: Scalars['Int'];
   liquidity: Scalars['String'];
@@ -1099,7 +1073,6 @@ export type Portfolio = {
   __typename?: 'Portfolio';
   assetActivities?: Maybe<Array<Maybe<AssetActivity>>>;
   id: Scalars['ID'];
-  /**   TODO: (michael.zhang) replace with paginated query */
   nftBalances?: Maybe<Array<Maybe<NftBalance>>>;
   ownerAddress: Scalars['String'];
   tokenBalances?: Maybe<Array<Maybe<TokenBalance>>>;
@@ -1124,7 +1097,6 @@ export type PortfolioTokensTotalDenominatedValueChangeArgs = {
   duration?: InputMaybe<HistoryDuration>;
 };
 
-/**   Specify how the portfolio value should be calculated for each `ownerAddress`. */
 export type PortfolioValueModifier = {
   includeSmallBalances?: InputMaybe<Scalars['Boolean']>;
   includeSpamTokens?: InputMaybe<Scalars['Boolean']>;
@@ -1200,19 +1172,13 @@ export type Query = {
   nftRoute?: Maybe<NftRouteResponse>;
   portfolios?: Maybe<Array<Maybe<Portfolio>>>;
   searchTokens?: Maybe<Array<Maybe<Token>>>;
-  /**
-   *  token consumes chain and address instead of contract because the apollo client request cache can only use
-   * keys from the response, and the token response does not contain a contract, but does contain an unwrapped
-   * contract: chain and address.
-   */
   token?: Maybe<Token>;
   tokenProjects?: Maybe<Array<Maybe<TokenProject>>>;
   tokens?: Maybe<Array<Maybe<Token>>>;
   topCollections?: Maybe<NftCollectionConnection>;
+  /** Returns a list of tokens in descending order based on orderBy (default: TOTAL_VALUE_LOCKED). */
   topTokens?: Maybe<Array<Maybe<Token>>>;
-  /**   returns top v2 pairs sorted by total value locked in desc order */
   topV2Pairs?: Maybe<Array<V2Pair>>;
-  /**   returns top v3 pools sorted by total value locked in desc order */
   topV3Pools?: Maybe<Array<V3Pool>>;
   topV4Pools?: Maybe<Array<V4Pool>>;
   transactionNotification?: Maybe<TransactionNotification>;
@@ -1472,6 +1438,7 @@ export type Status = {
 
 export type Subscription = {
   __typename?: 'Subscription';
+  /** Subscribes to asset activities. The client must provide their own uuidv4. */
   onAssetActivity?: Maybe<AssetActivity>;
 };
 
@@ -1511,6 +1478,7 @@ export type SwapOrderDetailsInput = {
   offerer: Scalars['String'];
   outputAmount: Scalars['String'];
   outputToken: TokenAssetInput;
+  /** @deprecated use swapOrderStatus to disambiguate from transactionStatus */
   status?: InputMaybe<SwapOrderStatus>;
   swapOrderStatus: SwapOrderStatus;
   swapOrderType: SwapOrderType;
@@ -1582,6 +1550,7 @@ export type Token = IContract & {
 
 export type TokenMarketArgs = {
   currency?: InputMaybe<Currency>;
+  multichain?: InputMaybe<Scalars['Boolean']>;
 };
 
 
@@ -1617,7 +1586,6 @@ export type TokenAmountInput = {
 export type TokenApproval = {
   __typename?: 'TokenApproval';
   approvedAddress: Scalars['String'];
-  /**   can be erc20 or native */
   asset: Token;
   id: Scalars['ID'];
   quantity: Scalars['String'];
@@ -1674,7 +1642,6 @@ export type TokenMarket = {
   priceSource: PriceSource;
   token: Token;
   totalValueLocked?: Maybe<Amount>;
-  /**   this volume is cumulative volume over the specified duration */
   volume?: Maybe<Amount>;
 };
 
@@ -1713,6 +1680,7 @@ export type TokenMarketPricePercentChangeArgs = {
 
 export type TokenMarketVolumeArgs = {
   duration: HistoryDuration;
+  multichain?: InputMaybe<Scalars['Boolean']>;
 };
 
 export type TokenProject = {
@@ -1737,7 +1705,7 @@ export type TokenProject = {
 
 
 export type TokenProjectMarketsArgs = {
-  currencies: Array<Currency>;
+  currencies?: Array<Currency>;
 };
 
 export type TokenProjectMarket = {
@@ -1877,6 +1845,7 @@ export type TransactionDetailsInput = {
   from: Scalars['String'];
   hash: Scalars['String'];
   nonce: Scalars['Int'];
+  /** @deprecated use transactionStatus to disambiguate from swapOrderStatus */
   status?: InputMaybe<TransactionStatus>;
   to: Scalars['String'];
   transactionStatus: TransactionStatus;

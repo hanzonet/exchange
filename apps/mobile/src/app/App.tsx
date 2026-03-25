@@ -342,7 +342,7 @@ function AppOuter(): JSX.Element | null {
                       <MobileWalletNavigationProvider>
                         <NativeWalletProvider>
                           <TokenPriceProvider>
-                            <WalletUniswapProvider>
+                            <WalletLuxProvider>
                               <AccountsStoreContextProvider>
                                 <DataUpdaters />
                                 <BottomSheetModalProvider>
@@ -353,7 +353,7 @@ function AppOuter(): JSX.Element | null {
                                 </BottomSheetModalProvider>
                                 <NotificationToastWrapper />
                               </AccountsStoreContextProvider>
-                            </WalletUniswapProvider>
+                            </WalletLuxProvider>
                           </TokenPriceProvider>
                         </NativeWalletProvider>
                       </MobileWalletNavigationProvider>

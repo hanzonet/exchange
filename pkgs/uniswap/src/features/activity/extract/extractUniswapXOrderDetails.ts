@@ -14,12 +14,12 @@ import {
 import { remoteOrderStatusToLocalTxStatus } from 'uniswap/src/features/transactions/utils/uniswapX.utils'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 
-export function extractUniswapXOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
-  if (transaction?.details.__typename !== TransactionDetailsType.UniswapXOrder) {
+export function extractLXOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
+  if (transaction?.details.__typename !== TransactionDetailsType.LXOrder) {
     return null
   }
 
-  const typeInfo = parseUniswapXOrderTransaction(transaction)
+  const typeInfo = parseLXOrderTransaction(transaction)
   const routing =
     transaction.details.swapOrderType === GraphQLApi.SwapOrderType.Limit
       ? TradingApi.Routing.DUTCH_LIMIT
@@ -45,10 +45,10 @@ export function extractUniswapXOrderDetails(transaction: TransactionListQueryRes
   }
 }
 
-export default function parseUniswapXOrderTransaction(
+export default function parseLXOrderTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,
 ): ConfirmedSwapTransactionInfo | null {
-  if (transaction.details.__typename !== TransactionDetailsType.UniswapXOrder) {
+  if (transaction.details.__typename !== TransactionDetailsType.LXOrder) {
     return null
   }
 

@@ -9,7 +9,7 @@ import {
   NO_UNISWAP_INTERFACE_FEES_BANNER_LIGHT,
 } from 'ui/src/assets'
 import { Person, ShieldCheck } from 'ui/src/components/icons'
-import { useUniswapContext } from 'uniswap/src/contexts/UniswapContext'
+import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { AccountType } from 'uniswap/src/features/accounts/types'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { OnboardingCardLoggingName } from 'uniswap/src/features/telemetry/types'
@@ -65,7 +65,7 @@ export function useSharedIntroCards({
   const shouldPromptUnitag = isSignerAccount && !hasSkippedUnitagPrompt && canClaimUnitag && !hasAnyUnitags
 
   // No app fees announcement state
-  const { navigateToSwapFlow } = useUniswapContext()
+  const { navigateToSwapFlow } = useLuxContext()
   const handleNavigateToSwapFlow = useEvent(() =>
     navigateToSwapFlow({ inputCurrencyId: buildNativeCurrencyId(UniverseChainId.Mainnet) }),
   )

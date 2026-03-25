@@ -14,7 +14,7 @@ import { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'
 import { iconSizes } from '@luxfi/ui/src/theme'
 import { ContextMenu } from 'uniswap/src/components/menus/ContextMenu'
 import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import type { Authenticator, RecoveryMethod } from 'uniswap/src/features/passkey/embeddedWallet'
 import { AuthenticatorNameType, getPrivyEnums, listAuthenticators } from 'uniswap/src/features/passkey/embeddedWallet'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
@@ -328,7 +328,7 @@ export default function PasskeyMenu({ onClose }: { onClose: () => void }) {
             <Anchor
               target="_blank"
               rel="noreferrer"
-              href={uniswapUrls.helpArticleUrls.passkeysInfo}
+              href={luxUrls.helpArticleUrls.passkeysInfo}
               {...ClickableGuiStyle}
             >
               <Buoy size="$icon.20" color="$neutral2" />

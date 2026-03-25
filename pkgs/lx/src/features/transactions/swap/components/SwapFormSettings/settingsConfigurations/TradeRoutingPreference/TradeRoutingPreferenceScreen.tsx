@@ -4,10 +4,10 @@ import type { TFunction } from 'i18next'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { Flex, type FlexProps, HeightAnimator, Switch, Text, TouchableArea, UniswapXText, useSporeColors } from 'ui/src'
+import { Flex, type FlexProps, HeightAnimator, Switch, Text, TouchableArea, LXText, useSporeColors } from 'ui/src'
 import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
 import { Lightning } from 'ui/src/components/icons/Lightning'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
+import { LX } from 'ui/src/components/icons/LX'
 import { spacing, zIndexes } from 'ui/src/theme'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
@@ -15,8 +15,8 @@ import { WarningModal } from 'uniswap/src/components/modals/WarningModal/Warning
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import { InfoTooltip } from 'uniswap/src/components/tooltip/InfoTooltip'
 import WarningIcon from 'uniswap/src/components/warnings/WarningIcon'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
-import { useUniswapContextSelector } from 'uniswap/src/contexts/UniswapContext'
+import { luxUrls } from 'uniswap/src/constants/urls'
+import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
@@ -27,7 +27,7 @@ import {
   useTransactionSettingsStore,
 } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 import { isDefaultTradeRouteOptions } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/isDefaultTradeRouteOptions'
-import { UniswapXInfo } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/UniswapXInfo'
+import { LXInfo } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/LXInfo'
 import { V4HooksInfo } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/V4HooksInfo'
 import { useV4SwapEnabled } from 'uniswap/src/features/transactions/swap/hooks/useV4SwapEnabled'
 import { useSwapFormStoreDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
@@ -39,7 +39,7 @@ import { useEvent } from 'utilities/src/react/hooks'
 
 export function TradeRoutingPreferenceScreen(): JSX.Element {
   const { t } = useTranslation()
-  const getIsUniswapXSupported = useUniswapContextSelector((state) => state.getIsUniswapXSupported)
+  const getIsLXSupported = useLuxContextSelector((state) => state.getIsLXSupported)
   const { selectedProtocols, isV4HookPoolsEnabled } = useTransactionSettingsStore((s) => ({
     selectedProtocols: s.selectedProtocols,
     isV4HookPoolsEnabled: s.isV4HookPoolsEnabled,
@@ -52,11 +52,11 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
       isV4HookPoolsEnabled,
     }),
   )
-  const uniswapXEnabled = useFeatureFlag(FeatureFlags.UniswapX)
-  const allowUniswapXOnly = useFeatureFlag(FeatureFlags.AllowUniswapXOnlyRoutesInSwapSettings)
+  const uniswapXEnabled = useFeatureFlag(FeatureFlags.LX)
+  const allowLXOnly = useFeatureFlag(FeatureFlags.AllowLXOnlyRoutesInSwapSettings)
 
   const chainId = useSwapFormStoreDerivedSwapInfo((s) => s.chainId)
-  const isUniswapXSupported = getIsUniswapXSupported?.(chainId)
+  const isLXSupported = getIsLXSupported?.(chainId)
   const v4SwapEnabled = useV4SwapEnabled(chainId)
   const chainName = getChainInfo(chainId).name
   const restrictionDescription = t('swap.settings.protection.subtitle.unavailable', { chainName })
@@ -72,10 +72,10 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
     return p !== TradingApi.ProtocolItems.UNISWAPX_V2
   }).length
 
-  // Prevent the user from deselecting all on-chain protocols (AKA only selecting UniswapX)
-  // unless the `AllowUniswapXOnlyRoutesInSwapSettings` flag is enabled (this is for local testing only! the flag is always false in production).
+  // Prevent the user from deselecting all on-chain protocols (AKA only selecting LX)
+  // unless the `AllowLXOnlyRoutesInSwapSettings` flag is enabled (this is for local testing only! the flag is always false in production).
   const shouldPreventClassicProtocolDeselection =
-    !allowUniswapXOnly &&
+    !allowLXOnly &&
     ((classicProtocolsCount === 1 && !isV4HookPoolsEnabled) || (classicProtocolsCount === 0 && isV4HookPoolsEnabled))
 
   const toggleV4Hooks = useCallback(() => {
@@ -91,7 +91,7 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
   }, [setSelectedProtocols, setIsV4HookPoolsEnabled, isDefault])
 
   const getProtocolTitle = createGetProtocolTitle({
-    isUniswapXSupported,
+    isLXSupported,
     t,
   })
 
@@ -106,8 +106,8 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
         cantDisable={false}
         footerContent={
           <DefaultOptionFooterContent
-            isUniswapXSupported={isUniswapXSupported}
-            isUniswapXEnabled={uniswapXEnabled}
+            isLXSupported={isLXSupported}
+            isLXEnabled={uniswapXEnabled}
             isDefault={isDefault}
           />
         }
@@ -117,12 +117,12 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
         {uniswapXEnabled && (
           <OptionRow
             active={
-              isUniswapXSupported === false ? false : selectedProtocols.includes(TradingApi.ProtocolItems.UNISWAPX_V2)
+              isLXSupported === false ? false : selectedProtocols.includes(TradingApi.ProtocolItems.UNISWAPX_V2)
             }
-            elementName={ElementName.SwapRoutingPreferenceUniswapX}
+            elementName={ElementName.SwapRoutingPreferenceLX}
             title={getProtocolTitle(TradingApi.ProtocolItems.UNISWAPX_V2)}
             cantDisable={onlyOneProtocolSelected}
-            disabled={isUniswapXSupported === false}
+            disabled={isLXSupported === false}
             onSelect={() => toggleProtocol(TradingApi.ProtocolItems.UNISWAPX_V2)}
           />
         )}
@@ -163,17 +163,17 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
 }
 
 function createGetProtocolTitle(ctx: {
-  isUniswapXSupported?: boolean
+  isLXSupported?: boolean
   t: TFunction
 }): (preference: FrontendSupportedProtocol) => JSX.Element | string {
-  const { isUniswapXSupported, t } = ctx
+  const { isLXSupported, t } = ctx
   return (preference: FrontendSupportedProtocol) => {
     switch (preference) {
       case TradingApi.ProtocolItems.UNISWAPX_V2: {
-        if (isUniswapXSupported === false) {
-          return <UniswapXTitleInfoTooltip />
+        if (isLXSupported === false) {
+          return <LXTitleInfoTooltip />
         }
-        return <UniswapXInfo tooltipTrigger={<UniswapXInfoTooltipTrigger />} />
+        return <LXInfo tooltipTrigger={<LXInfoTooltipTrigger />} />
       }
       case TradingApi.ProtocolItems.V2:
         return t('swap.settings.routingPreference.option.v2.title')
@@ -187,14 +187,14 @@ function createGetProtocolTitle(ctx: {
   }
 }
 
-function UniswapXTitleInfoTooltip(): JSX.Element {
+function LXTitleInfoTooltip(): JSX.Element {
   const [forceCloseTooltip, setForceCloseTooltip] = useState(undefined as undefined | true)
   const [showModal, setShowModal] = useState(false)
   if (isWebPlatform) {
     return (
       <InfoTooltip
-        text={<UniswapXInfoTooltipText onPress={() => setForceCloseTooltip(true)} />}
-        trigger={<UniswapXInfoTooltipTrigger />}
+        text={<LXInfoTooltipText onPress={() => setForceCloseTooltip(true)} />}
+        trigger={<LXInfoTooltipTrigger />}
         placement="top"
         open={forceCloseTooltip === undefined ? undefined : !forceCloseTooltip}
       />
@@ -204,14 +204,14 @@ function UniswapXTitleInfoTooltip(): JSX.Element {
   return (
     <>
       <TouchableArea onPress={() => setShowModal(true)}>
-        <UniswapXInfoTooltipTrigger />
+        <LXInfoTooltipTrigger />
       </TouchableArea>
-      <UniswapXInfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <LXInfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }
 
-function UniswapXInfoTooltipTrigger(): JSX.Element {
+function LXInfoTooltipTrigger(): JSX.Element {
   return (
     <Text
       alignItems="center"
@@ -221,16 +221,16 @@ function UniswapXInfoTooltipTrigger(): JSX.Element {
       flexShrink={0}
       display="inline-flex"
       gap="$gap4"
-      // This is to offset the left padding built-into the UniswapX icon
+      // This is to offset the left padding built-into the LX icon
       left={-spacing.spacing2}
     >
       <Trans
         components={{
-          icon: <UniswapX size="$icon.16" />,
-          gradient: <UniswapXText height={18} variant="subheading2" />,
+          icon: <LX size="$icon.16" />,
+          gradient: <LXText height={18} variant="subheading2" />,
           info: <InfoCircleFilled color="$neutral3" size="$icon.16" />,
         }}
-        i18nKey="uniswapx.item"
+        i18nKey="lx.item"
       />
     </Text>
   )
@@ -306,17 +306,17 @@ function DefaultOptionDescription({ v4SwapEnabled }: { v4SwapEnabled: boolean })
 }
 
 function DefaultOptionFooterContent(props: {
-  isUniswapXSupported?: boolean
-  isUniswapXEnabled: boolean
+  isLXSupported?: boolean
+  isLXEnabled: boolean
   isDefault: boolean
 }): JSX.Element | null {
-  const { isUniswapXSupported, isUniswapXEnabled, isDefault } = props
-  const showIncludesUniswapX = isUniswapXEnabled && isUniswapXSupported && isDefault
-  const showUniswapXNotSupported = isUniswapXSupported === false && isUniswapXEnabled && isDefault
+  const { isLXSupported, isLXEnabled, isDefault } = props
+  const showIncludesLX = isLXEnabled && isLXSupported && isDefault
+  const showLXNotSupported = isLXSupported === false && isLXEnabled && isDefault
 
-  if (showIncludesUniswapX) {
+  if (showIncludesLX) {
     return (
-      <UniswapXInfo
+      <LXInfo
         tooltipTrigger={
           <Text
             alignItems="center"
@@ -328,10 +328,10 @@ function DefaultOptionFooterContent(props: {
           >
             <Trans
               components={{
-                icon: <UniswapX size="$icon.16" />,
-                gradient: <UniswapXText height={18} variant="body3" />,
+                icon: <LX size="$icon.16" />,
+                gradient: <LXText height={18} variant="body3" />,
               }}
-              i18nKey="uniswapx.included"
+              i18nKey="lx.included"
             />
           </Text>
         }
@@ -339,14 +339,14 @@ function DefaultOptionFooterContent(props: {
     )
   }
 
-  if (showUniswapXNotSupported) {
-    return <UniswapXNotSupportedDescription />
+  if (showLXNotSupported) {
+    return <LXNotSupportedDescription />
   }
 
   return null
 }
 
-const UniswapXNotSupportedDescription = (): JSX.Element => {
+const LXNotSupportedDescription = (): JSX.Element => {
   const { t } = useTranslation()
   const [forceCloseTooltip, setForceCloseTooltip] = useState(undefined as undefined | true)
   const [showModal, setShowModal] = useState(false)
@@ -365,7 +365,7 @@ const UniswapXNotSupportedDescription = (): JSX.Element => {
       <InfoTooltip
         open={forceCloseTooltip === undefined ? undefined : !forceCloseTooltip}
         text={
-          <UniswapXInfoTooltipText
+          <LXInfoTooltipText
             onPress={() => {
               setForceCloseTooltip(true)
             }}
@@ -380,27 +380,27 @@ const UniswapXNotSupportedDescription = (): JSX.Element => {
   return (
     <>
       <TouchableArea onPress={() => setShowModal(true)}>{trigger}</TouchableArea>
-      <UniswapXInfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <LXInfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }
 
-function UniswapXInfoTooltipText(props?: { onPress?: () => void }): JSX.Element {
+function LXInfoTooltipText(props?: { onPress?: () => void }): JSX.Element {
   const { t } = useTranslation()
-  const handleOnPressUniswapXUnsupported = useUniswapContextSelector((state) => state.handleOnPressUniswapXUnsupported)
+  const handleOnPressLXUnsupported = useLuxContextSelector((state) => state.handleOnPressLXUnsupported)
   const handleHideTransactionSettingsModal = useModalHide(TransactionSettingsModalId.TransactionSettings)
 
   const onPress = useEvent(() => {
     if (isExtensionApp) {
-      openUri({ uri: uniswapUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
+      openUri({ uri: luxUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
     } else {
-      handleOnPressUniswapXUnsupported?.()
+      handleOnPressLXUnsupported?.()
       handleHideTransactionSettingsModal()
     }
     props?.onPress?.()
   })
 
-  const body = isExtensionApp ? t('uniswapx.description.unsupported') : t('wallet.mismatch.popup.description')
+  const body = isExtensionApp ? t('lx.description.unsupported') : t('wallet.mismatch.popup.description')
 
   return (
     <TouchableArea onPress={onPress}>
@@ -447,7 +447,7 @@ function DefaultOptionTitle({ v4SwapEnabled }: { v4SwapEnabled: boolean }): JSX.
   )
 }
 
-function UniswapXInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }): JSX.Element {
+function LXInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }): JSX.Element {
   const { t } = useTranslation()
   const colors = useSporeColors()
   return (
@@ -455,18 +455,18 @@ function UniswapXInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
       isOpen={isOpen}
       onClose={onClose}
       {...{
-        caption: t('uniswapx.description.unsupported'),
+        caption: t('lx.description.unsupported'),
         rejectText: t('common.button.close'),
         icon: <Lightning size="$icon.24" fill={colors.neutral1.val} />,
-        modalName: ModalName.UniswapXInfo,
+        modalName: ModalName.LXInfo,
         severity: WarningSeverity.None,
-        title: t('uniswapx.unavailable.title'),
+        title: t('lx.unavailable.title'),
         zIndex: zIndexes.popover,
       }}
     >
       <LearnMoreLink
         textVariant={isWebPlatform ? 'body4' : 'buttonLabel3'}
-        url={uniswapUrls.helpArticleUrls.multichainDelegation}
+        url={luxUrls.helpArticleUrls.multichainDelegation}
       />
     </WarningModal>
   )

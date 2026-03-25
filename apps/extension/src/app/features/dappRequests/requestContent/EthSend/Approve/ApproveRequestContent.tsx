@@ -12,7 +12,7 @@ import { Flex, Text } from '@luxfi/ui/src'
 import { iconSizes } from '@luxfi/ui/src/theme'
 import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { DappRequestType } from '@luxexchange/lx/src/features/dappRequests/types'
 import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
@@ -116,7 +116,7 @@ export function ApproveRequestContent({
         </Text>
         <LearnMoreLink
           textVariant="body4"
-          url={isRevoke ? uniswapUrls.helpArticleUrls.revokeExplainer : uniswapUrls.helpArticleUrls.approvalsExplainer}
+          url={isRevoke ? luxUrls.helpArticleUrls.revokeExplainer : luxUrls.helpArticleUrls.approvalsExplainer}
         />
       </Flex>
     </DappRequestContent>

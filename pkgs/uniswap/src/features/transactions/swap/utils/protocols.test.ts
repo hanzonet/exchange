@@ -5,7 +5,7 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { createGetV4SwapEnabled } from 'uniswap/src/features/transactions/swap/hooks/useV4SwapEnabled'
 import {
   createGetProtocolsForChain,
-  createGetUniswapXPriorityOrderFlag,
+  createGetLXPriorityOrderFlag,
   createProtocolFilter,
   FrontendSupportedProtocol,
 } from 'uniswap/src/features/transactions/swap/utils/protocols'
@@ -25,8 +25,8 @@ vi.mock('uniswap/src/features/transactions/swap/hooks/useV4SwapEnabled', () => (
   createGetV4SwapEnabled: vi.fn(),
 }))
 
-vi.mock('uniswap/src/contexts/UniswapContext', () => ({
-  useUniswapContextSelector: vi.fn(),
+vi.mock('uniswap/src/contexts/LuxContext', () => ({
+  useLuxContextSelector: vi.fn(),
 }))
 
 vi.mock('uniswap/src/features/chains/hooks/useSupportedChainId', () => ({
@@ -56,7 +56,7 @@ describe('protocols', () => {
   describe('createProtocolFilter', () => {
     it('returns all protocols when everything is enabled', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -66,9 +66,9 @@ describe('protocols', () => {
       expect(result).toEqual(allProtocols)
     })
 
-    it('filters out UniswapX when uniswapXEnabled is false', () => {
+    it('filters out LX when uniswapXEnabled is false', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => false,
+        getLXEnabled: () => false,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -78,9 +78,9 @@ describe('protocols', () => {
       expect(result).toEqual([TradingApi.ProtocolItems.V4, TradingApi.ProtocolItems.V3, TradingApi.ProtocolItems.V2])
     })
 
-    it('filters out UniswapX when chain is not in LAUNCHED_UNISWAPX_CHAINS and no special conditions', () => {
+    it('filters out LX when chain is not in LAUNCHED_UNISWAPX_CHAINS and no special conditions', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -91,9 +91,9 @@ describe('protocols', () => {
       expect(result).toEqual([TradingApi.ProtocolItems.V4, TradingApi.ProtocolItems.V3, TradingApi.ProtocolItems.V2])
     })
 
-    it('keeps UniswapX when priority orders are allowed', () => {
+    it('keeps LX when priority orders are allowed', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => true,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -104,9 +104,9 @@ describe('protocols', () => {
       expect(result).toEqual(allProtocols)
     })
 
-    it('keeps UniswapX and replaces V2 with V3 on Arbitrum when Dutch V3 is enabled', () => {
+    it('keeps LX and replaces V2 with V3 on Arbitrum when Dutch V3 is enabled', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => true,
@@ -123,7 +123,7 @@ describe('protocols', () => {
 
     it('filters out V4 when not supported', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => false,
         getArbitrumDutchV3Enabled: () => false,
@@ -139,7 +139,7 @@ describe('protocols', () => {
 
     it('handles empty protocol list', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -151,7 +151,7 @@ describe('protocols', () => {
 
     it('handles undefined chainId', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => true,
+        getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -164,7 +164,7 @@ describe('protocols', () => {
 
     it('verifies duplicate filtering logic does not cause issues', () => {
       const protocolFilter = createProtocolFilter({
-        getUniswapXEnabled: () => false,
+        getLXEnabled: () => false,
         getPriorityOrderFlag: () => false,
         getV4Enabled: () => true,
         getArbitrumDutchV3Enabled: () => false,
@@ -184,55 +184,55 @@ describe('protocols', () => {
     })
   })
 
-  describe('createGetUniswapXPriorityOrderFlag', () => {
-    it('returns true for Base with UniswapXPriorityOrdersBase flag enabled', () => {
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
-        getFeatureFlag: (flag) => flag === FeatureFlags.UniswapXPriorityOrdersBase,
+  describe('createGetLXPriorityOrderFlag', () => {
+    it('returns true for Base with LXPriorityOrdersBase flag enabled', () => {
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
+        getFeatureFlag: (flag) => flag === FeatureFlags.LXPriorityOrdersBase,
       })
 
-      expect(getUniswapXPriorityOrderFlag(UniverseChainId.Base)).toBe(true)
+      expect(getLXPriorityOrderFlag(UniverseChainId.Base)).toBe(true)
     })
 
-    it('returns true for Optimism with UniswapXPriorityOrdersOptimism flag enabled', () => {
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
-        getFeatureFlag: (flag) => flag === FeatureFlags.UniswapXPriorityOrdersOptimism,
+    it('returns true for Optimism with LXPriorityOrdersOptimism flag enabled', () => {
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
+        getFeatureFlag: (flag) => flag === FeatureFlags.LXPriorityOrdersOptimism,
       })
 
-      expect(getUniswapXPriorityOrderFlag(UniverseChainId.Optimism)).toBe(true)
+      expect(getLXPriorityOrderFlag(UniverseChainId.Optimism)).toBe(true)
     })
 
-    it('returns true for Unichain with UniswapXPriorityOrdersUnichain flag enabled', () => {
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
-        getFeatureFlag: (flag) => flag === FeatureFlags.UniswapXPriorityOrdersUnichain,
+    it('returns true for Unichain with LXPriorityOrdersUnichain flag enabled', () => {
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
+        getFeatureFlag: (flag) => flag === FeatureFlags.LXPriorityOrdersUnichain,
       })
 
-      expect(getUniswapXPriorityOrderFlag(UniverseChainId.Unichain)).toBe(true)
+      expect(getLXPriorityOrderFlag(UniverseChainId.Unichain)).toBe(true)
     })
 
     it('returns false when chainId is undefined', () => {
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
         getFeatureFlag: () => true,
       })
 
-      expect(getUniswapXPriorityOrderFlag(undefined)).toBe(false)
+      expect(getLXPriorityOrderFlag(undefined)).toBe(false)
     })
 
     it('returns false for chains not in the priority orders map', () => {
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
         getFeatureFlag: () => true,
       })
 
-      expect(getUniswapXPriorityOrderFlag(UniverseChainId.Mainnet)).toBe(false)
-      expect(getUniswapXPriorityOrderFlag(UniverseChainId.Polygon)).toBe(false)
+      expect(getLXPriorityOrderFlag(UniverseChainId.Mainnet)).toBe(false)
+      expect(getLXPriorityOrderFlag(UniverseChainId.Polygon)).toBe(false)
     })
 
     it('returns false when chainId is undefined without checking flags', () => {
       const mGetFeatureFlag = vi.fn(() => true)
-      const getUniswapXPriorityOrderFlag = createGetUniswapXPriorityOrderFlag({
+      const getLXPriorityOrderFlag = createGetLXPriorityOrderFlag({
         getFeatureFlag: mGetFeatureFlag,
       })
 
-      expect(getUniswapXPriorityOrderFlag(undefined)).toBe(false)
+      expect(getLXPriorityOrderFlag(undefined)).toBe(false)
       // Should not check any flags when chainId is undefined
       expect(mGetFeatureFlag).not.toHaveBeenCalled()
     })
@@ -261,7 +261,7 @@ describe('protocols', () => {
 
     it('correctly combines feature flags', () => {
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
-        if (flag === FeatureFlags.UniswapX) {
+        if (flag === FeatureFlags.LX) {
           return true
         }
         if (flag === FeatureFlags.ArbitrumDutchV3) {
@@ -280,36 +280,36 @@ describe('protocols', () => {
       expect(result).not.toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
     })
 
-    it('handles missing getIsUniswapXSupported (uses feature flag only)', () => {
+    it('handles missing getIsLXSupported (uses feature flag only)', () => {
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
-        return flag === FeatureFlags.UniswapX
+        return flag === FeatureFlags.LX
       })
 
       const getProtocolsFilter = createGetProtocolsForChain({
         getEnabledChains: () => [UniverseChainId.Mainnet],
-        // No getIsUniswapXSupported provided
+        // No getIsLXSupported provided
       })
 
       const result = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
       expect(result).toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
     })
 
-    it('handles present getIsUniswapXSupported (combines with feature flag)', () => {
+    it('handles present getIsLXSupported (combines with feature flag)', () => {
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
-        return flag === FeatureFlags.UniswapX // Feature flag is enabled
+        return flag === FeatureFlags.LX // Feature flag is enabled
       })
 
-      const getIsUniswapXSupported = vi.fn(() => false) // But chain support says no
+      const getIsLXSupported = vi.fn(() => false) // But chain support says no
 
       const getProtocolsFilter = createGetProtocolsForChain({
         getEnabledChains: () => [UniverseChainId.Mainnet],
-        getIsUniswapXSupported,
+        getIsLXSupported,
       })
 
       const result = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
-      // Should not contain UniswapX because chain support returned false
+      // Should not contain LX because chain support returned false
       expect(result).not.toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
-      expect(getIsUniswapXSupported).toHaveBeenCalledWith(UniverseChainId.Mainnet)
+      expect(getIsLXSupported).toHaveBeenCalledWith(UniverseChainId.Mainnet)
     })
 
     it('correctly creates V4 swap enabled checker', () => {
@@ -330,27 +330,27 @@ describe('protocols', () => {
     })
 
     it('returns expected protocols for various chain/flag combinations', () => {
-      // Setup: UniswapX enabled, no special flags
+      // Setup: LX enabled, no special flags
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
-        return flag === FeatureFlags.UniswapX
+        return flag === FeatureFlags.LX
       })
       mockCreateGetV4SwapEnabled.mockReturnValue(() => true)
 
       const getProtocolsFilter = createGetProtocolsForChain({
         getEnabledChains: () => [UniverseChainId.Mainnet, UniverseChainId.Base],
-        getIsUniswapXSupported: () => true,
+        getIsLXSupported: () => true,
       })
 
       // Mainnet should have all protocols (it's in LAUNCHED_UNISWAPX_CHAINS)
       const mainnetResult = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
       expect(mainnetResult).toEqual(allProtocols)
 
-      // Base should not have UniswapX (not in LAUNCHED_UNISWAPX_CHAINS and no priority flag)
+      // Base should not have LX (not in LAUNCHED_UNISWAPX_CHAINS and no priority flag)
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
-        if (flag === FeatureFlags.UniswapX) {
+        if (flag === FeatureFlags.LX) {
           return true
         }
-        if (flag === FeatureFlags.UniswapXPriorityOrdersBase) {
+        if (flag === FeatureFlags.LXPriorityOrdersBase) {
           return false
         }
         return false

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, useSporeColors } from '@luxfi/ui/src'
 import { DEP_accentColors } from '@luxfi/ui/src/theme'
 import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import Column from '~/components/deprecated/Column'
 import { Sign } from '~/components/Icons/Sign'
@@ -18,7 +18,7 @@ import useNativeCurrency from '~/lib/hooks/useNativeCurrency'
 import { ICON_SIZE, Step, StepDetails } from '~/pages/Swap/Limit/ConfirmSwapModal/Step'
 import { ConfirmModalState } from '~/pages/Swap/Limit/ConfirmSwapModal/state'
 import { InterfaceTrade } from '~/state/routing/types'
-import { isLimitTrade, isUniswapXSwapTrade, isUniswapXTradeType } from '~/state/routing/utils'
+import { isLimitTrade, isLXSwapTrade, isLXTradeType } from '~/state/routing/utils'
 import { useIsTransactionConfirmed, useDEXOrderByOrderHash } from '~/state/transactions/hooks'
 import { Divider } from '~/theme/components/Dividers'
 import { SignatureExpiredError } from '~/utils/errors'
@@ -78,7 +78,7 @@ export default function ProgressIndicator({
 
   const swapStatus = useSwapTransactionStatus(swapResult)
   const dexOrder = useDEXOrderByOrderHash(
-    isUniswapXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
+    isLXTradeType(swapResult?.type) ? swapResult.response.orderHash : '',
   )
 
   const swapConfirmed = swapStatus === TransactionStatus.Success || dexOrder?.status === TransactionStatus.Success
@@ -118,7 +118,7 @@ export default function ProgressIndicator({
         actionRequiredTitle: t('common.wrapIn', { symbol: nativeCurrency.symbol }),
         inProgressTitle: t('common.wrappingToken', { symbol: nativeCurrency.symbol }),
         learnMoreLinkText: t('common.whyWrap', { symbol: nativeCurrency.symbol }),
-        learnMoreLinkHref: uniswapUrls.helpArticleUrls.wethExplainer,
+        learnMoreLinkHref: luxUrls.helpArticleUrls.wethExplainer,
       },
       [ConfirmModalState.RESETTING_TOKEN_ALLOWANCE]: {
         icon: <CurrencyLogo currency={trade?.inputAmount.currency} size={ICON_SIZE} />,
@@ -134,7 +134,7 @@ export default function ProgressIndicator({
         actionRequiredTitle: t('common.wallet.approve'),
         inProgressTitle: t('common.approvePending'),
         learnMoreLinkText: t('common.whyApprove'),
-        learnMoreLinkHref: uniswapUrls.helpArticleUrls.approvalsExplainer,
+        learnMoreLinkHref: luxUrls.helpArticleUrls.approvalsExplainer,
       },
       [ConfirmModalState.PERMITTING]: {
         icon: <Sign />,
@@ -142,7 +142,7 @@ export default function ProgressIndicator({
         previewTitle: t('common.signMessage'),
         actionRequiredTitle: t('common.signMessageWallet'),
         learnMoreLinkText: t('common.whySign'),
-        learnMoreLinkHref: uniswapUrls.helpArticleUrls.approvalsExplainer,
+        learnMoreLinkHref: luxUrls.helpArticleUrls.approvalsExplainer,
       },
       [ConfirmModalState.PENDING_CONFIRMATION]: {
         icon: <Swap />,
@@ -150,14 +150,14 @@ export default function ProgressIndicator({
         previewTitle: isLimitTrade(trade) ? t('common.confirm') : t('swap.confirmSwap'),
         actionRequiredTitle: isLimitTrade(trade) ? t('common.confirmWallet') : t('common.confirmSwap'),
         inProgressTitle: isLimitTrade(trade) ? t('common.pendingEllipsis') : t('common.swapPending'),
-        ...(isUniswapXSwapTrade(trade) && {
+        ...(isLXSwapTrade(trade) && {
           timeToStart: trade.order.info.deadline - Math.floor(Date.now() / 1000),
           delayedStartTitle: t('common.confirmTimedOut'),
         }),
         learnMoreLinkText: isLimitTrade(trade) ? t('limits.learnMore') : t('common.learnMoreSwap'),
         learnMoreLinkHref: isLimitTrade(trade)
-          ? uniswapUrls.helpArticleUrls.limitsInfo
-          : uniswapUrls.helpArticleUrls.howToSwapTokens,
+          ? luxUrls.helpArticleUrls.limitsInfo
+          : luxUrls.helpArticleUrls.howToSwapTokens,
       },
     }),
     [trade, inputTokenColor, t, nativeCurrency.symbol, colors],

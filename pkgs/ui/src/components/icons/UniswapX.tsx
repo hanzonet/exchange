@@ -25,8 +25,8 @@ Circle as _Circle,
 // eslint-disable-next-line no-relative-import-paths/no-relative-import-paths
 import { createIcon } from '../factories/createIcon'
 
-export const [UniswapX, AnimatedUniswapX] = createIcon({
-name: 'UniswapX',
+export const [LX, AnimatedLX] = createIcon({
+name: 'LX',
 getIcon: (props) => (
   <Svg   viewBox="0 0 10 14" fill="none" {...props}>
       <Defs>

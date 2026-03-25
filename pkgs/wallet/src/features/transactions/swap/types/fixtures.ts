@@ -8,9 +8,9 @@ import { SwapTradeBaseProperties } from 'uniswap/src/features/telemetry/types'
 import { transactionActions } from 'uniswap/src/features/transactions/slice'
 import {
   ValidatedSwapTxContext,
-  ValidatedUniswapXSwapTxAndGasInfo,
+  ValidatedLXSwapTxAndGasInfo,
 } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { BridgeTrade, ClassicTrade, UniswapXTrade, WrapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { BridgeTrade, ClassicTrade, LXTrade, WrapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { TransactionOriginType, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { ETH, WETH } from 'uniswap/src/test/fixtures'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
@@ -24,11 +24,11 @@ import { TransactionExecutor } from '@luxfi/wallet/src/features/transactions/swa
 import {
   SwapTransactionData,
   TransactionParamsFactory,
-  UniswapXOrderTransactionData,
+  LXOrderTransactionData,
 } from '@luxfi/wallet/src/features/transactions/swap/services/transactionParamsFactory'
 import {
   PreSignedSwapTransaction,
-  UniswapXPreSignedSwapTransaction,
+  LXPreSignedSwapTransaction,
 } from '@luxfi/wallet/src/features/transactions/swap/types/preSignedTransaction'
 import { TransactionSagaDependencies } from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
@@ -71,7 +71,7 @@ export const mockTransactionParamsFactory: jest.Mocked<TransactionParamsFactory>
   createWrapParams: jest.fn().mockReturnValue({
     typeInfo: { type: TransactionType.Wrap },
   }),
-  createUniswapXOrderParams: jest.fn().mockImplementation((data: UniswapXOrderTransactionData) => ({
+  createLXOrderParams: jest.fn().mockImplementation((data: LXOrderTransactionData) => ({
     permit: data.signedPermit,
     quote: data.quote,
     routing: data.routing,
@@ -117,13 +117,13 @@ export const mockClassicTrade: ClassicTrade = {
   slippageTolerance: 0.5,
 } as unknown as ClassicTrade
 
-export const mockUniswapXTrade: UniswapXTrade = {
+export const mockLXTrade: LXTrade = {
   routing: TradingApi.Routing.DUTCH_V2,
   inputAmount: { currency: ETH, quotient: JSBI.BigInt(1000) },
   outputAmount: { currency: USDC },
   quote: { amount: MaxUint256, routing: TradingApi.Routing.DUTCH_V2 },
   slippageTolerance: 0.5,
-} as unknown as UniswapXTrade
+} as unknown as LXTrade
 
 export const mockWrapTrade: WrapTrade = {
   routing: TradingApi.Routing.WRAP,
@@ -208,11 +208,11 @@ export const prepareSwapTxContext = createFixture<ValidatedSwapTxContext>()(() =
   unsigned: false,
 }))
 
-export const prepareUniswapXSwapTxContext = createFixture<ValidatedUniswapXSwapTxAndGasInfo>()(() => ({
+export const prepareLXSwapTxContext = createFixture<ValidatedLXSwapTxAndGasInfo>()(() => ({
   ...prepareSwapTxContext(),
   routing: TradingApi.Routing.DUTCH_V2,
-  trade: mockUniswapXTrade,
-  quote: mockUniswapXTrade.quote,
+  trade: mockLXTrade,
+  quote: mockLXTrade.quote,
   gasFeeBreakdown: {
     classicGasUseEstimateUSD: '5',
     approvalCost: '5',
@@ -245,12 +245,12 @@ export const preparePreSignedSwapTransaction = createFixture<PreSignedSwapTransa
   },
 }))
 
-export const prepareUniswapXPreSignedSwapTransaction = createFixture<UniswapXPreSignedSwapTransaction>()(() => ({
+export const prepareLXPreSignedSwapTransaction = createFixture<LXPreSignedSwapTransaction>()(() => ({
   signedSwapPermit: {
     permit: mockPermit.typedData,
     signedData: '0xsignedPermit',
   },
-  swapTxContext: prepareUniswapXSwapTxContext(),
+  swapTxContext: prepareLXSwapTxContext(),
   chainId: UniverseChainId.Mainnet,
   account: mockSignerAccount,
   metadata: {

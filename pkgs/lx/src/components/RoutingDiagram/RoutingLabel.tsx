@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, UniswapXText } from 'ui/src'
-import { AnimatedUniswapX } from 'ui/src/components/icons/UniswapX'
+import { Flex, Text, LXText } from 'ui/src'
+import { AnimatedLX } from 'ui/src/components/icons/LX'
 import { AcrossLogo } from 'ui/src/components/logos/AcrossLogo'
 import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isBridge, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isBridge, isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { useRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingRegistry'
 
 export function RoutingLabel({ trade }: { trade: Trade }): JSX.Element {
@@ -22,11 +22,11 @@ export function RoutingLabel({ trade }: { trade: Trade }): JSX.Element {
     )
   }
 
-  if (isUniswapX(trade)) {
+  if (isLX(trade)) {
     return (
       <Flex row gap="$spacing2">
-        <AnimatedUniswapX size="$icon.16" animation="simple" />
-        <UniswapXText variant="body3">{t('uniswapx.label')}</UniswapXText>
+        <AnimatedLX size="$icon.16" animation="simple" />
+        <LXText variant="body3">{t('lx.label')}</LXText>
       </Flex>
     )
   }

@@ -1,4 +1,4 @@
-import { REACTOR_ADDRESS_MAPPING } from '@luxamm/luxswap-sdk'
+import { REACTOR_ADDRESS_MAPPING } from '@luxamm/sdk'
 import { TypeDefinitionSchema } from '@luxfi/wallet/src/components/dappRequests/types/EIP712Types'
 import { z } from 'zod'
 
@@ -40,7 +40,7 @@ export function isPermit2(data: unknown): data is Permit2 {
   return Permit2Schema.safeParse(data).success
 }
 
-function isValidUniswapXSpender(data: {
+function isValidLXSpender(data: {
   message: { spender: string }
   domain: { chainId: string | number | bigint }
 }): boolean {
@@ -99,12 +99,12 @@ const DutchOrderSchema = z.object({
   primaryType: z.string(),
 })
 
-const UniswapXSwapRequestSchema = DutchOrderSchema.refine(isValidUniswapXSpender, {
-  message: 'Invalid UniswapX request',
+const LXSwapRequestSchema = DutchOrderSchema.refine(isValidLXSpender, {
+  message: 'Invalid LX request',
 })
 
-export type UniswapXSwapRequest = z.infer<typeof UniswapXSwapRequestSchema>
+export type LXSwapRequest = z.infer<typeof LXSwapRequestSchema>
 
-export function isUniswapXSwapRequest(data: unknown): data is UniswapXSwapRequest {
-  return UniswapXSwapRequestSchema.safeParse(data).success
+export function isLXSwapRequest(data: unknown): data is LXSwapRequest {
+  return LXSwapRequestSchema.safeParse(data).success
 }

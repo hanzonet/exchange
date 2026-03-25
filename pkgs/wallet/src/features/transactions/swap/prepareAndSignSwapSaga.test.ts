@@ -7,7 +7,7 @@ import type { EffectProviders, StaticProvider } from 'redux-saga-test-plan/provi
 import { USDC } from 'uniswap/src/constants/tokens'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { PermitMethod } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { type UniswapXTrade, UnwrapTrade, WrapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { type LXTrade, UnwrapTrade, WrapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { ETH, WETH } from 'uniswap/src/test/fixtures'
 import { mockPermit } from 'uniswap/src/test/fixtures/permit'
 import { ensure0xHex } from 'utilities/src/addresses/hex'
@@ -357,20 +357,20 @@ describe('prepareAndSignSwapSaga', () => {
     })
   })
 
-  describe('UniswapX routing', () => {
-    const mockUniswapXTrade = {
+  describe('LX routing', () => {
+    const mockLXTrade = {
       routing: TradingApi.Routing.DUTCH_V2,
       inputAmount: { currency: ETH, quotient: JSBI.BigInt(1000) },
       outputAmount: { currency: USDC },
       quote: { amount: MaxUint256, routing: TradingApi.Routing.DUTCH_V2 },
       slippageTolerance: 0.5,
-    } as unknown as UniswapXTrade
+    } as unknown as LXTrade
 
-    it('should prepare and sign a UniswapX order', async () => {
+    it('should prepare and sign a LX order', async () => {
       const params = prepareAndSignSwapSagaParams({
         swapTxContext: prepareSwapTxContext({
           routing: TradingApi.Routing.DUTCH_V2,
-          trade: mockUniswapXTrade,
+          trade: mockLXTrade,
           permit: mockPermit,
           gasFeeBreakdown: {
             classicGasUseEstimateUSD: '5',
@@ -415,13 +415,13 @@ describe('prepareAndSignSwapSaga', () => {
       })
     })
 
-    it('should handle UniswapX signing failure and call onFailure', async () => {
+    it('should handle LX signing failure and call onFailure', async () => {
       const onFailure = jest.fn()
       const params = prepareAndSignSwapSagaParams({
         onFailure,
         swapTxContext: prepareSwapTxContext({
           routing: TradingApi.Routing.DUTCH_V2,
-          trade: mockUniswapXTrade,
+          trade: mockLXTrade,
           permit: mockPermit,
           gasFeeBreakdown: {
             classicGasUseEstimateUSD: '5',

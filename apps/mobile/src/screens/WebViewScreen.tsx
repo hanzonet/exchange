@@ -4,7 +4,7 @@ import { AppStackScreenProp, SettingsStackScreenProp } from 'src/app/navigation/
 import { BackHeader } from 'src/components/layout/BackHeader'
 import { Screen } from 'src/components/layout/Screen'
 import { Separator, Text } from '@luxfi/ui/src'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
@@ -21,7 +21,7 @@ export function WebViewScreen({
 
       <Separator />
 
-      {uriLink === uniswapUrls.helpUrl ? <ZendeskWebView uriLink={uriLink} /> : <WebView source={{ uri: uriLink }} />}
+      {uriLink === luxUrls.helpUrl ? <ZendeskWebView uriLink={uriLink} /> : <WebView source={{ uri: uriLink }} />}
     </Screen>
   )
 }
@@ -33,7 +33,7 @@ function ZendeskWebView({ uriLink }: { uriLink: string }): JSX.Element {
 
   const onNavigationStateChange = useCallback(
     ({ url }: { url: string }): void => {
-      if (zendeskInjectJs && url.startsWith(`${uniswapUrls.helpUrl}/requests/new`)) {
+      if (zendeskInjectJs && url.startsWith(`${luxUrls.helpUrl}/requests/new`)) {
         webviewRef.current?.injectJavaScript(zendeskInjectJs)
       }
     },

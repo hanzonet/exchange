@@ -14,7 +14,7 @@ import {
   UnsignedV3DutchOrderInfo,
   UnsignedV3DutchOrderInfoJSON,
   V3DutchOutputJSON,
-} from '@luxamm/luxswap-sdk'
+} from '@luxamm/sdk'
 import { Pair, Route as V2Route } from '@luxamm/v2-sdk'
 import { FeeAmount, Pool, Route as V3Route } from '@luxamm/v3-sdk'
 import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
@@ -75,7 +75,7 @@ export function computeRoutes(args: GetQuoteArgs, routes: ClassicQuoteData['rout
   if (routes.length === 0) {
     return []
   }
-  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isUniswapXTrade: false, routes })
+  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isLXTrade: false, routes })
 
   try {
     return routes.map((route) => {
@@ -209,11 +209,11 @@ function toUnsignedPriorityOrderInfo(orderInfoJSON: UnsignedPriorityOrderInfoJSO
 // Prepares the currencies used for the actual Swap (either DEX or Universal Router)
 function getTradeCurrencies({
   args,
-  isUniswapXTrade,
+  isLXTrade,
   routes,
 }: {
   args: GetQuoteArgs | GetQuickQuoteArgs
-  isUniswapXTrade: boolean
+  isLXTrade: boolean
   routes?: ClassicQuoteData['route']
 }): [Currency, Currency] {
   const {
@@ -329,7 +329,7 @@ export async function transformQuoteToTrade({
       routingType === URAQuoteType.PRIORITY) &&
     routerPreference === RouterPreference.X
 
-  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isUniswapXTrade: showDEXTrade })
+  const [currencyIn, currencyOut] = getTradeCurrencies({ args, isLXTrade: showDEXTrade })
 
   if (!isEVMChain(currencyIn.chainId)) {
     throw new Error('chainId must be EVM for routing api paths')
@@ -385,12 +385,12 @@ export async function transformQuoteToTrade({
 
   // If the top-level URA quote type is DUTCH_V1 or DUTCH_V2, then DEX is better for the user
   // Or if quote type is PRIORITY, we only use DEX
-  const isUniswapXBetter =
+  const isLXBetter =
     data.routing === URAQuoteType.DUTCH_V1 ||
     data.routing === URAQuoteType.DUTCH_V2 ||
     data.routing === URAQuoteType.DUTCH_V3 ||
     data.routing === URAQuoteType.PRIORITY
-  if (isUniswapXBetter) {
+  if (isLXBetter) {
     const swapFee = getSwapFee(data.quote)
     // DEX no longer requires wrapping native ETH to WETH
     const wrapInfo: WrapInfo = { needsWrap: false }
@@ -543,11 +543,11 @@ export function isPreviewTrade(trade?: InterfaceTrade): trade is PreviewTrade {
 }
 
 export function isSubmittableTrade(trade?: InterfaceTrade): trade is SubmittableTrade {
-  return isClassicTrade(trade) || isUniswapXTrade(trade)
+  return isClassicTrade(trade) || isLXTrade(trade)
 }
 
 /* Returns true if trade uses DEX protocol. Includes both X swaps and limit orders. */
-export function isUniswapXTradeType(
+export function isLXTradeType(
   tradeType?: TradeFillType,
 ): tradeType is TradeFillType.DEX | TradeFillType.DEXv2 | TradeFillType.DEXv3 {
   return (
@@ -557,18 +557,18 @@ export function isUniswapXTradeType(
   )
 }
 
-export function isUniswapXTrade(
+export function isLXTrade(
   trade?: InterfaceTrade,
 ): trade is DutchOrderTrade | V2DutchOrderTrade | V3DutchOrderTrade | LimitOrderTrade | PriorityOrderTrade {
-  return isUniswapXTradeType(trade?.fillType)
+  return isLXTradeType(trade?.fillType)
 }
 
 /* Returns true if trade is a SWAP on DEX, not a limit order */
-export function isUniswapXSwapTrade(
+export function isLXSwapTrade(
   trade?: InterfaceTrade,
 ): trade is DutchOrderTrade | V2DutchOrderTrade | V3DutchOrderTrade | PriorityOrderTrade {
   return (
-    isUniswapXTrade(trade) &&
+    isLXTrade(trade) &&
     (trade.offchainOrderType === OffchainOrderType.DUTCH_AUCTION ||
       trade.offchainOrderType === OffchainOrderType.DUTCH_V2_AUCTION ||
       trade.offchainOrderType === OffchainOrderType.DUTCH_V3_AUCTION ||
@@ -577,5 +577,5 @@ export function isUniswapXSwapTrade(
 }
 
 export function isLimitTrade(trade?: InterfaceTrade): trade is LimitOrderTrade {
-  return isUniswapXTrade(trade) && trade.offchainOrderType === OffchainOrderType.LIMIT_ORDER
+  return isLXTrade(trade) && trade.offchainOrderType === OffchainOrderType.LIMIT_ORDER
 }

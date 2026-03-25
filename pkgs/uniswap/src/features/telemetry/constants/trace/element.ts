@@ -221,7 +221,7 @@ export enum ElementName {
   NavbarCompanyMenuLogo = 'navbar-company-menu-logo',
   NavbarCompanyMenuTradingApi = 'navbar-company-menu-trading-api',
   NavbarCompanyMenuUnichain = 'navbar-company-menu-unichain',
-  NavbarCompanyMenuUniswapX = 'navbar-company-menu-uniswapx',
+  NavbarCompanyMenuLX = 'navbar-company-menu-lx',
   NavbarCompanyMenuVote = 'navbar-company-menu-vote',
   NavbarCompanyMenuWallet = 'navbar-company-menu-wallet',
 
@@ -294,7 +294,7 @@ export enum ElementName {
   SwapFormHeader = 'swap-form-header',
   SwapReview = 'swap-review',
   SwapRoutingPreferenceDefault = 'swap-routing-preference-default',
-  SwapRoutingPreferenceUniswapX = 'swap-routing-preference-UniswapX',
+  SwapRoutingPreferenceLX = 'swap-routing-preference-LX',
   SwapRoutingPreferenceV2 = 'swap-routing-preference-v2',
   SwapRoutingPreferenceV3 = 'swap-routing-preference-v3',
   SwapRoutingPreferenceV4 = 'swap-routing-preference-v4',

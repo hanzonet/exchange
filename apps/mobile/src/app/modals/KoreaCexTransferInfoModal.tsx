@@ -5,7 +5,7 @@ import { useOpenReceiveModal } from 'src/features/modals/hooks/useOpenReceiveMod
 import { Button, Flex, Image, Text, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
 import { CEX_TRANSFER_MODAL_BG_DARK, CEX_TRANSFER_MODAL_BG_LIGHT } from '@luxfi/ui/src/assets'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
 
@@ -45,7 +45,7 @@ export function KoreaCexTransferInfoModal(): JSX.Element {
             flex={1}
             size="large"
             emphasis="secondary"
-            onPress={() => openUri({ uri: uniswapUrls.helpArticleUrls.cexTransferKorea })}
+            onPress={() => openUri({ uri: luxUrls.helpArticleUrls.cexTransferKorea })}
           >
             {t('common.button.learn')}
           </Button>

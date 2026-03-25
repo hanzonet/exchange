@@ -15,7 +15,7 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-  UniswapXOrderDetails,
+  LXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 
 describe('CancellationGasCalculationService', () => {
@@ -49,7 +49,7 @@ describe('CancellationGasCalculationService', () => {
     } as ExactInputSwapTransactionInfo,
   }
 
-  const mockUniswapXOrder: UniswapXOrderDetails = {
+  const mockLXOrder: LXOrderDetails = {
     id: 'order-1',
     chainId: UniverseChainId.Mainnet,
     from: '0xuser',
@@ -91,20 +91,20 @@ describe('CancellationGasCalculationService', () => {
   }
 
   describe('getCancellationType', () => {
-    it('returns uniswapx for UniswapX transactions', () => {
-      expect(getCancellationType(mockUniswapXOrder)).toBe(CancellationType.UniswapX)
+    it('returns lx for LX transactions', () => {
+      expect(getCancellationType(mockLXOrder)).toBe(CancellationType.LX)
     })
 
     it('returns classic for classic transactions with no orders', () => {
       expect(getCancellationType(mockClassicTransaction)).toBe(CancellationType.Classic)
     })
 
-    it('returns uniswapx when orders are provided', () => {
-      expect(getCancellationType(mockClassicTransaction, [mockUniswapXOrder])).toBe(CancellationType.UniswapX)
+    it('returns lx when orders are provided', () => {
+      expect(getCancellationType(mockClassicTransaction, [mockLXOrder])).toBe(CancellationType.LX)
     })
 
-    it('returns uniswapx for UniswapX transactions with orders', () => {
-      expect(getCancellationType(mockUniswapXOrder, [mockUniswapXOrder])).toBe(CancellationType.UniswapX)
+    it('returns lx for LX transactions with orders', () => {
+      expect(getCancellationType(mockLXOrder, [mockLXOrder])).toBe(CancellationType.LX)
     })
   })
 
@@ -190,10 +190,10 @@ describe('CancellationGasCalculationService', () => {
       expect(result?.gasFeeDisplayValue).toBeDefined()
     })
 
-    it('returns gas fee for UniswapX single cancellation', () => {
+    it('returns gas fee for LX single cancellation', () => {
       const result = calculateCancellationGasFee({
-        type: CancellationType.UniswapX,
-        transaction: mockUniswapXOrder,
+        type: CancellationType.LX,
+        transaction: mockLXOrder,
         gasFee: mockGasFeeResult,
         cancelRequest: mockCancelRequest,
       })
@@ -204,13 +204,13 @@ describe('CancellationGasCalculationService', () => {
       })
     })
 
-    it('returns gas fee for UniswapX batch cancellation', () => {
+    it('returns gas fee for LX batch cancellation', () => {
       const result = calculateCancellationGasFee({
-        type: CancellationType.UniswapX,
-        transaction: mockUniswapXOrder,
+        type: CancellationType.LX,
+        transaction: mockLXOrder,
         gasFee: mockGasFeeResult,
         cancelRequest: mockCancelRequest,
-        orders: [mockUniswapXOrder, mockUniswapXOrder],
+        orders: [mockLXOrder, mockLXOrder],
       })
 
       expect(result).toEqual({

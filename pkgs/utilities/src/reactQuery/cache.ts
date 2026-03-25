@@ -15,7 +15,7 @@ export enum ReactQueryCacheKey {
   CameraPermission = 'CameraPermission',
   CancelPlanStepRequest = 'CancelPlanStepRequest',
   CancelTransactionRequest = 'CancelTransactionRequest',
-  CancelUniswapXTransactionRequest = 'CancelUniswapXTransactionRequest',
+  CancelLXTransactionRequest = 'CancelLXTransactionRequest',
   Compliance = 'Compliance',
   CreateTransferTransaction = 'CreateTransferTransaction',
   DataApiService = 'DataApiService',

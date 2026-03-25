@@ -1,11 +1,11 @@
-import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
+import { FormattedLXGasFeeInfo } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
-import { UniswapX } from 'ui/src/components/icons/UniswapX'
-import { UniswapXText } from 'ui/src/components/text/UniswapXText'
+import { LX } from 'ui/src/components/icons/LX'
+import { LXText } from 'ui/src/components/text/LXText'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
 import { TransactionDetailsTooltip as Tooltip } from 'uniswap/src/components/TransactionDetailsTooltip'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 
@@ -19,8 +19,8 @@ export function NetworkCostTooltip({
   const { t } = useTranslation()
 
   const learnMoreUrl = includesDelegation
-    ? uniswapUrls.helpArticleUrls.smartWalletDelegation
-    : uniswapUrls.helpArticleUrls.networkFeeInfo
+    ? luxUrls.helpArticleUrls.smartWalletDelegation
+    : luxUrls.helpArticleUrls.networkFeeInfo
   const text = includesDelegation
     ? t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })
     : t('transaction.networkCost.description')
@@ -35,10 +35,10 @@ export function NetworkCostTooltip({
   )
 }
 
-export function NetworkCostTooltipUniswapX({
+export function NetworkCostTooltipLX({
   uniswapXGasFeeInfo,
 }: {
-  uniswapXGasFeeInfo: FormattedUniswapXGasFeeInfo
+  uniswapXGasFeeInfo: FormattedLXGasFeeInfo
 }): JSX.Element {
   const { t } = useTranslation()
   const { approvalFeeFormatted, swapFeeFormatted, inputTokenSymbol } = uniswapXGasFeeInfo
@@ -47,7 +47,7 @@ export function NetworkCostTooltipUniswapX({
     <Tooltip.Outer>
       <Tooltip.Header
         title={{ title: t('swap.warning.networkFee.message.uniswapX.title'), uniswapX: true }}
-        Icon={UniswapX}
+        Icon={LX}
       />
       <Tooltip.Content>
         <Tooltip.Row>
@@ -56,7 +56,7 @@ export function NetworkCostTooltipUniswapX({
             <Text color="$neutral2" textDecorationLine="line-through" variant="body4">
               {swapFeeFormatted}
             </Text>
-            <UniswapXText variant="body4">{t('common.free')}</UniswapXText>
+            <LXText variant="body4">{t('common.free')}</LXText>
           </Flex>
         </Tooltip.Row>
         {approvalFeeFormatted && (
@@ -69,7 +69,7 @@ export function NetworkCostTooltipUniswapX({
         )}
       </Tooltip.Content>
       <Tooltip.Separator />
-      <Tooltip.Description learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
+      <Tooltip.Description learnMoreUrl={luxUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
     </Tooltip.Outer>
   )
 }

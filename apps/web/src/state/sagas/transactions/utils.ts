@@ -45,7 +45,7 @@ import type {
   ClassicTrade,
   DEXTrade,
 } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
-import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isLX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import type {
   ApproveTransactionInfo,
   BridgeTransactionInfo,
@@ -551,7 +551,7 @@ export function getSwapTransactionInfo(params: {
   swapStartTimestamp?: number
   planAnalytics?: PlanSwapTransactionInfoFields
   transactedUSDValue?: number
-}): SwapInfo & { isUniswapXOrder: true }
+}): SwapInfo & { isLXOrder: true }
 export function getSwapTransactionInfo({
   trade,
   swapStartTimestamp,
@@ -585,7 +585,7 @@ export function getSwapTransactionInfo({
   return {
     type: TransactionType.Swap,
     ...commonAttributes,
-    isUniswapXOrder: isUniswapX(trade),
+    isLXOrder: isLX(trade),
     ...(trade.tradeType === TradeType.EXACT_INPUT
       ? {
           tradeType: TradeType.EXACT_INPUT,

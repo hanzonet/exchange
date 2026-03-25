@@ -2,7 +2,7 @@ import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataA
 import { WETH9 } from '@luxamm/sdk-core'
 import { ZERO_ADDRESS } from 'uniswap/src/constants/misc'
 import { DAI, USDC_MAINNET } from 'uniswap/src/constants/tokens'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { luxUrls } from 'uniswap/src/constants/urls'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
@@ -16,7 +16,7 @@ const test = getTest({ withAnvil: true })
 const UNISWAP_X_ORDERS_ENDPOINT = `https://interface.gateway.uniswap.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
 
 test.describe(
-  'UniswapX',
+  'LX',
   {
     tag: '@team:apps-swap',
     annotation: [
@@ -30,17 +30,17 @@ test.describe(
         address: assume0xAddress(WETH9[UniverseChainId.Mainnet].address),
         balance: parseEther('1000000'),
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.quote}`, async (route, request) => {
+      await page.route(`${luxUrls.tradingApiUrl}${luxUrls.tradingApiPaths.quote}`, async (route, request) => {
         const postData = await request.postData()
         const data = JSON.parse(postData ?? '{}')
         if (data.tokenOut === USDC_MAINNET.address) {
           await route.continue()
         } else {
-          await route.fulfill({ path: Mocks.UniswapX.quote })
+          await route.fulfill({ path: Mocks.LX.quote })
         }
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.order}`, async (route) => {
-        await route.fulfill({ path: Mocks.UniswapX.openOrder })
+      await page.route(`${luxUrls.tradingApiUrl}${luxUrls.tradingApiPaths.order}`, async (route) => {
+        await route.fulfill({ path: Mocks.LX.openOrder })
       })
       await page.goto(`/swap?inputCurrency=${WETH9[UniverseChainId.Mainnet].address}&outputCurrency=${DAI.address}`)
 
@@ -52,7 +52,7 @@ test.describe(
     test('can swap using uniswapX with WETH as input', async ({ page }) => {
       await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
         await route.fulfill({
-          path: Mocks.UniswapX.filledOrders,
+          path: Mocks.LX.filledOrders,
         })
       })
 
@@ -60,15 +60,15 @@ test.describe(
       await expect(page.getByRole('button', { name: 'Swapping 1.00 WETH for 3,665.13 DAI' })).toBeVisible()
     })
 
-    test('renders error view if uniswapx order expires', async ({ page }) => {
+    test('renders error view if lx order expires', async ({ page }) => {
       await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
-        await route.fulfill({ path: Mocks.UniswapX.expiredOrders })
+        await route.fulfill({ path: Mocks.LX.expiredOrders })
       })
 
       await expect(page.getByTestId(TestID.ActivityPopup).getByText('Swap expired')).toBeVisible()
     })
 
-    test('cancels a pending uniswapx order', async ({ page }) => {
+    test('cancels a pending lx order', async ({ page }) => {
       await page.getByTestId(TestID.Web3StatusConnected).click()
       await page.getByText('Swapping').click()
       await page.getByText('Cancel').click()
@@ -77,12 +77,12 @@ test.describe(
       await expect(page.getByText('Cancellation successful')).toBeVisible()
     })
 
-    test('deduplicates remote vs local uniswapx orders', async ({ page, dataApi }) => {
+    test('deduplicates remote vs local lx orders', async ({ page, dataApi }) => {
       await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
-        await route.fulfill({ path: Mocks.UniswapX.filledOrders })
+        await route.fulfill({ path: Mocks.LX.filledOrders })
       })
 
-      await dataApi.intercept(listTransactions, Mocks.DataApiService.list_transactions_uniswapx)
+      await dataApi.intercept(listTransactions, Mocks.DataApiService.list_transactions_lx)
       await page.getByTestId(TestID.Web3StatusConnected).click()
       const drawer = page.getByTestId(TestID.AccountDrawer)
       await expect(drawer.getByText('Swapping')).not.toBeVisible()

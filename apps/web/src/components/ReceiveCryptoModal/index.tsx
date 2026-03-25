@@ -4,7 +4,7 @@ import { AnimateTransition } from '@luxfi/ui/src'
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
 import { ReceiveQRCode } from '@luxexchange/lx/src/components/ReceiveQRCode/ReceiveQRCode'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { FORServiceProvider } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -82,7 +82,7 @@ export function ReceiveCryptoModal() {
               ? goBack
               : undefined
           }
-          link={uniswapUrls.helpArticleUrls.transferCryptoHelp}
+          link={luxUrls.helpArticleUrls.transferCryptoHelp}
           closeModal={onClose}
         />
         <AnimateTransition currentIndex={currentIndex} animationType="forward">

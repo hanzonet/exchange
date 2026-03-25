@@ -11,7 +11,7 @@ import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import type { FORTransaction } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
-import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isLX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { hasTradeType } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
 import type {
   ApproveTransactionInfo,
@@ -69,17 +69,17 @@ type FormatNumberFunctionType = ReturnType<typeof useLocalizationContext>['forma
 type FormatFiatPriceFunctionType = ReturnType<typeof useLocalizationContext>['convertFiatAmountFormatted']
 
 // Narrowing helper for when we actually need DEX-specific fields
-function isUniswapXDetails(
+function isLXDetails(
   details: InterfaceTransactionDetails,
 ): details is DEXOrderDetails<InterfaceBaseTransactionDetails> {
-  return 'routing' in details && isUniswapX(details)
+  return 'routing' in details && isLX(details)
 }
 
 /**
  * Checks if a transaction is a DEX order by examining both the routing field (new approach)
- * and the isUniswapXOrder flag (legacy approach for backward compatibility)
+ * and the isLXOrder flag (legacy approach for backward compatibility)
  */
-function isUniswapXActivity(details: InterfaceTransactionDetails): boolean {
+function isLXActivity(details: InterfaceTransactionDetails): boolean {
   const { typeInfo } = details
 
   // Must be a swap with trade type info
@@ -88,13 +88,13 @@ function isUniswapXActivity(details: InterfaceTransactionDetails): boolean {
   }
 
   // Check new routing-based approach
-  if (isUniswapXDetails(details)) {
+  if (isLXDetails(details)) {
     return true
   }
 
   // Fall back to legacy flag for backward compatibility with existing transactions
   // stored before migration to routing-based structure (see WALL-7143)
-  return 'isUniswapXOrder' in typeInfo && typeInfo.isUniswapXOrder === true
+  return 'isLXOrder' in typeInfo && typeInfo.isLXOrder === true
 }
 
 function buildCurrencyDescriptor({
@@ -167,7 +167,7 @@ async function parseSwap({
       isSwap: true,
     }),
     currencies: [tokenIn, tokenOut],
-    prefixIconSrc: swap.isUniswapXOrder ? DEXBolt : undefined,
+    prefixIconSrc: swap.isLXOrder ? DEXBolt : undefined,
   }
 }
 
@@ -197,7 +197,7 @@ async function parseConfirmedSwap({
       isSwap: true,
     }),
     currencies: [tokenIn, tokenOut],
-    prefixIconSrc: swap.isUniswapXOrder ? DEXBolt : undefined,
+    prefixIconSrc: swap.isLXOrder ? DEXBolt : undefined,
   }
 }
 
@@ -562,7 +562,7 @@ async function parseDEXOrderLocal({
   formatNumber: FormatNumberFunctionType
 }): Promise<Partial<Activity>> {
   const { typeInfo } = details
-  const dexOrderDetails = isUniswapXDetails(details) ? details : undefined
+  const dexOrderDetails = isLXDetails(details) ? details : undefined
   const isLimitOrder = dexOrderDetails?.routing === TradingApi.Routing.DUTCH_LIMIT
 
   // Get the appropriate order text table
@@ -660,7 +660,7 @@ export async function transactionToActivity({
   const { chainId } = details
   try {
     // For swaps that might be DEX, we'll set the title later
-    const shouldDeferTitle = details.typeInfo.type === TransactionType.Swap && isUniswapXActivity(details)
+    const shouldDeferTitle = details.typeInfo.type === TransactionType.Swap && isLXActivity(details)
 
     const defaultFields: Activity = {
       id: details.id,
@@ -677,7 +677,7 @@ export async function transactionToActivity({
     let additionalFields: Partial<Activity> = {}
     const info = details.typeInfo
     if (info.type === TransactionType.Swap) {
-      if (isUniswapXActivity(details)) {
+      if (isLXActivity(details)) {
         additionalFields = await parseDEXOrderLocal({
           details,
           formatNumber,
@@ -775,9 +775,9 @@ export async function transactionToActivity({
     const activity = { ...defaultFields, ...additionalFields }
 
     // Skip the canceled transaction override for DEX orders since they handle it specially
-    const isUniswapX = details.typeInfo.type === TransactionType.Swap && isUniswapXActivity(details)
+    const isLX = details.typeInfo.type === TransactionType.Swap && isLXActivity(details)
     const CancelledTransactionTitleTable = getCancelledTransactionTitleTable()
-    if (details.status === TransactionStatus.Canceled && !isUniswapX) {
+    if (details.status === TransactionStatus.Canceled && !isLX) {
       activity.title = CancelledTransactionTitleTable[details.typeInfo.type]
       activity.status = TransactionStatus.Success
     }

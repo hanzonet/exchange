@@ -14,29 +14,29 @@ import {
 } from 'uniswap/src/features/gas/utils/cancel'
 import {
   extractCancellationData,
-  getCancelMultipleUniswapXOrdersTransaction,
+  getCancelMultipleLXOrdersTransaction,
 } from 'uniswap/src/features/transactions/cancel/cancelMultipleOrders'
 import { getCancelOrderTxRequest } from 'uniswap/src/features/transactions/cancel/getCancelOrderTxRequest'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionDetails,
   TransactionDetails,
-  UniswapXOrderDetails,
+  LXOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isPlanTransactionDetails } from 'uniswap/src/features/transactions/types/utils'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 /**
  * Hook to calculate cancellation gas fees
- * Supports both single transaction cancellation and batch UniswapX order cancellation
+ * Supports both single transaction cancellation and batch LX order cancellation
  *
  * @param transaction - The transaction to cancel
- * @param orders - Optional array of UniswapX orders for batch cancellation
+ * @param orders - Optional array of LX orders for batch cancellation
  * @returns Cancellation gas fee details or undefined
  */
 export function useCancellationGasFeeInfo(
   transaction: TransactionDetails,
-  orders?: UniswapXOrderDetails[],
+  orders?: LXOrderDetails[],
 ): CancellationGasFeeDetails | PlanCancellationGasFeeDetails | undefined {
   const isPlan = isPlanTransactionDetails(transaction)
   const planCancellation = usePlanCancellationGasFeeInfo(isPlan ? (transaction as PlanTransactionDetails) : undefined)
@@ -51,20 +51,20 @@ export function useCancellationGasFeeInfo(
     return createClassicCancelRequest(transaction)
   }, [transaction])
 
-  // Get UniswapX cancel request (single or batch)
-  const uniswapXCancelRequest = useUniswapXCancelRequest({
+  // Get LX cancel request (single or batch)
+  const uniswapXCancelRequest = useLXCancelRequest({
     transaction,
     orders,
     cancellationType,
   })
 
   // Calculate gas fees based on type
-  const isUniswapXCancellation = cancellationType === CancellationType.UniswapX
-  const cancelRequest = isUniswapXCancellation ? uniswapXCancelRequest : classicCancelRequest
+  const isLXCancellation = cancellationType === CancellationType.LX
+  const cancelRequest = isLXCancellation ? uniswapXCancelRequest : classicCancelRequest
 
   const gasFee = useTransactionGasFee({
     tx: cancelRequest,
-    skip: isUniswapXCancellation && !uniswapXCancelRequest,
+    skip: isLXCancellation && !uniswapXCancelRequest,
   })
 
   return useMemo(() => {
@@ -84,20 +84,20 @@ export function useCancellationGasFeeInfo(
 }
 
 /**
- * Internal hook to get UniswapX cancellation request
+ * Internal hook to get LX cancellation request
  * Handles both single transaction and batch order cancellation
  */
-function useUniswapXCancelRequest({
+function useLXCancelRequest({
   transaction,
   orders,
   cancellationType,
 }: {
   transaction: TransactionDetails
-  orders: UniswapXOrderDetails[] | undefined
+  orders: LXOrderDetails[] | undefined
   cancellationType: CancellationType
 }): providers.TransactionRequest | undefined {
   const cancelRequestFetcher = useCallback(async (): Promise<providers.TransactionRequest | null> => {
-    if (cancellationType !== CancellationType.UniswapX) {
+    if (cancellationType !== CancellationType.LX) {
       return null
     }
     if (orders && orders.length > 0) {
@@ -107,7 +107,7 @@ function useUniswapXCancelRequest({
       }
 
       try {
-        const cancelRequest = await getCancelMultipleUniswapXOrdersTransaction({
+        const cancelRequest = await getCancelMultipleLXOrdersTransaction({
           orders: ordersWithEncodedData.map((order) => ({
             encodedOrder: order.encodedOrder,
             routing: order.routing,
@@ -121,9 +121,9 @@ function useUniswapXCancelRequest({
       }
     }
 
-    if (isUniswapX(transaction)) {
+    if (isLX(transaction)) {
       try {
-        const cancelRequest = await getCancelOrderTxRequest(transaction as UniswapXOrderDetails)
+        const cancelRequest = await getCancelOrderTxRequest(transaction as LXOrderDetails)
         return cancelRequest
       } catch {
         return null
@@ -139,15 +139,15 @@ function useUniswapXCancelRequest({
         .map((o) => o.orderHash)
         .filter(Boolean)
         .sort()
-      return [ReactQueryCacheKey.CancelUniswapXTransactionRequest, 'batch', ...orderHashes]
+      return [ReactQueryCacheKey.CancelLXTransactionRequest, 'batch', ...orderHashes]
     }
-    return [ReactQueryCacheKey.CancelUniswapXTransactionRequest, transaction.id]
+    return [ReactQueryCacheKey.CancelLXTransactionRequest, transaction.id]
   }, [orders, transaction.id])
 
   const { data: cancelRequest } = useQuery({
     queryKey,
     queryFn: cancelRequestFetcher,
-    enabled: cancellationType === CancellationType.UniswapX,
+    enabled: cancellationType === CancellationType.LX,
   })
 
   return cancelRequest ?? undefined

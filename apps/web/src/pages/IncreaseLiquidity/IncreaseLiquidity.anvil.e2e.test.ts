@@ -2,7 +2,7 @@ import { getPosition } from '@luxamm/client-data-api/dist/data/v1/api-DataApiSer
 import { LiquidityService } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
 import { PERMIT2_ADDRESS } from '@luxamm/permit2-sdk'
 import { USDT } from '@luxexchange/lx/src/constants/tokens'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { ONE_MILLION_USDT } from '~/playwright/anvil/utils'
 import { expect, getTest } from '~/playwright/fixtures'
@@ -40,7 +40,7 @@ test.describe(
       })
       await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
       await page.route(
-        `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+        `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
         async (route) => {
           await route.fulfill({ path: Mocks.Positions.get_v4_position })
         },
@@ -65,7 +65,7 @@ test.describe(
         })
         await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
         await page.route(
-          `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+          `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
           async (route) => {
             await route.fulfill({ path: Mocks.Positions.get_v4_position })
           },
@@ -89,7 +89,7 @@ test.describe(
         })
         await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
         await page.route(
-          `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+          `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
           async (route) => {
             await route.fulfill({ path: Mocks.Positions.get_v3_position })
           },
@@ -113,7 +113,7 @@ test.describe(
         })
         await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
         await page.route(
-          `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+          `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
           async (route) => {
             await route.fulfill({ path: Mocks.Positions.get_v4_position })
           },
@@ -143,7 +143,7 @@ test.describe(
       test('should gracefully handle errors during review', async ({ page, anvil }) => {
         await anvil.setErc20Balance({ address: assume0xAddress(USDT.address), balance: ONE_MILLION_USDT })
         await page.route(
-          `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+          `${luxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
           async (route) => {
             await route.fulfill({ path: Mocks.Positions.get_v4_position })
           },

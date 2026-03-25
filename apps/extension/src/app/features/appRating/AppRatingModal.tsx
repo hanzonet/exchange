@@ -5,7 +5,7 @@ import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { Feedback, LikeSquare, MessageText, X } from '@luxfi/ui/src/components/icons'
 import { IconSizeTokens, zIndexes } from '@luxfi/ui/src/theme'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { appRatingPromptedMsSelector, appRatingProvidedMsSelector } from '@luxfi/wallet/src/features/wallet/selectors'
@@ -66,7 +66,7 @@ export default function AppRatingModal({ onClose }: AppRatingModalProps): JSX.El
       iconSize: '$icon.18' as IconSizeTokens,
       onSecondaryButtonPress: onRemindLater,
       onPrimaryButtonPress: (): void => {
-        window.open(uniswapUrls.walletFeedbackForm)
+        window.open(luxUrls.walletFeedbackForm)
         dispatch(setAppRating({ feedbackProvided: true }))
         sendAnalyticsEvent(WalletEventName.AppRating, {
           type: 'feedback-form',

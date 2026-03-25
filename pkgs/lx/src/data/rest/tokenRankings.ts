@@ -9,7 +9,7 @@ import {
 } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
 import { tokenRankings } from '@luxamm/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
 import { parseProtectionInfo, parseSafetyLevel } from '@luxexchange/api'
-import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
+import { luxGetTransport } from 'uniswap/src/data/rest/base'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { buildCurrency, buildCurrencyInfo } from 'uniswap/src/features/dataApi/utils/buildCurrency'
@@ -26,7 +26,7 @@ export function useTokenRankingsQuery(
   input?: PartialMessage<TokenRankingsRequest>,
   enabled = true,
 ): UseQueryResult<TokenRankingsResponse, ConnectError> {
-  return useQuery(tokenRankings, input, { transport: uniswapGetTransport, enabled })
+  return useQuery(tokenRankings, input, { transport: luxGetTransport, enabled })
 }
 
 export function tokenRankingsStatToCurrencyInfo(tokenRankingsStat: TokenRankingsStat): CurrencyInfo | null {

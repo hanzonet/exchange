@@ -5,7 +5,7 @@ import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFille
 import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
@@ -118,7 +118,7 @@ export function WithdrawModal({
   const isSubmitting = submissionStatus !== 'idle'
   const isWaitingForWallet = submissionStatus === 'waitingForWallet'
 
-  const helpLink = uniswapUrls.helpArticleUrls.toucanWithdrawHelp
+  const helpLink = luxUrls.helpArticleUrls.toucanWithdrawHelp
 
   const modalTitle = t('toucan.withdraw.title')
 

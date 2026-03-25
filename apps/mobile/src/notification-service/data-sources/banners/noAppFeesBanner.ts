@@ -13,7 +13,7 @@ import {
   NO_LUX_INTERFACE_FEES_BANNER_DARK,
   NO_LUX_INTERFACE_FEES_BANNER_LIGHT,
 } from '@luxfi/ui/src/assets'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import i18n from '@luxexchange/lx/src/i18n'
 
 /**
@@ -47,7 +47,7 @@ function createNoAppFeesBanner(isDarkMode: boolean): InAppNotification {
         link: isDarkMode ? NO_LUX_INTERFACE_FEES_BANNER_DARK : NO_LUX_INTERFACE_FEES_BANNER_LIGHT,
         backgroundOnClick: new OnClick({
           onClick: [OnClickAction.EXTERNAL_LINK, OnClickAction.DISMISS, OnClickAction.ACK],
-          onClickLink: uniswapUrls.helpArticleUrls.swapFeeInfo,
+          onClickLink: luxUrls.helpArticleUrls.swapFeeInfo,
         }),
       }),
       onDismissClick: new OnClick({

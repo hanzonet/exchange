@@ -1,7 +1,7 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ethers } from 'ethers'
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react'
-import { UniswapProvider } from 'uniswap/src/contexts/UniswapContext'
+import { LuxProvider } from 'uniswap/src/contexts/LuxContext'
 import { getDelegationService } from 'uniswap/src/domains/services'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -50,23 +50,23 @@ function useWalletSigner(): NativeSigner | undefined {
     signerManager
       .getSignerForAccount(account)
       .then(setSigner)
-      .catch((error) => logger.error(error, { tags: { file: 'WalletUniswapContext', function: 'useWalletSigner' } }))
+      .catch((error) => logger.error(error, { tags: { file: 'WalletLuxContext', function: 'useWalletSigner' } }))
   }, [account, signerManager])
 
   return signer
 }
-export function WalletUniswapProvider({ children }: PropsWithChildren): JSX.Element {
+export function WalletLuxProvider({ children }: PropsWithChildren): JSX.Element {
   return (
     <MismatchContextWrapper>
       <WalletDelegationProvider>
-        <WalletUniswapProviderInner>{children}</WalletUniswapProviderInner>
+        <WalletLuxProviderInner>{children}</WalletLuxProviderInner>
       </WalletDelegationProvider>
     </MismatchContextWrapper>
   )
 }
 
 // Abstracts wallet-specific transaction flow objects for usage in cross-platform flows in the `uniswap` package.
-function WalletUniswapProviderInner({ children }: PropsWithChildren): JSX.Element {
+function WalletLuxProviderInner({ children }: PropsWithChildren): JSX.Element {
   const signer = useWalletSigner()
   const {
     navigateToTokenDetails,
@@ -109,7 +109,7 @@ function WalletUniswapProviderInner({ children }: PropsWithChildren): JSX.Elemen
 
   const getHasMismatch = useHasAccountMismatchCallback()
   const isPermitMismatchUxEnabled = useFeatureFlag(FeatureFlags.EnablePermitMismatchUX)
-  const getIsUniswapXSupported = useEvent((innerChainId?: UniverseChainId) => {
+  const getIsLXSupported = useEvent((innerChainId?: UniverseChainId) => {
     if (isPermitMismatchUxEnabled) {
       return !getHasMismatch(innerChainId)
     }
@@ -121,7 +121,7 @@ function WalletUniswapProviderInner({ children }: PropsWithChildren): JSX.Elemen
   const getCanPayGasInAnyToken = useCallback(() => false, [])
 
   return (
-    <UniswapProvider
+    <LuxProvider
       navigateToBuyOrReceiveWithEmptyWallet={navigateToBuyOrReceiveWithEmptyWallet}
       navigateToFiatOnRamp={navigateToFiatOnRamp}
       navigateToSwapFlow={navigateToSwapFromCurrencyIds}
@@ -136,7 +136,7 @@ function WalletUniswapProviderInner({ children }: PropsWithChildren): JSX.Elemen
       signer={signer}
       useProviderHook={useWalletProvider}
       useWalletDisplayName={useDisplayName}
-      getIsUniswapXSupported={getIsUniswapXSupported}
+      getIsLXSupported={getIsLXSupported}
       getCanSignPermits={getCanSignPermits}
       getSwapDelegationInfo={getSwapDelegationInfo}
       useAccountsStoreContextHook={useAccountsStoreContext}
@@ -144,7 +144,7 @@ function WalletUniswapProviderInner({ children }: PropsWithChildren): JSX.Elemen
       onSwapChainsChanged={showSwapNetworkNotification}
     >
       {children}
-    </UniswapProvider>
+    </LuxProvider>
   )
 }
 

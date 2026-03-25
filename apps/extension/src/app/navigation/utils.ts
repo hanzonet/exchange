@@ -1,7 +1,7 @@
 import { To, useLocation } from 'react-router'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
 import { getTokenUrl } from '@luxexchange/lx/src/utils/linking'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -137,7 +137,7 @@ export async function focusOrCreateTokensExploreTab({ currencyId }: { currencyId
     url,
     // We want to reuse the active tab only if it's already in any other TDP.
     // eslint-disable-next-line security/detect-non-literal-regexp
-    reuseActiveTabIfItMatches: new RegExp(`^${escapeRegExp(uniswapUrls.webInterfaceTokensUrl)}`),
+    reuseActiveTabIfItMatches: new RegExp(`^${escapeRegExp(luxUrls.webInterfaceTokensUrl)}`),
   })
 }
 

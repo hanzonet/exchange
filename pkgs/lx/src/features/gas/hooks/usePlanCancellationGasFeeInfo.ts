@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { CancellationGasFeeDetails, useTransactionGasFee } from 'uniswap/src/features/gas/hooks'
 import {
   calculateClassicCancellationGas,
-  calculateUniswapXCancellationGas,
+  calculateLXCancellationGas,
   createClassicCancelRequest,
 } from 'uniswap/src/features/gas/utils/cancel'
 import { buildSingleCancellation } from 'uniswap/src/features/transactions/cancel/cancelOrderFactory'
@@ -20,7 +20,7 @@ export interface PlanCancellationGasFeeDetails extends CancellationGasFeeDetails
 
 /**
  * Hook to calculate gas fees for cancelling a plan step.
- * Handles both classic (nonce replacement) and UniswapX (permit2 invalidation) steps.
+ * Handles both classic (nonce replacement) and LX (permit2 invalidation) steps.
  *
  * @param transaction - The plan transaction to potentially cancel
  * @returns Plan cancellation gas fee details including the cancelable step info
@@ -37,14 +37,14 @@ export function usePlanCancellationGasFeeInfo(
     return findCancelableStepInPlan(typeInfo)
   }, [transaction])
 
-  // For UniswapX steps, fetch the encoded order and build cancellation request.
+  // For LX steps, fetch the encoded order and build cancellation request.
   // Plan steps are TransactionDetails (not TradingApi.PlanStep), so orderId comes from step.hash.
   const { data: uniswapXCancelRequest } = useQuery({
     queryKey: [ReactQueryCacheKey.CancelPlanStepRequest, cancelableStepInfo?.orderId],
     queryFn: async (): Promise<providers.TransactionRequest | null> => {
       if (
         !cancelableStepInfo ||
-        cancelableStepInfo.cancellationType !== 'uniswapx' ||
+        cancelableStepInfo.cancellationType !== 'lx' ||
         !cancelableStepInfo.orderId ||
         !cancelableStepInfo.routing ||
         !transaction
@@ -54,7 +54,7 @@ export function usePlanCancellationGasFeeInfo(
 
       try {
         // Fetch encoded order from orders API
-        // The orderId comes from step.hash for UniswapX plan steps
+        // The orderId comes from step.hash for LX plan steps
         const ordersResponse = await getOrders([cancelableStepInfo.orderId])
         const order = ordersResponse.orders[0]
 
@@ -85,7 +85,7 @@ export function usePlanCancellationGasFeeInfo(
         return null
       }
     },
-    enabled: cancelableStepInfo?.cancellationType === 'uniswapx' && !!cancelableStepInfo.orderId,
+    enabled: cancelableStepInfo?.cancellationType === 'lx' && !!cancelableStepInfo.orderId,
   })
 
   // For classic/bridge/wrap steps, create the cancel request
@@ -100,7 +100,7 @@ export function usePlanCancellationGasFeeInfo(
 
   // Determine which cancel request to use
   const cancelRequest =
-    cancelableStepInfo?.cancellationType === 'uniswapx' ? uniswapXCancelRequest : classicCancelRequest
+    cancelableStepInfo?.cancellationType === 'lx' ? uniswapXCancelRequest : classicCancelRequest
 
   // Get gas fee for the cancel request
   const gasFee = useTransactionGasFee({
@@ -127,8 +127,8 @@ export function usePlanCancellationGasFeeInfo(
       }
     }
 
-    // For UniswapX, gas fee is directly from the cancel request estimation
-    const cancellationDetails = calculateUniswapXCancellationGas(cancelRequest, gasFee)
+    // For LX, gas fee is directly from the cancel request estimation
+    const cancellationDetails = calculateLXCancellationGas(cancelRequest, gasFee)
 
     if (!cancellationDetails) {
       return undefined

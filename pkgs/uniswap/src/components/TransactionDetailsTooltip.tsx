@@ -8,7 +8,7 @@ import {
   GeneratedIcon,
   IconProps,
   Text,
-  UniswapXText,
+  LXText,
 } from 'ui/src'
 
 type OuterProps = {
@@ -45,7 +45,7 @@ const Header = ({
       {logo}
       {Icon && <Icon size="$icon.16" color={iconColor} />}
       {title.uniswapX ? (
-        <UniswapXText variant="body3">{title.title}</UniswapXText>
+        <LXText variant="body3">{title.title}</LXText>
       ) : (
         <Text variant="body3" color="$neutral1">
           {title.title}

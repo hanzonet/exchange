@@ -8,7 +8,7 @@ import {
   UnsignedV3DutchOrderInfo,
   V2DutchOrderTrade,
   V3DutchOrderTrade,
-} from '@luxamm/luxswap-sdk'
+} from '@luxamm/sdk'
 import { Route as V2RouteSDK } from '@luxamm/v2-sdk'
 import { Route as V3RouteSDK } from '@luxamm/v3-sdk'
 import { Route as V4RouteSDK } from '@luxamm/v4-sdk'
@@ -104,8 +104,8 @@ function getQuoteOutputAmountUserWillReceive<T extends QuoteResponseWithAggregat
     : CurrencyAmount.fromRawAmount(outputCurrency, '0')
 }
 
-export type UniswapXTrade = UniswapXV2Trade | UniswapXV3Trade | PriorityOrderTrade
-export class UniswapXV2Trade extends V2DutchOrderTrade<Currency, Currency, TradeType> {
+export type LXTrade = LXV2Trade | LXV3Trade | PriorityOrderTrade
+export class LXV2Trade extends V2DutchOrderTrade<Currency, Currency, TradeType> {
   readonly routing = TradingApi.Routing.DUTCH_V2
   readonly quote: DutchQuoteResponse
   readonly slippageTolerance: number
@@ -174,7 +174,7 @@ export class UniswapXV2Trade extends V2DutchOrderTrade<Currency, Currency, Trade
   }
 }
 
-export class UniswapXV3Trade extends V3DutchOrderTrade<Currency, Currency, TradeType> {
+export class LXV3Trade extends V3DutchOrderTrade<Currency, Currency, TradeType> {
   readonly routing = TradingApi.Routing.DUTCH_V3
   readonly quote: DutchV3QuoteResponse
   readonly slippageTolerance: number
@@ -420,7 +420,7 @@ export type Trade<
   TTradeType extends TradeType = TradeType,
 > =
   | ClassicTrade<TInput, TOutput, TTradeType>
-  | UniswapXTrade
+  | LXTrade
   | BridgeTrade
   | WrapTrade
   | UnwrapTrade

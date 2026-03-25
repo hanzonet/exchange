@@ -1,14 +1,14 @@
 import { v4 as uuid } from 'uuid'
-import UniswapXRouterLabel from '~/components/RouterLabel/UniswapXRouterLabel'
+import LXRouterLabel from '~/components/RouterLabel/LXRouterLabel'
 import { mocked } from '~/test-utils/mocked'
 import { render, screen } from '~/test-utils/render'
 
 vi.mock('uuid')
 
-describe('UniswapXRouterLabel', () => {
+describe('LXRouterLabel', () => {
   it('matches snapshot', () => {
     mocked(uuid).mockReturnValue('test-id')
-    const { asFragment } = render(<UniswapXRouterLabel>test router label</UniswapXRouterLabel>)
+    const { asFragment } = render(<LXRouterLabel>test router label</LXRouterLabel>)
     expect(screen.getByText('test router label')).toBeInTheDocument()
     expect(asFragment()).toMatchSnapshot()
   })

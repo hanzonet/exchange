@@ -22,7 +22,7 @@ describe('GasInfoRow', () => {
     ...overrides,
   })
 
-  describe('normal gas fees (non-UniswapX)', () => {
+  describe('normal gas fees (non-LX)', () => {
     it('should render gas info with formatted price', () => {
       const gasInfo = createGasInfo()
       const { getByTestId, getByText } = render(<GasInfoRow gasInfo={gasInfo} />)
@@ -54,8 +54,8 @@ describe('GasInfoRow', () => {
     })
   })
 
-  describe('UniswapX fees', () => {
-    it('should render UniswapXFee component when uniswapXGasFeeInfo is present', () => {
+  describe('LX fees', () => {
+    it('should render LXFee component when uniswapXGasFeeInfo is present', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         uniswapXGasFeeInfo: {
@@ -72,7 +72,7 @@ describe('GasInfoRow', () => {
       expect(queryAllByText('$2.50').length).toBeGreaterThan(0)
     })
 
-    it('should render UniswapXFee without approval fee', () => {
+    it('should render LXFee without approval fee', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         uniswapXGasFeeInfo: {
@@ -88,7 +88,7 @@ describe('GasInfoRow', () => {
       expect(queryAllByText('$1.25').length).toBeGreaterThan(0)
     })
 
-    it('should render UniswapXFee with approval fee', () => {
+    it('should render LXFee with approval fee', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         uniswapXGasFeeInfo: {
@@ -105,7 +105,7 @@ describe('GasInfoRow', () => {
       expect(queryAllByText('Free').length).toBeGreaterThan(0)
     })
 
-    it('should display UniswapX savings', () => {
+    it('should display LX savings', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
         uniswapXGasFeeInfo: {

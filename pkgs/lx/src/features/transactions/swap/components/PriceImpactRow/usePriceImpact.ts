@@ -5,7 +5,7 @@ import { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/de
 import { formatPriceImpact } from 'uniswap/src/features/transactions/swap/utils/formatPriceImpact'
 import { getPriceImpact } from 'uniswap/src/features/transactions/swap/utils/getPriceImpact'
 
-/** Returns the price impact of the current trade, including UniswapX trades. UniswapX trades do not have typical pool-based price impact; we use a frontend-calculated metric. */
+/** Returns the price impact of the current trade, including LX trades. LX trades do not have typical pool-based price impact; we use a frontend-calculated metric. */
 export function usePriceImpact({ derivedSwapInfo }: { derivedSwapInfo: DerivedSwapInfo }): {
   priceImpact: Percent | undefined
   formattedPriceImpact: string | undefined

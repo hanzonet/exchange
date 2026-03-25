@@ -8,7 +8,7 @@ import {
   ClassicTrade,
   type TokenApprovalInfo,
   type TradeWithStatus,
-  UniswapXV2Trade,
+  LXV2Trade,
 } from 'uniswap/src/features/transactions/swap/types/trade'
 import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
 import { benignSafetyInfo } from 'uniswap/src/test/fixtures'
@@ -116,7 +116,7 @@ export function createMockDerivedSwapInfo({
   }
 }
 
-const createMockUniswapXOrder = (inputToken: string, outputToken: string): TradingApi.DutchOrderInfoV2 => ({
+const createMockLXOrder = (inputToken: string, outputToken: string): TradingApi.DutchOrderInfoV2 => ({
   chainId: 1,
   reactor: '0x00000011F84B9aa48e5f8aA8B9897600006289Be',
   swapper: '0x123',
@@ -135,10 +135,10 @@ const createMockUniswapXOrder = (inputToken: string, outputToken: string): Tradi
   ],
   cosigner: '0x4449Cd34d1eb1FEDCF02A1Be3834FfDe8E6A6180',
 })
-export const createMockUniswapXQuote = (inputToken: string, outputToken: string): TradingApi.DutchQuoteV2 => ({
+export const createMockLXQuote = (inputToken: string, outputToken: string): TradingApi.DutchQuoteV2 => ({
   encodedOrder: '0x000',
   orderId: '0xbbb',
-  orderInfo: createMockUniswapXOrder(inputToken, outputToken),
+  orderInfo: createMockLXOrder(inputToken, outputToken),
   slippageTolerance: 0.5,
   quoteId: '123',
   classicGasUseEstimateUSD: '10',
@@ -236,15 +236,15 @@ export const createMockPermitData = (token: string): TradingApi.NullablePermit =
   },
 })
 
-export const createMockUniswapXTrade = (inputCurrency: Token, outputCurrency: Token): UniswapXV2Trade => {
-  return new UniswapXV2Trade({
+export const createMockLXTrade = (inputCurrency: Token, outputCurrency: Token): LXV2Trade => {
+  return new LXV2Trade({
     currencyIn: inputCurrency,
     currencyOut: outputCurrency,
     tradeType: TradeType.EXACT_INPUT,
     quote: {
       requestId: '1',
       routing: TradingApi.Routing.DUTCH_V2,
-      quote: createMockUniswapXQuote(inputCurrency.address, outputCurrency.address),
+      quote: createMockLXQuote(inputCurrency.address, outputCurrency.address),
       permitData: createMockPermitData(inputCurrency.address),
     },
   })

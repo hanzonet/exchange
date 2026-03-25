@@ -12,7 +12,7 @@ import { useLocalizationContext } from 'uniswap/src/features/language/Localizati
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { CancelableStepInfo } from 'uniswap/src/features/transactions/hooks/useIsCancelable'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLX } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionInfo,
   TransactionDetails,
@@ -44,7 +44,7 @@ export function CancelConfirmationView({
   const { convertFiatAmountFormatted } = useLocalizationContext()
 
   const isPlan = transactionDetails.typeInfo.type === TransactionType.Plan
-  const isUniswapXOrder = isUniswapX(transactionDetails)
+  const isLXOrder = isLX(transactionDetails)
 
   const cancellationGasFeeInfo = useCancellationGasFeeInfo(transactionDetails)
   const { value: gasFeeUSD } = useUSDValueOfGasFee(
@@ -88,27 +88,27 @@ export function CancelConfirmationView({
   }, [authTrigger, onCancelConfirm])
 
   const title = useMemo(() => {
-    if (isUniswapXOrder) {
+    if (isLXOrder) {
       return t('common.cancelOrder')
     }
     return t('transaction.action.cancel.title')
-  }, [isUniswapXOrder, t])
+  }, [isLXOrder, t])
 
   // Determine warning message based on cancellation type
   const warningMessage = useMemo(() => {
     if (!isPlan) {
-      if (isUniswapXOrder) {
+      if (isLXOrder) {
         return t('swap.cancel.cannotExecute', { count: 1 })
       }
       return t('transaction.action.cancel.description')
     }
 
-    if (cancelableStepInfo?.cancellationType === 'uniswapx') {
-      return t('transaction.action.cancel.plan.uniswapx.warning')
+    if (cancelableStepInfo?.cancellationType === 'lx') {
+      return t('transaction.action.cancel.plan.lx.warning')
     }
 
     return t('transaction.action.cancel.plan.warning')
-  }, [isPlan, isUniswapXOrder, cancelableStepInfo, t])
+  }, [isPlan, isLXOrder, cancelableStepInfo, t])
 
   const disableConfirmationButton =
     !cancellationGasFeeInfo?.cancelRequest || transactionDetails.status !== TransactionStatus.Pending

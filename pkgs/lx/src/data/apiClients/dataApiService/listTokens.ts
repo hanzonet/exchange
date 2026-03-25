@@ -4,7 +4,7 @@ import { infiniteQueryOptions } from '@tanstack/react-query'
 import { DataApiService } from '@luxamm/client-data-api/dist/data/v1/api_connect'
 import type { ListTokensRequest, ListTokensResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { createDataApiServiceClient } from '@luxexchange/api'
-import { uniswapGetTransport } from '@luxexchange/lx/src/data/rest/base'
+import { luxGetTransport } from '@luxexchange/lx/src/data/rest/base'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export type ListTokensInput = {
@@ -15,7 +15,7 @@ export type ListTokensInput = {
 type ListTokensQueryKey = readonly [ReactQueryCacheKey.DataApiService, 'listTokens', ListTokensInput['params']]
 
 export const dataApiServiceClient = createDataApiServiceClient({
-  rpcClient: createPromiseClient(DataApiService, uniswapGetTransport),
+  rpcClient: createPromiseClient(DataApiService, luxGetTransport),
 })
 
 export function getListTokensQueryOptions({

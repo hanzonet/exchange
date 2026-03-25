@@ -4,8 +4,8 @@ import { logger } from '@luxfi/utilities/src/logger/logger'
  * Datadog Log Metrics used to create custom metrics in Datadog
  */
 export const DatadogLogMetrics = {
-  UniswapXSwapSubmitted: 'uniswapx_swap_submitted',
-  UniswapXSwapFailed: 'uniswapx_swap_failed',
+  LXSwapSubmitted: 'lx_swap_submitted',
+  LXSwapFailed: 'lx_swap_failed',
   SwapSubmitted: 'swap_submitted',
   PriceQuoteFetch: 'price_quote_fetch',
 } as const
@@ -23,10 +23,10 @@ type CommonLogMetricData = {
  * Type mapping for metric-specific data structures
  */
 export interface DatadogLogMetricData {
-  [DatadogLogMetrics.UniswapXSwapFailed]: CommonLogMetricData & {
+  [DatadogLogMetrics.LXSwapFailed]: CommonLogMetricData & {
     orderHash: string
   }
-  [DatadogLogMetrics.UniswapXSwapSubmitted]: CommonLogMetricData & {
+  [DatadogLogMetrics.LXSwapSubmitted]: CommonLogMetricData & {
     orderHash: string
   }
   [DatadogLogMetrics.SwapSubmitted]: CommonLogMetricData & {
