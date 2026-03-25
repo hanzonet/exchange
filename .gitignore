@@ -35,6 +35,11 @@ yarn-error.log*
 .env
 .env.local
 .env.defaults.local
+.env.production
+apps/web/.env
+
+# built extension artifacts
+apps/extension/dist-firefox/
 
 # turbo
 .turbo
