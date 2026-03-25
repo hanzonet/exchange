@@ -1,5 +1,5 @@
 import { useApolloClient } from '@apollo/client'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import dayjs from 'dayjs'
 import { useEffect, useMemo } from 'react'
 import { View } from 'react-native'

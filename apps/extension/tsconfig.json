@@ -9,13 +9,10 @@
       "path": "../../pkgs/wallet"
     },
     {
-      "path": "../../pkgs/utilities"
+      "path": "../../pkgs/ui"
     },
     {
       "path": "../../pkgs/lx"
-    },
-    {
-      "path": "../../pkgs/ui"
     },
     {
       "path": "../../pkgs/sessions"
@@ -28,6 +25,12 @@
     },
     {
       "path": "../../pkgs/api"
+    },
+    {
+      "path": "../../pkgs/eslint-config"
+    },
+    {
+      "path": "../../pkgs/utilities"
     }
   ],
   "compilerOptions": {

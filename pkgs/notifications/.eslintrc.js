@@ -11,7 +11,7 @@ module.exports = {
           'error',
           {
             allowSameFolder: false,
-            prefix: '@universe/notifications',
+            prefix: '@luxexchange/notifications',
           },
         ],
       },

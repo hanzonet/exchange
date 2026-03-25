@@ -3,7 +3,7 @@
  * Platform-specific implementations override this file.
  */
 
-import type { HashcashWorkerChannel } from '@universe/sessions/src/challenge-solvers/hashcash/worker/types'
+import type { HashcashWorkerChannel } from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 /**

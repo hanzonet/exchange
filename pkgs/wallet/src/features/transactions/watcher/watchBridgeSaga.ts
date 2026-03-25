@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { call, delay, SagaGenerator, select } from 'typed-redux-saga'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { makeSelectTransaction } from 'uniswap/src/features/transactions/selectors'

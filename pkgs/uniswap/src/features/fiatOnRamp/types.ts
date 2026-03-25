@@ -1,7 +1,7 @@
 /**
  * FOR (Fiat On-Ramp) Types
  *
- * This file re-exports protobuf types from @universe/api and defines
+ * This file re-exports protobuf types from @luxexchange/api and defines
  * app-specific types that extend or combine protobuf types with app data.
  */
 

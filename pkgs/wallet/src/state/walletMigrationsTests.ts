@@ -10,7 +10,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable max-params */
 
-import { RankingType } from '@universe/api'
+import { RankingType } from '@luxexchange/api'
 import { BigNumber } from 'ethers'
 import { USDC } from 'uniswap/src/constants/tokens'
 import { AccountType } from 'uniswap/src/features/accounts/types'

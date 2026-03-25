@@ -1,4 +1,4 @@
-import { Experiments, FeatureFlags, PrivateRpcProperties } from '@universe/gating'
+import { Experiments, FeatureFlags, PrivateRpcProperties } from '@luxexchange/gating'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { DEFAULT_FLASHBOTS_ENABLED } from 'uniswap/src/features/providers/FlashbotsCommon'
 import { logger as loggerUtil } from 'utilities/src/logger/logger'

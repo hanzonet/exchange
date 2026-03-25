@@ -1,4 +1,4 @@
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import dayjs from 'dayjs'
 import MockDate from 'mockdate'
 import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'

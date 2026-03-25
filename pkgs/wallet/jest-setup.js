@@ -78,8 +78,8 @@ jest.mock('utilities/src/device/locales', () => {
 })
 
 // Mock getConfig to use native implementation
-jest.mock('@universe/config', () => {
-  const { getConfig } = jest.requireActual('@universe/config/src/getConfig.native')
+jest.mock('@luxexchange/config', () => {
+  const { getConfig } = jest.requireActual('@luxexchange/config/src/getConfig.native')
   return {
     getConfig
   }

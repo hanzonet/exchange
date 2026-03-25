@@ -5,7 +5,7 @@ import {
   getFeatureFlagName,
   getStatsigClient,
   PrivateRpcProperties,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import { SagaIterator } from 'redux-saga'
 import { call, select } from 'typed-redux-saga'
 import { SignerMnemonicAccountMeta } from 'uniswap/src/features/accounts/types'

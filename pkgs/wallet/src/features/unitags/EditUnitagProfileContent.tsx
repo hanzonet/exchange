@@ -1,4 +1,4 @@
-import { ProfileMetadata } from '@universe/api'
+import { ProfileMetadata } from '@luxexchange/api'
 import { type ComponentType, type PropsWithChildren, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'

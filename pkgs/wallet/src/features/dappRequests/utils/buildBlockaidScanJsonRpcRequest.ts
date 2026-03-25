@@ -1,4 +1,4 @@
-import type { BlockaidScanJsonRpcRequest } from '@universe/api'
+import type { BlockaidScanJsonRpcRequest } from '@luxexchange/api'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 
 interface SignatureRequestData {

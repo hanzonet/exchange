@@ -1,5 +1,5 @@
-import { type NotificationTelemetry } from '@universe/notifications/src/notification-telemetry/NotificationTelemetry'
-import { formatNotificationType } from '@universe/notifications/src/utils/formatNotificationType'
+import { type NotificationTelemetry } from '@luxexchange/notifications/src/notification-telemetry/NotificationTelemetry'
+import { formatNotificationType } from '@luxexchange/notifications/src/utils/formatNotificationType'
 
 /**
  * Basic implementation of the NotificationTelemetry interface.

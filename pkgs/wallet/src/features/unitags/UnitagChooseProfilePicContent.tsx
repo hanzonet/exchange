@@ -1,4 +1,4 @@
-import { UnitagClaimSource } from '@universe/api'
+import { UnitagClaimSource } from '@luxexchange/api'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Text, TouchableArea, useIsDarkMode } from 'ui/src'

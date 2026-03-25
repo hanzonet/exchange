@@ -1,6 +1,6 @@
 import { useApolloClient } from '@apollo/client'
 import { useQuery } from '@tanstack/react-query'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo, useState } from 'react'
 import { UnitagsApiClient } from 'uniswap/src/data/apiClients/unitagsApi/UnitagsApiClient'
 

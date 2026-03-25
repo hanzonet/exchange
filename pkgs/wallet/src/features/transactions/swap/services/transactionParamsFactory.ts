@@ -1,6 +1,6 @@
 import { permit2Address } from '@uniswap/permit2-sdk'
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { GasEstimate, TradingApi } from '@universe/api'
+import { GasEstimate, TradingApi } from '@luxexchange/api'
 import { ValidatedSwapTxContext } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { tradeToTransactionInfo } from 'uniswap/src/features/transactions/swap/utils/trade'
 import {

@@ -12,7 +12,7 @@ module.exports = {
           'error',
           {
             allowSameFolder: false,
-            prefix: '@universe/sessions',
+            prefix: '@luxexchange/sessions',
           },
         ],
       },

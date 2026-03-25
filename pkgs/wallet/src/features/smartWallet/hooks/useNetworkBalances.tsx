@@ -1,4 +1,4 @@
-import { useStatsigClientStatus } from '@universe/gating'
+import { useStatsigClientStatus } from '@luxexchange/gating'
 import { useEffect, useState } from 'react'
 import { fetchGasFeeQuery } from 'uniswap/src/data/apiClients/uniswapApi/useGasFeeQuery'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'

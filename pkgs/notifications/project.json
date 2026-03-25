@@ -1,5 +1,5 @@
 {
-  "name": "@luxfi/notifications",
+  "name": "@luxexchange/notifications",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "pkgs/notifications/src",
   "projectType": "library",

@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { DappResponseType } from 'uniswap/src/features/dappRequests/types'
 import { EthTransaction } from 'uniswap/src/types/walletConnect'

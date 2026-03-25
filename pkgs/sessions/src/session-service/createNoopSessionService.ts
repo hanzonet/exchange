@@ -1,5 +1,5 @@
 import { ChallengeType } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import type { SessionService } from '@universe/sessions/src/session-service/types'
+import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
 
 function createNoopSessionService(): SessionService {
   const initSession: SessionService['initSession'] = async () => ({ needChallenge: false, extra: {} })

@@ -1,5 +1,5 @@
-import type { ConnectionStore, CreateZustandConnectionStoreOptions } from '@universe/websocket/src/store/types'
-import type { ConnectionStatus } from '@universe/websocket/src/types'
+import type { ConnectionStore, CreateZustandConnectionStoreOptions } from '@luxexchange/websocket/src/store/types'
+import type { ConnectionStatus } from '@luxexchange/websocket/src/types'
 import { devtools } from 'zustand/middleware'
 import { createStore } from 'zustand/vanilla'
 

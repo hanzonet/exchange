@@ -18,10 +18,10 @@ import {
   type VerifyRequest,
   type VerifyResponse,
 } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import type { DeviceIdService } from '@universe/sessions/src/device-id/types'
-import type { SessionServiceClient } from '@universe/sessions/src/session-repository/createSessionClient'
-import type { SessionState, SessionStorage } from '@universe/sessions/src/session-storage/types'
-import type { UniswapIdentifierService } from '@universe/sessions/src/uniswap-identifier/types'
+import type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
+import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
+import type { SessionState, SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
+import type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 // Types for our test transport
 export interface MockEndpointHandler {
   (request: any, headers: Record<string, string>): Promise<any>

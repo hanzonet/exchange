@@ -1,6 +1,6 @@
 import { call, select } from '@redux-saga/core/effects'
 import { MaxUint256, TradeType } from '@uniswap/sdk-core'
-import { TradingApi, type UnwrapQuoteResponse, type WrapQuoteResponse } from '@universe/api'
+import { TradingApi, type UnwrapQuoteResponse, type WrapQuoteResponse } from '@luxexchange/api'
 import JSBI from 'jsbi'
 import { expectSaga } from 'redux-saga-test-plan'
 import type { EffectProviders, StaticProvider } from 'redux-saga-test-plan/providers'
@@ -34,8 +34,8 @@ jest.mock('wallet/src/features/transactions/factories/createTransactionServices'
 
 const mockPrivateRpcFlag = jest.fn().mockReturnValue(true)
 
-jest.mock('@universe/gating', () => ({
-  ...jest.requireActual('@universe/gating'),
+jest.mock('@luxexchange/gating', () => ({
+  ...jest.requireActual('@luxexchange/gating'),
   getStatsigClient: jest.fn(() => ({
     checkGate: jest.fn().mockImplementation((flagName: string) => {
       if (flagName === 'mev-blocker') {

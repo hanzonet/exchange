@@ -9,16 +9,16 @@ import {
   UpdateSessionResponse,
   VerifyResponse,
 } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import { createSessionRepository } from '@universe/sessions/src/session-repository/createSessionRepository'
-import { createSessionService } from '@universe/sessions/src/session-service/createSessionService'
-import type { SessionService } from '@universe/sessions/src/session-service/types'
+import { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
+import { createSessionService } from '@luxexchange/sessions/src/session-service/createSessionService'
+import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
 import {
   createMockSessionClient,
   InMemoryDeviceIdService,
   InMemorySessionStorage,
   InMemoryUniswapIdentifierService,
   type MockEndpoints,
-} from '@universe/sessions/src/test-utils'
+} from '@luxexchange/sessions/src/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 
 describe('Session Lifecycle Integration Tests', () => {

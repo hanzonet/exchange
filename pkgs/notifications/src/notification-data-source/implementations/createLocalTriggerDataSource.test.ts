@@ -3,14 +3,14 @@ import {
   Metadata,
   Notification,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import type { InAppNotification } from '@universe/api'
-import { ContentStyle } from '@universe/api'
+import type { InAppNotification } from '@luxexchange/api'
+import { ContentStyle } from '@luxexchange/api'
 import {
   createLocalTriggerDataSource,
   getTriggerById,
   type TriggerCondition,
-} from '@universe/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
-import { type NotificationTracker } from '@universe/notifications/src/notification-tracker/NotificationTracker'
+} from '@luxexchange/notifications/src/notification-data-source/implementations/createLocalTriggerDataSource'
+import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 function createMockNotification(id: string): InAppNotification {

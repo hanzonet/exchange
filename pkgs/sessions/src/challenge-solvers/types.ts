@@ -1,5 +1,5 @@
-import type { TypedChallengeData } from '@universe/sessions/src/session-repository/types'
-import type { ChallengeType } from '@universe/sessions/src/session-service/types'
+import type { TypedChallengeData } from '@luxexchange/sessions/src/session-repository/types'
+import type { ChallengeType } from '@luxexchange/sessions/src/session-service/types'
 
 interface ChallengeData {
   challengeId: string

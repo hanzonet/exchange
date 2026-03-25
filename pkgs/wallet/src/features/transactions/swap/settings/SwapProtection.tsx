@@ -1,4 +1,4 @@
-import { FeatureFlags } from '@universe/gating'
+import { FeatureFlags } from '@luxexchange/gating'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'

@@ -1,5 +1,5 @@
 {
-  "name": "hashcash-native",
+  "name": "@luxexchange/hashcash-native",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "pkgs/hashcash-native/src",
   "projectType": "library",

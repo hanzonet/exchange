@@ -1,5 +1,5 @@
 {
-  "name": "@luxfi/api",
+  "name": "@luxexchange/api",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "pkgs/api/src",
   "projectType": "library",

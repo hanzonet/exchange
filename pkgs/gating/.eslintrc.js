@@ -11,7 +11,7 @@ module.exports = {
           'error',
           {
             allowSameFolder: false,
-            prefix: '@universe/gating',
+            prefix: '@luxexchange/gating',
           },
         ],
         '@typescript-eslint/prefer-enum-initializers': 'off',

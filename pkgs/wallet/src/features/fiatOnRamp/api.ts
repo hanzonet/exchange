@@ -1,4 +1,4 @@
-import type { OffRampTransferDetailsRequest, OffRampTransferDetailsResponse } from '@universe/api'
+import type { OffRampTransferDetailsRequest, OffRampTransferDetailsResponse } from '@luxexchange/api'
 import dayjs from 'dayjs'
 import { ForApiClient } from 'uniswap/src/data/apiClients/forApi/ForApiClient'
 import { extractFORTransactionDetails } from 'uniswap/src/features/activity/extract/extractFiatOnRampTransactionDetails'

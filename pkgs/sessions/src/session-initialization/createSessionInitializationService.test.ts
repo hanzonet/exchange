@@ -1,11 +1,11 @@
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
-import { createSessionInitializationService } from '@universe/sessions/src/session-initialization/createSessionInitializationService'
-import { ChallengeType } from '@universe/sessions/src/session-service/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
+import { createSessionInitializationService } from '@luxexchange/sessions/src/session-initialization/createSessionInitializationService'
+import { ChallengeType } from '@luxexchange/sessions/src/session-service/types'
 import {
   createMockChallengeSolverService,
   createMockSessionService,
   TestScenarios,
-} from '@universe/sessions/src/test-utils/mocks'
+} from '@luxexchange/sessions/src/test-utils/mocks'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock performance tracker for testing

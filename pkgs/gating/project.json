@@ -1,7 +1,7 @@
 {
-  "name": "@universe/gating",
+  "name": "@luxexchange/gating",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/gating/src",
+  "sourceRoot": "pkgs/gating/src",
   "projectType": "library",
   "tags": ["scope:gating", "type:lib"],
   "targets": {

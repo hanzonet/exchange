@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { EthTransaction } from 'uniswap/src/types/walletConnect'
 import { generateBatchId, transformCallsToTransactionRequests } from 'wallet/src/features/batchedTransactions/utils'
 

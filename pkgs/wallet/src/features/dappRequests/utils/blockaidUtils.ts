@@ -1,4 +1,4 @@
-import { type BlockaidScanTransactionResponse } from '@universe/api'
+import { type BlockaidScanTransactionResponse } from '@luxexchange/api'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { AddressStringFormat, normalizeAddress } from 'uniswap/src/utils/addresses'

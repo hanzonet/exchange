@@ -1,5 +1,5 @@
 import { type QueryKey, queryOptions, type UseQueryResult, useQuery, useQueryClient } from '@tanstack/react-query'
-import { type TradingApi } from '@universe/api'
+import { type TradingApi } from '@luxexchange/api'
 import React, { useContext, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'

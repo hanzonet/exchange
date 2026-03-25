@@ -1,4 +1,4 @@
-import type { BlockaidScanJsonRpcRequest } from '@universe/api'
+import type { BlockaidScanJsonRpcRequest } from '@luxexchange/api'
 import { useMemo } from 'react'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { isUniswapXSwapRequest, UniswapXSwapRequest } from 'wallet/src/components/dappRequests/types/Permit2Types'

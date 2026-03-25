@@ -8,9 +8,9 @@ import {
   InitSessionResponse,
   SignoutResponse,
 } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import { createSessionRepository } from '@universe/sessions/src/session-repository/createSessionRepository'
-import { ChallengeRejectedError } from '@universe/sessions/src/session-repository/errors'
-import { ChallengeType } from '@universe/sessions/src/session-service/types'
+import { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
+import { ChallengeRejectedError } from '@luxexchange/sessions/src/session-repository/errors'
+import { ChallengeType } from '@luxexchange/sessions/src/session-service/types'
 import { describe, expect, it, type MockedFunction, vi } from 'vitest'
 
 type MockedClient = {

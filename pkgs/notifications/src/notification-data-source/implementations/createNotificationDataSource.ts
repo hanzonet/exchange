@@ -1,5 +1,5 @@
-import { type InAppNotification } from '@universe/api'
-import { type NotificationDataSource } from '@universe/notifications/src/notification-data-source/NotificationDataSource'
+import { type InAppNotification } from '@luxexchange/api'
+import { type NotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/NotificationDataSource'
 
 /**
  * Basic implementation of the NotificationDataSource interface.

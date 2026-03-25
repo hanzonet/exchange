@@ -1,6 +1,6 @@
-import type { FetchClient } from '@universe/api'
-import type { TokenSubscriptionParams } from '@universe/prices/src/types'
-import type { SubscriptionHandler } from '@universe/websocket'
+import type { FetchClient } from '@luxexchange/api'
+import type { TokenSubscriptionParams } from '@luxexchange/prices/src/types'
+import type { SubscriptionHandler } from '@luxexchange/websocket'
 
 const EVENT_SUBSCRIPTION_TYPE_TOKEN_PRICE = 'EVENT_SUBSCRIPTION_TYPE_TOKEN_PRICE'
 
@@ -11,7 +11,7 @@ export interface SubscriptionApiOptions {
 
 /**
  * Creates a subscription handler for token price subscriptions.
- * This implements the SubscriptionHandler interface from @universe/websocket.
+ * This implements the SubscriptionHandler interface from @luxexchange/websocket.
  */
 export function createPriceSubscriptionHandler(
   options: SubscriptionApiOptions,

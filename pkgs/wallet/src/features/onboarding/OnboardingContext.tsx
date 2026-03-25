@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 
-import { UnitagClaim } from '@universe/api'
+import { UnitagClaim } from '@luxexchange/api'
 import dayjs from 'dayjs'
 import { createContext, PropsWithChildren, useContext, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'

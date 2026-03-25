@@ -1,5 +1,5 @@
 import type { TransactionRequest } from '@ethersproject/providers'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
 import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
 import type { UniverseChainId } from 'uniswap/src/features/chains/types'

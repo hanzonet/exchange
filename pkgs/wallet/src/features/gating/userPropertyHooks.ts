@@ -1,4 +1,4 @@
-import { getStatsigClient } from '@universe/gating'
+import { getStatsigClient } from '@luxexchange/gating'
 import { useEffect } from 'react'
 import { useUnitagsAddressQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
 import { AccountType } from 'uniswap/src/features/accounts/types'

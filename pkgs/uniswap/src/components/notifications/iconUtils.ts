@@ -1,5 +1,5 @@
 /**
- * Re-exported from @universe/notifications for backwards compatibility.
+ * Re-exported from @luxexchange/notifications for backwards compatibility.
  * The canonical source is packages/notifications/src/notification-renderer/utils/iconUtils.ts
  */
 export {

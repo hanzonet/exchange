@@ -1,4 +1,4 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ethers } from 'ethers'
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react'
 import { UniswapProvider } from 'uniswap/src/contexts/UniswapContext'

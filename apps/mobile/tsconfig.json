@@ -5,6 +5,12 @@
   "exclude": [".storybook/storybook.requires.ts"],
   "references": [
     {
+      "path": "../../pkgs/wallet"
+    },
+    {
+      "path": "../../pkgs/utilities"
+    },
+    {
       "path": "../../pkgs/sessions"
     },
     {
@@ -20,10 +26,7 @@
       "path": "../../pkgs/api"
     },
     {
-      "path": "../../pkgs/wallet"
-    },
-    {
-      "path": "../../pkgs/utilities"
+      "path": "../../pkgs/eslint-config"
     },
     {
       "path": "../../pkgs/ui"

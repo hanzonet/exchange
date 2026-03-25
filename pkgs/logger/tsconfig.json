@@ -1,7 +1,17 @@
 {
   "extends": "../../config/tsconfig/app.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.json", "src/global.d.ts"],
-  "exclude": ["src/**/*.spec.ts", "src/**/*.spec.tsx", "src/**/*.test.ts", "src/**/*.test.tsx"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.json",
+    "src/global.d.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
   "compilerOptions": {
     "noEmit": false,
     "emitDeclarationOnly": true,
@@ -11,6 +21,9 @@
   "references": [
     {
       "path": "../privacy"
+    },
+    {
+      "path": "../eslint-config"
     }
   ]
 }

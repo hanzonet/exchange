@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import {
   OnChainTransactionDetails,
   TransactionStatus,

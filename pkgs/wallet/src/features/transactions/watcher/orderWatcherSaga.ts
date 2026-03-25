@@ -1,4 +1,4 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { call, delay, fork, select, take } from 'typed-redux-saga'
 import { makeSelectUniswapXOrder } from 'uniswap/src/features/transactions/selectors'
 import { updateTransaction } from 'uniswap/src/features/transactions/slice'

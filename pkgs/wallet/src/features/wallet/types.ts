@@ -1,4 +1,4 @@
-import { CustomRankingType, RankingType } from '@universe/api'
+import { CustomRankingType, RankingType } from '@luxexchange/api'
 
 export type ExploreOrderBy = RankingType | Exclude<CustomRankingType, CustomRankingType.Trending>
 

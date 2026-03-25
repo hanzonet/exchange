@@ -38,7 +38,6 @@
     "useUnknownInCatchVariables": true,
     "paths": {
       "@luxexchange/api/*": ["./pkgs/api/*"],
-      "@luxexchange/cli/*": ["./apps/cli/*"],
       "@luxexchange/config/*": ["./pkgs/config/*"],
       "@luxexchange/gating/*": ["./pkgs/gating/*"],
       "@luxexchange/notifications/*": ["./pkgs/notifications/*"],
@@ -49,7 +48,6 @@
       "@luxexchange/mycelium/*": ["./pkgs/mycelium/*"],
       "@luxexchange/websocket/*": ["./pkgs/websocket/*"],
       "@luxexchange/prices/*": ["./pkgs/prices/*"],
-      "@luxexchange/transactional/*": ["./pkgs/transactional/*"],
       "@luxexchange/privacy/*": ["./pkgs/privacy/*"],
       "@luxexchange/logger/*": ["./pkgs/logger/*"],
       "@luxexchange/react-query/*": ["./pkgs/react-query/*"],

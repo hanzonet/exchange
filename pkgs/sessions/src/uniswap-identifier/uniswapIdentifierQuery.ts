@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { UniswapIdentifierService } from '@universe/sessions/src/uniswap-identifier/types'
+import type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 

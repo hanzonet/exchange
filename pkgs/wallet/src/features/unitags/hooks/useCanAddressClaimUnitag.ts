@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { UnitagErrorCodes } from '@universe/api'
+import { UnitagErrorCodes } from '@luxexchange/api'
 import { useUnitagsClaimEligibilityQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsClaimEligibilityQuery'
 import { uniqueIdQuery } from 'utilities/src/device/uniqueIdQuery'
 

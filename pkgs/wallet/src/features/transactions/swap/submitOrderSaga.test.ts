@@ -1,6 +1,6 @@
 import { Protocol } from '@uniswap/router-sdk'
 import { TradeType } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { testSaga } from 'redux-saga-test-plan'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
 import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'

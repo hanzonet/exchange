@@ -1,4 +1,4 @@
-import { BackgroundType, ContentStyle, type InAppNotification } from '@universe/api'
+import { BackgroundType, ContentStyle, type InAppNotification } from '@luxexchange/api'
 import { ImageSourcePropType } from 'react-native'
 import { GeneratedIcon } from 'ui/src'
 import { Bell, Coin, Person, ShieldCheck } from 'ui/src/components/icons'

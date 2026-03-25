@@ -1,5 +1,5 @@
-import type { FeatureFlags } from '@universe/gating'
-import { ExperimentProperties } from '@universe/gating'
+import type { FeatureFlags } from '@luxexchange/gating'
+import { ExperimentProperties } from '@luxexchange/gating'
 
 export interface FeatureFlagService {
   isFeatureEnabled(flagName: FeatureFlags): boolean

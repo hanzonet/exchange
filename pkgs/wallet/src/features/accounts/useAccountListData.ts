@@ -1,5 +1,5 @@
 import { NetworkStatus, WatchQueryFetchPolicy } from '@apollo/client'
-import { GqlResult, GraphQLApi } from '@universe/api'
+import { GqlResult, GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 // biome-ignore lint/style/noRestrictedImports: This is the wrapper hook that uses the restricted hook properly

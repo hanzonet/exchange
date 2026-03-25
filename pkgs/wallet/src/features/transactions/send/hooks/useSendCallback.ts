@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { GasEstimate } from '@universe/api'
+import { GasEstimate } from '@luxexchange/api'
 import { providers } from 'ethers'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'

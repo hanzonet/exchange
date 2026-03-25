@@ -16,7 +16,7 @@
     "emitDeclarationOnly": true,
     "noEmit": false,
     "paths": {
-      "@universe/notifications/*": ["./*"]
+      "@luxexchange/notifications/*": ["./*"]
     },
     "types": ["node", "vitest/globals"]
   },
@@ -26,6 +26,9 @@
     },
     {
       "path": "../api"
+    },
+    {
+      "path": "../eslint-config"
     }
   ]
 }

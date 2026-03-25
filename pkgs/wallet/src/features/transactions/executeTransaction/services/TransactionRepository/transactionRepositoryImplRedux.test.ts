@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { providers } from 'ethers/lib/ethers'
 import createSagaMiddleware from 'redux-saga'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'

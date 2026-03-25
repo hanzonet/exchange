@@ -1,4 +1,4 @@
-import type { ConnectionStatus } from '@universe/websocket/src/types'
+import type { ConnectionStatus } from '@luxexchange/websocket/src/types'
 
 export interface ConnectionStore {
   getStatus(): ConnectionStatus

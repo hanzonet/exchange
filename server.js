@@ -7,7 +7,7 @@ const { ethers } = require('ethers');
 // F3: Fail fast if required subgraph env vars are not set
 const REQUIRED_ENV = [
   'SUBGRAPH_V3_URL',
-  'SUBGRAPH_ZOO_V3_URL',
+  'ZOO_SUBGRAPH_V3_URL',
 ];
 
 // Accept SUBGRAPH_URL or SUBGRAPH_V2_URL for V2
