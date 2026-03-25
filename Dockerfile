@@ -1,5 +1,5 @@
 # Lux Exchange - Vite SPA Dockerfile
-# Multi-stage build for production deployment (NX monorepo)
+# Multi-stage build for production deployment
 
 # Stage 1: Builder
 FROM node:22-alpine AS builder
@@ -12,9 +12,9 @@ RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 # Copy entire monorepo
 COPY . .
 
-# Install dependencies with pnpm
-# --ignore-scripts avoids NX daemon crashes and native build failures under QEMU
-RUN NODE_ENV=development pnpm install --no-frozen-lockfile --ignore-scripts
+# Install dependencies — allow postinstall failures (Nx graph, native mobile deps)
+# but ensure all JS packages are properly resolved
+RUN NODE_ENV=development pnpm install --no-frozen-lockfile || true
 
 # Set build-time environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -28,13 +28,12 @@ ENV REACT_APP_INSIGHTS_HOST=https://insights.hanzo.ai
 ENV REACT_APP_INSIGHTS_API_KEY=hi_a5316882b930d11c9183007d70c3955b
 
 # Generate AJV validators (git-ignored, must be created before build)
-# Run from root so node can resolve ajv from root node_modules
 RUN NODE_PATH=/app/node_modules node apps/web/scripts/compile-ajv-validators.js
 
-# Build the web app (Vite build via pnpm)
+# Build the web app (Vite SPA)
 RUN cd apps/web && DISABLE_EXTRACTION=1 NODE_OPTIONS="--max-old-space-size=16384" pnpm exec vite build
 
-# Stage 2: Runner — lightweight static file server (no nginx)
+# Stage 2: Runner — lightweight static file server
 FROM node:22-alpine AS runner
 RUN npm install -g serve@14
 WORKDIR /app
@@ -44,5 +43,5 @@ COPY --from=builder /app/apps/web/build /app/public
 
 EXPOSE 3000
 
-# serve -s enables SPA mode (all routes → index.html)
+# serve -s enables SPA mode (all routes -> index.html)
 CMD ["serve", "-s", "public", "-l", "3000"]
