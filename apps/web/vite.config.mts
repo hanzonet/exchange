@@ -640,11 +640,10 @@ export default defineConfig(({ mode }) => {
           /expo-clipboard\/build\/ClipboardPasteButton\.js/,
           // When the private package is not installed, externalize it so Rollup doesn't error.
           // Dynamic imports of this module will fail at runtime (caught by loadPrivyPbModule's try/catch).
-          ...(!privyPackageInstalled ? [/^@uniswap\/client-privy-embedded-wallet/] : []),
+          ...(!privyPackageInstalled ? [/^@luxamm\/client-privy-embedded-wallet/] : []),
           // Externalize unavailable optional packages
           /^@luxdex\/conedison/,
           /x_verification_connect/,
-          /^@luxamm\//,
         ],
         output: {
           // Ensure consistent file naming for better caching
