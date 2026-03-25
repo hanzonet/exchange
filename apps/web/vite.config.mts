@@ -26,9 +26,9 @@ const __dirname = path.dirname(__filename)
 // When the private embedded wallet package is not installed,
 // externalize it so Rollup doesn't fail to resolve dynamic imports at build time.
 // At runtime, the dynamic import will fail and the try/catch in loadPrivyPbModule() provides
-// a clear error message: "Embedded Wallet requires @uniswap/client-privy-embedded-wallet".
+// a clear error message: "Embedded Wallet requires @luxamm/client-privy-embedded-wallet".
 const privyPackageInstalled = fs.existsSync(
-  path.resolve(__dirname, '../../node_modules/@uniswap/client-privy-embedded-wallet'),
+  path.resolve(__dirname, '../../node_modules/@luxamm/client-privy-embedded-wallet'),
 )
 const ENABLE_REACT_COMPILER = process.env.ENABLE_REACT_COMPILER === 'true'
 const ReactCompilerConfig = {
@@ -288,30 +288,34 @@ export default defineConfig(({ mode }) => {
     'gui/linear-gradient': '@tamagui/linear-gradient',
     // Force JSBI to use ESM build so transform plugin can add __esModule marker
     jsbi: path.resolve(__dirname, '../../node_modules/jsbi/dist/jsbi.mjs'),
-    // Map @luxdex/* to @uniswap/* for packages that exist under the old namespace
-    '@uniswap/router-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/router-sdk'),
-    '@uniswap/sdk-core': path.resolve(__dirname, '../../node_modules/@uniswap/sdk-core'),
-    '@uniswap/universal-router-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/universal-router-sdk'),
-    '@luxdex/permit2-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/permit2-sdk'),
-    // '@uniswap/conedison': not available — externalized
-    '@uniswap/v2-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/v2-sdk'),
-    '@luxdex/v3-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/v3-sdk'),
-    '@luxdex/v4-sdk': path.resolve(__dirname, '../../node_modules/@uniswap/v4-sdk'),
-    '@luxdex/client-platform-service': path.resolve(__dirname, '../../node_modules/@uniswap/client-platform-service'),
-    '@luxdex/client-notification-service': path.resolve(__dirname, '../../node_modules/@uniswap/client-notification-service'),
-    '@uniswap/client-data-api': path.resolve(__dirname, '../../node_modules/@uniswap/client-data-api'),
-    '@luxdex/client-trading': path.resolve(__dirname, '../../node_modules/@uniswap/client-trading'),
-    '@luxdex/client-for': path.resolve(__dirname, '../../node_modules/@uniswap/client-for'),
-    '@luxdex/client-liquidity': path.resolve(__dirname, '../../node_modules/@uniswap/client-liquidity'),
-    '@luxdex/permit': path.resolve(__dirname, '../../node_modules/@uniswap/permit2-sdk'),
-    // Map @luxamm/* to workspace package ESM entry files
-    // Additional @luxdex/* aliases missing from original config
-    '@luxdex/analytics': path.resolve(__dirname, '../../pkgs/luxdex-analytics/dist/index.mjs'),
-    '@luxdex/analytics-events': path.resolve(__dirname, '../../node_modules/@uniswap/analytics-events/lib/cjs/index.js'),
-    '@luxdex/client-explore': path.resolve(__dirname, '../../node_modules/@uniswap/client-explore'),
-    '@luxdex/client-search': path.resolve(__dirname, '../../node_modules/@uniswap/client-search'),
+    // @luxamm/* → node_modules (pnpm overrides resolve to @uniswap/*)
+    '@luxamm/sdk-core': path.resolve(__dirname, '../../node_modules/@luxamm/sdk-core'),
+    '@luxamm/v2-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v2-sdk'),
+    '@luxamm/v3-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v3-sdk'),
+    '@luxamm/v4-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/v4-sdk'),
+    '@luxamm/router-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/router-sdk'),
+    '@luxamm/permit2-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/permit2-sdk'),
+    '@luxamm/universal-router-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/universal-router-sdk'),
+    '@luxamm/swap-sdk': path.resolve(__dirname, '../../node_modules/@luxamm/swap-sdk'),
+    '@luxamm/analytics': path.resolve(__dirname, '../../node_modules/@luxamm/analytics'),
+    '@luxamm/analytics-events': path.resolve(__dirname, '../../node_modules/@luxamm/analytics-events'),
+    '@luxamm/client-data-api': path.resolve(__dirname, '../../node_modules/@luxamm/client-data-api'),
+    '@luxamm/client-explore': path.resolve(__dirname, '../../node_modules/@luxamm/client-explore'),
+    '@luxamm/client-for': path.resolve(__dirname, '../../node_modules/@luxamm/client-for'),
+    '@luxamm/client-liquidity': path.resolve(__dirname, '../../node_modules/@luxamm/client-liquidity'),
+    '@luxamm/client-search': path.resolve(__dirname, '../../node_modules/@luxamm/client-search'),
+    '@luxamm/client-trading': path.resolve(__dirname, '../../node_modules/@luxamm/client-trading'),
+    '@luxamm/client-notification-service': path.resolve(__dirname, '../../node_modules/@luxamm/client-notification-service'),
+    '@luxamm/client-platform-service': path.resolve(__dirname, '../../node_modules/@luxamm/client-platform-service'),
+    '@luxamm/client-embeddedwallet': path.resolve(__dirname, '../../node_modules/@luxamm/client-embeddedwallet'),
+    '@luxamm/client-unirpc-v2': path.resolve(__dirname, '../../node_modules/@luxamm/client-unirpc-v2'),
+    '@luxamm/default-token-list': path.resolve(__dirname, '../../node_modules/@luxamm/default-token-list'),
+    '@luxamm/token-lists': path.resolve(__dirname, '../../node_modules/@luxamm/token-lists'),
+    '@luxamm/merkle-distributor': path.resolve(__dirname, '../../node_modules/@luxamm/merkle-distributor'),
+    '@luxamm/v3-core': path.resolve(__dirname, '../../node_modules/@luxamm/v3-core'),
+    '@luxamm/v3-periphery': path.resolve(__dirname, '../../node_modules/@luxamm/v3-periphery'),
     '@luxdex/sdk': path.resolve(__dirname, '../../pkgs/luxdex-sdk/dist/esm/src/index.js'),
-    '@uniswap/conedison/format': path.resolve(__dirname, 'src/lib/conedison-format-stub.ts'),
+    '@luxamm/conedison/format': path.resolve(__dirname, 'src/lib/conedison-format-stub.ts'),
     // react-router v7 merged react-router-dom into react-router
     'react-router-dom': path.resolve(__dirname, '../../node_modules/react-router'),
     // Lingui is not used — stub Trans/t for components that import from @lingui/macro
@@ -384,14 +388,14 @@ export default defineConfig(({ mode }) => {
         'wagmi',
         '@wagmi/core',
         // SDK packages
-        '@uniswap/sdk-core',
-        '@uniswap/v2-sdk',
-        '@uniswap/v3-sdk',
-        '@uniswap/v4-sdk',
-        '@uniswap/router-sdk',
-        '@uniswap/universal-router-sdk',
-        '@uniswap/uniswapx-sdk',
-        '@uniswap/permit2-sdk',
+        '@luxamm/sdk-core',
+        '@luxamm/v2-sdk',
+        '@luxamm/v3-sdk',
+        '@luxamm/v4-sdk',
+        '@luxamm/router-sdk',
+        '@luxamm/universal-router-sdk',
+        '@luxamm/uniswapx-sdk',
+        '@luxamm/permit2-sdk',
         // Other
         '@visx/responsive',
         'jsbi',
@@ -588,20 +592,20 @@ export default defineConfig(({ mode }) => {
         'tamagui',
         '@tamagui/web',
         'ui',
-        '@uniswap/sdk-core',
-        '@uniswap/v2-sdk',
-        '@uniswap/v3-sdk',
-        '@uniswap/v4-sdk',
-        '@uniswap/router-sdk',
-        '@uniswap/universal-router-sdk',
-        '@uniswap/uniswapx-sdk',
-        '@uniswap/permit2-sdk',
+        '@luxamm/sdk-core',
+        '@luxamm/v2-sdk',
+        '@luxamm/v3-sdk',
+        '@luxamm/v4-sdk',
+        '@luxamm/router-sdk',
+        '@luxamm/universal-router-sdk',
+        '@luxamm/uniswapx-sdk',
+        '@luxamm/permit2-sdk',
         'jsbi',
         'ethers',
         '@visx/responsive',
       ],
       // Libraries that shouldn't be pre-bundled
-      exclude: ['expo-clipboard', '@connectrpc/connect', '@uniswap/client-liquidity'],
+      exclude: ['expo-clipboard', '@connectrpc/connect', '@luxamm/client-liquidity'],
       esbuildOptions: {
         resolveExtensions: ['.web-app.js', '.web-app.ts', '.web-app.tsx', '.web.js', '.web.ts', '.web.tsx', '.js', '.ts', '.tsx'],
         loader: {
@@ -660,7 +664,7 @@ export default defineConfig(({ mode }) => {
               id.includes('node_modules/@scure/') ||
               id.includes('node_modules/wagmi') ||
               id.includes('node_modules/@wagmi/') ||
-              id.includes('node_modules/@uniswap/') ||
+              id.includes('node_modules/@luxamm/') ||
               id.includes('node_modules/@luxamm/') ||
               id.includes('node_modules/@luxdex/')
             ) {
