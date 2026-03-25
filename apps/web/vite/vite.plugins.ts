@@ -15,6 +15,8 @@ const CSP_DIRECTIVE_MAP: Record<string, string> = {
   mediaSrc: 'media-src',
   fontSrc: 'font-src',
   formAction: 'form-action',
+  objectSrc: 'object-src',
+  baseUri: 'base-uri',
   reportUri: 'report-uri',
 }
 

@@ -30,6 +30,7 @@ const RPC_URL = process.env.RPC_URL || 'https://api.lux.network/ext/bc/C/rpc';
 const BLOCKSCOUT_API = process.env.BLOCKSCOUT_API || 'https://api-explore.lux.network';
 
 const app = express();
+app.set('trust proxy', 1);
 
 // F2: Restrict CORS to known origins
 const ALLOWED_ORIGINS = [
@@ -374,6 +375,37 @@ function validateSubgraphQuery(query) {
   if (maxDepth > 10) return 'Query nesting too deep (max 10 levels)';
   // Block introspection queries (information disclosure)
   if (/__schema|__type/i.test(query)) return 'Introspection queries are not allowed';
+
+  // Alias bomb protection: max 5 top-level aliases (pattern: word colon at depth 1)
+  let aliasDepth = 0, aliasCount = 0;
+  for (let i = 0; i < query.length; i++) {
+    if (query[i] === '{') aliasDepth++;
+    else if (query[i] === '}') aliasDepth--;
+    else if (aliasDepth === 1 && query[i] === ':' && i > 0) {
+      // Check that the character before colon is a word char (alias pattern: `name:`)
+      const before = query.substring(0, i).trimEnd();
+      if (/\w$/.test(before)) aliasCount++;
+    }
+  }
+  if (aliasCount > 5) return 'Too many top-level aliases (max 5)';
+
+  // Reject first argument values > 100
+  const firstMatches = query.matchAll(/first\s*:\s*(\d+)/g);
+  for (const m of firstMatches) {
+    if (Number(m[1]) > 100) return 'first argument too large (max 100)';
+  }
+
+  // Max 50 total field selections (count word tokens that are not GraphQL keywords)
+  const GRAPHQL_KEYWORDS = new Set([
+    'query', 'mutation', 'subscription', 'fragment', 'on', 'true', 'false', 'null',
+    'first', 'skip', 'where', 'orderBy', 'orderDirection', 'asc', 'desc',
+  ]);
+  // Strip strings, braces, parens, colons — count remaining identifiers as fields
+  const stripped = query.replace(/"[^"]*"/g, '').replace(/[{}(),:!@$]/g, ' ');
+  const tokens = stripped.match(/\b[a-zA-Z_]\w*\b/g) || [];
+  const fieldCount = tokens.filter(t => !GRAPHQL_KEYWORDS.has(t)).length;
+  if (fieldCount > 50) return 'Too many field selections (max 50)';
+
   return null;
 }
 

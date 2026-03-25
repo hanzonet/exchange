@@ -52,6 +52,12 @@
     "https://*.zoo.exchange",
     "https://*.lux.network"
   ],
+  "objectSrc": [
+    "'none'"
+  ],
+  "baseUri": [
+    "'self'"
+  ],
   "formAction": [
     "'none'"
   ],
