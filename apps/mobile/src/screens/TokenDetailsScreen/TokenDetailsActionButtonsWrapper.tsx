@@ -17,8 +17,8 @@ import { useTokenDetailsCurrentChainBalance } from 'src/components/TokenDetails/
 import { NetworkBalanceSheetContent } from 'src/screens/TokenDetailsScreen/NetworkBalanceSheetContent'
 import { useNetworkBalanceSheet } from 'src/screens/TokenDetailsScreen/useNetworkBalanceSheet'
 import { useIsScreenNavigationReady } from 'src/utils/useIsScreenNavigationReady'
-import { ArrowDownCircle, ArrowUpCircle, Bank, QrCode, SendRoundedAirplane } from 'ui/src/components/icons'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
+import { ArrowDownCircle, ArrowUpCircle, Bank, QrCode, SendRoundedAirplane } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
 import type { MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { getNativeAddress } from 'uniswap/src/constants/addresses'
@@ -33,9 +33,9 @@ import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { buildCurrencyId, isNativeCurrencyAddress } from 'uniswap/src/utils/currencyId'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hooks'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useActiveAccountAddressWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 function getHighestBalanceEntry(balances: PortfolioBalance[]): PortfolioBalance {
   return balances.reduce((best, current) => ((current.balanceUSD ?? 0) > (best.balanceUSD ?? 0) ? current : best))

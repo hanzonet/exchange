@@ -1,5 +1,5 @@
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export function CurrentScreen(_props: {
   settings: TransactionSettingConfig[]

@@ -1,5 +1,5 @@
 import type { Config } from '@luxfi/config/src/config-types'
-import { isNonTestDev } from 'utilities/src/environment/constants'
+import { isNonTestDev } from '@luxfi/utilities/src/environment/constants'
 
 // Module-level cache for config to avoid recomputing on every call
 let cachedConfig: Config | undefined

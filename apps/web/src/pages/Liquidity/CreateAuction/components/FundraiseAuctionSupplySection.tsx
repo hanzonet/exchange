@@ -1,6 +1,6 @@
 import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
+import { Flex, Text } from '@luxfi/ui/src'
 import { AuctionSupplyCard } from '~/pages/Liquidity/CreateAuction/components/AuctionSupplyCard'
 import { PostAuctionLiquidityCard } from '~/pages/Liquidity/CreateAuction/components/PostAuctionLiquidityCard'
 import { TotalRequiredDepositCard } from '~/pages/Liquidity/CreateAuction/components/TotalRequiredDepositCard'

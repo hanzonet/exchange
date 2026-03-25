@@ -1,11 +1,11 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import i18next from 'i18next'
-import { WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo, TokenList } from 'lx/src/features/dataApi/types'
-import { getTokenBlockedWarning } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/getTokenBlockedWarning'
-import { CurrencyField } from 'lx/src/types/currency'
+import { WarningAction, WarningLabel, WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { getTokenBlockedWarning } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/getTokenBlockedWarning'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const MOCK_CURRENCY_ADDRESS = '0x1234567890123456789012345678901234567890'
 

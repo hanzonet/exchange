@@ -1,6 +1,6 @@
-import { TouchableArea } from 'ui/src'
-import { InlineWarningCard } from 'lx/src/components/InlineWarningCard/InlineWarningCard'
-import { Warning } from 'lx/src/components/modals/WarningModal/types'
+import { TouchableArea } from '@luxfi/ui/src'
+import { InlineWarningCard } from '@luxexchange/lx/src/components/InlineWarningCard/InlineWarningCard'
+import { Warning } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 
 export const TransactionWarning = ({
   warning,

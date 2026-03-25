@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { StepRowProps, StepRowSkeleton } from 'lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
-import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
-import { luxUrls } from 'lx/src/constants/urls'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
-import { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { StepRowProps, StepRowSkeleton } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TokenApprovalTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/approve'
+import { TokenRevocationTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/revoke'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export function TokenApprovalTransactionStepRow({
   step,

@@ -1,8 +1,8 @@
 import { memo } from 'react'
-import { Flex, SpinningLoader } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
-import { TransactionModalInnerContainer } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { Flex, SpinningLoader } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TransactionModalInnerContainer } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 
 export const SwapReviewLoadingView = memo(function SwapReviewLoadingView(): JSX.Element {
   const { bottomSheetViewStyles } = useTransactionModalContext()

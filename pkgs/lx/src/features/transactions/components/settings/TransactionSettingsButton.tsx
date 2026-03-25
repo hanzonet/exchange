@@ -1,11 +1,11 @@
 import { memo } from 'react'
-import type { ColorTokens, GeneratedIcon } from 'ui/src'
-import { Flex, Tooltip as TooltipComponent } from 'ui/src'
-import { Settings } from 'ui/src/components/icons/Settings'
-import { type IconSizeTokens, zIndexes } from 'ui/src/theme'
-import { TransactionSettingsModalId } from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
-import { useModalVisibility } from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
-import { isWebApp, isWebPlatform } from 'utilities/src/platform'
+import type { ColorTokens, GeneratedIcon } from '@luxfi/ui/src'
+import { Flex, Tooltip as TooltipComponent } from '@luxfi/ui/src'
+import { Settings } from '@luxfi/ui/src/components/icons/Settings'
+import { type IconSizeTokens, zIndexes } from '@luxfi/ui/src/theme'
+import { TransactionSettingsModalId } from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
+import { useModalVisibility } from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
+import { isWebApp, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 type TransactionSettingsButtonProps = {
   Tooltip?: React.ReactNode

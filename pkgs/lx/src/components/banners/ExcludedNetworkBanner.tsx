@@ -1,10 +1,10 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { NetworkPile } from 'lx/src/components/network/NetworkPile/NetworkPile'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { NetworkPile } from '@luxexchange/lx/src/components/network/NetworkPile/NetworkPile'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 interface ExcludedNetworkBannerProps {
   chainIds: UniverseChainId[]

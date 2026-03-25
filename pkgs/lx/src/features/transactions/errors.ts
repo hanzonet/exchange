@@ -1,11 +1,11 @@
 import { datadogRum } from '@datadog/browser-rum'
-import { FetchError, is401Error } from '@universe/api'
-import { AppTFunction } from 'ui/src/i18n/types'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
-import { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
-import { TransactionStep, TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { isWebApp } from 'utilities/src/platform'
+import { FetchError, is401Error } from '@luxexchange/api'
+import { AppTFunction } from '@luxfi/ui/src/i18n/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TokenApprovalTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/approve'
+import { TokenRevocationTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/revoke'
+import { TransactionStep, TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 /** Superclass used to differentiate categorized/known transaction errors from generic/unknown errors. */
 export abstract class TransactionError extends Error {}

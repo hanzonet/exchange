@@ -1,4 +1,4 @@
-import type { FlexProps } from 'ui/src'
+import type { FlexProps } from '@luxfi/ui/src'
 
 function getCurrencyInputFocusedStyle(isFocused: boolean): FlexProps {
   return {

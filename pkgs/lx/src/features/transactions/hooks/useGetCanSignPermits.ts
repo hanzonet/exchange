@@ -1,7 +1,7 @@
 import { FeatureFlags, useFeatureFlag } from '@luxfi/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useHasAccountMismatchCallback } from 'lx/src/features/smartWallet/mismatch/hooks'
-import { useEvent } from 'utilities/src/react/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useHasAccountMismatchCallback } from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function useGetCanSignPermits(): (chainId?: UniverseChainId) => boolean {
   const forceTrue = useFeatureFlag(FeatureFlags.ForcePermitTransactions)

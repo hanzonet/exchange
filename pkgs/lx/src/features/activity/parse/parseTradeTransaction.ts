@@ -2,15 +2,15 @@
 /* eslint-disable complexity */
 import { BigNumber } from '@ethersproject/bignumber'
 import { Direction, OnChainTransaction, OnChainTransactionLabel } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { GraphQLApi } from '@universe/api'
-import { AssetType } from 'lx/src/entities/assets'
-import { extractDappInfo } from 'lx/src/features/activity/utils/extractDappInfo'
+import { GraphQLApi } from '@luxexchange/api'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { extractDappInfo } from '@luxexchange/lx/src/features/activity/utils/extractDappInfo'
 import {
   AssetCase,
   deriveCurrencyAmountFromAssetResponse,
   parseUSDValueFromAssetChange,
-} from 'lx/src/features/activity/utils/remote'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+} from '@luxexchange/lx/src/features/activity/utils/remote'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
 import {
   ConfirmedSwapTransactionInfo,
   NFTTradeTransactionInfo,
@@ -20,9 +20,9 @@ import {
   TransactionType,
   WithdrawTransactionInfo,
   WrapTransactionInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { buildCurrencyId, buildNativeCurrencyId, buildWrappedNativeCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { buildCurrencyId, buildNativeCurrencyId, buildWrappedNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 type TransferAssetChange = Extract<
   NonNullable<

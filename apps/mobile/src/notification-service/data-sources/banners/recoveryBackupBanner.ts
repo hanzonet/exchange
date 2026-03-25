@@ -8,9 +8,9 @@ import {
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import type { MobileState } from 'src/app/mobileReducer'
 import { BannerId, MOBILE_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'
-import { AccountType } from 'lx/src/features/accounts/types'
-import i18n from 'lx/src/i18n'
-import { hasExternalBackup } from 'wallet/src/features/wallet/accounts/utils'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import i18n from '@luxexchange/lx/src/i18n'
+import { hasExternalBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
 
 /**
  * Check if recovery backup reminder should be shown.

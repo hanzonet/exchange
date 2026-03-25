@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react-native'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useSwapNetworkChangeEffect } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useSwapNetworkChangeEffect } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
 import type { Mock } from 'vitest'
 
 vi.mock('lx/src/contexts/LuxContext', () => ({

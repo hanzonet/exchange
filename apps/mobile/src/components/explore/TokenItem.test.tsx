@@ -3,10 +3,10 @@ import { TokenItem } from 'src/components/explore/TokenItem'
 import * as tokenDetailsHooks from 'src/components/TokenDetails/hooks'
 import { TOKEN_ITEM_DATA, tokenItemData } from 'src/test/fixtures'
 import { fireEvent, render, within } from 'src/test/test-utils'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { TokenMetadataDisplayType } from 'wallet/src/features/wallet/types'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { TokenMetadataDisplayType } from '@luxfi/wallet/src/features/wallet/types'
 
 describe('TokenItem', () => {
   const mockedTokenDetailsNavigation = {

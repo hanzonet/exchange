@@ -1,5 +1,5 @@
-import { CONNECTION_PROVIDER_IDS, CONNECTION_PROVIDER_NAMES } from 'lx/src/constants/web3'
-import { HexString } from 'utilities/src/addresses/hex'
+import { CONNECTION_PROVIDER_IDS, CONNECTION_PROVIDER_NAMES } from '@luxexchange/lx/src/constants/web3'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
 import {
   getAddress,
   ProviderConnectInfo,

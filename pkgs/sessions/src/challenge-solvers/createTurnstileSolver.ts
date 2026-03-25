@@ -4,15 +4,15 @@ import {
   TurnstileScriptLoadError,
   TurnstileTimeoutError,
   TurnstileTokenExpiredError,
-} from '@universe/sessions/src/challenge-solvers/turnstileErrors'
-import { ensureTurnstileScript } from '@universe/sessions/src/challenge-solvers/turnstileScriptLoader'
+} from '@luxexchange/sessions/src/challenge-solvers/turnstileErrors'
+import { ensureTurnstileScript } from '@luxexchange/sessions/src/challenge-solvers/turnstileScriptLoader'
 import type {
   ChallengeData,
   ChallengeSolver,
   TurnstileScriptOptions,
-} from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
-import type { Logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Analytics data for Turnstile solve attempts.

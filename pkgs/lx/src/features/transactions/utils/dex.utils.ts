@@ -1,10 +1,10 @@
 import { GraphQLApi, TradingApi } from '@luxfi/api'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Converts a trading API OrderType to internal Routing type.

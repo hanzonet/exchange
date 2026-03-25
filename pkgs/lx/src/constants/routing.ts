@@ -1,7 +1,7 @@
 import { Currency, Token, WETH9 } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import type { ImageSourcePropType } from 'react-native'
-import { CELO_LOGO, ETH_LOGO } from 'ui/src/assets'
+import { CELO_LOGO, ETH_LOGO } from '@luxfi/ui/src/assets'
 import {
   ARB,
   AUSD_MONAD,
@@ -90,14 +90,14 @@ import {
   WETH_AVALANCHE,
   WETH_POLYGON,
   WRAPPED_NATIVE_CURRENCY,
-} from 'lx/src/constants/tokens'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo, TokenList } from 'lx/src/features/dataApi/types'
-import { buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/constants/tokens'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrencyInfo } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
 
 type ChainCurrencyList = {
   readonly [chainId: number]: CurrencyInfo[]

@@ -3,12 +3,12 @@ import { expectSaga } from 'redux-saga-test-plan'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { handleSwapLink } from 'src/features/deepLinking/handleSwapLinkSaga'
 import { parseSwapLinkMobileFormatOrThrow } from 'src/features/deepLinking/parseSwapLink'
-import { DAI, UNI, USDC_UNICHAIN_SEPOLIA } from 'lx/src/constants/tokens'
-import { AssetType } from 'lx/src/entities/assets'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { signerMnemonicAccount } from 'wallet/src/test/fixtures'
+import { DAI, UNI, USDC_UNICHAIN_SEPOLIA } from '@luxexchange/lx/src/constants/tokens'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 jest.mock('src/app/navigation/rootNavigation', () => ({
   navigate: jest.fn(),

@@ -1,5 +1,5 @@
 import { FeatureFlags, getFeatureFlag } from '@luxfi/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 /**
  * Chains that support chained actions.

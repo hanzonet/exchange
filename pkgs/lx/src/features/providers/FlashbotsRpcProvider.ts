@@ -8,9 +8,9 @@ import {
   buildFlashbotsUrl,
   FLASHBOTS_SIGNATURE_HEADER,
   SignerInfo,
-} from 'lx/src/features/providers/FlashbotsCommon'
-import { InstrumentedJsonRpcProvider } from 'lx/src/features/providers/observability/InstrumentedJsonRpcProvider'
-import { getRpcObserver } from 'lx/src/features/providers/observability/rpcObserver'
+} from '@luxexchange/lx/src/features/providers/FlashbotsCommon'
+import { InstrumentedJsonRpcProvider } from '@luxexchange/lx/src/features/providers/observability/InstrumentedJsonRpcProvider'
+import { getRpcObserver } from '@luxexchange/lx/src/features/providers/observability/rpcObserver'
 
 /**
  * A provider that uses a signer to authenticate requests.

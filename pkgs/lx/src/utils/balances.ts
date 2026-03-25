@@ -1,5 +1,5 @@
-import { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { portfolioBalances } from 'lx/src/test/fixtures'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { portfolioBalances } from '@luxexchange/lx/src/test/fixtures'
 
 export function portfolioBalancesById(inputBalances?: PortfolioBalance[]): Record<string, PortfolioBalance> {
   const balances = inputBalances ?? portfolioBalances()

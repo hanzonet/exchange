@@ -18,7 +18,7 @@ import {
   type LuxIdentifierService,
 } from '@luxfi/sessions'
 import React from 'react'
-import { sleep } from 'utilities/src/time/timing'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock platform detection - we're testing as extension by default

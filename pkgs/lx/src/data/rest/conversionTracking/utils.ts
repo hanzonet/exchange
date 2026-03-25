@@ -9,9 +9,9 @@ import {
   PROD_CONVERSION_PROXY_API_BASE_URL_DEPRECATED,
   STAGING_CONVERSION_PROXY_API_BASE_URL,
   STAGING_CONVERSION_PROXY_API_BASE_URL_DEPRECATED,
-} from 'lx/src/data/rest/conversionTracking/constants'
-import { PlatformIdType } from 'lx/src/data/rest/conversionTracking/types'
-import { isBetaEnv, isDevEnv } from 'utilities/src/environment/env'
+} from '@luxexchange/lx/src/data/rest/conversionTracking/constants'
+import { PlatformIdType } from '@luxexchange/lx/src/data/rest/conversionTracking/types'
+import { isBetaEnv, isDevEnv } from '@luxfi/utilities/src/environment/env'
 
 const JITTER_MIN_MS = ms('10d')
 const JITTER_MAX_MS = ms('14d')

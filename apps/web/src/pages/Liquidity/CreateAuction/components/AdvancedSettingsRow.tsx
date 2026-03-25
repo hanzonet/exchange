@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { ChevronsIn } from 'ui/src/components/icons/ChevronsIn'
-import { ChevronsOut } from 'ui/src/components/icons/ChevronsOut'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { ChevronsIn } from '@luxfi/ui/src/components/icons/ChevronsIn'
+import { ChevronsOut } from '@luxfi/ui/src/components/icons/ChevronsOut'
 import { KycCard } from '~/pages/Liquidity/CreateAuction/components/KycCard'
 
 export function AdvancedSettingsRow() {

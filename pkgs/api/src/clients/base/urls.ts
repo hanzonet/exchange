@@ -1,5 +1,5 @@
-import { isBetaEnv, isDevEnv, isPlaywrightEnv, isTestEnv } from 'utilities/src/environment/env'
-import { isAndroid, isExtensionApp, isMobileApp, isWebApp } from 'utilities/src/platform'
+import { isBetaEnv, isDevEnv, isPlaywrightEnv, isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { isAndroid, isExtensionApp, isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 export enum TrafficFlows {
   GraphQL = 'graphql',

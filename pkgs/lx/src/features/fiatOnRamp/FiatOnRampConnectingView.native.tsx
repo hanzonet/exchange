@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import { Image, ImageBackground, StyleSheet } from 'react-native'
 import { FadeIn, FadeOut } from 'react-native-reanimated'
-import { Flex, Text, useIsDarkMode } from 'ui/src'
-import { FOR_CONNECTING_BACKGROUND_DARK, FOR_CONNECTING_BACKGROUND_LIGHT, LUX_LOGO_LARGE } from 'ui/src/assets'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { iconSizes } from 'ui/src/theme'
+import { Flex, Text, useIsDarkMode } from '@luxfi/ui/src'
+import { FOR_CONNECTING_BACKGROUND_DARK, FOR_CONNECTING_BACKGROUND_LIGHT, LUX_LOGO_LARGE } from '@luxfi/ui/src/assets'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import {
   SERVICE_PROVIDER_ICON_BORDER_RADIUS,
   ServiceProviderLogoStyles,
-} from 'lx/src/features/fiatOnRamp/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
+} from '@luxexchange/lx/src/features/fiatOnRamp/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
 
 export function FiatOnRampConnectingView({
   isOffRamp,

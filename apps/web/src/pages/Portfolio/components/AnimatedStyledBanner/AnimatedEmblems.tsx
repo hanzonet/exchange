@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
-import { Flex, useIsDarkMode, useSporeColors } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
 import {
   EmblemA,
   EmblemB,

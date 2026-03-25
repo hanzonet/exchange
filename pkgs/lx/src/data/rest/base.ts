@@ -1,9 +1,9 @@
 import { Transport } from '@connectrpc/connect'
 import { ConnectTransportOptions } from '@connectrpc/connect-web'
 import { getTransport } from '@luxfi/api'
-import { luxUrls } from 'lx/src/constants/urls'
-import { BASE_LUX_HEADERS } from 'lx/src/data/apiClients/createLuxFetchClient'
-import { isMobileApp } from 'utilities/src/platform'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { BASE_LUX_HEADERS } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 export const createConnectTransportWithDefaults = (
   options: Partial<ConnectTransportOptions> = {},

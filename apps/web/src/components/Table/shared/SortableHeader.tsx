@@ -1,7 +1,7 @@
-import { ArrowDown } from 'ui/src/components/icons/ArrowDown'
-import { ArrowUp } from 'ui/src/components/icons/ArrowUp'
-import { Flex, styled, Text } from 'ui/src/index'
-import { IconSizeTokens } from 'ui/src/theme'
+import { ArrowDown } from '@luxfi/ui/src/components/icons/ArrowDown'
+import { ArrowUp } from '@luxfi/ui/src/components/icons/ArrowUp'
+import { Flex, styled, Text } from '@luxfi/ui/src/index'
+import { IconSizeTokens } from '@luxfi/ui/src/theme'
 import { ClickableTamaguiStyle } from '~/theme/components/styles'
 
 export const ClickableHeaderRow = styled(Flex, {

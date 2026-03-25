@@ -1,16 +1,16 @@
 import { GqlResult } from '@luxfi/api'
 import { useMemo } from 'react'
-import { TokenOption } from 'lx/src/components/lists/items/types'
-import { useCommonTokensOptions } from 'lx/src/components/TokenSelector/hooks/useCommonTokensOptions'
-import { useCurrencies } from 'lx/src/components/TokenSelector/hooks/useCurrencies'
+import { TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { useCommonTokensOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCommonTokensOptions'
+import { useCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencies'
 import {
   currencyInfosToTokenOptions,
   useCurrencyInfosToTokenOptions,
-} from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { COMMON_BASES } from 'lx/src/constants/routing'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isBackendSupportedChainId } from 'lx/src/features/chains/utils'
-import { currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { COMMON_BASES } from '@luxexchange/lx/src/constants/routing'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isBackendSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export function useCommonTokensOptionsWithFallback({
   evmAddress,

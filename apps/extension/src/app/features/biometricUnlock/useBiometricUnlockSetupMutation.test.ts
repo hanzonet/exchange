@@ -4,7 +4,7 @@ import { BiometricUnlockStorage } from 'src/app/features/biometricUnlock/Biometr
 import { useBiometricUnlockSetupMutation } from 'src/app/features/biometricUnlock/useBiometricUnlockSetupMutation'
 import { isUserVerifyingPlatformAuthenticatorAvailable } from 'src/app/utils/device/builtInBiometricCapabilitiesQuery'
 import { renderHookWithProviders } from 'src/test/render'
-import { decodeFromStorage, decrypt } from 'wallet/src/features/wallet/Keyring/crypto'
+import { decodeFromStorage, decrypt } from '@luxfi/wallet/src/features/wallet/Keyring/crypto'
 
 jest.mock('src/app/features/biometricUnlock/BiometricUnlockStorage')
 jest.mock('src/app/utils/device/builtInBiometricCapabilitiesQuery')

@@ -13,13 +13,13 @@ import {
   type ParsedCall,
   type SendCallsRequest,
 } from 'src/app/features/dappRequests/types/DappRequestTypes'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionType, type TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { BatchedRequestDetailsContent } from 'wallet/src/components/BatchedTransactions/BatchedTransactionDetails'
-import { DappSendCallsScanningContent } from 'wallet/src/components/dappRequests/DappSendCallsScanningContent'
-import { type TransactionRiskLevel } from 'wallet/src/features/dappRequests/types'
-import { shouldDisableConfirm } from 'wallet/src/features/dappRequests/utils/riskUtils'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionType, type TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { BatchedRequestDetailsContent } from '@luxfi/wallet/src/components/BatchedTransactions/BatchedTransactionDetails'
+import { DappSendCallsScanningContent } from '@luxfi/wallet/src/components/dappRequests/DappSendCallsScanningContent'
+import { type TransactionRiskLevel } from '@luxfi/wallet/src/features/dappRequests/types'
+import { shouldDisableConfirm } from '@luxfi/wallet/src/features/dappRequests/utils/riskUtils'
 
 interface SendCallsRequestContentProps {
   dappRequest: SendCallsRequest

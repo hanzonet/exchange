@@ -2,8 +2,8 @@ import { ChainId, KycVerificationStatus } from '@uniswap/client-liquidity/dist/u
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { toLegacyVerifyWalletResponse, useVerifyWalletQuery } from 'lx/src/data/rest/auctions/useVerifyWallet'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { toLegacyVerifyWalletResponse, useVerifyWalletQuery } from '@luxexchange/lx/src/data/rest/auctions/useVerifyWallet'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 interface UseAuctionKycStatusParams {
   walletAddress?: string

@@ -9,8 +9,8 @@ import {
   createSessionService,
   type SessionService,
 } from '@luxfi/sessions'
-import type { Logger } from 'utilities/src/logger/logger'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
 
 function provideSessionService(ctx: {
   getBaseUrl: () => string

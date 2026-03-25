@@ -1,13 +1,13 @@
 import { TradingApi } from '@luxfi/api'
 import { ContractTransaction, providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { buildBatchCancellation } from 'lx/src/features/transactions/cancel/cancelOrderFactory'
-import { hasValidCancellationData } from 'lx/src/features/transactions/cancel/validation'
-import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { hasEncodedOrder } from 'lx/src/features/transactions/utils/dex.utils'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { buildBatchCancellation } from '@luxexchange/lx/src/features/transactions/cancel/cancelOrderFactory'
+import { hasValidCancellationData } from '@luxexchange/lx/src/features/transactions/cancel/validation'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { hasEncodedOrder } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 interface OrderWithEncodedData {
   orderHash: string

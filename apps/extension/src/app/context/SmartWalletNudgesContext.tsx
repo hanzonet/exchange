@@ -1,24 +1,24 @@
 import { createContext, ReactNode, useCallback, useContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useGet5792DappInfo } from 'src/app/hooks/useGet5792DappInfo'
-import { ModalName, ModalNameType } from 'lx/src/features/telemetry/constants'
-import { extractUrlHost } from 'utilities/src/format/urls'
-import { useEvent } from 'utilities/src/react/hooks'
-import { ONE_DAY_MS } from 'utilities/src/time/time'
+import { ModalName, ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import { extractUrlHost } from '@luxfi/utilities/src/format/urls'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
 import {
   SmartWalletDelegationAction,
   useSmartWalletDelegationStatus,
-} from 'wallet/src/components/smartWallet/smartAccounts/hooks'
+} from '@luxfi/wallet/src/components/smartWallet/smartAccounts/hooks'
 import {
   selectHasSeenCreatedSmartWalletModal,
   selectHasShownEip5792Nudge,
-} from 'wallet/src/features/behaviorHistory/selectors'
+} from '@luxfi/wallet/src/features/behaviorHistory/selectors'
 import {
   setHasSeenSmartWalletCreatedWalletModal,
   setHasShown5792Nudge,
-} from 'wallet/src/features/behaviorHistory/slice'
-import { useAccountCountChanged } from 'wallet/src/features/wallet/hooks'
-import { WalletState } from 'wallet/src/state/walletReducer'
+} from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useAccountCountChanged } from '@luxfi/wallet/src/features/wallet/hooks'
+import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
 type DappInfo = {
   icon?: string

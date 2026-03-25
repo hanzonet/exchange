@@ -1,11 +1,11 @@
 import { Currency, Token } from '@luxamm/sdk-core'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { SerializedToken } from 'lx/src/features/tokens/warnings/slice/types'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { shortenAddress } from 'utilities/src/addresses'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { SerializedToken } from '@luxexchange/lx/src/features/tokens/warnings/slice/types'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 
 const DEFAULT_MAX_SYMBOL_CHARACTERS = 6
 

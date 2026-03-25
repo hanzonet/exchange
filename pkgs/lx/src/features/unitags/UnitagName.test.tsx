@@ -1,5 +1,5 @@
-import { UnitagName } from 'lx/src/features/unitags/UnitagName'
-import { renderWithProviders } from 'lx/src/test/render'
+import { UnitagName } from '@luxexchange/lx/src/features/unitags/UnitagName'
+import { renderWithProviders } from '@luxexchange/lx/src/test/render'
 
 it('renders UnitagName without a name', () => {
   const tree = renderWithProviders(<UnitagName animateText textProps={{ fontSize: 12 }} />)

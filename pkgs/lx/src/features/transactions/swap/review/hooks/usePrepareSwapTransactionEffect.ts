@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import { useSwapReviewTransactionStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/useSwapReviewTransactionStore'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
-import { useSwapTxStore } from 'lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { isValidSwapTxContext } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { useSwapReviewTransactionStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/useSwapReviewTransactionStore'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+import { useSwapTxStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
+import { isValidSwapTxContext } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 export function usePrepareSwapTransactionEffect(): void {
   const acceptedDerivedSwapInfo = useSwapReviewTransactionStore((s) => Boolean(s.acceptedDerivedSwapInfo))

@@ -1,7 +1,7 @@
-import { provideDeviceIdService } from '@universe/api/src/provideDeviceIdService'
-import { provideSessionStorage } from '@universe/api/src/provideSessionStorage'
-import { provideLuxIdentifierService } from '@universe/api/src/provideLuxIdentifierService'
-import { getTransport } from '@universe/api/src/transport'
+import { provideDeviceIdService } from '@luxexchange/api/src/provideDeviceIdService'
+import { provideSessionStorage } from '@luxexchange/api/src/provideSessionStorage'
+import { provideLuxIdentifierService } from '@luxexchange/api/src/provideLuxIdentifierService'
+import { getTransport } from '@luxexchange/api/src/transport'
 import {
   createNoopSessionService,
   createSessionClient,
@@ -9,10 +9,10 @@ import {
   createSessionService,
   type SessionService,
   type LuxIdentifierService,
-} from '@universe/sessions'
-import type { Logger } from 'utilities/src/logger/logger'
-import { isWebApp } from 'utilities/src/platform'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
+} from '@luxexchange/sessions'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
+import { isWebApp } from '@luxfi/utilities/src/platform'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
 
 function provideSessionService(ctx: {
   getBaseUrl: () => string

@@ -4,8 +4,8 @@ import {
   SwapType,
 } from '@uniswap/client-data-api/dist/data/v1/plan_pb'
 import { PlanActivity } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
+import { TradingApi } from '@luxexchange/api'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function mapDAPIPlanStatusToTXStatus(status: DataApiPlanStatus | undefined): TransactionStatus {
   switch (status) {

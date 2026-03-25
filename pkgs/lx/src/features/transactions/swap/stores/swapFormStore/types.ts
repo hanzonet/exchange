@@ -1,8 +1,8 @@
-import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import type { TradeableAsset } from 'lx/src/entities/assets'
-import type { UniverseChainId } from 'lx/src/features/chains/types'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { CurrencyField } from 'lx/src/types/currency'
+import type { PresetPercentage } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import type { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 // Making this type alias exactly the same as it was before migrating from using Context to zustand
 export type SwapFormState = {

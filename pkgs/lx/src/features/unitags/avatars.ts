@@ -1,7 +1,7 @@
 import { SignMessageFunc, UnitagGetAvatarUploadUrlResponse } from '@luxfi/api'
-import { UnitagsApiClient } from 'lx/src/data/apiClients/unitagsApi/UnitagsApiClient'
-import { isLocalFileUri, uploadFileToS3 } from 'lx/src/features/unitags/fileUtils'
-import { logger } from 'utilities/src/logger/logger'
+import { UnitagsApiClient } from '@luxexchange/lx/src/data/apiClients/unitagsApi/UnitagsApiClient'
+import { isLocalFileUri, uploadFileToS3 } from '@luxexchange/lx/src/features/unitags/fileUtils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export async function uploadAndUpdateAvatarAfterClaim({
   username,

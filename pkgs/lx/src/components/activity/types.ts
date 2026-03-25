@@ -1,7 +1,7 @@
-import { AuthTrigger } from 'lx/src/features/auth/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
+import { AuthTrigger } from '@luxexchange/lx/src/features/auth/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
 
 export interface TransactionSummaryLayoutProps {
   isExternalProfile?: boolean

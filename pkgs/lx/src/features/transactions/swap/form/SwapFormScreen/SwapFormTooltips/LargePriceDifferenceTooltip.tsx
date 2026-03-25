@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { TransactionDetailsTooltip as Tooltip } from 'lx/src/components/TransactionDetailsTooltip'
-import { luxUrls } from 'lx/src/constants/urls'
+import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 
 export function LargePriceDifferenceTooltip(): JSX.Element {
   const { t } = useTranslation()

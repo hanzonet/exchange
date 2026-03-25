@@ -5,10 +5,10 @@ import ContextMenu, { ContextMenuOnPressNativeEvent } from 'react-native-context
 import 'react-native-reanimated'
 import { FadeIn, FadeOut } from 'react-native-reanimated'
 import { WalletConnectSession } from 'src/features/walletConnect/walletConnectSlice'
-import { AnimatedTouchableArea, Flex, Text } from 'ui/src'
-import { iconSizes, spacing } from 'ui/src/theme'
-import { noop } from 'utilities/src/react/noop'
-import { DappHeaderIcon } from 'wallet/src/components/dappRequests/DappHeaderIcon'
+import { AnimatedTouchableArea, Flex, Text } from '@luxfi/ui/src'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { noop } from '@luxfi/utilities/src/react/noop'
+import { DappHeaderIcon } from '@luxfi/wallet/src/components/dappRequests/DappHeaderIcon'
 
 export function DappConnectionItem({
   session,

@@ -1,7 +1,7 @@
-import { findProof, type HashcashChallenge } from '@universe/sessions/src/challenge-solvers/hashcash/core'
-import type { HashcashWorkerChannelFactory } from '@universe/sessions/src/challenge-solvers/hashcash/worker/types'
-import type { ChallengeData, ChallengeSolver } from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
+import { findProof, type HashcashChallenge } from '@luxexchange/sessions/src/challenge-solvers/hashcash/core'
+import type { HashcashWorkerChannelFactory } from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
+import type { ChallengeData, ChallengeSolver } from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
 import { z } from 'zod'
 
 /** Error type for analytics classification */

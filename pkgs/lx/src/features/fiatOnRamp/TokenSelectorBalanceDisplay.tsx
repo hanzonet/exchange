@@ -1,12 +1,12 @@
 import { ComponentProps } from 'react'
-import { Flex, SpinningLoader, Text, TouchableArea, useIsDarkMode } from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { iconSizes, spacing } from 'ui/src/theme'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { CurrencyInfo, PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { useFormatExactCurrencyAmount } from 'lx/src/features/fiatOnRamp/hooks'
-import { TestID, TestIDType } from 'lx/src/test/fixtures/testIDs'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { Flex, SpinningLoader, Text, TouchableArea, useIsDarkMode } from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { CurrencyInfo, PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { useFormatExactCurrencyAmount } from '@luxexchange/lx/src/features/fiatOnRamp/hooks'
+import { TestID, TestIDType } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
 
 interface TokenSelectorBalanceDisplayProps {
   onPress: () => void

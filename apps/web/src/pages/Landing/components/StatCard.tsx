@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { parseToRgb } from 'polished'
-import { Flex, Text, useSporeColors } from 'ui/src'
-import { opacify } from 'ui/src/theme'
-import { useCurrentLocale } from 'lx/src/features/language/hooks'
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { opacify } from '@luxfi/ui/src/theme'
+import { useCurrentLocale } from '@luxexchange/lx/src/features/language/hooks'
 import { deprecatedStyled, keyframes } from '~/lib/deprecated-styled'
 
 const Mask = motion(deprecatedStyled.div`

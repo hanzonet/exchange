@@ -1,19 +1,19 @@
 import { Currency } from '@uniswap/sdk-core'
 import { PropsWithChildren, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Anchor, Flex, getTokenValue, Text, useSporeColors } from 'ui/src'
-import { ApproveAlt } from 'ui/src/components/icons'
-import { AvatarPlaceholder } from 'ui/src/components/icons/AvatarPlaceholder'
-import { PulseRipple } from 'ui/src/loading/PulseRipple'
-import { fonts, spacing } from 'ui/src/theme'
-import Badge from 'lx/src/components/badge/Badge'
-import { SpinningBorderIcon } from 'lx/src/components/ConfirmSwapModal/steps/SpinningBorderIcon'
-import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { Anchor, Flex, getTokenValue, Text, useSporeColors } from '@luxfi/ui/src'
+import { ApproveAlt } from '@luxfi/ui/src/components/icons'
+import { AvatarPlaceholder } from '@luxfi/ui/src/components/icons/AvatarPlaceholder'
+import { PulseRipple } from '@luxfi/ui/src/loading/PulseRipple'
+import { fonts, spacing } from '@luxfi/ui/src/theme'
+import Badge from '@luxexchange/lx/src/components/badge/Badge'
+import { SpinningBorderIcon } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/SpinningBorderIcon'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { SplitLogo } from '@luxexchange/lx/src/components/CurrencyLogo/SplitLogo'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export const STEP_ROW_HEIGHT = '$spacing40'
 export const STEP_ROW_ICON_SIZE = '$icon.24'
@@ -179,7 +179,7 @@ export function StepIconWrapper({
 }
 
 // SpinningBorderIcon is now exported from its own file with platform-specific implementations
-export { SpinningBorderIcon } from 'lx/src/components/ConfirmSwapModal/steps/SpinningBorderIcon'
+export { SpinningBorderIcon } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/SpinningBorderIcon'
 
 function Timer({ secondsRemaining }: { secondsRemaining: number }): JSX.Element | null {
   const timerText = useMemo(() => {

@@ -1,5 +1,5 @@
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useEvent } from 'utilities/src/react/hooks'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { ReceiveCryptoModalInitialState } from '~/components/ReceiveCryptoModal/types'
 import { setOpenModal } from '~/state/application/reducer'
 import { useAppDispatch } from '~/state/hooks'

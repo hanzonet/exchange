@@ -18,7 +18,7 @@ module.exports = function (api) {
     //       {
     //         components: ['ui'],
     //         // experimentalFlattenThemesOnNative: true,
-    //         config: '../../packages/ui/src/gui.config.ts',
+    //         config: '../../pkgs/ui/src/gui.config.ts',
     //       },
     //     ],
 

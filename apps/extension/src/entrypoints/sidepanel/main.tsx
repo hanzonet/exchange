@@ -13,9 +13,9 @@ import { onboardingMessageChannel } from 'src/background/messagePassing/messageC
 import { OnboardingMessageType } from 'src/background/messagePassing/types/ExtensionMessages'
 import { getReduxStore } from 'src/store/store'
 import { ExtensionAppLocation, StoreSynchronization } from 'src/store/storeSynchronization'
-import { initializeScrollWatcher } from 'lx/src/components/modals/ScrollLock'
-import { initializePortfolioQueryOverrides } from 'lx/src/data/rest/portfolioBalanceOverrides'
-import { logger } from 'utilities/src/logger/logger'
+import { initializeScrollWatcher } from '@luxexchange/lx/src/components/modals/ScrollLock'
+import { initializePortfolioQueryOverrides } from '@luxexchange/lx/src/data/rest/portfolioBalanceOverrides'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 // biome-ignore lint/suspicious/noExplicitAny: Global polyfill cleanup requires any type for runtime modification
 ;(globalThis as any).regeneratorRuntime = undefined
 

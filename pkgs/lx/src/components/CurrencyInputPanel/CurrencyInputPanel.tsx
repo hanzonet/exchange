@@ -2,23 +2,23 @@
 // gui-ignore
 /* eslint-disable complexity */
 import { forwardRef, memo, useCallback } from 'react'
-import { Flex, TouchableArea, useIsShortMobileDevice, useShakeAnimation } from 'ui/src'
+import { Flex, TouchableArea, useIsShortMobileDevice, useShakeAnimation } from '@luxfi/ui/src'
 import {
   AmountInputPresets,
   PRESET_BUTTON_PROPS,
-} from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
-import { PresetAmountButton } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
-import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import { PRESET_PERCENTAGES } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
-import { CurrencyInputPanelBalance } from 'lx/src/components/CurrencyInputPanel/CurrencyInputPanelBalance'
-import { CurrencyInputPanelHeader } from 'lx/src/components/CurrencyInputPanel/CurrencyInputPanelHeader'
-import { CurrencyInputPanelInput } from 'lx/src/components/CurrencyInputPanel/CurrencyInputPanelInput'
-import { CurrencyInputPanelValue } from 'lx/src/components/CurrencyInputPanel/CurrencyInputPanelValue'
-import { useIndicativeQuoteTextDisplay } from 'lx/src/components/CurrencyInputPanel/hooks/useIndicativeQuoteTextDisplay'
-import type { CurrencyInputPanelProps, CurrencyInputPanelRef } from 'lx/src/components/CurrencyInputPanel/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { CurrencyField } from 'lx/src/types/currency'
-import { isExtensionApp, isMobileWeb, isWebAppDesktop } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
+import { PresetAmountButton } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
+import type { PresetPercentage } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import { PRESET_PERCENTAGES } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
+import { CurrencyInputPanelBalance } from '@luxexchange/lx/src/components/CurrencyInputPanel/CurrencyInputPanelBalance'
+import { CurrencyInputPanelHeader } from '@luxexchange/lx/src/components/CurrencyInputPanel/CurrencyInputPanelHeader'
+import { CurrencyInputPanelInput } from '@luxexchange/lx/src/components/CurrencyInputPanel/CurrencyInputPanelInput'
+import { CurrencyInputPanelValue } from '@luxexchange/lx/src/components/CurrencyInputPanel/CurrencyInputPanelValue'
+import { useIndicativeQuoteTextDisplay } from '@luxexchange/lx/src/components/CurrencyInputPanel/hooks/useIndicativeQuoteTextDisplay'
+import type { CurrencyInputPanelProps, CurrencyInputPanelRef } from '@luxexchange/lx/src/components/CurrencyInputPanel/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { isExtensionApp, isMobileWeb, isWebAppDesktop } from '@luxfi/utilities/src/platform'
 
 export const CurrencyInputPanel = memo(
   forwardRef<CurrencyInputPanelRef, CurrencyInputPanelProps>(

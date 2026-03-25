@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, GeneratedIcon, Square, Text, useSporeColors } from 'ui/src'
-import { HelpCenter } from 'ui/src/components/icons'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Button, Flex, GeneratedIcon, Square, Text, useSporeColors } from '@luxfi/ui/src'
+import { HelpCenter } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function BiometricAuthModal({
   onClose,

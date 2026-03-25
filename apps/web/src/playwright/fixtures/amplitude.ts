@@ -1,6 +1,6 @@
 // biome-ignore lint/style/noRestrictedImports: Playwright fixtures need direct analytics import
 import { test as base } from '@playwright/test'
-import { luxUrls } from 'lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 
 type AmplitudeFixture = {
   amplitude: {

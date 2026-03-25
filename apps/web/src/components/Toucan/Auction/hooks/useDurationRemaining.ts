@@ -1,7 +1,7 @@
 import { useRef } from 'react'
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
-import { getDurationRemainingString } from 'utilities/src/time/duration'
-import { ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getDurationRemainingString } from '@luxfi/utilities/src/time/duration'
+import { ONE_MINUTE_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 import { useBlockTimestamp } from '~/hooks/useBlockTimestamp'
 import useMachineTimeMs from '~/hooks/useMachineTime'
 

@@ -1,10 +1,10 @@
-import { ColorTokens, Flex, Text } from 'ui/src'
-import { Caret } from 'ui/src/components/icons/Caret'
-import { fonts, IconSizeTokens } from 'ui/src/theme'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { NumberType } from 'utilities/src/format/types'
+import { ColorTokens, Flex, Text } from '@luxfi/ui/src'
+import { Caret } from '@luxfi/ui/src/components/icons/Caret'
+import { fonts, IconSizeTokens } from '@luxfi/ui/src/theme'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 interface RelativeChangeProps {
   change?: number

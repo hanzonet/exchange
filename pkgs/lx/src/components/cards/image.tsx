@@ -1,5 +1,5 @@
-import { Image } from 'ui/src'
-import { isExtensionApp, isWebApp } from 'utilities/src/platform'
+import { Image } from '@luxfi/ui/src'
+import { isExtensionApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 // This assumes a singular graphic size for cards.
 // Please make sure design is aware of this and that the graphic works in small and large cards!

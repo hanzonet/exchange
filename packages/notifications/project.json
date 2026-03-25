@@ -1,7 +1,7 @@
 {
   "name": "@luxfi/notifications",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/notifications/src",
+  "sourceRoot": "pkgs/notifications/src",
   "projectType": "library",
   "tags": ["scope:notifications", "type:lib"],
   "targets": {

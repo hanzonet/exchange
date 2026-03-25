@@ -3,12 +3,12 @@ import { Percent, TradeType } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { Pool as V3Pool } from '@uniswap/v3-sdk'
 import { Pool as V4Pool } from '@uniswap/v4-sdk'
-import { LuxLogo } from 'ui/src/components/icons/LuxLogo'
-import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
-import { Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { isChained, isClassic } from 'lx/src/features/transactions/swap/utils/routing'
-import { currencyId } from 'lx/src/utils/currencyId'
-import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'lx/src/utils/routingDiagram/types'
+import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
+import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from '@luxexchange/lx/src/constants/pools'
+import { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isChained, isClassic } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/types'
 
 type AMMPool = Pair | V3Pool | V4Pool
 

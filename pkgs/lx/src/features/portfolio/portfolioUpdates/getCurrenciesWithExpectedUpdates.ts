@@ -1,9 +1,9 @@
-import { normalizeCurrencyIdForMapLookup, normalizeTokenAddressForCache } from 'lx/src/data/cache'
-import { TransactionDetails, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { CurrencyId } from 'lx/src/types/currency'
-import { buildCurrencyId, buildNativeCurrencyId, buildWrappedNativeCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+import { normalizeCurrencyIdForMapLookup, normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { TransactionDetails, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId, buildNativeCurrencyId, buildWrappedNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Based on the transaction data, determine which currencies we expect to see a balance update on

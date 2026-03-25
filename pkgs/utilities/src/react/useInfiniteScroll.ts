@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function useInfiniteScroll({
   onLoadMore,

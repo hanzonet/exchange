@@ -3,27 +3,27 @@ import { useQueryClient } from '@tanstack/react-query'
 import type { Currency } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
 import { useMemo } from 'react'
-import { getSwappableTokensQueryData } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
+import { getSwappableTokensQueryData } from '@luxexchange/lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
 
-import type { TradeableAsset } from 'lx/src/entities/assets'
-import { AssetType } from 'lx/src/entities/assets'
-import { useTokenProjects } from 'lx/src/features/dataApi/tokenProjects/tokenProjects'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { getShouldResetExactAmountToken } from 'lx/src/features/transactions/swap/form/utils'
-import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { maybeLogFirstSwapAction } from 'lx/src/features/transactions/swap/utils/maybeLogFirstSwapAction'
+import type { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { useTokenProjects } from '@luxexchange/lx/src/features/dataApi/tokenProjects/tokenProjects'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { getShouldResetExactAmountToken } from '@luxexchange/lx/src/features/transactions/swap/form/utils'
+import type { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { maybeLogFirstSwapAction } from '@luxexchange/lx/src/features/transactions/swap/utils/maybeLogFirstSwapAction'
 import {
   getTokenAddressFromChainForTradingApi,
   toTradingApiSupportedChainId,
   tradingApiToUniverseChainId,
-} from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { CurrencyField } from 'lx/src/types/currency'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { areCurrencyIdsEqual, currencyAddress, currencyId } from 'lx/src/utils/currencyId'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useValueAsRef } from 'utilities/src/react/useValueAsRef'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { areCurrencyIdsEqual, currencyAddress, currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useValueAsRef } from '@luxfi/utilities/src/react/useValueAsRef'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 
 export function useOnSelectCurrency({
   onSelect,

@@ -1,4 +1,4 @@
-import { colorsLight } from 'ui/src/theme'
+import { colorsLight } from '@luxfi/ui/src/theme'
 import { hex } from 'wcag-contrast'
 
 /*

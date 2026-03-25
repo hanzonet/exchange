@@ -1,11 +1,11 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useCallback } from 'react'
-import { TokenOption } from 'lx/src/components/lists/items/types'
-import { useCurrencyInfosToTokenOptions } from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { usePortfolioBalancesForAddressById } from 'lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
-import { useTrendingTokensCurrencyInfos } from 'lx/src/components/TokenSelector/hooks/useTrendingTokensCurrencyInfos'
-import type { AddressGroup } from 'lx/src/features/accounts/store/types/AccountsState'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { useCurrencyInfosToTokenOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { usePortfolioBalancesForAddressById } from '@luxexchange/lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
+import { useTrendingTokensCurrencyInfos } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTrendingTokensCurrencyInfos'
+import type { AddressGroup } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 export function useTrendingTokensOptions({
   addresses,

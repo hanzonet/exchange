@@ -1,9 +1,9 @@
 import { Currency } from '@uniswap/sdk-core'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { NumberType } from 'utilities/src/format/types'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function useFormattedCurrencyAmountAndUSDValue({
   currency,

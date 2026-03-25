@@ -1,4 +1,4 @@
-import { isWebApp } from 'utilities/src/platform'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 /**
  * List of supported languages in app, represented by ISO 639 language code.

@@ -1,4 +1,4 @@
-import { opacifyRaw } from 'ui/src/theme/color/utils'
+import { opacifyRaw } from '@luxfi/ui/src/theme/color/utils'
 
 const accentColors = {
   pinkLight: '#FEF4FF',

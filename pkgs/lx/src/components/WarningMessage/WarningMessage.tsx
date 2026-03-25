@@ -1,6 +1,6 @@
-import { ColorTokens, Flex, Text, Tooltip } from 'ui/src'
-import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
-import { zIndexes } from 'ui/src/theme'
+import { ColorTokens, Flex, Text, Tooltip } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 interface WarningMessageProps {
   warningMessage: string

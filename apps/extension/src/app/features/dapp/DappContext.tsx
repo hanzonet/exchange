@@ -7,9 +7,9 @@ import { isConnectedAccount } from 'src/app/features/dapp/utils'
 import { closePopup, PopupName } from 'src/app/features/popups/slice'
 import { backgroundToSidePanelMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { BackgroundToSidePanelRequestType } from 'src/background/messagePassing/types/requests'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { extractBaseUrl } from 'utilities/src/format/urls'
-import { useActiveAccountAddress } from 'wallet/src/features/wallet/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { extractBaseUrl } from '@luxfi/utilities/src/format/urls'
+import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type DappContextState = {
   dappUrl: string

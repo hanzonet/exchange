@@ -1,13 +1,13 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
-import { OnchainItemListOptionType, SearchModalOption } from 'lx/src/components/lists/items/types'
-import { extractDomain } from 'lx/src/components/lists/items/wallets/utils'
-import { OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { SearchContext, SearchFilterContext } from 'lx/src/features/search/SearchModal/analytics/SearchContext'
-import { InterfaceEventName, MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { NavBarSearchTypes } from 'lx/src/features/telemetry/types'
-import { logger } from 'utilities/src/logger/logger'
-import { isMobileApp } from 'utilities/src/platform'
+import { OnchainItemListOptionType, SearchModalOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { extractDomain } from '@luxexchange/lx/src/components/lists/items/wallets/utils'
+import { OnchainItemSection, OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { SearchContext, SearchFilterContext } from '@luxexchange/lx/src/features/search/SearchModal/analytics/SearchContext'
+import { InterfaceEventName, MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { NavBarSearchTypes } from '@luxexchange/lx/src/features/telemetry/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 // eslint-disable-next-line complexity
 export function sendSearchOptionItemClickedAnalytics({

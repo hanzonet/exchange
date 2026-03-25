@@ -12,9 +12,9 @@ import {
   NO_FEES_ICON,
   NO_LUX_INTERFACE_FEES_BANNER_DARK,
   NO_LUX_INTERFACE_FEES_BANNER_LIGHT,
-} from 'ui/src/assets'
-import { luxUrls } from 'lx/src/constants/urls'
-import i18n from 'lx/src/i18n'
+} from '@luxfi/ui/src/assets'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import i18n from '@luxexchange/lx/src/i18n'
 
 /**
  * Check if No App Fees banner should be shown based on feature flag.

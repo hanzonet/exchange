@@ -11,22 +11,22 @@ import {
   useColorsFromTokenColor,
   useExtractedTokenColor,
   useSporeColors,
-} from 'ui/src'
-import { EnvelopeHeart } from 'ui/src/components/icons/EnvelopeHeart'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { Shuffle } from 'ui/src/components/icons/Shuffle'
-import { iconSizes } from 'ui/src/theme'
-import { BaseModalProps } from 'lx/src/components/BridgedAsset/BridgedAssetModal'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { openUri } from 'lx/src/utils/linking'
-import { isWebAppDesktop } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxfi/ui/src'
+import { EnvelopeHeart } from '@luxfi/ui/src/components/icons/EnvelopeHeart'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { Shuffle } from '@luxfi/ui/src/components/icons/Shuffle'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { BaseModalProps } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetModal'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { isWebAppDesktop } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export type WormholeModalProps = {
   currencyInfo?: CurrencyInfo

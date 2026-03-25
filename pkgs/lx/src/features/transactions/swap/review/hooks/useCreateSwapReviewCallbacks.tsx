@@ -1,28 +1,28 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { useCallback } from 'react'
 // biome-ignore lint/style/noRestrictedImports: only using to keep a consistent timing on interface
-import { ADAPTIVE_MODAL_ANIMATION_DURATION } from 'ui/src/components/modal/AdaptiveWebModal'
-import type { ParsedWarnings } from 'lx/src/components/modals/WarningModal/types'
-import type { AuthTrigger } from 'lx/src/features/auth/types'
-import { TransactionScreen } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import type { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { shouldShowFlashblocksUI } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
-import { useIsUnichainFlashblocksEnabled } from 'lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
+import { ADAPTIVE_MODAL_ANIMATION_DURATION } from '@luxfi/ui/src/components/modal/AdaptiveWebModal'
+import type { ParsedWarnings } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import type { AuthTrigger } from '@luxexchange/lx/src/features/auth/types'
+import { TransactionScreen } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import type { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { shouldShowFlashblocksUI } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
+import { useIsUnichainFlashblocksEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
 import {
   ensureFreshSwapTxData,
   useSwapParams,
   useSwapTxAndGasInfoService,
-} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/hooks'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import type { GetExecuteSwapService } from 'lx/src/features/transactions/swap/services/executeSwapService'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
-import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import type { SetCurrentStepFn } from 'lx/src/features/transactions/swap/types/swapCallback'
-import { createTransactionId } from 'lx/src/utils/createTransactionId'
-import { tryCatch } from 'utilities/src/errors'
-import { logger } from 'utilities/src/logger/logger'
-import { isWebApp } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/hooks'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import type { GetExecuteSwapService } from '@luxexchange/lx/src/features/transactions/swap/services/executeSwapService'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+import type { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import type { SetCurrentStepFn } from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'
+import { createTransactionId } from '@luxexchange/lx/src/utils/createTransactionId'
+import { tryCatch } from '@luxfi/utilities/src/errors'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isWebApp } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 interface SwapReviewCallbacks {
   onSwapButtonClick: () => Promise<void>

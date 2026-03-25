@@ -4,7 +4,7 @@ import { useQuery } from '@connectrpc/connect-query'
 import { UseQueryResult } from '@tanstack/react-query'
 import { GetRewardsRequest, GetRewardsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { getRewards } from '@uniswap/client-data-api/dist/data/v1/api-DataApiService_connectquery'
-import { luxGetTransport } from 'lx/src/data/rest/base'
+import { luxGetTransport } from '@luxexchange/lx/src/data/rest/base'
 
 export function useGetPoolsRewards(
   input?: PartialMessage<GetRewardsRequest>,

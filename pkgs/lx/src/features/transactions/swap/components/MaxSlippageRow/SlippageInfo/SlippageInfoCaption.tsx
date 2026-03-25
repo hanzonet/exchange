@@ -1,14 +1,14 @@
 import { TradeType } from '@luxamm/sdk-core'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { luxUrls } from 'lx/src/constants/urls'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { SlippageInfoProps } from 'lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/types'
-import { useFormatSlippageAmount } from 'lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/useFormatSlippageAmount'
-import { TradeWithSlippage } from 'lx/src/features/transactions/swap/types/trade'
-import { isMobileApp, isWebPlatform } from 'utilities/src/platform'
+import { Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { SlippageInfoProps } from '@luxexchange/lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/types'
+import { useFormatSlippageAmount } from '@luxexchange/lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/useFormatSlippageAmount'
+import { TradeWithSlippage } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isMobileApp, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 function SlippageWarningText(): JSX.Element {
   const { t } = useTranslation()

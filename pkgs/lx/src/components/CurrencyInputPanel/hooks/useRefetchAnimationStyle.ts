@@ -1,4 +1,4 @@
-import type { CurrencyInputPanelProps } from 'lx/src/components/CurrencyInputPanel/types'
+import type { CurrencyInputPanelProps } from '@luxexchange/lx/src/components/CurrencyInputPanel/types'
 
 /**
  * Returns an animated opacity based on current indicative and full quote state.

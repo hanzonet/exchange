@@ -2,30 +2,30 @@ import { ApolloError } from '@apollo/client'
 import { ConnectError } from '@connectrpc/connect'
 import { UseQueryResult } from '@tanstack/react-query'
 import { TokenRankingsResponse, TokenRankingsStat } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
-import { GraphQLApi } from '@universe/api'
+import { GraphQLApi } from '@luxexchange/api'
 import { toIncludeSameMembers } from 'jest-extended'
 import { PreloadedState } from 'redux'
-import { OnchainItemListOptionType, TokenOption } from 'lx/src/components/lists/items/types'
-import { useAllCommonBaseCurrencies } from 'lx/src/components/TokenSelector/hooks/useAllCommonBaseCurrencies'
-import { useCommonTokensOptionsWithFallback } from 'lx/src/components/TokenSelector/hooks/useCommonTokensOptionsWithFallback'
+import { OnchainItemListOptionType, TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { useAllCommonBaseCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useAllCommonBaseCurrencies'
+import { useCommonTokensOptionsWithFallback } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCommonTokensOptionsWithFallback'
 import {
   createEmptyBalanceOption,
   useCurrencyInfosToTokenOptions,
-} from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { useFavoriteCurrencies } from 'lx/src/components/TokenSelector/hooks/useFavoriteCurrencies'
-import { useFavoriteTokensOptions } from 'lx/src/components/TokenSelector/hooks/useFavoriteTokensOptions'
-import { usePortfolioBalancesForAddressById } from 'lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
-import { usePortfolioTokenOptions } from 'lx/src/components/TokenSelector/hooks/usePortfolioTokenOptions'
-import { useRecentlySearchedTokens } from 'lx/src/components/TokenSelector/hooks/useRecentlySearchedTokens'
-import { useTrendingTokensOptions } from 'lx/src/components/TokenSelector/hooks/useTrendingTokensOptions'
-import { BRIDGED_BASE_ADDRESSES } from 'lx/src/constants/addresses'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { tokenProjectToCurrencyInfos } from 'lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
-import { SearchHistoryResultType } from 'lx/src/features/search/SearchHistoryResult'
-import { useFilterCallbacks } from 'lx/src/features/search/SearchModal/hooks/useFilterCallbacks'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { LuxState } from 'lx/src/state/luxReducer'
+} from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { useFavoriteCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useFavoriteCurrencies'
+import { useFavoriteTokensOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useFavoriteTokensOptions'
+import { usePortfolioBalancesForAddressById } from '@luxexchange/lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
+import { usePortfolioTokenOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/usePortfolioTokenOptions'
+import { useRecentlySearchedTokens } from '@luxexchange/lx/src/components/TokenSelector/hooks/useRecentlySearchedTokens'
+import { useTrendingTokensOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTrendingTokensOptions'
+import { BRIDGED_BASE_ADDRESSES } from '@luxexchange/lx/src/constants/addresses'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { tokenProjectToCurrencyInfos } from '@luxexchange/lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
+import { SearchHistoryResultType } from '@luxexchange/lx/src/features/search/SearchHistoryResult'
+import { useFilterCallbacks } from '@luxexchange/lx/src/features/search/SearchModal/hooks/useFilterCallbacks'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 import {
   arbitrumDaiCurrencyInfo,
   daiToken,
@@ -41,11 +41,11 @@ import {
   usdcBaseToken,
   usdcCurrencyInfo,
   usdcToken,
-} from 'lx/src/test/fixtures'
-import { act, renderHook, waitFor } from 'lx/src/test/test-utils'
-import { createArray, queryResolvers } from 'lx/src/test/utils'
-import { portfolioBalancesById } from 'lx/src/utils/balances'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/test/fixtures'
+import { act, renderHook, waitFor } from '@luxexchange/lx/src/test/test-utils'
+import { createArray, queryResolvers } from '@luxexchange/lx/src/test/utils'
+import { portfolioBalancesById } from '@luxexchange/lx/src/utils/balances'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 // Extend vitest's expect types with jest-extended matchers
 declare module 'vitest' {

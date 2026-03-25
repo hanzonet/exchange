@@ -1,6 +1,6 @@
-import { NetworkFee } from 'lx/src/components/gas/NetworkFee'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { render } from 'lx/src/test/test-utils'
+import { NetworkFee } from '@luxexchange/lx/src/components/gas/NetworkFee'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { render } from '@luxexchange/lx/src/test/test-utils'
 
 vi.mock('lx/src/features/gas/hooks', () => {
   return {

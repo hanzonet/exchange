@@ -1,12 +1,12 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { type CurrencyId } from 'lx/src/types/currency'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { logger } from 'utilities/src/logger/logger'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { type CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isEVMAddressWithChecksum } from '@luxfi/utilities/src/addresses/evm/evm'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const OVERRIDE_MAX_AGE = 30 * 60 * 1000 // 30 minutes
 

@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
 import { Trans } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { SmartWallet } from 'ui/src/components/icons/SmartWallet'
-import { openUri } from 'lx/src/utils/linking'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { SmartWallet } from '@luxfi/ui/src/components/icons/SmartWallet'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
 
 const onPressLearnMore = (uri: string): Promise<void> => openUri({ uri })
 

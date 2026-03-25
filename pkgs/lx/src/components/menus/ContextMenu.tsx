@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { DropdownMenuSheetItemProps, GeneratedIcon, IconProps, TextProps } from 'ui/src'
-import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
-import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { DropdownMenuSheetItemProps, GeneratedIcon, IconProps, TextProps } from '@luxfi/ui/src'
+import { ContextMenuTriggerMode } from '@luxexchange/lx/src/components/menus/types'
+import { ElementName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export type MenuOptionItemWithId = MenuOptionItem & {
   id: string

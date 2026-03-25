@@ -1,4 +1,4 @@
-import { CollectFeesTransactionStep } from 'lx/src/features/transactions/liquidity/steps/collectFees'
+import { CollectFeesTransactionStep } from '@luxexchange/lx/src/features/transactions/liquidity/steps/collectFees'
 
 export type CollectFeesSteps = CollectFeesTransactionStep
 

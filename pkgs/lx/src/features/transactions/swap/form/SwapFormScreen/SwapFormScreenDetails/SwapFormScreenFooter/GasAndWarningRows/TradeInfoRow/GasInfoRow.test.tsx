@@ -1,9 +1,9 @@
-import { type GasFeeResult } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { GasInfoRow } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/GasInfoRow'
-import { GasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { render } from 'lx/src/test/test-utils'
+import { type GasFeeResult } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { GasInfoRow } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/GasInfoRow'
+import { GasInfo } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { render } from '@luxexchange/lx/src/test/test-utils'
 import type { MockedFunction } from 'vitest'
 
 // Mock dependencies
@@ -11,7 +11,7 @@ vi.mock('lx/src/features/transactions/swap/hooks/usePriceUXEnabled', () => ({
   usePriceUXEnabled: vi.fn(),
 }))
 
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
 
 const mockUsePriceUXEnabled = usePriceUXEnabled as MockedFunction<typeof usePriceUXEnabled>
 

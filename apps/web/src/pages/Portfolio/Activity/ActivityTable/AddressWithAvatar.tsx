@@ -1,11 +1,11 @@
 import { memo } from 'react'
-import { Flex, Text } from 'ui/src'
-import { Unitag } from 'ui/src/components/icons/Unitag'
-import { iconSizes } from 'ui/src/theme'
-import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
-import { useENSName } from 'lx/src/features/ens/api'
-import { shortenAddress } from 'utilities/src/addresses'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { useENSName } from '@luxexchange/lx/src/features/ens/api'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 import { useActivityAddressLookupValue } from '~/pages/Portfolio/Activity/ActivityTable/ActivityAddressLookupStore'
 
 interface AddressWithAvatarProps {

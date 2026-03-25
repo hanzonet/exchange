@@ -1,16 +1,16 @@
 import { TradeType } from '@uniswap/sdk-core'
-import { useSporeColors } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { iconSizes } from 'ui/src/theme'
+import { useSporeColors } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import {
   TwoTokenDetails,
   useTokenAmountInfo,
-} from 'lx/src/components/activity/details/transactions/utilityComponents'
-import { SwapTypeTransactionInfo } from 'lx/src/components/activity/details/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { getAmountsFromTrade } from 'lx/src/features/transactions/swap/utils/getAmountsFromTrade'
-import { isConfirmedSwapTypeInfo } from 'lx/src/features/transactions/types/utils'
+} from '@luxexchange/lx/src/components/activity/details/transactions/utilityComponents'
+import { SwapTypeTransactionInfo } from '@luxexchange/lx/src/components/activity/details/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { getAmountsFromTrade } from '@luxexchange/lx/src/features/transactions/swap/utils/getAmountsFromTrade'
+import { isConfirmedSwapTypeInfo } from '@luxexchange/lx/src/features/transactions/types/utils'
 
 export function SwapTransactionDetails({
   typeInfo,

@@ -19,10 +19,10 @@ import type {
   PoolInfoRequest,
   PoolInfoResponse,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
-import { type UseQueryApiHelperHookArgs } from '@universe/api'
-import { LiquidityServiceClient } from 'lx/src/data/apiClients/liquidityService/LiquidityServiceClient'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { type UseQueryApiHelperHookArgs } from '@luxexchange/api'
+import { LiquidityServiceClient } from '@luxexchange/lx/src/data/apiClients/liquidityService/LiquidityServiceClient'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 function getPoolInfoQueryOptions(
   client: typeof LiquidityServiceClient,

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 /**
  * Snowflake Animation Constants

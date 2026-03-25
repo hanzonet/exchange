@@ -1,8 +1,8 @@
 import { TradingApi } from '@luxfi/api'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
-import { SlippageEdit } from 'lx/src/features/transactions/TransactionDetails/SlippageEdit'
+import { Flex, Text } from '@luxfi/ui/src'
+import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
+import { SlippageEdit } from '@luxexchange/lx/src/features/transactions/TransactionDetails/SlippageEdit'
 
 export function ExpectedFailureBanner({
   txFailureReasons,

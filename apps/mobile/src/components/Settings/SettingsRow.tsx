@@ -12,14 +12,14 @@ import {
 import { ConnectionsDappsListModalState } from 'src/components/Settings/ConnectionsDappModal/ConnectionsDappsListModalState'
 import { EditWalletSettingsModalState } from 'src/components/Settings/EditWalletModal/EditWalletSettingsModalState'
 import { useIsScreenNavigationReady } from 'src/utils/useIsScreenNavigationReady'
-import { Flex, Skeleton, Switch, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { RotatableChevron } from 'ui/src/components/icons'
-import { iconSizes } from 'ui/src/theme'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { openUri } from 'lx/src/utils/linking'
-import { SmartWalletAdvancedSettingsModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { Flex, Skeleton, Switch, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { SmartWalletAdvancedSettingsModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
 
 export const SETTINGS_ROW_HEIGHT = 60
 

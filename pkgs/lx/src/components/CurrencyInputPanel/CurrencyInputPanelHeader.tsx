@@ -1,21 +1,21 @@
 import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback } from 'react'
-import { Flex, Text } from 'ui/src'
-import { spacing } from 'ui/src/theme/spacing'
+import { Flex, Text } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme/spacing'
 import {
   AmountInputPresets,
   PRESET_BUTTON_PROPS,
-} from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
-import { PresetAmountButton } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
-import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import { PRESET_PERCENTAGES } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
-import { DefaultTokenOptions } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/DefaultTokenOptions'
-import { TokenRate } from 'lx/src/components/CurrencyInputPanel/TokenRate'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import { CurrencyField } from 'lx/src/types/currency'
-import { isExtensionApp, isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
+import { PresetAmountButton } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
+import type { PresetPercentage } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import { PRESET_PERCENTAGES } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
+import { DefaultTokenOptions } from '@luxexchange/lx/src/components/CurrencyInputPanel/DefaultTokenOptions/DefaultTokenOptions'
+import { TokenRate } from '@luxexchange/lx/src/components/CurrencyInputPanel/TokenRate'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { isExtensionApp, isWebAppDesktop, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 interface CurrencyInputPanelHeaderProps {
   headerLabel?: string

@@ -1,9 +1,9 @@
 import { GqlResult, GraphQLApi } from '@luxfi/api'
 import { useCallback, useMemo } from 'react'
-import { tokenProjectToCurrencyInfos } from 'lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import { CurrencyId } from 'lx/src/types/currency'
+import { tokenProjectToCurrencyInfos } from '@luxexchange/lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
 
 /**
  * Fetches token information as CurrencyInfo from currencyIds. When used, wrap component

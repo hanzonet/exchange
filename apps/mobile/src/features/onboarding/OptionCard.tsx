@@ -1,9 +1,9 @@
 import React from 'react'
-import { Flex, Text, TouchableArea, useIsDarkMode } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { TestIDType } from 'lx/src/test/fixtures/testIDs'
+import { Flex, Text, TouchableArea, useIsDarkMode } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TestIDType } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export function OptionCard({
   title,

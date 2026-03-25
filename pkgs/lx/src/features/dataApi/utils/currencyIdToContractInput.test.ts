@@ -1,9 +1,9 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   currencyIdToContractInput,
   currencyIdToRestContractInput,
-} from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import { SAMPLE_BASE_CURRENCY_ID, SAMPLE_CURRENCY_ID_1, SAMPLE_CURRENCY_ID_2 } from 'lx/src/test/fixtures'
+} from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { SAMPLE_BASE_CURRENCY_ID, SAMPLE_CURRENCY_ID_1, SAMPLE_CURRENCY_ID_2 } from '@luxexchange/lx/src/test/fixtures'
 
 describe(currencyIdToContractInput, () => {
   it('converts currencyId to ContractInput', () => {

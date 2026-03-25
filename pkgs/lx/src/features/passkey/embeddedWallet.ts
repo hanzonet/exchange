@@ -5,12 +5,12 @@ import type {
   ChallengeResponse,
   RegistrationOptions,
 } from '@uniswap/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
-import { EmbeddedWalletApiClient } from 'lx/src/data/rest/embeddedWallet/requests'
-import { authenticatePasskey, registerPasskey } from 'lx/src/features/passkey/passkey'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { HexString } from 'utilities/src/addresses/hex'
-import { logger } from 'utilities/src/logger/logger'
+import { EmbeddedWalletApiClient } from '@luxexchange/lx/src/data/rest/embeddedWallet/requests'
+import { authenticatePasskey, registerPasskey } from '@luxexchange/lx/src/features/passkey/passkey'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export {
   Authenticator,

@@ -6,7 +6,7 @@ import { type NotificationDataSource } from '@luxexchange/notifications/src/noti
 import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
 import { createAppRatingTrigger } from 'src/notification-service/triggers/appRatingTrigger'
 import { type ExtensionState } from 'src/store/extensionReducer'
-import { setAppRating } from 'wallet/src/features/wallet/slice'
+import { setAppRating } from '@luxfi/wallet/src/features/wallet/slice'
 
 /**
  * Context required to create the extension local trigger data source.

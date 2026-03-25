@@ -1,11 +1,11 @@
 import { toPlainMessage } from '@bufbuild/protobuf'
 import { queryOptions } from '@tanstack/react-query'
 import { PlatformType } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import type { InAppNotification, NotificationsApiClient } from '@universe/api'
-import { getLogger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+import type { InAppNotification, NotificationsApiClient } from '@luxexchange/api'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 const DEFAULT_POLL_INTERVAL_MS = 2 * ONE_MINUTE_MS
 
@@ -22,7 +22,7 @@ interface GetNotificationQueryOptionsContext {
  *
  * @example
  * ```typescript
- * import { getNotificationQueryOptions } from '@universe/notifications'
+ * import { getNotificationQueryOptions } from '@luxexchange/notifications'
  * import { useQuery } from '@tanstack/react-query'
  *
  * // Use in a hook

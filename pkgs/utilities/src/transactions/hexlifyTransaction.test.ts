@@ -1,5 +1,5 @@
 import type { TransactionRequest } from '@ethersproject/abstract-provider'
-import { hexlifyTransaction } from 'utilities/src/transactions/hexlifyTransaction'
+import { hexlifyTransaction } from '@luxfi/utilities/src/transactions/hexlifyTransaction'
 
 describe('hexlifyTransaction', () => {
   it('should hexlify all fields correctly', () => {

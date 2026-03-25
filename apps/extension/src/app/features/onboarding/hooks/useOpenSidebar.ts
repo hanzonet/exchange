@@ -3,9 +3,9 @@ import { getCurrentTabAndWindowId } from 'src/app/navigation/utils'
 import { onboardingMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { OnboardingMessageType } from 'src/background/messagePassing/types/ExtensionMessages'
 import { openSidePanel } from 'src/background/utils/chromeSidePanelUtils'
-import { luxUrls } from 'lx/src/constants/urls'
-import { logger } from 'utilities/src/logger/logger'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 
 export function useOpenSidebar() {
   const { value: openedSideBar, setTrue: openSideBar } = useBooleanState(false)

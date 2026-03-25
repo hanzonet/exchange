@@ -1,5 +1,5 @@
-import { InfoTooltip } from 'lx/src/components/tooltip/InfoTooltip'
-import { isWebApp } from 'utilities/src/platform'
+import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 type MicroConfirmationProps = {
   /** Intended to be a micro toast/tooltip, text should not be more than 4 words */

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { Eye } from 'ui/src/components/icons/Eye'
-import { EyeOff } from 'ui/src/components/icons/EyeOff'
-import { NotificationToast } from 'lx/src/components/notifications/NotificationToast'
-import { ChangeAssetVisibilityNotification as ChangeAssetVisibilityNotificationType } from 'lx/src/features/notifications/slice/types'
+import { Eye } from '@luxfi/ui/src/components/icons/Eye'
+import { EyeOff } from '@luxfi/ui/src/components/icons/EyeOff'
+import { NotificationToast } from '@luxexchange/lx/src/components/notifications/NotificationToast'
+import { ChangeAssetVisibilityNotification as ChangeAssetVisibilityNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
 
 export function ChangeAssetVisibilityNotification({
   notification: { visible, hideDelay, assetName },

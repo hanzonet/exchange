@@ -4,9 +4,9 @@ import {
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
 } from '@luxfi/api'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 export function useCheckApprovalQuery({
   params,

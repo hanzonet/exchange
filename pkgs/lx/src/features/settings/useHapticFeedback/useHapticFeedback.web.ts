@@ -1,5 +1,5 @@
-import { HapticFeedbackControl, NO_HAPTIC_FEEDBACK } from 'lx/src/features/settings/useHapticFeedback/types'
-import { noop } from 'utilities/src/react/noop'
+import { HapticFeedbackControl, NO_HAPTIC_FEEDBACK } from '@luxexchange/lx/src/features/settings/useHapticFeedback/types'
+import { noop } from '@luxfi/utilities/src/react/noop'
 
 export function useHapticFeedback(): HapticFeedbackControl {
   // No haptic feedback on web

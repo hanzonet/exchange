@@ -1,12 +1,12 @@
 import { ApolloLink, createHttpLink } from '@apollo/client'
 import { onError } from '@apollo/client/link/error'
 import { RestLink } from 'apollo-link-rest'
-import { config } from 'lx/src/config'
-import { luxUrls } from 'lx/src/constants/urls'
-import { getVersionHeader } from 'lx/src/data/getVersionHeader'
-import { logger } from 'utilities/src/logger/logger'
-import { isMobileApp } from 'utilities/src/platform'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
+import { config } from '@luxexchange/lx/src/config'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getVersionHeader } from '@luxexchange/lx/src/data/getVersionHeader'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
 
 // Handles fetching data from REST APIs
 // Responses will be stored in graphql cache

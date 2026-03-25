@@ -1,9 +1,9 @@
-import { MultichainExplorerList } from 'lx/src/components/MultichainTokenDetails/MultichainExplorerList'
-import type { MultichainTokenEntry } from 'lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { fireEvent, render } from 'lx/src/test/test-utils'
+import { MultichainExplorerList } from '@luxexchange/lx/src/components/MultichainTokenDetails/MultichainExplorerList'
+import type { MultichainTokenEntry } from '@luxexchange/lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { fireEvent, render } from '@luxexchange/lx/src/test/test-utils'
 
 const TEST_ENTRIES: MultichainTokenEntry[] = [
   { chainId: UniverseChainId.Mainnet, address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48' },

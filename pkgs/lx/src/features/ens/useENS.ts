@@ -1,11 +1,11 @@
 // Copied from https://github.com/Lux/interface/blob/main/src/hooks/useENS.ts
 
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useAddressFromEns, useENSName } from 'lx/src/features/ens/api'
-import { ENS_SUFFIX } from 'lx/src/features/ens/constants'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { useDebounce } from 'utilities/src/time/timing'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useAddressFromEns, useENSName } from '@luxexchange/lx/src/features/ens/api'
+import { ENS_SUFFIX } from '@luxexchange/lx/src/features/ens/constants'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { useDebounce } from '@luxfi/utilities/src/time/timing'
 
 type UseENSParams = {
   nameOrAddress?: string | null

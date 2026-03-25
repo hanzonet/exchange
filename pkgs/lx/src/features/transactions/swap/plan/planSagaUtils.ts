@@ -1,37 +1,37 @@
-import { ChainedQuoteResponse, TradingApi } from '@universe/api'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
-import { WalletExecutionContext } from '@universe/api/src/clients/trading/__generated__/models/WalletExecutionContext'
+import { ChainedQuoteResponse, TradingApi } from '@luxexchange/api'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
+import { WalletExecutionContext } from '@luxexchange/api/src/clients/trading/__generated__/models/WalletExecutionContext'
 import { call, race, SagaGenerator, take } from 'typed-redux-saga'
-import { CAIP25Session } from 'lx/src/features/capabilities/caip25/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { toSupportedChainId } from 'lx/src/features/chains/utils'
-import { AppNotificationType, SwapPendingNotification } from 'lx/src/features/notifications/slice/types'
+import { CAIP25Session } from '@luxexchange/lx/src/features/capabilities/caip25/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { AppNotificationType, SwapPendingNotification } from '@luxexchange/lx/src/features/notifications/slice/types'
 import {
   TransformPlanParams,
   transformPlanResponseToChainedQuote,
-} from 'lx/src/features/transactions/swap/hooks/useTradeFromExistingPlan'
-import { TransactionAndPlanStep, transformSteps } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
-import { consumePrefetchedPlan } from 'lx/src/features/transactions/swap/plan/prefetchedPlanStore'
-import { getPlanCompoundSlippageTolerance } from 'lx/src/features/transactions/swap/plan/slippage'
+} from '@luxexchange/lx/src/features/transactions/swap/hooks/useTradeFromExistingPlan'
+import { TransactionAndPlanStep, transformSteps } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
+import { consumePrefetchedPlan } from '@luxexchange/lx/src/features/transactions/swap/plan/prefetchedPlanStore'
+import { getPlanCompoundSlippageTolerance } from '@luxexchange/lx/src/features/transactions/swap/plan/slippage'
 import {
   AbortPlanError,
   ExpectedPlanError,
   PlanParams,
   PlanValidationError,
-} from 'lx/src/features/transactions/swap/plan/types'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/types'
 import {
   createOrRefreshPlan,
   findFirstActiveStep,
   getStepLogArray,
-} from 'lx/src/features/transactions/swap/plan/utils'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { ValidatedChainedSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { ChainedActionTrade, Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { signalSwapModalClosed } from 'lx/src/utils/saga'
-import { isProdEnv } from 'utilities/src/environment/env'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/utils'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { ValidatedTradeInput } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { ValidatedChainedSwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { ChainedActionTrade, Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { signalSwapModalClosed } from '@luxexchange/lx/src/utils/saga'
+import { isProdEnv } from '@luxfi/utilities/src/environment/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 interface FetchAndTransformPlanParams {
   quote: ChainedQuoteResponse['quote']

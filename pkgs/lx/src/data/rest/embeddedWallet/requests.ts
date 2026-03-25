@@ -1,11 +1,11 @@
 import { createPromiseClient, type Transport } from '@connectrpc/connect'
 import { EmbeddedWalletService as OldEmbeddedWalletService } from '@uniswap/client-embeddedwallet/dist/uniswap/embeddedwallet/v1/service_connect'
-import type { EmbeddedWalletApiClient as EmbeddedWalletApiClientType, EmbeddedWalletClientContext } from '@universe/api'
-import { createEmbeddedWalletApiClient, getTransport } from '@universe/api'
-import { luxUrls } from 'lx/src/constants/urls'
-import { getVersionHeader } from 'lx/src/data/getVersionHeader'
-import { isMobileApp } from 'utilities/src/platform'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
+import type { EmbeddedWalletApiClient as EmbeddedWalletApiClientType, EmbeddedWalletClientContext } from '@luxexchange/api'
+import { createEmbeddedWalletApiClient, getTransport } from '@luxexchange/api'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { getVersionHeader } from '@luxexchange/lx/src/data/getVersionHeader'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
 
 function createEmbeddedWalletTransport(): Transport {
   return getTransport({

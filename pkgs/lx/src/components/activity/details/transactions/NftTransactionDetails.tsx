@@ -1,8 +1,8 @@
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   NFTApproveTransactionInfo,
   NFTMintTransactionInfo,
@@ -11,8 +11,8 @@ import {
   ReceiveTokenTransactionInfo,
   SendTokenTransactionInfo,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 const MAX_NFT_IMAGE_HEIGHT = 375
 

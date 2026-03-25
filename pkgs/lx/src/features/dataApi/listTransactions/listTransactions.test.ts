@@ -1,5 +1,5 @@
-import { useListTransactions } from 'lx/src/features/dataApi/listTransactions/listTransactions'
-import { renderHookWithProviders } from 'lx/src/test/render'
+import { useListTransactions } from '@luxexchange/lx/src/features/dataApi/listTransactions/listTransactions'
+import { renderHookWithProviders } from '@luxexchange/lx/src/test/render'
 
 // Use vi.hoisted to create mock function that can be controlled in tests
 const { mockUseListTransactionsQuery } = vi.hoisted(() => ({

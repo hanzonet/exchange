@@ -1,14 +1,14 @@
-import { TradingApi } from '@universe/api/src'
-import { TransactionDetailsContent } from 'lx/src/components/activity/details/TransactionDetailsContent'
-import { TransactionDetailsHeader } from 'lx/src/components/activity/details/TransactionDetailsHeader'
-import { TransactionDetailsInfoRows } from 'lx/src/components/activity/details/TransactionDetailsInfoRows'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { TradingApi } from '@luxexchange/api/src'
+import { TransactionDetailsContent } from '@luxexchange/lx/src/components/activity/details/TransactionDetailsContent'
+import { TransactionDetailsHeader } from '@luxexchange/lx/src/components/activity/details/TransactionDetailsHeader'
+import { TransactionDetailsInfoRows } from '@luxexchange/lx/src/components/activity/details/TransactionDetailsInfoRows'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   TransactionDetails,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   ARBITRUM_DAI_CURRENCY_INFO,
   BASE_CURRENCY,
@@ -17,8 +17,8 @@ import {
   OPTIMISM_CURRENCY,
   POLYGON_CURRENCY,
   SAMPLE_SEED_ADDRESS_1,
-} from 'lx/src/test/fixtures'
-import { render } from 'lx/src/test/test-utils'
+} from '@luxexchange/lx/src/test/fixtures'
+import { render } from '@luxexchange/lx/src/test/test-utils'
 
 vi.mock('lx/src/components/menus/ContextMenu', async (importOriginal) => {
   const actual = await importOriginal<typeof import('lx/src/components/menus/ContextMenu.web')>()
@@ -88,8 +88,8 @@ vi.mock('lx/src/features/tokens/useCurrencyInfo', () => ({
   },
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

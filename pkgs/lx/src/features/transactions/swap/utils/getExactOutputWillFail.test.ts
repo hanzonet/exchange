@@ -1,11 +1,11 @@
 import { renderHook } from '@testing-library/react'
 import { Token } from '@luxamm/sdk-core'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { getExactOutputWillFail } from 'lx/src/features/transactions/swap/utils/getExactOutputWillFail'
-import { SAMPLE_CURRENCY_ID_1 } from 'lx/src/test/fixtures'
-import { CurrencyField } from 'lx/src/types/currency'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrency } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { getExactOutputWillFail } from '@luxexchange/lx/src/features/transactions/swap/utils/getExactOutputWillFail'
+import { SAMPLE_CURRENCY_ID_1 } from '@luxexchange/lx/src/test/fixtures'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 describe('getExactOutputWillFail', () => {
   const createToken = (buyFeeBps?: string, sellFeeBps?: string): Token =>

@@ -5,10 +5,10 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { ExploreStackParamList } from 'src/app/navigation/types'
 import { handleTopTokensDeepLink } from 'src/features/deepLinking/handleTopTokensDeepLink'
 import { dismissAllModalsBeforeNavigation } from 'src/features/deepLinking/utils'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Mock the navigation ref
 jest.mock('src/app/navigation/navigationRef', () => ({

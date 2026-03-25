@@ -9,10 +9,10 @@ import {
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { DynamicConfigs, ForceUpgradeConfigKey, type ForceUpgradeStatus, getDynamicConfigValue } from '@luxexchange/gating'
 import { createIntervalNotificationDataSource, type NotificationDataSource } from '@luxexchange/notifications'
-import { LUX_LOGO } from 'ui/src/assets'
-import i18n from 'lx/src/i18n'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { MOBILE_APP_STORE_LINK } from 'wallet/src/constants/urls'
+import { LUX_LOGO } from '@luxfi/ui/src/assets'
+import i18n from '@luxexchange/lx/src/i18n'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { MOBILE_APP_STORE_LINK } from '@luxfi/wallet/src/constants/urls'
 
 // Using 'local:' prefix to indicate these are client-only notifications
 // This prevents the API tracker from sending AckNotification calls to the backend

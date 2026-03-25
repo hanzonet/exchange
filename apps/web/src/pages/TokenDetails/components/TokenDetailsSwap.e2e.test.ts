@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-syntax */
 
-import { UNI, USDT } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { AddressStringFormat, normalizeAddress } from 'lx/src/utils/addresses'
+import { UNI, USDT } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { AddressStringFormat, normalizeAddress } from '@luxexchange/lx/src/utils/addresses'
 import { expect, getTest } from '~/playwright/fixtures'
 
 const test = getTest()

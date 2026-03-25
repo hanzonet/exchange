@@ -1,5 +1,5 @@
 const rulesDirPlugin = require('eslint-plugin-rulesdir')
-rulesDirPlugin.RULES_DIR = '../../packages/lx/eslint_rules'
+rulesDirPlugin.RULES_DIR = '../../pkgs/lx/eslint_rules'
 
 module.exports = {
   root: true,

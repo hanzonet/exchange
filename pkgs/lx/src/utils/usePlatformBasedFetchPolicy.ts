@@ -1,5 +1,5 @@
 import { WatchQueryFetchPolicy } from '@apollo/client'
-import { usePlatformBasedValue } from 'lx/src/utils/usePlatformBasedValue'
+import { usePlatformBasedValue } from '@luxexchange/lx/src/utils/usePlatformBasedValue'
 
 type Props = {
   fetchPolicy: WatchQueryFetchPolicy | undefined

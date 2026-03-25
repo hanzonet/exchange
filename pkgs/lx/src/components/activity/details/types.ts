@@ -10,7 +10,7 @@ import {
   TransactionType,
   TransactionTypeInfo,
   UnknownTransactionInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export type SwapTypeTransactionInfo =
   | ExactInputSwapTransactionInfo

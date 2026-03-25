@@ -1,15 +1,15 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { PropsWithChildren, ReactNode } from 'react'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { Locale } from 'lx/src/features/language/constants'
-import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import {
   addFiatSymbolToNumber,
   formatCurrencyAmount,
   formatNumberOrString,
   formatPercent,
-} from 'utilities/src/format/localeBased'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function mockLocalizedFormatter(locale: Locale): LocalizationContextState {
   return {

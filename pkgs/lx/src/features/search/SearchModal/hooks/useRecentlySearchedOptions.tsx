@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { usePoolSearchResultsToPoolOptions } from 'lx/src/components/lists/items/pools/usePoolSearchResultsToPoolOptions'
+import { usePoolSearchResultsToPoolOptions } from '@luxexchange/lx/src/components/lists/items/pools/usePoolSearchResultsToPoolOptions'
 import {
   NFTCollectionOption,
   OnchainItemListOptionType,
@@ -8,13 +8,13 @@ import {
   SearchModalOption,
   TokenOption,
   WalletByAddressOption,
-} from 'lx/src/components/lists/items/types'
-import { MAX_RECENT_SEARCH_RESULTS } from 'lx/src/components/TokenSelector/constants'
-import { useCurrencyInfosToTokenOptions } from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { normalizeCurrencyIdForMapLookup, normalizeTokenAddressForCache } from 'lx/src/data/cache'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+} from '@luxexchange/lx/src/components/lists/items/types'
+import { MAX_RECENT_SEARCH_RESULTS } from '@luxexchange/lx/src/components/TokenSelector/constants'
+import { useCurrencyInfosToTokenOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { normalizeCurrencyIdForMapLookup, normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   isEtherscanSearchHistoryResult,
   isNFTCollectionSearchHistoryResult,
@@ -22,12 +22,12 @@ import {
   isTokenSearchHistoryResult,
   isWalletSearchHistoryResult,
   SearchHistoryResult,
-} from 'lx/src/features/search/SearchHistoryResult'
-import { SearchTab } from 'lx/src/features/search/SearchModal/types'
-import { selectSearchHistory } from 'lx/src/features/search/selectSearchHistory'
-import { useCurrencyInfos } from 'lx/src/features/tokens/useCurrencyInfo'
-import { buildCurrencyId, buildNativeCurrencyId, currencyId } from 'lx/src/utils/currencyId'
-import { isMobileApp, isWebApp } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/search/SearchHistoryResult'
+import { SearchTab } from '@luxexchange/lx/src/features/search/SearchModal/types'
+import { selectSearchHistory } from '@luxexchange/lx/src/features/search/selectSearchHistory'
+import { useCurrencyInfos } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { buildCurrencyId, buildNativeCurrencyId, currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 export function useRecentlySearchedOptions({
   chainFilter,

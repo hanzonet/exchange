@@ -1,13 +1,13 @@
-import { Flex } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { Flex } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
 import type {
   BackgroundColorToken,
   BorderRadiusToken,
   LogoSizeConfig,
   MultiLogoSizeConfig,
-} from 'lx/src/components/network/NetworkPile/NetworkPile'
-import type { UniverseChainId } from 'lx/src/features/chains/types'
+} from '@luxexchange/lx/src/components/network/NetworkPile/NetworkPile'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 function getLogoStyle(size: number): { width: number; height: number } {
   return { width: size, height: size }

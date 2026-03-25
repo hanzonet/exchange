@@ -2,9 +2,9 @@
 import { ContentStyle, type InAppNotification } from '@luxexchange/api'
 import { type NotificationClickTarget } from '@luxexchange/notifications'
 import { useEffect, useMemo } from 'react'
-import { ModalNotification } from 'lx/src/components/notifications/ModalNotification'
-import { getLogger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
+import { ModalNotification } from '@luxexchange/lx/src/components/notifications/ModalNotification'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { type StoreApi, type UseBoundStore } from 'zustand'
 import { SystemBannerNotification } from '~/notification-service/notification-renderer/components/SystemBannerNotification'
 import {

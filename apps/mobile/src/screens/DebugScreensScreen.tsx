@@ -2,10 +2,10 @@ import { LegendList } from '@legendapp/list'
 import React, { memo, useCallback, useMemo } from 'react'
 import { useAppStackNavigation } from 'src/app/navigation/types'
 import { ScreenWithHeader } from 'src/components/layout/screens/ScreenWithHeader'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { Clock, Wrench } from 'ui/src/components/icons'
-import { iconSizes } from 'ui/src/theme'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Clock, Wrench } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 interface DebugScreenItem {
   id: string

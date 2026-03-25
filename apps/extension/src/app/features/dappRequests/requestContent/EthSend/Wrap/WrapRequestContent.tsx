@@ -4,10 +4,10 @@ import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRe
 import { SwapDisplay } from 'src/app/features/dappRequests/requestContent/EthSend/Swap/SwapDisplay'
 import { formatUnits } from 'src/app/features/dappRequests/requestContent/EthSend/Swap/utils'
 import { WrapSendTransactionRequest } from 'src/app/features/dappRequests/types/DappRequestTypes'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TransactionType, TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TransactionType, TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 function getTransactionTypeInfo({
   inputCurrencyInfo,

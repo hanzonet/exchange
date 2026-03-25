@@ -1,11 +1,11 @@
 import { NavigationProp } from '@react-navigation/core'
 import { Dispatch } from 'redux'
 import { OnboardingStackBaseParams, OnboardingStackParamList } from 'src/app/navigation/types'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
-import { setHasCopiedPrivateKeys } from 'wallet/src/features/behaviorHistory/slice'
-import { restoreMnemonicComplete } from 'wallet/src/features/wallet/slice'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setHasCopiedPrivateKeys } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { restoreMnemonicComplete } from '@luxfi/wallet/src/features/wallet/slice'
 
 /**
  * Helper to handle the completion of a restore flow. Manages the navigation and analytics

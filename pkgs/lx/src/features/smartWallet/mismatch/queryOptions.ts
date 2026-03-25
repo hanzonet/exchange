@@ -1,7 +1,7 @@
 import { queryOptions, type UseQueryResult } from '@tanstack/react-query'
-import type { HasMismatchInput, HasMismatchUtil } from 'lx/src/features/smartWallet/mismatch/mismatch'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import type { HasMismatchInput, HasMismatchUtil } from '@luxexchange/lx/src/features/smartWallet/mismatch/mismatch'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import type { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 type WithOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
-import { AVERAGE_L2_BLOCK_TIME_MS } from 'lx/src/features/transactions/hooks/usePollingIntervalByChain'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { AVERAGE_L2_BLOCK_TIME_MS } from '@luxexchange/lx/src/features/transactions/hooks/usePollingIntervalByChain'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 import { useBlock } from 'wagmi'
 
 /**

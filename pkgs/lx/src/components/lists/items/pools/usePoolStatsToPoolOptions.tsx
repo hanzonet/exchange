@@ -2,14 +2,14 @@ import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes
 import { PoolStats } from '@luxdex/client-explore/dist/uniswap/explore/v1/service_pb'
 import { parseRestProtocolVersion } from '@luxfi/api'
 import { useMemo } from 'react'
-import { OnchainItemListOptionType, PoolOption } from 'lx/src/components/lists/items/types'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { useCurrencyInfos } from 'lx/src/features/tokens/useCurrencyInfo'
-import { CurrencyId } from 'lx/src/types/currency'
-import { buildCurrencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+import { OnchainItemListOptionType, PoolOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { V2_DEFAULT_FEE_TIER } from '@luxexchange/lx/src/constants/pools'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { useCurrencyInfos } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
 
 export function usePoolStatsToPoolOptions(poolStats: PoolStats[] | undefined): PoolOption[] {
   const { pools: sortedPools, currencyIds } = useMemo(() => {

@@ -1,7 +1,7 @@
 import { QueryClient } from '@tanstack/react-query'
 import { FetchError } from '@luxfi/api/src/clients/base/errors'
-import { hashKey } from 'utilities/src/reactQuery/hashKey'
-import { ONE_DAY_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
+import { hashKey } from '@luxfi/utilities/src/reactQuery/hashKey'
+import { ONE_DAY_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 export const SharedQueryClient = new QueryClient({
   defaultOptions: {

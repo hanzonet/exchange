@@ -5,8 +5,8 @@
  * which switches between legacy and centralized based on a feature flag.
  * Only the selected implementation is called — no overfetching.
  */
-import { useTokenPriceHooks } from 'lx/src/features/prices/TokenPriceContext'
-import type { CurrencyId } from 'lx/src/types/currency'
+import { useTokenPriceHooks } from '@luxexchange/lx/src/features/prices/TokenPriceContext'
+import type { CurrencyId } from '@luxexchange/lx/src/types/currency'
 
 export function useTokenSpotPrice(currencyId: CurrencyId): number | undefined {
   return useTokenPriceHooks().useTokenSpotPrice(currencyId)

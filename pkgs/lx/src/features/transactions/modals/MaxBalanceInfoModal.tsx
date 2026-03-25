@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { InfoTooltip } from 'lx/src/components/tooltip/InfoTooltip'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { isWebPlatform } from 'utilities/src/platform'
+import { Text } from '@luxfi/ui/src'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 interface MaxBalanceInfoModalProps {
   isMax: boolean

@@ -1,9 +1,9 @@
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import type { UniverseChainId } from 'lx/src/features/chains/types'
-import type { SwapChains } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
-import { useChainIdsChangeEffect } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
-import { isMobileApp } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import type { SwapChains } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
+import { useChainIdsChangeEffect } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function useSwapNetworkChangeEffect({
   inputChainId,

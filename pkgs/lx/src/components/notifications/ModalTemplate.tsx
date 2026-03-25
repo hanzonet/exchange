@@ -10,13 +10,13 @@ import {
   Text,
   useIsDarkMode,
   useMedia,
-} from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { parseCustomIconLink } from 'lx/src/components/notifications/iconUtils'
-import { ElementName, type ModalNameType } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { isMobileApp, isWebApp } from 'utilities/src/platform'
+} from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { parseCustomIconLink } from '@luxexchange/lx/src/components/notifications/iconUtils'
+import { ElementName, type ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 const MODAL_MAX_WIDTH = 440
 

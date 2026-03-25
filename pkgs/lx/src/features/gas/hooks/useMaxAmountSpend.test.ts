@@ -1,15 +1,15 @@
 import { CurrencyAmount } from '@uniswap/sdk-core'
 import JSBI from 'jsbi'
-import { DAI, nativeOnChain } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useMaxAmountSpend } from 'lx/src/features/gas/hooks/useMaxAmountSpend'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { MAINNET_CURRENCY } from 'lx/src/test/fixtures/wallet/currencies'
+import { DAI, nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useMaxAmountSpend } from '@luxexchange/lx/src/features/gas/hooks/useMaxAmountSpend'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { MAINNET_CURRENCY } from '@luxexchange/lx/src/test/fixtures/wallet/currencies'
 
 const mockUseDynamicConfigValue = vi.fn()
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: (params: { config: unknown; key: unknown; defaultValue: unknown }): unknown =>

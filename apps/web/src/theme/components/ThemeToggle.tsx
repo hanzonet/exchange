@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { Contrast } from 'ui/src/components/icons/Contrast'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Contrast } from '@luxfi/ui/src/components/icons/Contrast'
 import { ThemeToggle } from 'uniswap/src/components/appearance/ThemeToggle'
 
 export function ThemeToggleWithLabel(): JSX.Element {

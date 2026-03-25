@@ -8,11 +8,11 @@ import { HeaderSkipButton, renderHeaderBackButton } from 'src/app/navigation/com
 import { useOnboardingStackNavigation } from 'src/app/navigation/types'
 import { Screen, SHORT_SCREEN_HEADER_HEIGHT_RATIO } from 'src/components/layout/Screen'
 import { useRegionalizedLineHeight } from 'src/components/text/useRegionalizedLineHeight'
-import { Flex, GeneratedIcon, SpaceTokens, Text, useMedia } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { fonts } from 'ui/src/theme'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { isIOS } from 'utilities/src/platform'
+import { Flex, GeneratedIcon, SpaceTokens, Text, useMedia } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { fonts } from '@luxfi/ui/src/theme'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { isIOS } from '@luxfi/utilities/src/platform'
 
 type OnboardingScreenProps = {
   subtitle?: string

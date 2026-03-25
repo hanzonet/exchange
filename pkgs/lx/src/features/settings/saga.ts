@@ -1,9 +1,9 @@
 import { call, select } from 'typed-redux-saga'
-import { getFeatureFlaggedChainIds } from 'lx/src/features/chains/hooks/useFeatureFlaggedChainIds'
-import { getEnabledChains } from 'lx/src/features/chains/utils'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { getFeatureFlaggedChainIds } from '@luxexchange/lx/src/features/chains/hooks/useFeatureFlaggedChainIds'
+import { getEnabledChains } from '@luxexchange/lx/src/features/chains/utils'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { selectIsTestnetModeEnabled } from 'lx/src/features/settings/selectors'
+import { selectIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/selectors'
 
 export function* getEnabledChainIdsSaga(platform?: Platform) {
   const isTestnetModeEnabled = yield* select(selectIsTestnetModeEnabled)

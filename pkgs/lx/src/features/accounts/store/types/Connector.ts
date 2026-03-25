@@ -1,5 +1,5 @@
-import type { Session } from 'lx/src/features/accounts/store/types/Session'
-import type { Platform } from 'lx/src/features/platforms/types/Platform'
+import type { Session } from '@luxexchange/lx/src/features/accounts/store/types/Session'
+import type { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 
 /**
  * Represents the connection state of a wallet connector.

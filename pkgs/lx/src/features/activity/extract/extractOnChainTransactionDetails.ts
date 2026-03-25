@@ -3,32 +3,32 @@ import {
   OnChainTransactionLabel,
   OnChainTransactionStatus,
 } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 
-import { parseRestApproveTransaction } from 'lx/src/features/activity/parse/parseApproveTransaction'
-import { parseRestAuctionTransaction } from 'lx/src/features/activity/parse/parseAuctionTransaction'
-import { parseRestBridgeTransaction } from 'lx/src/features/activity/parse/parseBridgingTransaction'
+import { parseRestApproveTransaction } from '@luxexchange/lx/src/features/activity/parse/parseApproveTransaction'
+import { parseRestAuctionTransaction } from '@luxexchange/lx/src/features/activity/parse/parseAuctionTransaction'
+import { parseRestBridgeTransaction } from '@luxexchange/lx/src/features/activity/parse/parseBridgingTransaction'
 import {
   buildExecuteTransactionDetails,
   parseRestExecuteTransaction,
-} from 'lx/src/features/activity/parse/parseExecuteTransaction'
-import { parseRestLiquidityTransaction } from 'lx/src/features/activity/parse/parseLiquidityTransaction'
-import { parseRestNFTMintTransaction } from 'lx/src/features/activity/parse/parseMintTransaction'
-import { parseRestReceiveTransaction } from 'lx/src/features/activity/parse/parseReceiveTransaction'
-import { parseRestSendTransaction } from 'lx/src/features/activity/parse/parseSendTransaction'
+} from '@luxexchange/lx/src/features/activity/parse/parseExecuteTransaction'
+import { parseRestLiquidityTransaction } from '@luxexchange/lx/src/features/activity/parse/parseLiquidityTransaction'
+import { parseRestNFTMintTransaction } from '@luxexchange/lx/src/features/activity/parse/parseMintTransaction'
+import { parseRestReceiveTransaction } from '@luxexchange/lx/src/features/activity/parse/parseReceiveTransaction'
+import { parseRestSendTransaction } from '@luxexchange/lx/src/features/activity/parse/parseSendTransaction'
 import {
   parseRestSwapTransaction,
   parseRestWithdrawTransaction,
   parseRestWrapTransaction,
-} from 'lx/src/features/activity/parse/parseTradeTransaction'
-import { parseRestUnknownTransaction } from 'lx/src/features/activity/parse/parseUnknownTransaction'
-import { ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+} from '@luxexchange/lx/src/features/activity/parse/parseTradeTransaction'
+import { parseRestUnknownTransaction } from '@luxexchange/lx/src/features/activity/parse/parseUnknownTransaction'
+import { ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
 import {
   TransactionDetails,
   TransactionOriginType,
   TransactionStatus,
   TransactionTypeInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Maps REST API transaction status to local transaction status

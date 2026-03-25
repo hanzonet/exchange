@@ -1,9 +1,9 @@
 /* eslint-disable-next-line no-restricted-imports, no-restricted-syntax */
 
 import { useMemo } from 'react'
-import { Flex } from 'ui/src'
-import { iconSizes } from 'ui/src/theme/iconSizes'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { Flex } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme/iconSizes'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { MultiBlockchainAddressDisplay } from '~/components/AccountDetails/MultiBlockchainAddressDisplay'
 import StatusIcon from '~/components/StatusIcon'
 import { useResolvedAddresses } from '~/pages/Portfolio/hooks/useResolvedAddresses'

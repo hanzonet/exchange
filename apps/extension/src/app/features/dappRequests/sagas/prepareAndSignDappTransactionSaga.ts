@@ -4,11 +4,11 @@ import {
   handleTransactionPreparationError,
   prepareTransactionServices,
   signSingleTransaction,
-} from 'wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
+} from '@luxfi/wallet/src/features/transactions/shared/baseTransactionPreparationSaga'
 import {
   DelegationType,
   type TransactionSagaDependencies,
-} from 'wallet/src/features/transactions/types/transactionSagaDependencies'
+} from '@luxfi/wallet/src/features/transactions/types/transactionSagaDependencies'
 
 /**
  * Factory function that creates a prepare and sign dapp transaction saga with injected dependencies

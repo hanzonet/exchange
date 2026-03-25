@@ -1,4 +1,4 @@
-import { hashKey, normalizeArrays } from 'utilities/src/reactQuery/hashKey'
+import { hashKey, normalizeArrays } from '@luxfi/utilities/src/reactQuery/hashKey'
 
 describe('normalizeArrays', () => {
   it('should sort arrays of numbers', () => {

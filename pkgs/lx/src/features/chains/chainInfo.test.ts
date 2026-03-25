@@ -1,10 +1,10 @@
-import { config } from 'lx/src/config'
+import { config } from '@luxexchange/lx/src/config'
 import {
   getQuicknodeChainId,
   getQuicknodeChainIdPathSuffix,
   getQuicknodeEndpointUrl,
-} from 'lx/src/features/chains/evm/rpc'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+} from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 vi.mock('lx/src/config', () => ({
   config: {

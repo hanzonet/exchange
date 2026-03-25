@@ -1,15 +1,15 @@
-import { useActiveAddress, useActiveWallet } from 'lx/src/features/accounts/store/hooks'
-import { SigningCapability } from 'lx/src/features/accounts/store/types/Wallet'
-import { useIsShowingWebFORNudge, useIsWebFORNudgeEnabled } from 'lx/src/features/providers/webForNudgeProvider'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useIsMissingPlatformWallet } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
-import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { useActiveAddress, useActiveWallet } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { SigningCapability } from '@luxexchange/lx/src/features/accounts/store/types/Wallet'
+import { useIsShowingWebFORNudge, useIsWebFORNudgeEnabled } from '@luxexchange/lx/src/features/providers/webForNudgeProvider'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useIsMissingPlatformWallet } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
+import { useParsedSwapWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { isWrapAction } from 'lx/src/features/transactions/swap/utils/wrap'
-import { useIsBlocked } from 'lx/src/features/trm/hooks'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { isWrapAction } from '@luxexchange/lx/src/features/transactions/swap/utils/wrap'
+import { useIsBlocked } from '@luxexchange/lx/src/features/trm/hooks'
 
 const useIsReviewButtonDisabled = (): boolean => {
   const isSubmitting = useSwapFormStore((s) => s.isSubmitting)

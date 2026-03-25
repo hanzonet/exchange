@@ -21,10 +21,10 @@ import {
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Pair } from '@uniswap/v2-sdk'
 import { useMemo } from 'react'
-import { luxPostTransport } from 'lx/src/data/rest/base'
-import { SerializedToken } from 'lx/src/features/tokens/warnings/slice/types'
-import { deserializeToken } from 'lx/src/utils/currency'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { luxPostTransport } from '@luxexchange/lx/src/data/rest/base'
+import { SerializedToken } from '@luxexchange/lx/src/features/tokens/warnings/slice/types'
+import { deserializeToken } from '@luxexchange/lx/src/utils/currency'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 const positionsClient = createPromiseClient(DataApiService, luxPostTransport)
 

@@ -1,7 +1,7 @@
-import { Flex, useSporeColors } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { HandleBarProps } from 'lx/src/components/modals/HandleBar'
-import { isAndroid } from 'utilities/src/platform'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { HandleBarProps } from '@luxexchange/lx/src/components/modals/HandleBar'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 
 const HANDLEBAR_HEIGHT = spacing.spacing4
 const HANDLEBAR_WIDTH = spacing.spacing36

@@ -1,5 +1,5 @@
 import { DynamicConfigs, EmbeddedWalletConfigKey, useDynamicConfigValue } from '@luxfi/gating'
-import { LUX_WEB_URL } from 'lx/src/constants/urls'
+import { LUX_WEB_URL } from '@luxexchange/lx/src/constants/urls'
 
 export function useEmbeddedWalletBaseUrl(): string {
   const baseUrl = useDynamicConfigValue({

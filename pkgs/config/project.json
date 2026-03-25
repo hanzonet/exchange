@@ -1,7 +1,7 @@
 {
   "name": "@luxfi/config",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/config/src",
+  "sourceRoot": "pkgs/config/src",
   "projectType": "library",
   "tags": ["scope:config", "type:lib"],
   "targets": {

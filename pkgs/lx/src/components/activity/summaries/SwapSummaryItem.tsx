@@ -1,20 +1,20 @@
 import { TradeType } from '@uniswap/sdk-core'
 import { memo, useMemo } from 'react'
-import { useOnRetrySwap } from 'lx/src/components/activity/hooks/useOnRetrySwap'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import type { SummaryItemProps } from 'lx/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
-import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { getAmountsFromTrade } from 'lx/src/features/transactions/swap/utils/getAmountsFromTrade'
+import { useOnRetrySwap } from '@luxexchange/lx/src/components/activity/hooks/useOnRetrySwap'
+import { TransactionSummaryLayout } from '@luxexchange/lx/src/components/activity/summaries/TransactionSummaryLayout'
+import type { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from '@luxexchange/lx/src/components/activity/utils'
+import { SplitLogo } from '@luxexchange/lx/src/components/CurrencyLogo/SplitLogo'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { getAmountsFromTrade } from '@luxexchange/lx/src/features/transactions/swap/utils/getAmountsFromTrade'
 import type {
   ExactInputSwapTransactionInfo,
   ExactOutputSwapTransactionInfo,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isConfirmedSwapTypeInfo } from 'lx/src/features/transactions/types/utils'
-import { getFormattedCurrencyAmount, getSymbolDisplayText } from 'lx/src/utils/currency'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isConfirmedSwapTypeInfo } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { getFormattedCurrencyAmount, getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
 
 function _SwapSummaryItem({
   transaction,

@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
-import { useTransactionSettingsStore } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import { isDefaultTradeRouteOptions } from 'lx/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/isDefaultTradeRouteOptions'
+import { Text } from '@luxfi/ui/src'
+import { useTransactionSettingsStore } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { isDefaultTradeRouteOptions } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/TradeRoutingPreference/isDefaultTradeRouteOptions'
 
 export function TradeRoutingPreferenceControl(): JSX.Element {
   const { t } = useTranslation()

@@ -1,5 +1,5 @@
 import type { ColorTokens, ThemeKeys } from '@hanzo/gui'
-import { type DynamicColor, useSporeColors } from 'ui/src/hooks/useSporeColors'
+import { type DynamicColor, useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
 
 export type ColorHexFromThemeKey = {
   val: ColorTokens

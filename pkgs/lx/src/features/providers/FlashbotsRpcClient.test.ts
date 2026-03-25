@@ -1,8 +1,8 @@
 /* eslint-disable no-extra-semi */
 import { Signer } from '@ethersproject/abstract-signer'
-import { SignerInfo, waitForFlashbotsProtectReceipt } from 'lx/src/features/providers/FlashbotsCommon'
-import { createFlashbotsRpcClient } from 'lx/src/features/providers/FlashbotsRpcClient'
-import { HexString } from 'utilities/src/addresses/hex'
+import { SignerInfo, waitForFlashbotsProtectReceipt } from '@luxexchange/lx/src/features/providers/FlashbotsCommon'
+import { createFlashbotsRpcClient } from '@luxexchange/lx/src/features/providers/FlashbotsRpcClient'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
 import { Chain, PublicClient } from 'viem'
 import { mainnet } from 'viem/chains'
 import type { Mock, Mocked } from 'vitest'

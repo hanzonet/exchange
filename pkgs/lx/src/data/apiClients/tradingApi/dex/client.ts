@@ -5,8 +5,8 @@
  * and vault endpoints. Connects to the same gateway as LuxGatewayClient
  * but exposes the advanced trading surface.
  */
-import { luxUrls } from 'lx/src/constants/urls'
-import { logger } from 'utilities/src/logger/logger'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 import type {
   CancelAllOrdersRequest,

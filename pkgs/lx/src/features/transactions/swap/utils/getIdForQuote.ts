@@ -1,5 +1,5 @@
-import { GetQuoteRequestResult } from 'lx/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
-import { canonicalStringify } from 'utilities/src/format/canonicalJson'
+import { GetQuoteRequestResult } from '@luxexchange/lx/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
+import { canonicalStringify } from '@luxfi/utilities/src/format/canonicalJson'
 
 /**
  * For the given QuoteRequestResult, return an ID which can be

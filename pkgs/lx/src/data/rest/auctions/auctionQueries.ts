@@ -15,12 +15,12 @@ import {
   ListTopAuctionsRequest,
   ListTopAuctionsResponse,
 } from '@uniswap/client-data-api/dist/data/v1/auction_pb'
-import type { AuctionServiceClient } from '@universe/api/src/clients/auctions/createAuctionServiceClient'
-import { UseQueryApiHelperHookArgs } from '@universe/api/src/hooks/shared/types'
-import { AuctionServiceClient as AuctionServiceClientInstance } from 'lx/src/data/rest/auctions/AuctionServiceClient'
-import { AUCTION_DEFAULT_RETRY, AuctionStaleTime } from 'lx/src/data/rest/auctions/queryTypes'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import type { AuctionServiceClient } from '@luxexchange/api/src/clients/auctions/createAuctionServiceClient'
+import { UseQueryApiHelperHookArgs } from '@luxexchange/api/src/hooks/shared/types'
+import { AuctionServiceClient as AuctionServiceClientInstance } from '@luxexchange/lx/src/data/rest/auctions/AuctionServiceClient'
+import { AUCTION_DEFAULT_RETRY, AuctionStaleTime } from '@luxexchange/lx/src/data/rest/auctions/queryTypes'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 function getAuctionQueryOptions(
   client: AuctionServiceClient,

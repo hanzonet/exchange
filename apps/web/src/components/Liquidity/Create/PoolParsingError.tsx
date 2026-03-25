@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { ErrorCallout } from '~/components/ErrorCallout'
 import { useCreateLiquidityContext } from '~/pages/CreatePosition/CreateLiquidityContextProvider'
 

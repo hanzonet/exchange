@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom'
-import { NetworkFilter } from 'lx/src/components/network/NetworkFilter'
-import { ALL_CHAIN_IDS } from 'lx/src/features/chains/chainInfo'
-import { renderWithProviders } from 'lx/src/test/render'
-import { act } from 'lx/src/test/test-utils'
+import { NetworkFilter } from '@luxexchange/lx/src/components/network/NetworkFilter'
+import { ALL_CHAIN_IDS } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { renderWithProviders } from '@luxexchange/lx/src/test/render'
+import { act } from '@luxexchange/lx/src/test/test-utils'
 
 ReactDOM.createPortal = vi.fn((element) => {
   return element as React.ReactPortal

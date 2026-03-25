@@ -1,11 +1,11 @@
 import { memo } from 'react'
 import { FlatList } from 'react-native-gesture-handler'
-import { Flex } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { TokenOption } from 'lx/src/components/lists/items/types'
-import { TokenPill } from 'lx/src/components/TokenSelector/items/tokens/SuggestedToken'
-import { HorizontalTokenListProps } from 'lx/src/components/TokenSelector/lists/HorizontalTokenList/HorizontalTokenList'
-import { useEvent, useMemoCompare } from 'utilities/src/react/hooks'
+import { Flex } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { TokenPill } from '@luxexchange/lx/src/components/TokenSelector/items/tokens/SuggestedToken'
+import { HorizontalTokenListProps } from '@luxexchange/lx/src/components/TokenSelector/lists/HorizontalTokenList/HorizontalTokenList'
+import { useEvent, useMemoCompare } from '@luxfi/utilities/src/react/hooks'
 
 const CONTENT_CONTAINER_STYLE = {
   paddingHorizontal: spacing.spacing16,

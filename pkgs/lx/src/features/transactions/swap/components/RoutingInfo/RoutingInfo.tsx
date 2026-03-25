@@ -1,10 +1,10 @@
-import type { GasFeeResult } from '@universe/api'
-import type { UniverseChainId } from 'lx/src/features/chains/types'
-import { AcrossRoutingInfo } from 'lx/src/features/transactions/swap/components/RoutingInfo/AcrossRoutingInfo'
-import { PlanRoutingInfo } from 'lx/src/features/transactions/swap/components/RoutingInfo/ChainedRoutingInfo'
-import { RoutingHopInfo } from 'lx/src/features/transactions/swap/components/RoutingInfo/RoutingHopInfo'
-import { Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { isBridge, isChained } from 'lx/src/features/transactions/swap/utils/routing'
+import type { GasFeeResult } from '@luxexchange/api'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { AcrossRoutingInfo } from '@luxexchange/lx/src/features/transactions/swap/components/RoutingInfo/AcrossRoutingInfo'
+import { PlanRoutingInfo } from '@luxexchange/lx/src/features/transactions/swap/components/RoutingInfo/ChainedRoutingInfo'
+import { RoutingHopInfo } from '@luxexchange/lx/src/features/transactions/swap/components/RoutingInfo/RoutingHopInfo'
+import { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isBridge, isChained } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 
 /**
  * Component that displays the routing information for a given trade for different routing types

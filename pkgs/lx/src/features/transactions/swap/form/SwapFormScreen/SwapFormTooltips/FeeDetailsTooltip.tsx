@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { TransactionDetailsTooltip as Tooltip } from 'lx/src/components/TransactionDetailsTooltip'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { FeeOnTransferFeeGroupProps } from 'lx/src/features/transactions/TransactionDetails/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FeeOnTransferFeeGroupProps } from '@luxexchange/lx/src/features/transactions/TransactionDetails/types'
 
 function FeeDetails(props: { tokenSymbol: string; feePercent: string }): JSX.Element {
   const { t } = useTranslation()

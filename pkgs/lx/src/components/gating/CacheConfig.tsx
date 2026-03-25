@@ -1,8 +1,8 @@
 import { useApolloClient } from '@apollo/client'
 import { useQueryClient } from '@tanstack/react-query'
-import { Accordion, Flex } from 'ui/src'
-import { GatingButton } from 'lx/src/components/gating/GatingButton'
-import { AccordionHeader } from 'lx/src/components/gating/GatingOverrides'
+import { Accordion, Flex } from '@luxfi/ui/src'
+import { GatingButton } from '@luxexchange/lx/src/components/gating/GatingButton'
+import { AccordionHeader } from '@luxexchange/lx/src/components/gating/GatingOverrides'
 
 export function CacheConfig(): JSX.Element {
   const apollo = useApolloClient()

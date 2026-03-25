@@ -1,11 +1,11 @@
 import { useCallback, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { DEFAULT_TOAST_HIDE_DELAY, SPRING_ANIMATION_DELAY } from 'lx/src/features/notifications/constants'
-import { useSelectAddressNotifications } from 'lx/src/features/notifications/slice/hooks'
-import { popNotification, setNotificationViewed } from 'lx/src/features/notifications/slice/slice'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { useTimeout } from 'utilities/src/time/timing'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { DEFAULT_TOAST_HIDE_DELAY, SPRING_ANIMATION_DELAY } from '@luxexchange/lx/src/features/notifications/constants'
+import { useSelectAddressNotifications } from '@luxexchange/lx/src/features/notifications/slice/hooks'
+import { popNotification, setNotificationViewed } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
 
 interface NotificationLifecycleProps {
   address?: string

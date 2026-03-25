@@ -1,4 +1,4 @@
-import { spacing } from 'ui/src/theme'
+import { spacing } from '@luxfi/ui/src/theme'
 
 export const DEFAULT_BOTTOM_INSET = spacing.spacing20
 

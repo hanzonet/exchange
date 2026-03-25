@@ -1,7 +1,7 @@
-import { Language, Locale } from 'lx/src/features/language/constants'
-import * as navigatorLocale from 'lx/src/features/language/navigatorLocale'
-import * as deviceLocales from 'utilities/src/device/locales'
-import { mockLogger } from 'utilities/src/logger/mocks'
+import { Language, Locale } from '@luxexchange/lx/src/features/language/constants'
+import * as navigatorLocale from '@luxexchange/lx/src/features/language/navigatorLocale'
+import * as deviceLocales from '@luxfi/utilities/src/device/locales'
+import { mockLogger } from '@luxfi/utilities/src/logger/mocks'
 import type { Mock } from 'vitest'
 
 // Mock modules

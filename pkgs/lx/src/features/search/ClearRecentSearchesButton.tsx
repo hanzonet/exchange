@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { Flex, Text, TouchableArea } from 'ui/src'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
 
-import { clearSearchHistory } from 'lx/src/features/search/searchHistorySlice'
+import { clearSearchHistory } from '@luxexchange/lx/src/features/search/searchHistorySlice'
 
 export function ClearRecentSearchesButton(): JSX.Element {
   const { t } = useTranslation()

@@ -1,11 +1,11 @@
-import { InterfaceEventName, SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { TransactionAndPlanStep } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
-import { type PlanSagaAnalytics } from 'lx/src/features/transactions/swap/plan/types'
-import { SwapEventType, timestampTracker } from 'lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
-import { TransactionOriginType } from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+import { InterfaceEventName, SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { TransactionAndPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
+import { type PlanSagaAnalytics } from '@luxexchange/lx/src/features/transactions/swap/plan/types'
+import { SwapEventType, timestampTracker } from '@luxexchange/lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
+import { TransactionOriginType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Returns a composite ID for plan step analytics events.

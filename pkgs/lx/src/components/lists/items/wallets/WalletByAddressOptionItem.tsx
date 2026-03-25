@@ -1,18 +1,18 @@
-import { iconSizes } from 'ui/src/theme'
-import { OptionItemProps } from 'lx/src/components/lists/items/OptionItem'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { OptionItemProps } from '@luxexchange/lx/src/components/lists/items/OptionItem'
 import {
   ENSAddressOption,
   OnchainItemListOptionType,
   UnitagOption,
   WalletByAddressOption,
-} from 'lx/src/components/lists/items/types'
-import { ENSAddressOptionItem } from 'lx/src/components/lists/items/wallets/ENSAddressOptionItem'
-import { UnitagOptionItem } from 'lx/src/components/lists/items/wallets/UnitagOptionItem'
-import { WalletBaseOptionItem } from 'lx/src/components/lists/items/wallets/WalletBaseOptionItem'
-import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
-import { DisplayNameType } from 'lx/src/features/accounts/types'
-import { useOnchainDisplayName } from 'lx/src/features/accounts/useOnchainDisplayName'
-import { ENS_SUFFIX } from 'lx/src/features/ens/constants'
+} from '@luxexchange/lx/src/components/lists/items/types'
+import { ENSAddressOptionItem } from '@luxexchange/lx/src/components/lists/items/wallets/ENSAddressOptionItem'
+import { UnitagOptionItem } from '@luxexchange/lx/src/components/lists/items/wallets/UnitagOptionItem'
+import { WalletBaseOptionItem } from '@luxexchange/lx/src/components/lists/items/wallets/WalletBaseOptionItem'
+import { AccountIcon } from '@luxexchange/lx/src/features/accounts/AccountIcon'
+import { DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { useOnchainDisplayName } from '@luxexchange/lx/src/features/accounts/useOnchainDisplayName'
+import { ENS_SUFFIX } from '@luxexchange/lx/src/features/ens/constants'
 
 type WalletByAddressOptionItemProps = {
   walletByAddressOption: WalletByAddressOption

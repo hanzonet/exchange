@@ -1,15 +1,15 @@
 import { useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDatadogStatus } from 'src/features/datadog/DatadogContext'
-import { usePortfolioBalances } from 'lx/src/features/dataApi/balances/balances'
-import { selectFavoriteTokens } from 'lx/src/features/favorites/selectors'
-import { setAttributesToDatadog } from 'utilities/src/logger/datadog/Datadog'
-import { logger } from 'utilities/src/logger/logger'
+import { usePortfolioBalances } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { selectFavoriteTokens } from '@luxexchange/lx/src/features/favorites/selectors'
+import { setAttributesToDatadog } from '@luxfi/utilities/src/logger/datadog/Datadog'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import {
   selectActiveAccount,
   selectSignerMnemonicAccounts,
   selectViewOnlyAccounts,
-} from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/wallet/selectors'
 
 /**
  * Helper hook for tracking user specific attributes once logged in.

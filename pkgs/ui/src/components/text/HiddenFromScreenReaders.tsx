@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react'
 import type { ViewStyle } from 'react-native'
-import { Flex } from 'ui/src/components/layout'
+import { Flex } from '@luxfi/ui/src/components/layout'
 
 export type HiddenFromScreenReadersProps = PropsWithChildren<{
   style?: ViewStyle

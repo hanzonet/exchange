@@ -1,10 +1,10 @@
 import { ZERO_PERCENT } from '@uniswap/router-sdk'
 import { Currency, CurrencyAmount, Percent, Price, TradeType } from '@luxamm/sdk-core'
 import { JupiterOrderResponse, TradingApi } from '@luxfi/api'
-import { BIPS_BASE } from 'lx/src/constants/misc'
-import { BlockingTradeError } from 'lx/src/features/transactions/swap/types/BlockingTradeError'
-import { SwapFee } from 'lx/src/features/transactions/swap/types/trade'
-import { CurrencyField } from 'lx/src/types/currency'
+import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
+import { BlockingTradeError } from '@luxexchange/lx/src/features/transactions/swap/types/BlockingTradeError'
+import { SwapFee } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 export interface SolanaTrade {
   inputAmount: CurrencyAmount<Currency>

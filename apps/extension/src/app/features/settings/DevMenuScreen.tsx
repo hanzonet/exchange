@@ -2,10 +2,10 @@ import { ScreenHeader } from 'src/app/components/layout/ScreenHeader'
 import { SettingsItem } from 'src/app/features/settings/components/SettingsItem'
 import { AppRoutes, SettingsRoutes } from 'src/app/navigation/constants'
 import { useExtensionNavigation } from 'src/app/navigation/utils'
-import { Accordion, Flex, ScrollView, Text } from 'ui/src'
-import { Clock, Wrench } from 'ui/src/components/icons'
-import { CacheConfig } from 'lx/src/components/gating/CacheConfig'
-import { GatingOverrides } from 'lx/src/components/gating/GatingOverrides'
+import { Accordion, Flex, ScrollView, Text } from '@luxfi/ui/src'
+import { Clock, Wrench } from '@luxfi/ui/src/components/icons'
+import { CacheConfig } from '@luxexchange/lx/src/components/gating/CacheConfig'
+import { GatingOverrides } from '@luxexchange/lx/src/components/gating/GatingOverrides'
 
 /**
  * When modifying this component, take into consideration that this is used

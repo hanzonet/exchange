@@ -1,7 +1,7 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
-import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
-import { PortfolioState, TokenBalanceOverride } from 'lx/src/features/portfolio/slice/slice'
-import { LuxState } from 'lx/src/state/luxReducer'
+import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { PortfolioState, TokenBalanceOverride } from '@luxexchange/lx/src/features/portfolio/slice/slice'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 export const selectTokenBalanceOverrides = (state: LuxState): PortfolioState['tokenBalanceOverrides'] =>
   state.portfolio.tokenBalanceOverrides

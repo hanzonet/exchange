@@ -1,13 +1,13 @@
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { NoResultsFound } from 'lx/src/components/lists/NoResultsFound'
-import { useAddToSearchHistory } from 'lx/src/components/TokenSelector/hooks/useAddToSearchHistory'
-import { useTokenSectionsForSearchResults } from 'lx/src/components/TokenSelector/hooks/useTokenSectionsForSearchResults'
-import { TokenSelectorList } from 'lx/src/components/TokenSelector/TokenSelectorList'
-import { OnSelectCurrency } from 'lx/src/components/TokenSelector/types'
-import { TradeableAsset } from 'lx/src/entities/assets'
-import type { AddressGroup } from 'lx/src/features/accounts/store/types/AccountsState'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { NoResultsFound } from '@luxexchange/lx/src/components/lists/NoResultsFound'
+import { useAddToSearchHistory } from '@luxexchange/lx/src/components/TokenSelector/hooks/useAddToSearchHistory'
+import { useTokenSectionsForSearchResults } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTokenSectionsForSearchResults'
+import { TokenSelectorList } from '@luxexchange/lx/src/components/TokenSelector/TokenSelectorList'
+import { OnSelectCurrency } from '@luxexchange/lx/src/components/TokenSelector/types'
+import { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
+import type { AddressGroup } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 function _TokenSelectorSearchResultsList({
   onSelectCurrency: parentOnSelectCurrency,

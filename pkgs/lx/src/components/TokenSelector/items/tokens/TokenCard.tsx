@@ -1,12 +1,12 @@
 import { memo } from 'react'
-import { Flex, Text, Tooltip, TouchableArea } from 'ui/src'
-import { iconSizes, zIndexes } from 'ui/src/theme'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
-import { TokenOption } from 'lx/src/components/lists/items/types'
-import { OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { OnSelectCurrency } from 'lx/src/components/TokenSelector/types'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { Flex, Text, Tooltip, TouchableArea } from '@luxfi/ui/src'
+import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { OnchainItemSection, OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { OnSelectCurrency } from '@luxexchange/lx/src/components/TokenSelector/types'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
 
 function _TokenCard({
   onSelectCurrency,

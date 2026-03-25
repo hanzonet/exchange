@@ -9,54 +9,54 @@ import type {
   GasStrategy,
   UnwrapQuoteResponse,
   WrapQuoteResponse,
-} from '@universe/api'
-import { TradingApi } from '@universe/api'
+} from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
 import { useMemo } from 'react'
-import { getTradeSettingsDeadline } from 'lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { convertGasFeeToDisplayValue, useActiveGasStrategy } from 'lx/src/features/gas/hooks'
-import { SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
-import { getBaseTradeAnalyticsPropertiesFromSwapInfo } from 'lx/src/features/transactions/swap/analytics'
-import type { ApprovalTxInfo } from 'lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
+import { getTradeSettingsDeadline } from '@luxexchange/lx/src/data/apiClients/tradingApi/utils/getTradeSettingsDeadline'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { convertGasFeeToDisplayValue, useActiveGasStrategy } from '@luxexchange/lx/src/features/gas/hooks'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import type { TransactionSettings } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { getBaseTradeAnalyticsPropertiesFromSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/analytics'
+import type { ApprovalTxInfo } from '@luxexchange/lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
 import {
   SlippageTooLowError,
   UnknownSimulationError,
-} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
-import type { SwapData } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { SolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
+} from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
+import type { SwapData } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { SolanaTrade } from '@luxexchange/lx/src/features/transactions/swap/types/solana'
 import type {
   BaseSwapTxAndGasInfo,
   BridgeSwapTxAndGasInfo,
   ClassicSwapTxAndGasInfo,
   SwapGasFeeEstimation,
   WrapSwapTxAndGasInfo,
-} from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { PermitMethod } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { PermitMethod } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
 import type {
   BridgeTrade,
   ClassicTrade,
   TokenApprovalInfo,
   UnwrapTrade,
   WrapTrade,
-} from 'lx/src/features/transactions/swap/types/trade'
-import { ApprovalAction } from 'lx/src/features/transactions/swap/types/trade'
-import { mergeGasFeeResults } from 'lx/src/features/transactions/swap/utils/gas'
-import { isClassic } from 'lx/src/features/transactions/swap/utils/routing'
+} from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { ApprovalAction } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { mergeGasFeeResults } from '@luxexchange/lx/src/features/transactions/swap/utils/gas'
+import { isClassic } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   validatePermit,
   validateTransactionRequest,
   validateTransactionRequests,
-} from 'lx/src/features/transactions/swap/utils/trade'
-import { SWAP_GAS_URGENCY_OVERRIDE } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import type { ValidatedTransactionRequest } from 'lx/src/features/transactions/types/transactionRequests'
-import { CurrencyField } from 'lx/src/types/currency'
-import { logger } from 'utilities/src/logger/logger'
-import { isExtensionApp, isMobileApp, isWebApp } from 'utilities/src/platform'
-import type { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { SWAP_GAS_URGENCY_OVERRIDE } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import type { ValidatedTransactionRequest } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isExtensionApp, isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
+import type { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 
 export interface TransactionRequestInfo {
   txRequests: providers.TransactionRequest[] | undefined

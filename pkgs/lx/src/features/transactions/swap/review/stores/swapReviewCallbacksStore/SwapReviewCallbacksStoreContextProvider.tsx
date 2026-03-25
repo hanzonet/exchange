@@ -1,18 +1,18 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import type { AuthTrigger } from 'lx/src/features/auth/types'
-import type { TransactionScreen } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
-import { useCreateSwapReviewCallbacks } from 'lx/src/features/transactions/swap/review/hooks/useCreateSwapReviewCallbacks'
-import { createSwapReviewCallbacksStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/createSwapReviewCallbacksStore'
-import { SwapReviewCallbacksStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/SwapReviewCallbacksStoreContext'
-import { useSwapReviewActions } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
+import type { AuthTrigger } from '@luxexchange/lx/src/features/auth/types'
+import type { TransactionScreen } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useParsedSwapWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { useCreateSwapReviewCallbacks } from '@luxexchange/lx/src/features/transactions/swap/review/hooks/useCreateSwapReviewCallbacks'
+import { createSwapReviewCallbacksStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/createSwapReviewCallbacksStore'
+import { SwapReviewCallbacksStoreContext } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/SwapReviewCallbacksStoreContext'
+import { useSwapReviewActions } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
 import {
   useSwapReviewWarningStateActions,
   useSwapReviewWarningStore,
-} from 'lx/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
-import type { GetExecuteSwapService } from 'lx/src/features/transactions/swap/services/executeSwapService'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
+} from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
+import type { GetExecuteSwapService } from '@luxexchange/lx/src/features/transactions/swap/services/executeSwapService'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useHasValueChanged } from '@luxfi/utilities/src/react/useHasValueChanged'
 
 interface SwapReviewCallbacksContextProviderProps {
   children: ReactNode

@@ -1,8 +1,8 @@
 import { type Currency, type CurrencyAmount } from '@uniswap/sdk-core'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
+import { Flex, Text } from '@luxfi/ui/src'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 import { amountToPercent } from '~/pages/Liquidity/CreateAuction/utils'
 
 const NUM_BARS = 100

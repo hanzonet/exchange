@@ -1,7 +1,7 @@
-import { FlexProps, TouchableArea, TouchableAreaProps, useIsShortMobileDevice, useSporeColors } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { PRESS_SCALE } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
-import { iconSizes } from 'ui/src/theme'
+import { FlexProps, TouchableArea, TouchableAreaProps, useIsShortMobileDevice, useSporeColors } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { PRESS_SCALE } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
+import { iconSizes } from '@luxfi/ui/src/theme'
 
 type SwapArrowButtonProps = Pick<
   TouchableAreaProps,

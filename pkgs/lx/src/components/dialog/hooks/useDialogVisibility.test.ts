@@ -1,10 +1,10 @@
 import { act, waitFor } from '@testing-library/react'
-import { SharedQueryClient } from '@universe/api'
-import { BehaviorType, useDialogVisibility } from 'lx/src/components/dialog/hooks/useDialogVisibility'
-import { type DialogPreferencesService } from 'lx/src/dialog-preferences'
-import { DialogVisibilityId } from 'lx/src/dialog-preferences/types'
-import { renderHook } from 'lx/src/test/test-utils'
-import { mockLogger } from 'utilities/src/logger/mocks'
+import { SharedQueryClient } from '@luxexchange/api'
+import { BehaviorType, useDialogVisibility } from '@luxexchange/lx/src/components/dialog/hooks/useDialogVisibility'
+import { type DialogPreferencesService } from '@luxexchange/lx/src/dialog-preferences'
+import { DialogVisibilityId } from '@luxexchange/lx/src/dialog-preferences/types'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
+import { mockLogger } from '@luxfi/utilities/src/logger/mocks'
 import type { Mocked } from 'vitest'
 
 describe('useDialogVisibility', () => {

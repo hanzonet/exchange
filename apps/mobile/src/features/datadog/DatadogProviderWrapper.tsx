@@ -16,11 +16,11 @@ import {
 } from '@luxfi/gating'
 import { PropsWithChildren, default as React, useEffect, useState } from 'react'
 import { DatadogContext } from 'src/features/datadog/DatadogContext'
-import { config } from 'lx/src/config'
-import { datadogEnabledBuild, isTestRun, localDevDatadogEnabled } from 'utilities/src/environment/constants'
-import { setAttributesToDatadog } from 'utilities/src/logger/datadog/Datadog'
-import { getDatadogEnvironment } from 'utilities/src/logger/datadog/env'
-import { logger } from 'utilities/src/logger/logger'
+import { config } from '@luxexchange/lx/src/config'
+import { datadogEnabledBuild, isTestRun, localDevDatadogEnabled } from '@luxfi/utilities/src/environment/constants'
+import { setAttributesToDatadog } from '@luxfi/utilities/src/logger/datadog/Datadog'
+import { getDatadogEnvironment } from '@luxfi/utilities/src/logger/datadog/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // In case Statsig is not available
 export const MOBILE_DEFAULT_DATADOG_SESSION_SAMPLE_RATE = 10 // percent

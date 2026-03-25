@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { assertWebElement, GuiElement, useSporeColors } from 'ui/src'
+import { assertWebElement, GuiElement, useSporeColors } from '@luxfi/ui/src'
 
 export function useApplyChartTextureEffects({
   chartDivElement,

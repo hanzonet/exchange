@@ -1,9 +1,9 @@
 import { SharedEventName } from '@luxdex/analytics-events'
 import React from 'react'
 import { Route, TabView, TabViewProps } from 'react-native-tab-view'
-import { SectionName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
+import { SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 type TraceRouteProps = { key: SectionName } & Route
 

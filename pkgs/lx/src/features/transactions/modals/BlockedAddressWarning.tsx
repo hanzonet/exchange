@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, FlexProps, Text, TouchableArea } from 'ui/src'
-import { InfoCircle } from 'ui/src/components/icons/InfoCircle'
-import { BlockedAddressModal } from 'lx/src/features/transactions/modals/BlockedAddressModal'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
+import { Flex, FlexProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { InfoCircle } from '@luxfi/ui/src/components/icons/InfoCircle'
+import { BlockedAddressModal } from '@luxexchange/lx/src/features/transactions/modals/BlockedAddressModal'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
 
 export function BlockedAddressWarning({
   isRecipientBlocked,

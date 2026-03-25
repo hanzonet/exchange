@@ -3,21 +3,21 @@ import {
   EthAsErc20DEXProperties,
   Experiments,
   useExperimentValueWithExposureLoggingDisabled,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import { BigNumber, Contract } from 'ethers/lib/ethers'
 import { useEffect, useRef } from 'react'
-import { ERC20_ETH_ADDRESS } from 'lx/src/constants/addresses'
-import { useProvider } from 'lx/src/contexts/LuxContext'
-import { useWalletCheckDelegationQuery } from 'lx/src/data/apiClients/tradingApi/useWalletCheckDelegationQuery'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { logExperimentQualifyingEvent } from 'lx/src/features/telemetry/utils/logExperimentQualifyingEvent'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { toTradingApiSupportedChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { CurrencyField } from 'lx/src/types/currency'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+import { ERC20_ETH_ADDRESS } from '@luxexchange/lx/src/constants/addresses'
+import { useProvider } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useWalletCheckDelegationQuery } from '@luxexchange/lx/src/data/apiClients/tradingApi/useWalletCheckDelegationQuery'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logExperimentQualifyingEvent } from '@luxexchange/lx/src/features/telemetry/utils/logExperimentQualifyingEvent'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { toTradingApiSupportedChainId } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 const NATIVE_ALLOWANCE_ABI = ['function nativeAllowance(address spender) view returns (uint256)']
 

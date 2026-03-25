@@ -1,9 +1,9 @@
-import { type InAppNotification } from '@universe/api'
-import { createNotificationDataSource } from '@universe/notifications/src/notification-data-source/implementations/createNotificationDataSource'
-import { type NotificationDataSource } from '@universe/notifications/src/notification-data-source/NotificationDataSource'
-import { type ReactiveCondition } from '@universe/notifications/src/notification-data-source/types/ReactiveCondition'
-import { type NotificationTracker } from '@universe/notifications/src/notification-tracker/NotificationTracker'
-import { getLogger } from 'utilities/src/logger/logger'
+import { type InAppNotification } from '@luxexchange/api'
+import { createNotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/implementations/createNotificationDataSource'
+import { type NotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/NotificationDataSource'
+import { type ReactiveCondition } from '@luxexchange/notifications/src/notification-data-source/types/ReactiveCondition'
+import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
 
 export interface CreateReactiveDataSourceContext<TState> {
   /** The reactive condition that determines when to show the notification */

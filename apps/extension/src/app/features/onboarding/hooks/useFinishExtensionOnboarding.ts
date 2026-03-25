@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { saveDappConnection } from 'src/app/features/dapp/actions'
-import { LUX_WEB_URL } from 'lx/src/constants/urls'
-import { ImportType } from 'lx/src/types/onboarding'
-import { ExtensionOnboardingFlow } from 'lx/src/types/screens/extension'
-import { logger } from 'utilities/src/logger/logger'
-import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
+import { LUX_WEB_URL } from '@luxexchange/lx/src/constants/urls'
+import { ImportType } from '@luxexchange/lx/src/types/onboarding'
+import { ExtensionOnboardingFlow } from '@luxexchange/lx/src/types/screens/extension'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 
 /**
  * Activates onboarding accounts on component mount,

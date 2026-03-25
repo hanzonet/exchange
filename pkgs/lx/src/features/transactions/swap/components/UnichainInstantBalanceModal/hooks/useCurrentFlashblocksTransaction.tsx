@@ -1,12 +1,12 @@
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { useSelectTransaction } from 'lx/src/features/transactions/hooks/useSelectTransaction'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { useSelectTransaction } from '@luxexchange/lx/src/features/transactions/hooks/useSelectTransaction'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import {
   InterfaceTransactionDetails,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function useCurrentFlashblocksTransaction(): TransactionDetails | InterfaceTransactionDetails | undefined {
   const evmAddress = useActiveAddress(Platform.EVM)

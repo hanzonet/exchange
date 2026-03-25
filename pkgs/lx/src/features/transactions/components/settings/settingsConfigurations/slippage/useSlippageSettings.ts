@@ -1,18 +1,18 @@
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { StyleProp, ViewStyle } from 'react-native'
-import { useShakeAnimation } from 'ui/src/animations'
-import { PlusMinusButtonType } from 'ui/src/components/buttons/PlusMinusButton'
+import { useShakeAnimation } from '@luxfi/ui/src/animations'
+import { PlusMinusButtonType } from '@luxfi/ui/src/components/buttons/PlusMinusButton'
 import {
   MAX_AUTO_SLIPPAGE_TOLERANCE,
   MAX_CUSTOM_SLIPPAGE_TOLERANCE,
   SLIPPAGE_CRITICAL_TOLERANCE,
-} from 'lx/src/constants/transactions'
+} from '@luxexchange/lx/src/constants/transactions'
 import {
   useTransactionSettingsActions,
   useTransactionSettingsAutoSlippageToleranceStore,
   useTransactionSettingsStore,
-} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 
 const SLIPPAGE_INCREMENT = 0.1
 

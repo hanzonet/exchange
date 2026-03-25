@@ -1,6 +1,6 @@
 import { FeatureFlags, useFeatureFlag } from '@luxfi/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useDEXPriorityOrderFlag } from 'lx/src/features/transactions/swap/utils/protocols'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useDEXPriorityOrderFlag } from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
 
 /**
  * Returns true if the chain is supported by DEX. Does not differentiate between DEX v1 and v2.

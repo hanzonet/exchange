@@ -1,8 +1,8 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import {
   calculatePlanCompoundSlippage,
   getPlanCompoundSlippageTolerance,
-} from 'lx/src/features/transactions/swap/plan/slippage'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/slippage'
 
 describe('slippage', () => {
   describe('calculatePlanCompoundSlippage', () => {

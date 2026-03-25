@@ -1,4 +1,4 @@
-import { useMedia } from 'ui/src'
+import { useMedia } from '@luxfi/ui/src'
 
 export function useIsSearchBarVisible() {
   const media = useMedia()

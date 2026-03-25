@@ -1,7 +1,7 @@
-import { OnchainItemListOptionType } from 'lx/src/components/lists/items/types'
-import { extractDomain } from 'lx/src/components/lists/items/wallets/utils'
-import { ENS_SUFFIX } from 'lx/src/features/ens/constants'
-import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
+import { OnchainItemListOptionType } from '@luxexchange/lx/src/components/lists/items/types'
+import { extractDomain } from '@luxexchange/lx/src/components/lists/items/wallets/utils'
+import { ENS_SUFFIX } from '@luxexchange/lx/src/features/ens/constants'
+import { UNITAG_SUFFIX } from '@luxexchange/lx/src/features/unitags/constants'
 
 describe('extractDomain', () => {
   it.each`

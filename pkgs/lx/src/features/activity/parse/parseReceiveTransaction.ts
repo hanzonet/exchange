@@ -1,7 +1,7 @@
 import { OnChainTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { SpamCode } from '@luxfi/api'
-import { AssetType } from 'lx/src/entities/assets'
-import { extractDappInfo } from 'lx/src/features/activity/utils/extractDappInfo'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { extractDappInfo } from '@luxexchange/lx/src/features/activity/utils/extractDappInfo'
 import {
   AssetCase,
   deriveCurrencyAmountFromAssetResponse,
@@ -9,13 +9,13 @@ import {
   isRestTokenSpam,
   mapTokenTypeToAssetType,
   parseUSDValueFromAssetChange,
-} from 'lx/src/features/activity/utils/remote'
+} from '@luxexchange/lx/src/features/activity/utils/remote'
 import {
   ReceiveTokenTransactionInfo,
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export default function parseReceiveTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,

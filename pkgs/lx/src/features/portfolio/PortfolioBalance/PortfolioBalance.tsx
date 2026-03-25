@@ -1,19 +1,19 @@
 import { isWarmLoadingStatus } from '@luxfi/api'
 import { memo, useMemo } from 'react'
-import { Flex, RefreshButton, Shine, useIsDarkMode } from 'ui/src'
+import { Flex, RefreshButton, Shine, useIsDarkMode } from '@luxfi/ui/src'
 import AnimatedNumber, {
   BALANCE_CHANGE_INDICATION_DURATION,
-} from 'lx/src/components/AnimatedNumber/AnimatedNumber'
-import { RelativeChange } from 'lx/src/components/RelativeChange/RelativeChange'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { usePortfolioTotalValue } from 'lx/src/features/dataApi/balances/balancesRest'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { useAppFiatCurrency, useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import i18next from 'lx/src/i18n'
-import { NumberType } from 'utilities/src/format/types'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/AnimatedNumber/AnimatedNumber'
+import { RelativeChange } from '@luxexchange/lx/src/components/RelativeChange/RelativeChange'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { usePortfolioTotalValue } from '@luxexchange/lx/src/features/dataApi/balances/balancesRest'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { useAppFiatCurrency, useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import i18next from '@luxexchange/lx/src/i18n'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 interface PortfolioBalanceProps {
   evmOwner?: Address

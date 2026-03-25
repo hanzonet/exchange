@@ -1,9 +1,9 @@
 import { PropsWithChildren, useEffect } from 'react'
-import { Flex } from 'ui/src'
-import { useIsChromeWindowFocusedWithTimeout } from 'lx/src/extension/useIsChromeWindowFocused'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
-import { LandingBackground } from 'wallet/src/components/landing/LandingBackground'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
+import { Flex } from '@luxfi/ui/src'
+import { useIsChromeWindowFocusedWithTimeout } from '@luxexchange/lx/src/extension/useIsChromeWindowFocused'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
+import { LandingBackground } from '@luxfi/wallet/src/components/landing/LandingBackground'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
 
 // The sidebar becomes "inactive"  when this amount of time has passed since the window lost focus.
 const INACTIVITY_TIMEOUT = 15 * ONE_MINUTE_MS

@@ -1,11 +1,11 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@luxfi/gating'
 import JSBI from 'jsbi'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { GENERIC_L2_GAS_CONFIG } from '@luxexchange/lx/src/features/chains/gasDefaults'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 // Buffer added on top of actual gas estimates to account for estimation variance
 const ACTUAL_GAS_FEE_BUFFER_PERCENT = 10

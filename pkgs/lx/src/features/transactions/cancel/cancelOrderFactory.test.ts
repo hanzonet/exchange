@@ -9,14 +9,14 @@ import {
   getCancelMultipleParams,
   getCancelSingleParams,
 } from '@uniswap/uniswapx-sdk'
-import { TradingApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { TradingApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   buildBatchCancellation,
   buildSingleCancellation,
   OrderCancellationParams,
-} from 'lx/src/features/transactions/cancel/cancelOrderFactory'
-import { createPermit2Contract } from 'lx/src/features/transactions/utils/permit2'
+} from '@luxexchange/lx/src/features/transactions/cancel/cancelOrderFactory'
+import { createPermit2Contract } from '@luxexchange/lx/src/features/transactions/utils/permit2'
 import type { Mock } from 'vitest'
 
 // Mock the dex-sdk functions

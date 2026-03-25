@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useOnchainDisplayName } from 'lx/src/features/accounts/useOnchainDisplayName'
-import { selectWatchedAddressSet } from 'lx/src/features/favorites/selectors'
-import { addWatchedAddress, removeWatchedAddress } from 'lx/src/features/favorites/slice'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { useOnchainDisplayName } from '@luxexchange/lx/src/features/accounts/useOnchainDisplayName'
+import { selectWatchedAddressSet } from '@luxexchange/lx/src/features/favorites/selectors'
+import { addWatchedAddress, removeWatchedAddress } from '@luxexchange/lx/src/features/favorites/slice'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 export function useToggleWatchedWalletCallback(address: Address): () => void {
   const dispatch = useDispatch()

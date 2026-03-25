@@ -1,24 +1,24 @@
 import { ExploreStatsResponse, PoolStats } from '@uniswap/client-explore/dist/uniswap/explore/v1/service_pb'
-import { ALL_NETWORKS_ARG, GqlResult } from '@universe/api'
+import { ALL_NETWORKS_ARG, GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { usePoolStatsToPoolOptions } from 'lx/src/components/lists/items/pools/usePoolStatsToPoolOptions'
-import { SearchModalOption } from 'lx/src/components/lists/items/types'
-import { useFavoriteWalletOptions } from 'lx/src/components/lists/items/wallets/useFavoriteWalletOptions'
-import { OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { useOnchainItemListSection } from 'lx/src/components/lists/utils'
-import { useCurrencyInfosToTokenOptions } from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { useTrendingTokensCurrencyInfos } from 'lx/src/components/TokenSelector/hooks/useTrendingTokensCurrencyInfos'
-import { useExploreStatsQuery } from 'lx/src/data/rest/exploreStats'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ClearRecentSearchesButton } from 'lx/src/features/search/ClearRecentSearchesButton'
+import { usePoolStatsToPoolOptions } from '@luxexchange/lx/src/components/lists/items/pools/usePoolStatsToPoolOptions'
+import { SearchModalOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { useFavoriteWalletOptions } from '@luxexchange/lx/src/components/lists/items/wallets/useFavoriteWalletOptions'
+import { OnchainItemSection, OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { useOnchainItemListSection } from '@luxexchange/lx/src/components/lists/utils'
+import { useCurrencyInfosToTokenOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { useTrendingTokensCurrencyInfos } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTrendingTokensCurrencyInfos'
+import { useExploreStatsQuery } from '@luxexchange/lx/src/data/rest/exploreStats'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ClearRecentSearchesButton } from '@luxexchange/lx/src/features/search/ClearRecentSearchesButton'
 import {
   NUMBER_OF_RESULTS_LONG,
   NUMBER_OF_RESULTS_MEDIUM,
   NUMBER_OF_RESULTS_SHORT,
-} from 'lx/src/features/search/SearchModal/constants'
-import { useRecentlySearchedOptions } from 'lx/src/features/search/SearchModal/hooks/useRecentlySearchedOptions'
-import { SearchTab } from 'lx/src/features/search/SearchModal/types'
-import { isMobileApp, isWebApp, isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/search/SearchModal/constants'
+import { useRecentlySearchedOptions } from '@luxexchange/lx/src/features/search/SearchModal/hooks/useRecentlySearchedOptions'
+import { SearchTab } from '@luxexchange/lx/src/features/search/SearchModal/types'
+import { isMobileApp, isWebApp, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function useSectionsForNoQuerySearch({
   chainFilter,

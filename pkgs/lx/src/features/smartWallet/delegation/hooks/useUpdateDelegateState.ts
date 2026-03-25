@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { updateDelegatedState } from 'lx/src/features/smartWallet/delegation/slice'
-import { useEvent } from 'utilities/src/react/hooks'
+import { updateDelegatedState } from '@luxexchange/lx/src/features/smartWallet/delegation/slice'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function useUpdateDelegatedState(): (input: { chainId: string; address: string }) => void {
   const dispatch = useDispatch()

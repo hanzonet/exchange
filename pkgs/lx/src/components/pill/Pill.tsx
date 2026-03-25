@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import { Flex, FlexProps, Text } from 'ui/src'
-import { TextVariantTokens } from 'ui/src/theme'
+import { Flex, FlexProps, Text } from '@luxfi/ui/src'
+import { TextVariantTokens } from '@luxfi/ui/src/theme'
 
 export type PillProps = {
   customBackgroundColor?: string

@@ -1,24 +1,24 @@
 import { GraphQLApi } from '@luxfi/api'
-import { ARBITRUM_LOGO, ETH_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
+import { ARBITRUM_LOGO, ETH_LOGO } from '@luxfi/ui/src/assets'
+import { config } from '@luxexchange/lx/src/config'
 import {
   DEFAULT_MS_BEFORE_WARNING,
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   DEFAULT_RETRY_OPTIONS,
   getQuicknodeEndpointUrl,
-} from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
-import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
+} from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
+import { GENERIC_L2_GAS_CONFIG } from '@luxexchange/lx/src/features/chains/gasDefaults'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildDAI, buildUSDC, buildUSDT } from 'lx/src/features/tokens/stablecoin'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildDAI, buildUSDC, buildUSDT } from '@luxexchange/lx/src/features/tokens/stablecoin'
 import { arbitrum } from 'wagmi/chains'
 
 const tokens = buildChainTokens({

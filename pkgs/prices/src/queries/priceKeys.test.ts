@@ -1,5 +1,5 @@
-import { priceKeys } from '@universe/prices/src/queries/priceKeys'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { priceKeys } from '@luxexchange/prices/src/queries/priceKeys'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 import { describe, expect, it } from 'vitest'
 
 describe('priceKeys', () => {

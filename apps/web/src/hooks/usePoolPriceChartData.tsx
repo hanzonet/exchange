@@ -1,7 +1,7 @@
 import { GraphQLApi } from '@luxexchange/api'
 import { UTCTimestamp } from 'lightweight-charts'
 import { useMemo } from 'react'
-import { hashKey } from 'utilities/src/reactQuery/hashKey'
+import { hashKey } from '@luxfi/utilities/src/reactQuery/hashKey'
 import { PriceChartData } from '~/components/Charts/PriceChart'
 import { ChartQueryResult, ChartType, DataQuality } from '~/components/Charts/utils'
 import { removeOutliers } from '~/utils/prices'

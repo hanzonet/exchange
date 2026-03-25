@@ -1,8 +1,8 @@
 import {
   convertRestBalanceToPortfolioBalance,
   createPortfolioCacheUpdater,
-} from 'lx/src/features/dataApi/balances/balancesRest'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+} from '@luxexchange/lx/src/features/dataApi/balances/balancesRest'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 
 const mockPortfolioData = {
   portfolio: {

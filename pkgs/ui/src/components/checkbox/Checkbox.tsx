@@ -6,11 +6,11 @@ import {
   Checkbox as GuiCheckbox,
   type CheckboxProps as GuiCheckboxPops,
 } from '@hanzo/gui'
-import { Check } from 'ui/src/components/icons'
-import { Flex, type FlexProps } from 'ui/src/components/layout'
-import type { SporeComponentVariant } from 'ui/src/components/types'
-import type { IconSizeTokens } from 'ui/src/theme'
-import { isTestEnv } from 'utilities/src/environment/env'
+import { Check } from '@luxfi/ui/src/components/icons'
+import { Flex, type FlexProps } from '@luxfi/ui/src/components/layout'
+import type { SporeComponentVariant } from '@luxfi/ui/src/components/types'
+import type { IconSizeTokens } from '@luxfi/ui/src/theme'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
 import { v4 as uuid } from 'uuid'
 
 type CheckboxSizes = {

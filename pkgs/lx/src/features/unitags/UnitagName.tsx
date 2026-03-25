@@ -1,7 +1,7 @@
-import { Flex, FlexProps, Text, TextProps } from 'ui/src'
-import { Unitag } from 'ui/src/components/icons/Unitag'
-import { fonts, spacing } from 'ui/src/theme'
-import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
+import { Flex, FlexProps, Text, TextProps } from '@luxfi/ui/src'
+import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'
+import { fonts, spacing } from '@luxfi/ui/src/theme'
+import { UNITAG_SUFFIX } from '@luxexchange/lx/src/features/unitags/constants'
 
 export function UnitagName({
   name,

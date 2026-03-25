@@ -1,6 +1,6 @@
 import { ApolloError } from '@apollo/client'
-import { usePersistedError } from 'lx/src/features/dataApi/utils/usePersistedError'
-import { renderHook } from 'lx/src/test/test-utils'
+import { usePersistedError } from '@luxexchange/lx/src/features/dataApi/utils/usePersistedError'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 
 describe(usePersistedError, () => {
   it('returns undefined when no error is passed', () => {

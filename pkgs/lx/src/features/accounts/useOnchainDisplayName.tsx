@@ -1,11 +1,11 @@
-import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { DisplayName, DisplayNameType } from 'lx/src/features/accounts/types'
-import { useENSName } from 'lx/src/features/ens/api'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
-import { getValidAddress, sanitizeAddressText } from 'lx/src/utils/addresses'
-import { shortenAddress } from 'utilities/src/addresses'
-import { trimToLength } from 'utilities/src/primitives/string'
+import { useUnitagsAddressQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { DisplayName, DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { useENSName } from '@luxexchange/lx/src/features/ens/api'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { UNITAG_SUFFIX } from '@luxexchange/lx/src/features/unitags/constants'
+import { getValidAddress, sanitizeAddressText } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { trimToLength } from '@luxfi/utilities/src/primitives/string'
 
 const ENS_TRIM_LENGTH = 8
 

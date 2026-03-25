@@ -1,7 +1,7 @@
 import { memo } from 'react'
-import { withAnimated } from 'ui/src/components/factories/animated'
-import { ArrowChange } from 'ui/src/components/icons/ArrowChange'
-import type { IconSizeTokens } from 'ui/src/theme'
+import { withAnimated } from '@luxfi/ui/src/components/factories/animated'
+import { ArrowChange } from '@luxfi/ui/src/components/icons/ArrowChange'
+import type { IconSizeTokens } from '@luxfi/ui/src/theme'
 
 type Props = {
   size?: IconSizeTokens

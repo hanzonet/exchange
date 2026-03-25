@@ -1,11 +1,11 @@
-import { AppTFunction } from 'ui/src/i18n/types'
+import { AppTFunction } from '@luxfi/ui/src/i18n/types'
 import {
   NFTTradeType,
   REVOKE_APPROVAL_AMOUNT,
   TransactionDetails,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function getTransactionSummaryTitle(
   tx: Pick<TransactionDetails, 'typeInfo' | 'status'>,

@@ -7,10 +7,10 @@ import { addMocksToSchema } from '@graphql-tools/mock'
 import { GraphQLApi } from '@luxfi/api'
 import path from 'path'
 import { PropsWithChildren } from 'react'
-import { setupSharedApolloCache } from 'lx/src/data/cache'
-import { getErrorLink, getRestLink } from 'lx/src/data/links'
-import { mocks as defaultMocks } from 'lx/src/test/mocks/gql/mocks'
-import { defaultResolvers } from 'lx/src/test/mocks/gql/resolvers'
+import { setupSharedApolloCache } from '@luxexchange/lx/src/data/cache'
+import { getErrorLink, getRestLink } from '@luxexchange/lx/src/data/links'
+import { mocks as defaultMocks } from '@luxexchange/lx/src/test/mocks/gql/mocks'
+import { defaultResolvers } from '@luxexchange/lx/src/test/mocks/gql/resolvers'
 
 const GQL_SCHEMA_PATH = path.join(__dirname, '../../../../../api/src/clients/graphql/schema.graphql')
 

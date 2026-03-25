@@ -4,22 +4,22 @@ import { useTranslation } from 'react-i18next'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
 import { useNavigationHeader } from 'src/utils/useNavigationHeader'
-import { Person } from 'ui/src/components/icons'
-import { UnitagEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { ClaimUnitagContent } from 'lx/src/features/unitags/ClaimUnitagContent'
-import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
+import { Person } from '@luxfi/ui/src/components/icons'
+import { UnitagEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { ClaimUnitagContent } from '@luxexchange/lx/src/features/unitags/ClaimUnitagContent'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
 import {
   MobileScreens,
   OnboardingScreens,
   SharedUnitagScreenParams,
   UnitagScreens,
   UnitagStackParamList,
-} from 'lx/src/types/screens/mobile'
+} from '@luxexchange/lx/src/types/screens/mobile'
 import {
   useCreateOnboardingAccountIfNone,
   useOnboardingContext,
-} from 'wallet/src/features/onboarding/OnboardingContext'
+} from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 
 type Props = NativeStackScreenProps<UnitagStackParamList, UnitagScreens.ClaimUnitag>
 

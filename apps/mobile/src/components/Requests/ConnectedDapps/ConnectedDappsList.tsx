@@ -12,19 +12,19 @@ import {
   removeSession,
   WalletConnectSession,
 } from 'src/features/walletConnect/walletConnectSlice'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { Scan } from 'ui/src/components/icons'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { spacing } from 'ui/src/theme'
-import { ScannerModalState } from 'lx/src/components/ReceiveQRCode/constants'
-import { pushNotification } from 'lx/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { WalletConnectEvent } from 'lx/src/types/walletConnect'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
-import { DappEllipsisDropdown } from 'wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Scan } from '@luxfi/ui/src/components/icons'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing } from '@luxfi/ui/src/theme'
+import { ScannerModalState } from '@luxexchange/lx/src/components/ReceiveQRCode/constants'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { WalletConnectEvent } from '@luxexchange/lx/src/types/walletConnect'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { DappEllipsisDropdown } from '@luxfi/wallet/src/components/settings/DappEllipsisDropdown/DappEllipsisDropdown'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type ConnectedDappsProps = {
   sessions: WalletConnectSession[]

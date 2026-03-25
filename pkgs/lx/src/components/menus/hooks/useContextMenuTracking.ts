@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react'
-import { ElementName, SectionName, LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+import { ElementName, SectionName, LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 
 interface UseContextMenuTrackingParams {
   isOpen: boolean

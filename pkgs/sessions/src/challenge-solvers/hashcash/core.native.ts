@@ -7,13 +7,13 @@
  * @see packages/hashcash-native for the native implementation
  */
 
-import { NotImplementedError } from 'utilities/src/errors'
+import { NotImplementedError } from '@luxfi/utilities/src/errors'
 
-export type { HashcashChallenge, ProofResult } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+export type { HashcashChallenge, ProofResult } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 // Re-export shared types and platform-agnostic functions
-export { checkDifficulty, formatHashcashString } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+export { checkDifficulty, formatHashcashString } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 
-import type { HashcashChallenge, ProofResult } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+import type { HashcashChallenge, ProofResult } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 
 export async function computeHash(_params: { subject: string; nonce: string; counter: number }): Promise<Uint8Array> {
   throw new NotImplementedError('computeHash - mobile uses native Nitro modules')

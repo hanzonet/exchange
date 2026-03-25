@@ -6,8 +6,8 @@ import {
   type RadioGroupItemProps,
   type RadioGroupProps,
 } from '@hanzo/gui'
-import { Flex } from 'ui/src/components/layout'
-import type { SporeComponentVariant } from 'ui/src/components/types'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import type { SporeComponentVariant } from '@luxfi/ui/src/components/types'
 
 // Used to pass the selected value of the RadioGroup down to the RadioButtons.
 const RadioButtonGroupContext = createContext<string | undefined>(undefined)

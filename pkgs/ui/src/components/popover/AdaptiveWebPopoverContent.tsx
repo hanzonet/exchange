@@ -1,9 +1,9 @@
 import { ComponentProps, ReactNode, useMemo } from 'react'
 import { GetProps, Popover, useMedia } from '@hanzo/gui'
 // biome-ignore lint/style/noRestrictedImports: needed here
-import { WebBottomSheet } from 'ui/src/components/modal/AdaptiveWebModal'
-import { zIndexes } from 'ui/src/theme'
-import { isWebApp } from 'utilities/src/platform'
+import { WebBottomSheet } from '@luxfi/ui/src/components/modal/AdaptiveWebModal'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 const ANIMATION_OFFSET = 10
 

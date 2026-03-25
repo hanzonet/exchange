@@ -1,11 +1,11 @@
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { ActivityListEmptyState } from 'lx/src/components/activity/ActivityListEmptyState'
-import { ActivityItem } from 'lx/src/components/activity/generateActivityItemRenderer'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { ActivityListEmptyState } from '@luxexchange/lx/src/components/activity/ActivityListEmptyState'
+import { ActivityItem } from '@luxexchange/lx/src/components/activity/generateActivityItemRenderer'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import {
   ActivityFilterType,
   filterTransactionDetailsFromActivityItems,

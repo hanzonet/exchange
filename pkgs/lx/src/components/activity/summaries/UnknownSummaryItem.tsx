@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
-import { useSporeColors } from 'ui/src'
-import { ContractInteraction } from 'ui/src/components/icons/ContractInteraction'
-import { iconSizes } from 'ui/src/theme'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
-import { DappLogoWithWCBadge } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
-import { TransactionDetails, UnknownTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { shortenAddress } from 'utilities/src/addresses'
+import { useSporeColors } from '@luxfi/ui/src'
+import { ContractInteraction } from '@luxfi/ui/src/components/icons/ContractInteraction'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TransactionSummaryLayout } from '@luxexchange/lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { DappLogoWithWCBadge } from '@luxexchange/lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { TransactionDetails, UnknownTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
 
 export function UnknownSummaryItem({
   transaction,

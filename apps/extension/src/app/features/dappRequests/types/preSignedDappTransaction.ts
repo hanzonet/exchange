@@ -1,7 +1,7 @@
-import { SignerMnemonicAccountMeta } from 'lx/src/features/accounts/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ValidatedTransactionRequest } from 'lx/src/features/transactions/types/transactionRequests'
-import { SignedTransactionRequest } from 'wallet/src/features/transactions/executeTransaction/types'
+import { SignerMnemonicAccountMeta } from '@luxexchange/lx/src/features/accounts/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ValidatedTransactionRequest } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
+import { SignedTransactionRequest } from '@luxfi/wallet/src/features/transactions/executeTransaction/types'
 
 export interface PrepareAndSignDappTransactionParams {
   /** The dapp request with gas estimates already applied */

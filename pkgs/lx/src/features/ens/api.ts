@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { skipToken, useQuery } from '@tanstack/react-query'
 import { providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { createEthersProvider } from 'lx/src/features/providers/createEthersProvider'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
-import { sanitizeAvatarUrl } from 'utilities/src/format/urls'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { createEthersProvider } from '@luxexchange/lx/src/features/providers/createEthersProvider'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
+import { sanitizeAvatarUrl } from '@luxfi/utilities/src/format/urls'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 export enum EnsLookupType {
   Name = 'name',

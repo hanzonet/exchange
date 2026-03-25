@@ -1,9 +1,9 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { SagaGenerator } from 'typed-redux-saga'
-import { CAIP25Session } from 'lx/src/features/capabilities/caip25/types'
-import { AppNotification } from 'lx/src/features/notifications/slice/types'
-import type { SwapRouting, SwapTradeBaseProperties } from 'lx/src/features/telemetry/types'
-import { HandledTransactionInterrupt } from 'lx/src/features/transactions/errors'
+import { CAIP25Session } from '@luxexchange/lx/src/features/capabilities/caip25/types'
+import { AppNotification } from '@luxexchange/lx/src/features/notifications/slice/types'
+import type { SwapRouting, SwapTradeBaseProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { HandledTransactionInterrupt } from '@luxexchange/lx/src/features/transactions/errors'
 import {
   HandleApprovalStepParams,
   HandleSignatureStepParams,
@@ -12,11 +12,11 @@ import {
   HandleDEXPlanSignatureStepParams,
   SignatureTransactionStep,
   TransactionStep,
-} from 'lx/src/features/transactions/steps/types'
-import { ExtractedBaseTradeAnalyticsProperties } from 'lx/src/features/transactions/swap/analytics'
-import { SwapExecutionCallbacks } from 'lx/src/features/transactions/swap/types/swapCallback'
-import { ValidatedSwapTxContext } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import type { PlanSwapTransactionInfoFields } from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/steps/types'
+import { ExtractedBaseTradeAnalyticsProperties } from '@luxexchange/lx/src/features/transactions/swap/analytics'
+import { SwapExecutionCallbacks } from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'
+import { ValidatedSwapTxContext } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { PlanSwapTransactionInfoFields } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export interface PlanParams extends SwapExecutionCallbacks {
   address: Address

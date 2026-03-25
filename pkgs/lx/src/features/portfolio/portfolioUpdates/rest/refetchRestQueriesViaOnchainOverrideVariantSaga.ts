@@ -4,21 +4,21 @@ import { Balance } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { Portfolio } from '@uniswap/client-data-api/dist/data/v1/types_pb.d'
 import { GQLQueries, SharedQueryClient } from '@luxfi/api'
 import { all, call, delay, put } from 'typed-redux-saga'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { doesGetPortfolioQueryMatchAddress, getPortfolioQueriesToUpdate } from 'lx/src/data/rest/getPortfolio'
-import { chainIdToPlatform } from 'lx/src/features/platforms/utils/chains'
-import { getCurrenciesWithExpectedUpdates } from 'lx/src/features/portfolio/portfolioUpdates/getCurrenciesWithExpectedUpdates'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { doesGetPortfolioQueryMatchAddress, getPortfolioQueriesToUpdate } from '@luxexchange/lx/src/data/rest/getPortfolio'
+import { chainIdToPlatform } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { getCurrenciesWithExpectedUpdates } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/getCurrenciesWithExpectedUpdates'
 import {
   fetchOnChainBalancesRest,
   OnChainMapRest,
-} from 'lx/src/features/portfolio/portfolioUpdates/rest/fetchOnChainBalancesRest'
-import { addTokensToBalanceOverride } from 'lx/src/features/portfolio/slice/slice'
-import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { CurrencyId } from 'lx/src/types/currency'
-import { buildCurrencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { createLogger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/rest/fetchOnChainBalancesRest'
+import { addTokensToBalanceOverride } from '@luxexchange/lx/src/features/portfolio/slice/slice'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 // This delay is arbitrary but enough time for our endpoints to reflect updated balances
 const REFETCH_DELAY = ONE_SECOND_MS * 3

@@ -1,5 +1,5 @@
-import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { POLLING_CONSTANTS, shouldCheckTransaction, withTimeout } from 'lx/src/utils/polling'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { POLLING_CONSTANTS, shouldCheckTransaction, withTimeout } from '@luxexchange/lx/src/utils/polling'
 
 describe('polling utilities', () => {
   describe('shouldCheckTransaction', () => {

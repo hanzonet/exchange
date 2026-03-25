@@ -1,9 +1,9 @@
 import { ChartPeriod } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { useEffect, useMemo } from 'react'
 import { type ChartData } from 'src/components/home/PortfolioChart/SparklineChart'
-import { useSporeColors } from 'ui/src'
+import { useSporeColors } from '@luxfi/ui/src'
 import { useGetPortfolioHistoricalValueChartQuery } from 'uniswap/src/data/rest/getPortfolioChart'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function usePortfolioChartData({
   evmAddress,

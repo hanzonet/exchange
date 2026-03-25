@@ -1,5 +1,5 @@
-import type { DeviceIdService } from '@universe/sessions/src/device-id/types'
-import type { SessionRepository } from '@universe/sessions/src/session-repository/types'
+import type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
+import type { SessionRepository } from '@luxexchange/sessions/src/session-repository/types'
 import type {
   ChallengeRequest,
   ChallengeResponse,
@@ -7,9 +7,9 @@ import type {
   SessionService,
   VerifySessionRequest,
   VerifySessionResponse,
-} from '@universe/sessions/src/session-service/types'
-import type { SessionStorage } from '@universe/sessions/src/session-storage/types'
-import type { LuxIdentifierService } from '@universe/sessions/src/lux-identifier/types'
+} from '@luxexchange/sessions/src/session-service/types'
+import type { SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
+import type { LuxIdentifierService } from '@luxexchange/sessions/src/lux-identifier/types'
 
 /**
  * Creates a Session Service instance.

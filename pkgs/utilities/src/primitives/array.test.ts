@@ -5,7 +5,7 @@ import {
   next,
   removeDuplicatesBy,
   unique,
-} from 'utilities/src/primitives/array'
+} from '@luxfi/utilities/src/primitives/array'
 
 describe('unique', () => {
   it('should return unique elements from an array using the default uniqueness check', () => {

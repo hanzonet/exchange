@@ -1,7 +1,7 @@
 import { createContext, PropsWithChildren, useContext, useMemo } from 'react'
-import { WalletService } from 'lx/src/features/wallet/services/IWalletService'
-import { Wallet } from 'lx/src/features/wallet/types/Wallet'
-import { HexString } from 'utilities/src/addresses/hex'
+import { WalletService } from '@luxexchange/lx/src/features/wallet/services/IWalletService'
+import { Wallet } from '@luxexchange/lx/src/features/wallet/types/Wallet'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
 
 interface WalletContext {
   walletService: WalletService

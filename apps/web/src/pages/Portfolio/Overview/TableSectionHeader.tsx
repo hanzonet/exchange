@@ -1,5 +1,5 @@
 import { memo, PropsWithChildren } from 'react'
-import { Flex, Text } from 'ui/src'
+import { Flex, Text } from '@luxfi/ui/src'
 
 interface TableSectionHeaderProps {
   title: string

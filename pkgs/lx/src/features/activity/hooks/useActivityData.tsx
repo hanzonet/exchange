@@ -4,21 +4,21 @@ import { TransactionTypeFilter } from '@uniswap/client-data-api/dist/data/v1/typ
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { StyleProp, ViewStyle } from 'react-native'
-import { Flex, Loader, Text } from 'ui/src'
-import { NoTransactions } from 'ui/src/components/icons/NoTransactions'
+import { Flex, Loader, Text } from '@luxfi/ui/src'
+import { NoTransactions } from '@luxfi/ui/src/components/icons/NoTransactions'
 import {
   ActivityItem,
   ActivityItemRenderer,
   generateActivityItemRenderer,
-} from 'lx/src/components/activity/generateActivityItemRenderer'
-import { SwapSummaryCallbacks } from 'lx/src/components/activity/types'
-import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
-import { useFormattedTransactionDataForActivity } from 'lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
-import { AuthTrigger } from 'lx/src/features/auth/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { PaginationControls } from 'lx/src/features/dataApi/types'
-import { useHideSpamTokensSetting } from 'lx/src/features/settings/hooks'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/activity/generateActivityItemRenderer'
+import { SwapSummaryCallbacks } from '@luxexchange/lx/src/components/activity/types'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { useFormattedTransactionDataForActivity } from '@luxexchange/lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
+import { AuthTrigger } from '@luxexchange/lx/src/features/auth/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { PaginationControls } from '@luxexchange/lx/src/features/dataApi/types'
+import { useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export type UseActivityDataProps = {
   evmOwner?: Address

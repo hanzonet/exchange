@@ -5,12 +5,12 @@ import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { CloudBackupPassword } from 'src/features/CloudBackup/CloudBackupForm/CloudBackupPassword'
 import { BackupSpeedBumpModal } from 'src/features/onboarding/BackupSpeedBumpModal'
 import { SafeKeyboardOnboardingScreen } from 'src/features/onboarding/SafeKeyboardOnboardingScreen'
-import { Flex } from 'ui/src'
-import { Cloud } from 'ui/src/components/icons'
-import { OnboardingEntryPoint } from 'lx/src/types/onboarding'
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { BackupType } from 'wallet/src/features/wallet/accounts/types'
+import { Flex } from '@luxfi/ui/src'
+import { Cloud } from '@luxfi/ui/src/components/icons'
+import { OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
 
 export function CloudBackupPasswordConfirmScreen({
   navigation,

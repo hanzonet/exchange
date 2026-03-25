@@ -1,13 +1,13 @@
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import type { AccountsStore } from 'lx/src/features/accounts/store/types/AccountsState'
-import { createUseActiveAccount } from 'lx/src/features/accounts/store/utils/accounts'
-import { createUseActiveAddress, createUseActiveAddresses } from 'lx/src/features/accounts/store/utils/addresses'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import type { AccountsStore } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { createUseActiveAccount } from '@luxexchange/lx/src/features/accounts/store/utils/accounts'
+import { createUseActiveAddress, createUseActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/utils/addresses'
 import {
   createUseActiveConnector,
   createUseConnectionStatus,
-} from 'lx/src/features/accounts/store/utils/connection'
-import { createUseAccountsStore } from 'lx/src/features/accounts/store/utils/createUseAccountsStore'
-import { createUseActiveWallet, createUseWalletWithId } from 'lx/src/features/accounts/store/utils/wallets'
+} from '@luxexchange/lx/src/features/accounts/store/utils/connection'
+import { createUseAccountsStore } from '@luxexchange/lx/src/features/accounts/store/utils/createUseAccountsStore'
+import { createUseActiveWallet, createUseWalletWithId } from '@luxexchange/lx/src/features/accounts/store/utils/wallets'
 
 /** Gets AccountsStoreContext for the current app, passed by the app to this package via `LuxProvider`. */
 function useCurrentAppAccountStoreContext(): AccountsStore {

@@ -1,11 +1,11 @@
 import type React from 'react'
 import { lazy, Suspense } from 'react'
-import { Flex } from 'ui/src/components/layout/Flex'
-import type { UniconProps } from 'ui/src/components/Unicon/types'
-import { getUniconColors, getUniconsDeterministicHash } from 'ui/src/components/Unicon/utils'
-import { useIsDarkMode } from 'ui/src/hooks/useIsDarkMode'
-import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { isSVMAddress } from 'utilities/src/addresses/svm/svm'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import type { UniconProps } from '@luxfi/ui/src/components/Unicon/types'
+import { getUniconColors, getUniconsDeterministicHash } from '@luxfi/ui/src/components/Unicon/utils'
+import { useIsDarkMode } from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { isEVMAddressWithChecksum } from '@luxfi/utilities/src/addresses/evm/evm'
+import { isSVMAddress } from '@luxfi/utilities/src/addresses/svm/svm'
 
 // In test environments, we use an empty Icons object since tests don't render
 // the actual Unicon SVGs. In production, Icons is loaded lazily via dynamic import.

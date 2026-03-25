@@ -1,8 +1,8 @@
 import { FiatOnRampModalState } from 'src/screens/FiatOnRampModalState'
-import { ScannerModalState } from 'lx/src/components/ReceiveQRCode/constants'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TransactionScreen } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
+import { ScannerModalState } from '@luxexchange/lx/src/components/ReceiveQRCode/constants'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TransactionScreen } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
 
 export interface AppModalState<T> {
   isOpen: boolean

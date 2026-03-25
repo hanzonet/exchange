@@ -1,17 +1,17 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { getTokenValue, SpinningLoader, Text, TouchableArea } from 'ui/src'
-import { CheckCircleFilled } from 'ui/src/components/icons/CheckCircleFilled'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { RoundExclamation } from 'ui/src/components/icons/RoundExclamation'
-import { Flex } from 'ui/src/components/layout/Flex'
-import { SwapTypeTransactionInfo } from 'lx/src/components/activity/details/types'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { getAmountsFromTrade } from 'lx/src/features/transactions/swap/utils/getAmountsFromTrade'
+import { getTokenValue, SpinningLoader, Text, TouchableArea } from '@luxfi/ui/src'
+import { CheckCircleFilled } from '@luxfi/ui/src/components/icons/CheckCircleFilled'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { RoundExclamation } from '@luxfi/ui/src/components/icons/RoundExclamation'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import { SwapTypeTransactionInfo } from '@luxexchange/lx/src/components/activity/details/types'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { getAmountsFromTrade } from '@luxexchange/lx/src/features/transactions/swap/utils/getAmountsFromTrade'
 import {
   ApproveTransactionInfo,
   BridgeTransactionInfo,
@@ -20,15 +20,15 @@ import {
   TransactionType,
   TransactionTypeInfo,
   WrapTransactionInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   buildCurrencyId,
   buildNativeCurrencyId,
   buildWrappedNativeCurrencyId,
   currencyIdToChain,
-} from 'lx/src/utils/currencyId'
-import { openTransactionLink } from 'lx/src/utils/linking'
-import { NumberType } from 'utilities/src/format/types'
+} from '@luxexchange/lx/src/utils/currencyId'
+import { openTransactionLink } from '@luxexchange/lx/src/utils/linking'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export const PLAN_STEP_ITEM_WIDTH = '$icon.20'
 

@@ -1,6 +1,6 @@
 /** biome-ignore-all lint/style/noRestrictedGlobals: need to reference chrome for test setup */
-import { DEFAULT_LANGUAGE_CODE, DEFAULT_LANGUAGE_TAG } from 'utilities/src/device/constants'
-import { getDeviceLocales } from 'utilities/src/device/locales.web'
+import { DEFAULT_LANGUAGE_CODE, DEFAULT_LANGUAGE_TAG } from '@luxfi/utilities/src/device/constants'
+import { getDeviceLocales } from '@luxfi/utilities/src/device/locales.web'
 import { Mock, vi } from 'vitest'
 
 // Mock the chrome utilities to return the global chrome mock from vitest setup

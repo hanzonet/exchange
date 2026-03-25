@@ -1,8 +1,8 @@
 import { ALL_NETWORKS_ARG, CustomRankingType } from '@luxfi/api'
 import { useMemo } from 'react'
-import { tokenRankingsStatToCurrencyInfo, useTokenRankingsQuery } from 'lx/src/data/rest/tokenRankings'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { tokenRankingsStatToCurrencyInfo, useTokenRankingsQuery } from '@luxexchange/lx/src/data/rest/tokenRankings'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 
 export function useTrendingTokensCurrencyInfos(
   chainFilter: Maybe<UniverseChainId>,

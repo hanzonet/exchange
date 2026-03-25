@@ -9,7 +9,7 @@ import { type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { type ReactiveCondition } from '@luxexchange/notifications'
 import { type MobileState } from 'src/app/mobileReducer'
 import { selectSomeModalOpen } from 'src/features/modals/selectSomeModalOpen'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
 
 /**
  * Unique ID for the offline banner notification.

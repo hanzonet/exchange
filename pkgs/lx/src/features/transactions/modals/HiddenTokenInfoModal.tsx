@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
-import { InfoLinkModal } from 'lx/src/components/modals/InfoLinkModal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { Flex } from '@luxfi/ui/src'
+import { ShieldCheck } from '@luxfi/ui/src/components/icons/ShieldCheck'
+import { InfoLinkModal } from '@luxexchange/lx/src/components/modals/InfoLinkModal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 export function HiddenTokenInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }): JSX.Element {
   const { t } = useTranslation()

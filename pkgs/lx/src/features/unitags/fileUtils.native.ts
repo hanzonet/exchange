@@ -1,6 +1,6 @@
 import { UnitagAvatarUploadCredentials } from '@luxfi/api'
 import { Platform } from 'react-native'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Native-specific: React Native file URI patterns
 export function isLocalFileUri(imageUri: string): boolean {

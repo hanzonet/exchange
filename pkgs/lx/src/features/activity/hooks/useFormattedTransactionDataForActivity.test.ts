@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { NetworkStatus } from '@apollo/client'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import dayjs from 'dayjs'
-import { useFormattedTransactionDataForActivity } from 'lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
-import { transactionDetails, dexOrderDetails } from 'lx/src/test/fixtures/wallet/transactions'
-import { renderHook } from 'lx/src/test/test-utils'
+import { useFormattedTransactionDataForActivity } from '@luxexchange/lx/src/features/activity/hooks/useFormattedTransactionDataForActivity'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { transactionDetails, dexOrderDetails } from '@luxexchange/lx/src/test/fixtures/wallet/transactions'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 import type { MockedFunction } from 'vitest'
 
 // Mock dependencies
@@ -24,12 +24,12 @@ vi.mock('react-redux', async (importOriginal) => {
 })
 
 import { useSelector } from 'react-redux'
-import { formatTransactionsByDate } from 'lx/src/features/activity/formatTransactionsByDate'
-import { useMergeLocalAndRemoteTransactions } from 'lx/src/features/activity/hooks/useMergeLocalAndRemoteTransactions'
-import { useListTransactions } from 'lx/src/features/dataApi/listTransactions/listTransactions'
-import { useLocalizedDayjs } from 'lx/src/features/language/localizedDayjs'
-import { useCurrencyIdToVisibility } from 'lx/src/features/transactions/selectors'
-import { TEST_WALLET } from 'lx/src/test/fixtures/wallet/addresses'
+import { formatTransactionsByDate } from '@luxexchange/lx/src/features/activity/formatTransactionsByDate'
+import { useMergeLocalAndRemoteTransactions } from '@luxexchange/lx/src/features/activity/hooks/useMergeLocalAndRemoteTransactions'
+import { useListTransactions } from '@luxexchange/lx/src/features/dataApi/listTransactions/listTransactions'
+import { useLocalizedDayjs } from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { useCurrencyIdToVisibility } from '@luxexchange/lx/src/features/transactions/selectors'
+import { TEST_WALLET } from '@luxexchange/lx/src/test/fixtures/wallet/addresses'
 
 const mockUseSelector = useSelector as MockedFunction<typeof useSelector>
 const mockUseCurrencyIdToVisibility = useCurrencyIdToVisibility as MockedFunction<typeof useCurrencyIdToVisibility>

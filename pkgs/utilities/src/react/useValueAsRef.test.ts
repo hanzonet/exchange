@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { useValueAsRef } from 'utilities/src/react/useValueAsRef'
+import { useValueAsRef } from '@luxfi/utilities/src/react/useValueAsRef'
 
 describe('useValueAsRef', () => {
   it('returns undefined if no value is passed on first render', () => {

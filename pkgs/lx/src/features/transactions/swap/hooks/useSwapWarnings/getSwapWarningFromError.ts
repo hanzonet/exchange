@@ -1,8 +1,8 @@
 import { FetchError, isRateLimitFetchError, TradingApi } from '@luxfi/api'
 import { TFunction } from 'i18next'
-import { Warning, WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { Warning, WarningAction, WarningLabel, WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
 
 export function getSwapWarningFromError({
   error,

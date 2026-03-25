@@ -1,5 +1,5 @@
-import type { DelegationService } from 'lx/src/features/smartWallet/delegation/delegation'
-import type { Logger } from 'utilities/src/logger/logger'
+import type { DelegationService } from '@luxexchange/lx/src/features/smartWallet/delegation/delegation'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 interface MismatchCtx {
   delegationService: DelegationService

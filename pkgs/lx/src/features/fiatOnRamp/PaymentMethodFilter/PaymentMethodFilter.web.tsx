@@ -1,13 +1,13 @@
-import { Flex, FlexProps } from 'ui/src'
+import { Flex, FlexProps } from '@luxfi/ui/src'
 import {
   PaymentMethodFilterProps,
   PaymentMethodItem,
   useEnabledPaymentMethodFilters,
   useTogglePaymentMethod,
-} from 'lx/src/features/fiatOnRamp/PaymentMethodFilter/utils'
-import { FORFilters } from 'lx/src/features/fiatOnRamp/types'
-import { FiatOffRampEventName, FiatOnRampEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+} from '@luxexchange/lx/src/features/fiatOnRamp/PaymentMethodFilter/utils'
+import { FORFilters } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { FiatOffRampEventName, FiatOnRampEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 
 export function PaymentMethodFilter({
   paymentMethod,

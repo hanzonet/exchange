@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux'
 import { dappRequestActions } from 'src/app/features/dappRequests/slice'
 import { resetAlerts } from 'src/app/features/onboarding/alerts/slice'
 import { resetPopups } from 'src/app/features/popups/slice'
-import { type AppStateResetter } from 'lx/src/state/createAppStateResetter'
-import { createLogger } from 'utilities/src/logger/logger'
-import { createWalletStateResetter } from 'wallet/src/state/createWalletStateResetter'
+import { type AppStateResetter } from '@luxexchange/lx/src/state/createAppStateResetter'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
+import { createWalletStateResetter } from '@luxfi/wallet/src/state/createWalletStateResetter'
 
 /**
  * Creates the extension app's state resetter instance.

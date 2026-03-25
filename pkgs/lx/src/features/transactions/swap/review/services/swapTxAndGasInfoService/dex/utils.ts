@@ -1,17 +1,17 @@
 import { TradingApi } from '@luxfi/api'
-import type { ApprovalTxInfo } from 'lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
-import type { TransactionRequestInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { ApprovalTxInfo } from '@luxexchange/lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
+import type { TransactionRequestInfo } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import {
   createApprovalFields,
   createGasFields,
-} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+} from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import type {
   DEXGasBreakdown,
   DEXSwapTxAndGasInfo,
-} from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { PermitMethod } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import type { DEXTrade } from 'lx/src/features/transactions/swap/types/trade'
-import { validatePermit } from 'lx/src/features/transactions/swap/utils/trade'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { PermitMethod } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { DEXTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { validatePermit } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
 
 export function processDEXResponse({
   permitData,

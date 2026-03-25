@@ -1,10 +1,10 @@
 import { renderHook } from '@testing-library/react'
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
-import { useSyncFiatAndTokenAmountUpdater } from 'lx/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
-import { SwapFormStoreState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import * as useSwapFormStoreModule from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { CurrencyField } from 'lx/src/types/currency'
+import { useSyncFiatAndTokenAmountUpdater } from '@luxexchange/lx/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
+import { SwapFormStoreState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import * as useSwapFormStoreModule from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import type { Mock } from 'vitest'
 
 // Mock all dependencies
@@ -37,10 +37,10 @@ vi.mock('lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore
 }))
 
 // Import the mocked functions - these are the mocks, not actual implementations
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useUSDCPrice } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { currencyIdToChain } from 'lx/src/utils/currencyId'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useUSDCPrice } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
 
 // Cast mocked functions to Mock type
 const mockUseLocalizationContext = useLocalizationContext as Mock

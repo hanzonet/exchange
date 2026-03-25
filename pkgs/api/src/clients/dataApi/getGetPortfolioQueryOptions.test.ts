@@ -1,7 +1,7 @@
 import type { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import type { DataApiServiceClient } from '@universe/api/src/clients/dataApi/createDataApiServiceClient'
-import { getGetPortfolioQueryOptions } from '@universe/api/src/clients/dataApi/getGetPortfolioQueryOptions'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import type { DataApiServiceClient } from '@luxexchange/api/src/clients/dataApi/createDataApiServiceClient'
+import { getGetPortfolioQueryOptions } from '@luxexchange/api/src/clients/dataApi/getGetPortfolioQueryOptions'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('getGetPortfolioQueryOptions', () => {

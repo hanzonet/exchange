@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { addFavoriteToken, removeFavoriteToken } from 'lx/src/features/favorites/slice'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { CurrencyId } from 'lx/src/types/currency'
-import { currencyIdToAddress, currencyIdToChain } from 'lx/src/utils/currencyId'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { addFavoriteToken, removeFavoriteToken } from '@luxexchange/lx/src/features/favorites/slice'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { currencyIdToAddress, currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
 
 export function useToggleFavoriteCallback({
   id,

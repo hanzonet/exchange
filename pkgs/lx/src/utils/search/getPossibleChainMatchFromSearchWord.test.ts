@@ -1,5 +1,5 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getPossibleChainMatchFromSearchWord } from 'lx/src/utils/search/getPossibleChainMatchFromSearchWord'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getPossibleChainMatchFromSearchWord } from '@luxexchange/lx/src/utils/search/getPossibleChainMatchFromSearchWord'
 
 // Mock the dependencies before importing the function
 vi.mock('lx/src/features/chains/chainInfo', () => ({
@@ -11,8 +11,8 @@ vi.mock('lx/src/features/chains/utils', () => ({
 }))
 
 // Import the mocked functions
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { isTestnetChain } from 'lx/src/features/chains/utils'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { isTestnetChain } from '@luxexchange/lx/src/features/chains/utils'
 
 const mockGetChainInfo = getChainInfo as any
 const mockIsTestnetChain = isTestnetChain as any

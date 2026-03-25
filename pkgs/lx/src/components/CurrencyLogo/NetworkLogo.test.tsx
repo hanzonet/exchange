@@ -1,6 +1,6 @@
-import { NetworkLogo, TransactionSummaryNetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { render } from 'lx/src/test/test-utils'
+import { NetworkLogo, TransactionSummaryNetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { render } from '@luxexchange/lx/src/test/test-utils'
 
 vi.mock('lx/src/features/chains/chainInfo', async (importOriginal) => {
   const actualChains = await importOriginal<typeof import('lx/src/features/chains/chainInfo')>()

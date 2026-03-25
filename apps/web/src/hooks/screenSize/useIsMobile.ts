@@ -1,4 +1,4 @@
-import { useMedia } from 'ui/src'
+import { useMedia } from '@luxfi/ui/src'
 
 export function useIsMobile(): boolean {
   const media = useMedia()

@@ -1,4 +1,4 @@
-import { hexToRGB, hexToRGBString } from 'utilities/src/theme/colors'
+import { hexToRGB, hexToRGBString } from '@luxfi/utilities/src/theme/colors'
 
 describe('hexToRGB', () => {
   it('converts hex to rgb', () => {

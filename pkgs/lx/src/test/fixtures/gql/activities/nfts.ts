@@ -1,7 +1,7 @@
 import { GraphQLApi } from '@luxfi/api'
-import { nftAsset } from 'lx/src/test/fixtures/gql/assets'
-import { faker } from 'lx/src/test/shared'
-import { createFixture, randomEnumValue } from 'lx/src/test/utils'
+import { nftAsset } from '@luxexchange/lx/src/test/fixtures/gql/assets'
+import { faker } from '@luxexchange/lx/src/test/shared'
+import { createFixture, randomEnumValue } from '@luxexchange/lx/src/test/utils'
 
 export const nftApproval = createFixture<GraphQLApi.NftApproval>()(() => ({
   __typename: 'NftApproval',

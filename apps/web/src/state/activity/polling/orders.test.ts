@@ -1,16 +1,16 @@
 import { TradeType } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
-import { DAI } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { updateTransaction } from 'lx/src/features/transactions/slice'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { updateTransaction } from '@luxexchange/lx/src/features/transactions/slice'
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId, currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId, currencyId } from '@luxexchange/lx/src/utils/currencyId'
 import type { Mock } from 'vitest'
 import {
   getQuickPollingInterval,

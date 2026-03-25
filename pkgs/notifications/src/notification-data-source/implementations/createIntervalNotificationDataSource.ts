@@ -1,7 +1,7 @@
-import { type InAppNotification } from '@universe/api'
-import { createNotificationDataSource } from '@universe/notifications/src/notification-data-source/implementations/createNotificationDataSource'
-import { type NotificationDataSource } from '@universe/notifications/src/notification-data-source/NotificationDataSource'
-import { getLogger } from 'utilities/src/logger/logger'
+import { type InAppNotification } from '@luxexchange/api'
+import { createNotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/implementations/createNotificationDataSource'
+import { type NotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/NotificationDataSource'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
 
 interface CreateIntervalNotificationDataSourceContext {
   pollIntervalMs: number

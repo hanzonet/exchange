@@ -3,13 +3,13 @@ import {
   useFormattedDEXGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
-} from 'lx/src/features/gas/hooks'
-import type { GasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
-import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { useSwapTxStore } from 'lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
-import { CurrencyField } from 'lx/src/types/currency'
-import { usePrevious } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/gas/hooks'
+import type { GasInfo } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
+import { useSwapFormStoreDerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useSwapTxStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
 
 // TODO: WALL-6293
 export function useDebouncedGasInfo(): GasInfo {

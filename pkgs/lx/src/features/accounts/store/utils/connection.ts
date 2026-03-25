@@ -1,6 +1,6 @@
-import type { AccountsState } from 'lx/src/features/accounts/store/types/AccountsState'
-import { ConnectionStatusInfo, ConnectorStatus } from 'lx/src/features/accounts/store/types/Connector'
-import { useStoreWithShallow } from 'lx/src/features/accounts/store/utils/createUseAccountsStore'
+import type { AccountsState } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { ConnectionStatusInfo, ConnectorStatus } from '@luxexchange/lx/src/features/accounts/store/types/Connector'
+import { useStoreWithShallow } from '@luxexchange/lx/src/features/accounts/store/utils/createUseAccountsStore'
 import { StoreApi, UseBoundStore } from 'zustand'
 
 /**

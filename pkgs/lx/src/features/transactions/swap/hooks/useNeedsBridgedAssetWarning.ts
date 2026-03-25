@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
-import { TradeableAsset } from 'lx/src/entities/assets'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useDismissedBridgedAssetWarnings } from 'lx/src/features/tokens/warnings/slice/hooks'
+import { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useDismissedBridgedAssetWarnings } from '@luxexchange/lx/src/features/tokens/warnings/slice/hooks'
 
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { isWebApp } from 'utilities/src/platform'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 export function useNeedsBridgedAssetWarning(
   derivedSwapInfo: DerivedSwapInfo,

@@ -1,8 +1,8 @@
 import { queryOptions, skipToken, useQuery } from '@tanstack/react-query'
-import { usePricesContext } from '@universe/prices/src/context/PriceServiceContext'
-import { priceKeys } from '@universe/prices/src/queries/priceKeys'
-import { tokenPriceQueryOptions } from '@universe/prices/src/queries/tokenPriceQueryOptions'
-import type { TokenPriceData } from '@universe/prices/src/types'
+import { usePricesContext } from '@luxexchange/prices/src/context/PriceServiceContext'
+import { priceKeys } from '@luxexchange/prices/src/queries/priceKeys'
+import { tokenPriceQueryOptions } from '@luxexchange/prices/src/queries/tokenPriceQueryOptions'
+import type { TokenPriceData } from '@luxexchange/prices/src/types'
 import { useEffect } from 'react'
 
 interface UsePriceOptions {

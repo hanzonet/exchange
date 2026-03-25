@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { Flex } from 'ui/src'
-import { ContentRow } from 'lx/src/components/transactions/requests/ContentRow'
+import { Flex } from '@luxfi/ui/src'
+import { ContentRow } from '@luxexchange/lx/src/components/transactions/requests/ContentRow'
 
 export function InfoRow({
   label,

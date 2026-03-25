@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { TradeableAsset } from 'lx/src/entities/assets'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { getTokenProtectionWarning, getTokenWarningSeverity } from 'lx/src/features/tokens/warnings/safetyUtils'
-import { useDismissedTokenWarnings } from 'lx/src/features/tokens/warnings/slice/hooks'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { getTokenProtectionWarning, getTokenWarningSeverity } from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { useDismissedTokenWarnings } from '@luxexchange/lx/src/features/tokens/warnings/slice/hooks'
 
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { areCurrencyIdsEqual, currencyId } from 'lx/src/utils/currencyId'
-import { isWebApp } from 'utilities/src/platform'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { areCurrencyIdsEqual, currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 /*
  * Display token protection warning modal on swap button click.

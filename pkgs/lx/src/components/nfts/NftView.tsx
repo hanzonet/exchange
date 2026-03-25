@@ -1,8 +1,8 @@
-import { Flex, type FlexProps, TouchableArea } from 'ui/src'
-import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
-import { ESTIMATED_NFT_LIST_ITEM_SIZE } from 'lx/src/features/nfts/constants'
-import { type NFTItem } from 'lx/src/features/nfts/types'
-import { isAndroid, isWebPlatform } from 'utilities/src/platform'
+import { Flex, type FlexProps, TouchableArea } from '@luxfi/ui/src'
+import { NFTViewer } from '@luxexchange/lx/src/components/nfts/NFTViewer'
+import { ESTIMATED_NFT_LIST_ITEM_SIZE } from '@luxexchange/lx/src/features/nfts/constants'
+import { type NFTItem } from '@luxexchange/lx/src/features/nfts/types'
+import { isAndroid, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export type NftViewProps = {
   item: NFTItem

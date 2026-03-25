@@ -1,4 +1,4 @@
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function unregister() {
   if ('serviceWorker' in navigator) {

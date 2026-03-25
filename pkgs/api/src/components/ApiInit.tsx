@@ -1,10 +1,10 @@
 import { queryOptions, useQuery } from '@tanstack/react-query'
-import { SharedQueryClient } from '@universe/api/src/clients/base/SharedQueryClient'
-import type { SessionInitializationService, SessionInitResult } from '@universe/sessions'
-import { SessionError } from '@universe/sessions'
+import { SharedQueryClient } from '@luxexchange/api/src/clients/base/SharedQueryClient'
+import type { SessionInitializationService, SessionInitResult } from '@luxexchange/sessions'
+import { SessionError } from '@luxexchange/sessions'
 import { useState } from 'react'
-import type { Logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 interface ApiInitProps {
   getSessionInitService: () => SessionInitializationService

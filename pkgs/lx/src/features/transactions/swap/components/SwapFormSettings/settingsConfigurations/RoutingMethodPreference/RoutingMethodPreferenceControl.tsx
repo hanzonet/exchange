@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
-import { useTransactionSettingsStore } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { Text } from '@luxfi/ui/src'
+import { useTransactionSettingsStore } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 
 export function RoutingMethodPreferenceControl(): JSX.Element {
   const { t } = useTranslation()

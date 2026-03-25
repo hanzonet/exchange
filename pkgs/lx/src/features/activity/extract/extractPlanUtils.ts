@@ -1,12 +1,12 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import {
   TransactionDetails,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { MaybeChainId, validateAndBuildCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { MaybeChainId, validateAndBuildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Constructs a TransactionDetails object from validated transaction details based on the

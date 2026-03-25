@@ -8,8 +8,8 @@
  * 3. Static fallback token lists
  */
 
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getTopTokens, getTopPools, type GChainToken, type GChainPool } from 'lx/src/data/gchain'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getTopTokens, getTopPools, type GChainToken, type GChainPool } from '@luxexchange/lx/src/data/gchain'
 
 // Lux Gateway base URL - can be overridden via environment
 const LUX_GATEWAY_URL =

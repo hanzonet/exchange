@@ -1,9 +1,9 @@
 import type {
   DialogPreferencesService,
   DialogPreferencesServiceContext,
-} from 'lx/src/dialog-preferences/DialogPreferencesService'
-import type { DialogVisibilityId } from 'lx/src/dialog-preferences/types'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/dialog-preferences/DialogPreferencesService'
+import type { DialogVisibilityId } from '@luxexchange/lx/src/dialog-preferences/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const STORAGE_KEY_PREFIX = 'lux-dialog_hidden_'
 const getStorageKey = (dialogId: string): string => `${STORAGE_KEY_PREFIX}${dialogId}`

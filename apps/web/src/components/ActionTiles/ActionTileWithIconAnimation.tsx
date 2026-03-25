@@ -1,5 +1,5 @@
-import { Flex, GeneratedIcon } from 'ui/src'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { Flex, GeneratedIcon } from '@luxfi/ui/src'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 import { ActionTile, ActionTileProps } from '~/components/AccountDrawer/ActionTile'
 import { Wiggle } from '~/components/animations/Wiggle'
 

@@ -8,9 +8,9 @@ import {
   NotificationPermission,
   useNotificationOSPermissionsEnabled,
 } from 'src/features/notifications/hooks/useNotificationOSPermissionsEnabled'
-import { Flex } from 'ui/src'
-import { PUSH_NOTIFICATIONS_CARD_BANNER } from 'ui/src/assets'
-import { Buy } from 'ui/src/components/icons'
+import { Flex } from '@luxfi/ui/src'
+import { PUSH_NOTIFICATIONS_CARD_BANNER } from '@luxfi/ui/src/assets'
+import { Buy } from '@luxfi/ui/src/components/icons'
 import { AccountType } from 'uniswap/src/features/accounts/types'
 import { ElementName, ModalName, WalletEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
@@ -22,12 +22,12 @@ import {
   IntroCardGraphicType,
   IntroCardProps,
   isOnboardingCardLoggingName,
-} from 'wallet/src/components/introCards/IntroCard'
-import { INTRO_CARD_MIN_HEIGHT, IntroCardStack } from 'wallet/src/components/introCards/IntroCardStack'
-import { useSharedIntroCards } from 'wallet/src/components/introCards/useSharedIntroCards'
-import { selectHasViewedNotificationsCard } from 'wallet/src/features/behaviorHistory/selectors'
-import { setHasViewedNotificationsCard } from 'wallet/src/features/behaviorHistory/slice'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+} from '@luxfi/wallet/src/components/introCards/IntroCard'
+import { INTRO_CARD_MIN_HEIGHT, IntroCardStack } from '@luxfi/wallet/src/components/introCards/IntroCardStack'
+import { useSharedIntroCards } from '@luxfi/wallet/src/components/introCards/useSharedIntroCards'
+import { selectHasViewedNotificationsCard } from '@luxfi/wallet/src/features/behaviorHistory/selectors'
+import { setHasViewedNotificationsCard } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type OnboardingIntroCardStackProps = {
   isLoading?: boolean

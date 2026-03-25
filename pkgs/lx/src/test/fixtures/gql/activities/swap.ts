@@ -1,7 +1,7 @@
 import { GraphQLApi } from '@luxfi/api'
-import { daiToken, ethToken } from 'lx/src/test/fixtures/gql/assets'
-import { faker } from 'lx/src/test/shared'
-import { createFixture, randomEnumValue } from 'lx/src/test/utils'
+import { daiToken, ethToken } from '@luxexchange/lx/src/test/fixtures/gql/assets'
+import { faker } from '@luxexchange/lx/src/test/shared'
+import { createFixture, randomEnumValue } from '@luxexchange/lx/src/test/utils'
 
 export const swapOrderDetails = createFixture<GraphQLApi.SwapOrderDetails>()(() => ({
   __typename: 'SwapOrderDetails',

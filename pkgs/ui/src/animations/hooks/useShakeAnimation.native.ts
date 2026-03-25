@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useAnimatedStyle, useSharedValue } from 'react-native-reanimated'
-import { errorShakeAnimation } from 'ui/src/animations/errorShakeAnimation.native'
-import { useEvent } from 'utilities/src/react/hooks'
+import { errorShakeAnimation } from '@luxfi/ui/src/animations/errorShakeAnimation.native'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export interface ShakeAnimation {
   shakeStyle: ReturnType<typeof useAnimatedStyle>

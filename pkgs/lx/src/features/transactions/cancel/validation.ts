@@ -1,6 +1,6 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { hasEncodedOrder } from 'lx/src/features/transactions/utils/dex.utils'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { hasEncodedOrder } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
 
 /**
  * Result of order validation

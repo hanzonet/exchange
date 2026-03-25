@@ -1,11 +1,11 @@
 import { memo, useCallback } from 'react'
-import { Flex, FlexProps, Text, TextProps, TouchableArea } from 'ui/src'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { KeyAction } from 'utilities/src/device/keyboard/types'
-import { useIsKeyboardOpen } from 'utilities/src/device/keyboard/useIsKeyboardOpen'
-import { useKeyDown } from 'utilities/src/device/keyboard/useKeyDown'
-import { isWebApp, isWebPlatform } from 'utilities/src/platform'
-import { noop } from 'utilities/src/react/noop'
+import { Flex, FlexProps, Text, TextProps, TouchableArea } from '@luxfi/ui/src'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { KeyAction } from '@luxfi/utilities/src/device/keyboard/types'
+import { useIsKeyboardOpen } from '@luxfi/utilities/src/device/keyboard/useIsKeyboardOpen'
+import { useKeyDown } from '@luxfi/utilities/src/device/keyboard/useKeyDown'
+import { isWebApp, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { noop } from '@luxfi/utilities/src/react/noop'
 
 // Props for manually managing the focused row index of a list
 // i.e. via keyboard ArrowUp/ArrowDown navigation

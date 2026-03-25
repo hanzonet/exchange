@@ -1,15 +1,15 @@
 import 'utilities/src/logger/mocks'
 import { WETH9 } from '@uniswap/sdk-core'
 import { TradingApi } from '@luxexchange/api'
-import { DAI } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { vi } from 'vitest'
 import {
   CancellationState,

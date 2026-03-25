@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
-import { Flex } from 'ui/src'
-import { GradientContainerProps } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/GradientContainer'
-import { useBackgroundColor } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
+import { Flex } from '@luxfi/ui/src'
+import { GradientContainerProps } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/GradientContainer'
+import { useBackgroundColor } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
 
 // Inject CSS keyframes for blob animations once
 const BLOB_KEYFRAMES_ID = 'lux-gradient-blob-keyframes'

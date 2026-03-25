@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex, Text } from '@luxfi/ui/src'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export const SwapFormHeader = (): JSX.Element => {
   const { t } = useTranslation()

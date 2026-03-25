@@ -1,10 +1,10 @@
 import { TFunction } from 'i18next'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useUnitagsUsernameQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
-import { useENS } from 'lx/src/features/ens/useENS'
-import { UNITAG_VALID_REGEX } from 'lx/src/features/unitags/constants'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+import { useUnitagsUsernameQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
+import { useENS } from '@luxexchange/lx/src/features/ens/useENS'
+import { UNITAG_VALID_REGEX } from '@luxexchange/lx/src/features/unitags/constants'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 const MIN_UNITAG_LENGTH = 3
 const MAX_UNITAG_LENGTH = 20

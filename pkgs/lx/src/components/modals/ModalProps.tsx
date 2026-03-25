@@ -1,9 +1,9 @@
 import type { BottomSheetModal as BaseModal, BottomSheetView } from '@gorhom/bottom-sheet'
 import type { ComponentProps, PropsWithChildren, ReactNode } from 'react'
 import type { SharedValue } from 'react-native-reanimated'
-import type { ColorTokens, GetProps, Sheet, SpaceTokens, View } from 'ui/src'
-import type { HandleBarProps } from 'lx/src/components/modals/HandleBar'
-import type { ModalNameType } from 'lx/src/features/telemetry/constants'
+import type { ColorTokens, GetProps, Sheet, SpaceTokens, View } from '@luxfi/ui/src'
+import type { HandleBarProps } from '@luxexchange/lx/src/components/modals/HandleBar'
+import type { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
 
 export type ModalProps = PropsWithChildren<{
   animatedPosition?: SharedValue<number>

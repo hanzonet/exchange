@@ -10,10 +10,10 @@ import { CurrentOperationSection } from 'src/screens/components/sessions/Current
 import { HashcashProgressSection } from 'src/screens/components/sessions/HashcashProgressSection'
 import { LogSection } from 'src/screens/components/sessions/LogSection'
 import { useSessionsDebugStore } from 'src/screens/stores/sessionsDebugStore'
-import { Button, Flex, Text, TouchableArea } from 'ui/src'
-import { CopyAlt } from 'ui/src/components/icons'
-import { setClipboard } from 'utilities/src/clipboard/clipboard'
-import { logger } from 'utilities/src/logger/logger'
+import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { CopyAlt } from '@luxfi/ui/src/components/icons'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useShallow } from 'zustand/shallow'
 
 // Storage keys (must match provideSessionStorage, provideDeviceIdService, provideLuxIdentifierService)

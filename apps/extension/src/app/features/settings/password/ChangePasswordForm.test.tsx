@@ -1,7 +1,7 @@
 import { act, fireEvent, waitFor } from '@testing-library/react'
 import { ChangePasswordForm } from 'src/app/features/settings/password/ChangePasswordForm'
 import { cleanup, render, screen } from 'src/test/test-utils'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 // Mock the Keyring
 jest.mock('wallet/src/features/wallet/Keyring/Keyring', () => ({

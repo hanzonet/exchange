@@ -7,11 +7,11 @@ import { MainContentWrapper } from 'src/app/features/onboarding/intro/MainConten
 import { KeyboardKey } from 'src/app/features/onboarding/KeyboardKey'
 import { useOpeningKeyboardShortCut } from 'src/app/hooks/useOpeningKeyboardShortCut'
 import { terminateStoreSynchronization } from 'src/store/storeSynchronization'
-import { Flex, Image, Text } from 'ui/src'
-import { LUX_LOGO } from 'ui/src/assets'
-import { iconSizes } from 'ui/src/theme'
-import { ExtensionOnboardingFlow } from 'lx/src/types/screens/extension'
-import { useOnboardingContext } from 'wallet/src/features/onboarding/OnboardingContext'
+import { Flex, Image, Text } from '@luxfi/ui/src'
+import { LUX_LOGO } from '@luxfi/ui/src/assets'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { ExtensionOnboardingFlow } from '@luxexchange/lx/src/types/screens/extension'
+import { useOnboardingContext } from '@luxfi/wallet/src/features/onboarding/OnboardingContext'
 
 export function Complete({
   flow,

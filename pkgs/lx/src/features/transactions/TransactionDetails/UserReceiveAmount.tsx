@@ -1,9 +1,9 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
+import { Flex, Text } from '@luxfi/ui/src'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { formatCurrencyAmount } from 'utilities/src/format/localeBased'
-import { NumberType } from 'utilities/src/format/types'
+import { formatCurrencyAmount } from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function UserReceiveAmount({
   amountUserWillReceive,

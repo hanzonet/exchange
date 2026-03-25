@@ -1,8 +1,8 @@
 import { Link } from 'react-router'
-import { GetHelpButtonUI } from 'lx/src/components/dialog/GetHelpButtonUI'
-import type { GetHelpHeaderProps } from 'lx/src/components/dialog/GetHelpHeader'
-import { type GetHelpButtonProps, GetHelpHeaderContent } from 'lx/src/components/dialog/GetHelpHeaderContent'
-import { luxUrls } from 'lx/src/constants/urls'
+import { GetHelpButtonUI } from '@luxexchange/lx/src/components/dialog/GetHelpButtonUI'
+import type { GetHelpHeaderProps } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
+import { type GetHelpButtonProps, GetHelpHeaderContent } from '@luxexchange/lx/src/components/dialog/GetHelpHeaderContent'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 
 function WebGetHelpButton({ url }: GetHelpButtonProps): JSX.Element {
   return (

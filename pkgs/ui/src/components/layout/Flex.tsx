@@ -1,7 +1,7 @@
 import type React from 'react'
 import type { Insets } from 'react-native'
 import { type GetProps, type SizeTokens, type SpaceTokens, styled, type GuiElement, View } from '@hanzo/gui'
-import { animationsEnter, animationsEnterExit, animationsExit } from 'ui/src/animations/presets'
+import { animationsEnter, animationsEnterExit, animationsExit } from '@luxfi/ui/src/animations/presets'
 
 export const flexStyles = {
   fill: { flex: 1 },

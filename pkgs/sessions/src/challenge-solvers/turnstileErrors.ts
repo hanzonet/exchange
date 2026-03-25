@@ -1,4 +1,4 @@
-import { SessionError } from '@universe/sessions/src/session-initialization/sessionErrors'
+import { SessionError } from '@luxexchange/sessions/src/session-initialization/sessionErrors'
 
 /**
  * Error thrown when Turnstile script fails to load

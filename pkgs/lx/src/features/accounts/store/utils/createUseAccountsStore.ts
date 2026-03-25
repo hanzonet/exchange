@@ -1,4 +1,4 @@
-import type { AccountsState } from 'lx/src/features/accounts/store/types/AccountsState'
+import type { AccountsState } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
 import { StoreApi, UseBoundStore, useStore } from 'zustand'
 import { useShallow } from 'zustand/react/shallow'
 

@@ -1,7 +1,7 @@
 import { EthersTransactionRequestSchema } from 'src/app/features/dappRequests/types/EthersTypes'
 import { HexadecimalNumberSchema } from 'src/app/features/dappRequests/types/utilityTypes'
 import { HomeTabs } from 'src/app/navigation/constants'
-import { GetCallsStatusParamsSchema, SendCallsParamsSchema } from 'wallet/src/features/dappRequests/types'
+import { GetCallsStatusParamsSchema, SendCallsParamsSchema } from '@luxfi/wallet/src/features/dappRequests/types'
 import { z } from 'zod'
 
 /**

@@ -9,19 +9,19 @@
  */
 
 // Foundations
-export { createFetchClient } from '@universe/api/src/clients/base/createFetchClient'
+export { createFetchClient } from '@luxexchange/api/src/clients/base/createFetchClient'
 export {
   FetchError,
   is401Error,
   is404Error,
   isRateLimitFetchError,
-} from '@universe/api/src/clients/base/errors'
+} from '@luxexchange/api/src/clients/base/errors'
 export type {
   CustomOptions,
   FetchClient,
   StandardFetchOptions,
-} from '@universe/api/src/clients/base/types'
-export { SharedQueryClient } from '@universe/api/src/clients/base/SharedQueryClient'
+} from '@luxexchange/api/src/clients/base/types'
+export { SharedQueryClient } from '@luxexchange/api/src/clients/base/SharedQueryClient'
 
 // Constants and URLs
 export {
@@ -34,46 +34,46 @@ export {
   PROD_ENTRY_GATEWAY_API_BASE_URL,
   STAGING_ENTRY_GATEWAY_API_BASE_URL,
   TrafficFlows,
-} from '@universe/api/src/clients/base/urls'
+} from '@luxexchange/api/src/clients/base/urls'
 
 // Auth
-export type { AuthData, SignedRequestParams, SignMessageFunc } from '@universe/api/src/clients/base/auth'
-export { createSignedRequestBody, createSignedRequestParams } from '@universe/api/src/clients/base/auth'
+export type { AuthData, SignedRequestParams, SignMessageFunc } from '@luxexchange/api/src/clients/base/auth'
+export { createSignedRequestBody, createSignedRequestParams } from '@luxexchange/api/src/clients/base/auth'
 
 // GraphQL API
-export * as GraphQLApi from '@universe/api/src/clients/graphql/generated'
+export * as GraphQLApi from '@luxexchange/api/src/clients/graphql/generated'
 export {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
   useTokenMarketPartsFragment,
   useTokenProjectMarketsPartsFragment,
   useTokenProjectUrlsPartsFragment,
-} from '@universe/api/src/clients/graphql/fragments'
-export { GQLQueries } from '@universe/api/src/clients/graphql/queries'
-export type { GqlResult } from '@universe/api/src/clients/graphql/types'
-export { isError, isNonPollingRequestInFlight, isWarmLoadingStatus } from '@universe/api/src/clients/graphql/utils'
+} from '@luxexchange/api/src/clients/graphql/fragments'
+export { GQLQueries } from '@luxexchange/api/src/clients/graphql/queries'
+export type { GqlResult } from '@luxexchange/api/src/clients/graphql/types'
+export { isError, isNonPollingRequestInFlight, isWarmLoadingStatus } from '@luxexchange/api/src/clients/graphql/utils'
 
 // Jupiter API
 export {
   createJupiterApiClient,
   type JupiterApiClient,
-} from '@universe/api/src/clients/jupiter/createJupiterApiClient'
+} from '@luxexchange/api/src/clients/jupiter/createJupiterApiClient'
 export type {
   JupiterExecuteResponse,
   JupiterOrderResponse,
   JupiterExecuteUrlParams,
   JupiterOrderUrlParams,
-} from '@universe/api/src/clients/jupiter/types'
+} from '@luxexchange/api/src/clients/jupiter/types'
 export {
   jupiterExecuteResponseSchema,
   jupiterOrderResponseSchema,
-} from '@universe/api/src/clients/jupiter/types'
+} from '@luxexchange/api/src/clients/jupiter/types'
 
 // Blockaid API
 export {
   createBlockaidApiClient,
   type BlockaidApiClient,
-} from '@universe/api/src/clients/blockaid/createBlockaidApiClient'
+} from '@luxexchange/api/src/clients/blockaid/createBlockaidApiClient'
 export {
   getBlockaidScanSiteResponseSchema,
   getBlockaidScanTransactionRequestSchema,
@@ -88,15 +88,15 @@ export {
   type BlockaidScanTransactionResponse,
   type BlockaidScanJsonRpcRequest,
   type BlockaidScanJsonRpcResponse,
-} from '@universe/api/src/clients/blockaid/types'
+} from '@luxexchange/api/src/clients/blockaid/types'
 
 // Trading API
-export * as TradingApi from '@universe/api/src/clients/trading/__generated__'
+export * as TradingApi from '@luxexchange/api/src/clients/trading/__generated__'
 export {
   createTradingApiClient,
   type TradingApiClient,
   type TradingClientContext,
-} from '@universe/api/src/clients/trading/createTradingApiClient'
+} from '@luxexchange/api/src/clients/trading/createTradingApiClient'
 export {
   type BridgeQuoteResponse,
   type ChainedQuoteResponse,
@@ -110,7 +110,7 @@ export {
   type UnwrapQuoteResponse,
   type UpdatePlanRequestWithPlanId,
   type WrapQuoteResponse,
-} from '@universe/api/src/clients/trading/tradeTypes'
+} from '@luxexchange/api/src/clients/trading/tradeTypes'
 export {
   FeeType,
   type FormattedDEXGasFeeInfo,
@@ -123,36 +123,36 @@ export {
   type GasStrategy,
   type TransactionEip1559FeeParams,
   type TransactionLegacyFeeParams,
-} from '@universe/api/src/clients/trading/types'
+} from '@luxexchange/api/src/clients/trading/types'
 
 // Liquidity Service API
 export {
   createLiquidityServiceClient,
   type LiquidityServiceClient,
-} from '@universe/api/src/clients/liquidity/createLiquidityServiceClient'
+} from '@luxexchange/api/src/clients/liquidity/createLiquidityServiceClient'
 export {
   createAuctionMutationClient,
   type AuctionMutationClient,
-} from '@universe/api/src/clients/liquidity/createAuctionMutationClient'
+} from '@luxexchange/api/src/clients/liquidity/createAuctionMutationClient'
 
 // Auction Service API
 export {
   createAuctionServiceClient,
   type AuctionServiceClient,
-} from '@universe/api/src/clients/auctions/createAuctionServiceClient'
+} from '@luxexchange/api/src/clients/auctions/createAuctionServiceClient'
 
 // X Verification Service API
 export {
   createXVerificationServiceClient,
   type XVerificationServiceClient,
-} from '@universe/api/src/clients/x/createXVerificationServiceClient'
+} from '@luxexchange/api/src/clients/x/createXVerificationServiceClient'
 
 // Uniswap API
 export {
   createUniswapApiClient,
   type UniswapApiClient,
   type UniswapApiClientContext,
-} from '@universe/api/src/clients/uniswap/createUniswapApiClient'
+} from '@luxexchange/api/src/clients/uniswap/createUniswapApiClient'
 
 // Compliance API
 export {
@@ -161,7 +161,7 @@ export {
   type ComplianceApiClientContext,
   type ScreenRequest,
   type ScreenResponse,
-} from '@universe/api/src/clients/compliance/createComplianceApiClient'
+} from '@luxexchange/api/src/clients/compliance/createComplianceApiClient'
 
 // Unitags API
 export {
@@ -186,15 +186,15 @@ export {
   type UnitagUpdateMetadataResponse,
   type UnitagUsernameRequest,
   type UnitagUsernameResponse,
-} from '@universe/api/src/clients/unitags/types'
-export { createUnitagsApiClient } from '@universe/api/src/clients/unitags/createUnitagsApiClient'
+} from '@luxexchange/api/src/clients/unitags/types'
+export { createUnitagsApiClient } from '@luxexchange/api/src/clients/unitags/createUnitagsApiClient'
 
 // Gas Service API (ConnectRPC - estimateGasFee via UniRPC v2)
 export {
   createGasServiceClient,
   type GasServiceClient,
   type GasServiceClientContext,
-} from '@universe/api/src/clients/gasService/createGasServiceClient'
+} from '@luxexchange/api/src/clients/gasService/createGasServiceClient'
 export type {
   EstimateGasFeeRequest as GasServiceEstimateRequest,
   EstimateGasFeeResponse as GasServiceEstimateResponse,
@@ -205,11 +205,11 @@ export {
   createDataApiServiceClient,
   type DataApiServiceClient,
   type DataApiServiceClientContext,
-} from '@universe/api/src/clients/dataApi/createDataApiServiceClient'
+} from '@luxexchange/api/src/clients/dataApi/createDataApiServiceClient'
 export {
   getGetPortfolioQueryOptions,
   type GetPortfolioQueryParams,
-} from '@universe/api/src/clients/dataApi/getGetPortfolioQueryOptions'
+} from '@luxexchange/api/src/clients/dataApi/getGetPortfolioQueryOptions'
 export {
   TopPoolsOrderBy,
   TokensOrderBy,
@@ -228,11 +228,11 @@ export {
   type DataServiceApiClientContext,
   TokenReportEventType,
   ReportAssetType,
-} from '@universe/api/src/clients/data/createDataServiceApiClient'
+} from '@luxexchange/api/src/clients/data/createDataServiceApiClient'
 
 // Notifications API
-export { createNotificationsApiClient } from '@universe/api/src/clients/notifications/createNotificationsApiClient'
-export { BackgroundType, ContentStyle, OnClickAction } from '@universe/api/src/clients/notifications/types'
+export { createNotificationsApiClient } from '@luxexchange/api/src/clients/notifications/createNotificationsApiClient'
+export { BackgroundType, ContentStyle, OnClickAction } from '@luxexchange/api/src/clients/notifications/types'
 export type {
   AckNotificationRequest,
   AckNotificationResponse,
@@ -241,14 +241,14 @@ export type {
   InAppNotification,
   NotificationsApiClient,
   NotificationsClientContext,
-} from '@universe/api/src/clients/notifications/types'
+} from '@luxexchange/api/src/clients/notifications/types'
 
 // FOR (Fiat On-Ramp) API
 export {
   createForApiClient,
   type ForApiClient,
-} from '@universe/api/src/clients/for/createForApiClient'
-export { transformPaymentMethods } from '@universe/api/src/clients/for/utils'
+} from '@luxexchange/api/src/clients/for/createForApiClient'
+export { transformPaymentMethods } from '@luxexchange/api/src/clients/for/utils'
 export type {
   FORCountry,
   FORLogo,
@@ -258,7 +258,7 @@ export type {
   FORSupportedFiatCurrency,
   FORSupportedToken,
   FORTransaction,
-} from '@universe/api/src/clients/for/types'
+} from '@luxexchange/api/src/clients/for/types'
 // Re-export FOR protobuf types for consumer packages
 export {
   RampDirection,
@@ -287,17 +287,17 @@ export {
   ALL_NETWORKS_ARG,
   createConnectTransportWithDefaults,
   type ConnectRpcContext,
-} from '@universe/api/src/connectRpc/base'
+} from '@luxexchange/api/src/connectRpc/base'
 export {
   parseProtectionInfo,
   parseRestProtocolVersion,
   parseSafetyLevel,
   transformInput,
   type WithoutWalletAccount,
-} from '@universe/api/src/connectRpc/utils'
+} from '@luxexchange/api/src/connectRpc/utils'
 
 // Conversion Tracking API
-export * as ConversionTrackingApi from '@universe/api/src/clients/conversionTracking'
+export * as ConversionTrackingApi from '@luxexchange/api/src/clients/conversionTracking'
 
 // Embedded Wallet API
 export {
@@ -306,40 +306,40 @@ export {
   type EmbeddedWalletClientContext,
   type RecoveryMethod,
   type SignAuth,
-} from '@universe/api/src/clients/embeddedWallet/createEmbeddedWalletApiClient'
+} from '@luxexchange/api/src/clients/embeddedWallet/createEmbeddedWalletApiClient'
 
 // Other Utilities
 export {
   createFetcher,
   objectToQueryString,
-} from '@universe/api/src/clients/base/utils'
+} from '@luxexchange/api/src/clients/base/utils'
 
 // Session API
-export { ApiInit, reinitializeSession, SESSION_INIT_QUERY_KEY } from '@universe/api/src/components/ApiInit'
-export { provideSessionService } from '@universe/api/src/provideSessionService'
-export { useIsSessionInitialized } from '@universe/api/src/hooks/useIsSessionInitialized'
+export { ApiInit, reinitializeSession, SESSION_INIT_QUERY_KEY } from '@luxexchange/api/src/components/ApiInit'
+export { provideSessionService } from '@luxexchange/api/src/provideSessionService'
+export { useIsSessionInitialized } from '@luxexchange/api/src/hooks/useIsSessionInitialized'
 
 // Session Transport (pure factory, no platform detection)
-export { createSessionTransport, type CreateSessionTransportOptions } from '@universe/api/src/session'
-export { createWithSessionRetry } from '@universe/api/src/session/createWithSessionRetry'
+export { createSessionTransport, type CreateSessionTransportOptions } from '@luxexchange/api/src/session'
+export { createWithSessionRetry } from '@luxexchange/api/src/session/createWithSessionRetry'
 
 export type {
   UseQueryApiHelperHookArgs,
   UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
-} from '@universe/api/src/hooks/shared/types'
-export { useQueryWithImmediateGarbageCollection } from '@universe/api/src/hooks/shared/useQueryWithImmediateGarbageCollection'
+} from '@luxexchange/api/src/hooks/shared/types'
+export { useQueryWithImmediateGarbageCollection } from '@luxexchange/api/src/hooks/shared/useQueryWithImmediateGarbageCollection'
 
 // Other Types
 export {
   CustomRankingType,
   RankingType,
   SpamCode,
-} from '@universe/api/src/clients/content/types'
+} from '@luxexchange/api/src/clients/content/types'
 
-export { getTransport } from '@universe/api/src/transport'
+export { getTransport } from '@luxexchange/api/src/transport'
 
-export { getEntryGatewayUrl, getMigratedForApiUrl } from '@universe/api/src/getEntryGatewayUrl'
+export { getEntryGatewayUrl, getMigratedForApiUrl } from '@luxexchange/api/src/getEntryGatewayUrl'
 
-export { getWebSocketUrl } from '@universe/api/src/getWebSocketUrl'
+export { getWebSocketUrl } from '@luxexchange/api/src/getWebSocketUrl'
 
-export { provideLuxIdentifierService } from '@universe/api/src/provideLuxIdentifierService'
+export { provideLuxIdentifierService } from '@luxexchange/api/src/provideLuxIdentifierService'

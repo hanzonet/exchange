@@ -2,14 +2,14 @@
 import { ImpactFeedbackStyle, impactAsync, NotificationFeedbackType, notificationAsync } from 'expo-haptics'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setHapticsEnabled } from 'lx/src/features/settings/slice'
+import { setHapticsEnabled } from '@luxexchange/lx/src/features/settings/slice'
 import {
   HapticFeedback,
   HapticFeedbackControl,
   HapticFeedbackStyle,
   NO_HAPTIC_FEEDBACK,
-} from 'lx/src/features/settings/useHapticFeedback/types'
-import { LuxState } from 'lx/src/state/luxReducer'
+} from '@luxexchange/lx/src/features/settings/useHapticFeedback/types'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 const ENABLED_HAPTIC_FEEDBACK: HapticFeedback = {
   impact: (style?: HapticFeedbackStyle) => {

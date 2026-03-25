@@ -1,24 +1,24 @@
 import { TradeType } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
-import { createTransactionDetails } from 'lx/src/features/activity/extract/extractPlanUtils'
+import { TradingApi } from '@luxexchange/api'
+import { createTransactionDetails } from '@luxexchange/lx/src/features/activity/extract/extractPlanUtils'
 import {
   mapTAPIPlanStatusToTXStatus,
   mapTAPIPlanStepStatusToTXStatus,
-} from 'lx/src/features/activity/extract/statusMappers'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { planStepTypeToTradingRoute } from 'lx/src/features/transactions/swap/utils/routing'
+} from '@luxexchange/lx/src/features/activity/extract/statusMappers'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { planStepTypeToTradingRoute } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionDetails,
   PlanTransactionInfo,
   TransactionDetails,
   TransactionOriginType,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { CurrencyId } from 'lx/src/types/currency'
-import { validateAndBuildCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { validateAndBuildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Extract transaction details from a TradingApi.PlanResponse

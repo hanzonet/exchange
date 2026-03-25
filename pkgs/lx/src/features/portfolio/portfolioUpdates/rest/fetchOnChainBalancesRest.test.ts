@@ -1,11 +1,11 @@
 import 'utilities/src/logger/mocks'
 import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb.d'
 import { type Token as SearchToken } from '@uniswap/client-search/dist/search/v1/api_pb'
-import * as searchTokensAndPools from 'lx/src/data/rest/searchTokensAndPools'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fetchOnChainCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { fetchOnChainBalancesRest } from 'lx/src/features/portfolio/portfolioUpdates/rest/fetchOnChainBalancesRest'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import * as searchTokensAndPools from '@luxexchange/lx/src/data/rest/searchTokensAndPools'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fetchOnChainCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
+import { fetchOnChainBalancesRest } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/rest/fetchOnChainBalancesRest'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import type { MockedFunction } from 'vitest'
 
 vi.mock('lx/src/data/apiClients/tradingApi/useTradingApiIndicativeQuoteQuery', () => ({

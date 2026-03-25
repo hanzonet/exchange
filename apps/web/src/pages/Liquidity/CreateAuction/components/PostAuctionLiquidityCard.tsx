@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { networkColors } from 'ui/src/theme/color/colors'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { networkColors } from '@luxfi/ui/src/theme/color/colors'
 import { PercentSlider } from '~/pages/Liquidity/CreateAuction/components/PercentSlider'
 import { useSliderRef } from '~/pages/Liquidity/CreateAuction/components/useSliderRef'
 

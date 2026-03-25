@@ -10,9 +10,9 @@ import {
   Tooltip,
   useMedia,
   useSporeColors,
-} from 'ui/src'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+} from '@luxfi/ui/src'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import { ArrowChangeDown } from '~/components/Icons/ArrowChangeDown'
 import { ArrowChangeUp } from '~/components/Icons/ArrowChangeUp'
 import { useStatsBannerData } from '~/components/Toucan/Auction/hooks/useStatsBannerData'

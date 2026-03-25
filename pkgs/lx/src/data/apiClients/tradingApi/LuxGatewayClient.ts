@@ -7,9 +7,9 @@
  */
 import type { DiscriminatedQuoteResponse, TradingApiClient } from '@luxfi/api'
 import type { QuoteRequest, Routing, TradeType } from '@luxfi/api/src/clients/trading/__generated__'
-import { luxUrls } from 'lx/src/constants/urls'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { logger } from 'utilities/src/logger/logger'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Lux ecosystem chain IDs
 const LUX_CHAIN_IDS = new Set<number>([

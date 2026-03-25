@@ -1,10 +1,10 @@
-import type { RoutingMethod, TransactionSettingsState } from 'lx/src/features/transactions/components/settings/types'
+import type { RoutingMethod, TransactionSettingsState } from '@luxexchange/lx/src/features/transactions/components/settings/types'
 import {
   DEFAULT_PROTOCOL_OPTIONS,
   type FrontendSupportedProtocol,
-} from 'lx/src/features/transactions/swap/utils/protocols'
-import { isDevEnv } from 'utilities/src/environment/env'
-import { logContextUpdate } from 'utilities/src/logger/contextEnhancer'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
+import { logContextUpdate } from '@luxfi/utilities/src/logger/contextEnhancer'
 import { create, type UseBoundStore } from 'zustand'
 import { devtools, subscribeWithSelector } from 'zustand/middleware'
 import { type StoreApi } from 'zustand/vanilla'

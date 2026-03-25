@@ -1,6 +1,6 @@
 import { DynamicConfigKeys, DynamicConfigs, getOverrideAdapter, useDynamicConfigValue } from '@luxfi/gating'
-import { Flex, Text } from 'ui/src'
-import { ActionSheetDropdown } from 'lx/src/components/dropdowns/ActionSheetDropdown'
+import { Flex, Text } from '@luxfi/ui/src'
+import { ActionSheetDropdown } from '@luxexchange/lx/src/components/dropdowns/ActionSheetDropdown'
 
 export function DynamicConfigDropdown({
   config,

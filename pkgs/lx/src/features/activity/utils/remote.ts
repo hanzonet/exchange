@@ -1,12 +1,12 @@
 import { SpamCode as RestSpamCode, TokenType } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { Token as SdkToken } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { nativeOnChain } from 'lx/src/constants/tokens'
-import { AssetType } from 'lx/src/entities/assets'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Maps token type to asset type for the transaction

@@ -3,12 +3,12 @@ import type { Web3Provider } from '@ethersproject/providers'
 import { useQuery } from '@tanstack/react-query'
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback } from 'react'
-import ERC20_ABI from 'lx/src/abis/erc20.json'
-import { Erc20 } from 'lx/src/abis/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getContract } from 'utilities/src/contracts/getContract'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import ERC20_ABI from '@luxexchange/lx/src/abis/erc20.json'
+import { Erc20 } from '@luxexchange/lx/src/abis/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getContract } from '@luxfi/utilities/src/contracts/getContract'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 interface TransferInfo {
   provider?: Web3Provider

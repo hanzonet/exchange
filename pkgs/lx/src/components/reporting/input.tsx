@@ -1,6 +1,6 @@
-import { fonts } from 'ui/src/theme'
-import { TextInput, TextInputProps } from 'lx/src/components/input/TextInput'
-import { isMobileApp } from 'utilities/src/platform'
+import { fonts } from '@luxfi/ui/src/theme'
+import { TextInput, TextInputProps } from '@luxexchange/lx/src/components/input/TextInput'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 export function ReportInput({
   setReportText,

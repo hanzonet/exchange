@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Wallet } from 'ui/src/components/icons/Wallet'
-import { Flex, Text } from 'ui/src/index'
+import { Wallet } from '@luxfi/ui/src/components/icons/Wallet'
+import { Flex, Text } from '@luxfi/ui/src/index'
 
 export function NoSolanaWalletConnectedView() {
   const { t } = useTranslation()

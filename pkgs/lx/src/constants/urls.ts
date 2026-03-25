@@ -4,11 +4,11 @@ import {
   getMigratedForApiUrl,
   helpUrl,
   TrafficFlows,
-} from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
-import { config } from 'lx/src/config'
-import { isDevEnv, isPlaywrightEnv } from 'utilities/src/environment/env'
-import { isWebApp } from 'utilities/src/platform'
+} from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
+import { config } from '@luxexchange/lx/src/config'
+import { isDevEnv, isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 export const LUX_WEB_HOSTNAME = 'lux.exchange'
 const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : LUX_WEB_HOSTNAME

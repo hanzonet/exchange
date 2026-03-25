@@ -36,12 +36,12 @@ import i18n from 'uniswap/src/i18n'
 import { MobileScreens } from 'uniswap/src/types/screens/mobile'
 import { UwULinkRequest } from 'uniswap/src/types/walletConnect'
 import { openUri } from 'uniswap/src/utils/linking'
-import { logger } from 'utilities/src/logger/logger'
-import { isAndroid } from 'utilities/src/platform'
-import { ScantasticParams } from 'wallet/src/features/scantastic/types'
-import { getContractManager, getProviderManager } from 'wallet/src/features/wallet/context'
-import { selectAccounts, selectActiveAccount } from 'wallet/src/features/wallet/selectors'
-import { setAccountAsActive } from 'wallet/src/features/wallet/slice'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { ScantasticParams } from '@luxfi/wallet/src/features/scantastic/types'
+import { getContractManager, getProviderManager } from '@luxfi/wallet/src/features/wallet/context'
+import { selectAccounts, selectActiveAccount } from '@luxfi/wallet/src/features/wallet/selectors'
+import { setAccountAsActive } from '@luxfi/wallet/src/features/wallet/slice'
 
 interface DeepLink {
   url: string

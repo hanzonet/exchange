@@ -7,12 +7,12 @@ import {
 import { useCallback, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { Button, Flex, Image, Input, Text } from 'ui/src'
-import { BETA_LOGO } from 'ui/src/assets'
+import { Button, Flex, Image, Input, Text } from '@luxfi/ui/src'
+import { BETA_LOGO } from '@luxfi/ui/src/assets'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
-import { useTimeout } from 'utilities/src/time/timing'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
 
 export function BetaPasscodeModal(): JSX.Element {
   const { t } = useTranslation()

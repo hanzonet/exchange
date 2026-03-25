@@ -2,15 +2,15 @@
 
 import type { Currency } from '@uniswap/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
-import { Flex, styled, Text } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { iconSizes } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { Flex, styled, Text } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
 import {
   CrossChainCurrencyRow,
   CrossChainCurrencyRowProps,
-} from 'lx/src/features/transactions/swap/components/CrossChainCurrencyRow'
-import i18n from 'lx/src/i18n'
+} from '@luxexchange/lx/src/features/transactions/swap/components/CrossChainCurrencyRow'
+import i18n from '@luxexchange/lx/src/i18n'
 import { supportedChainIdFromGQLChain } from '~/appGraphql/data/chainUtils'
 
 function getChainIdFromGqlTokenOrCurrency(token?: GraphQLApi.TokenAssetPartsFragment | Currency): number | null {

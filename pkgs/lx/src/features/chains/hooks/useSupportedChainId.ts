@@ -1,6 +1,6 @@
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function createGetSupportedChainId(ctx: { getChains: () => UniverseChainId[] }): {
   getSupportedChainId: (chainId?: number | UniverseChainId) => UniverseChainId | undefined

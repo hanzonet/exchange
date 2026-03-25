@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Platform } from 'react-native'
-import type { IconProps } from 'ui/src/components/factories/createIcon'
-import { Cloud, GoogleDrive } from 'ui/src/components/icons'
+import type { IconProps } from '@luxfi/ui/src/components/factories/createIcon'
+import { Cloud, GoogleDrive } from '@luxfi/ui/src/components/icons'
 
 function _OSDynamicCloudIcon(iconProps: IconProps): JSX.Element {
   if (Platform.OS === 'ios') {

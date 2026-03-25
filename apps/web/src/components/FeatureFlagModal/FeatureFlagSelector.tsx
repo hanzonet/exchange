@@ -1,6 +1,6 @@
-import { Select, styled } from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { zIndexes } from 'ui/src/theme'
+import { Select, styled } from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 interface FeatureFlagSelectOption {
   value: string

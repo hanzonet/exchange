@@ -1,4 +1,4 @@
-import { EM_DASH, Text } from 'ui/src'
+import { EM_DASH, Text } from '@luxfi/ui/src'
 
 export function EmptyCell(): JSX.Element {
   return (

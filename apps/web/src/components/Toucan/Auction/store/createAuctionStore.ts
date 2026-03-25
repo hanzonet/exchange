@@ -1,4 +1,4 @@
-import { EVMUniverseChainId } from 'lx/src/features/chains/types'
+import { EVMUniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import type { StoreApi, UseBoundStore } from 'zustand'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'

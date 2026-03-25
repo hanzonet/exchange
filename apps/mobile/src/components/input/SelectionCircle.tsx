@@ -1,6 +1,6 @@
 import React from 'react'
-import { ColorTokens, Flex } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
+import { ColorTokens, Flex } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
 
 interface SelectionCircleProps {
   selected: boolean

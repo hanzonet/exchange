@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
-import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TransactionDetails, WrapTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
+import { TransactionSummaryLayout } from '@luxexchange/lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from '@luxexchange/lx/src/components/activity/utils'
+import { SplitLogo } from '@luxexchange/lx/src/components/CurrencyLogo/SplitLogo'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TransactionDetails, WrapTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount } from '@luxexchange/lx/src/utils/currency'
 
 export function WrapSummaryItem({
   transaction,

@@ -1,13 +1,13 @@
 import type { BottomSheetView } from '@gorhom/bottom-sheet'
 import type { ComponentProps } from 'react'
-import { TokenSelectorModal, TokenSelectorVariation } from 'lx/src/components/TokenSelector/TokenSelector'
-import { TokenSelectorFlow } from 'lx/src/components/TokenSelector/types'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { useOnSelectCurrency } from 'lx/src/features/transactions/swap/form/hooks/useOnSelectCurrency'
-import { useChainId } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapTokenSelector/hooks/useChainId'
-import { useHideTokenSelector } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapTokenSelector/hooks/useHideTokenSelector'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { CurrencyField } from 'lx/src/types/currency'
+import { TokenSelectorModal, TokenSelectorVariation } from '@luxexchange/lx/src/components/TokenSelector/TokenSelector'
+import { TokenSelectorFlow } from '@luxexchange/lx/src/components/TokenSelector/types'
+import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { useOnSelectCurrency } from '@luxexchange/lx/src/features/transactions/swap/form/hooks/useOnSelectCurrency'
+import { useChainId } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapTokenSelector/hooks/useChainId'
+import { useHideTokenSelector } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapTokenSelector/hooks/useHideTokenSelector'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 export function SwapTokenSelector({
   isModalOpen,

@@ -1,6 +1,6 @@
 import type { ColorTokens } from '@hanzo/gui'
 import { createStyledContext } from '@hanzo/gui'
-import type { DropdownButtonVariantProps } from 'ui/src/components/buttons/DropdownButton/types'
+import type { DropdownButtonVariantProps } from '@luxfi/ui/src/components/buttons/DropdownButton/types'
 
 export const EXPANDED_COLOR: ColorTokens = '$neutral2'
 export const EXPANDED_HOVER_COLOR: ColorTokens = '$neutral2Hovered'

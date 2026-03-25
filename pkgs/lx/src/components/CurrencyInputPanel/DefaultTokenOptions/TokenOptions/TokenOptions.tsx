@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
-import { MAX_NUMBER_OF_TOKENS } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/constants'
-import { TokenOptionItem } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/TokenOptionItem'
-import { useCommonTokensOptionsWithFallback } from 'lx/src/components/TokenSelector/hooks/useCommonTokensOptionsWithFallback'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import type { CurrencyField } from 'lx/src/types/currency'
+import { MAX_NUMBER_OF_TOKENS } from '@luxexchange/lx/src/components/CurrencyInputPanel/DefaultTokenOptions/constants'
+import { TokenOptionItem } from '@luxexchange/lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/TokenOptionItem'
+import { useCommonTokensOptionsWithFallback } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCommonTokensOptionsWithFallback'
+import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useSwapFormStoreDerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const createKey = (currency: CurrencyInfo['currency']): string =>
   currency.isNative ? `${currency.chainId}-native` : `${currency.chainId}-${currency.address}`

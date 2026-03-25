@@ -8,9 +8,9 @@ import {
   GOOGLE_CONVERSION_URL,
   REDDIT_CONVERSION_URL,
   TWITTER_CONVERSION_URL,
-} from 'lx/src/data/rest/conversionTracking/constants'
-import { type BuildProxyRequestArgs, PlatformIdType, RequestType } from 'lx/src/data/rest/conversionTracking/types'
-import { addJitter, hashAddress } from 'lx/src/data/rest/conversionTracking/utils'
+} from '@luxexchange/lx/src/data/rest/conversionTracking/constants'
+import { type BuildProxyRequestArgs, PlatformIdType, RequestType } from '@luxexchange/lx/src/data/rest/conversionTracking/types'
+import { addJitter, hashAddress } from '@luxexchange/lx/src/data/rest/conversionTracking/utils'
 
 const buildTwitterProxyRequest = ({
   lead,

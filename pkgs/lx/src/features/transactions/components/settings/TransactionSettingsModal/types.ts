@@ -1,4 +1,4 @@
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
 
 export type TransactionSettingsModalProps = {
   settings: TransactionSettingConfig[]

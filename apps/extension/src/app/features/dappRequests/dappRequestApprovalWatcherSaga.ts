@@ -63,10 +63,10 @@ import {
 } from 'src/app/features/dappRequests/types/DappRequestTypes'
 import { dappResponseMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { call, put, select, takeEvery } from 'typed-redux-saga'
-import { DappRequestType, DappResponseType } from 'lx/src/features/dappRequests/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getEnabledChainIdsSaga } from 'lx/src/features/settings/saga'
-import { logger } from 'utilities/src/logger/logger'
+import { DappRequestType, DappResponseType } from '@luxexchange/lx/src/features/dappRequests/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEnabledChainIdsSaga } from '@luxexchange/lx/src/features/settings/saga'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 function* dappRequestApproval({
   type,

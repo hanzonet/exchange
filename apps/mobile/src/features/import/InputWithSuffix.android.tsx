@@ -1,9 +1,9 @@
 import { useCallback, useRef, useState } from 'react'
 import { LayoutChangeEvent } from 'react-native'
 import { InputWithSuffixProps } from 'src/features/import/InputWIthSuffixProps'
-import { Flex } from 'ui/src'
-import { TextInput } from 'lx/src/components/input/TextInput'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex } from '@luxfi/ui/src'
+import { TextInput } from '@luxexchange/lx/src/components/input/TextInput'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 const EPS = 1
 

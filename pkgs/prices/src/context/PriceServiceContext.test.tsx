@@ -2,9 +2,9 @@
 
 import type { QueryClient } from '@tanstack/react-query'
 import { renderHook } from '@testing-library/react'
-import { PriceServiceProvider, usePricesContext } from '@universe/prices/src/context/PriceServiceContext'
-import type { TokenPriceMessage, TokenSubscriptionParams } from '@universe/prices/src/types'
-import type { WebSocketClient } from '@universe/websocket'
+import { PriceServiceProvider, usePricesContext } from '@luxexchange/prices/src/context/PriceServiceContext'
+import type { TokenPriceMessage, TokenSubscriptionParams } from '@luxexchange/prices/src/types'
+import type { WebSocketClient } from '@luxexchange/websocket'
 import type { ReactNode } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 

@@ -1,12 +1,12 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { SearchableRecipient } from 'lx/src/features/address/types'
-import { uniqueAddressesOnly } from 'lx/src/features/address/utils'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionsState } from 'lx/src/features/transactions/slice'
-import { isBridge, isClassic, isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { SearchableRecipient } from '@luxexchange/lx/src/features/address/types'
+import { uniqueAddressesOnly } from '@luxexchange/lx/src/features/address/utils'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionsState } from '@luxexchange/lx/src/features/transactions/slice'
+import { isBridge, isClassic, isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   InterfaceTransactionDetails,
   PlanTransactionDetails,
@@ -14,15 +14,15 @@ import {
   TransactionDetails,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isFinalizedTx, isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { isLimitOrder } from 'lx/src/features/transactions/utils/dex.utils'
-import { selectTokensVisibility } from 'lx/src/features/visibility/selectors'
-import { CurrencyIdToVisibility } from 'lx/src/features/visibility/slice'
-import { LuxState } from 'lx/src/state/luxReducer'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { unique } from 'utilities/src/primitives/array'
-import { flattenObjectOfObjects } from 'utilities/src/primitives/objects'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTx, isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { isLimitOrder } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { selectTokensVisibility } from '@luxexchange/lx/src/features/visibility/selectors'
+import { CurrencyIdToVisibility } from '@luxexchange/lx/src/features/visibility/slice'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { unique } from '@luxfi/utilities/src/primitives/array'
+import { flattenObjectOfObjects } from '@luxfi/utilities/src/primitives/objects'
 
 export const selectTransactions = (state: LuxState): TransactionsState => state.transactions
 

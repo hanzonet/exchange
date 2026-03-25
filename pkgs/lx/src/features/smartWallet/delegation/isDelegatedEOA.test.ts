@@ -1,4 +1,4 @@
-import { isDelegatedEOA } from 'lx/src/features/smartWallet/delegation/isDelegatedEOA'
+import { isDelegatedEOA } from '@luxexchange/lx/src/features/smartWallet/delegation/isDelegatedEOA'
 
 describe('isDelegatedEOA', () => {
   describe('when bytecode is empty', () => {

@@ -12,24 +12,24 @@ import {
   UniversalImage,
   UniversalImageResizeMode,
   useIsDarkMode,
-} from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons'
-import { CopyAlt } from 'ui/src/components/icons/CopyAlt'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { DEX } from 'ui/src/components/icons/DEX'
-import { borderRadii, fonts, iconSizes } from 'ui/src/theme'
-import { InfoRow } from 'lx/src/components/activity/details/InfoRow'
-import { TransactionParticipantRow } from 'lx/src/components/activity/details/TransactionParticipantRow'
-import { SwapTypeTransactionInfo } from 'lx/src/components/activity/details/types'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { useNetworkFee } from 'lx/src/features/activity/hooks/useNetworkFee'
-import { getFormattedSwapRatio } from 'lx/src/features/activity/utils/swapInfo'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { FORMAT_DATE_TIME_MEDIUM, useFormattedDateTime } from 'lx/src/features/language/localizedDayjs'
-import { pushNotification } from 'lx/src/features/notifications/slice/slice'
-import { AppNotificationType, CopyNotificationType } from 'lx/src/features/notifications/slice/types'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+} from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons'
+import { CopyAlt } from '@luxfi/ui/src/components/icons/CopyAlt'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { DEX } from '@luxfi/ui/src/components/icons/DEX'
+import { borderRadii, fonts, iconSizes } from '@luxfi/ui/src/theme'
+import { InfoRow } from '@luxexchange/lx/src/components/activity/details/InfoRow'
+import { TransactionParticipantRow } from '@luxexchange/lx/src/components/activity/details/TransactionParticipantRow'
+import { SwapTypeTransactionInfo } from '@luxexchange/lx/src/components/activity/details/types'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { useNetworkFee } from '@luxexchange/lx/src/features/activity/hooks/useNetworkFee'
+import { getFormattedSwapRatio } from '@luxexchange/lx/src/features/activity/utils/swapInfo'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { FORMAT_DATE_TIME_MEDIUM, useFormattedDateTime } from '@luxexchange/lx/src/features/language/localizedDayjs'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType, CopyNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   BridgeTransactionInfo,
   LiquidityTransactionBaseInfos,
@@ -38,11 +38,11 @@ import {
   OnRampTransferInfo,
   TransactionDetails,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { ExplorerDataType, getExplorerLink, openTransactionLink, openUri } from 'lx/src/utils/linking'
-import { shortenAddress, shortenHash } from 'utilities/src/addresses'
-import { setClipboard } from 'utilities/src/clipboard/clipboard'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { ExplorerDataType, getExplorerLink, openTransactionLink, openUri } from '@luxexchange/lx/src/utils/linking'
+import { shortenAddress, shortenHash } from '@luxfi/utilities/src/addresses'
+import { setClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
 
 export function TransactionDetailsInfoRows({
   transactionDetails,

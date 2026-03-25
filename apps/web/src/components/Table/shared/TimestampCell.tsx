@@ -1,4 +1,4 @@
-import { Anchor, styled } from 'ui/src'
+import { Anchor, styled } from '@luxfi/ui/src'
 import { useCurrentLocale } from 'uniswap/src/features/language/hooks'
 import { TableText } from '~/components/Table/shared/TableText'
 import { useAbbreviatedTimeString } from '~/components/Table/utils/useAbbreviatedTimeString'

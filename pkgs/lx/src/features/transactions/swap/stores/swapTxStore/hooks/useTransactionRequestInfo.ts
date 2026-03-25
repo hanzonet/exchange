@@ -1,27 +1,27 @@
 import { TradingApi } from '@luxfi/api'
 import { DynamicConfigs, SwapConfigKey, useDynamicConfigValue } from '@luxfi/gating'
 import { useEffect, useMemo, useRef } from 'react'
-import { useLuxContextSelector } from 'lx/src/contexts/LuxContext'
-import { useTradingApiSwapQuery } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwapQuery'
-import { useActiveGasStrategy } from 'lx/src/features/gas/hooks'
-import { useAllTransactionSettings } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import { FALLBACK_SWAP_REQUEST_POLL_INTERVAL_MS } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
-import { processDEXResponse } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/dex/utils'
-import type { TransactionRequestInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import { useLuxContextSelector } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useTradingApiSwapQuery } from '@luxexchange/lx/src/data/apiClients/tradingApi/useTradingApiSwapQuery'
+import { useActiveGasStrategy } from '@luxexchange/lx/src/features/gas/hooks'
+import { useAllTransactionSettings } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { FALLBACK_SWAP_REQUEST_POLL_INTERVAL_MS } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
+import { processDEXResponse } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/dex/utils'
+import type { TransactionRequestInfo } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import {
   createLogSwapRequestErrors,
   createPrepareSwapRequestParams,
   createProcessSwapResponse,
   getShouldSkipSwapRequest,
-} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import { usePermit2SignatureWithData } from 'lx/src/features/transactions/swap/stores/swapTxStore/hooks/usePermit2Signature'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { TokenApprovalInfo } from 'lx/src/features/transactions/swap/types/trade'
-import { ApprovalAction } from 'lx/src/features/transactions/swap/types/trade'
-import { isBridge, isClassic, isDEX, isWrap } from 'lx/src/features/transactions/swap/utils/routing'
-import { isWebApp } from 'utilities/src/platform'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import { usePermit2SignatureWithData } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/hooks/usePermit2Signature'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { TokenApprovalInfo } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { ApprovalAction } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isBridge, isClassic, isDEX, isWrap } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isWebApp } from '@luxfi/utilities/src/platform'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 function useSwapTransactionRequestInfo({
   derivedSwapInfo,

@@ -4,7 +4,7 @@ import { dappRequestReducer } from 'src/app/features/dappRequests/slice'
 import { alertsReducer } from 'src/app/features/onboarding/alerts/slice'
 import { popupsReducer } from 'src/app/features/popups/slice'
 import { monitoredSagaReducers } from 'src/app/saga'
-import { walletPersistedStateList, walletReducers } from 'wallet/src/state/walletReducer'
+import { walletPersistedStateList, walletReducers } from '@luxfi/wallet/src/state/walletReducer'
 
 const extensionReducers = {
   ...walletReducers,

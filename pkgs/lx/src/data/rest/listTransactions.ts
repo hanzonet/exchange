@@ -9,15 +9,15 @@ import {
 } from '@tanstack/react-query'
 import { DataApiService } from '@uniswap/client-data-api/dist/data/v1/api_connect'
 import { ListTransactionsRequest, ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { transformInput, WithoutWalletAccount } from '@universe/api'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
-import { dataApiGetTransport } from 'lx/src/data/rest/base'
+import { transformInput, WithoutWalletAccount } from '@luxexchange/api'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
+import { dataApiGetTransport } from '@luxexchange/lx/src/data/rest/base'
 import {
   AccountAddressesByPlatform,
   buildAccountAddressesByPlatform,
-} from 'lx/src/data/rest/buildAccountAddressesByPlatform'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import type { InfiniteQueryOptionsResult, QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+} from '@luxexchange/lx/src/data/rest/buildAccountAddressesByPlatform'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import type { InfiniteQueryOptionsResult, QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 type GetListTransactionsInput<TSelectData = ListTransactionsResponse> = {
   input?: WithoutWalletAccount<PartialMessage<ListTransactionsRequest>> & {

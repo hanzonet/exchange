@@ -1,8 +1,8 @@
-import { Flex } from 'ui/src'
-import { MultichainOptionRow } from 'lx/src/components/MultichainTokenDetails/MultichainOptionRow'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
-import { fireEvent, render } from 'lx/src/test/test-utils'
+import { Flex } from '@luxfi/ui/src'
+import { MultichainOptionRow } from '@luxexchange/lx/src/components/MultichainTokenDetails/MultichainOptionRow'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
+import { fireEvent, render } from '@luxexchange/lx/src/test/test-utils'
 
 describe(MultichainOptionRow, () => {
   const defaultProps = {

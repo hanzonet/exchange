@@ -1,13 +1,13 @@
 import { GraphQLApi } from '@luxfi/api'
-import { SOLANA_LOGO } from 'ui/src/assets'
-import { getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
-import { SOLANA_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
-import { DEFAULT_NATIVE_ADDRESS_SOLANA, WRAPPED_SOL_ADDRESS_SOLANA } from 'lx/src/features/chains/svm/defaults'
-import { NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { SolanaToken } from 'lx/src/features/tokens/SolanaToken'
+import { SOLANA_LOGO } from '@luxfi/ui/src/assets'
+import { getQuicknodeEndpointUrl } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
+import { SOLANA_GAS_CONFIG } from '@luxexchange/lx/src/features/chains/gasDefaults'
+import { DEFAULT_NATIVE_ADDRESS_SOLANA, WRAPPED_SOL_ADDRESS_SOLANA } from '@luxexchange/lx/src/features/chains/svm/defaults'
+import { NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { SolanaToken } from '@luxexchange/lx/src/features/tokens/SolanaToken'
 
 const tokens = buildChainTokens({
   stables: {

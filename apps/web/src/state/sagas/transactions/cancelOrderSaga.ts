@@ -1,9 +1,9 @@
 import type { TransactionRequest } from '@ethersproject/abstract-provider'
 import { call, take } from 'typed-redux-saga'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { cancelTransaction, TransactionsState, updateTransaction } from 'lx/src/features/transactions/slice'
-import { TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { cancelTransaction, TransactionsState, updateTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import store from '~/state'
 import { getSigner } from '~/state/sagas/transactions/utils'
 

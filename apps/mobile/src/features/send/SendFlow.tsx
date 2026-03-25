@@ -10,16 +10,16 @@ import { SendFormScreen } from 'src/features/send/SendFormScreen'
 import { SendRecipientSelectFullScreen } from 'src/features/send/SendRecipientSelectFullScreen'
 import { SendReviewScreen } from 'src/features/send/SendReviewScreen'
 import { useWalletRestore } from 'src/features/wallet/useWalletRestore'
-import { ModalName, SectionName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { TransactionSettingsStoreContextProvider } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContextProvider'
-import { TransactionModal } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { ModalName, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { TransactionSettingsStoreContextProvider } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContextProvider'
+import { TransactionModal } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { SwapFormStoreContextProvider } from 'lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
-import { SendContextProvider, useSendContext } from 'wallet/src/features/transactions/contexts/SendContext'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { SwapFormStoreContextProvider } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContextProvider'
+import { SendContextProvider, useSendContext } from '@luxfi/wallet/src/features/transactions/contexts/SendContext'
 
 export function SendFlow(): JSX.Element {
   const dispatch = useDispatch()

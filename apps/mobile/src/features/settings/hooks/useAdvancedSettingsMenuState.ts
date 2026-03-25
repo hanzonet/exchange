@@ -2,12 +2,12 @@ import { useNavigation } from '@react-navigation/core'
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import { OnboardingStackNavigationProp, SettingsStackNavigationProp } from 'src/app/navigation/types'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { setIsTestnetModeEnabled } from 'lx/src/features/settings/slice'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { SmartWalletAdvancedSettingsModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { setIsTestnetModeEnabled } from '@luxexchange/lx/src/features/settings/slice'
+import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { SmartWalletAdvancedSettingsModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
 
 // avoids rendering during animation which makes it laggy
 // set to a bit above the Switch animation "simple" which is 80ms

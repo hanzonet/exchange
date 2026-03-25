@@ -3,11 +3,11 @@ import { useQuery } from '@tanstack/react-query'
 import { TradingApi } from '@luxfi/api'
 import type { TypedDataField } from 'ethers/lib/ethers'
 import { useCallback } from 'react'
-import { useSigner } from 'lx/src/contexts/LuxContext'
+import { useSigner } from '@luxexchange/lx/src/contexts/LuxContext'
 
-import { signTypedData } from 'lx/src/features/transactions/signing'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { queryWithoutCache } from 'utilities/src/reactQuery/queryOptions'
+import { signTypedData } from '@luxexchange/lx/src/features/transactions/signing'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { queryWithoutCache } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 // Used to sign permit messages where we already have the domain, types, and values.
 export function usePermit2SignatureWithData({

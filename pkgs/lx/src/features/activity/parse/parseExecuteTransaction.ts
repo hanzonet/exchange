@@ -1,14 +1,14 @@
 import { OnChainTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
-import { parseRestApproveTransaction } from 'lx/src/features/activity/parse/parseApproveTransaction'
-import { parseRestSwapTransaction } from 'lx/src/features/activity/parse/parseTradeTransaction'
-import { ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import { TradingApi } from '@luxexchange/api'
+import { parseRestApproveTransaction } from '@luxexchange/lx/src/features/activity/parse/parseApproveTransaction'
+import { parseRestSwapTransaction } from '@luxexchange/lx/src/features/activity/parse/parseTradeTransaction'
+import { ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
 import {
   TransactionDetails,
   TransactionOriginType,
   TransactionStatus,
   TransactionTypeInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Represents a parsed EXECUTE transaction that can contain multiple sub-transactions

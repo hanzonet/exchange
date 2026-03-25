@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useTimeout } from 'utilities/src/time/timing'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
 
 export function useDelayedRender(delay: number): { isContentHidden: boolean } {
   const [isContentHidden, setIsContentHidden] = useState(true)

@@ -20,11 +20,11 @@ import {
   useIsSessionInitialized,
   WidgetUrlRequest,
   WidgetUrlResponse,
-} from '@universe/api'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { ForApiClient } from 'lx/src/data/apiClients/forApi/ForApiClient'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { ONE_HOUR_MS, ONE_MINUTE_MS } from 'utilities/src/time/time'
+} from '@luxexchange/api'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { ForApiClient } from '@luxexchange/lx/src/data/apiClients/forApi/ForApiClient'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { ONE_HOUR_MS, ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 /**
  * Returns whether sessions are ready for FOR API requests.

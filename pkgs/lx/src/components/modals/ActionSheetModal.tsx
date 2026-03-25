@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, flexStyles, ScrollView, Text, TouchableArea } from 'ui/src'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { BottomSheetDetachedModal } from 'lx/src/components/modals/Modal'
-import { ModalNameType } from 'lx/src/features/telemetry/constants'
+import { Flex, flexStyles, ScrollView, Text, TouchableArea } from '@luxfi/ui/src'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { BottomSheetDetachedModal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
 
 export interface MenuItemProp {
   key: string

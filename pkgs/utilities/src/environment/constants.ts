@@ -1,5 +1,5 @@
-import { isDevEnv, isRNDev } from 'utilities/src/environment/env'
-import { isMobileApp } from 'utilities/src/platform'
+import { isDevEnv, isRNDev } from '@luxfi/utilities/src/environment/env'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 const isVitestRun = !!process.env.VITEST_POOL_ID
 // TODO(INFRA-292): remove JEST_WORKER_ID when jest is fully deprecated

@@ -3,16 +3,16 @@ import { skipToken, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { TradingApi, UseQueryApiHelperHookArgs } from '@luxfi/api'
 import { type SwappableTokensParams } from '@luxfi/api'
 import { useEffect } from 'react'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
-import type { TradeableAsset } from 'lx/src/entities/assets'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
+import type { TradeableAsset } from '@luxexchange/lx/src/entities/assets'
 import {
   getTokenAddressFromChainForTradingApi,
   toTradingApiSupportedChainId,
-} from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { MAX_REACT_QUERY_CACHE_TIME_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { MAX_REACT_QUERY_CACHE_TIME_MS } from '@luxfi/utilities/src/time/time'
 
 export function useTradingApiSwappableTokensQuery({
   params,

@@ -1,4 +1,4 @@
-import { MobileDeviceHeight } from 'ui/src/hooks/constants'
+import { MobileDeviceHeight } from '@luxfi/ui/src/hooks/constants'
 
 /**
  * @param deviceHeight - The type of device to check the height against. Defaults to MobileDeviceHeight.iPhone12 (812 height). @default MobileDeviceHeight.iPhone12

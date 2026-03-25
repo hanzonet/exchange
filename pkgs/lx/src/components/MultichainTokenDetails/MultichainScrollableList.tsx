@@ -1,8 +1,8 @@
 import { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, useSporeColors } from 'ui/src'
-import { opacify } from 'ui/src/theme'
-import type { MultichainTokenEntry } from 'lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
+import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { opacify } from '@luxfi/ui/src/theme'
+import type { MultichainTokenEntry } from '@luxexchange/lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
 
 const GRADIENT_THRESHOLD = 4
 

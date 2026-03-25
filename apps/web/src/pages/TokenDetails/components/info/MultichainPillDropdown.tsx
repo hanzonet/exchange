@@ -1,6 +1,6 @@
 import type React from 'react'
-import { Flex, Popover, Text, TouchableArea, useMedia } from 'ui/src'
-import { AdaptiveWebPopoverContent } from 'ui/src/components/popover/AdaptiveWebPopoverContent'
+import { Flex, Popover, Text, TouchableArea, useMedia } from '@luxfi/ui/src'
+import { AdaptiveWebPopoverContent } from '@luxfi/ui/src/components/popover/AdaptiveWebPopoverContent'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 

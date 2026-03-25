@@ -1,9 +1,9 @@
-import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
 import {
   createTradeRepository,
   type TradeRepository,
-} from 'lx/src/features/transactions/swap/services/tradeService/tradeRepository'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeRepository'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Repositories

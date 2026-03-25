@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
 import { getTokenValue } from '@hanzo/gui'
-import type { TypeOfButton } from 'ui/src/components/buttons/Button/components/types'
-import { lineHeights } from 'ui/src/components/buttons/Button/constants'
-import type { ButtonProps } from 'ui/src/components/buttons/Button/types'
-import { getLineHeightForButtonFontTokenKey } from 'ui/src/components/buttons/Button/utils/getLineHeightForButtonFontTokenKey'
-import type { IconButtonProps } from 'ui/src/components/buttons/IconButton/IconButton'
+import type { TypeOfButton } from '@luxfi/ui/src/components/buttons/Button/components/types'
+import { lineHeights } from '@luxfi/ui/src/components/buttons/Button/constants'
+import type { ButtonProps } from '@luxfi/ui/src/components/buttons/Button/types'
+import { getLineHeightForButtonFontTokenKey } from '@luxfi/ui/src/components/buttons/Button/utils/getLineHeightForButtonFontTokenKey'
+import type { IconButtonProps } from '@luxfi/ui/src/components/buttons/IconButton/IconButton'
 
 type Size = NonNullable<ButtonProps['size'] | IconButtonProps['size']>
 

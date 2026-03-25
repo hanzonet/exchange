@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
+import { useHasValueChanged } from '@luxfi/utilities/src/react/useHasValueChanged'
 
 describe('useHasValueChanged', () => {
   it('should return false on initial render', () => {

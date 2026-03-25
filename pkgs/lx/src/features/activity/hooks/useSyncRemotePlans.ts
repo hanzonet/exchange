@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { batch, useDispatch, useSelector } from 'react-redux'
-import { selectTransactions } from 'lx/src/features/transactions/selectors'
-import { getAddOrUpdatePlanAction, shouldPollPlan } from 'lx/src/features/transactions/swap/plan/planPollingUtils'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { logger } from 'utilities/src/logger/logger'
+import { selectTransactions } from '@luxexchange/lx/src/features/transactions/selectors'
+import { getAddOrUpdatePlanAction, shouldPollPlan } from '@luxexchange/lx/src/features/transactions/swap/plan/planPollingUtils'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useStore } from 'zustand'
 
 /**

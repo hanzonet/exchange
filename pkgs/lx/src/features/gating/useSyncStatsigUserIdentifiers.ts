@@ -1,6 +1,6 @@
-import { getStatsigClient } from '@universe/gating'
+import { getStatsigClient } from '@luxexchange/gating'
 import { useEffect } from 'react'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Custom identifier keys for Statsig user.

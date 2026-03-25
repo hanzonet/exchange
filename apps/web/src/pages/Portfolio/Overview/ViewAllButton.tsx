@@ -1,9 +1,9 @@
 import { memo } from 'react'
 import { Link } from 'react-router'
-import { Button, Flex } from 'ui/src'
-import { ArrowRight } from 'ui/src/components/icons/ArrowRight'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { Button, Flex } from '@luxfi/ui/src'
+import { ArrowRight } from '@luxfi/ui/src/components/icons/ArrowRight'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 
 interface ViewAllButtonProps {
   label: string

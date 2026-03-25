@@ -1,6 +1,6 @@
 import i18n from 'i18next'
-import { Locale } from 'lx/src/features/language/constants'
-import { isWebApp } from 'utilities/src/platform'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 let changingTo = ''
 export async function changeLanguage(locale: Locale): Promise<void> {

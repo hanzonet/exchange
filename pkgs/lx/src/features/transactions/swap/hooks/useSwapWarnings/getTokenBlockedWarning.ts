@@ -1,8 +1,8 @@
 import { TFunction } from 'i18next'
-import { Warning, WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { TokenList } from 'lx/src/features/dataApi/types'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { CurrencyField } from 'lx/src/types/currency'
+import { Warning, WarningAction, WarningLabel, WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 export function getTokenBlockedWarning(t: TFunction, currencies: DerivedSwapInfo['currencies']): Warning | undefined {
   const isInputTokenBlocked = currencies[CurrencyField.INPUT]?.safetyInfo?.tokenList === TokenList.Blocked

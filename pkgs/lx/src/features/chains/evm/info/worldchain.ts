@@ -1,18 +1,18 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
-import { ETH_LOGO, WORLD_CHAIN_LOGO } from 'ui/src/assets'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
-import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
+import { ETH_LOGO, WORLD_CHAIN_LOGO } from '@luxfi/ui/src/assets'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
+import { GENERIC_L2_GAS_CONFIG } from '@luxexchange/lx/src/features/chains/gasDefaults'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 const tokens = buildChainTokens({
   stables: {

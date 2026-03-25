@@ -8,7 +8,7 @@ import { ContentStyle, type InAppNotification, OnClickAction } from '@luxexchang
 import { type ReactiveCondition } from '@luxexchange/notifications'
 import { GlobalErrorEvent } from 'src/app/events/constants'
 import { globalEventEmitter } from 'src/app/events/global'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Storage threshold in bytes (500KB).

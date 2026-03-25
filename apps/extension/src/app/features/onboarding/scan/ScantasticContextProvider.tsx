@@ -12,10 +12,10 @@ import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { cryptoKeyToJWK, KEY_PARAMS } from 'src/app/features/onboarding/scan/utils'
 import { OnboardingRoutes, TopLevelRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
-import { luxUrls } from 'lx/src/constants/urls'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_DAY_MS, ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
-import { ScantasticParamsSchema } from 'wallet/src/features/scantastic/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_DAY_MS, ONE_MINUTE_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
+import { ScantasticParamsSchema } from '@luxfi/wallet/src/features/scantastic/types'
 
 type ScantasticContextState = {
   isLoadingUUID: boolean

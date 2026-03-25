@@ -1,7 +1,7 @@
 import { Trans } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { SectionHeader } from 'lx/src/components/lists/SectionHeader'
+import { Flex, Text } from '@luxfi/ui/src'
+import { OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { SectionHeader } from '@luxexchange/lx/src/components/lists/SectionHeader'
 
 export function NoResultsFound({ searchFilter }: { searchFilter: string }): JSX.Element {
   return (

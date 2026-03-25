@@ -1,23 +1,23 @@
 import { SharedEventName } from '@luxdex/analytics-events'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
-import { formatApprovalAmount } from 'lx/src/components/activity/utils'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { formatApprovalAmount } from '@luxexchange/lx/src/components/activity/utils'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 import {
   ApproveTransactionInfo,
   Permit2ApproveTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function ApproveTransactionDetails({
   transactionDetails,

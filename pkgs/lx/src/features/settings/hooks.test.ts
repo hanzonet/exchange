@@ -2,10 +2,10 @@ import {
   TESTNET_MODE_BANNER_HEIGHT,
   useHideSpamTokensSetting,
   useTestnetModeBannerHeight,
-} from 'lx/src/features/settings/hooks'
-import { selectIsTestnetModeEnabled, selectWalletHideSpamTokensSetting } from 'lx/src/features/settings/selectors'
+} from '@luxexchange/lx/src/features/settings/hooks'
+import { selectIsTestnetModeEnabled, selectWalletHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/selectors'
 
-import { renderHook } from 'lx/src/test/test-utils'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 import type { Mock } from 'vitest'
 
 // Use vi.hoisted to create mutable mock state that can be changed between tests
@@ -23,8 +23,8 @@ vi.mock('utilities/src/platform', async (importOriginal) => {
   }
 })
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useFeatureFlag: vi.fn(),

@@ -1,5 +1,5 @@
-import { TokenIcon } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenIcon'
-import type { TokenOptionItemProps } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
+import { TokenIcon } from '@luxexchange/lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenIcon'
+import type { TokenOptionItemProps } from '@luxexchange/lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
 
 export const TokenOptionItem = ({
   currencyInfo,

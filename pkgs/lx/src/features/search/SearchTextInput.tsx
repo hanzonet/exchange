@@ -17,19 +17,19 @@ import {
   Text,
   TouchableArea,
   useComposedRefs,
-} from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { Search } from 'ui/src/components/icons/Search'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { fonts, iconSizes, spacing } from 'ui/src/theme'
-import { SHADOW_OFFSET_SMALL } from 'lx/src/components/BaseCard/BaseCard'
-import { ViewGestureHandler } from 'lx/src/components/ViewGestureHandler/ViewGestureHandler'
-import { WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { isAndroid } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { Search } from '@luxfi/ui/src/components/icons/Search'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { fonts, iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { SHADOW_OFFSET_SMALL } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { ViewGestureHandler } from '@luxexchange/lx/src/components/ViewGestureHandler/ViewGestureHandler'
+import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { isAndroid } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 const ENTER_EXIT_STYLE = { opacity: 0, scale: 0 }
 const DEFAULT_MIN_HEIGHT = 48

@@ -10,12 +10,12 @@ import Reanimated, {
   withRepeat,
   withTiming,
 } from 'react-native-reanimated'
-import { Flex } from 'ui/src/components/layout'
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
-import type { ShineProps } from 'ui/src/loading/ShineProps'
-import { opacify } from 'ui/src/theme'
-import { useEvent } from 'utilities/src/react/hooks'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
+import type { ShineProps } from '@luxfi/ui/src/loading/ShineProps'
+import { opacify } from '@luxfi/ui/src/theme'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 const LINEAR_GRADIENT_END = { x: 1, y: 0 }
 const LINEAR_GRADIENT_START = { x: 0, y: 0 }

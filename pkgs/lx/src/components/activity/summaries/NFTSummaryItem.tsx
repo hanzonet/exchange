@@ -1,16 +1,16 @@
 import { useMemo } from 'react'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
-import { LogoWithTxStatus } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
-import { AssetType } from 'lx/src/entities/assets'
+import { TransactionSummaryLayout } from '@luxexchange/lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from '@luxexchange/lx/src/components/activity/utils'
+import { LogoWithTxStatus } from '@luxexchange/lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
 import {
   NFTApproveTransactionInfo,
   NFTMintTransactionInfo,
   NFTTradeTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function NFTSummaryItem({
   transaction,

@@ -1,5 +1,5 @@
-import { iconSizes } from 'ui/src/theme'
-import { isHoverable, isWebAppDesktop } from 'utilities/src/platform'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { isHoverable, isWebAppDesktop } from '@luxfi/utilities/src/platform'
 
 /**
  * If we show more than 6 tokens, we may need to add more animation delays

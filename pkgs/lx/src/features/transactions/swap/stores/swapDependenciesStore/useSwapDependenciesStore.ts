@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import type {
   createSwapDependenciesStore,
   SwapDependenciesState,
-} from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
-import { SwapDependenciesStoreContext } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
+import { SwapDependenciesStoreContext } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
 import { useStore } from 'zustand'
 import { useShallow } from 'zustand/shallow'
 

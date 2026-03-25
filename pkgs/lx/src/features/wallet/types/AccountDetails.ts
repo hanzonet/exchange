@@ -1,7 +1,7 @@
-import { AccountType } from 'lx/src/features/accounts/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { WalletMeta } from 'lx/src/features/wallet/types/WalletMeta'
-import { HexString } from 'utilities/src/addresses/hex'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { WalletMeta } from '@luxexchange/lx/src/features/wallet/types/WalletMeta'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
 
 export type BaseAccountDetails<TPlatform extends Platform, TAddressType extends string = string> = {
   platform: TPlatform

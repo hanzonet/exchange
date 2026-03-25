@@ -1,7 +1,7 @@
 import { type ConnectTransportOptions, createConnectTransport } from '@connectrpc/connect-web'
 import { provideDeviceIdService } from '@luxfi/api/src/provideDeviceIdService'
 import { provideSessionStorage } from '@luxfi/api/src/provideSessionStorage'
-import { isWebApp } from 'utilities/src/platform'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 interface SessionTransportOptions {
   getSessionId?: () => Promise<string | null>

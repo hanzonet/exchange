@@ -1,10 +1,10 @@
 import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
-import { Dialog } from 'lx/src/components/dialog/Dialog'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex } from '@luxfi/ui/src'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { Dialog } from '@luxexchange/lx/src/components/dialog/Dialog'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { useCreateLiquidityContext } from '~/pages/CreatePosition/CreateLiquidityContextProvider'
 
 export const DynamicFeeTierSpeedbump = () => {

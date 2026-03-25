@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src/components/layout'
-import type { RefreshButtonProps } from 'ui/src/components/RefreshButton/RefreshButton'
-import { RefreshButtonIcon } from 'ui/src/components/RefreshButton/RefreshButtonIcon'
-import { Text } from 'ui/src/components/text'
-import { Tooltip } from 'ui/src/components/tooltip/Tooltip'
-import { zIndexes } from 'ui/src/theme'
-import { isWebPlatform } from 'utilities/src/platform'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import type { RefreshButtonProps } from '@luxfi/ui/src/components/RefreshButton/RefreshButton'
+import { RefreshButtonIcon } from '@luxfi/ui/src/components/RefreshButton/RefreshButtonIcon'
+import { Text } from '@luxfi/ui/src/components/text'
+import { Tooltip } from '@luxfi/ui/src/components/tooltip/Tooltip'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 /**
  * A button component that allows users to refresh their balance with a visual indicator

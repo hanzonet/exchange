@@ -1,9 +1,9 @@
 import { atom, useAtom } from 'jotai'
 import { useAtomValue, useUpdateAtom } from 'jotai/utils'
 import { useCallback, useMemo } from 'react'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { useEvent } from 'utilities/src/react/hooks'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { passkeySignInPendingAtom, showEmbeddedLoginViewAtom } from '~/components/WalletModal/EmbeddedWalletModal'
 
 const accountDrawerOpenAtom = atom(false)

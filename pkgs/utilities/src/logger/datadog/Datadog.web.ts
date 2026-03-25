@@ -2,12 +2,12 @@
 import { datadogLogs } from '@datadog/browser-logs'
 import { datadogRum } from '@datadog/browser-rum'
 import { Action, AnyAction, PreloadedState, Reducer, StoreEnhancerStoreCreator } from 'redux'
-import { isTestEnv } from 'utilities/src/environment/env'
-import { NotImplementedError } from 'utilities/src/errors'
-import { ReduxEnhancerConfig } from 'utilities/src/logger/datadog/Datadog'
-import { handleReduxAction } from 'utilities/src/logger/datadog/reduxUtils'
-import { LoggerErrorContext, LogLevel } from 'utilities/src/logger/types'
-import { isExtensionApp, isWebApp } from 'utilities/src/platform'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
+import { NotImplementedError } from '@luxfi/utilities/src/errors'
+import { ReduxEnhancerConfig } from '@luxfi/utilities/src/logger/datadog/Datadog'
+import { handleReduxAction } from '@luxfi/utilities/src/logger/datadog/reduxUtils'
+import { LoggerErrorContext, LogLevel } from '@luxfi/utilities/src/logger/types'
+import { isExtensionApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 export function logToDatadog(
   message: string,

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { useFiatOnRampAggregatorTransferServiceProvidersQuery } from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
-import { FORServiceProvider } from 'lx/src/features/fiatOnRamp/types'
+import { useFiatOnRampAggregatorTransferServiceProvidersQuery } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { FORServiceProvider } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 
 export function useCexTransferProviders(params?: { isDisabled?: boolean }): FORServiceProvider[] {
   const { data } = useFiatOnRampAggregatorTransferServiceProvidersQuery(undefined, {

@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, FlexProps, Text, TouchableArea } from 'ui/src'
-import { Wrench } from 'ui/src/components/icons/Wrench'
+import { Flex, FlexProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { Wrench } from '@luxfi/ui/src/components/icons/Wrench'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { useDeviceInsets } from 'ui/src/hooks/useDeviceInsets'
-import { zIndexes } from 'ui/src/theme'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { TESTNET_MODE_BANNER_HEIGHT } from 'lx/src/features/settings/hooks'
-import { isMobileApp, isWebApp, isWebPlatform } from 'utilities/src/platform'
+import { useDeviceInsets } from '@luxfi/ui/src/hooks/useDeviceInsets'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { TESTNET_MODE_BANNER_HEIGHT } from '@luxexchange/lx/src/features/settings/hooks'
+import { isMobileApp, isWebApp, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function TestnetModeBanner(props: FlexProps): JSX.Element | null {
   const { isTestnetModeEnabled } = useEnabledChains()

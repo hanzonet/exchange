@@ -1,12 +1,12 @@
-import { createFetchClient, createTradingApiClient, getEntryGatewayUrl, provideSessionService } from '@universe/api'
-import type { PlanEndpoints } from '@universe/api/src/clients/trading/createTradingApiClient'
-import { reinitializeSession } from '@universe/api/src/components/ApiInit'
-import { createWithSessionRetry } from '@universe/api/src/session/createWithSessionRetry'
-import { getConfig } from '@universe/config'
-import { FeatureFlags, getFeatureFlag } from '@universe/gating'
-import { BASE_LUX_HEADERS } from 'lx/src/data/apiClients/createLuxFetchClient'
-import { getFeatureFlaggedHeaders } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
-import { logger } from 'utilities/src/logger/logger'
+import { createFetchClient, createTradingApiClient, getEntryGatewayUrl, provideSessionService } from '@luxexchange/api'
+import type { PlanEndpoints } from '@luxexchange/api/src/clients/trading/createTradingApiClient'
+import { reinitializeSession } from '@luxexchange/api/src/components/ApiInit'
+import { createWithSessionRetry } from '@luxexchange/api/src/session/createWithSessionRetry'
+import { getConfig } from '@luxexchange/config'
+import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
+import { BASE_LUX_HEADERS } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { getFeatureFlaggedHeaders } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 function getHeaders(): HeadersInit {
   // Use API key auth instead of session auth, if the flag is enabled.

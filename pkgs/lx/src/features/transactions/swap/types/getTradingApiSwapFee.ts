@@ -1,9 +1,9 @@
 import { Percent } from '@luxamm/sdk-core'
 import { type DiscriminatedQuoteResponse } from '@luxfi/api'
-import { SwapFee } from 'lx/src/features/transactions/swap/types/trade'
-import { isWrap } from 'lx/src/features/transactions/swap/utils/routing'
-import { CurrencyField } from 'lx/src/types/currency'
-import { logger } from 'utilities/src/logger/logger'
+import { SwapFee } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isWrap } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function getTradingApiSwapFee(quoteResponse?: DiscriminatedQuoteResponse): SwapFee | undefined {
   if (!quoteResponse || isWrap(quoteResponse)) {

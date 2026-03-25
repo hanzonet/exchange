@@ -5,9 +5,9 @@ import {
   encryptPasswordWithBiometricData,
 } from 'src/app/features/biometricUnlock/biometricAuthUtils'
 import { startNavigatorCredentialRequest } from 'src/app/features/biometricUnlock/useNavigatorCredentialAbortSignal'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 export function useChangePasswordWithBiometricMutation(options?: {
   onSuccess?: () => void

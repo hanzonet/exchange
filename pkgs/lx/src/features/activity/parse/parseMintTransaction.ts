@@ -1,17 +1,17 @@
 import { OnChainTransaction } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { extractDappInfo } from 'lx/src/features/activity/utils/extractDappInfo'
+import { extractDappInfo } from '@luxexchange/lx/src/features/activity/utils/extractDappInfo'
 import {
   deriveCurrencyAmountFromAssetResponse,
   parseUSDValueFromAssetChange,
-} from 'lx/src/features/activity/utils/remote'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+} from '@luxexchange/lx/src/features/activity/utils/remote'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
 import {
   NFTMintTransactionInfo,
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId, buildNativeCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId, buildNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export default function parseNFTMintTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,

@@ -2,11 +2,11 @@ import {
   ChallengeFailure_Reason,
   VerifyFailure_Reason,
 } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import type { SessionServiceClient } from '@universe/sessions/src/session-repository/createSessionClient'
-import { ChallengeRejectedError } from '@universe/sessions/src/session-repository/errors'
-import type { SessionRepository, TypedChallengeData } from '@universe/sessions/src/session-repository/types'
-import { ChallengeFailureReason, VerifyFailureReason } from '@universe/sessions/src/session-repository/types'
-import type { Logger } from 'utilities/src/logger/logger'
+import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
+import { ChallengeRejectedError } from '@luxexchange/sessions/src/session-repository/errors'
+import type { SessionRepository, TypedChallengeData } from '@luxexchange/sessions/src/session-repository/types'
+import { ChallengeFailureReason, VerifyFailureReason } from '@luxexchange/sessions/src/session-repository/types'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Creates a session repository that handles communication with the session service.

@@ -1,5 +1,5 @@
 import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { calculateTotalBalancesUsdPerChainRest } from 'lx/src/data/balances/utils'
+import { calculateTotalBalancesUsdPerChainRest } from '@luxexchange/lx/src/data/balances/utils'
 
 describe('calculateTotalBalancesUsdPerChainRest', () => {
   it('should calculate total balances per chain correctly', () => {

@@ -27,7 +27,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../packages/ui/src/tamagui.config.ts
+// ../../pkgs/ui/src/tamagui.config.ts
 var tamagui_config_exports = {};
 __export(tamagui_config_exports, {
   config: () => config,
@@ -222,7 +222,7 @@ function createAnimations(animations2) {
 }
 __name(createAnimations, "createAnimations");
 
-// ../../packages/ui/src/theme/animations/index.ts
+// ../../pkgs/ui/src/theme/animations/index.ts
 var animations = createAnimations({
   "100ms": "ease-in-out 100ms",
   "125ms": "ease-in-out 125ms",
@@ -254,20 +254,20 @@ var animations = createAnimations({
   simple: "ease-in-out 80ms"
 });
 
-// ../../packages/ui/src/theme/fonts.ts
+// ../../pkgs/ui/src/theme/fonts.ts
 var import_core2 = require("@tamagui/core");
 
-// ../../packages/ui/src/utils/needs-small-font.ts
+// ../../pkgs/ui/src/utils/needs-small-font.ts
 var needsSmallFont = /* @__PURE__ */ __name(() => {
   return true;
 }, "needsSmallFont");
 
-// ../../packages/utilities/src/platform/index.ts
+// ../../pkgs/utilities/src/platform/index.ts
 var isWebPlatform = false;
 var isMobileApp = false;
 var isWebApp = false;
 
-// ../../packages/ui/src/theme/fonts.ts
+// ../../pkgs/ui/src/theme/fonts.ts
 var adjustedSize = /* @__PURE__ */ __name((fontSize2) => {
   if (needsSmallFont()) {
     return fontSize2;
@@ -521,7 +521,7 @@ var allFonts = {
   monospace: monospaceFont
 };
 
-// ../../packages/ui/src/theme/borderRadii.ts
+// ../../pkgs/ui/src/theme/borderRadii.ts
 var borderRadii = {
   none: 0,
   rounded4: 4,
@@ -535,7 +535,7 @@ var borderRadii = {
   roundedFull: 999999
 };
 
-// ../../packages/ui/src/theme/breakpoints.ts
+// ../../pkgs/ui/src/theme/breakpoints.ts
 var breakpoints = {
   xxs: 360,
   xs: 380,
@@ -552,7 +552,7 @@ var heightBreakpoints = {
   lgHeight: 960
 };
 
-// ../../packages/utilities/src/errors/index.ts
+// ../../pkgs/utilities/src/errors/index.ts
 var PlatformSplitStubError = class extends Error {
   static {
     __name(this, "PlatformSplitStubError");
@@ -563,7 +563,7 @@ var PlatformSplitStubError = class extends Error {
   }
 };
 
-// ../../packages/utilities/src/environment/env.ts
+// ../../pkgs/utilities/src/environment/env.ts
 function checkWindowForPlaywright() {
   return typeof window === "undefined";
 }
@@ -583,14 +583,14 @@ function isRNDev() {
 }
 __name(isRNDev, "isRNDev");
 
-// ../../packages/utilities/src/environment/constants.ts
+// ../../pkgs/utilities/src/environment/constants.ts
 var isVitestRun = !!process.env.VITEST_POOL_ID;
 var isTestRun = !!process.env.JEST_WORKER_ID || !!process.env.VITEST_POOL_ID;
 var isNonTestDev = !isVitestRun && !isTestRun && (isMobileApp ? isRNDev() : isDevEnv());
 var localDevDatadogEnabled = false;
 var datadogEnabledBuild = (localDevDatadogEnabled || !isRNDev()) && !isTestRun && !isVitestRun;
 
-// ../../packages/utilities/src/logger/datadog/Datadog.ts
+// ../../pkgs/utilities/src/logger/datadog/Datadog.ts
 function logToDatadog(_message, _options) {
   throw new PlatformSplitStubError("logToDatadog");
 }
@@ -604,7 +604,7 @@ function logErrorToDatadog(_error, _context) {
 }
 __name(logErrorToDatadog, "logErrorToDatadog");
 
-// ../../packages/utilities/src/logger/logger.ts
+// ../../pkgs/utilities/src/logger/logger.ts
 var MAX_CHAR_LIMIT = 8192;
 var datadogEnabled = false;
 var logger = {
@@ -709,7 +709,7 @@ function formatMessage({
 }
 __name(formatMessage, "formatMessage");
 
-// ../../packages/ui/src/theme/color/utils.ts
+// ../../pkgs/ui/src/theme/color/utils.ts
 var HEX_REGEX = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/;
 function opacifyRaw(opacity, color) {
   "worklet";
@@ -761,7 +761,7 @@ function _opacifyHex(opacity, color) {
 }
 __name(_opacifyHex, "_opacifyHex");
 
-// ../../packages/ui/src/theme/color/colors.ts
+// ../../pkgs/ui/src/theme/color/colors.ts
 var accentColors = {
   pinkLight: "#FEF4FF",
   pinkPastel: "#FDAFF0",
@@ -1169,7 +1169,7 @@ var colorsDark = {
   pinkThemed: colors.pinkDark
 };
 
-// ../../packages/ui/src/theme/iconSizes.ts
+// ../../pkgs/ui/src/theme/iconSizes.ts
 var iconSizes = {
   icon8: 8,
   icon12: 12,
@@ -1188,7 +1188,7 @@ var iconSizes = {
   icon100: 100
 };
 
-// ../../packages/ui/src/theme/imageSizes.ts
+// ../../pkgs/ui/src/theme/imageSizes.ts
 var imageSizes = {
   image12: 12,
   image16: 16,
@@ -1202,7 +1202,7 @@ var imageSizes = {
   image100: 100
 };
 
-// ../../packages/ui/src/theme/spacing.ts
+// ../../pkgs/ui/src/theme/spacing.ts
 var spacing = {
   none: 0,
   spacing1: 1,
@@ -1241,7 +1241,7 @@ var gap = {
   gap36: spacing.spacing36
 };
 
-// ../../packages/ui/src/theme/themes.ts
+// ../../pkgs/ui/src/theme/themes.ts
 var { none: darkTransparent, ...tamaguiColorsDark } = colorsDark;
 var { none: lightTransparent, ...tamaguiColorsLight } = colorsLight;
 var light = {
@@ -1289,10 +1289,10 @@ var allThemes = {
 };
 var themes = allThemes;
 
-// ../../packages/ui/src/theme/tokens.ts
+// ../../pkgs/ui/src/theme/tokens.ts
 var import_core3 = require("@tamagui/core");
 
-// ../../packages/ui/src/theme/zIndexes.ts
+// ../../pkgs/ui/src/theme/zIndexes.ts
 var zIndexes = {
   negative: -1,
   background: 0,
@@ -1315,7 +1315,7 @@ var zIndexes = {
   overlay: 100010
 };
 
-// ../../packages/ui/src/theme/tokens.ts
+// ../../pkgs/ui/src/theme/tokens.ts
 var space = { ...spacing, ...padding, ...gap, true: spacing.spacing8 };
 var size = space;
 var iconSize = {
@@ -1364,7 +1364,7 @@ var tokens = (0, import_core3.createTokens)({
   radius
 });
 
-// ../../packages/ui/src/theme/media.ts
+// ../../pkgs/ui/src/theme/media.ts
 var media = createMedia({
   // the order here is important: least strong to most
   xxxl: { maxWidth: breakpoints.xxxl },
@@ -1380,7 +1380,7 @@ var media = createMedia({
   lgHeight: { maxHeight: heightBreakpoints.lgHeight }
 });
 
-// ../../packages/ui/src/theme/shorthands.ts
+// ../../pkgs/ui/src/theme/shorthands.ts
 var shorthands = {
   m: "margin",
   mb: "marginBottom",
@@ -1398,7 +1398,7 @@ var shorthands = {
   py: "paddingVertical"
 };
 
-// ../../packages/ui/src/theme/config.ts
+// ../../pkgs/ui/src/theme/config.ts
 var configWithoutAnimations = {
   shorthands,
   fonts: allFonts,
@@ -1416,7 +1416,7 @@ var configWithoutAnimations = {
   }
 };
 
-// ../../packages/ui/src/tamagui.config.ts
+// ../../pkgs/ui/src/tamagui.config.ts
 var config = createTamagui({
   animations,
   ...configWithoutAnimations

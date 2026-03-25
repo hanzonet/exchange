@@ -1,10 +1,10 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { Currency } from '@luxamm/sdk-core'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { NATIVE_ANALYTICS_ADDRESS_VALUE } from 'lx/src/utils/currencyId'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { NATIVE_ANALYTICS_ADDRESS_VALUE } from '@luxexchange/lx/src/utils/currencyId'
 
 export enum TokenReportOption {
   Spam = 'spam',

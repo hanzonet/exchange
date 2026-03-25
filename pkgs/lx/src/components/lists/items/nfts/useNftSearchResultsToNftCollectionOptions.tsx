@@ -1,8 +1,8 @@
 import { GraphQLApi } from '@luxfi/api'
 import { useMemo } from 'react'
-import { NFTCollectionOption, OnchainItemListOptionType } from 'lx/src/components/lists/items/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+import { NFTCollectionOption, OnchainItemListOptionType } from '@luxexchange/lx/src/components/lists/items/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
 
 function gqlNFTToNFTCollectionOption(
   node: NonNullable<

@@ -1,7 +1,7 @@
 {
   "name": "@universe/prices",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/prices/src",
+  "sourceRoot": "pkgs/prices/src",
   "projectType": "library",
   "tags": [],
   "targets": {

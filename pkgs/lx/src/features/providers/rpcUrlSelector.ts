@@ -1,12 +1,12 @@
 import { Experiments, getExperimentValue, PrivateRpcProperties } from '@luxfi/gating'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { RPCType, UniverseChainId } from 'lx/src/features/chains/types'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { RPCType, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   DEFAULT_FLASHBOTS_ENABLED,
   FLASHBOTS_DEFAULT_REFUND_PERCENT,
   FLASHBOTS_RPC_URL,
-} from 'lx/src/features/providers/FlashbotsCommon'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/providers/FlashbotsCommon'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Types of configurations for RPC providers
 export interface RpcConfig {

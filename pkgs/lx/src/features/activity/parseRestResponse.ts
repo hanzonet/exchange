@@ -1,23 +1,23 @@
 import { ListTransactionsResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
-import { GraphQLApi } from '@universe/api'
-import { extractOnRampTransactionDetails } from 'lx/src/features/activity/extract/extractFiatOnRampTransactionDetails'
-import extractRestOnChainTransactionDetails from 'lx/src/features/activity/extract/extractOnChainTransactionDetails'
-import extractPlanDetails from 'lx/src/features/activity/extract/extractPlanDetails'
-import extractRestFiatOnRampDetails from 'lx/src/features/activity/extract/extractRestFiatOnRampDetails'
-import extractRestDEXOrderDetails from 'lx/src/features/activity/extract/extractRestDEXOrderDetails'
-import extractTransactionDetails from 'lx/src/features/activity/extract/extractTransactionDetails'
-import { extractDEXOrderDetails } from 'lx/src/features/activity/extract/extractDEXOrderDetails'
-import { getIsNftHidden } from 'lx/src/features/nfts/utils'
+import { GraphQLApi } from '@luxexchange/api'
+import { extractOnRampTransactionDetails } from '@luxexchange/lx/src/features/activity/extract/extractFiatOnRampTransactionDetails'
+import extractRestOnChainTransactionDetails from '@luxexchange/lx/src/features/activity/extract/extractOnChainTransactionDetails'
+import extractPlanDetails from '@luxexchange/lx/src/features/activity/extract/extractPlanDetails'
+import extractRestFiatOnRampDetails from '@luxexchange/lx/src/features/activity/extract/extractRestFiatOnRampDetails'
+import extractRestDEXOrderDetails from '@luxexchange/lx/src/features/activity/extract/extractRestDEXOrderDetails'
+import extractTransactionDetails from '@luxexchange/lx/src/features/activity/extract/extractTransactionDetails'
+import { extractDEXOrderDetails } from '@luxexchange/lx/src/features/activity/extract/extractDEXOrderDetails'
+import { getIsNftHidden } from '@luxexchange/lx/src/features/nfts/utils'
 import {
   TransactionDetails,
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { CurrencyIdToVisibility, NFTKeyToVisibility } from 'lx/src/features/visibility/slice'
-import { CurrencyId } from 'lx/src/types/currency'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { CurrencyIdToVisibility, NFTKeyToVisibility } from '@luxexchange/lx/src/features/visibility/slice'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Flag to prevent spamming logs when multiple transactions are missing the transaction field
 let hasLoggedMissingTransactionField = false

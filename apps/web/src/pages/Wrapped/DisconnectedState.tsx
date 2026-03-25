@@ -1,17 +1,17 @@
 import { RefObject, useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, styled, Text, useWindowDimensions } from 'ui/src'
-import { Gift } from 'ui/src/components/icons/Gift'
-import { useSporeColorsForTheme } from 'ui/src/hooks/useSporeColors'
+import { Button, Flex, styled, Text, useWindowDimensions } from '@luxfi/ui/src'
+import { Gift } from '@luxfi/ui/src/components/icons/Gift'
+import { useSporeColorsForTheme } from '@luxfi/ui/src/hooks/useSporeColors'
 import {
   MouseGlow,
   renderSnowflakesWeb,
   SnowflakeContainer,
-} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
-import { isMobileWeb } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useSnowflakeAnimation } from '@luxexchange/lx/src/hooks/useSnowflakeAnimation'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 import { useAccountDrawer } from '~/components/AccountDrawer/MiniPortfolio/hooks'
 import { MenuStateVariant, useSetMenuCallback } from '~/components/AccountDrawer/menuState'
 import { useActiveAddresses } from '~/features/accounts/store/hooks'

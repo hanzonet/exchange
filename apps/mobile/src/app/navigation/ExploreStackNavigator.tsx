@@ -9,8 +9,8 @@ import { HorizontalEdgeGestureTarget } from 'src/components/layout/screens/EdgeG
 import { ExploreScreen } from 'src/screens/ExploreScreen'
 import { ExternalProfileScreen } from 'src/screens/ExternalProfileScreen'
 import { TokenDetailsScreen } from 'src/screens/TokenDetailsScreen/TokenDetailsScreen'
-import { useSporeColors } from 'ui/src'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
+import { useSporeColors } from '@luxfi/ui/src'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 const ExploreStack = createNativeStackNavigator<ExploreStackParamList>()
 

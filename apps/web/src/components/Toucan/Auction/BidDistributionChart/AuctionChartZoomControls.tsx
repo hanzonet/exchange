@@ -1,7 +1,7 @@
-import { Flex, TouchableArea, type TouchableAreaProps } from 'ui/src'
-import { Expand } from 'ui/src/components/icons/Expand'
-import { SearchMinus } from 'ui/src/components/icons/SearchMinus'
-import { SearchPlus } from 'ui/src/components/icons/SearchPlus'
+import { Flex, TouchableArea, type TouchableAreaProps } from '@luxfi/ui/src'
+import { Expand } from '@luxfi/ui/src/components/icons/Expand'
+import { SearchMinus } from '@luxfi/ui/src/components/icons/SearchMinus'
+import { SearchPlus } from '@luxfi/ui/src/components/icons/SearchPlus'
 
 interface AuctionChartZoomControlsProps {
   onZoomIn: () => void

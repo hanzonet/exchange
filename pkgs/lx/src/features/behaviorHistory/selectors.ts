@@ -1,4 +1,4 @@
-import { LuxState } from 'lx/src/state/luxReducer'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 export const selectHasViewedBridgingBanner = (state: LuxState): boolean =>
   state.luxBehaviorHistory.hasViewedBridgingBanner === true

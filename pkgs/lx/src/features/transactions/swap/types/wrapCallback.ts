@@ -1,8 +1,8 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { GasEstimate } from '@luxfi/api'
-import { ValidatedTransactionRequest } from 'lx/src/features/transactions/types/transactionRequests'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { AccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
+import { ValidatedTransactionRequest } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { AccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
 
 export type WrapCallbackParams = {
   account: AccountDetails

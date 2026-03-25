@@ -60,7 +60,7 @@ export {
   YGroup,
 } from '@hanzo/gui'
 export { LinearGradient, type LinearGradientProps } from 'gui/linear-gradient'
-export * from 'ui/src/animations'
+export * from '@luxfi/ui/src/animations'
 export * from './components/AnimatableCopyIcon/AnimatableCopyIcon'
 export * from './components/AnimatedCopyLabel/AnimatedCopyLabel'
 export { Button } from './components/buttons/Button/Button'

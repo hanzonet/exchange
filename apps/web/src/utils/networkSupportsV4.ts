@@ -1,4 +1,4 @@
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
 
 export function isV4UnsupportedChain(chainId?: number) {
   if (!chainId) {

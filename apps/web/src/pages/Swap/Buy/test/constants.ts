@@ -1,5 +1,5 @@
-import { RampDirection } from 'lx/src/features/fiatOnRamp/types'
-import { getFiatCurrencyComponents } from 'utilities/src/format/localeBased'
+import { RampDirection } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { getFiatCurrencyComponents } from '@luxfi/utilities/src/format/localeBased'
 import { ethCurrencyInfo } from '~/pages/Swap/Buy/BuyFormContext'
 
 export const mockServiceProvider = {

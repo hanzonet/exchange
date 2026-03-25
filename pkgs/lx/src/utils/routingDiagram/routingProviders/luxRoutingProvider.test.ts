@@ -4,8 +4,8 @@ import { Pair } from '@uniswap/v2-sdk'
 import { Pool as V3Pool } from '@luxamm/v3-sdk'
 import { Pool as V4Pool } from '@luxamm/v4-sdk'
 import { TradingApi } from '@luxfi/api'
-import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
-import { luxRoutingProvider } from 'lx/src/utils/routingDiagram/routingProviders/luxRoutingProvider'
+import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from '@luxexchange/lx/src/constants/pools'
+import { luxRoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/routingProviders/luxRoutingProvider'
 
 // Mock currency objects
 const mockTokenA = new Token(1, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD Coin')

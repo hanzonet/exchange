@@ -1,5 +1,5 @@
-import { ExpandoRow } from 'lx/src/components/ExpandoRow/ExpandoRow'
-import { fireEvent, render, screen } from 'lx/src/test/test-utils'
+import { ExpandoRow } from '@luxexchange/lx/src/components/ExpandoRow/ExpandoRow'
+import { fireEvent, render, screen } from '@luxexchange/lx/src/test/test-utils'
 
 describe('ExpandoRow', () => {
   const mockOnPress = vi.fn()

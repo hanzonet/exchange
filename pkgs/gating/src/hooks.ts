@@ -13,7 +13,7 @@ import {
   useStatsigClient,
 } from '@luxfi/gating/src/sdk/statsig'
 import { useEffect, useMemo, useState } from 'react'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function useFeatureFlag(flag: FeatureFlags): boolean {
   const name = getFeatureFlagName(flag)

@@ -1,6 +1,6 @@
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { type TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { type TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 /**
  * Base implementation of the deadline setting.

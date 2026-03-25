@@ -1,6 +1,6 @@
 import { type BlockaidApiClient as BlockaidApiClientType, createBlockaidApiClient } from '@luxfi/api'
-import { config } from 'lx/src/config'
-import { createLuxFetchClient } from 'lx/src/data/apiClients/createLuxFetchClient'
+import { config } from '@luxexchange/lx/src/config'
+import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
 
 const BlockaidFetchClient = createLuxFetchClient({
   baseUrl: `${config.blockaidProxyUrl}`,

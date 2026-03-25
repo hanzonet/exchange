@@ -1,11 +1,11 @@
 /* eslint-disable max-lines */
 import type { IChartApi, ISeriesApi, UTCTimestamp } from 'lightweight-charts'
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Flex, useMedia, useSporeColors } from 'ui/src'
-import { opacify } from 'ui/src/theme'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Flex, useMedia, useSporeColors } from '@luxfi/ui/src'
+import { opacify } from '@luxfi/ui/src/theme'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { EXTENSION_PADDING_TICKS } from '~/components/Charts/ToucanChart/bidDistribution/controller/logic/overlays'
 import { ToucanBidDistributionChartController } from '~/components/Charts/ToucanChart/bidDistribution/ToucanBidDistributionChartController'
 import type {

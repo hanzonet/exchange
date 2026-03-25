@@ -1,11 +1,11 @@
 import { Percent } from '@luxamm/sdk-core'
 import { TFunction } from 'i18next'
-import { Warning, WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { luxUrls } from 'lx/src/constants/urls'
-import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { formatPriceImpact } from 'lx/src/features/transactions/swap/utils/formatPriceImpact'
-import { CurrencyField } from 'lx/src/types/currency'
+import { Warning, WarningAction, WarningLabel, WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { formatPriceImpact } from '@luxexchange/lx/src/features/transactions/swap/utils/formatPriceImpact'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const PRICE_IMPACT_THRESHOLD_MEDIUM = new Percent(3, 100) // 3%
 const PRICE_IMPACT_THRESHOLD_HIGH = new Percent(5, 100) // 5%

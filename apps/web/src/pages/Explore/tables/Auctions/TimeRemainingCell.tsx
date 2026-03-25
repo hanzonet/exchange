@@ -1,4 +1,4 @@
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 import { TableText } from '~/components/Table/shared/TableText'
 import { useAuctionTimeRemaining } from '~/components/Toucan/Auction/hooks/useAuctionTimeRemaining'
 

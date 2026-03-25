@@ -1,8 +1,8 @@
 import type { PropsWithChildren } from 'react'
 import { useEffect, useState } from 'react'
-import { createSwapReviewStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
-import { SwapReviewStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
-import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
+import { createSwapReviewStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
+import { SwapReviewStoreContext } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
+import { useHasValueChanged } from '@luxfi/utilities/src/react/useHasValueChanged'
 
 type InitialState = Parameters<typeof createSwapReviewStore>[0]
 

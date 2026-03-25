@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Checkbox, Flex, GeneratedIcon, Text, TouchableArea } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { BaseModalProps } from 'lx/src/components/BridgedAsset/BridgedAssetModal'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { useBottomSheetSafeKeyboard } from 'lx/src/components/modals/useBottomSheetSafeKeyboard'
-import { ReportInput } from 'lx/src/components/reporting/input'
-import { ModalNameType } from 'lx/src/features/telemetry/constants'
-import { isMobileApp, isMobileWeb, isWebPlatform } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Button, Checkbox, Flex, GeneratedIcon, Text, TouchableArea } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { BaseModalProps } from '@luxexchange/lx/src/components/BridgedAsset/BridgedAssetModal'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useBottomSheetSafeKeyboard } from '@luxexchange/lx/src/components/modals/useBottomSheetSafeKeyboard'
+import { ReportInput } from '@luxexchange/lx/src/components/reporting/input'
+import { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isMobileApp, isMobileWeb, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export type ReportOption<T extends string> = {
   title: string

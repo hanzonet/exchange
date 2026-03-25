@@ -1,7 +1,7 @@
-import { useSwapFormWarningStoreActions } from 'lx/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
-import { usePrepareSwap } from 'lx/src/features/transactions/swap/services/hooks/usePrepareSwap'
-import { useWarningService } from 'lx/src/features/transactions/swap/services/hooks/useWarningService'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useSwapFormWarningStoreActions } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
+import { usePrepareSwap } from '@luxexchange/lx/src/features/transactions/swap/services/hooks/usePrepareSwap'
+import { useWarningService } from '@luxexchange/lx/src/features/transactions/swap/services/hooks/useWarningService'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 type CallbackArgs = Record<
   'skipBridgingWarning' | 'skipTokenProtectionWarning' | 'skipMaxTransferWarning' | 'skipBridgedAssetWarning',

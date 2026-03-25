@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxfi/api'
-import { faker, MAX_FIXTURE_TIMESTAMP } from 'lx/src/test/shared'
-import { createFixture, randomEnumValue } from 'lx/src/test/utils'
+import { faker, MAX_FIXTURE_TIMESTAMP } from '@luxexchange/lx/src/test/shared'
+import { createFixture, randomEnumValue } from '@luxexchange/lx/src/test/utils'
 
 export const amount = createFixture<GraphQLApi.Amount>()(() => ({
   __typename: 'Amount',

@@ -1,8 +1,8 @@
 import { type ReactNode, useMemo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { Text } from 'ui/src'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { Text } from '@luxfi/ui/src'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 import { formatUnits } from 'viem'
 import { q96ToPriceString } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 import {

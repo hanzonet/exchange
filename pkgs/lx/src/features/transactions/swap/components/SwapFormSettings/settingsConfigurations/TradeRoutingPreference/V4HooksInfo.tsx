@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
-import { LuxLogo } from 'ui/src/components/icons/LuxLogo'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningInfo } from 'lx/src/components/modals/WarningModal/WarningInfo'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { isWebPlatform } from 'utilities/src/platform'
+import { Flex, Text } from '@luxfi/ui/src'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningInfo } from '@luxexchange/lx/src/components/modals/WarningModal/WarningInfo'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function V4HooksInfo(): JSX.Element {
   const { t } = useTranslation()

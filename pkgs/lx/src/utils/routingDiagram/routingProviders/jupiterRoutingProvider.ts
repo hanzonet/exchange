@@ -1,11 +1,11 @@
 import { Percent } from '@luxamm/sdk-core'
-import { JupiterLogoMonotone } from 'ui/src/components/logos/JupiterLogoMonotone'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { isJupiter } from 'lx/src/features/transactions/swap/utils/routing'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'lx/src/utils/routingDiagram/types'
-import { logger } from 'utilities/src/logger/logger'
+import { JupiterLogoMonotone } from '@luxfi/ui/src/components/logos/JupiterLogoMonotone'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isJupiter } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from '@luxexchange/lx/src/utils/routingDiagram/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export const jupiterRoutingProvider: RoutingProvider = {
   name: 'Jupiter Ultra',

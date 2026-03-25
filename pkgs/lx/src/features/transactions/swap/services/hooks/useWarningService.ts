@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import { WarningService } from 'lx/src/features/transactions/swap/services/warningService'
-import { useEvent } from 'utilities/src/react/hooks'
+import { WarningService } from '@luxexchange/lx/src/features/transactions/swap/services/warningService'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 // useRef because we need value access to be synchronous
 export function useWarningService(): WarningService {

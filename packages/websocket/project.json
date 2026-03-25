@@ -1,7 +1,7 @@
 {
   "name": "@luxexchange/websocket",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/websocket/src",
+  "sourceRoot": "pkgs/websocket/src",
   "projectType": "library",
   "tags": ["scope:websocket", "type:lib"],
   "targets": {

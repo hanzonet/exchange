@@ -1,7 +1,7 @@
 import type { RefObject } from 'react'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import type { CurrencyField } from 'lx/src/types/currency'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export const useOnToggleIsFiatMode = ({
   formattedDerivedValueRef,

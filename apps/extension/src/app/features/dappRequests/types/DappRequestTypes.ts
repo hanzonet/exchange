@@ -5,15 +5,15 @@ import { NonfungiblePositionManagerCallSchema } from 'src/app/features/dappReque
 import { UniversalRouterCallSchema } from 'src/app/features/dappRequests/types/UniversalRouterTypes'
 import { HomeTabs } from 'src/app/navigation/constants'
 import { PermissionRequestSchema, PermissionSchema } from 'src/contentScript/WindowEthereumRequestTypes'
-import { MessageSchema } from 'lx/src/extension/messagePassing/messageTypes'
-import { DappRequestType, DappResponseType } from 'lx/src/features/dappRequests/types'
+import { MessageSchema } from '@luxexchange/lx/src/extension/messagePassing/messageTypes'
+import { DappRequestType, DappResponseType } from '@luxexchange/lx/src/features/dappRequests/types'
 import {
   BatchIdSchema,
   CallSchema,
   CapabilitySchema,
   GetCallsStatusResultSchema,
   SendCallsResultSchema,
-} from 'wallet/src/features/dappRequests/types'
+} from '@luxfi/wallet/src/features/dappRequests/types'
 import { z } from 'zod'
 
 // SCHEMAS + TYPES

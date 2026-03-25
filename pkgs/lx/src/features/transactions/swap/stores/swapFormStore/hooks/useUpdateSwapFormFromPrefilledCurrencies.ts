@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import { useDefaultSwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/hooks/useDefaultSwapFormState'
-import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { usePrevious } from 'utilities/src/react/hooks'
+import { useDefaultSwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/hooks/useDefaultSwapFormState'
+import type { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
 
 export const useUpdateSwapFormFromPrefilledCurrencies = ({
   prefilledState,

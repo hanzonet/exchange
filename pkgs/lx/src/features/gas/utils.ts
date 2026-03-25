@@ -7,17 +7,17 @@ import {
   type GasStrategy,
   type TransactionEip1559FeeParams,
   type TransactionLegacyFeeParams,
-} from '@universe/api'
+} from '@luxexchange/api'
 import {
   DynamicConfigs,
   type GasStrategies,
   type GasStrategyType,
   type GasStrategyWithConditions,
   getStatsigClient,
-} from '@universe/gating'
+} from '@luxexchange/gating'
 import JSBI from 'jsbi'
-import { createEthersProvider } from 'lx/src/features/providers/createEthersProvider'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import { createEthersProvider } from '@luxexchange/lx/src/features/providers/createEthersProvider'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
 import { type Prettify } from 'viem'
 
 // Normal speed strategy - Lower multipliers for economical transactions

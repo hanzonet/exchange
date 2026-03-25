@@ -29,14 +29,14 @@ import { extensionNotificationStore } from 'src/notification-service/notificatio
 import { getNotificationTelemetry } from 'src/notification-service/notification-telemetry/getNotificationTelemetry'
 import { createExtensionLocalTriggerDataSource } from 'src/notification-service/triggers/createExtensionLocalTriggerDataSource'
 import { getReduxStore } from 'src/store/store'
-import { luxUrls } from 'lx/src/constants/urls'
-import { mapLocaleToBackendLocale } from 'lx/src/features/language/constants'
-import { getLocale } from 'lx/src/features/language/navigatorLocale'
-import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
-import { getLogger } from 'utilities/src/logger/logger'
-import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { REQUEST_SOURCE } from '@luxfi/utilities/src/platform/requestSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 /**
  * Checks if the session has been initialized by looking at the React Query cache.

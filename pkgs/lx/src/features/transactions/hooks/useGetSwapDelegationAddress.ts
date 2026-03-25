@@ -1,6 +1,6 @@
 import { FeatureFlags, useFeatureFlag } from '@luxfi/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function useGetSwapDelegationAddress(): (chainId: UniverseChainId | undefined) => string | undefined {
   const smartWalletEnabled = useFeatureFlag(FeatureFlags.SmartWallet)

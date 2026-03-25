@@ -1,5 +1,5 @@
 import type { FetchClient } from '@luxfi/api/src/clients/base/types'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export const DATA_SERVICE_API_PATHS = {
   report: '/SubmitReport',

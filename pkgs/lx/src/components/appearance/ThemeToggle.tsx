@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { Flex, SegmentedControl, Text, useSporeColors } from 'ui/src'
-import { Moon, Sun } from 'ui/src/components/icons'
-import { useCurrentAppearanceSetting } from 'lx/src/features/appearance/hooks'
-import { AppearanceSettingType, setSelectedAppearanceSettings } from 'lx/src/features/appearance/slice'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex, SegmentedControl, Text, useSporeColors } from '@luxfi/ui/src'
+import { Moon, Sun } from '@luxfi/ui/src/components/icons'
+import { useCurrentAppearanceSetting } from '@luxexchange/lx/src/features/appearance/hooks'
+import { AppearanceSettingType, setSelectedAppearanceSettings } from '@luxexchange/lx/src/features/appearance/slice'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export function ThemeToggle(): JSX.Element {
   const dispatch = useDispatch()

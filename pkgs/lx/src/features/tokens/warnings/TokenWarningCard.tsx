@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { TouchableArea } from 'ui/src'
-import { InlineWarningCard } from 'lx/src/components/InlineWarningCard/InlineWarningCard'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useBlockaidFeeComparisonAnalytics } from 'lx/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
+import { TouchableArea } from '@luxfi/ui/src'
+import { InlineWarningCard } from '@luxexchange/lx/src/components/InlineWarningCard/InlineWarningCard'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useBlockaidFeeComparisonAnalytics } from '@luxexchange/lx/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
 import {
   getSeverityFromTokenProtectionWarning,
   getTokenProtectionFeeOnTransfer,
@@ -14,9 +14,9 @@ import {
   useCardHeaderText,
   useCardSubtitleText,
   useTokenWarningCardText,
-} from 'lx/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { currencyIdToAddress } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
 
 type TokenWarningCardProps = {
   currencyInfo: Maybe<CurrencyInfo>

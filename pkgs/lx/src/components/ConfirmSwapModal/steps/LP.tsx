@@ -1,19 +1,19 @@
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { Swap } from 'ui/src/components/icons/Swap' // TODO: update to LP icon
-import { StepRowProps, StepRowSkeleton } from 'lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
-import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
-import { luxUrls } from 'lx/src/constants/urls'
-import { CollectFeesSteps } from 'lx/src/features/transactions/liquidity/steps/collectFeesSteps'
-import { DecreasePositionTransactionStep } from 'lx/src/features/transactions/liquidity/steps/decreasePosition'
+import { Flex } from '@luxfi/ui/src'
+import { Swap } from '@luxfi/ui/src/components/icons/Swap' // TODO: update to LP icon
+import { StepRowProps, StepRowSkeleton } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { CollectFeesSteps } from '@luxexchange/lx/src/features/transactions/liquidity/steps/collectFeesSteps'
+import { DecreasePositionTransactionStep } from '@luxexchange/lx/src/features/transactions/liquidity/steps/decreasePosition'
 import {
   IncreasePositionTransactionStep,
   IncreasePositionTransactionStepAsync,
-} from 'lx/src/features/transactions/liquidity/steps/increasePosition'
+} from '@luxexchange/lx/src/features/transactions/liquidity/steps/increasePosition'
 import {
   MigratePositionTransactionStep,
   MigratePositionTransactionStepAsync,
-} from 'lx/src/features/transactions/liquidity/steps/migrate'
+} from '@luxexchange/lx/src/features/transactions/liquidity/steps/migrate'
 
 const LPIcon = (): JSX.Element => (
   <Flex centered width="$spacing24" height="$spacing24" borderRadius="$roundedFull" backgroundColor="$DEP_blue400">

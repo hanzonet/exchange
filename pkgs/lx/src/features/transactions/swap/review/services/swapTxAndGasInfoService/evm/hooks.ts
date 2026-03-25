@@ -1,9 +1,9 @@
 import { TradingApi } from '@luxfi/api'
 import { Signer } from 'ethers/lib/ethers'
 import { useCallback } from 'react'
-import { useSigner } from 'lx/src/contexts/LuxContext'
-import { signTypedData } from 'lx/src/features/transactions/signing'
-import { isWebApp } from 'utilities/src/platform'
+import { useSigner } from '@luxexchange/lx/src/contexts/LuxContext'
+import { signTypedData } from '@luxexchange/lx/src/features/transactions/signing'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 async function getSignature(permitData: TradingApi.NullablePermit, signer: Signer): Promise<string | undefined> {
   const { domain, types, values } = permitData || {}

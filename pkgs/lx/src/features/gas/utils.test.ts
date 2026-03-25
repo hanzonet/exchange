@@ -1,7 +1,7 @@
 import { CurrencyAmount } from '@luxamm/sdk-core'
-import { DAI } from 'lx/src/constants/tokens'
-import { applyNativeTokenPercentageBuffer, hasSufficientFundsIncludingGas } from 'lx/src/features/gas/utils'
-import { MAINNET_CURRENCY } from 'lx/src/test/fixtures'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
+import { applyNativeTokenPercentageBuffer, hasSufficientFundsIncludingGas } from '@luxexchange/lx/src/features/gas/utils'
+import { MAINNET_CURRENCY } from '@luxexchange/lx/src/test/fixtures'
 
 const ZERO_ETH = CurrencyAmount.fromRawAmount(MAINNET_CURRENCY, 0)
 const ONE_ETH = CurrencyAmount.fromRawAmount(MAINNET_CURRENCY, 1e18)

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { AutoColumn } from '~/components/deprecated/Column'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 

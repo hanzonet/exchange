@@ -1,9 +1,9 @@
 import { SharedEventName } from '@luxdex/analytics-events'
-import { ExtensionEventName } from 'lx/src/features/telemetry/constants/extension'
-import { SwapEventName } from 'lx/src/features/telemetry/constants/features'
-import { LuxEventName } from 'lx/src/features/telemetry/constants/lux'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants/extension'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants/features'
+import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants/lux'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import type { TestnetModeConfig } from 'utilities/src/telemetry/analytics/analytics'
+import type { TestnetModeConfig } from '@luxfi/utilities/src/telemetry/analytics/analytics'
 
 export enum WalletEventName {
   AppRating = 'App Rating',

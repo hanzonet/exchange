@@ -1,8 +1,8 @@
 import { ChallengeType } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import { createHashcashSolver } from '@universe/sessions/src/challenge-solvers/createHashcashSolver'
-import type { HashcashWorkerChannel } from '@universe/sessions/src/challenge-solvers/hashcash/worker/types'
-import type { ChallengeData } from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
+import { createHashcashSolver } from '@luxexchange/sessions/src/challenge-solvers/createHashcashSolver'
+import type { HashcashWorkerChannel } from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
+import type { ChallengeData } from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
 import { describe, expect, it, vi } from 'vitest'
 
 // Mock performance tracker for testing

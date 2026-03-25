@@ -2,8 +2,8 @@ import { type QueryClient, type QueryKey, QueryObserver } from '@tanstack/react-
 import { type InAppNotification } from '@luxfi/api'
 import { createNotificationDataSource } from '@luxfi/notifications/src/notification-data-source/implementations/createNotificationDataSource'
 import { type NotificationDataSource } from '@luxfi/notifications/src/notification-data-source/NotificationDataSource'
-import { getLogger } from 'utilities/src/logger/logger'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 interface CreatePollingNotificationDataSourceContext<TQueryKey extends QueryKey = QueryKey> {
   queryClient: QueryClient

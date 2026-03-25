@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react'
-import { usePreviousWithLayoutEffect } from 'utilities/src/react/usePreviousWithLayoutEffect'
+import { usePreviousWithLayoutEffect } from '@luxfi/utilities/src/react/usePreviousWithLayoutEffect'
 
 describe('usePreviousWithLayoutEffect', () => {
   it('should return the value that was passed in on initial call', () => {

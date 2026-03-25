@@ -1,8 +1,8 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import {
   ActivePlanState,
   activePlanStore,
-} from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+} from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
 import { useStore } from 'zustand'
 import { useShallow } from 'zustand/shallow'
 

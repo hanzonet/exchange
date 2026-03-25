@@ -187,7 +187,7 @@
           "options": {
             "paths": {
               "utilities/src/telemetry/analytics/analytics": {
-                "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
               },
               "utilities/src/telemetry/trace/Trace": {
                 "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -257,7 +257,7 @@
                 "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
               },
               "expo-haptics": {
-                "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
               },
               "@uniswap/analytics": {
                 "importNames": [
@@ -450,10 +450,10 @@
   "overrides": [
     {
       "includes": [
-        "packages/eslint-config/**",
-        "!packages/eslint-config/.eslintrc.js",
-        "!packages/eslint-config/**/__generated__/**",
-        "!packages/eslint-config/scripts/**"
+        "pkgs/eslint-config/**",
+        "!pkgs/eslint-config/.eslintrc.js",
+        "!pkgs/eslint-config/**/__generated__/**",
+        "!pkgs/eslint-config/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -463,7 +463,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -533,7 +533,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -568,10 +568,10 @@
     },
     {
       "includes": [
-        "packages/notifications/**",
-        "!packages/notifications/.eslintrc.js",
-        "!packages/notifications/**/__generated__/**",
-        "!packages/notifications/scripts/**"
+        "pkgs/notifications/**",
+        "!pkgs/notifications/.eslintrc.js",
+        "!pkgs/notifications/**/__generated__/**",
+        "!pkgs/notifications/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -581,7 +581,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -651,7 +651,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -686,10 +686,10 @@
     },
     {
       "includes": [
-        "packages/biome-config/**",
-        "!packages/biome-config/.eslintrc.js",
-        "!packages/biome-config/**/__generated__/**",
-        "!packages/biome-config/scripts/**"
+        "pkgs/biome-config/**",
+        "!pkgs/biome-config/.eslintrc.js",
+        "!pkgs/biome-config/**/__generated__/**",
+        "!pkgs/biome-config/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -699,7 +699,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -769,7 +769,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -804,10 +804,10 @@
     },
     {
       "includes": [
-        "packages/utilities/**",
-        "!packages/utilities/.eslintrc.js",
-        "!packages/utilities/**/__generated__/**",
-        "!packages/utilities/scripts/**"
+        "pkgs/utilities/**",
+        "!pkgs/utilities/.eslintrc.js",
+        "!pkgs/utilities/**/__generated__/**",
+        "!pkgs/utilities/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -817,7 +817,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -887,7 +887,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -922,10 +922,10 @@
     },
     {
       "includes": [
-        "packages/exchange/**",
-        "!packages/exchange/.eslintrc.js",
-        "!packages/exchange/**/__generated__/**",
-        "!packages/exchange/scripts/**"
+        "pkgs/exchange/**",
+        "!pkgs/exchange/.eslintrc.js",
+        "!pkgs/exchange/**/__generated__/**",
+        "!pkgs/exchange/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -935,7 +935,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1005,7 +1005,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1040,10 +1040,10 @@
     },
     {
       "includes": [
-        "packages/sessions/**",
-        "!packages/sessions/.eslintrc.js",
-        "!packages/sessions/**/__generated__/**",
-        "!packages/sessions/scripts/**"
+        "pkgs/sessions/**",
+        "!pkgs/sessions/.eslintrc.js",
+        "!pkgs/sessions/**/__generated__/**",
+        "!pkgs/sessions/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1053,7 +1053,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1123,7 +1123,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1158,10 +1158,10 @@
     },
     {
       "includes": [
-        "packages/config/**",
-        "!packages/config/.eslintrc.js",
-        "!packages/config/**/__generated__/**",
-        "!packages/config/scripts/**"
+        "pkgs/config/**",
+        "!pkgs/config/.eslintrc.js",
+        "!pkgs/config/**/__generated__/**",
+        "!pkgs/config/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1171,7 +1171,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1241,7 +1241,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1276,10 +1276,10 @@
     },
     {
       "includes": [
-        "packages/gating/**",
-        "!packages/gating/.eslintrc.js",
-        "!packages/gating/**/__generated__/**",
-        "!packages/gating/scripts/**"
+        "pkgs/gating/**",
+        "!pkgs/gating/.eslintrc.js",
+        "!pkgs/gating/**/__generated__/**",
+        "!pkgs/gating/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1289,7 +1289,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1359,7 +1359,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1394,10 +1394,10 @@
     },
     {
       "includes": [
-        "packages/wallet/**",
-        "!packages/wallet/.eslintrc.js",
-        "!packages/wallet/**/__generated__/**",
-        "!packages/wallet/scripts/**"
+        "pkgs/wallet/**",
+        "!pkgs/wallet/.eslintrc.js",
+        "!pkgs/wallet/**/__generated__/**",
+        "!pkgs/wallet/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1407,7 +1407,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1477,7 +1477,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1512,10 +1512,10 @@
     },
     {
       "includes": [
-        "packages/api/**",
-        "!packages/api/.eslintrc.js",
-        "!packages/api/**/__generated__/**",
-        "!packages/api/scripts/**"
+        "pkgs/api/**",
+        "!pkgs/api/.eslintrc.js",
+        "!pkgs/api/**/__generated__/**",
+        "!pkgs/api/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1525,7 +1525,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1595,7 +1595,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1630,10 +1630,10 @@
     },
     {
       "includes": [
-        "packages/dex/**",
-        "!packages/dex/.eslintrc.js",
-        "!packages/dex/**/__generated__/**",
-        "!packages/dex/scripts/**"
+        "pkgs/dex/**",
+        "!pkgs/dex/.eslintrc.js",
+        "!pkgs/dex/**/__generated__/**",
+        "!pkgs/dex/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1643,7 +1643,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1713,7 +1713,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1748,10 +1748,10 @@
     },
     {
       "includes": [
-        "packages/ui/**",
-        "!packages/ui/.eslintrc.js",
-        "!packages/ui/**/__generated__/**",
-        "!packages/ui/scripts/**"
+        "pkgs/ui/**",
+        "!pkgs/ui/.eslintrc.js",
+        "!pkgs/ui/**/__generated__/**",
+        "!pkgs/ui/scripts/**"
       ],
       "linter": {
         "rules": {
@@ -1761,7 +1761,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -1831,7 +1831,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -1866,7 +1866,7 @@
     },
     {
       "includes": [
-        "packages/prices/src/index.ts"
+        "pkgs/prices/src/index.ts"
       ],
       "linter": {
         "rules": {}
@@ -1922,11 +1922,11 @@
     },
     {
       "includes": [
-        "packages/ui/**",
-        "!packages/ui/**/*.test.ts",
-        "!packages/ui/**/*.test.tsx",
-        "!packages/ui/**/test/**",
-        "!packages/ui/**/tests/**"
+        "pkgs/ui/**",
+        "!pkgs/ui/**/*.test.ts",
+        "!pkgs/ui/**/*.test.tsx",
+        "!pkgs/ui/**/test/**",
+        "!pkgs/ui/**/tests/**"
       ],
       "linter": {
         "rules": {
@@ -1936,7 +1936,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2006,7 +2006,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2044,11 +2044,11 @@
     },
     {
       "includes": [
-        "packages/utilities/**",
-        "!packages/utilities/**/*.test.ts",
-        "!packages/utilities/**/*.test.tsx",
-        "!packages/utilities/**/test/**",
-        "!packages/utilities/**/tests/**"
+        "pkgs/utilities/**",
+        "!pkgs/utilities/**/*.test.ts",
+        "!pkgs/utilities/**/*.test.tsx",
+        "!pkgs/utilities/**/test/**",
+        "!pkgs/utilities/**/tests/**"
       ],
       "linter": {
         "rules": {
@@ -2058,7 +2058,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2128,7 +2128,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2166,10 +2166,10 @@
     },
     {
       "includes": [
-        "packages/utilities/src/index.ts",
-        "packages/utilities/src/platform/*",
-        "packages/utilities/src/addresses/*",
-        "packages/utilities/src/errors/*"
+        "pkgs/utilities/src/index.ts",
+        "pkgs/utilities/src/platform/*",
+        "pkgs/utilities/src/addresses/*",
+        "pkgs/utilities/src/errors/*"
       ],
       "linter": {
         "rules": {}
@@ -2177,11 +2177,11 @@
     },
     {
       "includes": [
-        "packages/uniswap/**",
-        "!packages/uniswap/**/*.test.ts",
-        "!packages/uniswap/**/*.test.tsx",
-        "!packages/uniswap/**/test/**",
-        "!packages/uniswap/**/tests/**"
+        "pkgs/uniswap/**",
+        "!pkgs/uniswap/**/*.test.ts",
+        "!pkgs/uniswap/**/*.test.tsx",
+        "!pkgs/uniswap/**/test/**",
+        "!pkgs/uniswap/**/tests/**"
       ],
       "linter": {
         "rules": {
@@ -2191,7 +2191,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2261,7 +2261,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2297,7 +2297,7 @@
                     "importNames": [
                       "UNIVERSE_CHAIN_INFO"
                     ],
-                    "message": "Use useChainInfo or helpers in packages/uniswap/src/features/chains/utils.ts when possible!"
+                    "message": "Use useChainInfo or helpers in pkgs/uniswap/src/features/chains/utils.ts when possible!"
                   },
                   "uniswap/src/data/graphql/uniswap-data-api/__generated__/react-hooks": {
                     "importNames": [
@@ -2329,12 +2329,12 @@
     },
     {
       "includes": [
-        "packages/uniswap/src/index.ts",
-        "packages/uniswap/src/features/telemetry/constants/index.ts",
-        "packages/uniswap/src/features/telemetry/constants/trace/index.ts",
-        "packages/uniswap/src/i18n/index.ts",
-        "packages/uniswap/src/state/index.ts",
-        "packages/uniswap/src/test/**"
+        "pkgs/uniswap/src/index.ts",
+        "pkgs/uniswap/src/features/telemetry/constants/index.ts",
+        "pkgs/uniswap/src/features/telemetry/constants/trace/index.ts",
+        "pkgs/uniswap/src/i18n/index.ts",
+        "pkgs/uniswap/src/state/index.ts",
+        "pkgs/uniswap/src/test/**"
       ],
       "linter": {
         "rules": {
@@ -2344,7 +2344,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2411,7 +2411,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2446,8 +2446,8 @@
     },
     {
       "includes": [
-        "packages/uniswap/src/data/**/__generated__/**",
-        "packages/uniswap/src/abis/types/**"
+        "pkgs/uniswap/src/data/**/__generated__/**",
+        "pkgs/uniswap/src/abis/types/**"
       ],
       "linter": {
         "enabled": false
@@ -2455,7 +2455,7 @@
     },
     {
       "includes": [
-        "packages/uniswap/vite/**"
+        "pkgs/uniswap/vite/**"
       ],
       "linter": {
         "enabled": false
@@ -2463,10 +2463,10 @@
     },
     {
       "includes": [
-        "packages/api/.eslintrc.js",
-        "packages/api/codegen.ts",
-        "packages/api/scripts/**",
-        "packages/api/src/**/__generated__/**"
+        "pkgs/api/.eslintrc.js",
+        "pkgs/api/codegen.ts",
+        "pkgs/api/scripts/**",
+        "pkgs/api/src/**/__generated__/**"
       ],
       "linter": {
         "enabled": false
@@ -2474,7 +2474,7 @@
     },
     {
       "includes": [
-        "packages/api/src/clients/trading/api.json"
+        "pkgs/api/src/clients/trading/api.json"
       ],
       "formatter": {
         "enabled": false
@@ -2482,7 +2482,7 @@
     },
     {
       "includes": [
-        "packages/docker-image-builder/**"
+        "pkgs/docker-image-builder/**"
       ],
       "linter": {
         "rules": {
@@ -2513,7 +2513,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2583,7 +2583,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2681,7 +2681,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2751,7 +2751,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -2906,7 +2906,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -2976,7 +2976,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -3030,7 +3030,7 @@
                     "importNames": [
                       "UNIVERSE_CHAIN_INFO"
                     ],
-                    "message": "Use useChainInfo or helpers in packages/uniswap/src/features/chains/utils.ts when possible!"
+                    "message": "Use useChainInfo or helpers in pkgs/uniswap/src/features/chains/utils.ts when possible!"
                   }
                 },
                 "patterns": [
@@ -3097,11 +3097,11 @@
     },
     {
       "includes": [
-        "packages/wallet/**",
-        "!packages/wallet/**/*.test.ts",
-        "!packages/wallet/**/*.test.tsx",
-        "!packages/wallet/**/test/**",
-        "!packages/wallet/**/tests/**"
+        "pkgs/wallet/**",
+        "!pkgs/wallet/**/*.test.ts",
+        "!pkgs/wallet/**/*.test.tsx",
+        "!pkgs/wallet/**/test/**",
+        "!pkgs/wallet/**/tests/**"
       ],
       "linter": {
         "rules": {
@@ -3111,7 +3111,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -3181,7 +3181,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [
@@ -3228,10 +3228,10 @@
     },
     {
       "includes": [
-        "packages/wallet/src/components/landing/elements/index.tsx",
-        "packages/wallet/src/index.ts",
-        "packages/wallet/src/state/index.ts",
-        "packages/wallet/src/test/**"
+        "pkgs/wallet/src/components/landing/elements/index.tsx",
+        "pkgs/wallet/src/index.ts",
+        "pkgs/wallet/src/state/index.ts",
+        "pkgs/wallet/src/test/**"
       ],
       "linter": {
         "rules": {
@@ -3241,7 +3241,7 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
                     "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
@@ -3311,7 +3311,7 @@
                     "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from packages/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
                   },
                   "@uniswap/analytics": {
                     "importNames": [

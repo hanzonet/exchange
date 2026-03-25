@@ -1,8 +1,8 @@
 import { PersistState } from 'redux-persist'
-import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
-import { tokenAddressOrNativeAddress } from 'lx/src/features/search/utils'
-import { createPersistState, createSafeMigration } from 'lx/src/state/createSafeMigration'
-import { isPoolSearchResult, PreV55SearchResult, PreV55SearchResultType } from 'lx/src/state/oldTypes'
+import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { tokenAddressOrNativeAddress } from '@luxexchange/lx/src/features/search/utils'
+import { createPersistState, createSafeMigration } from '@luxexchange/lx/src/state/createSafeMigration'
+import { isPoolSearchResult, PreV55SearchResult, PreV55SearchResultType } from '@luxexchange/lx/src/state/oldTypes'
 
 export type PersistAppStateV17 = {
   _persist: PersistState

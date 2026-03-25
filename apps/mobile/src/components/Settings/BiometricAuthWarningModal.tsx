@@ -1,10 +1,10 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useBiometricName } from 'src/features/biometricsSettings/hooks'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal, WarningModalProps } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { isAndroid } from 'utilities/src/platform'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal, WarningModalProps } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 
 type Props = {
   isOpen: boolean

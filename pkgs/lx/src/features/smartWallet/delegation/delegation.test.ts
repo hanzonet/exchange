@@ -1,5 +1,5 @@
-import { createDelegationService } from 'lx/src/features/smartWallet/delegation/delegation'
-import type { Logger } from 'utilities/src/logger/logger'
+import { createDelegationService } from '@luxexchange/lx/src/features/smartWallet/delegation/delegation'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 describe('delegation service', () => {
   const wallet = '0xWallet'

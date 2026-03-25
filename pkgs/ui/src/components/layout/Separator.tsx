@@ -1,5 +1,5 @@
 import { Stack, styled } from '@hanzo/gui'
-import { isWebPlatform } from 'utilities/src/platform'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export const Separator = styled(Stack, {
   name: 'Separator',

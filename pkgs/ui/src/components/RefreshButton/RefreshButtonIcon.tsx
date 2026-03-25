@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { TouchableArea } from 'ui/src/components/touchable'
-import { RefreshIcon } from 'ui/src/loading/RefreshIcon'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { TouchableArea } from '@luxfi/ui/src/components/touchable'
+import { RefreshIcon } from '@luxfi/ui/src/loading/RefreshIcon'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 /**
  * Refresh icon with 360-degree rotation animation.

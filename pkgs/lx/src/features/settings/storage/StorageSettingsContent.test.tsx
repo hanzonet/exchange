@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { StorageSettingsContent } from 'lx/src/features/settings/storage/StorageSettingsContent'
-import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
-import { fireEvent, render, waitFor } from 'lx/src/test/test-utils'
+import { StorageSettingsContent } from '@luxexchange/lx/src/features/settings/storage/StorageSettingsContent'
+import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
+import { fireEvent, render, waitFor } from '@luxexchange/lx/src/test/test-utils'
 
 // Mock the WarningModal to avoid BottomSheet issues in tests
 vi.mock('lx/src/components/modals/WarningModal/WarningModal', async () => {

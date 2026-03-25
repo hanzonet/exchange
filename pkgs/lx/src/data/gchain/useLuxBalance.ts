@@ -9,7 +9,7 @@
  */
 
 import { useQuery } from '@tanstack/react-query'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { type GChainAccount, getAccount, getBalance } from './client'
 
 const GCHAIN_BALANCE_STALE_TIME = 10_000 // 10 seconds

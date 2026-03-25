@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PADDING_STRENGTH_INDICATOR, PasswordInput } from 'src/app/components/PasswordInput'
-import { Button, Flex, Text } from 'ui/src'
-import { ExtensionEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
-import { PasswordErrors, usePasswordForm } from 'wallet/src/utils/password'
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { PasswordErrors, usePasswordForm } from '@luxfi/wallet/src/utils/password'
 
 export function ChangePasswordForm({
   oldPassword,

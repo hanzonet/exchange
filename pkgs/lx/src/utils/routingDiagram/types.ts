@@ -1,6 +1,6 @@
 import { Percent } from '@luxamm/sdk-core'
-import type { GeneratedIcon } from 'ui/src'
-import { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import type { GeneratedIcon } from '@luxfi/ui/src'
+import { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 
 export type RoutingHop =
   | {

@@ -17,7 +17,7 @@ pre-commit:
       run: |
         export TERM=dumb
         # Get changed packages and typecheck them directly (not dependents)
-        CHANGED=$(git diff --cached --name-only | sed -n 's|^packages/\([^/]*\)/.*|@luxfi/\1|p; s|^apps/\([^/]*\)/.*|@luxfi/\1|p' | sort -u | paste -sd, -)
+        CHANGED=$(git diff --cached --name-only | sed -n 's|^pkgs/\([^/]*\)/.*|@luxfi/\1|p; s|^apps/\([^/]*\)/.*|@luxfi/\1|p' | sort -u | paste -sd, -)
         if [ -n "$CHANGED" ]; then
           echo "Typechecking changed packages: $CHANGED"
           npx nx run-many -t typecheck --projects="$CHANGED" --output-style=stream
@@ -50,7 +50,7 @@ post-checkout:
     generate-biome-config:
       run: |
         # {1} = old HEAD, {2} = new HEAD
-        changed_files=$(git diff --name-only {1} {2} -- packages/biome-config/ 2>/dev/null || true)
+        changed_files=$(git diff --name-only {1} {2} -- pkgs/biome-config/ 2>/dev/null || true)
         if [ -n "$changed_files" ]; then
           echo "Biome config files changed, regenerating config..."
           bun biome-config prepare

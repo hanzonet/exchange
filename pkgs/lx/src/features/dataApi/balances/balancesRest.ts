@@ -6,31 +6,31 @@ import { Balance } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { PortfolioValueModifier as RestPortfolioValueModifier } from '@uniswap/client-data-api/dist/data/v1/types_pb.d'
 import { Currency } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
-import { GetPortfolioInput, getPortfolioQuery, useGetPortfolioQuery } from 'lx/src/data/rest/getPortfolio'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { normalizeTokenAddressForCache } from '@luxexchange/lx/src/data/cache'
+import { GetPortfolioInput, getPortfolioQuery, useGetPortfolioQuery } from '@luxexchange/lx/src/data/rest/getPortfolio'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   buildPortfolioBalance,
   PortfolioCacheUpdater,
   PortfolioDataResult,
   PortfolioTotalValueResult,
-} from 'lx/src/features/dataApi/balances/balances'
-import { mapRestStatusToNetworkStatus, matchesCurrency } from 'lx/src/features/dataApi/balances/utils'
-import { PortfolioBalance, RestContract } from 'lx/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { currencyIdToRestContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
+} from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { mapRestStatusToNetworkStatus, matchesCurrency } from '@luxexchange/lx/src/features/dataApi/balances/utils'
+import { PortfolioBalance, RestContract } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { currencyIdToRestContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
 import {
   getRestCurrencySafetyInfo,
   getRestTokenSafetyInfo,
-} from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from 'lx/src/features/settings/hooks'
-import { useCurrencyIdToVisibility } from 'lx/src/features/transactions/selectors'
-import { CurrencyId } from 'lx/src/types/currency'
-import { currencyId } from 'lx/src/utils/currencyId'
-import { usePlatformBasedFetchPolicy } from 'lx/src/utils/usePlatformBasedFetchPolicy'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
+import { useCurrencyIdToVisibility } from '@luxexchange/lx/src/features/transactions/selectors'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { usePlatformBasedFetchPolicy } from '@luxexchange/lx/src/utils/usePlatformBasedFetchPolicy'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export type RestTokenOverrides = {
   includeOverrides: RestContract[]

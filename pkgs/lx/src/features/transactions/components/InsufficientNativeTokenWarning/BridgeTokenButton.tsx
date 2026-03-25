@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex } from 'ui/src'
-import { validColor } from 'ui/src/theme'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useNetworkColors } from 'lx/src/utils/colors'
+import { Button, Flex } from '@luxfi/ui/src'
+import { validColor } from '@luxfi/ui/src/theme'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useNetworkColors } from '@luxexchange/lx/src/utils/colors'
 
 export function BridgeTokenButton({
   inputToken,

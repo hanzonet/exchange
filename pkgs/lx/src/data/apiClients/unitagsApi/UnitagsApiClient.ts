@@ -7,7 +7,7 @@ import {
 } from '@luxfi/api'
 import { getConfig } from '@luxfi/config'
 import { getIsSessionServiceEnabled } from '@luxfi/gating'
-import { luxUrls } from 'lx/src/constants/urls'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
 
 const UnitagsApiFetchClient = createFetchClient({
   baseUrl:

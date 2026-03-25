@@ -7,7 +7,7 @@ import { useAddressNotificationToggle } from 'src/features/notifications/hooks/u
 import { promptPushPermission } from 'src/features/notifications/Onesignal'
 import { showNotificationSettingsAlert } from 'src/features/notifications/showNotificationSettingsAlert'
 import { act, renderHook, waitFor } from 'src/test/test-utils'
-import { useSelectAccountNotificationSetting } from 'wallet/src/features/wallet/hooks'
+import { useSelectAccountNotificationSetting } from '@luxfi/wallet/src/features/wallet/hooks'
 
 jest.mock('react-redux', () => ({
   ...jest.requireActual('react-redux'), // Keep all other exports

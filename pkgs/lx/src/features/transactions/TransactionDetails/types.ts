@@ -1,7 +1,7 @@
 import { Percent } from '@luxamm/sdk-core'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
 
 export type FoTFeeType = 'buy' | 'sell'
 

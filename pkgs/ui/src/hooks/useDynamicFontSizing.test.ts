@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react'
 import type { LayoutChangeEvent } from 'react-native'
-import { useDynamicFontSizing } from 'ui/src/hooks/useDynamicFontSizing'
+import { useDynamicFontSizing } from '@luxfi/ui/src/hooks/useDynamicFontSizing'
 import { describe, expect, it } from 'vitest'
 
 const MAX_INPUT_FONT_SIZE = 42

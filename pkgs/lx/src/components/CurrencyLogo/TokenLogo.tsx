@@ -8,13 +8,13 @@ import {
   UniversalImage,
   useColorSchemeFromSeed,
   useSporeColors,
-} from 'ui/src'
-import { iconSizes, validColor, zIndexes } from 'ui/src/theme'
-import { STATUS_RATIO } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isTestnetChain } from 'lx/src/features/chains/utils'
-import { isMobileApp } from 'utilities/src/platform'
+} from '@luxfi/ui/src'
+import { iconSizes, validColor, zIndexes } from '@luxfi/ui/src/theme'
+import { STATUS_RATIO } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isTestnetChain } from '@luxexchange/lx/src/features/chains/utils'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 interface TokenLogoProps {
   url?: string | null

@@ -1,10 +1,10 @@
-import { TransferTokenSummaryItem } from 'lx/src/components/activity/summaries/TransferTokenSummaryItem'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { TransferTokenSummaryItem } from '@luxexchange/lx/src/components/activity/summaries/TransferTokenSummaryItem'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
 import {
   SendTokenTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function SendSummaryItem({
   transaction,

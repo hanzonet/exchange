@@ -1,5 +1,5 @@
-import type { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { isDevEnv } from 'utilities/src/environment/env'
+import type { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
 import type { StoreApi, UseBoundStore } from 'zustand'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'

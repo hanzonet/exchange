@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { GeneratedIcon, Text, ThemeKeys } from 'ui/src'
-import { AlertTriangle, Trash, WalletFilled } from 'ui/src/components/icons'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { getCloudProviderName } from 'lx/src/utils/cloud-backup/getCloudProviderName'
-import { Account } from 'wallet/src/features/wallet/accounts/types'
-import { useDisplayName } from 'wallet/src/features/wallet/hooks'
+import { GeneratedIcon, Text, ThemeKeys } from '@luxfi/ui/src'
+import { AlertTriangle, Trash, WalletFilled } from '@luxfi/ui/src/components/icons'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { getCloudProviderName } from '@luxexchange/lx/src/utils/cloud-backup/getCloudProviderName'
+import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export enum RemoveWalletStep {
   Warning = 'warning',

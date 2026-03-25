@@ -1,5 +1,5 @@
-import type { SlippageControlProps } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import type { SlippageControlProps } from '@luxexchange/lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 /**
  * Base implementation of the slippage setting control.

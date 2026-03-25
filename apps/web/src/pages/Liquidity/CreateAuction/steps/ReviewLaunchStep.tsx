@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text, TouchableArea } from 'ui/src'
-import { Edit } from 'ui/src/components/icons/Edit'
-import { XTwitter } from 'ui/src/components/icons/XTwitter'
-import { iconSizes } from 'ui/src/theme'
+import { Button, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Edit } from '@luxfi/ui/src/components/icons/Edit'
+import { XTwitter } from '@luxfi/ui/src/components/icons/XTwitter'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
 import { TokenLogo } from 'uniswap/src/components/CurrencyLogo/TokenLogo'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
@@ -12,7 +12,7 @@ import { useLocalizationContext } from 'uniswap/src/features/language/Localizati
 import { useLocalizedDayjs } from 'uniswap/src/features/language/localizedDayjs'
 import { useCurrencyInfo, useNativeCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
-import { NumberType } from 'utilities/src/format/types'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 import {
   useCreateAuctionStore,
   useCreateAuctionStoreActions,

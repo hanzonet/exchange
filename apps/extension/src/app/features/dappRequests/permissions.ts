@@ -16,14 +16,14 @@ import {
 import { dappResponseMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { type Permission } from 'src/contentScript/WindowEthereumRequestTypes'
 import { call, put } from 'typed-redux-saga'
-import { chainIdToHexadecimalString } from 'lx/src/features/chains/utils'
-import { DappResponseType, EthMethod } from 'lx/src/features/dappRequests/types'
-import { pushNotification } from 'lx/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
-import { ExtensionEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { extractBaseUrl } from 'utilities/src/format/urls'
-import { logger } from 'utilities/src/logger/logger'
+import { chainIdToHexadecimalString } from '@luxexchange/lx/src/features/chains/utils'
+import { DappResponseType, EthMethod } from '@luxexchange/lx/src/features/dappRequests/types'
+import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { extractBaseUrl } from '@luxfi/utilities/src/format/urls'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function getPermissions(dappUrl: string | undefined, connectedAddresses: Address[] | undefined): Permission[] {
   const permissions: Permission[] = []

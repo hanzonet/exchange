@@ -1,15 +1,15 @@
-import { GqlResult } from '@universe/api'
+import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { OnchainItemListOptionType, TokenOption } from 'lx/src/components/lists/items/types'
-import { filter } from 'lx/src/components/TokenSelector/filter'
-import { usePortfolioBalancesForAddressById } from 'lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
-import type { AddressGroup } from 'lx/src/features/accounts/store/types/AccountsState'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { OnchainItemListOptionType, TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { filter } from '@luxexchange/lx/src/components/TokenSelector/filter'
+import { usePortfolioBalancesForAddressById } from '@luxexchange/lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
+import type { AddressGroup } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   sortPortfolioBalances,
   useTokenBalancesGroupedByVisibility,
-} from 'lx/src/features/dataApi/balances/balances'
+} from '@luxexchange/lx/src/features/dataApi/balances/balances'
 
 export function usePortfolioTokenOptions({
   addresses,

@@ -1,8 +1,8 @@
 /* eslint-disable no-new */
 import { TradeType } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
-import { UnwrapTrade, WrapTrade } from 'lx/src/features/transactions/swap/types/trade'
-import { ETH, WETH } from 'lx/src/test/fixtures/lib/sdk'
+import { UnwrapTrade, WrapTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { ETH, WETH } from '@luxexchange/lx/src/test/fixtures/lib/sdk'
 
 const mockBaseQuote = {
   chainId: 1,

@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { getUniquePositionId } from 'lx/src/features/visibility/utils'
-import { type CurrencyId } from 'lx/src/types/currency'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getUniquePositionId } from '@luxexchange/lx/src/features/visibility/utils'
+import { type CurrencyId } from '@luxexchange/lx/src/types/currency'
 
 export type Visibility = { isVisible: boolean }
 export type PositionKeyToVisibility = Record<string, Visibility>

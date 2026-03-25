@@ -2,10 +2,10 @@ import type { IconProps as GuiIconProps } from '@hanzogui/helpers-icon'
 import { createElement, forwardRef, useState } from 'react'
 import type { Svg, SvgProps } from 'react-native-svg'
 import { type ColorTokens, type SpecificTokens, Stack, styled, type ThemeKeys, usePropsAndStyle, View } from '@hanzo/gui'
-import { withAnimated } from 'ui/src/components/factories/animated'
-import type { DynamicColor } from 'ui/src/hooks/useSporeColors'
-import type { IconSizeTokens } from 'ui/src/theme'
-import { isWebPlatform } from 'utilities/src/platform'
+import { withAnimated } from '@luxfi/ui/src/components/factories/animated'
+import type { DynamicColor } from '@luxfi/ui/src/hooks/useSporeColors'
+import type { IconSizeTokens } from '@luxfi/ui/src/theme'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 type SvgPropsWithRef = SvgProps & { ref: React.ForwardedRef<Svg>; style?: { color?: string } }
 

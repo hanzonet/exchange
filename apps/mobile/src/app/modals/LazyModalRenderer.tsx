@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ModalsState } from 'src/features/modals/ModalsState'
 import { closeModal } from 'src/features/modals/modalSlice'
 import { selectModalState } from 'src/features/modals/selectModalState'
-import { ErrorBoundary } from 'wallet/src/components/ErrorBoundary/ErrorBoundary'
+import { ErrorBoundary } from '@luxfi/wallet/src/components/ErrorBoundary/ErrorBoundary'
 
 /**
  * Delays evaluating `children` until modal is open

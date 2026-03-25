@@ -1,5 +1,5 @@
-import { logger } from 'utilities/src/logger/logger'
-import { hexToRGB } from 'utilities/src/theme/colors'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { hexToRGB } from '@luxfi/utilities/src/theme/colors'
 
 /**
  * Blends a color with white at a given opacity (like a white overlay).

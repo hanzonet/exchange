@@ -1,6 +1,6 @@
-import { iconSizes } from 'ui/src/theme'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 
 interface CurrencyLogoProps {
   currencyInfo: Maybe<CurrencyInfo>

@@ -1,8 +1,8 @@
-import { DAI, USDC } from 'lx/src/constants/tokens'
-import { Locale } from 'lx/src/features/language/constants'
-import { mockLocalizedFormatter } from 'lx/src/test/mocks'
-import { getCurrencyDisplayText, getFormattedCurrencyAmount } from 'lx/src/utils/currency'
-import { noOpFunction } from 'utilities/src/test/utils'
+import { DAI, USDC } from '@luxexchange/lx/src/constants/tokens'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { mockLocalizedFormatter } from '@luxexchange/lx/src/test/mocks'
+import { getCurrencyDisplayText, getFormattedCurrencyAmount } from '@luxexchange/lx/src/utils/currency'
+import { noOpFunction } from '@luxfi/utilities/src/test/utils'
 
 const mockFormatter = mockLocalizedFormatter(Locale.EnglishUnitedStates)
 

@@ -12,8 +12,8 @@ import {
   LuxOpenSidebarRequest,
   LuxOpenSidebarRequestSchema,
 } from 'src/contentScript/WindowEthereumRequestTypes'
-import { DappRequestType, DappResponseType } from 'lx/src/features/dappRequests/types'
-import { logger } from 'utilities/src/logger/logger'
+import { DappRequestType, DappResponseType } from '@luxexchange/lx/src/features/dappRequests/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Handles all lux-specific requests

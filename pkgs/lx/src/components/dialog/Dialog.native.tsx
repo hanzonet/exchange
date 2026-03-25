@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, LabeledCheckbox, Text } from 'ui/src'
-import { DialogButtons } from 'lx/src/components/dialog/DialogButtons'
-import { DialogContent } from 'lx/src/components/dialog/DialogContent'
-import type { DialogProps } from 'lx/src/components/dialog/DialogProps'
-import { GetHelpHeader } from 'lx/src/components/dialog/GetHelpHeader'
-import { BehaviorType, useDialogVisibility } from 'lx/src/components/dialog/hooks/useDialogVisibility'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { useHasValueBecomeTruthy } from 'utilities/src/react/useHasValueBecomeTruthy'
+import { Flex, LabeledCheckbox, Text } from '@luxfi/ui/src'
+import { DialogButtons } from '@luxexchange/lx/src/components/dialog/DialogButtons'
+import { DialogContent } from '@luxexchange/lx/src/components/dialog/DialogContent'
+import type { DialogProps } from '@luxexchange/lx/src/components/dialog/DialogProps'
+import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
+import { BehaviorType, useDialogVisibility } from '@luxexchange/lx/src/components/dialog/hooks/useDialogVisibility'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { useHasValueBecomeTruthy } from '@luxfi/utilities/src/react/useHasValueBecomeTruthy'
 
 export function Dialog({
   isOpen,

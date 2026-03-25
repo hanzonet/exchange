@@ -1,11 +1,11 @@
 import type { TransactionRequest } from '@ethersproject/providers'
-import type { FetchClient } from '@universe/api/src/clients/base/types'
+import type { FetchClient } from '@luxexchange/api/src/clients/base/types'
 import {
   type GasFeeResponse,
   type GasFeeResultWithoutState,
   type GasStrategy,
-} from '@universe/api/src/clients/trading/types'
-import { isWebApp } from 'utilities/src/platform'
+} from '@luxexchange/api/src/clients/trading/types'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 // TODO(app-infra), de-duplicate with luxUrls when other consumers are migrated to use this client
 const LUX_API_PATHS = {

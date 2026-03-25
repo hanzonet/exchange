@@ -1,9 +1,9 @@
-import { useOnReviewPress } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
-import { useSwapFormButtonColors } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
-import { useSwapFormButtonText } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { act, renderHook } from 'lx/src/test/test-utils'
-import { CurrencyField } from 'lx/src/types/currency'
+import { useOnReviewPress } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
+import { useSwapFormButtonColors } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
+import { useSwapFormButtonText } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { act, renderHook } from '@luxexchange/lx/src/test/test-utils'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import type { Mock } from 'vitest'
 
 const mockT = vi.fn((key: string, options?: Record<string, unknown>) =>
@@ -14,8 +14,8 @@ vi.mock('react-i18next', () => ({
   useTranslation: (): { t: typeof mockT } => ({ t: mockT }),
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useFeatureFlag: vi.fn(),
@@ -113,28 +113,28 @@ vi.mock('utilities/src/react/hooks', () => ({
   useEvent: <T extends (...args: never[]) => unknown>(handler: T): T => handler,
 }))
 
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
-import { useColorsFromTokenColor } from 'ui/src'
-import { nativeOnChain } from 'lx/src/constants/tokens'
-import { useActiveAccount, useConnectionStatus } from 'lx/src/features/accounts/store/hooks'
-import { chainIdToPlatform, isSVMChain } from 'lx/src/features/platforms/utils/chains'
-import { useIsShowingWebFORNudge, useIsWebFORNudgeEnabled } from 'lx/src/features/providers/webForNudgeProvider'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useIsAmountSelectionInvalid } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsAmountSelectionInvalid'
-import { useIsBlockingWithCustomMessage } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsBlockingWithCustomMessage'
-import { useIsMissingPlatformWallet } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
-import { useIsSwapButtonDisabled } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
-import { useIsTokenSelectionInvalid } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTokenSelectionInvalid'
-import { useIsTradeIndicative } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
-import { useSwapFormWarningStoreActions } from 'lx/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
-import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
-import { getActionText } from 'lx/src/features/transactions/swap/review/SwapReviewScreen/SwapReviewFooter/SubmitSwapButton'
-import { usePrepareSwap } from 'lx/src/features/transactions/swap/services/hooks/usePrepareSwap'
-import { useWarningService } from 'lx/src/features/transactions/swap/services/hooks/useWarningService'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
+import { useColorsFromTokenColor } from '@luxfi/ui/src'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { useActiveAccount, useConnectionStatus } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { chainIdToPlatform, isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { useIsShowingWebFORNudge, useIsWebFORNudgeEnabled } from '@luxexchange/lx/src/features/providers/webForNudgeProvider'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useIsAmountSelectionInvalid } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsAmountSelectionInvalid'
+import { useIsBlockingWithCustomMessage } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsBlockingWithCustomMessage'
+import { useIsMissingPlatformWallet } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
+import { useIsSwapButtonDisabled } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
+import { useIsTokenSelectionInvalid } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTokenSelectionInvalid'
+import { useIsTradeIndicative } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
+import { useSwapFormWarningStoreActions } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
+import { useParsedSwapWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { getActionText } from '@luxexchange/lx/src/features/transactions/swap/review/SwapReviewScreen/SwapReviewFooter/SubmitSwapButton'
+import { usePrepareSwap } from '@luxexchange/lx/src/features/transactions/swap/services/hooks/usePrepareSwap'
+import { useWarningService } from '@luxexchange/lx/src/features/transactions/swap/services/hooks/useWarningService'
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 type UseSwapFormStoreSelector<T> = (s: { isSubmitting: boolean }) => T
 type UseSwapFormStoreDerivedSwapInfoSelector<T> = (s: {

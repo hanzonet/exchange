@@ -1,9 +1,9 @@
 import { ADDRESS_ZERO } from '@uniswap/v3-sdk'
-import type { ChainedQuoteResponse } from '@universe/api'
-import { TradingApi } from '@universe/api'
-import { UnexpectedTransactionStateError } from 'lx/src/features/transactions/errors'
-import { type SwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { type ValidatedTransactionRequest } from 'lx/src/features/transactions/types/transactionRequests'
+import type { ChainedQuoteResponse } from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
+import { UnexpectedTransactionStateError } from '@luxexchange/lx/src/features/transactions/errors'
+import { type SwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { type ValidatedTransactionRequest } from '@luxexchange/lx/src/features/transactions/types/transactionRequests'
 
 export const LUXX_ROUTING_VARIANTS = [
   TradingApi.Routing.DUTCH_V2,

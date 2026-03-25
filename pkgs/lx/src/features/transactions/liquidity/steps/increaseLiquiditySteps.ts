@@ -2,11 +2,11 @@ import {
   IncreasePositionTransactionStep,
   IncreasePositionTransactionStepAsync,
   IncreasePositionTransactionStepBatched,
-} from 'lx/src/features/transactions/liquidity/steps/increasePosition'
-import { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
-import { Permit2SignatureStep } from 'lx/src/features/transactions/steps/permit2Signature'
-import { Permit2TransactionStep } from 'lx/src/features/transactions/steps/permit2Transaction'
-import { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
+} from '@luxexchange/lx/src/features/transactions/liquidity/steps/increasePosition'
+import { TokenApprovalTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/approve'
+import { Permit2SignatureStep } from '@luxexchange/lx/src/features/transactions/steps/permit2Signature'
+import { Permit2TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/permit2Transaction'
+import { TokenRevocationTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/revoke'
 
 export type IncreaseLiquiditySteps =
   | TokenApprovalTransactionStep

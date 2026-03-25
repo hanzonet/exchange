@@ -1,4 +1,4 @@
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { Q96 } from '~/components/Toucan/Auction/BidDistributionChart/utils/q96'
 
 function pow10(exp: number): bigint {

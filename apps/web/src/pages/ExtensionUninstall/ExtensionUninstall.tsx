@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router'
-import { Flex, Image, Text, TouchableArea } from 'ui/src'
-import { InterfaceEventName, InterfacePageName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { ExtensionUninstallFeedbackOptions } from 'lx/src/features/telemetry/types'
+import { Flex, Image, Text, TouchableArea } from '@luxfi/ui/src'
+import { InterfaceEventName, InterfacePageName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { ExtensionUninstallFeedbackOptions } from '@luxexchange/lx/src/features/telemetry/types'
 import MobileAppLogo from '~/assets/svg/lux_app_logo.svg'
 
 const LOGO_SIZE = 60

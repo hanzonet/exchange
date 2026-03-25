@@ -1,7 +1,7 @@
 {
   "name": "@luxfi/sessions",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/sessions/src",
+  "sourceRoot": "pkgs/sessions/src",
   "projectType": "library",
   "tags": ["scope:sessions", "type:lib"],
   "targets": {

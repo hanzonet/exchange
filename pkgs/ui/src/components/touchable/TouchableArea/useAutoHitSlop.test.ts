@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react'
 import type { LayoutChangeEvent } from 'react-native'
-import { getHitSlop, useAutoHitSlop } from 'ui/src/components/touchable/TouchableArea/useAutoHitSlop'
-import { isIOS } from 'utilities/src/platform'
+import { getHitSlop, useAutoHitSlop } from '@luxfi/ui/src/components/touchable/TouchableArea/useAutoHitSlop'
+import { isIOS } from '@luxfi/utilities/src/platform'
 import { describe, expect, it, vi } from 'vitest'
 
 // Mock the isIOS value to test both iOS and Android cases

@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { IndicativeTrade, Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { getTradeAmounts } from 'lx/src/features/transactions/swap/utils/getTradeAmounts'
-import { calculateRateLine, getRateToDisplay } from 'lx/src/features/transactions/swap/utils/trade'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { IndicativeTrade, Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { getTradeAmounts } from '@luxexchange/lx/src/features/transactions/swap/utils/getTradeAmounts'
+import { calculateRateLine, getRateToDisplay } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
 
 type SwapRateRatioProps = {
   trade: Trade | IndicativeTrade | undefined | null

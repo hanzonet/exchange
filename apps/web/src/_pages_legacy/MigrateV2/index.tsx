@@ -20,11 +20,11 @@ import { useLocation, useNavigate } from 'react-router'
 import { toV2LiquidityToken, useTrackedTokenPairs } from 'state/user/hooks'
 import { ThemedText } from 'theme/components'
 import { StyledInternalLink } from 'theme/components/Links'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { iconSizes } from 'ui/src/theme'
-import { InterfacePageName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { InterfacePageName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 
 function EmptyState({ message }: { message: ReactNode }) {
   return (

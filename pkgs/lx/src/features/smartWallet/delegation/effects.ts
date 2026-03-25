@@ -1,6 +1,6 @@
 import type { PayloadAction } from '@reduxjs/toolkit'
-import type { DelegatedState } from 'lx/src/features/smartWallet/delegation/types'
-import type { Logger } from 'utilities/src/logger/logger'
+import type { DelegatedState } from '@luxexchange/lx/src/features/smartWallet/delegation/types'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 type StateGetter = () => { delegation: DelegatedState }
 

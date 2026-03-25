@@ -1,6 +1,6 @@
 import { createDataServiceApiClient } from '@luxfi/api'
-import { luxUrls } from 'lx/src/constants/urls'
-import { createLuxFetchClient } from 'lx/src/data/apiClients/createLuxFetchClient'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
 
 const DataServiceFetchClient = createLuxFetchClient({
   baseUrl: luxUrls.dataApiServiceUrl,

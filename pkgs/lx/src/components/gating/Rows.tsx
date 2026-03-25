@@ -1,6 +1,6 @@
 import { Experiments, getOverrideAdapter, LayerProperties, Layers, useExperiment, useLayer } from '@luxfi/gating'
 import { useCallback } from 'react'
-import { Flex, Input, Switch, Text } from 'ui/src'
+import { Flex, Input, Switch, Text } from '@luxfi/ui/src'
 
 export function LayerRow({
   value: layerName,

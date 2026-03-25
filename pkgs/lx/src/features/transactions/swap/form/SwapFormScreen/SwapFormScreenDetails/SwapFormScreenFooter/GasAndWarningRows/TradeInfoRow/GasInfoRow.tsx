@@ -1,12 +1,12 @@
-import { Flex, Text } from 'ui/src'
-import { Gas } from 'ui/src/components/icons/Gas'
-import { DEXFee } from 'lx/src/components/gas/NetworkFee'
-import { NetworkFeeWarning } from 'lx/src/components/gas/NetworkFeeWarning'
-import type { GasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { isZero } from 'lx/src/utils/number'
-import { isWebApp } from 'utilities/src/platform'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Gas } from '@luxfi/ui/src/components/icons/Gas'
+import { DEXFee } from '@luxexchange/lx/src/components/gas/NetworkFee'
+import { NetworkFeeWarning } from '@luxexchange/lx/src/components/gas/NetworkFeeWarning'
+import type { GasInfo } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { isZero } from '@luxexchange/lx/src/utils/number'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 function NetworkFeeWarningContent({ gasInfo }: { gasInfo?: GasInfo }): JSX.Element | null {
   const priceUXEnabled = usePriceUXEnabled()

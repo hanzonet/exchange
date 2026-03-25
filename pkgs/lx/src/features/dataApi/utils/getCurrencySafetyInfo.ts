@@ -7,7 +7,7 @@ import {
   TokenMetadata,
 } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { GraphQLApi, SpamCode } from '@luxfi/api'
-import { AttackType, SafetyInfo, TokenList } from 'lx/src/features/dataApi/types'
+import { AttackType, SafetyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
 
 function getTokenListFromSafetyLevel(safetyInfo?: GraphQLApi.SafetyLevel): TokenList {
   switch (safetyInfo) {

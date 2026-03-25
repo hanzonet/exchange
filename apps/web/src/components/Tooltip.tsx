@@ -1,7 +1,7 @@
 import { transparentize } from 'polished'
 import { Fragment, memo, PropsWithChildren, ReactNode, useEffect, useState } from 'react'
-import { Flex, Text } from 'ui/src'
-import { noop } from 'utilities/src/react/noop'
+import { Flex, Text } from '@luxfi/ui/src'
+import { noop } from '@luxfi/utilities/src/react/noop'
 import Popover, { PopoverProps } from '~/components/Popover'
 import { deprecatedStyled } from '~/lib/deprecated-styled'
 

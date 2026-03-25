@@ -7,23 +7,23 @@ import {
   SpamCode as RestSpamCode,
   TokenType,
 } from '@uniswap/client-data-api/dist/data/v1/types_pb'
-import { TradingApi } from '@universe/api'
-import { getNativeAddress, getWrappedNativeAddress } from 'lx/src/constants/addresses'
-import { DAI } from 'lx/src/constants/tokens'
+import { TradingApi } from '@luxexchange/api'
+import { getNativeAddress, getWrappedNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
 
-import extractRestOnChainTransactionDetails from 'lx/src/features/activity/extract/extractOnChainTransactionDetails'
-import { parseRestApproveTransaction } from 'lx/src/features/activity/parse/parseApproveTransaction'
-import { parseRestLiquidityTransaction } from 'lx/src/features/activity/parse/parseLiquidityTransaction'
-import { parseRestNFTMintTransaction } from 'lx/src/features/activity/parse/parseMintTransaction'
-import { parseRestReceiveTransaction } from 'lx/src/features/activity/parse/parseReceiveTransaction'
-import { parseRestSendTransaction } from 'lx/src/features/activity/parse/parseSendTransaction'
+import extractRestOnChainTransactionDetails from '@luxexchange/lx/src/features/activity/extract/extractOnChainTransactionDetails'
+import { parseRestApproveTransaction } from '@luxexchange/lx/src/features/activity/parse/parseApproveTransaction'
+import { parseRestLiquidityTransaction } from '@luxexchange/lx/src/features/activity/parse/parseLiquidityTransaction'
+import { parseRestNFTMintTransaction } from '@luxexchange/lx/src/features/activity/parse/parseMintTransaction'
+import { parseRestReceiveTransaction } from '@luxexchange/lx/src/features/activity/parse/parseReceiveTransaction'
+import { parseRestSendTransaction } from '@luxexchange/lx/src/features/activity/parse/parseSendTransaction'
 import {
   parseRestSwapTransaction,
   parseRestWithdrawTransaction,
   parseRestWrapTransaction,
-} from 'lx/src/features/activity/parse/parseTradeTransaction'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/activity/parse/parseTradeTransaction'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   SAMPLE_SEED_ADDRESS_1,
   SAMPLE_SEED_ADDRESS_2,
@@ -31,7 +31,7 @@ import {
   SAMPLE_SEED_ADDRESS_4,
   SAMPLE_SEED_ADDRESS_5,
   SAMPLE_SEED_ADDRESS_6,
-} from 'lx/src/test/fixtures'
+} from '@luxexchange/lx/src/test/fixtures'
 
 /**
  * Testing for REST API transaction parsing utils.
@@ -819,7 +819,7 @@ const MOCK_BRIDGE: OnChainTransaction = {
 } as unknown as OnChainTransaction
 
 // Import the parseRestBridgeTransaction function
-import { parseRestBridgeTransaction } from 'lx/src/features/activity/parse/parseBridgingTransaction'
+import { parseRestBridgeTransaction } from '@luxexchange/lx/src/features/activity/parse/parseBridgingTransaction'
 
 describe(parseRestBridgeTransaction, () => {
   it('Bridge: handle empty transfers', () => {
@@ -893,7 +893,7 @@ const MOCK_ONRAMP_TRANSFER = {
 } as unknown as FiatOnRampTransaction
 
 // Import the parseRestOnRampTransaction function
-import { parseRestOnRampTransaction } from 'lx/src/features/activity/parse/parseOnRampTransaction'
+import { parseRestOnRampTransaction } from '@luxexchange/lx/src/features/activity/parse/parseOnRampTransaction'
 
 describe(parseRestOnRampTransaction, () => {
   it('OnRamp: handle empty transaction', () => {

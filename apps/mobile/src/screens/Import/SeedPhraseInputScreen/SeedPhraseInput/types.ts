@@ -1,6 +1,6 @@
 import { NativeSyntheticEvent, StyleProp, ViewStyle } from 'react-native'
 
-import { TestIDType } from 'lx/src/test/fixtures/testIDs'
+import { TestIDType } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export enum StringKey {
   InputPlaceholder = 'inputPlaceholder',

@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 
 describe('useBooleanState', () => {
   it('should initialize to `false` when using the default value', () => {

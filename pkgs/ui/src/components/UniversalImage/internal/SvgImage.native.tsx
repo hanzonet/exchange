@@ -1,9 +1,9 @@
 import WebView from 'react-native-webview'
-import { Flex } from 'ui/src/components/layout/Flex'
-import type { SvgImageProps } from 'ui/src/components/UniversalImage/types'
-import { useSvgData } from 'ui/src/components/UniversalImage/utils'
-import { Loader } from 'ui/src/loading/Loader'
-import { isIOS } from 'utilities/src/platform'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import type { SvgImageProps } from '@luxfi/ui/src/components/UniversalImage/types'
+import { useSvgData } from '@luxfi/ui/src/components/UniversalImage/utils'
+import { Loader } from '@luxfi/ui/src/loading/Loader'
+import { isIOS } from '@luxfi/utilities/src/platform'
 
 const heightUnits = isIOS ? 'vh' : '%'
 

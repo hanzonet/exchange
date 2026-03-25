@@ -20,7 +20,7 @@ function detectUniversePackages() {
         // Extract the package name without @luxfi/ prefix
         const shortName = projectName.replace('@luxfi/', '')
 
-        // Extract directory name from root path (e.g., "packages/api" -> "api")
+        // Extract directory name from root path (e.g., "pkgs/api" -> "api")
         const dir = path.basename(config.root)
 
         universePackages.push({
@@ -94,10 +94,10 @@ function generateUniversePackageOverrides(universePackages, globalPatterns) {
 
     const override = {
       includes: [
-        `packages/${pkg.dir}/**`,
-        `!packages/${pkg.dir}/.eslintrc.js`,
-        `!packages/${pkg.dir}/**/__generated__/**`,
-        `!packages/${pkg.dir}/scripts/**`,
+        `pkgs/${pkg.dir}/**`,
+        `!pkgs/${pkg.dir}/.eslintrc.js`,
+        `!pkgs/${pkg.dir}/**/__generated__/**`,
+        `!pkgs/${pkg.dir}/scripts/**`,
       ],
       linter: {
         rules: {

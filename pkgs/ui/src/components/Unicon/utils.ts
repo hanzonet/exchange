@@ -1,7 +1,7 @@
 import { keccak256, toUtf8Bytes } from 'ethers/lib/utils'
-import { UNICON_COLORS } from 'ui/src/components/Unicon/Colors'
-import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { isSVMAddress } from 'utilities/src/addresses/svm/svm'
+import { UNICON_COLORS } from '@luxfi/ui/src/components/Unicon/Colors'
+import { isEVMAddressWithChecksum } from '@luxfi/utilities/src/addresses/evm/evm'
+import { isSVMAddress } from '@luxfi/utilities/src/addresses/svm/svm'
 
 export const getUniconsDeterministicHash = (address: string): bigint => {
   if (!isEVMAddressWithChecksum(address) && !isSVMAddress(address)) {

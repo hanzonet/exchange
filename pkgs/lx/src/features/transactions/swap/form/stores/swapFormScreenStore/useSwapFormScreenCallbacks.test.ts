@@ -1,10 +1,10 @@
 import { renderHook } from '@testing-library/react'
 import type { MutableRefObject, RefObject } from 'react'
 import type { TextInputProps } from 'react-native'
-import type { CurrencyInputPanelRef } from 'lx/src/components/CurrencyInputPanel/types'
-import type { DecimalPadInputRef } from 'lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
-import { useSwapFormScreenCallbacks } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
-import { CurrencyField } from 'lx/src/types/currency'
+import type { CurrencyInputPanelRef } from '@luxexchange/lx/src/components/CurrencyInputPanel/types'
+import type { DecimalPadInputRef } from '@luxexchange/lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
+import { useSwapFormScreenCallbacks } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import type { Mock } from 'vitest'
 
 // Mock all dependencies

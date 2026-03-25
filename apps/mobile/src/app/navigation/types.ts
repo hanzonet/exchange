@@ -36,11 +36,11 @@ import {
   OnboardingScreens,
   SharedUnitagScreenParams,
   UnitagStackParamList,
-} from 'lx/src/types/screens/mobile'
-import { SmartWalletAdvancedSettingsModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
-import { SmartWalletEnabledModalState } from 'wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
-import { SmartWalletNudgeState } from 'wallet/src/components/smartWallet/modals/SmartWalletNudge'
-import { ExploreOrderBy } from 'wallet/src/features/wallet/types'
+} from '@luxexchange/lx/src/types/screens/mobile'
+import { SmartWalletAdvancedSettingsModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletAdvancedSettingsModal'
+import { SmartWalletEnabledModalState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletEnabledModal'
+import { SmartWalletNudgeState } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletNudge'
+import { ExploreOrderBy } from '@luxfi/wallet/src/features/wallet/types'
 
 export type ExploreScreenParams = {
   showFavorites?: boolean

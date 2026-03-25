@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { navigate } from 'src/app/navigation/rootNavigation'
 import { UnitagStackScreenProp } from 'src/app/navigation/types'
 import { Screen } from 'src/components/layout/Screen'
-import { AnimatePresence, Button, Flex, Text } from 'ui/src'
-import { AnimateInOrder } from 'ui/src/animations'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { spacing } from 'ui/src/theme'
-import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { MobileScreens, UnitagScreens } from 'lx/src/types/screens/mobile'
+import { AnimatePresence, Button, Flex, Text } from '@luxfi/ui/src'
+import { AnimateInOrder } from '@luxfi/ui/src/animations'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing } from '@luxfi/ui/src/theme'
+import { UNITAG_SUFFIX } from '@luxexchange/lx/src/features/unitags/constants'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { MobileScreens, UnitagScreens } from '@luxexchange/lx/src/types/screens/mobile'
 import {
   EmojiElement,
   ENSElement,
@@ -20,9 +20,9 @@ import {
   SendElement,
   SwapElement,
   TextElement,
-} from 'wallet/src/components/landing/elements'
-import { AnimatedArcCircle } from 'wallet/src/components/landing/shapes/AnimatedArcCircle'
-import { UnitagWithProfilePicture } from 'wallet/src/features/unitags/UnitagWithProfilePicture'
+} from '@luxfi/wallet/src/components/landing/elements'
+import { AnimatedArcCircle } from '@luxfi/wallet/src/components/landing/shapes/AnimatedArcCircle'
+import { UnitagWithProfilePicture } from '@luxfi/wallet/src/features/unitags/UnitagWithProfilePicture'
 
 const OUTER_CIRCLE_ARCS = [
   { startAngle: -130, endAngle: -50 }, // Upper arc

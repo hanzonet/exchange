@@ -1,17 +1,17 @@
-import { TradingApi } from '@universe/api'
-import { createApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
-import { createPermit2SignatureStep } from 'lx/src/features/transactions/steps/permit2Signature'
-import { TransactionStep } from 'lx/src/features/transactions/steps/types'
-import { PlanValidationError } from 'lx/src/features/transactions/swap/plan/types'
-import { parseSendCallsPlanStepPayload } from 'lx/src/features/transactions/swap/plan/utils'
-import { createDEXPlanSignatureStep } from 'lx/src/features/transactions/swap/steps/signOrder'
+import { TradingApi } from '@luxexchange/api'
+import { createApprovalTransactionStep } from '@luxexchange/lx/src/features/transactions/steps/approve'
+import { createPermit2SignatureStep } from '@luxexchange/lx/src/features/transactions/steps/permit2Signature'
+import { TransactionStep } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { PlanValidationError } from '@luxexchange/lx/src/features/transactions/swap/plan/types'
+import { parseSendCallsPlanStepPayload } from '@luxexchange/lx/src/features/transactions/swap/plan/utils'
+import { createDEXPlanSignatureStep } from '@luxexchange/lx/src/features/transactions/swap/steps/signOrder'
 import {
   createSwapTransactionStep,
   createSwapTransactionStepBatched,
-} from 'lx/src/features/transactions/swap/steps/swap'
-import { isDEX, planStepTypeToTradingRoute } from 'lx/src/features/transactions/swap/utils/routing'
-import { validatePermitTypeGuard, validateTransactionRequest } from 'lx/src/features/transactions/swap/utils/trade'
-import { tradingApiToUniverseChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
+} from '@luxexchange/lx/src/features/transactions/swap/steps/swap'
+import { isDEX, planStepTypeToTradingRoute } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { validatePermitTypeGuard, validateTransactionRequest } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { tradingApiToUniverseChainId } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
 
 const ERC20_APPROVE_TX_PREFIX = '0x095ea7b3'
 

@@ -22,10 +22,10 @@ import {
   SOLANA_BANNER_DARK,
   SOLANA_BANNER_LIGHT,
   SOLANA_LOGO,
-} from 'ui/src/assets'
-import { luxUrls } from 'lx/src/constants/urls'
-import i18n from 'lx/src/i18n'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxfi/ui/src/assets'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import i18n from '@luxexchange/lx/src/i18n'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import store from '~/state/index'
 
 // Legacy storage keys from the old banner implementation

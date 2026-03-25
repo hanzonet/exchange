@@ -1,6 +1,6 @@
-import { OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { SearchTab } from 'lx/src/features/search/SearchModal/types'
+import { OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { SearchTab } from '@luxexchange/lx/src/features/search/SearchModal/types'
 
 export type SearchFilterContext = {
   query?: string

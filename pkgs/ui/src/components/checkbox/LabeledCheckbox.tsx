@@ -1,14 +1,14 @@
 import { useMemo } from 'react'
 import type { GestureResponderEvent, StyleProp, ViewStyle } from 'react-native'
 import type { ColorTokens, SpaceTokens } from '@hanzo/gui'
-import type { CheckboxSizeTokens } from 'ui/src/components/checkbox/Checkbox'
-import { Checkbox } from 'ui/src/components/checkbox/Checkbox'
-import type { FlexProps } from 'ui/src/components/layout'
-import { Flex } from 'ui/src/components/layout'
-import { Text } from 'ui/src/components/text'
-import { TouchableArea } from 'ui/src/components/touchable'
-import type { SporeComponentVariant } from 'ui/src/components/types'
-import { useEvent } from 'utilities/src/react/hooks'
+import type { CheckboxSizeTokens } from '@luxfi/ui/src/components/checkbox/Checkbox'
+import { Checkbox } from '@luxfi/ui/src/components/checkbox/Checkbox'
+import type { FlexProps } from '@luxfi/ui/src/components/layout'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { Text } from '@luxfi/ui/src/components/text'
+import { TouchableArea } from '@luxfi/ui/src/components/touchable'
+import type { SporeComponentVariant } from '@luxfi/ui/src/components/types'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export type LabeledCheckboxProps = {
   size?: CheckboxSizeTokens

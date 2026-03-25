@@ -1,7 +1,7 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import { dataApiServiceClient } from 'uniswap/src/data/apiClients/dataApiService/listTokens'
-import { useEvent } from 'utilities/src/react/hooks'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { createListTokensService, type ListTokensService } from '~/state/explore/listTokens/services/listTokensService'
 import { getEffectiveListTokensOptions, type UseListTokensOptions } from '~/state/explore/listTokens/types'
 import { useTopTokensLegacy } from '~/state/explore/listTokens/useTopTokensLegacy'

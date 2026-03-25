@@ -3,11 +3,11 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PasswordInputWithBiometrics } from 'src/app/components/PasswordInput'
 import { reauthenticateWithBiometricCredential } from 'src/app/features/biometricUnlock/useUnlockWithBiometricCredentialMutation'
-import { Button, Flex, inputStyles, Square, Text, useSporeColors } from 'ui/src'
-import { Lock } from 'ui/src/components/icons'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
+import { Button, Flex, inputStyles, Square, Text, useSporeColors } from '@luxfi/ui/src'
+import { Lock } from '@luxfi/ui/src/components/icons'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
 
 export function EnterPasswordModal({
   isOpen,

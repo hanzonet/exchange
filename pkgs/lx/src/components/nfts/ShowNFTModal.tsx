@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
-import { InformationBanner } from 'lx/src/components/banners/InformationBanner'
-import { InfoLinkModal } from 'lx/src/components/modals/InfoLinkModal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { isMobileApp } from 'utilities/src/platform'
+import { Flex } from '@luxfi/ui/src'
+import { ShieldCheck } from '@luxfi/ui/src/components/icons/ShieldCheck'
+import { InformationBanner } from '@luxexchange/lx/src/components/banners/InformationBanner'
+import { InfoLinkModal } from '@luxexchange/lx/src/components/modals/InfoLinkModal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName, WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 export function ShowNFTModal(): JSX.Element {
   const { t } = useTranslation()

@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
-import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
-import { DappLogoWithWCBadge } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
-import { TransactionDetails, WCConfirmInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { TransactionSummaryLayout } from '@luxexchange/lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from '@luxexchange/lx/src/components/activity/utils'
+import { DappLogoWithWCBadge } from '@luxexchange/lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { TransactionDetails, WCConfirmInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function WCSummaryItem({
   transaction,

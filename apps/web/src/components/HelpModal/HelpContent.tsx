@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { Anchor, Flex, Text, TouchableArea } from 'ui/src'
-import { BookOpen } from 'ui/src/components/icons/BookOpen'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { GraduationCap } from 'ui/src/components/icons/GraduationCap'
-import { SpeechBubbles } from 'ui/src/components/icons/SpeechBubbles'
-import { X } from 'ui/src/components/icons/X'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Anchor, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { BookOpen } from '@luxfi/ui/src/components/icons/BookOpen'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { GraduationCap } from '@luxfi/ui/src/components/icons/GraduationCap'
+import { SpeechBubbles } from '@luxfi/ui/src/components/icons/SpeechBubbles'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 interface HelpContentProps {
   onClose?: () => void

@@ -1,11 +1,11 @@
 import { CurrencyAmount, NativeCurrency } from '@uniswap/sdk-core'
-import { TradingApi } from '@universe/api'
-import { WarningLabel } from 'lx/src/components/modals/WarningModal/types'
-import { nativeOnChain } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useParsedActivePlanWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useParsedActivePlanWarnings'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { renderHookWithProviders } from 'lx/src/test/render'
+import { TradingApi } from '@luxexchange/api'
+import { WarningLabel } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { nativeOnChain } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useParsedActivePlanWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useParsedActivePlanWarnings'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { renderHookWithProviders } from '@luxexchange/lx/src/test/render'
 
 // Mock dependencies
 vi.mock('lx/src/features/tokens/useCurrencyInfo', () => ({
@@ -25,8 +25,8 @@ vi.mock('lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore
   useSwapFormStore: vi.fn((selector: (s: { isSubmitting: boolean }) => unknown) => selector({ isSubmitting: false })),
 }))
 
-import { useOnChainCurrencyBalance, useOnChainNativeCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { useOnChainCurrencyBalance, useOnChainNativeCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 import type { Mock } from 'vitest'
 
 const mockUseCurrencyInfo = useCurrencyInfo as Mock

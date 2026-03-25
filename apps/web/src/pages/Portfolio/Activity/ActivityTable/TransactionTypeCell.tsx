@@ -1,12 +1,12 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, SpinningLoader, Text } from 'ui/src'
-import { Receipt } from 'ui/src/components/icons/Receipt'
-import { getTransactionSummaryTitle } from 'lx/src/features/activity/utils/getTransactionSummaryTitle'
+import { Flex, SpinningLoader, Text } from '@luxfi/ui/src'
+import { Receipt } from '@luxfi/ui/src/components/icons/Receipt'
+import { getTransactionSummaryTitle } from '@luxexchange/lx/src/features/activity/utils/getTransactionSummaryTitle'
 import {
   TEMPORARY_TRANSACTION_STATUSES,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { buildActivityRowFragments } from '~/pages/Portfolio/Activity/ActivityTable/registry'
 import { getTransactionTypeFilterOptions } from '~/pages/Portfolio/Activity/Filters/utils'
 

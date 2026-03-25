@@ -14,7 +14,7 @@ import {
   migrateSearchHistory,
   removeThaiBahtFromFiatCurrency,
   unchecksumDismissedTokenWarningKeys,
-} from 'lx/src/state/luxMigrations'
+} from '@luxexchange/lx/src/state/luxMigrations'
 import {
   activatePendingAccounts,
   addBatchedTransactions,
@@ -38,7 +38,7 @@ import {
   removeUniconV2BehaviorState,
   removeWalletIsUnlockedState,
   updateExploreOrderByType,
-} from 'wallet/src/state/walletMigrations'
+} from '@luxfi/wallet/src/state/walletMigrations'
 
 export const migrations = {
   0: removeWalletIsUnlockedState,

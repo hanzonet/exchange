@@ -5,8 +5,8 @@ import { useSlippageSettings } from 'uniswap/src/features/transactions/component
 import {
   ModalIdWithSlippage,
   TransactionSettingsModalId,
-} from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
-import { TransactionSettingsModalStoreContextProvider } from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/TransactionSettingsModalStoreContextProvider'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
+import { TransactionSettingsModalStoreContextProvider } from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/TransactionSettingsModalStoreContextProvider'
 import {
   TransactionSettings,
   TransactionSettingsProps,

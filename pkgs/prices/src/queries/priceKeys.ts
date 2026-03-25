@@ -1,4 +1,4 @@
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 export const priceKeys = {
   all: [ReactQueryCacheKey.TokenPrice] as const,

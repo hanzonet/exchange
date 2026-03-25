@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import type { CurrencyAsset } from 'lx/src/entities/assets'
-import { AssetType } from 'lx/src/entities/assets'
-import type { UniverseChainId } from 'lx/src/features/chains/types'
-import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import { DEFAULT_PROTOCOL_OPTIONS } from 'lx/src/features/transactions/swap/utils/protocols'
-import type { TransactionState } from 'lx/src/features/transactions/types/transactionState'
-import { CurrencyField } from 'lx/src/types/currency'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import type { CurrencyAsset } from '@luxexchange/lx/src/entities/assets'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import type { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import type { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { DEFAULT_PROTOCOL_OPTIONS } from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
+import type { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
 
 export function useSwapPrefilledState(initialState: TransactionState | undefined): SwapFormState | undefined {
   const swapPrefilledState = useMemo((): SwapFormState | undefined => {

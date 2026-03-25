@@ -1,7 +1,7 @@
 {
   "name": "hashcash-native",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/hashcash-native/src",
+  "sourceRoot": "pkgs/hashcash-native/src",
   "projectType": "library",
   "tags": ["platform:native", "scope:hashcash", "type:lib"],
   "targets": {

@@ -1,18 +1,18 @@
 import { TradingApi } from '@luxexchange/api'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { SwapEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import type { SwapRouting } from 'lx/src/features/telemetry/types'
-import { planAnalyticsToSnakeCase } from 'lx/src/features/transactions/swap/plan/types'
-import { SwapEventType, timestampTracker } from 'lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { SwapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import type { SwapRouting } from '@luxexchange/lx/src/features/telemetry/types'
+import { planAnalyticsToSnakeCase } from '@luxexchange/lx/src/features/transactions/swap/plan/types'
+import { SwapEventType, timestampTracker } from '@luxexchange/lx/src/features/transactions/swap/utils/SwapEventTimestampTracker'
 import {
   type PlanSwapTransactionInfoFields,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
-import type { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import type { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 import type { ConfirmedTransactionDetails } from '~/state/transactions/types'
 
 type OnChainSwapTransactionType = TransactionType.Swap | TransactionType.Bridge

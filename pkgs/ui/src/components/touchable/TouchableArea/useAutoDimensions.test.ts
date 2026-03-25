@@ -4,7 +4,7 @@ import {
   DEFAULT_MIN_HEIGHT,
   DEFAULT_MIN_WIDTH,
   useAutoDimensions,
-} from 'ui/src/components/touchable/TouchableArea/useAutoDimensions'
+} from '@luxfi/ui/src/components/touchable/TouchableArea/useAutoDimensions'
 import { describe, expect, it, vi } from 'vitest'
 
 // We're testing the mobile version of this hook

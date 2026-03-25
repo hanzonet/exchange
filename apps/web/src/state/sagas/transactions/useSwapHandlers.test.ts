@@ -6,10 +6,10 @@ import { ExecuteSwapParams } from 'uniswap/src/features/transactions/swap/types/
 import {
   ValidatedClassicSwapTxAndGasInfo,
   ValidatedSwapTxContext,
-} from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { isWrap } from 'lx/src/features/transactions/swap/utils/routing'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { SignerMnemonicAccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { isWrap } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { SignerMnemonicAccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
 import { useSwapCallback } from '~/state/sagas/transactions/swapSaga'
 import { useSwapHandlers, validateWrapParams } from '~/state/sagas/transactions/useSwapHandlers'
 import { renderHook } from '~/test-utils/render'

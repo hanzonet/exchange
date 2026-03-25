@@ -1,9 +1,9 @@
 import { TradingApi } from '@luxfi/api'
-import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
-import type { SwapTxAndGasInfoService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { createLogSwapRequestErrors } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import type { Trade } from 'lx/src/features/transactions/swap/types/trade'
-import type { ITraceContext } from 'utilities/src/telemetry/trace/TraceContext'
+import type { TransactionSettings } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import type { SwapTxAndGasInfoService } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
+import { createLogSwapRequestErrors } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import type { ITraceContext } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 
 const swapFlowTxIdToRecentRequestIdMap = new Map<string, string>()
 

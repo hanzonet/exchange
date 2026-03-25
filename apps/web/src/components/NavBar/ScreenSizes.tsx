@@ -1,4 +1,4 @@
-import { useMedia } from 'ui/src'
+import { useMedia } from '@luxfi/ui/src'
 
 // when company menu dropdown transitions to a bottom sheet
 export function useIsMobileDrawer(): boolean {

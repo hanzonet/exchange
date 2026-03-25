@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { toSupportedChainId } from 'lx/src/features/chains/utils'
-import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { CurrencyField } from 'lx/src/types/currency'
+import { Flex, Text } from '@luxfi/ui/src'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 type ExactOutputUnavailableWarningRowProps = {
   currencies: DerivedSwapInfo['currencies']

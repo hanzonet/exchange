@@ -1,8 +1,8 @@
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionAndPlanStep } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
-import { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
-import { isDevEnv } from 'utilities/src/environment/env'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionAndPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
+import { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
 import { devtools } from 'zustand/middleware'
 import { createStore } from 'zustand/vanilla'
 

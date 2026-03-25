@@ -1,17 +1,17 @@
 import { UNI_ADDRESSES } from '@uniswap/sdk-core'
-import { AssetType } from 'lx/src/entities/assets'
-import { mapTAPIPlanStatusToTXStatus } from 'lx/src/features/activity/extract/statusMappers'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { mapTAPIPlanStatusToTXStatus } from '@luxexchange/lx/src/features/activity/extract/statusMappers'
 import {
   DappInfoTransactionDetails,
   TransactionDetails,
   TransactionStatus,
   TransactionType,
   TransactionTypeInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { buildCurrencyId, buildNativeCurrencyId, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { buildCurrencyId, buildNativeCurrencyId, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import {
   ActivityProtocolInfo,
   ActivityRowFragments,

@@ -4,10 +4,10 @@ vi.mock('lx/src/features/accounts/store/hooks', () => ({
   useActiveAddresses: vi.fn(),
 }))
 
-import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
-import { useActiveAddresses } from 'lx/src/features/accounts/store/hooks'
-import { LimitsExpiry } from 'lx/src/types/limits'
-import { SwapTab } from 'lx/src/types/screens/interface'
+import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { useActiveAddresses } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { LimitsExpiry } from '@luxexchange/lx/src/types/limits'
+import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'
 import { LimitPriceInputPanel } from '~/components/CurrencyInputPanel/LimitPriceInputPanel/LimitPriceInputPanel'
 import { LimitContext } from '~/state/limit/LimitContext'
 import { MultichainContext } from '~/state/multichain/types'

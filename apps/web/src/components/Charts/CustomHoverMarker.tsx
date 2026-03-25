@@ -1,5 +1,5 @@
-import { Flex, useSporeColors } from 'ui/src'
-import { opacify } from 'ui/src/theme'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { opacify } from '@luxfi/ui/src/theme'
 
 interface CustomHoverMarkerProps {
   coordinates: { x: number; y: number }

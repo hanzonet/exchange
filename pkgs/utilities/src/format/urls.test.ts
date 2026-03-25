@@ -9,7 +9,7 @@ import {
   isSVGUri,
   sanitizeAvatarUrl,
   uriToHttpUrls,
-} from 'utilities/src/format/urls'
+} from '@luxfi/utilities/src/format/urls'
 
 describe(uriToHttpUrls, () => {
   it('returns .eth.link for ens names', () => {

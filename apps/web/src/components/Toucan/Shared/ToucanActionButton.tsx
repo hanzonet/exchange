@@ -1,7 +1,7 @@
 import { ReactNode, useMemo } from 'react'
-import { Button, ButtonEmphasis, ButtonProps, getContrastPassingTextColor, useColorsFromTokenColor } from 'ui/src'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { Trace } from 'lx/src/features/telemetry/Trace'
+import { Button, ButtonEmphasis, ButtonProps, getContrastPassingTextColor, useColorsFromTokenColor } from '@luxfi/ui/src'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
 import { MouseoverTooltip } from '~/components/Tooltip'
 import { useAuctionStore } from '~/components/Toucan/Auction/store/useAuctionStore'
 

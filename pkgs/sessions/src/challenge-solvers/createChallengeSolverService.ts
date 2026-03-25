@@ -1,9 +1,9 @@
 import { ChallengeType } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import { createHashcashMockSolver } from '@universe/sessions/src/challenge-solvers/createHashcashMockSolver'
-import { createNoneMockSolver } from '@universe/sessions/src/challenge-solvers/createNoneMockSolver'
-import { createTurnstileMockSolver } from '@universe/sessions/src/challenge-solvers/createTurnstileMockSolver'
-import type { ChallengeSolver, ChallengeSolverService } from '@universe/sessions/src/challenge-solvers/types'
-import type { Logger } from 'utilities/src/logger/logger'
+import { createHashcashMockSolver } from '@luxexchange/sessions/src/challenge-solvers/createHashcashMockSolver'
+import { createNoneMockSolver } from '@luxexchange/sessions/src/challenge-solvers/createNoneMockSolver'
+import { createTurnstileMockSolver } from '@luxexchange/sessions/src/challenge-solvers/createTurnstileMockSolver'
+import type { ChallengeSolver, ChallengeSolverService } from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 interface CreateChallengeSolverServiceContext {
   /**

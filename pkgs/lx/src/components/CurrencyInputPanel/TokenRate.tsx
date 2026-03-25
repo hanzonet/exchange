@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Text, TouchableArea } from 'ui/src'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { getRateToDisplay } from 'lx/src/features/transactions/swap/utils/trade'
-import { isHoverable } from 'utilities/src/platform'
+import { Text, TouchableArea } from '@luxfi/ui/src'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useSwapFormStoreDerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { getRateToDisplay } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { isHoverable } from '@luxfi/utilities/src/platform'
 
 export function TokenRate({ initialInverse = false }: { initialInverse?: boolean }): JSX.Element | null {
   const [showInverseRate, setShowInverseRate] = useState(initialInverse)

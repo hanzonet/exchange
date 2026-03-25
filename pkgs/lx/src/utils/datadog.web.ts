@@ -12,13 +12,13 @@ import {
   WALLET_FEATURE_FLAG_NAMES,
   WEB_FEATURE_FLAG_NAMES,
 } from '@luxfi/gating'
-import { config } from 'lx/src/config'
-import { getUniqueId } from 'utilities/src/device/uniqueId'
-import { datadogEnabledBuild, localDevDatadogEnabled } from 'utilities/src/environment/constants'
-import { isBetaEnv } from 'utilities/src/environment/env'
-import { getDatadogEnvironment } from 'utilities/src/logger/datadog/env'
-import { logger } from 'utilities/src/logger/logger'
-import { isExtensionApp, isWebApp } from 'utilities/src/platform'
+import { config } from '@luxexchange/lx/src/config'
+import { getUniqueId } from '@luxfi/utilities/src/device/uniqueId'
+import { datadogEnabledBuild, localDevDatadogEnabled } from '@luxfi/utilities/src/environment/constants'
+import { isBetaEnv } from '@luxfi/utilities/src/environment/env'
+import { getDatadogEnvironment } from '@luxfi/utilities/src/logger/datadog/env'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isExtensionApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 // In case Statsig is not available
 const EXTENSION_DEFAULT_DATADOG_SESSION_SAMPLE_RATE = 10 // percent

@@ -1,13 +1,13 @@
-import { ForceUpgradeTranslations } from '@universe/gating'
+import { ForceUpgradeTranslations } from '@luxexchange/gating'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { AppTFunction } from 'ui/src/i18n/types'
-import { useUrlContext } from 'lx/src/contexts/UrlContext'
-import { Language, Locale } from 'lx/src/features/language/constants'
-import { getLocale, parseLocale } from 'lx/src/features/language/navigatorLocale'
-import { selectCurrentLanguage } from 'lx/src/features/settings/selectors'
-import { isWebApp } from 'utilities/src/platform'
+import { AppTFunction } from '@luxfi/ui/src/i18n/types'
+import { useUrlContext } from '@luxexchange/lx/src/contexts/UrlContext'
+import { Language, Locale } from '@luxexchange/lx/src/features/language/constants'
+import { getLocale, parseLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
+import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 export type LanguageInfo = {
   displayName: string

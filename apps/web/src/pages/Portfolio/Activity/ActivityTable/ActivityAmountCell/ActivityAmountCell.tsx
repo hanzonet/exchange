@@ -1,20 +1,20 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { Plus } from 'ui/src/components/icons/Plus'
-import { useFormattedCurrencyAmountAndUSDValue } from 'lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Plus } from '@luxfi/ui/src/components/icons/Plus'
+import { useFormattedCurrencyAmountAndUSDValue } from '@luxexchange/lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
 import {
   useCurrencyInfo,
   useNativeCurrencyInfo,
   useWrappedNativeCurrencyInfo,
-} from 'lx/src/features/tokens/useCurrencyInfo'
+} from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 import {
   TransactionDetails,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { ApproveAmountCell } from '~/pages/Portfolio/Activity/ActivityTable/ActivityAmountCell/ApproveAmountCell'
 import { CompactLayout } from '~/pages/Portfolio/Activity/ActivityTable/ActivityAmountCell/CompactLayout'
 import { DualTokenLayout } from '~/pages/Portfolio/Activity/ActivityTable/ActivityAmountCell/DualTokenLayout'

@@ -1,5 +1,5 @@
-import { FormattedDEXGasFeeInfo, GasFeeResult } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { FormattedDEXGasFeeInfo, GasFeeResult } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 export type GasInfo = {
   gasFee: GasFeeResult

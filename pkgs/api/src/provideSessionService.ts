@@ -1,6 +1,6 @@
-import type { SessionService, LuxIdentifierService } from '@universe/sessions'
-import { PlatformSplitStubError } from 'utilities/src/errors'
-import type { Logger } from 'utilities/src/logger/logger'
+import type { SessionService, LuxIdentifierService } from '@luxexchange/sessions'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 export function provideSessionService(_ctx: {
   getBaseUrl: () => string

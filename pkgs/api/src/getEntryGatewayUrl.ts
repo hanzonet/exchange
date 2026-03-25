@@ -3,7 +3,7 @@ import {
   STAGING_ENTRY_GATEWAY_API_BASE_URL,
 } from '@luxfi/api/src/clients/base/urls'
 import { getConfig } from '@luxfi/config'
-import { Environment, getCurrentEnv } from 'utilities/src/environment/getCurrentEnv'
+import { Environment, getCurrentEnv } from '@luxfi/utilities/src/environment/getCurrentEnv'
 /**
  * Returns the appropriate Entry Gateway API base URL based on the current environment.
  * When proxy is enabled, returns the proxy path. Otherwise returns the direct URL.

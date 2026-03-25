@@ -1,6 +1,6 @@
-import { Language } from 'lx/src/features/language/constants'
-import { deviceAccessTimeoutToMinutes } from 'lx/src/features/settings/constants'
-import { LuxState } from 'lx/src/state/luxReducer'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { deviceAccessTimeoutToMinutes } from '@luxexchange/lx/src/features/settings/constants'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 export const selectWalletHideSmallBalancesSetting = (state: LuxState): boolean =>
   state.userSettings.hideSmallBalances

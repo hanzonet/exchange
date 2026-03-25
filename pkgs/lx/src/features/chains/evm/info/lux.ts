@@ -1,19 +1,19 @@
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
-import { LUX_LOGO, LUX_NETWORK_LOGO } from 'ui/src/assets'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { LUX_LOGO, LUX_NETWORK_LOGO } from '@luxfi/ui/src/assets'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildUSDC, buildUSDT } from 'lx/src/features/tokens/stablecoin'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildUSDC, buildUSDT } from '@luxexchange/lx/src/features/tokens/stablecoin'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 
 const tokens = buildChainTokens({
   stables: {

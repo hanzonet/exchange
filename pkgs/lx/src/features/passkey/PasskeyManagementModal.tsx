@@ -1,13 +1,13 @@
 import { Trans, useTranslation } from 'react-i18next'
-import { Button, Flex, Text, useSporeColors } from 'ui/src'
-import { ExternalLink } from 'ui/src/components/icons/ExternalLink'
-import { Passkey } from 'ui/src/components/icons/Passkey'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { openUri } from 'lx/src/utils/linking'
-import { isWebPlatform } from 'utilities/src/platform'
+import { Button, Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { ExternalLink } from '@luxfi/ui/src/components/icons/ExternalLink'
+import { Passkey } from '@luxfi/ui/src/components/icons/Passkey'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 type PasskeyManagementModalProps = {
   isOpen: boolean

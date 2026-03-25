@@ -1,6 +1,6 @@
-import { useUnitagsUsernameQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
-import { useCanClaimUnitagName } from 'lx/src/features/unitags/hooks/useCanClaimUnitagName'
-import { renderHook } from 'lx/src/test/test-utils'
+import { useUnitagsUsernameQuery } from '@luxexchange/lx/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
+import { useCanClaimUnitagName } from '@luxexchange/lx/src/features/unitags/hooks/useCanClaimUnitagName'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 import type { Mock } from 'vitest'
 
 vi.mock('react-i18next', () => ({

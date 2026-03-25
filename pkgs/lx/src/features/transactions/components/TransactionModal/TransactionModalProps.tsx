@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import type { StyleProp, ViewStyle } from 'react-native'
-import { ModalNameType } from 'lx/src/features/telemetry/constants'
-import { TransactionModalContextState } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TransactionModalContextState } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 
 export type TransactionModalProps = PropsWithChildren<{
   modalName: ModalNameType

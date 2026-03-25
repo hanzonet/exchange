@@ -1,13 +1,13 @@
 import { GqlResult } from '@luxfi/api'
 import { useMemo } from 'react'
-import { TokenOption } from 'lx/src/components/lists/items/types'
-import { type OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
-import { useOnchainItemListSection } from 'lx/src/components/lists/utils'
-import { MAX_DEFAULT_TRENDING_TOKEN_RESULTS_AMOUNT } from 'lx/src/components/TokenSelector/constants'
-import { useRecentlySearchedTokens } from 'lx/src/components/TokenSelector/hooks/useRecentlySearchedTokens'
-import { useTrendingTokensOptions } from 'lx/src/components/TokenSelector/hooks/useTrendingTokensOptions'
-import { TokenSectionsHookProps } from 'lx/src/components/TokenSelector/types'
-import { ClearRecentSearchesButton } from 'lx/src/features/search/ClearRecentSearchesButton'
+import { TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { type OnchainItemSection, OnchainItemSectionName } from '@luxexchange/lx/src/components/lists/OnchainItemList/types'
+import { useOnchainItemListSection } from '@luxexchange/lx/src/components/lists/utils'
+import { MAX_DEFAULT_TRENDING_TOKEN_RESULTS_AMOUNT } from '@luxexchange/lx/src/components/TokenSelector/constants'
+import { useRecentlySearchedTokens } from '@luxexchange/lx/src/components/TokenSelector/hooks/useRecentlySearchedTokens'
+import { useTrendingTokensOptions } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTrendingTokensOptions'
+import { TokenSectionsHookProps } from '@luxexchange/lx/src/components/TokenSelector/types'
+import { ClearRecentSearchesButton } from '@luxexchange/lx/src/features/search/ClearRecentSearchesButton'
 
 export function useTokenSectionsForEmptySearch({
   addresses,

@@ -42,31 +42,31 @@ import {
   v29Schema,
   v30Schema,
 } from 'src/store/schema'
-import { USDC } from 'lx/src/constants/tokens'
-import { initialAppearanceSettingsState } from 'lx/src/features/appearance/slice'
-import { initialLuxBehaviorHistoryState } from 'lx/src/features/behaviorHistory/slice'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { initialFavoritesState } from 'lx/src/features/favorites/slice'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { initialNotificationsState } from 'lx/src/features/notifications/slice/slice'
-import { initialSearchHistoryState } from 'lx/src/features/search/searchHistorySlice'
-import { initialUserSettingsState } from 'lx/src/features/settings/slice'
-import { initialTokensState } from 'lx/src/features/tokens/warnings/slice/slice'
-import { initialTransactionsState } from 'lx/src/features/transactions/slice'
-import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { initialVisibilityState } from 'lx/src/features/visibility/slice'
+import { USDC } from '@luxexchange/lx/src/constants/tokens'
+import { initialAppearanceSettingsState } from '@luxexchange/lx/src/features/appearance/slice'
+import { initialLuxBehaviorHistoryState } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { initialFavoritesState } from '@luxexchange/lx/src/features/favorites/slice'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { initialNotificationsState } from '@luxexchange/lx/src/features/notifications/slice/slice'
+import { initialSearchHistoryState } from '@luxexchange/lx/src/features/search/searchHistorySlice'
+import { initialUserSettingsState } from '@luxexchange/lx/src/features/settings/slice'
+import { initialTokensState } from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
+import { initialTransactionsState } from '@luxexchange/lx/src/features/transactions/slice'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { initialVisibilityState } from '@luxexchange/lx/src/features/visibility/slice'
 import {
   testAddActivityVisibility,
   testMigrateDismissedTokenWarnings,
   testMigrateSearchHistory,
   testRemoveTHBFromCurrency,
-} from 'lx/src/state/luxMigrationTests'
-import { getAllKeysOfNestedObject } from 'utilities/src/primitives/objects'
-import { initialBatchedTransactionsState } from 'wallet/src/features/batchedTransactions/slice'
-import { initialBehaviorHistoryState } from 'wallet/src/features/behaviorHistory/slice'
-import { initialWalletState } from 'wallet/src/features/wallet/slice'
-import { createMigrate } from 'wallet/src/state/createMigrate'
-import { HAYDEN_ETH_ADDRESS } from 'wallet/src/state/walletMigrations'
+} from '@luxexchange/lx/src/state/luxMigrationTests'
+import { getAllKeysOfNestedObject } from '@luxfi/utilities/src/primitives/objects'
+import { initialBatchedTransactionsState } from '@luxfi/wallet/src/features/batchedTransactions/slice'
+import { initialBehaviorHistoryState } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { initialWalletState } from '@luxfi/wallet/src/features/wallet/slice'
+import { createMigrate } from '@luxfi/wallet/src/state/createMigrate'
+import { HAYDEN_ETH_ADDRESS } from '@luxfi/wallet/src/state/walletMigrations'
 import {
   testActivatePendingAccounts,
   testAddBatchedTransactions,
@@ -84,7 +84,7 @@ import {
   testRemoveHoldToSwap,
   testUnchecksumDismissedTokenWarningKeys,
   testUpdateExploreOrderByType,
-} from 'wallet/src/state/walletMigrationsTests'
+} from '@luxfi/wallet/src/state/walletMigrationsTests'
 
 expect.extend({ toIncludeSameMembers })
 

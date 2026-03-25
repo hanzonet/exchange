@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
-import { ColorTokens } from 'ui/src'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { getPriceImpact } from 'lx/src/features/transactions/swap/utils/getPriceImpact'
-import { CurrencyField } from 'lx/src/types/currency'
+import { ColorTokens } from '@luxfi/ui/src'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { getPriceImpact } from '@luxexchange/lx/src/features/transactions/swap/utils/getPriceImpact'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 const PRICE_DIFFERENCE_THRESHOLD = 5
 const PRICE_DIFFERENCE_THRESHOLD_CRITICAL = 10

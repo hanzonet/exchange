@@ -1,23 +1,23 @@
 import { TradingApi } from '@luxfi/api'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, IconButton, Text } from 'ui/src'
-import { HelpCenter } from 'ui/src/components/icons/HelpCenter'
-import { X } from 'ui/src/components/icons/X'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModalContent } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { luxUrls } from 'lx/src/constants/urls'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Button, Flex, IconButton, Text } from '@luxfi/ui/src'
+import { HelpCenter } from '@luxfi/ui/src/components/icons/HelpCenter'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModalContent } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import {
   useTransactionSettingsActions,
   useTransactionSettingsStore,
-} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import { TransactionModalInnerContainer } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { getErrorContent, TransactionStepFailedError } from 'lx/src/features/transactions/errors'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { openUri } from 'lx/src/utils/linking'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { TransactionModalInnerContainer } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { getErrorContent, TransactionStepFailedError } from '@luxexchange/lx/src/features/transactions/errors'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function SwapErrorScreen({
   submissionError,

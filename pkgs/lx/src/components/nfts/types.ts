@@ -1,5 +1,5 @@
 import { useNftsTabQuery } from '@luxfi/api/src/clients/graphql/generated'
-import { GetThemeValueForKey } from 'ui/src'
+import { GetThemeValueForKey } from '@luxfi/ui/src'
 
 /**
  * Shared props type for search input components

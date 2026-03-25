@@ -1,6 +1,6 @@
-import { CheckmarkCircle } from 'ui/src/components/icons/CheckmarkCircle'
-import { NotificationToast } from 'lx/src/components/notifications/NotificationToast'
-import { AppNotificationDefault } from 'lx/src/features/notifications/slice/types'
+import { CheckmarkCircle } from '@luxfi/ui/src/components/icons/CheckmarkCircle'
+import { NotificationToast } from '@luxexchange/lx/src/components/notifications/NotificationToast'
+import { AppNotificationDefault } from '@luxexchange/lx/src/features/notifications/slice/types'
 
 export function SuccessNotification({
   notification: { hideDelay = 2000, title },

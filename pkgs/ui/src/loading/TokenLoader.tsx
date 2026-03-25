@@ -1,7 +1,7 @@
-import { Flex } from 'ui/src/components/layout'
-import { Text } from 'ui/src/components/text'
-import { iconSizes } from 'ui/src/theme'
-import { isWebPlatform } from 'utilities/src/platform'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { Text } from '@luxfi/ui/src/components/text'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 interface TokenLoaderProps {
   opacity: number

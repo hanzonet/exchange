@@ -1,9 +1,9 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useLocation, useNavigate } from 'react-router'
-import { WRAPPED_PATH } from 'lx/src/components/banners/shared/utils'
-import { LuxWrapped2025Banner } from 'lx/src/components/banners/LuxWrapped2025Banner/LuxWrapped2025Banner'
-import { selectHasDismissedLuxWrapped2025Banner } from 'lx/src/features/behaviorHistory/selectors'
-import { setHasDismissedLuxWrapped2025Banner } from 'lx/src/features/behaviorHistory/slice'
+import { WRAPPED_PATH } from '@luxexchange/lx/src/components/banners/shared/utils'
+import { LuxWrapped2025Banner } from '@luxexchange/lx/src/components/banners/LuxWrapped2025Banner/LuxWrapped2025Banner'
+import { selectHasDismissedLuxWrapped2025Banner } from '@luxexchange/lx/src/features/behaviorHistory/selectors'
+import { setHasDismissedLuxWrapped2025Banner } from '@luxexchange/lx/src/features/behaviorHistory/slice'
 import { useAppDispatch, useAppSelector } from '~/state/hooks'
 import { InterfaceState } from '~/state/webReducer'
 

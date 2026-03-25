@@ -3,12 +3,12 @@ import type { ListTopPoolsResponse, ListTopTokensResponse } from '@uniswap/clien
 import {
   getListTopPoolsQueryOptions,
   type ListTopPoolsInput,
-} from 'lx/src/data/apiClients/dataApiService/listTopPools'
+} from '@luxexchange/lx/src/data/apiClients/dataApiService/listTopPools'
 import {
   getListTopTokensQueryOptions,
   type ListTopTokensInput,
-} from 'lx/src/data/apiClients/dataApiService/listTopTokens'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+} from '@luxexchange/lx/src/data/apiClients/dataApiService/listTopTokens'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 type ListTopTokensQueryKey = readonly [ReactQueryCacheKey.DataApiService, 'listTopTokens', ListTopTokensInput['params']]
 type ListTopPoolsQueryKey = readonly [ReactQueryCacheKey.DataApiService, 'listTopPools', ListTopPoolsInput['params']]

@@ -1,12 +1,12 @@
-import { colors } from 'ui/src/theme/color/colors'
-import { themes } from 'ui/src/theme/themes'
+import { colors } from '@luxfi/ui/src/theme/color/colors'
+import { themes } from '@luxfi/ui/src/theme/themes'
 import {
   getIsTokenFormat,
   getIsValidSporeColor,
   getMaybeHoverColor,
   validateColorValue,
   validColor,
-} from 'ui/src/theme/tokens'
+} from '@luxfi/ui/src/theme/tokens'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 // Mock the process.env.NODE_ENV for testing validColor behavior

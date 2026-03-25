@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import { WarningMessage } from 'lx/src/components/WarningMessage/WarningMessage'
-import { WARNING_DEADLINE_TOLERANCE } from 'lx/src/constants/transactions'
-import { useTransactionSettingsStore } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { WarningMessage } from '@luxexchange/lx/src/components/WarningMessage/WarningMessage'
+import { WARNING_DEADLINE_TOLERANCE } from '@luxexchange/lx/src/constants/transactions'
+import { useTransactionSettingsStore } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 
 export function DeadlineWarning(): JSX.Element | null {
   const { t } = useTranslation()

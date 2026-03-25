@@ -1,15 +1,15 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import { useTranslation } from 'react-i18next'
-import { X } from 'ui/src/components/icons/X'
-import { Flex } from 'ui/src/components/layout'
-import { useSporeColorsForTheme } from 'ui/src/hooks/useSporeColors'
-import { styled, Text, TouchableArea } from 'ui/src/index'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { useSporeColorsForTheme } from '@luxfi/ui/src/hooks/useSporeColors'
+import { styled, Text, TouchableArea } from '@luxfi/ui/src/index'
 import {
   renderSnowflakesNative,
   SnowflakeContainer,
-} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
-import { LuxWrapped2025BannerProps } from 'lx/src/components/banners/LuxWrapped2025Banner/types'
-import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
+} from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { LuxWrapped2025BannerProps } from '@luxexchange/lx/src/components/banners/LuxWrapped2025Banner/types'
+import { useSnowflakeAnimation } from '@luxexchange/lx/src/hooks/useSnowflakeAnimation'
 
 const BannerWrapper = styled(Flex, {
   width: '100%',

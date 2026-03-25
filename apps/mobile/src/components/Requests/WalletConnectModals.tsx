@@ -13,16 +13,16 @@ import {
   WalletConnectSigningRequest,
 } from 'src/features/walletConnect/walletConnectSlice'
 import { useAppStateTrigger } from 'src/utils/useAppStateTrigger'
-import { Flex } from 'ui/src'
-import { Eye } from 'ui/src/components/icons'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { AccountDetails } from 'wallet/src/components/accounts/AccountDetails'
-import { ErrorBoundary } from 'wallet/src/components/ErrorBoundary/ErrorBoundary'
-import { useActiveAccount, useActiveAccountAddressWithThrow, useSignerAccounts } from 'wallet/src/features/wallet/hooks'
+import { Flex } from '@luxfi/ui/src'
+import { Eye } from '@luxfi/ui/src/components/icons'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { AccountDetails } from '@luxfi/wallet/src/components/accounts/AccountDetails'
+import { ErrorBoundary } from '@luxfi/wallet/src/components/ErrorBoundary/ErrorBoundary'
+import { useActiveAccount, useActiveAccountAddressWithThrow, useSignerAccounts } from '@luxfi/wallet/src/features/wallet/hooks'
 
 const WalletConnectModalName = {
   Scan: ModalName.WalletConnectScan,

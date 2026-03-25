@@ -1,19 +1,19 @@
 import { useMemo } from 'react'
-import { useLuxContextSelector } from 'lx/src/contexts/LuxContext'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isL2ChainId } from 'lx/src/features/chains/utils'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getEVMTradeRepository } from 'lx/src/features/repositories'
-import { useWithQuoteLogging } from 'lx/src/features/transactions/swap/hooks/useTrade/logging'
-import { createEVMTradeService } from 'lx/src/features/transactions/swap/services/tradeService/evmTradeService'
-import { createSolanaTradeService } from 'lx/src/features/transactions/swap/services/tradeService/svmTradeService'
+import { useLuxContextSelector } from '@luxexchange/lx/src/contexts/LuxContext'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getEVMTradeRepository } from '@luxexchange/lx/src/features/repositories'
+import { useWithQuoteLogging } from '@luxexchange/lx/src/features/transactions/swap/hooks/useTrade/logging'
+import { createEVMTradeService } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/evmTradeService'
+import { createSolanaTradeService } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/svmTradeService'
 import {
   createTradeService,
   TradeService,
-} from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
-import { getMinAutoSlippageToleranceL2 } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { getLogger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { getMinAutoSlippageToleranceL2 } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Services

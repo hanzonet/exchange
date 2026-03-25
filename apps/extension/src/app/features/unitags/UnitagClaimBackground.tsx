@@ -1,5 +1,5 @@
 import { PropsWithChildren, useMemo } from 'react'
-import { Flex, useIsDarkMode } from 'ui/src'
+import { Flex, useIsDarkMode } from '@luxfi/ui/src'
 import {
   UNITAGS_ADRIAN_DARK,
   UNITAGS_ADRIAN_LIGHT,
@@ -17,9 +17,9 @@ import {
   UNITAGS_PHIL_LIGHT,
   UNITAGS_SPENCER_DARK,
   UNITAGS_SPENCER_LIGHT,
-} from 'ui/src/assets'
-import { zIndexes } from 'ui/src/theme'
-import { IconCloud } from 'lx/src/components/IconCloud/IconCloud'
+} from '@luxfi/ui/src/assets'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { IconCloud } from '@luxexchange/lx/src/components/IconCloud/IconCloud'
 
 export function UnitagClaimBackground({ children }: PropsWithChildren<{ blurAll: boolean }>): JSX.Element {
   const isDarkMode = useIsDarkMode()

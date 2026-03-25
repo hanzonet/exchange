@@ -1,7 +1,7 @@
 {
   "name": "@luxexchange/logger",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/logger/src",
+  "sourceRoot": "pkgs/logger/src",
   "projectType": "library",
   "tags": [],
   "targets": {

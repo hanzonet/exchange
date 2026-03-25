@@ -1,6 +1,6 @@
 import { ReactElement, useEffect, useState } from 'react'
-import { Flex } from 'ui/src'
-import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
+import { Flex } from '@luxfi/ui/src'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
 import { CheckMark } from '~/components/Icons/CheckMark'
 import { LoaderV3 } from '~/components/Icons/LoadingSpinner'
 import { deprecatedStyled, keyframes } from '~/lib/deprecated-styled'

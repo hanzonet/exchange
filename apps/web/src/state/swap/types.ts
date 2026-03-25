@@ -1,7 +1,7 @@
 import { Currency } from '@uniswap/sdk-core'
 import { createContext, Dispatch, SetStateAction } from 'react'
-import { CurrencyField } from 'lx/src/types/currency'
-import { SwapTab } from 'lx/src/types/screens/interface'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { SwapTab } from '@luxexchange/lx/src/types/screens/interface'
 import { RouterPreference } from '~/state/routing/types'
 
 type SwapAndLimitContextType = {

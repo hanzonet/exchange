@@ -1,6 +1,6 @@
 // Test shorthand types
 import type { Shorthands, StackProps } from '@hanzo/gui'
-import { Flex, type FlexProps } from 'ui/src'
+import { Flex, type FlexProps } from '@luxfi/ui/src'
 
 // Test: Check if Shorthands has the correct keys
 type ShorthandsKeys = keyof Shorthands

@@ -3,23 +3,23 @@ import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_
 import { Balance } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { CurrencyAmount, NativeCurrency, Token } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { fetchTokenByAddress, searchTokenToCurrencyInfo } from 'lx/src/data/rest/searchTokensAndPools'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getPrimaryStablecoin } from 'lx/src/features/chains/utils'
-import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
-import { fetchOnChainCurrencyBalance } from 'lx/src/features/portfolio/api'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { fetchTokenByAddress, searchTokenToCurrencyInfo } from '@luxexchange/lx/src/data/rest/searchTokensAndPools'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getPrimaryStablecoin } from '@luxexchange/lx/src/features/chains/utils'
+import { isSVMChain } from '@luxexchange/lx/src/features/platforms/utils/chains'
+import { fetchOnChainCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
 import {
   DenominatedValue,
   fetchIndicativeQuote,
-} from 'lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { SolanaToken } from 'lx/src/features/tokens/SolanaToken'
-import { toTradingApiSupportedChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { CurrencyId } from 'lx/src/types/currency'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { createLogger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { SolanaToken } from '@luxexchange/lx/src/features/tokens/SolanaToken'
+import { toTradingApiSupportedChainId } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
 
 export type OnChainMapRest = Map<CurrencyId, PartialMessage<Balance>>
 

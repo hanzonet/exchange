@@ -1,7 +1,7 @@
 import { Currency, NativeCurrency, Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { AttackType, CurrencyInfo, SafetyInfo, TokenList } from 'lx/src/features/dataApi/types'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { AttackType, CurrencyInfo, SafetyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   getFeeColor,
   getFeeWarning,
@@ -13,9 +13,9 @@ import {
   useModalHeaderText,
   useModalSubtitleText,
   useTokenWarningCardText,
-} from 'lx/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 vi.mock('react-i18next', () => ({
   useTranslation: (): { t: (str: string) => string } => {

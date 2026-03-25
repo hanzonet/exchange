@@ -1,6 +1,6 @@
-import { NFTSummaryItem } from 'lx/src/components/activity/summaries/NFTSummaryItem'
-import { SummaryItemProps } from 'lx/src/components/activity/types'
-import { NFTTradeTransactionInfo, TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
+import { NFTSummaryItem } from '@luxexchange/lx/src/components/activity/summaries/NFTSummaryItem'
+import { SummaryItemProps } from '@luxexchange/lx/src/components/activity/types'
+import { NFTTradeTransactionInfo, TransactionDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function NFTTradeSummaryItem({
   transaction,

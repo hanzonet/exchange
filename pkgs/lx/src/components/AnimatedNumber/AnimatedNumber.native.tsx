@@ -8,14 +8,14 @@ import Animated, {
   withSequence,
   withTiming,
 } from 'react-native-reanimated'
-import { Flex, Shine, Text, TextLoaderWrapper, useSporeColors } from 'ui/src'
-import { fonts } from 'ui/src/theme'
-import { TopAndBottomGradient } from 'lx/src/components/AnimatedNumber/TopAndBottomGradient'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
-import { FiatCurrencyInfo } from 'lx/src/features/fiatOnRamp/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { usePrevious } from 'utilities/src/react/hooks'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { Flex, Shine, Text, TextLoaderWrapper, useSporeColors } from '@luxfi/ui/src'
+import { fonts } from '@luxfi/ui/src/theme'
+import { TopAndBottomGradient } from '@luxexchange/lx/src/components/AnimatedNumber/TopAndBottomGradient'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { FiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 // Native-specific duration for balance change color indication
 export const BALANCE_CHANGE_INDICATION_DURATION = ONE_SECOND_MS * 2

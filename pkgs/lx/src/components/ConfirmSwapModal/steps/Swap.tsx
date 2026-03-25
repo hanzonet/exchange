@@ -1,20 +1,20 @@
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
-import { Swap } from 'ui/src/components/icons/Swap'
-import { StepRowProps, StepRowSkeleton } from 'lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
-import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
-import { useSecondsUntilDeadline } from 'lx/src/components/ConfirmSwapModal/useSecondsUntilDeadline'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
+import { Flex } from '@luxfi/ui/src'
+import { Swap } from '@luxfi/ui/src/components/icons/Swap'
+import { StepRowProps, StepRowSkeleton } from '@luxexchange/lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { StepStatus } from '@luxexchange/lx/src/components/ConfirmSwapModal/types'
+import { useSecondsUntilDeadline } from '@luxexchange/lx/src/components/ConfirmSwapModal/useSecondsUntilDeadline'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
 import {
   DEXPlanSignatureStep,
   DEXSignatureStep,
-} from 'lx/src/features/transactions/swap/steps/signOrder'
+} from '@luxexchange/lx/src/features/transactions/swap/steps/signOrder'
 import {
   SwapTransactionStep,
   SwapTransactionStepAsync,
   SwapTransactionStepBatched,
-} from 'lx/src/features/transactions/swap/steps/swap'
+} from '@luxexchange/lx/src/features/transactions/swap/steps/swap'
 
 const SwapIcon = (): JSX.Element => (
   <Flex centered width="$spacing24" height="$spacing24" borderRadius="$roundedFull" backgroundColor="$DEP_blue400">

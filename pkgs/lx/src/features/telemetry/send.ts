@@ -1,5 +1,5 @@
-import { AppsFlyerEventProperties, UniverseEventProperties } from 'lx/src/features/telemetry/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { AppsFlyerEventProperties, UniverseEventProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export function sendAnalyticsEvent<EventName extends keyof UniverseEventProperties>(
   ..._args: undefined extends UniverseEventProperties[EventName]

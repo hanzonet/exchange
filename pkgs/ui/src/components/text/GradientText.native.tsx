@@ -1,7 +1,7 @@
 import MaskedView from '@react-native-masked-view/masked-view'
 import { LinearGradient } from 'gui/linear-gradient'
-import { Text } from 'ui/src/components/text'
-import type { GradientTextProps } from 'ui/src/components/text/GradientText'
+import { Text } from '@luxfi/ui/src/components/text'
+import type { GradientTextProps } from '@luxfi/ui/src/components/text/GradientText'
 
 export function GradientText({ gradient, children, ...props }: GradientTextProps): JSX.Element {
   return (

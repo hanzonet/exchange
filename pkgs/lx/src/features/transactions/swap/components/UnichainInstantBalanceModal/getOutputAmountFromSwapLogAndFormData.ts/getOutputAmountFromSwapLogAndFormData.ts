@@ -4,13 +4,13 @@ import range from 'lodash/range'
 import {
   MINIMUM_SWAP_LOG_LENGTH,
   TOLERANCE_INDEX,
-} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/constants'
+} from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/constants'
 import {
   getDataWithoutPadding,
   getInputAmountIndices,
   slidingWindowRangeMatch,
-} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/utils'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Attempts to recover the *actual* output token amount from a swap transaction’s

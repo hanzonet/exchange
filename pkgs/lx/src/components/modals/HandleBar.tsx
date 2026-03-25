@@ -1,6 +1,6 @@
 import type { ColorValue, FlexStyle } from 'react-native'
-import type { FlexProps } from 'ui/src'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import type { FlexProps } from '@luxfi/ui/src'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export type HandleBarProps = {
   // string instead of keyof Theme['colors] because this is sometimes a raw hex value when used with BottomSheet components

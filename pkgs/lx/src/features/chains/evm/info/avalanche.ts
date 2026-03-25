@@ -1,20 +1,20 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
-import { AVALANCHE_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { AVALANCHE_LOGO } from '@luxfi/ui/src/assets'
+import { config } from '@luxexchange/lx/src/config'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildUSDC, buildUSDT } from 'lx/src/features/tokens/stablecoin'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildUSDC, buildUSDT } from '@luxexchange/lx/src/features/tokens/stablecoin'
 import { avalanche } from 'wagmi/chains'
 
 const tokens = buildChainTokens({

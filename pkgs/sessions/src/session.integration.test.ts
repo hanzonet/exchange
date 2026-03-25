@@ -1,24 +1,24 @@
-import { createChallengeSolverService } from '@universe/sessions/src/challenge-solvers/createChallengeSolverService'
-import { createHashcashSolver } from '@universe/sessions/src/challenge-solvers/createHashcashSolver'
-import { createNoneMockSolver } from '@universe/sessions/src/challenge-solvers/createNoneMockSolver'
-import { createTurnstileMockSolver } from '@universe/sessions/src/challenge-solvers/createTurnstileMockSolver'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
-import { createSessionInitializationService } from '@universe/sessions/src/session-initialization/createSessionInitializationService'
-import { createSessionClient } from '@universe/sessions/src/session-repository/createSessionClient'
-import { createSessionRepository } from '@universe/sessions/src/session-repository/createSessionRepository'
-import { createSessionService } from '@universe/sessions/src/session-service/createSessionService'
-import type { SessionService } from '@universe/sessions/src/session-service/types'
-import { ChallengeType } from '@universe/sessions/src/session-service/types'
+import { createChallengeSolverService } from '@luxexchange/sessions/src/challenge-solvers/createChallengeSolverService'
+import { createHashcashSolver } from '@luxexchange/sessions/src/challenge-solvers/createHashcashSolver'
+import { createNoneMockSolver } from '@luxexchange/sessions/src/challenge-solvers/createNoneMockSolver'
+import { createTurnstileMockSolver } from '@luxexchange/sessions/src/challenge-solvers/createTurnstileMockSolver'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
+import { createSessionInitializationService } from '@luxexchange/sessions/src/session-initialization/createSessionInitializationService'
+import { createSessionClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
+import { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
+import { createSessionService } from '@luxexchange/sessions/src/session-service/createSessionService'
+import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
+import { ChallengeType } from '@luxexchange/sessions/src/session-service/types'
 import {
   InMemoryDeviceIdService,
   InMemorySessionStorage,
   InMemoryLuxIdentifierService,
-} from '@universe/sessions/src/test-utils'
+} from '@luxexchange/sessions/src/test-utils'
 import {
   createCookieJar,
   createLocalCookieTransport,
-} from '@universe/sessions/src/test-utils/createLocalCookieTransport'
-import { createLocalHeaderTransport } from '@universe/sessions/src/test-utils/createLocalHeaderTransport'
+} from '@luxexchange/sessions/src/test-utils/createLocalCookieTransport'
+import { createLocalHeaderTransport } from '@luxexchange/sessions/src/test-utils/createLocalHeaderTransport'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock performance tracker for testing

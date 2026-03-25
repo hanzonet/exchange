@@ -1,10 +1,10 @@
 import { memo } from 'react'
-import { Flex, useSporeColors } from 'ui/src'
-import { RoundExclamation } from 'ui/src/components/icons/RoundExclamation'
-import { iconSizes, spacing, zIndexes } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { RoundExclamation } from '@luxfi/ui/src/components/icons/RoundExclamation'
+import { iconSizes, spacing, zIndexes } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 interface NetworkLogoWarningProps {
   chainId: UniverseChainId

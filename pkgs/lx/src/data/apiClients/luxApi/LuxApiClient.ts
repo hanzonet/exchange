@@ -1,10 +1,10 @@
-import { createLuxApiClient, type GasFeeResponse, type GasStrategy } from '@universe/api'
-import { config } from 'lx/src/config'
-import { luxUrls } from 'lx/src/constants/urls'
-import { createLuxFetchClient } from 'lx/src/data/apiClients/createLuxFetchClient'
-import { convertGasFeeToDisplayValue } from 'lx/src/features/gas/hooks'
-import { estimateGasWithClientSideProvider, extractGasFeeParams } from 'lx/src/features/gas/utils'
-import { isWebApp } from 'utilities/src/platform'
+import { createLuxApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
+import { config } from '@luxexchange/lx/src/config'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { createLuxFetchClient } from '@luxexchange/lx/src/data/apiClients/createLuxFetchClient'
+import { convertGasFeeToDisplayValue } from '@luxexchange/lx/src/features/gas/hooks'
+import { estimateGasWithClientSideProvider, extractGasFeeParams } from '@luxexchange/lx/src/features/gas/utils'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 const LuxFetchClient = createLuxFetchClient({
   baseUrl: luxUrls.apiBaseUrl,

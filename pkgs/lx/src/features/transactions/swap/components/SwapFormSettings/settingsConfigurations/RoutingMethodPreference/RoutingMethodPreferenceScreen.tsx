@@ -1,15 +1,15 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Switch, Text } from 'ui/src'
+import { Flex, Switch, Text } from '@luxfi/ui/src'
 import {
   useTransactionSettingsActions,
   useTransactionSettingsStore,
-} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import type { RoutingMethod } from 'lx/src/features/transactions/components/settings/types'
-import { isLuxChain } from 'lx/src/data/apiClients/tradingApi/LuxGatewayClient'
-import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import type { RoutingMethod } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { isLuxChain } from '@luxexchange/lx/src/data/apiClients/tradingApi/LuxGatewayClient'
+import { useSwapFormStoreDerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 
 const ROUTING_METHODS: {
   value: RoutingMethod

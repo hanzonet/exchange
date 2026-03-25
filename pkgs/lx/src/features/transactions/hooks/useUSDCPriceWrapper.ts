@@ -6,8 +6,8 @@
  * Only the selected implementation is called — no overfetching.
  */
 import type { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { useTokenPriceHooks } from 'lx/src/features/prices/TokenPriceContext'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useTokenPriceHooks } from '@luxexchange/lx/src/features/prices/TokenPriceContext'
 
 export function useUSDCPrice(
   currency?: Currency,

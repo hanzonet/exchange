@@ -1,6 +1,6 @@
-import { replaceSeparators } from 'lx/src/components/AmountInput/utils/replaceSeparators'
-import { truncateToMaxDecimals } from 'utilities/src/format/truncateToMaxDecimals'
-import { isMobileWeb } from 'utilities/src/platform'
+import { replaceSeparators } from '@luxexchange/lx/src/components/AmountInput/utils/replaceSeparators'
+import { truncateToMaxDecimals } from '@luxfi/utilities/src/format/truncateToMaxDecimals'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 
 export function parseValue({
   value,

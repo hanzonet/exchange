@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { makeSelectTransaction } from 'lx/src/features/transactions/selectors'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { makeSelectTransaction } from '@luxexchange/lx/src/features/transactions/selectors'
 import {
   InterfaceTransactionDetails,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { LuxState } from 'lx/src/state/luxReducer'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 export function useSelectTransaction({
   address,

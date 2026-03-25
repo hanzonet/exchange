@@ -1,20 +1,20 @@
 import type { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { createContext, type ReactNode, useContext } from 'react'
-import type { PollingInterval } from 'lx/src/constants/misc'
-import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
-import { useTokenSpotPriceCentralized } from 'lx/src/features/dataApi/tokenDetails/useTokenSpotPriceCentralized'
+import type { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { useTokenSpotPrice as useTokenSpotPriceLegacy } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
+import { useTokenSpotPriceCentralized } from '@luxexchange/lx/src/features/dataApi/tokenDetails/useTokenSpotPriceCentralized'
 import {
   useUSDCPrice as useUSDCPriceLegacy,
   useUSDCValue as useUSDCValueLegacy,
   useUSDCValueWithStatus as useUSDCValueWithStatusLegacy,
-} from 'lx/src/features/transactions/hooks/useUSDCPrice'
+} from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPrice'
 import {
   useUSDCPriceCentralized,
   useUSDCValueCentralized,
   useUSDCValueWithStatusCentralized,
-} from 'lx/src/features/transactions/hooks/useUSDCPriceCentralized'
-import type { CurrencyId } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceCentralized'
+import type { CurrencyId } from '@luxexchange/lx/src/types/currency'
 
 export interface TokenPriceHooks {
   useUSDCPrice: (

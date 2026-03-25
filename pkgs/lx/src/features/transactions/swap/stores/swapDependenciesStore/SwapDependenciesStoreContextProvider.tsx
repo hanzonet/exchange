@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
-import { useCreateGetExecuteSwapService } from 'lx/src/features/transactions/swap/services/hooks/useExecuteSwap'
-import { createSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
-import { SwapDependenciesStoreContext } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import type { SwapHandlers } from 'lx/src/features/transactions/swap/types/swapHandlers'
-import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
+import { useCreateGetExecuteSwapService } from '@luxexchange/lx/src/features/transactions/swap/services/hooks/useExecuteSwap'
+import { createSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
+import { SwapDependenciesStoreContext } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { SwapHandlers } from '@luxexchange/lx/src/features/transactions/swap/types/swapHandlers'
+import { useHasValueChanged } from '@luxfi/utilities/src/react/useHasValueChanged'
 
 interface SwapDependenciesStoreContextProviderProps {
   children: ReactNode

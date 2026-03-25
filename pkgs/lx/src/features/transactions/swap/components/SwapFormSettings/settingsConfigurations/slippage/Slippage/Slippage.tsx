@@ -1,7 +1,7 @@
-import { TradingApi } from '@universe/api'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { TradingApi } from '@luxexchange/api'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export const Slippage: TransactionSettingConfig = {
   renderTitle: (t) => t('swap.slippage.settings.title'),

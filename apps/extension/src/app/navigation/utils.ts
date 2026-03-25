@@ -1,12 +1,12 @@
 import { To, useLocation } from 'react-router'
 import { UnitagClaimRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
-import { luxUrls } from 'lx/src/constants/urls'
-import { TransactionState } from 'lx/src/features/transactions/types/transactionState'
-import { getTokenUrl } from 'lx/src/utils/linking'
-import { logger } from 'utilities/src/logger/logger'
-import { escapeRegExp } from 'utilities/src/primitives/string'
-import { useEvent } from 'utilities/src/react/hooks'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { TransactionState } from '@luxexchange/lx/src/features/transactions/types/transactionState'
+import { getTokenUrl } from '@luxexchange/lx/src/utils/linking'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { escapeRegExp } from '@luxfi/utilities/src/primitives/string'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export type SidebarLocationState =
   | {

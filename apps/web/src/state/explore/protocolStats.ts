@@ -1,6 +1,6 @@
 import { TimestampedAmount } from '@luxdex/client-explore/dist/uniswap/explore/v1/service_pb'
 import { useContext, useMemo } from 'react'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { ExploreContext } from '~/state/explore'
 
 /**

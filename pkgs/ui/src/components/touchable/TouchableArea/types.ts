@@ -1,6 +1,6 @@
 import type { GestureResponderEvent } from 'react-native'
 import type { GetProps, SpaceTokens } from '@hanzo/gui'
-import type { TouchableAreaFrame } from 'ui/src/components/touchable/TouchableArea/TouchableAreaFrame'
+import type { TouchableAreaFrame } from '@luxfi/ui/src/components/touchable/TouchableArea/TouchableAreaFrame'
 
 // Shorthand props type for padding and margin
 type ShorthandSpaceProps = {

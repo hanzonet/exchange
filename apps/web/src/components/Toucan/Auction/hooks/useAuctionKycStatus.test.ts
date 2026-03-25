@@ -6,7 +6,7 @@ import {
   ValidationType,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useAuctionKycStatus } from '~/components/Toucan/Auction/hooks/useAuctionKycStatus'
 import { mocked } from '~/test-utils/mocked'

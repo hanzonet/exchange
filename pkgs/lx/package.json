@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/lx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "prepare": "nx prepare lx",
     "build": "nx build lux",

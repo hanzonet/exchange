@@ -1,11 +1,11 @@
-import { Accordion, Flex } from 'ui/src'
-import { SwapFormButton } from 'lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButton'
-import { ExpandableRows } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/ExpandableRows'
-import { SwapFormScreenFooter } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
-import { SwapFormWarningModals } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormWarningModals/SwapFormWarningModals'
-import { useSwapFormScreenStore } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenStore'
-import { SwapFormWarningStoreContextProvider } from 'lx/src/features/transactions/swap/form/stores/swapFormWarningStore/SwapFormWarningStoreContextProvider'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { Accordion, Flex } from '@luxfi/ui/src'
+import { SwapFormButton } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButton'
+import { ExpandableRows } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/ExpandableRows'
+import { SwapFormScreenFooter } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
+import { SwapFormWarningModals } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormWarningModals/SwapFormWarningModals'
+import { useSwapFormScreenStore } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenStore'
+import { SwapFormWarningStoreContextProvider } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormWarningStore/SwapFormWarningStoreContextProvider'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
 
 export function SwapFormScreenDetails(): JSX.Element {
   const isPriceUXEnabled = usePriceUXEnabled()

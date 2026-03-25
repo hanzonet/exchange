@@ -1,8 +1,8 @@
 import { Dimensions } from 'react-native'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import { runOnJS, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
-import { BaseCard } from 'ui/src/components/swipeablecards/BaseCard'
-import type { SwipeableCardProps } from 'ui/src/components/swipeablecards/props'
+import { BaseCard } from '@luxfi/ui/src/components/swipeablecards/BaseCard'
+import type { SwipeableCardProps } from '@luxfi/ui/src/components/swipeablecards/props'
 
 const screenWidth = Dimensions.get('window').width
 const panXOffsetThreshold = screenWidth / 4

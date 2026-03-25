@@ -6,11 +6,11 @@ import {
   Notification,
   PlatformType,
 } from '@uniswap/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
-import type { InAppNotification, NotificationsApiClient } from '@universe/api'
-import { ContentStyle } from '@universe/api'
-import { getNotificationQueryOptions } from '@universe/notifications/src/notification-data-source/getNotificationQueryOptions'
-import { createPollingNotificationDataSource } from '@universe/notifications/src/notification-data-source/implementations/createPollingNotificationDataSource'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import type { InAppNotification, NotificationsApiClient } from '@luxexchange/api'
+import { ContentStyle } from '@luxexchange/api'
+import { getNotificationQueryOptions } from '@luxexchange/notifications/src/notification-data-source/getNotificationQueryOptions'
+import { createPollingNotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/implementations/createPollingNotificationDataSource'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 import { afterEach, beforeEach, describe, expect, it, type Mock, vi } from 'vitest'
 
 function createMockNotification(id: string): InAppNotification {

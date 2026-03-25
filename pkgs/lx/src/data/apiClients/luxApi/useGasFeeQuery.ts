@@ -5,12 +5,12 @@ import {
   type GasStrategy,
   type UseQueryWithImmediateGarbageCollectionApiHelperHookArgs,
   useQueryWithImmediateGarbageCollection,
-} from '@universe/api'
-import { useStatsigClientStatus } from '@universe/gating'
-import { luxUrls } from 'lx/src/constants/urls'
-import { LuxApiClient } from 'lx/src/data/apiClients/luxApi/LuxApiClient'
-import { getActiveGasStrategy } from 'lx/src/features/gas/utils'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+} from '@luxexchange/api'
+import { useStatsigClientStatus } from '@luxexchange/gating'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { LuxApiClient } from '@luxexchange/lx/src/data/apiClients/luxApi/LuxApiClient'
+import { getActiveGasStrategy } from '@luxexchange/lx/src/features/gas/utils'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 export function useGasFeeQuery({
   params,

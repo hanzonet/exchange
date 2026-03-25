@@ -1,13 +1,13 @@
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { runSaga, stdChannel } from 'redux-saga'
-import { UNI, WBTC } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import type { FetchAndTransformPlanResult } from 'lx/src/features/transactions/swap/plan/planSagaUtils'
-import type { TransactionAndPlanStep } from 'lx/src/features/transactions/swap/plan/planStepTransformer'
-import type { WatchPlanStepResult } from 'lx/src/features/transactions/swap/plan/watchPlanStepSaga'
-import type { ValidatedChainedSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { ChainedActionTrade } from 'lx/src/features/transactions/swap/types/trade'
+import { UNI, WBTC } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import type { FetchAndTransformPlanResult } from '@luxexchange/lx/src/features/transactions/swap/plan/planSagaUtils'
+import type { TransactionAndPlanStep } from '@luxexchange/lx/src/features/transactions/swap/plan/planStepTransformer'
+import type { WatchPlanStepResult } from '@luxexchange/lx/src/features/transactions/swap/plan/watchPlanStepSaga'
+import type { ValidatedChainedSwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { ChainedActionTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 
 interface InitializePlanResult extends FetchAndTransformPlanResult {
   response?: TradingApi.PlanResponse

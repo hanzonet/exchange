@@ -11,7 +11,7 @@ import {
 import {
   shouldTransformToMultichain,
   transformPortfolioToMultichain,
-} from 'lx/src/data/rest/transformPortfolioToMultichain'
+} from '@luxexchange/lx/src/data/rest/transformPortfolioToMultichain'
 
 function createLegacyBalance(
   overrides: {

@@ -1,7 +1,7 @@
 import { TradingApi } from '@luxfi/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isMobileApp } from 'utilities/src/platform'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 export const FLASHBLOCKS_INSTANT_BALANCE_TIMEOUT = isMobileApp ? 5 * ONE_SECOND_MS : 2 * ONE_SECOND_MS
 export const NON_FLASHBLOCKS_INSTANT_BALANCE_BUTTON_DURATION = 1 * ONE_SECOND_MS

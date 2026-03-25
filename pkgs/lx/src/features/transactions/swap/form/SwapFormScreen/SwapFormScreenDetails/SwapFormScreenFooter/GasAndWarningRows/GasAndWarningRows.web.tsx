@@ -1,13 +1,13 @@
-import { Flex } from 'ui/src'
-import { WarningLabel } from 'lx/src/components/modals/WarningModal/types'
-import { useActiveAddress } from 'lx/src/features/accounts/store/hooks'
-import { InsufficientNativeTokenWarning } from 'lx/src/features/transactions/components/InsufficientNativeTokenWarning/InsufficientNativeTokenWarning'
-import { BlockedAddressWarning } from 'lx/src/features/transactions/modals/BlockedAddressWarning'
-import { TradeInfoRow } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/TradeInfoRow'
-import { useDebouncedGasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/useDebouncedGasInfo'
-import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
-import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { useIsBlocked } from 'lx/src/features/trm/hooks'
+import { Flex } from '@luxfi/ui/src'
+import { WarningLabel } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { useActiveAddress } from '@luxexchange/lx/src/features/accounts/store/hooks'
+import { InsufficientNativeTokenWarning } from '@luxexchange/lx/src/features/transactions/components/InsufficientNativeTokenWarning/InsufficientNativeTokenWarning'
+import { BlockedAddressWarning } from '@luxexchange/lx/src/features/transactions/modals/BlockedAddressWarning'
+import { TradeInfoRow } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/TradeInfoRow/TradeInfoRow'
+import { useDebouncedGasInfo } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/useDebouncedGasInfo'
+import { useParsedSwapWarnings } from '@luxexchange/lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { useSwapFormStoreDerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useIsBlocked } from '@luxexchange/lx/src/features/trm/hooks'
 
 export function GasAndWarningRows(): JSX.Element {
   const chainId = useSwapFormStoreDerivedSwapInfo((s) => s.chainId)

@@ -1,8 +1,8 @@
 import { NetworkStatus } from '@apollo/client'
 import { Token as RestToken } from '@uniswap/client-data-api/dist/data/v1/types_pb'
 import { Currency } from '@luxamm/sdk-core'
-import { PortfolioBalance } from 'lx/src/features/dataApi/types'
-import { isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+import { PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
+import { isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
 
 export function sortBalancesByName(unsortedBalances?: PortfolioBalance[]): PortfolioBalance[] {
   if (!unsortedBalances) {

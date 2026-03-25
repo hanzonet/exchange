@@ -1,19 +1,19 @@
-import { Button, Flex, useIsShortMobileDevice } from 'ui/src'
-import { useCexTransferProviders } from 'lx/src/features/fiatOnRamp/useCexTransferProviders'
+import { Button, Flex, useIsShortMobileDevice } from '@luxfi/ui/src'
+import { useCexTransferProviders } from '@luxexchange/lx/src/features/fiatOnRamp/useCexTransferProviders'
 import {
   useIsShowingWebFORNudge,
   useIsWebFORNudgeEnabled,
   useSetIsShowingWebFORNudge,
-} from 'lx/src/features/providers/webForNudgeProvider'
-import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useIsSwapButtonDisabled } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
-import { useIsTradeIndicative } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
-import { useOnReviewPress } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
-import { useSwapFormButtonColors } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
-import { useSwapFormButtonText } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
-import { SwapFormButtonTrace } from 'lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButtonTrace'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/providers/webForNudgeProvider'
+import { useTransactionModalContext } from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useIsSwapButtonDisabled } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
+import { useIsTradeIndicative } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
+import { useOnReviewPress } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
+import { useSwapFormButtonColors } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
+import { useSwapFormButtonText } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
+import { SwapFormButtonTrace } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButtonTrace'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export const SWAP_BUTTON_TEXT_VARIANT = 'buttonLabel1'
 

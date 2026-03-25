@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import {
   makeSelectAddressNotifications,
   makeSelectHasNotifications,
-} from 'lx/src/features/notifications/slice/selectors'
-import { AppNotification } from 'lx/src/features/notifications/slice/types'
-import { LuxState } from 'lx/src/state/luxReducer'
+} from '@luxexchange/lx/src/features/notifications/slice/selectors'
+import { AppNotification } from '@luxexchange/lx/src/features/notifications/slice/types'
+import { LuxState } from '@luxexchange/lx/src/state/luxReducer'
 
 export function useSelectAddressHasNotifications(address: Address | null): boolean | undefined {
   const selectHasNotifications = useMemo(makeSelectHasNotifications, [])

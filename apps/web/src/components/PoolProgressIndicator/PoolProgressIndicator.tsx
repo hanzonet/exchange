@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { INTERFACE_NAV_HEIGHT } from 'ui/src/theme'
-import { assert } from 'utilities/src/errors'
+import { Flex, Text } from '@luxfi/ui/src'
+import { INTERFACE_NAV_HEIGHT } from '@luxfi/ui/src/theme'
+import { assert } from '@luxfi/utilities/src/errors'
 import { useStickyHeaderBorder } from '~/hooks/useStickyHeaderBorder'
 import { ClickableGuiStyle } from '~/theme/components/styles'
 

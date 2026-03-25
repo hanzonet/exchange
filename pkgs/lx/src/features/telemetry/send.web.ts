@@ -1,7 +1,7 @@
-import { AppsFlyerEventProperties, UniverseEventProperties } from 'lx/src/features/telemetry/types'
-import { logger } from 'utilities/src/logger/logger'
+import { AppsFlyerEventProperties, UniverseEventProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { analytics } from 'utilities/src/telemetry/analytics/analytics'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
 
 export function sendAnalyticsEvent<EventName extends keyof UniverseEventProperties>(
   ...args: undefined extends UniverseEventProperties[EventName]

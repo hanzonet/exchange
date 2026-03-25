@@ -1,15 +1,15 @@
-import { useSporeColors } from 'ui/src'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { useSporeColors } from '@luxfi/ui/src'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import {
   TransactionSettingsStoreContext,
   useGetTransactionSettingsContextValue,
-} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContext'
-import { TransactionSettingsModalContent } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsModalContent'
-import type { TransactionSettingsModalProps } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
-import { SwapFormStoreContext } from 'lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContext'
-import { useSwapFormStoreBase } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { isExtensionApp } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContext'
+import { TransactionSettingsModalContent } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsModalContent'
+import type { TransactionSettingsModalProps } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
+import { SwapFormStoreContext } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/SwapFormStoreContext'
+import { useSwapFormStoreBase } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { isExtensionApp } from '@luxfi/utilities/src/platform'
 
 export function TransactionSettingsModalWallet({
   settings,

@@ -1,6 +1,6 @@
-import { SwapTransactionDetails } from 'lx/src/components/activity/details/transactions/SwapTransactionDetails'
-import { SwapTypeTransactionInfo } from 'lx/src/components/activity/details/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { SwapTransactionDetails } from '@luxexchange/lx/src/components/activity/details/transactions/SwapTransactionDetails'
+import { SwapTypeTransactionInfo } from '@luxexchange/lx/src/components/activity/details/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   ARBITRUM_DAI_CURRENCY_INFO,
   BASE_CURRENCY,
@@ -9,8 +9,8 @@ import {
   OPTIMISM_CURRENCY,
   POLYGON_CURRENCY,
   SAMPLE_SEED_ADDRESS_1,
-} from 'lx/src/test/fixtures'
-import { render } from 'lx/src/test/test-utils'
+} from '@luxexchange/lx/src/test/fixtures'
+import { render } from '@luxexchange/lx/src/test/test-utils'
 
 const mockWalletAddress = (): Address => SAMPLE_SEED_ADDRESS_1
 vi.mock('lx/src/features/wallet/hooks/useWallet', () => ({
@@ -51,8 +51,8 @@ vi.mock('lx/src/features/tokens/useCurrencyInfo', () => ({
   },
 }))
 
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

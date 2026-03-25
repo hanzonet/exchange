@@ -1,7 +1,7 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { validateOrdersForCancellation } from 'lx/src/features/transactions/cancel/validation'
-import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { dexOrderDetails } from 'lx/src/test/fixtures'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { validateOrdersForCancellation } from '@luxexchange/lx/src/features/transactions/cancel/validation'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { dexOrderDetails } from '@luxexchange/lx/src/test/fixtures'
 
 describe('validateOrdersForCancellation', () => {
   const createMockOrder = (overrides?: Partial<DEXOrderDetails>): DEXOrderDetails =>

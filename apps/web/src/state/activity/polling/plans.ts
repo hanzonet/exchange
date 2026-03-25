@@ -5,10 +5,10 @@ import {
   PLAN_POLLING_INTERVAL_MS,
   pollPlanStatus,
   shouldPollPlan,
-} from 'lx/src/features/transactions/swap/plan/planPollingUtils'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { isFinalizedTxStatus, isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/plan/planPollingUtils'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { isFinalizedTxStatus, isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useStore } from 'zustand'
 import { ActivityPlanUpdate, ActivityUpdateTransactionType, type OnActivityUpdate } from '~/state/activity/types'
 import { usePendingPlanTransactions, usePlanTransactions } from '~/state/transactions/hooks'

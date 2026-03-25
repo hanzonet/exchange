@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'lx/src/features/chains/evm/rpc'
-import { type CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { LuxEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { type CurrencyField } from 'lx/src/types/currency'
-import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { type CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { LuxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { type CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { useTrace } from '@luxfi/utilities/src/telemetry/trace/TraceContext'
 
 type SelectCurrencyEventProperties = {
   position: number

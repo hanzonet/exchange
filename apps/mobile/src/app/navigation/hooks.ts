@@ -5,10 +5,10 @@ import { BackHandler } from 'react-native'
 import { navigate as rootNavigate } from 'src/app/navigation/rootNavigation'
 import { useExploreStackNavigation } from 'src/app/navigation/types'
 import { HomeScreenTabIndex } from 'src/screens/HomeScreen/HomeScreenTabIndex'
-import { getListTransactionsQuery } from 'lx/src/data/rest/listTransactions'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { useEvent } from 'utilities/src/react/hooks'
+import { getListTransactionsQuery } from '@luxexchange/lx/src/data/rest/listTransactions'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 interface EagerExternalProfileNavigationResult {
   preload: (address: string) => Promise<void>

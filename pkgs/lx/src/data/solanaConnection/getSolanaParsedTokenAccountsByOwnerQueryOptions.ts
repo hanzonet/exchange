@@ -1,9 +1,9 @@
 import { Commitment, ParsedAccountData, PublicKey } from '@solana/web3.js'
 import { queryOptions } from '@tanstack/react-query'
-import { getSolanaConnection } from 'lx/src/features/providers/getSolanaConnection'
-import { logger } from 'utilities/src/logger/logger'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { getSolanaConnection } from '@luxexchange/lx/src/features/providers/getSolanaConnection'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 /**
  * When fetching onchain balances on Solana, we use the 'confirmed' commitment level instead of the default 'processed' level.

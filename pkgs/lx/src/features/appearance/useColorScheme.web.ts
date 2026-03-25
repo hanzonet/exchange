@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
-import { type ColorScheme } from 'lx/src/features/appearance/types'
-import { logger } from 'utilities/src/logger/logger'
-import { isBrowser } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+import { type ColorScheme } from '@luxexchange/lx/src/features/appearance/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isBrowser } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 /**
  * Custom hook to detect and track the user's preferred color scheme.

@@ -1,11 +1,11 @@
-import type { ChallengeSolverService } from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
+import type { ChallengeSolverService } from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
 import {
   MaxChallengeRetriesError,
   NoSolverAvailableError,
-} from '@universe/sessions/src/session-initialization/sessionErrors'
-import type { SessionService } from '@universe/sessions/src/session-service/types'
-import type { Logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/sessions/src/session-initialization/sessionErrors'
+import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 interface SessionInitResult {
   sessionId: string | null

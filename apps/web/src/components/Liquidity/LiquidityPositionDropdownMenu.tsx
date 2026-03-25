@@ -1,10 +1,10 @@
 import { memo } from 'react'
-import { Flex, TouchableArea, useIsTouchDevice } from 'ui/src'
-import { MoreHorizontal } from 'ui/src/components/icons/MoreHorizontal'
+import { Flex, TouchableArea, useIsTouchDevice } from '@luxfi/ui/src'
+import { MoreHorizontal } from '@luxfi/ui/src/components/icons/MoreHorizontal'
 import { ContextMenu } from 'uniswap/src/components/menus/ContextMenu'
 import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
 import { ElementName, SectionName } from 'uniswap/src/features/telemetry/constants'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 import { useLiquidityPositionDropdownOptions } from '~/components/Liquidity/hooks/useLiquidityPositionDropdownOptions'
 import { PositionInfo } from '~/components/Liquidity/types'
 

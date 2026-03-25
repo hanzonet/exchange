@@ -1,12 +1,12 @@
 import { Canvas, Circle, Group, Path } from '@shopify/react-native-skia'
 import { memo } from 'react'
-import { Flex } from 'ui/src/components/layout'
-import type { UniconProps } from 'ui/src/components/Unicon/types'
-import { type IconPaths, Icons } from 'ui/src/components/Unicon/UniconSVGs'
-import { getUniconColors, getUniconsDeterministicHash } from 'ui/src/components/Unicon/utils'
-import { useIsDarkMode } from 'ui/src/hooks/useIsDarkMode'
-import { isEVMAddressWithChecksum } from 'utilities/src/addresses/evm/evm'
-import { isSVMAddress } from 'utilities/src/addresses/svm/svm'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import type { UniconProps } from '@luxfi/ui/src/components/Unicon/types'
+import { type IconPaths, Icons } from '@luxfi/ui/src/components/Unicon/UniconSVGs'
+import { getUniconColors, getUniconsDeterministicHash } from '@luxfi/ui/src/components/Unicon/utils'
+import { useIsDarkMode } from '@luxfi/ui/src/hooks/useIsDarkMode'
+import { isEVMAddressWithChecksum } from '@luxfi/utilities/src/addresses/evm/evm'
+import { isSVMAddress } from '@luxfi/utilities/src/addresses/svm/svm'
 
 // Notes:
 // Add 1 to effectively increase margin between svg and surrounding box, otherwise get a cropping issue

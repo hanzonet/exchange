@@ -8,17 +8,17 @@ import {
 import { dappRequestApprovalWatcher } from 'src/app/features/dappRequests/dappRequestApprovalWatcherSaga'
 import { dappRequestWatcher } from 'src/app/features/dappRequests/saga'
 import { call, spawn } from 'typed-redux-saga'
-import { getMonitoredSagaReducers, type MonitoredSaga } from 'lx/src/utils/saga'
-import { apolloClientRef } from 'wallet/src/data/apollo/usePersistedApolloClient'
-import { authActions, authReducer, authSaga, authSagaName } from 'wallet/src/features/auth/saga'
-import { deviceLocaleWatcher } from 'wallet/src/features/i18n/deviceLocaleWatcherSaga'
-import { initProviders } from 'wallet/src/features/providers/saga'
+import { getMonitoredSagaReducers, type MonitoredSaga } from '@luxexchange/lx/src/utils/saga'
+import { apolloClientRef } from '@luxfi/wallet/src/data/apollo/usePersistedApolloClient'
+import { authActions, authReducer, authSaga, authSagaName } from '@luxfi/wallet/src/features/auth/saga'
+import { deviceLocaleWatcher } from '@luxfi/wallet/src/features/i18n/deviceLocaleWatcherSaga'
+import { initProviders } from '@luxfi/wallet/src/features/providers/saga'
 import {
   removeDelegationActions,
   removeDelegationReducer,
   removeDelegationSaga,
   removeDelegationSagaName,
-} from 'wallet/src/features/smartWallet/sagas/removeDelegationSaga'
+} from '@luxfi/wallet/src/features/smartWallet/sagas/removeDelegationSaga'
 import {
   executePlanActions,
   executePlanReducer,
@@ -32,21 +32,21 @@ import {
   prepareAndSignSwapReducer,
   prepareAndSignSwapSaga,
   prepareAndSignSwapSagaName,
-} from 'wallet/src/features/transactions/swap/configuredSagas'
-import { watchTransactionEvents } from 'wallet/src/features/transactions/watcher/transactionFinalizationSaga'
-import { transactionWatcher } from 'wallet/src/features/transactions/watcher/transactionWatcherSaga'
+} from '@luxfi/wallet/src/features/transactions/swap/configuredSagas'
+import { watchTransactionEvents } from '@luxfi/wallet/src/features/transactions/watcher/transactionFinalizationSaga'
+import { transactionWatcher } from '@luxfi/wallet/src/features/transactions/watcher/transactionWatcherSaga'
 import {
   editAccountActions,
   editAccountReducer,
   editAccountSaga,
   editAccountSagaName,
-} from 'wallet/src/features/wallet/accounts/editAccountSaga'
+} from '@luxfi/wallet/src/features/wallet/accounts/editAccountSaga'
 import {
   createAccountsActions,
   createAccountsReducer,
   createAccountsSaga,
   createAccountsSagaName,
-} from 'wallet/src/features/wallet/create/createAccountsSaga'
+} from '@luxfi/wallet/src/features/wallet/create/createAccountsSaga'
 
 // Stateful sagas that are registered with the store on startup
 const monitoredSagas: Record<string, MonitoredSaga> = {

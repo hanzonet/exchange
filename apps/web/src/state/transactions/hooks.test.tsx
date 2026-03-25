@@ -1,15 +1,15 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { permit2Address } from '@uniswap/permit2-sdk'
 import { TradeType } from '@uniswap/sdk-core'
-import { USDC_MAINNET } from 'lx/src/constants/tokens'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   ApproveTransactionInfo,
   InterfaceTransactionDetails,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
 import { vi } from 'vitest'
 import { useAccount } from '~/hooks/useAccount'
 import {

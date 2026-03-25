@@ -5,14 +5,14 @@ import {
   type ParsedTradeInput,
   parseTradeInputForTradingApiQuote,
   validateParsedInput,
-} from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { UseTradeArgs } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 import {
   GetQuoteRoutingParams,
   GetQuoteSlippageParams,
   type QuoteRoutingParamsResult,
   type QuoteSlippageParamsResult,
-} from 'lx/src/features/transactions/swap/utils/tradingApi'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
 
 export type GetQuoteRequestArgs = ParsedTradeInput
 

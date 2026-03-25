@@ -1,11 +1,11 @@
 import type { DiscriminatedQuoteResponse } from '@luxfi/api'
 import { TradingApi } from '@luxfi/api'
-import { logSwapQuoteFetch } from 'lx/src/features/transactions/swap/analytics'
+import { logSwapQuoteFetch } from '@luxexchange/lx/src/features/transactions/swap/analytics'
 import {
   createTradeRepository,
   type TradeRepository,
-} from 'lx/src/features/transactions/swap/services/tradeService/tradeRepository'
-import type { Logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeRepository'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 // Mock dependencies
 vi.mock('lx/src/features/transactions/swap/analytics')

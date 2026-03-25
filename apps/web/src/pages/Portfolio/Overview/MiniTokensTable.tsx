@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { ElementName, SectionName } from 'uniswap/src/features/telemetry/constants'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'

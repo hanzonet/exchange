@@ -3,10 +3,10 @@ import { useWindowDimensions } from 'react-native'
 import { useAnimatedStyle, useDerivedValue } from 'react-native-reanimated'
 import { ValueAndFormatted } from 'src/components/PriceExplorer/usePrice'
 import { AnimatedText } from 'src/components/text/AnimatedText'
-import { Flex, useSporeColors } from 'ui/src'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { fonts, TextVariantTokens } from 'ui/src/theme'
-import { TestIDType } from 'lx/src/test/fixtures/testIDs'
+import { Flex, useSporeColors } from '@luxfi/ui/src'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { fonts, TextVariantTokens } from '@luxfi/ui/src/theme'
+import { TestIDType } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 type AnimatedDecimalNumberProps = {
   number: ValueAndFormatted

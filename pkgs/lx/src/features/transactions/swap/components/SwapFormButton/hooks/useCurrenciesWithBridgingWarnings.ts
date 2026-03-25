@@ -1,6 +1,6 @@
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useNeedsBridgedAssetWarning } from 'lx/src/features/transactions/swap/hooks/useNeedsBridgedAssetWarning'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useNeedsBridgedAssetWarning } from '@luxexchange/lx/src/features/transactions/swap/hooks/useNeedsBridgedAssetWarning'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 type UseCurrenciesWithBridgingWarnings = () =>
   | {

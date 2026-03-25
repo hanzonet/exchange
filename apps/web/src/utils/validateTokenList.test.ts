@@ -1,5 +1,5 @@
 import { TokenInfo } from '@uniswap/token-lists'
-import { DAI } from 'lx/src/constants/tokens'
+import { DAI } from '@luxexchange/lx/src/constants/tokens'
 import { validateTokens } from '~/utils/validateTokenList'
 
 const INVALID_TOKEN: TokenInfo = {

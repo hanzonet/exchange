@@ -1,6 +1,6 @@
 import { memo, useMemo } from 'react'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { NumberType } from 'utilities/src/format/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 import { ValueWithFadedDecimals } from '~/pages/Portfolio/components/ValueWithFadedDecimals/ValueWithFadedDecimals'
 import { EmptyTableCell } from '~/pages/Portfolio/EmptyTableCell'
 import type { TokenData } from '~/pages/Portfolio/Tokens/hooks/useTransformTokenTableData'

@@ -13,19 +13,19 @@ import {
   TouchableArea,
   TouchableAreaProps,
   useIsDarkMode,
-} from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
-import { spacing, zIndexes } from 'ui/src/theme'
-import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
-import { Scrollbar } from 'lx/src/components/misc/Scrollbar'
-import { MenuItemProp } from 'lx/src/components/modals/ActionSheetModal'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { closeKeyboardBeforeCallback } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { isAndroid, isTouchable, isWebApp, isWebPlatform } from 'utilities/src/platform'
-import { executeWithFrameDelay } from 'utilities/src/react/delayUtils'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useTimeout } from 'utilities/src/time/timing'
+} from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
+import { spacing, zIndexes } from '@luxfi/ui/src/theme'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { Scrollbar } from '@luxexchange/lx/src/components/misc/Scrollbar'
+import { MenuItemProp } from '@luxexchange/lx/src/components/modals/ActionSheetModal'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { closeKeyboardBeforeCallback } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { isAndroid, isTouchable, isWebApp, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { executeWithFrameDelay } from '@luxfi/utilities/src/react/delayUtils'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useTimeout } from '@luxfi/utilities/src/time/timing'
 
 const DEFAULT_MIN_WIDTH = 225
 const MIN_HEIGHT = 250

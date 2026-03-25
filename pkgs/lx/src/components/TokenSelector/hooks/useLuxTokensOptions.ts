@@ -1,10 +1,10 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { useMemo } from 'react'
-import { OnchainItemListOptionType, TokenOption } from 'lx/src/components/lists/items/types'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo, TokenList } from 'lx/src/features/dataApi/types'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { OnchainItemListOptionType, TokenOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 // Token list structure from tokens-lux/tokens.ts
 interface TokenListToken {

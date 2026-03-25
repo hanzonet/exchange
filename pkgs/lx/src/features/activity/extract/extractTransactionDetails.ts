@@ -1,26 +1,26 @@
-import { GraphQLApi, SpamCode, TradingApi } from '@universe/api'
-import parseApproveTransaction from 'lx/src/features/activity/parse/parseApproveTransaction'
-import parseBridgingTransaction from 'lx/src/features/activity/parse/parseBridgingTransaction'
-import parseNFTMintTransaction from 'lx/src/features/activity/parse/parseMintTransaction'
-import parseOnRampTransaction from 'lx/src/features/activity/parse/parseOnRampTransaction'
-import parseReceiveTransaction from 'lx/src/features/activity/parse/parseReceiveTransaction'
-import parseSendTransaction from 'lx/src/features/activity/parse/parseSendTransaction'
-import parseTradeTransaction from 'lx/src/features/activity/parse/parseTradeTransaction'
-import { remoteTxStatusToLocalTxStatus } from 'lx/src/features/activity/utils/remote'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'lx/src/features/chains/evm/defaults'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import { GraphQLApi, SpamCode, TradingApi } from '@luxexchange/api'
+import parseApproveTransaction from '@luxexchange/lx/src/features/activity/parse/parseApproveTransaction'
+import parseBridgingTransaction from '@luxexchange/lx/src/features/activity/parse/parseBridgingTransaction'
+import parseNFTMintTransaction from '@luxexchange/lx/src/features/activity/parse/parseMintTransaction'
+import parseOnRampTransaction from '@luxexchange/lx/src/features/activity/parse/parseOnRampTransaction'
+import parseReceiveTransaction from '@luxexchange/lx/src/features/activity/parse/parseReceiveTransaction'
+import parseSendTransaction from '@luxexchange/lx/src/features/activity/parse/parseSendTransaction'
+import parseTradeTransaction from '@luxexchange/lx/src/features/activity/parse/parseTradeTransaction'
+import { remoteTxStatusToLocalTxStatus } from '@luxexchange/lx/src/features/activity/utils/remote'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY } from '@luxexchange/lx/src/features/chains/evm/defaults'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
 import type {
   TransactionDetails,
   TransactionListQueryResponse,
   TransactionTypeInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   TransactionDetailsType,
   TransactionOriginType,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Parses txn API response item and identifies known txn type. Helps strictly

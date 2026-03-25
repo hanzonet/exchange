@@ -8,13 +8,13 @@
  * Shared types and platform-agnostic functions live in shared.ts.
  */
 
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
-export type { HashcashChallenge, ProofResult } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+export type { HashcashChallenge, ProofResult } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 // Re-export everything from shared — types, checkDifficulty, formatHashcashString
-export { checkDifficulty, formatHashcashString } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+export { checkDifficulty, formatHashcashString } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 
-import type { HashcashChallenge, ProofResult } from '@universe/sessions/src/challenge-solvers/hashcash/shared'
+import type { HashcashChallenge, ProofResult } from '@luxexchange/sessions/src/challenge-solvers/hashcash/shared'
 
 export async function computeHash(_params: { subject: string; nonce: string; counter: number }): Promise<Uint8Array> {
   throw new PlatformSplitStubError('computeHash')

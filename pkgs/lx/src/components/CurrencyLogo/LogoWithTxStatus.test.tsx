@@ -3,15 +3,15 @@ import {
   DappLogoWithWCBadge,
   LogoWithTxStatus,
   LogoWithTxStatusProps,
-} from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
-import { AssetType } from 'lx/src/entities/assets'
-import { ALL_EVM_CHAIN_IDS } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { ETH_CURRENCY_INFO, ethCurrencyInfo } from 'lx/src/test/fixtures/wallet/currencies'
-import { render } from 'lx/src/test/test-utils'
-import { createFixture, randomChoice, randomEnumValue } from 'lx/src/test/utils'
-import { WalletConnectEvent } from 'lx/src/types/walletConnect'
+} from '@luxexchange/lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { ALL_EVM_CHAIN_IDS } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { TransactionStatus, TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { ETH_CURRENCY_INFO, ethCurrencyInfo } from '@luxexchange/lx/src/test/fixtures/wallet/currencies'
+import { render } from '@luxexchange/lx/src/test/test-utils'
+import { createFixture, randomChoice, randomEnumValue } from '@luxexchange/lx/src/test/utils'
+import { WalletConnectEvent } from '@luxexchange/lx/src/types/walletConnect'
 
 vi.mock('ui/src/components/UniversalImage/internal/PlainImage', async (importOriginal) => {
   const actual = await importOriginal<typeof import('ui/src/components/UniversalImage/internal/PlainImage.web')>()

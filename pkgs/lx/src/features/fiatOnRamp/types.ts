@@ -15,7 +15,7 @@ export type {
   FORSupportedFiatCurrency,
   FORSupportedToken,
   FORTransaction,
-} from '@universe/api'
+} from '@luxexchange/api'
 
 // Re-export protobuf values (enums/classes) for consumer packages
 export {
@@ -24,9 +24,9 @@ export {
   OffRampTransferDetailsResponse,
   RampDirection,
   SupportedCountriesResponse,
-} from '@universe/api'
+} from '@luxexchange/api'
 
-import { CurrencyInfo, PortfolioBalance } from 'lx/src/features/dataApi/types'
+import { CurrencyInfo, PortfolioBalance } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   LocalOffRampTransactionInfo,
   LocalOnRampTransactionInfo,
@@ -34,9 +34,9 @@ import {
   OnRampPurchaseInfo,
   OnRampTransferInfo,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { FiatCurrencyComponents } from 'utilities/src/format/localeBased'
+import { FiatCurrencyComponents } from '@luxfi/utilities/src/format/localeBased'
 
 // Transaction types (app-specific, extends TransactionDetails)
 

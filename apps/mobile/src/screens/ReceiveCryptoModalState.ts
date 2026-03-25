@@ -1,4 +1,4 @@
-import { FORServiceProvider } from 'lx/src/features/fiatOnRamp/types'
+import { FORServiceProvider } from '@luxexchange/lx/src/features/fiatOnRamp/types'
 
 export type ReceiveCryptoModalState = {
   serviceProviders: FORServiceProvider[]

@@ -1,12 +1,12 @@
 import { TradingApi } from '@luxfi/api'
-import { toGqlSafetyLevel } from 'lx/src/components/TokenSelector/utils'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { toSupportedChainId } from 'lx/src/features/chains/utils'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { NATIVE_ADDRESS_FOR_TRADING_API } from 'lx/src/features/transactions/swap/utils/tradingApi'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { toGqlSafetyLevel } from '@luxexchange/lx/src/components/TokenSelector/utils'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrency } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { NATIVE_ADDRESS_FOR_TRADING_API } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export function tradingApiSwappableTokenToCurrencyInfo(
   token: TradingApi.GetSwappableTokensResponse['tokens'][0],

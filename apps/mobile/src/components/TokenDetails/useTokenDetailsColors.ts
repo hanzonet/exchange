@@ -1,8 +1,8 @@
-import { useExtractedTokenColor, useIsDarkMode, useSporeColors } from 'ui/src'
+import { useExtractedTokenColor, useIsDarkMode, useSporeColors } from '@luxfi/ui/src'
 import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
-} from 'lx/src/data/graphql/lux-data-api/fragments'
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
 
 export function useTokenDetailsColors({ currencyId }: { currencyId: string }): {
   tokenColor: Nullable<string>

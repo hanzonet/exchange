@@ -4,7 +4,7 @@ import { useQuery } from '@connectrpc/connect-query'
 import { UseQueryResult } from '@tanstack/react-query'
 import { ProtocolStatsRequest, ProtocolStatsResponse } from '@luxdex/client-explore/dist/uniswap/explore/v1/service_pb'
 import { protocolStats } from '@luxdex/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
-import { luxGetTransport } from 'lx/src/data/rest/base'
+import { luxGetTransport } from '@luxexchange/lx/src/data/rest/base'
 
 /**
  * Wrapper around Tanstack useQuery for the Lux REST BE service ProtocolStats

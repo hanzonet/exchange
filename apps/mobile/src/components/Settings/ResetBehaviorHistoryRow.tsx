@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux'
-import { Flex, IconProps, Text, TouchableArea } from 'ui/src'
-import { LuxLogo } from 'ui/src/components/icons'
-import { resetLuxBehaviorHistory } from 'lx/src/features/behaviorHistory/slice'
-import { resetWalletBehaviorHistory } from 'wallet/src/features/behaviorHistory/slice'
+import { Flex, IconProps, Text, TouchableArea } from '@luxfi/ui/src'
+import { LuxLogo } from '@luxfi/ui/src/components/icons'
+import { resetLuxBehaviorHistory } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { resetWalletBehaviorHistory } from '@luxfi/wallet/src/features/behaviorHistory/slice'
 
 export function ResetBehaviorHistoryRow({ iconProps }: { iconProps: IconProps }): JSX.Element {
   const dispatch = useDispatch()

@@ -12,7 +12,7 @@ import {
   TransactionStatus,
   TransactionType,
   TransactionTypeInfo,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function isConfirmedSwapTypeInfo(typeInfo: TransactionTypeInfo): typeInfo is ConfirmedSwapTransactionInfo {
   return Boolean(

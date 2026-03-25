@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react'
 import { DeviceEventEmitter, Dimensions, EmitterSubscription } from 'react-native'
 import { act } from 'react-test-renderer'
-import { useKeyboardLayout } from 'lx/src/utils/useKeyboardLayout'
+import { useKeyboardLayout } from '@luxexchange/lx/src/utils/useKeyboardLayout'
 
 // Mock Keyboard to use DeviceEventEmitter for event handling (react-native-web's Keyboard is a no-op)
 vi.mock('react-native', async (importOriginal) => {

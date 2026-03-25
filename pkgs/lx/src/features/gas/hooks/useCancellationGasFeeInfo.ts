@@ -1,30 +1,30 @@
 import { useQuery } from '@tanstack/react-query'
 import { providers } from 'ethers/lib/ethers'
 import { useCallback, useMemo } from 'react'
-import { CancellationGasFeeDetails, useTransactionGasFee } from 'lx/src/features/gas/hooks'
+import { CancellationGasFeeDetails, useTransactionGasFee } from '@luxexchange/lx/src/features/gas/hooks'
 import {
   PlanCancellationGasFeeDetails,
   usePlanCancellationGasFeeInfo,
-} from 'lx/src/features/gas/hooks/usePlanCancellationGasFeeInfo'
+} from '@luxexchange/lx/src/features/gas/hooks/usePlanCancellationGasFeeInfo'
 import {
   CancellationType,
   calculateCancellationGasFee,
   createClassicCancelRequest,
   getCancellationType,
-} from 'lx/src/features/gas/utils/cancel'
+} from '@luxexchange/lx/src/features/gas/utils/cancel'
 import {
   extractCancellationData,
   getCancelMultipleDEXOrdersTransaction,
-} from 'lx/src/features/transactions/cancel/cancelMultipleOrders'
-import { getCancelOrderTxRequest } from 'lx/src/features/transactions/cancel/getCancelOrderTxRequest'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+} from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
+import { getCancelOrderTxRequest } from '@luxexchange/lx/src/features/transactions/cancel/getCancelOrderTxRequest'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   PlanTransactionDetails,
   TransactionDetails,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isPlanTransactionDetails } from 'lx/src/features/transactions/types/utils'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isPlanTransactionDetails } from '@luxexchange/lx/src/features/transactions/types/utils'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 /**
  * Hook to calculate cancellation gas fees

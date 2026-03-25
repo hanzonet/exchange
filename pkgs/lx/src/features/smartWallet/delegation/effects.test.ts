@@ -2,8 +2,8 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import {
   getHandleOnSetActiveChainId,
   getHandleOnUpdateDelegatedState,
-} from 'lx/src/features/smartWallet/delegation/effects'
-import { DelegatedState } from 'lx/src/features/smartWallet/delegation/types'
+} from '@luxexchange/lx/src/features/smartWallet/delegation/effects'
+import { DelegatedState } from '@luxexchange/lx/src/features/smartWallet/delegation/types'
 import type { Mock } from 'vitest'
 
 describe('effects', () => {

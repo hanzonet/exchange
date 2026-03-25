@@ -2,17 +2,17 @@ import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { I18nManager, LayoutChangeEvent } from 'react-native'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import { useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated'
-import { Flex, Text } from 'ui/src'
-import { ArrowLeft, ArrowRight } from 'ui/src/components/icons'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { fonts, iconSizes, spacing } from 'ui/src/theme'
-import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
+import { Flex, Text } from '@luxfi/ui/src'
+import { ArrowLeft, ArrowRight } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { fonts, iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { useAppFiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
 import {
   DecimalPadProps,
   KeyAction,
   KeyLabel,
-} from 'lx/src/features/transactions/components/DecimalPadInput/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+} from '@luxexchange/lx/src/features/transactions/components/DecimalPadInput/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 const KEY_PRESS_ANIMATION_DURATION_MS = 150
 

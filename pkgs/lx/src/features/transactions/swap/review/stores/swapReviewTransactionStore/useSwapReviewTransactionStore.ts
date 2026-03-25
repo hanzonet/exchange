@@ -1,15 +1,15 @@
 import { useContext } from 'react'
-import { useSwapReviewCallbacksStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/useSwapReviewCallbacksStore'
+import { useSwapReviewCallbacksStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/useSwapReviewCallbacksStore'
 import {
   useSwapReviewActions,
   useSwapReviewStore,
-} from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
+} from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
 import type {
   SwapReviewTransactionState,
   SwapReviewTransactionStore,
-} from 'lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/createSwapReviewTransactionStore'
-import { SwapReviewTransactionStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/SwapReviewTransactionStoreContext'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/createSwapReviewTransactionStore'
+import { SwapReviewTransactionStoreContext } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/SwapReviewTransactionStoreContext'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 import { useStore } from 'zustand'
 import { useShallow } from 'zustand/shallow'
 

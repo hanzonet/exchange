@@ -1,8 +1,8 @@
-import type { MultichainTokenEntry } from 'lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
-import { useOrderedMultichainEntries } from 'lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
-import { useOrderedChainIds } from 'lx/src/features/chains/hooks/useOrderedChainIds'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { renderHook } from 'lx/src/test/test-utils'
+import type { MultichainTokenEntry } from '@luxexchange/lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
+import { useOrderedMultichainEntries } from '@luxexchange/lx/src/components/MultichainTokenDetails/useOrderedMultichainEntries'
+import { useOrderedChainIds } from '@luxexchange/lx/src/features/chains/hooks/useOrderedChainIds'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
 
 vi.mock('lx/src/features/chains/hooks/useOrderedChainIds', () => ({
   useOrderedChainIds: vi.fn(),

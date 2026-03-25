@@ -2,10 +2,10 @@ import { useContext } from 'react'
 import type {
   SwapReviewState,
   SwapReviewStore,
-} from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
-import { EMPTY_STEPS } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
-import { SwapReviewStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
-import { isWebApp } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
+import { EMPTY_STEPS } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
+import { SwapReviewStoreContext } from '@luxexchange/lx/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 import { useStore } from 'zustand'
 import { useShallow } from 'zustand/shallow'
 

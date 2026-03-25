@@ -1,5 +1,5 @@
-import { logger } from 'utilities/src/logger/logger'
-import { isWebApp } from 'utilities/src/platform'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 // only disable for this enum
 /**

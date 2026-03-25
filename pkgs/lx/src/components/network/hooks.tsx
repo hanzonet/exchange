@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
-import { NetworkOption } from 'lx/src/components/network/NetworkOption'
-import { useNewChainIds } from 'lx/src/features/chains/hooks/useNewChainIds'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
+import { NetworkOption } from '@luxexchange/lx/src/components/network/NetworkOption'
+import { useNewChainIds } from '@luxexchange/lx/src/features/chains/hooks/useNewChainIds'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 export function useNetworkOptions({
   onPress,

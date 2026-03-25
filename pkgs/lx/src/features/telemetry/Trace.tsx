@@ -1,10 +1,10 @@
 import { memo, PropsWithChildren } from 'react'
-import { ElementName, InterfacePageName, ModalNameType, SectionName } from 'lx/src/features/telemetry/constants'
-import { UniverseEventProperties } from 'lx/src/features/telemetry/types'
-import { ExtensionScreen } from 'lx/src/types/screens/extension'
-import { MobileAppScreen } from 'lx/src/types/screens/mobile'
+import { ElementName, InterfacePageName, ModalNameType, SectionName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { UniverseEventProperties } from '@luxexchange/lx/src/features/telemetry/types'
+import { ExtensionScreen } from '@luxexchange/lx/src/types/screens/extension'
+import { MobileAppScreen } from '@luxexchange/lx/src/types/screens/mobile'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { TraceProps, Trace as UntypedTrace } from 'utilities/src/telemetry/trace/Trace'
+import { TraceProps, Trace as UntypedTrace } from '@luxfi/utilities/src/telemetry/trace/Trace'
 
 // Universe typed version of ITraceContext
 interface UniverseTraceContext {

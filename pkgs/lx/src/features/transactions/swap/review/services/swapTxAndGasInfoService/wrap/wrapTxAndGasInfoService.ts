@@ -1,10 +1,10 @@
 import type { GasStrategy } from '@luxfi/api'
-import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
-import type { EVMSwapInstructionsService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
-import { createGetEVMSwapTransactionRequestInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/utils'
-import type { SwapTxAndGasInfoService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { getWrapTxAndGasInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import type { UnwrapTrade, WrapTrade } from 'lx/src/features/transactions/swap/types/trade'
+import type { TransactionSettings } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import type { EVMSwapInstructionsService } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
+import { createGetEVMSwapTransactionRequestInfo } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/utils'
+import type { SwapTxAndGasInfoService } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
+import { getWrapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { UnwrapTrade, WrapTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 
 export function createWrapTxAndGasInfoService(ctx: {
   instructionService: EVMSwapInstructionsService

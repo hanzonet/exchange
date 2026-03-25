@@ -1,9 +1,9 @@
 import { waitFor } from '@testing-library/react-native'
-import { useTokenProjects } from 'lx/src/features/dataApi/tokenProjects/tokenProjects'
-import { tokenProjectToCurrencyInfos } from 'lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
-import { SAMPLE_CURRENCY_ID_1, usdcTokenProject } from 'lx/src/test/fixtures'
-import { renderHook } from 'lx/src/test/test-utils'
-import { queryResolvers } from 'lx/src/test/utils'
+import { useTokenProjects } from '@luxexchange/lx/src/features/dataApi/tokenProjects/tokenProjects'
+import { tokenProjectToCurrencyInfos } from '@luxexchange/lx/src/features/dataApi/tokenProjects/utils/tokenProjectToCurrencyInfos'
+import { SAMPLE_CURRENCY_ID_1, usdcTokenProject } from '@luxexchange/lx/src/test/fixtures'
+import { renderHook } from '@luxexchange/lx/src/test/test-utils'
+import { queryResolvers } from '@luxexchange/lx/src/test/utils'
 
 describe(useTokenProjects, () => {
   it('returns undefined when there is no data', async () => {

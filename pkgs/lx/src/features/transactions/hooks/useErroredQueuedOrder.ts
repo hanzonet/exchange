@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
-import { useSelectAddressTransactions } from 'lx/src/features/transactions/selectors'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+import { useSelectAddressTransactions } from '@luxexchange/lx/src/features/transactions/selectors'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   QueuedOrderStatus,
   TransactionDetails,
   TransactionStatus,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 const ERRORED_QUEUE_STATUSES = [
   QueuedOrderStatus.AppClosed,

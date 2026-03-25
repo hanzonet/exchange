@@ -1,11 +1,11 @@
 /* biome-ignore-all lint/suspicious/noExplicitAny: legacy code needs review */
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import {
   selectActivityVisibility,
   selectNftsVisibility,
   selectPositionsVisibility,
   selectTokensVisibility,
-} from 'lx/src/features/visibility/selectors'
+} from '@luxexchange/lx/src/features/visibility/selectors'
 import {
   setActivityVisibility,
   setNftVisibility,
@@ -13,8 +13,8 @@ import {
   setTokenVisibility,
   VisibilityState,
   visibilityReducer,
-} from 'lx/src/features/visibility/slice'
-import { getUniquePositionId } from 'lx/src/features/visibility/utils'
+} from '@luxexchange/lx/src/features/visibility/slice'
+import { getUniquePositionId } from '@luxexchange/lx/src/features/visibility/utils'
 import type { Mock } from 'vitest'
 
 vi.mock('lx/src/features/visibility/utils', () => ({

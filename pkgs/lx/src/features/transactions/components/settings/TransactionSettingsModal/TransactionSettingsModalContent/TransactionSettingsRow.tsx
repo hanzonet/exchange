@@ -1,11 +1,11 @@
-import { FeatureFlags, useFeatureFlag } from '@universe/gating'
+import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { PropsWithChildren, ReactNode, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { InfoTooltip } from 'lx/src/components/tooltip/InfoTooltip'
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
 
 interface TransactionSettingRowProps {
   setting: TransactionSettingConfig

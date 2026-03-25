@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
-import { Button, Flex, IconButton, styled, Text, useIsDarkMode } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { zIndexes } from 'ui/src/theme'
+import { Button, Flex, IconButton, styled, Text, useIsDarkMode } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { zIndexes } from '@luxfi/ui/src/theme'
 
 const BANNER_WIDTH = 260
 const BANNER_HEIGHT = 150

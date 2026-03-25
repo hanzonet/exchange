@@ -10,27 +10,27 @@ import {
   SharedQueryClient,
   transformInput,
   type WithoutWalletAccount,
-} from '@universe/api'
-import { luxGetTransport } from 'lx/src/data/rest/base'
-import { buildAccountAddressesByPlatform } from 'lx/src/data/rest/buildAccountAddressesByPlatform'
+} from '@luxexchange/api'
+import { luxGetTransport } from '@luxexchange/lx/src/data/rest/base'
+import { buildAccountAddressesByPlatform } from '@luxexchange/lx/src/data/rest/buildAccountAddressesByPlatform'
 import {
   cleanupCaughtUpOverrides,
   getOverridesForAddress,
   getOverridesForQuery,
   getPortfolioQueryReduxStore,
-} from 'lx/src/data/rest/portfolioBalanceOverrides'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { useRestPortfolioValueModifier } from 'lx/src/features/dataApi/balances/balancesRest'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { fetchAndMergeOnchainBalances } from 'lx/src/features/portfolio/portfolioUpdates/rest/refetchRestQueriesViaOnchainOverrideVariantSaga'
-import { removeExpiredBalanceOverrides } from 'lx/src/features/portfolio/slice/slice'
-import { type CurrencyId } from 'lx/src/types/currency'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
-import { createLogger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import { type QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+} from '@luxexchange/lx/src/data/rest/portfolioBalanceOverrides'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useRestPortfolioValueModifier } from '@luxexchange/lx/src/features/dataApi/balances/balancesRest'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { fetchAndMergeOnchainBalances } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/rest/refetchRestQueriesViaOnchainOverrideVariantSaga'
+import { removeExpiredBalanceOverrides } from '@luxexchange/lx/src/features/portfolio/slice/slice'
+import { type CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { createLogger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import { type QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 export type GetPortfolioInput<TSelectData = GetPortfolioResponse> = {
   input?: WithoutWalletAccount<PartialMessage<GetPortfolioRequest>> & {

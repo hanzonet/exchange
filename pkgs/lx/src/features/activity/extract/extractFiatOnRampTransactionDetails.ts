@@ -1,10 +1,10 @@
-import { FORTransactionStatus, GraphQLApi, TradingApi } from '@universe/api'
-import parseGraphQLOnRampTransaction from 'lx/src/features/activity/parse/parseOnRampTransaction'
-import { remoteTxStatusToLocalTxStatus } from 'lx/src/features/activity/utils/remote'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain, toSupportedChainId } from 'lx/src/features/chains/utils'
-import type { FORTransaction, FORTransactionDetails } from 'lx/src/features/fiatOnRamp/types'
-import { isValidIsoCurrencyCode } from 'lx/src/features/fiatOnRamp/utils'
+import { FORTransactionStatus, GraphQLApi, TradingApi } from '@luxexchange/api'
+import parseGraphQLOnRampTransaction from '@luxexchange/lx/src/features/activity/parse/parseOnRampTransaction'
+import { remoteTxStatusToLocalTxStatus } from '@luxexchange/lx/src/features/activity/utils/remote'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain, toSupportedChainId } from '@luxexchange/lx/src/features/chains/utils'
+import type { FORTransaction, FORTransactionDetails } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { isValidIsoCurrencyCode } from '@luxexchange/lx/src/features/fiatOnRamp/utils'
 import type {
   OffRampSaleInfo,
   OnRampPurchaseInfo,
@@ -12,14 +12,14 @@ import type {
   OnRampTransferInfo,
   TransactionDetails,
   TransactionListQueryResponse,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   TransactionDetailsType,
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 function parseFORTransaction(
   transaction: FORTransaction,

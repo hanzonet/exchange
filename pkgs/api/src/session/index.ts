@@ -9,4 +9,4 @@
 export {
   type CreateSessionTransportOptions,
   createSessionTransport,
-} from '@universe/api/src/session/createSessionTransport'
+} from '@luxexchange/api/src/session/createSessionTransport'

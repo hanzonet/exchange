@@ -2,10 +2,10 @@ import React from 'react'
 import {
   useCurrentAccountChainMismatchEffect,
   useOnConnectCheckAllAccountChainMismatchEffect,
-} from 'lx/src/features/smartWallet/mismatch/hooks'
-import { useMismatchContext } from 'lx/src/features/smartWallet/mismatch/MismatchContext'
-import { useOnDisconnectEffect } from 'lx/src/features/smartWallet/mismatch/useOnDisconnectEffect'
-import { isTestEnv } from 'utilities/src/environment/env'
+} from '@luxexchange/lx/src/features/smartWallet/mismatch/hooks'
+import { useMismatchContext } from '@luxexchange/lx/src/features/smartWallet/mismatch/MismatchContext'
+import { useOnDisconnectEffect } from '@luxexchange/lx/src/features/smartWallet/mismatch/useOnDisconnectEffect'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
 
 /**
  * MismatchAccountEffects -- handles the effects of the mismatch account

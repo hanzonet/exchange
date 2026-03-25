@@ -1,11 +1,11 @@
 import { memo, useMemo } from 'react'
 import { getTokenValue } from '@hanzo/gui'
-import { UNITAG_DARK, UNITAG_DARK_SMALL, UNITAG_LIGHT, UNITAG_LIGHT_SMALL } from 'ui/src/assets'
-import type { UniversalImageStyleProps } from 'ui/src/components/UniversalImage/types'
-import { UniversalImage } from 'ui/src/components/UniversalImage/UniversalImage'
-import { useIsDarkMode } from 'ui/src/hooks/useIsDarkMode'
-import type { IconSizeTokens } from 'ui/src/theme'
-import { isMobileApp, isWebApp } from 'utilities/src/platform'
+import { UNITAG_DARK, UNITAG_DARK_SMALL, UNITAG_LIGHT, UNITAG_LIGHT_SMALL } from '@luxfi/ui/src/assets'
+import type { UniversalImageStyleProps } from '@luxfi/ui/src/components/UniversalImage/types'
+import { UniversalImage } from '@luxfi/ui/src/components/UniversalImage/UniversalImage'
+import { useIsDarkMode } from '@luxfi/ui/src/hooks/useIsDarkMode'
+import type { IconSizeTokens } from '@luxfi/ui/src/theme'
+import { isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
 
 const style: UniversalImageStyleProps = {
   image: {

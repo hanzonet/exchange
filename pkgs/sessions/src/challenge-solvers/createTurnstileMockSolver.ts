@@ -1,5 +1,5 @@
 import type { ChallengeData, ChallengeSolver } from '@luxfi/sessions/src/challenge-solvers/types'
-import { sleep } from 'utilities/src/time/timing'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 
 /**
  * Creates a mock Turnstile challenge solver for development/testing

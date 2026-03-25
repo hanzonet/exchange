@@ -1,7 +1,7 @@
 {
   "name": "@luxfi/api",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/api/src",
+  "sourceRoot": "pkgs/api/src",
   "projectType": "library",
   "tags": ["scope:api", "type:lib"],
   "targets": {

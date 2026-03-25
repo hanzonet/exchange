@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
-import { Button, Flex, Text, TouchableArea, useSporeColors } from 'ui/src'
-import { X } from 'ui/src/components/icons/X'
-import { zIndexes } from 'ui/src/theme'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalProps } from 'lx/src/components/modals/ModalProps'
-import { ModalNameType } from 'lx/src/features/telemetry/constants'
-import { openUri } from 'lx/src/utils/linking'
-import { logger } from 'utilities/src/logger/logger'
-import { isMobileWeb, isWebPlatform } from 'utilities/src/platform'
+import { Button, Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalProps } from '@luxexchange/lx/src/components/modals/ModalProps'
+import { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isMobileWeb, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 interface InfoModalProps {
   name: ModalNameType

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export type GradientContainerProps = {
   toTokenColor: string

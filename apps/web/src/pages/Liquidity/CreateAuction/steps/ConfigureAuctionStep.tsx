@@ -1,7 +1,7 @@
 import { Fraction } from '@uniswap/sdk-core'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text } from 'ui/src'
+import { Button, Flex, Text } from '@luxfi/ui/src'
 import {
   useCreateAuctionStore,
   useCreateAuctionStoreActions,

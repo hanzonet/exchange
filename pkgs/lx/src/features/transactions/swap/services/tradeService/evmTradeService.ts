@@ -1,13 +1,13 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import type { GetQuoteRequestResult } from 'lx/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import type { GetQuoteRequestResult } from '@luxexchange/lx/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
 import type {
   IndicativeQuoteRequest,
   TradeRepository,
-} from 'lx/src/features/transactions/swap/services/tradeService/tradeRepository'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeRepository'
 import {
   TradeService,
   TradeWithGasEstimates,
-} from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeService'
 import {
   createBuildQuoteRequest,
   flattenQuoteRequestResult,
@@ -15,23 +15,23 @@ import {
   UNCONNECTED_ADDRESS,
   type ValidatedTradeInput,
   validateParsedInput,
-} from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { transformQuoteToTrade } from 'lx/src/features/transactions/swap/services/tradeService/transformations/transformQuoteToTrade'
+} from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { transformQuoteToTrade } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/transformations/transformQuoteToTrade'
 import {
   IndicativeTrade,
   type UseTradeArgs,
   validateIndicativeQuoteResponse,
-} from 'lx/src/features/transactions/swap/types/trade'
-import { getIdentifierForQuote } from 'lx/src/features/transactions/swap/utils/getIdForQuote'
+} from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { getIdentifierForQuote } from '@luxexchange/lx/src/features/transactions/swap/utils/getIdForQuote'
 import {
   createGetProtocolsForChain,
   DEFAULT_PROTOCOL_OPTIONS,
-} from 'lx/src/features/transactions/swap/utils/protocols'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
 import {
   createGetQuoteRoutingParams,
   createGetQuoteSlippageParams,
-} from 'lx/src/features/transactions/swap/utils/tradingApi'
-import type { Logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
+import type { Logger } from '@luxfi/utilities/src/logger/logger'
 
 interface EVMTradeServiceContext {
   // Core dependencies

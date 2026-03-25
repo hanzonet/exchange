@@ -1,23 +1,23 @@
 import { call, put, type SagaGenerator, select } from 'typed-redux-saga'
-import { TradingApiSessionClient } from 'lx/src/data/apiClients/tradingApi/TradingApiSessionClient'
-import extractPlanResponseDetails from 'lx/src/features/activity/extract/extractPlanResponseDetails'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { selectPlanTransaction } from 'lx/src/features/transactions/selectors'
-import { transactionActions } from 'lx/src/features/transactions/slice'
-import { PlanWatcher } from 'lx/src/features/transactions/swap/plan/planWatcherSaga'
-import { activePlanStore } from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { TradingApiSessionClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiSessionClient'
+import extractPlanResponseDetails from '@luxexchange/lx/src/features/activity/extract/extractPlanResponseDetails'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { selectPlanTransaction } from '@luxexchange/lx/src/features/transactions/selectors'
+import { transactionActions } from '@luxexchange/lx/src/features/transactions/slice'
+import { PlanWatcher } from '@luxexchange/lx/src/features/transactions/swap/plan/planWatcherSaga'
+import { activePlanStore } from '@luxexchange/lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
 import {
   PlanTransactionDetails,
   TransactionDetails,
   TransactionStatus,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import {
   isFinalizedTx,
   isFinalizedTxStatus,
   isPlanTransactionDetails,
-} from 'lx/src/features/transactions/types/utils'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_HOUR_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/transactions/types/utils'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_HOUR_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 /** Maximum age for a plan to be watched - plans older than this are removed from the watcher */
 export const PLAN_MAX_AGE_MS = ONE_HOUR_MS

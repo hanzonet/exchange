@@ -1,19 +1,19 @@
 import { renderHook } from '@testing-library/react'
-import type { GasFeeResult } from '@universe/api'
+import type { GasFeeResult } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
-import { useTradingApiSwapQuery } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwapQuery'
-import { useIsSmartContractAddress } from 'lx/src/features/address/useIsSmartContractAddress'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useTransactionGasFee } from 'lx/src/features/gas/hooks'
-import { initialTransactionSettingsState } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
-import { useAllTransactionSettings } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import { useV4SwapEnabled } from 'lx/src/features/transactions/swap/hooks/useV4SwapEnabled'
-import type { SwapData } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
-import { usePermit2SignatureWithData } from 'lx/src/features/transactions/swap/stores/swapTxStore/hooks/usePermit2Signature'
-import { useTransactionRequestInfo } from 'lx/src/features/transactions/swap/stores/swapTxStore/hooks/useTransactionRequestInfo'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { ETH, WETH } from 'lx/src/test/fixtures'
-import { createMockDerivedSwapInfo, createMockTokenApprovalInfo } from 'lx/src/test/fixtures/transactions/swap'
+import { useTradingApiSwapQuery } from '@luxexchange/lx/src/data/apiClients/tradingApi/useTradingApiSwapQuery'
+import { useIsSmartContractAddress } from '@luxexchange/lx/src/features/address/useIsSmartContractAddress'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useTransactionGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { initialTransactionSettingsState } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
+import { useAllTransactionSettings } from '@luxexchange/lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { useV4SwapEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/useV4SwapEnabled'
+import type { SwapData } from '@luxexchange/lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
+import { usePermit2SignatureWithData } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/hooks/usePermit2Signature'
+import { useTransactionRequestInfo } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/hooks/useTransactionRequestInfo'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { ETH, WETH } from '@luxexchange/lx/src/test/fixtures'
+import { createMockDerivedSwapInfo, createMockTokenApprovalInfo } from '@luxexchange/lx/src/test/fixtures/transactions/swap'
 import type { Mock } from 'vitest'
 
 vi.mock('lx/src/data/apiClients/tradingApi/useTradingApiSwapQuery')
@@ -26,8 +26,8 @@ vi.mock(
     useAllTransactionSettings: vi.fn(),
   }),
 )
-vi.mock('@universe/gating', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('@universe/gating')>()
+vi.mock('@luxexchange/gating', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@luxexchange/gating')>()
   return {
     ...actual,
     useDynamicConfigValue: vi

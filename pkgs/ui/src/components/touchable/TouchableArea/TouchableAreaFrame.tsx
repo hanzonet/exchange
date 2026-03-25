@@ -1,7 +1,7 @@
 import { styled, YStack, type YStackProps } from '@hanzo/gui'
-import { FOCUS_SCALE } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
-import { withCommonPressStyle } from 'ui/src/components/buttons/Button/components/CustomButtonFrame/utils'
-import { isWebPlatform } from 'utilities/src/platform'
+import { FOCUS_SCALE } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/constants'
+import { withCommonPressStyle } from '@luxfi/ui/src/components/buttons/Button/components/CustomButtonFrame/utils'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 type TouchableAreaVariant = 'unstyled' | 'none' | 'outlined' | 'filled' | 'raised' | 'floating'
 

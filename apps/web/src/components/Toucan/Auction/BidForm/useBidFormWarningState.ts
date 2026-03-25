@@ -1,9 +1,9 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo } from 'react'
-import { getChainInfo, TOUCAN_AUCTION_SUPPORTED_CHAINS } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { areAddressesEqual } from 'lx/src/utils/addresses'
-import { isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
+import { getChainInfo, TOUCAN_AUCTION_SUPPORTED_CHAINS } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { areAddressesEqual } from '@luxexchange/lx/src/utils/addresses'
+import { isNativeCurrencyAddress } from '@luxexchange/lx/src/utils/currencyId'
 import { zeroAddress } from 'viem'
 import { AuctionProgressState, UserBid } from '~/components/Toucan/Auction/store/types'
 

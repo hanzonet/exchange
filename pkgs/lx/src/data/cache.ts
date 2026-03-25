@@ -1,9 +1,9 @@
 import { FieldFunctionOptions, InMemoryCache } from '@apollo/client'
 import { Reference, relayStylePagination, StoreObject } from '@apollo/client/utilities'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { currencyIdToAddress, currencyIdToChain } from 'lx/src/utils/currencyId'
-import { isTestEnv } from 'utilities/src/environment/env'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { currencyIdToAddress, currencyIdToChain } from '@luxexchange/lx/src/utils/currencyId'
+import { isTestEnv } from '@luxfi/utilities/src/environment/env'
 
 export function setupSharedApolloCache(): InMemoryCache {
   return new InMemoryCache({

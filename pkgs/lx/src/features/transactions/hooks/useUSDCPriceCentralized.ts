@@ -1,10 +1,10 @@
 import { Currency, CurrencyAmount, Price } from '@uniswap/sdk-core'
-import { normalizeToken, usePrice } from '@universe/prices'
+import { normalizeToken, usePrice } from '@luxexchange/prices'
 import { useMemo } from 'react'
-import type { PollingInterval } from 'lx/src/constants/misc'
-import { getPrimaryStablecoin, isUniverseChainId } from 'lx/src/features/chains/utils'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { logger } from 'utilities/src/logger/logger'
+import type { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { getPrimaryStablecoin, isUniverseChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 export function useUSDCPriceCentralized(
   currency?: Currency,

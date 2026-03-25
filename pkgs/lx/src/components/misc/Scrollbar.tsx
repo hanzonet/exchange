@@ -1,5 +1,5 @@
-import type { FlexProps } from 'ui/src'
-import type { SharedValue } from 'ui/src/animations'
+import type { FlexProps } from '@luxfi/ui/src'
+import type { SharedValue } from '@luxfi/ui/src/animations'
 
 export type ScrollbarProps = FlexProps & {
   visibleHeight: number

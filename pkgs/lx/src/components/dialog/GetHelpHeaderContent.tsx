@@ -1,7 +1,7 @@
-import { Flex, ModalCloseIcon, TouchableArea } from 'ui/src'
-import { BackArrow } from 'ui/src/components/icons/BackArrow'
-import { Text } from 'ui/src/components/text/Text'
-import type { GetHelpHeaderProps } from 'lx/src/components/dialog/GetHelpHeader'
+import { Flex, ModalCloseIcon, TouchableArea } from '@luxfi/ui/src'
+import { BackArrow } from '@luxfi/ui/src/components/icons/BackArrow'
+import { Text } from '@luxfi/ui/src/components/text/Text'
+import type { GetHelpHeaderProps } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
 
 export type GetHelpButtonProps = {
   url?: string

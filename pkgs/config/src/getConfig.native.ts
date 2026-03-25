@@ -36,7 +36,7 @@ import {
   WALLETCONNECT_PROJECT_ID_BETA,
   WALLETCONNECT_PROJECT_ID_DEV,
 } from 'react-native-dotenv'
-import { isNonTestDev } from 'utilities/src/environment/constants'
+import { isNonTestDev } from '@luxfi/utilities/src/environment/constants'
 
 // Module-level cache for config to avoid recomputing on every call
 let cachedConfig: Config | undefined

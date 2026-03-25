@@ -1,7 +1,7 @@
 import { Currency, Price, Token } from '@uniswap/sdk-core'
 import { encodeSqrtRatioX96, FeeAmount, nearestUsableTick, TICK_SPACINGS, TickMath } from '@uniswap/v3-sdk'
 import JSBI from 'jsbi'
-import { convertScientificNotationToNumber } from 'utilities/src/format/convertScientificNotation'
+import { convertScientificNotationToNumber } from '@luxfi/utilities/src/format/convertScientificNotation'
 
 export function tryParsePrice<T extends Currency>({
   baseToken,

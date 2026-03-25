@@ -1,12 +1,12 @@
 import { Currency, CurrencyAmount } from '@uniswap/sdk-core'
 import { ReactNode, RefObject } from 'react'
 import type { TextInput, TextInputProps } from 'react-native'
-import { FlexProps, TextProps } from 'ui/src'
-import { FontSizeOptions } from 'ui/src/hooks/useDynamicFontSizing'
-import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
-import { CurrencyField } from 'lx/src/types/currency'
+import { FlexProps, TextProps } from '@luxfi/ui/src'
+import { FontSizeOptions } from '@luxfi/ui/src/hooks/useDynamicFontSizing'
+import type { PresetPercentage } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { TransactionType } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 export type CurrencyInputPanelRef = {
   textInputRef: RefObject<TextInput | null>

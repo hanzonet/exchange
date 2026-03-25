@@ -1,15 +1,15 @@
 import { Fragment, PropsWithChildren, useRef, useState } from 'react'
-import { AdaptiveWebPopoverContent, Popover, RemoveScroll, useMedia } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { ContextMenuProps } from 'lx/src/components/menus/ContextMenu'
-import { MenuContent } from 'lx/src/components/menus/ContextMenuContent'
-import { useContextMenuTracking } from 'lx/src/components/menus/hooks/useContextMenuTracking'
-import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
-import { isWebApp } from 'utilities/src/platform'
-import { useEvent, useOnClickOutside } from 'utilities/src/react/hooks'
+import { AdaptiveWebPopoverContent, Popover, RemoveScroll, useMedia } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { ContextMenuProps } from '@luxexchange/lx/src/components/menus/ContextMenu'
+import { MenuContent } from '@luxexchange/lx/src/components/menus/ContextMenuContent'
+import { useContextMenuTracking } from '@luxexchange/lx/src/components/menus/hooks/useContextMenuTracking'
+import { ContextMenuTriggerMode } from '@luxexchange/lx/src/components/menus/types'
+import { isWebApp } from '@luxfi/utilities/src/platform'
+import { useEvent, useOnClickOutside } from '@luxfi/utilities/src/react/hooks'
 
-export { type ContextMenuProps } from 'lx/src/components/menus/ContextMenu'
-export type { MenuOptionItem } from 'lx/src/components/menus/ContextMenuContent'
+export { type ContextMenuProps } from '@luxexchange/lx/src/components/menus/ContextMenu'
+export type { MenuOptionItem } from '@luxexchange/lx/src/components/menus/ContextMenuContent'
 
 export function ContextMenu({
   menuItems,

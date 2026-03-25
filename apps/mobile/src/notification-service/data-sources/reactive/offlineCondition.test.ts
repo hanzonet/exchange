@@ -6,7 +6,7 @@ import {
   isOfflineBannerNotification,
   OFFLINE_BANNER_NOTIFICATION_ID,
 } from 'src/notification-service/data-sources/reactive/offlineCondition'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
 
 // Mock NetInfo
 const mockAddEventListener = jest.fn()

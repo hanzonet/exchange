@@ -1,28 +1,28 @@
 import { CurrencyAmount } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
-import { ETH_LOGO, ETHEREUM_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
+import { ETH_LOGO, ETHEREUM_LOGO } from '@luxfi/ui/src/assets'
+import { config } from '@luxexchange/lx/src/config'
 import {
   DEFAULT_MS_BEFORE_WARNING,
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   getPlaywrightRpcUrls,
   getQuicknodeEndpointUrl,
-} from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+} from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildDAI, buildUSDC, buildUSDT } from 'lx/src/features/tokens/stablecoin'
-import { isPlaywrightEnv } from 'utilities/src/environment/env'
-import { isWebApp } from 'utilities/src/platform'
-import { ONE_MINUTE_MS } from 'utilities/src/time/time'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildDAI, buildUSDC, buildUSDT } from '@luxexchange/lx/src/features/tokens/stablecoin'
+import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
+import { isWebApp } from '@luxfi/utilities/src/platform'
+import { ONE_MINUTE_MS } from '@luxfi/utilities/src/time/time'
 import { mainnet, sepolia } from 'wagmi/chains'
 
 const tokens = buildChainTokens({

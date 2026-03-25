@@ -2,18 +2,18 @@ import 'utilities/src/logger/mocks'
 import { useQuery } from '@tanstack/react-query'
 import { renderHook } from '@testing-library/react'
 import { providers } from 'ethers'
-import { useTransactionGasFee } from 'lx/src/features/gas/hooks'
-import { useCancellationGasFeeInfo } from 'lx/src/features/gas/hooks/useCancellationGasFeeInfo'
-import { usePlanCancellationGasFeeInfo } from 'lx/src/features/gas/hooks/usePlanCancellationGasFeeInfo'
-import * as CancelUtils from 'lx/src/features/gas/utils/cancel'
-import * as CancelMultipleOrders from 'lx/src/features/transactions/cancel/cancelMultipleOrders'
-import { getCancelOrderTxRequest } from 'lx/src/features/transactions/cancel/getCancelOrderTxRequest'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+import { useTransactionGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { useCancellationGasFeeInfo } from '@luxexchange/lx/src/features/gas/hooks/useCancellationGasFeeInfo'
+import { usePlanCancellationGasFeeInfo } from '@luxexchange/lx/src/features/gas/hooks/usePlanCancellationGasFeeInfo'
+import * as CancelUtils from '@luxexchange/lx/src/features/gas/utils/cancel'
+import * as CancelMultipleOrders from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
+import { getCancelOrderTxRequest } from '@luxexchange/lx/src/features/transactions/cancel/getCancelOrderTxRequest'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import type { Mock } from 'vitest'
 
 // Mock QueryClient before any imports that might use it

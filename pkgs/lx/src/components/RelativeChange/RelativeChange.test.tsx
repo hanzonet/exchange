@@ -1,7 +1,7 @@
-import { RelativeChange } from 'lx/src/components/RelativeChange/RelativeChange'
-import { FiatCurrencyInfo } from 'lx/src/features/fiatOnRamp/types'
-import { Locale } from 'lx/src/features/language/constants'
-import { renderWithProviders } from 'lx/src/test/render'
+import { RelativeChange } from '@luxexchange/lx/src/components/RelativeChange/RelativeChange'
+import { FiatCurrencyInfo } from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import { Locale } from '@luxexchange/lx/src/features/language/constants'
+import { renderWithProviders } from '@luxexchange/lx/src/test/render'
 
 const mockLocale = Locale.EnglishUnitedStates
 

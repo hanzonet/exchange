@@ -1,11 +1,11 @@
 import React from 'react'
 import type { ImageSourcePropType } from 'react-native'
-import { Flex, FlexProps, Image, Loader, useSporeColors } from 'ui/src'
-import { ALL_NETWORKS_LOGO } from 'ui/src/assets'
-import { iconSizes, zIndexes } from 'ui/src/theme'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isMobileWeb } from 'utilities/src/platform'
+import { Flex, FlexProps, Image, Loader, useSporeColors } from '@luxfi/ui/src'
+import { ALL_NETWORKS_LOGO } from '@luxfi/ui/src/assets'
+import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 
 export const SQUIRCLE_BORDER_RADIUS_RATIO = 0.3
 

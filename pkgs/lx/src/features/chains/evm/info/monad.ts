@@ -1,23 +1,23 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
-import { MONAD_LOGO_FILLED } from 'ui/src/assets'
+import { MONAD_LOGO_FILLED } from '@luxfi/ui/src/assets'
 import {
   DEFAULT_MS_BEFORE_WARNING,
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   getQuicknodeEndpointUrl,
-} from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+} from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildUSDC } from 'lx/src/features/tokens/stablecoin'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildUSDC } from '@luxexchange/lx/src/features/tokens/stablecoin'
 
 const mainnetTokens = buildChainTokens({
   stables: {

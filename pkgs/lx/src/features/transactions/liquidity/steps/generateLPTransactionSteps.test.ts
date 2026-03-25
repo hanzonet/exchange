@@ -7,16 +7,16 @@ import {
   V3Pool,
   V3Position,
 } from '@uniswap/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { DEFAULT_TICK_SPACING } from 'lx/src/constants/pools'
-import { USDC, USDT } from 'lx/src/constants/tokens'
-import { generateLPTransactionSteps } from 'lx/src/features/transactions/liquidity/steps/generateLPTransactionSteps'
+import { DEFAULT_TICK_SPACING } from '@luxexchange/lx/src/constants/pools'
+import { USDC, USDT } from '@luxexchange/lx/src/constants/tokens'
+import { generateLPTransactionSteps } from '@luxexchange/lx/src/features/transactions/liquidity/steps/generateLPTransactionSteps'
 import {
   IncreasePositionTxAndGasInfo,
   LiquidityTransactionType,
   LiquidityTxAndGasInfo,
-} from 'lx/src/features/transactions/liquidity/types'
-import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
-import { createMockCurrencyAmount } from 'lx/src/test/fixtures/transactions/swap'
+} from '@luxexchange/lx/src/features/transactions/liquidity/types'
+import { TransactionStepType } from '@luxexchange/lx/src/features/transactions/steps/types'
+import { createMockCurrencyAmount } from '@luxexchange/lx/src/test/fixtures/transactions/swap'
 
 const mockTxRequest = {
   chainId: 1,

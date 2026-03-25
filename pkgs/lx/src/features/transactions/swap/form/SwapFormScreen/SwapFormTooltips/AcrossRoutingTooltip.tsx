@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { TransactionDetailsTooltip as Tooltip } from 'lx/src/components/TransactionDetailsTooltip'
+import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
 
 export function AcrossRoutingInfoTooltip(): JSX.Element {
   const { t } = useTranslation()

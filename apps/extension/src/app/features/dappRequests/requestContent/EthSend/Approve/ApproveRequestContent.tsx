@@ -8,17 +8,17 @@ import {
   ApproveSendTransactionRequest,
   DappRequest as DappRequestBaseType,
 } from 'src/app/features/dappRequests/types/DappRequestTypes'
-import { Flex, Text } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { luxUrls } from 'lx/src/constants/urls'
-import { DappRequestType } from 'lx/src/features/dappRequests/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TransactionType, TransactionTypeInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { useNoYoloParser } from 'wallet/src/utils/useNoYoloParser'
+import { Flex, Text } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { DappRequestType } from '@luxexchange/lx/src/features/dappRequests/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TransactionType, TransactionTypeInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { useNoYoloParser } from '@luxfi/wallet/src/utils/useNoYoloParser'
 
 function useDappRequestTokenRecipientInfo(request: DappRequestBaseType, dappUrl: string): Maybe<CurrencyInfo> {
   const activeChain = useDappLastChainId(dappUrl)

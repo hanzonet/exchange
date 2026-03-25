@@ -2,10 +2,10 @@ import { TransactionRequest } from '@ethersproject/providers'
 import { renderHook } from '@testing-library/react'
 import { GasFeeResult } from '@luxexchange/api'
 import { useTransactionGasEstimation } from 'src/app/features/dappRequests/hooks/useTransactionGasEstimation'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useTransactionGasFee } from 'lx/src/features/gas/hooks'
-import { logger } from 'utilities/src/logger/logger'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useTransactionGasFee } from '@luxexchange/lx/src/features/gas/hooks'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 // Mock dependencies
 jest.mock('lx/src/features/gas/hooks', () => ({

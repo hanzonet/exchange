@@ -11,29 +11,29 @@ import { setDatadogUserWithUniqueId } from 'src/features/datadog/user'
 import { OneSignalUserTagField } from 'src/features/notifications/constants'
 import { getAuthMethod } from 'src/features/telemetry/utils'
 import { getFullAppVersion } from 'src/utils/version'
-import { useIsDarkMode } from 'ui/src'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { useAppFiatCurrency } from 'lx/src/features/fiatCurrency/hooks'
-import { useCurrentLanguageInfo } from 'lx/src/features/language/hooks'
-import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from 'lx/src/features/settings/hooks'
-import { MobileUserPropertyName, setUserProperty } from 'lx/src/features/telemetry/user'
-import { logger } from 'utilities/src/logger/logger'
-import { isAndroid } from 'utilities/src/platform'
+import { useIsDarkMode } from '@luxfi/ui/src'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { useAppFiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/hooks'
+import { useCurrentLanguageInfo } from '@luxexchange/lx/src/features/language/hooks'
+import { useHideSmallBalancesSetting, useHideSpamTokensSetting } from '@luxexchange/lx/src/features/settings/hooks'
+import { MobileUserPropertyName, setUserProperty } from '@luxexchange/lx/src/features/telemetry/user'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 // biome-ignore lint/style/noRestrictedImports: Required for analytics user properties
-import { analytics } from 'utilities/src/telemetry/analytics/analytics'
-import { useAccountBalances } from 'wallet/src/features/accounts/useAccountListData'
-import { useGatingUserPropertyUsernames } from 'wallet/src/features/gating/userPropertyHooks'
-import { selectAllowAnalytics } from 'wallet/src/features/telemetry/selectors'
-import { BackupType } from 'wallet/src/features/wallet/accounts/types'
-import { hasBackup } from 'wallet/src/features/wallet/accounts/utils'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
+import { useAccountBalances } from '@luxfi/wallet/src/features/accounts/useAccountListData'
+import { useGatingUserPropertyUsernames } from '@luxfi/wallet/src/features/gating/userPropertyHooks'
+import { selectAllowAnalytics } from '@luxfi/wallet/src/features/telemetry/selectors'
+import { BackupType } from '@luxfi/wallet/src/features/wallet/accounts/types'
+import { hasBackup } from '@luxfi/wallet/src/features/wallet/accounts/utils'
 import {
   useActiveAccount,
   useSignerAccounts,
   useSwapProtectionSetting,
   useViewOnlyAccounts,
-} from 'wallet/src/features/wallet/hooks'
-import { Keyring } from 'wallet/src/features/wallet/Keyring/Keyring'
-import { selectFinishedOnboarding } from 'wallet/src/features/wallet/selectors'
+} from '@luxfi/wallet/src/features/wallet/hooks'
+import { Keyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring'
+import { selectFinishedOnboarding } from '@luxfi/wallet/src/features/wallet/selectors'
 
 /** Component that tracks UserProperties during the lifetime of the app */
 export function TraceUserProperties(): null {

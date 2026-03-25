@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react'
-import { ModalNameType } from 'lx/src/features/telemetry/constants'
+import { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
 import { setCloseModal, setOpenModal } from '~/state/application/reducer'
 import { useAppDispatch, useAppSelector } from '~/state/hooks'
 

@@ -1,10 +1,10 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useTokenSectionsForEmptySearch } from 'lx/src/components/TokenSelector/hooks/useTokenSectionsForEmptySearch'
-import { TokenSelectorList } from 'lx/src/components/TokenSelector/TokenSelectorList'
-import { OnSelectCurrency } from 'lx/src/components/TokenSelector/types'
-import type { AddressGroup } from 'lx/src/features/accounts/store/types/AccountsState'
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useTokenSectionsForEmptySearch } from '@luxexchange/lx/src/components/TokenSelector/hooks/useTokenSectionsForEmptySearch'
+import { TokenSelectorList } from '@luxexchange/lx/src/components/TokenSelector/TokenSelectorList'
+import { OnSelectCurrency } from '@luxexchange/lx/src/components/TokenSelector/types'
+import type { AddressGroup } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 function _TokenSelectorEmptySearchList({
   addresses,

@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text } from 'ui/src'
-import { QuestionInCircle } from 'ui/src/components/icons/QuestionInCircle'
-import { GetHelpHeader } from 'lx/src/components/dialog/GetHelpHeader'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Button, Flex, Text } from '@luxfi/ui/src'
+import { QuestionInCircle } from '@luxfi/ui/src/components/icons/QuestionInCircle'
+import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 interface ResetCreatePositionFormModalProps {
   isOpen: boolean

@@ -1,6 +1,6 @@
 import { Signer } from '@ethersproject/abstract-signer'
-import { HexString } from 'utilities/src/addresses/hex'
-import { sleep } from 'utilities/src/time/timing'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
+import { sleep } from '@luxfi/utilities/src/time/timing'
 import { z } from 'zod'
 
 // Common Flashbots constants

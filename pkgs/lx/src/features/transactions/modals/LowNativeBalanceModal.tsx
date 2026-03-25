@@ -1,11 +1,11 @@
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { Checkbox, Flex, Text, TouchableArea } from 'ui/src'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { setHasDismissedLowNetworkTokenWarning } from 'lx/src/features/behaviorHistory/slice'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Checkbox, Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { setHasDismissedLowNetworkTokenWarning } from '@luxexchange/lx/src/features/behaviorHistory/slice'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 
 interface LowNativeBalanceModalProps {
   isOpen: boolean

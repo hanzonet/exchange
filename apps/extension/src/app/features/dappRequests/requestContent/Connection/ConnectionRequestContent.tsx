@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { DappRequestContent } from 'src/app/features/dappRequests/DappRequestContent'
 import { useDappRequestQueueContext } from 'src/app/features/dappRequests/DappRequestQueueContext'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { DappConnectionContent } from 'wallet/src/components/dappRequests/DappConnectionContent'
-import { useBlockaidVerification } from 'wallet/src/features/dappRequests/hooks/useBlockaidVerification'
-import { useDappConnectionConfirmation } from 'wallet/src/features/dappRequests/hooks/useDappConnectionConfirmation'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { DappConnectionContent } from '@luxfi/wallet/src/components/dappRequests/DappConnectionContent'
+import { useBlockaidVerification } from '@luxfi/wallet/src/features/dappRequests/hooks/useBlockaidVerification'
+import { useDappConnectionConfirmation } from '@luxfi/wallet/src/features/dappRequests/hooks/useDappConnectionConfirmation'
 
 export function ConnectionRequestContent(): JSX.Element {
   const { t } = useTranslation()

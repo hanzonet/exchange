@@ -1,6 +1,6 @@
 import { WalletSignTransactionError } from '@solana/wallet-adapter-base'
 import { TFunction } from 'i18next'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 import { UserRejectedRequestError } from '~/utils/errors'
 
 /** Attempts to extract a string from an error, based on common error object formats */

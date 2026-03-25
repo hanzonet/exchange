@@ -1,9 +1,9 @@
 import type { ColorTokens } from '@hanzo/gui'
-import { TransitionItem } from 'ui/src/animations/components/AnimatePresencePager'
-import { CheckmarkCircle } from 'ui/src/components/icons/CheckmarkCircle'
-import { CopySheets } from 'ui/src/components/icons/CopySheets'
-import { Flex } from 'ui/src/components/layout'
-import { isWebApp } from 'utilities/src/platform'
+import { TransitionItem } from '@luxfi/ui/src/animations/components/AnimatePresencePager'
+import { CheckmarkCircle } from '@luxfi/ui/src/components/icons/CheckmarkCircle'
+import { CopySheets } from '@luxfi/ui/src/components/icons/CopySheets'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 export interface CopyIconProps {
   isAnimated?: boolean

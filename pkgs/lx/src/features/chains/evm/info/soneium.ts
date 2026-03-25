@@ -1,23 +1,23 @@
 import { Token } from '@uniswap/sdk-core'
-import { GraphQLApi } from '@universe/api'
-import { ETH_LOGO, SONEIUM_LOGO } from 'ui/src/assets'
+import { GraphQLApi } from '@luxexchange/api'
+import { ETH_LOGO, SONEIUM_LOGO } from '@luxfi/ui/src/assets'
 import {
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   DEFAULT_RETRY_OPTIONS,
   getQuicknodeEndpointUrl,
-} from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
-import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
+} from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
+import { GENERIC_L2_GAS_CONFIG } from '@luxexchange/lx/src/features/chains/gasDefaults'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { isWebApp } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 import { soneium } from 'wagmi/chains'
 
 const tokens = buildChainTokens({

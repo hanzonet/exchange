@@ -9,13 +9,13 @@ import {
 } from 'src/features/notifications/hooks/useNotificationOSPermissionsEnabled'
 import { usePromptPushPermission } from 'src/features/notifications/hooks/usePromptPushPermission'
 import { openNotificationSettings } from 'src/utils/linking'
-import { Button, Flex } from 'ui/src'
-import { BellOn } from 'ui/src/components/icons/BellOn'
-import { GenericHeader } from 'lx/src/components/misc/GenericHeader'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
+import { Button, Flex } from '@luxfi/ui/src'
+import { BellOn } from '@luxfi/ui/src/components/icons/BellOn'
+import { GenericHeader } from '@luxexchange/lx/src/components/misc/GenericHeader'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
 
 type NotificationsOSSettingsModalProps = {
   navigation: SettingsStackNavigationProp

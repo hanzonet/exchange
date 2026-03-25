@@ -1,5 +1,5 @@
-import { colorsLight } from 'ui/src/theme'
-import { AdjustmentType, adjustColorVariant, findNearestThemeColor, getColorDiffScore } from 'lx/src/utils/colors'
+import { colorsLight } from '@luxfi/ui/src/theme'
+import { AdjustmentType, adjustColorVariant, findNearestThemeColor, getColorDiffScore } from '@luxexchange/lx/src/utils/colors'
 
 describe('adjustColorVariant', () => {
   it('handles undefined', () => {

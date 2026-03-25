@@ -1,19 +1,19 @@
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
-import { CELO_LOGO } from 'ui/src/assets'
-import { config } from 'lx/src/config'
-import { getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { CELO_LOGO } from '@luxfi/ui/src/assets'
+import { config } from '@luxexchange/lx/src/config'
+import { getQuicknodeEndpointUrl } from '@luxexchange/lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from '@luxexchange/lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
   RPCType,
   UniverseChainId,
   UniverseChainInfo,
-} from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { buildUSDC } from 'lx/src/features/tokens/stablecoin'
+} from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { buildUSDC } from '@luxexchange/lx/src/features/tokens/stablecoin'
 import { celo } from 'wagmi/chains'
 
 const tokens = buildChainTokens({

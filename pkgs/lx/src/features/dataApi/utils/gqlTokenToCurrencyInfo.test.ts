@@ -1,11 +1,11 @@
 import { GraphQLApi } from '@luxfi/api'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { buildCurrency } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
 import {
   GqlTokenToCurrencyInfoToken,
   gqlTokenToCurrencyInfo,
-} from 'lx/src/features/dataApi/utils/gqlTokenToCurrencyInfo'
-import { ethToken, removeSafetyInfo } from 'lx/src/test/fixtures'
+} from '@luxexchange/lx/src/features/dataApi/utils/gqlTokenToCurrencyInfo'
+import { ethToken, removeSafetyInfo } from '@luxexchange/lx/src/test/fixtures'
 
 describe(gqlTokenToCurrencyInfo, () => {
   it('returns formatted CurrencyInfo for a given token', () => {

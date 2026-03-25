@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Gift } from 'ui/src/components/icons/Gift'
-import { X } from 'ui/src/components/icons/X'
-import { Flex } from 'ui/src/components/layout'
-import { useSporeColorsForTheme } from 'ui/src/hooks/useSporeColors'
-import { styled, Text, TouchableArea } from 'ui/src/index'
+import { Gift } from '@luxfi/ui/src/components/icons/Gift'
+import { X } from '@luxfi/ui/src/components/icons/X'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { useSporeColorsForTheme } from '@luxfi/ui/src/hooks/useSporeColors'
+import { styled, Text, TouchableArea } from '@luxfi/ui/src/index'
 import {
   MouseGlow,
   renderSnowflakesWeb,
   SnowflakeContainer,
-} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
-import { LuxWrapped2025BannerProps } from 'lx/src/components/banners/LuxWrapped2025Banner/types'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
-import { isExtensionApp } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { LuxWrapped2025BannerProps } from '@luxexchange/lx/src/components/banners/LuxWrapped2025Banner/types'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useSnowflakeAnimation } from '@luxexchange/lx/src/hooks/useSnowflakeAnimation'
+import { isExtensionApp } from '@luxfi/utilities/src/platform'
 
 const BannerWrapper = styled(Flex, {
   width: '100%',

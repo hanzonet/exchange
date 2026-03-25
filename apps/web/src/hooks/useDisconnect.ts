@@ -1,8 +1,8 @@
 import { useWallet as useSolanaWalletContext } from '@solana/wallet-adapter-react'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { tryCatch } from 'utilities/src/errors'
-import { logger } from 'utilities/src/logger/logger'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { tryCatch } from '@luxfi/utilities/src/errors'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 // biome-ignore lint/style/noRestrictedImports: wagmi hook needed for wallet disconnection
 import { useDisconnect as useDisconnectWagmi } from 'wagmi'
 

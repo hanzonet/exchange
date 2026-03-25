@@ -3,8 +3,8 @@
  * Web Workers are not available in React Native.
  */
 
-import type { HashcashWorkerChannel } from '@universe/sessions/src/challenge-solvers/hashcash/worker/types'
-import { NotImplementedError } from 'utilities/src/errors'
+import type { HashcashWorkerChannel } from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
+import { NotImplementedError } from '@luxfi/utilities/src/errors'
 
 /**
  * Configuration for multi-worker hashcash channel.

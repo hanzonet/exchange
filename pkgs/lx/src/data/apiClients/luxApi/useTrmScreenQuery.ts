@@ -1,8 +1,8 @@
 import { skipToken, type UseQueryResult, useQuery } from '@tanstack/react-query'
-import { type ScreenRequest, type ScreenResponse, type UseQueryApiHelperHookArgs } from '@universe/api'
-import { luxUrls } from 'lx/src/constants/urls'
-import { LuxApiClient } from 'lx/src/data/apiClients/luxApi/LuxApiClient'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
+import { type ScreenRequest, type ScreenResponse, type UseQueryApiHelperHookArgs } from '@luxexchange/api'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { LuxApiClient } from '@luxexchange/lx/src/data/apiClients/luxApi/LuxApiClient'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
 
 export function useTrmScreenQuery({
   params,

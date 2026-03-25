@@ -1,9 +1,9 @@
 import 'utilities/src/logger/mocks'
-import { TradingApi } from '@universe/api'
+import { TradingApi } from '@luxexchange/api'
 import { ContractTransaction, providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { InterfaceEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import {
   cancelMultipleDEXOrders,
   extractCancellationData,
@@ -12,10 +12,10 @@ import {
   getOrdersMatchingCancellationData,
   LimitOrdersFetcher,
   trackOrderCancellation,
-} from 'lx/src/features/transactions/cancel/cancelMultipleOrders'
-import { buildBatchCancellation } from 'lx/src/features/transactions/cancel/cancelOrderFactory'
-import { DEXOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
-import { dexOrderDetails } from 'lx/src/test/fixtures'
+} from '@luxexchange/lx/src/features/transactions/cancel/cancelMultipleOrders'
+import { buildBatchCancellation } from '@luxexchange/lx/src/features/transactions/cancel/cancelOrderFactory'
+import { DEXOrderDetails } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { dexOrderDetails } from '@luxexchange/lx/src/test/fixtures'
 import type { Mock, Mocked } from 'vitest'
 
 vi.mock('lx/src/features/telemetry/send')
@@ -26,7 +26,7 @@ vi.mock('lx/src/features/transactions/swap/orders', () => ({
   getOrders: vi.fn(),
 }))
 
-import { getOrders } from 'lx/src/features/transactions/swap/orders'
+import { getOrders } from '@luxexchange/lx/src/features/transactions/swap/orders'
 
 const mockGetOrders = getOrders as Mock
 

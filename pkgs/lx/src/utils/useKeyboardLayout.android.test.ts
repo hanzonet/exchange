@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react'
 import { DeviceEventEmitter, Dimensions } from 'react-native'
 import { act } from 'react-test-renderer'
-import { useKeyboardLayout } from 'lx/src/utils/useKeyboardLayout'
+import { useKeyboardLayout } from '@luxexchange/lx/src/utils/useKeyboardLayout'
 
 const KEYBOARD_HEIGHT = 300
 const HIDDEN_KEYBOARD_Y = Dimensions.get('window').height

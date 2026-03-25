@@ -1,9 +1,9 @@
 import { startTransition, useEffect, useState } from 'react'
-import { Flex, type FlexProps, styled } from 'ui/src'
-import { validColor } from 'ui/src/theme'
-import { ItemData, ItemPoint } from 'lx/src/components/IconCloud/IconCloud'
-import { randomChoice } from 'lx/src/components/IconCloud/utils'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { Flex, type FlexProps, styled } from '@luxfi/ui/src'
+import { validColor } from '@luxfi/ui/src/theme'
+import { ItemData, ItemPoint } from '@luxexchange/lx/src/components/IconCloud/IconCloud'
+import { randomChoice } from '@luxexchange/lx/src/components/IconCloud/utils'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 function TokenIconPositioner({
   size,

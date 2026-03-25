@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { NumberType } from 'utilities/src/format/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function useActualSwapOutput(): {
   outputCurrencyInfo?: CurrencyInfo

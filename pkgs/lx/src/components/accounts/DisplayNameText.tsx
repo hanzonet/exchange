@@ -1,9 +1,9 @@
-import { Flex, FlexProps, Text, TextProps } from 'ui/src'
-import { Unitag } from 'ui/src/components/icons/Unitag'
-import { IconSizeTokens } from 'ui/src/theme'
-import { DisplayName, DisplayNameType } from 'lx/src/features/accounts/types'
-import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
-import { isAndroid } from 'utilities/src/platform'
+import { Flex, FlexProps, Text, TextProps } from '@luxfi/ui/src'
+import { Unitag } from '@luxfi/ui/src/components/icons/Unitag'
+import { IconSizeTokens } from '@luxfi/ui/src/theme'
+import { DisplayName, DisplayNameType } from '@luxexchange/lx/src/features/accounts/types'
+import { UNITAG_SUFFIX } from '@luxexchange/lx/src/features/unitags/constants'
+import { isAndroid } from '@luxfi/utilities/src/platform'
 
 type DisplayNameProps = {
   displayName?: DisplayName

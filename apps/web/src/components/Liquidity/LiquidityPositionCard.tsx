@@ -3,15 +3,15 @@ import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Shine, Text, TouchableArea, useIsTouchDevice, useMedia } from 'ui/src'
-import { ArrowsLeftRight } from 'ui/src/components/icons/ArrowsLeftRight'
-import { zIndexes } from 'ui/src/theme'
+import { Flex, Shine, Text, TouchableArea, useIsTouchDevice, useMedia } from '@luxfi/ui/src'
+import { ArrowsLeftRight } from '@luxfi/ui/src/components/icons/ArrowsLeftRight'
+import { zIndexes } from '@luxfi/ui/src/theme'
 import { PollingInterval } from 'uniswap/src/constants/misc'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
 import { useUSDCValue } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { buildCurrencyId, currencyAddress } from 'uniswap/src/utils/currencyId'
-import { NumberType } from 'utilities/src/format/types'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 import {
   CHART_HEIGHT,
   CHART_WIDTH,

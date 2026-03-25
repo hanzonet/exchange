@@ -1,11 +1,11 @@
-import { ContentStyle, type InAppNotification, OnClickAction } from '@universe/api'
-import { createNotificationProcessor } from '@universe/notifications/src/notification-processor/implementations/createNotificationProcessor'
+import { ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
+import { createNotificationProcessor } from '@luxexchange/notifications/src/notification-processor/implementations/createNotificationProcessor'
 import {
   type NotificationProcessor,
   type NotificationProcessorResult,
-} from '@universe/notifications/src/notification-processor/NotificationProcessor'
-import { type NotificationTracker } from '@universe/notifications/src/notification-tracker/NotificationTracker'
-import { getLogger } from 'utilities/src/logger/logger'
+} from '@luxexchange/notifications/src/notification-processor/NotificationProcessor'
+import { type NotificationTracker } from '@luxexchange/notifications/src/notification-tracker/NotificationTracker'
+import { getLogger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Creates a base notification processor that implements style-based deduplication and limiting,

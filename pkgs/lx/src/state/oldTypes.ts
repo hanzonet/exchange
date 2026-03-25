@@ -1,8 +1,8 @@
 import { ProtocolVersion } from '@uniswap/client-data-api/dist/data/v1/poolTypes_pb'
 import { GraphQLApi } from '@luxfi/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { SafetyInfo } from 'lx/src/features/dataApi/types'
-import { CurrencyId } from 'lx/src/types/currency'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { SafetyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { CurrencyId } from '@luxexchange/lx/src/types/currency'
 
 // Web: 55
 // Mobile: 93

@@ -1,8 +1,8 @@
 import { ApolloError } from '@apollo/client'
 import { GraphQLApi } from '@luxexchange/api'
 import { useEffect } from 'react'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { useIsOffline } from 'utilities/src/connection/useIsOffline'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { useIsOffline } from '@luxfi/utilities/src/connection/useIsOffline'
 import { useManualChainOutageStore } from '~/state/outage/store'
 import { isOutageError } from '~/utils/errors/isOutageError'
 

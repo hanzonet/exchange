@@ -1,16 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { iconSizes } from 'ui/src/theme'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import {
   TwoTokenDetails,
   useTokenAmountInfo,
   ValueText,
-} from 'lx/src/components/activity/details/transactions/utilityComponents'
-import { useTokenDetailsNavigation } from 'lx/src/components/activity/hooks/useTokenDetailsNavigation'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { LiquidityTransactionBaseInfos } from 'lx/src/features/transactions/types/transactionDetails'
+} from '@luxexchange/lx/src/components/activity/details/transactions/utilityComponents'
+import { useTokenDetailsNavigation } from '@luxexchange/lx/src/components/activity/hooks/useTokenDetailsNavigation'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { LiquidityTransactionBaseInfos } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 
 export function LiquidityTransactionDetails({
   typeInfo,

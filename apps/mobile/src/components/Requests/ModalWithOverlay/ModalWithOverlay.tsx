@@ -14,12 +14,12 @@ import {
 } from 'react-native'
 import { AnimatedStyle, useDerivedValue } from 'react-native-reanimated'
 import { ScrollDownOverlay } from 'src/components/Requests/ModalWithOverlay/ScrollDownOverlay'
-import { Button, ButtonProps, Flex } from 'ui/src'
-import { spacing } from 'ui/src/theme'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalProps } from 'lx/src/components/modals/ModalProps'
-import { useAppInsets } from 'lx/src/hooks/useAppInsets'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { Button, ButtonProps, Flex } from '@luxfi/ui/src'
+import { spacing } from '@luxfi/ui/src/theme'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalProps } from '@luxexchange/lx/src/components/modals/ModalProps'
+import { useAppInsets } from '@luxexchange/lx/src/hooks/useAppInsets'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 const MEASURE_LAYOUT_TIMEOUT = 100
 

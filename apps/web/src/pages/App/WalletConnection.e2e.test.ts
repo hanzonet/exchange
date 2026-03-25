@@ -1,6 +1,6 @@
 import { FeatureFlags, getFeatureFlagName } from '@luxexchange/gating'
 import ms from 'ms'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { getVisibleDropdownElementByTestId } from '~/playwright/fixtures/utils'
 

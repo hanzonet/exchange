@@ -1,5 +1,5 @@
-import { ColorTokens } from 'ui/src'
-import { SLIPPAGE_CRITICAL_TOLERANCE } from 'lx/src/constants/transactions'
+import { ColorTokens } from '@luxfi/ui/src'
+import { SLIPPAGE_CRITICAL_TOLERANCE } from '@luxexchange/lx/src/constants/transactions'
 
 export function getSlippageWarningColor({
   customSlippageValue,

@@ -1,17 +1,17 @@
 import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
-import { EM_DASH, Flex, flexStyles, Text, TouchableArea } from 'ui/src'
-import { CopyAlt } from 'ui/src/components/icons'
-import { iconSizes } from 'ui/src/theme'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
+import { EM_DASH, Flex, flexStyles, Text, TouchableArea } from '@luxfi/ui/src'
+import { CopyAlt } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
 import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
-} from 'lx/src/data/graphql/lux-data-api/fragments'
-import { selectHasViewedContractAddressExplainer } from 'lx/src/features/behaviorHistory/selectors'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { selectHasViewedContractAddressExplainer } from '@luxexchange/lx/src/features/behaviorHistory/selectors'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 export const TokenDetailsHeader = memo(function _TokenDetailsHeader(): JSX.Element {
   const { currencyId, openContractAddressExplainerModal, copyAddressToClipboard } = useTokenDetailsContext()

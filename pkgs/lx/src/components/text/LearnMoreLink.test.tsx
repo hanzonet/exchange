@@ -1,5 +1,5 @@
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import { renderWithProviders } from 'lx/src/test/render'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import { renderWithProviders } from '@luxexchange/lx/src/test/render'
 
 vi.mock('lx/src/utils/linking', () => ({
   openUri: vi.fn(),

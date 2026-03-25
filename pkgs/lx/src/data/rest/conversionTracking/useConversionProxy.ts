@@ -4,7 +4,7 @@ import { useMutation } from '@connectrpc/connect-query'
 import { type UseMutationResult } from '@tanstack/react-query'
 import { ConversionTrackingApi, createConnectTransportWithDefaults } from '@luxfi/api'
 import { FeatureFlags, useFeatureFlag } from '@luxfi/gating'
-import { getConversionProxyApiBaseUrl } from 'lx/src/data/rest/conversionTracking/utils'
+import { getConversionProxyApiBaseUrl } from '@luxexchange/lx/src/data/rest/conversionTracking/utils'
 
 const createConversionProxyTransport = (isConversionApiMigrationEnabled: boolean): Transport =>
   createConnectTransportWithDefaults({

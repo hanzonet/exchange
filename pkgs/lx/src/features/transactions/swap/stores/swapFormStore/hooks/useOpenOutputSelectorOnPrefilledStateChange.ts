@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
+import type { SwapFormState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/types'
 
 export const useOpenOutputSelectorOnPrefilledStateChange = ({
   prefilledSelectingCurrencyField,

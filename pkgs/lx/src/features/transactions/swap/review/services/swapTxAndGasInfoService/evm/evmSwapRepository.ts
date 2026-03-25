@@ -1,9 +1,9 @@
 import { TransactionRequest } from '@ethersproject/providers'
 import { GasEstimate, TradingApi } from '@luxfi/api'
-import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { SwapDelegationInfo } from 'lx/src/features/smartWallet/delegation/types'
-import { tradingApiToUniverseChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
+import { TradingApiClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { SwapDelegationInfo } from '@luxexchange/lx/src/features/smartWallet/delegation/types'
+import { tradingApiToUniverseChainId } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
 
 export type SwapData = {
   requestId: string

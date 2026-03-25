@@ -1,14 +1,14 @@
-import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import type { SwapTxStoreState } from 'lx/src/features/transactions/swap/stores/swapTxStore/createSwapTxStore'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { SwapExecutionCallbacks } from 'lx/src/features/transactions/swap/types/swapCallback'
+import type { PresetPercentage } from '@luxexchange/lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import type { SwapTxStoreState } from '@luxexchange/lx/src/features/transactions/swap/stores/swapTxStore/createSwapTxStore'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { SwapExecutionCallbacks } from '@luxexchange/lx/src/features/transactions/swap/types/swapCallback'
 import type {
   ExecuteSwapCallback,
   PrepareSwapCallback,
-} from 'lx/src/features/transactions/swap/types/swapHandlers'
-import type { SwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { isValidSwapTxContext } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/swap/types/swapHandlers'
+import type { SwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { isValidSwapTxContext } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 type ExecuteSwap = () => void
 

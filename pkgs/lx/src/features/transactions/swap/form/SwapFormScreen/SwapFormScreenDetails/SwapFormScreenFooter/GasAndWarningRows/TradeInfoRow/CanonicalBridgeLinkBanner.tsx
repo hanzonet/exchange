@@ -1,12 +1,12 @@
-import { Flex, Text, TouchableArea } from 'ui/src'
-import { Arrow } from 'ui/src/components/arrow/Arrow'
-import { iconSizes, validColor } from 'ui/src/theme'
-import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
-import { getCanonicalBridgingDappUrls } from 'lx/src/features/bridging/constants'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { getChainLabel } from 'lx/src/features/chains/utils'
-import { useNetworkColors } from 'lx/src/utils/colors'
-import { openUri } from 'lx/src/utils/linking'
+import { Flex, Text, TouchableArea } from '@luxfi/ui/src'
+import { Arrow } from '@luxfi/ui/src/components/arrow/Arrow'
+import { iconSizes, validColor } from '@luxfi/ui/src/theme'
+import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
+import { getCanonicalBridgingDappUrls } from '@luxexchange/lx/src/features/bridging/constants'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { getChainLabel } from '@luxexchange/lx/src/features/chains/utils'
+import { useNetworkColors } from '@luxexchange/lx/src/utils/colors'
+import { openUri } from '@luxexchange/lx/src/utils/linking'
 
 export function CanonicalBridgeLinkBanner({ chainId }: { chainId: UniverseChainId }): JSX.Element {
   const { foreground } = useNetworkColors(chainId)

@@ -4,13 +4,13 @@ import { fireGestureHandler, getByGestureTestId } from 'react-native-gesture-han
 import { navigationRef } from 'src/app/navigation/navigationRef'
 import { AccountHeader } from 'src/components/accounts/AccountHeader'
 import { fireEvent, render, screen, waitFor, within } from 'src/test/test-utils'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { MobileScreens } from 'lx/src/types/screens/mobile'
-import { sanitizeAddressText } from 'lx/src/utils/addresses'
-import { shortenAddress } from 'utilities/src/addresses'
-import { ACCOUNT, preloadedWalletPackageState, signerMnemonicAccount } from 'wallet/src/test/fixtures'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { ON_PRESS_EVENT_PAYLOAD } from '@luxexchange/lx/src/test/fixtures'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { MobileScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { sanitizeAddressText } from '@luxexchange/lx/src/utils/addresses'
+import { shortenAddress } from '@luxfi/utilities/src/addresses'
+import { ACCOUNT, preloadedWalletPackageState, signerMnemonicAccount } from '@luxfi/wallet/src/test/fixtures'
 
 const preloadedState = preloadedWalletPackageState({ account: ACCOUNT })
 const address = ACCOUNT.address

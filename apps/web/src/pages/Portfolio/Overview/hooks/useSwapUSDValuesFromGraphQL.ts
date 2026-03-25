@@ -1,9 +1,9 @@
 import { GraphQLApi } from '@luxfi/api'
 import { useMemo } from 'react'
-import { parseUSDValueFromAssetChange } from 'lx/src/features/activity/utils/remote'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { toGraphQLChain } from 'lx/src/features/chains/utils'
-import { ONE_DAY_MS } from 'utilities/src/time/time'
+import { parseUSDValueFromAssetChange } from '@luxexchange/lx/src/features/activity/utils/remote'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { toGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { ONE_DAY_MS } from '@luxfi/utilities/src/time/time'
 
 /**
  * Hook to fetch swap USD values from GraphQL for transactions from the last 7 days

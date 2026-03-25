@@ -1,10 +1,10 @@
 import { BigNumber, BigNumberish } from '@ethersproject/bignumber'
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { ALL_CHAIN_IDS, getChainInfo, ORDERED_CHAINS } from 'lx/src/features/chains/chainInfo'
-import { EnabledChainsInfo, GqlChainId, NetworkLayer, UniverseChainId } from 'lx/src/features/chains/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { ALL_CHAIN_IDS, getChainInfo, ORDERED_CHAINS } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { EnabledChainsInfo, GqlChainId, NetworkLayer, UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 
 // Some code from the web app uses chainId types as numbers
 // This validates them as coerces into SupportedChainId

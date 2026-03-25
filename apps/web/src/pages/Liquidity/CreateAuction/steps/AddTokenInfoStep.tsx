@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 import {
   useCreateAuctionStore,
   useCreateAuctionStoreActions,

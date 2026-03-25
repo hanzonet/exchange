@@ -24,9 +24,9 @@ import { MobileScreens } from 'uniswap/src/types/screens/mobile'
 import { ShareableEntity } from 'uniswap/src/types/sharing'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 import { getTokenUrl } from 'uniswap/src/utils/linking'
-import { closeKeyboardBeforeCallback } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { logger } from 'utilities/src/logger/logger'
-import { noop } from 'utilities/src/react/noop'
+import { closeKeyboardBeforeCallback } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { noop } from '@luxfi/utilities/src/react/noop'
 import {
   getNavigateToSendFlowArgsInitialState,
   getNavigateToSwapFlowArgsInitialState,
@@ -37,7 +37,7 @@ import {
   NavigateToSwapFlowArgs,
   ShareTokenArgs,
   WalletNavigationProvider,
-} from 'wallet/src/contexts/WalletNavigationContext'
+} from '@luxfi/wallet/src/contexts/WalletNavigationContext'
 
 export function MobileWalletNavigationProvider({ children }: PropsWithChildren): JSX.Element {
   const handleShareToken = useHandleShareToken()

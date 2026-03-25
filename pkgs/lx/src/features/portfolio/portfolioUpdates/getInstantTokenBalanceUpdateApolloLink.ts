@@ -1,21 +1,21 @@
 import { type ApolloCache, ApolloLink, type NormalizedCacheObject } from '@apollo/client'
 import { asyncMap, type Reference } from '@apollo/client/utilities'
 import { type ToolkitStore } from '@reduxjs/toolkit/dist/configureStore'
-import { GQLQueries, GraphQLApi } from '@universe/api'
+import { GQLQueries, GraphQLApi } from '@luxexchange/api'
 import { Buffer } from 'buffer'
-import { getNativeAddress } from 'lx/src/constants/addresses'
-import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { currencyIdToContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
-import { fetchOnChainBalances } from 'lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
-import { makeSelectTokenBalanceOverridesForWalletAddress } from 'lx/src/features/portfolio/slice/selectors'
+import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
+import { normalizeCurrencyIdForMapLookup } from '@luxexchange/lx/src/data/cache'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { currencyIdToContractInput } from '@luxexchange/lx/src/features/dataApi/utils/currencyIdToContractInput'
+import { fetchOnChainBalances } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
+import { makeSelectTokenBalanceOverridesForWalletAddress } from '@luxexchange/lx/src/features/portfolio/slice/selectors'
 import {
   removeExpiredBalanceOverrides,
   removeTokenFromBalanceOverride,
-} from 'lx/src/features/portfolio/slice/slice'
-import { type CurrencyId } from 'lx/src/types/currency'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { logger } from 'utilities/src/logger/logger'
+} from '@luxexchange/lx/src/features/portfolio/slice/slice'
+import { type CurrencyId } from '@luxexchange/lx/src/types/currency'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const APPROXIMATE_EQUALITY_THRESHOLD_PERCENT = 0.02 // 2%
 

@@ -8,16 +8,16 @@ import {
   VerifyResponse,
   VerifySuccess,
 } from '@uniswap/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
-import { createChallengeSolverService } from '@universe/sessions/src/challenge-solvers/createChallengeSolverService'
-import type { ChallengeSolver } from '@universe/sessions/src/challenge-solvers/types'
-import type { PerformanceTracker } from '@universe/sessions/src/performance/types'
+import { createChallengeSolverService } from '@luxexchange/sessions/src/challenge-solvers/createChallengeSolverService'
+import type { ChallengeSolver } from '@luxexchange/sessions/src/challenge-solvers/types'
+import type { PerformanceTracker } from '@luxexchange/sessions/src/performance/types'
 import {
   createSessionInitializationService,
   type SessionInitializationService,
-} from '@universe/sessions/src/session-initialization/createSessionInitializationService'
-import { createSessionRepository } from '@universe/sessions/src/session-repository/createSessionRepository'
-import { createSessionService } from '@universe/sessions/src/session-service/createSessionService'
-import type { SessionService } from '@universe/sessions/src/session-service/types'
+} from '@luxexchange/sessions/src/session-initialization/createSessionInitializationService'
+import { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
+import { createSessionService } from '@luxexchange/sessions/src/session-service/createSessionService'
+import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
 import {
   createMockSessionClient,
   createTestTransport,
@@ -25,7 +25,7 @@ import {
   InMemorySessionStorage,
   InMemoryLuxIdentifierService,
   type MockEndpoints,
-} from '@universe/sessions/src/test-utils'
+} from '@luxexchange/sessions/src/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Helper: create a VerifyResponse with a success outcome (proto3 validation requires outcome.case)

@@ -1,6 +1,6 @@
-import { QrCode } from 'ui/src/components/icons/QrCode'
+import { QrCode } from '@luxfi/ui/src/components/icons/QrCode'
 import { CONNECTION_PROVIDER_IDS } from 'uniswap/src/constants/web3'
-import { isMobileWeb } from 'utilities/src/platform'
+import { isMobileWeb } from '@luxfi/utilities/src/platform'
 import { WalletConnectorOption } from '~/components/WalletModal/WalletConnectorOption'
 import { useWalletWithId } from '~/features/accounts/store/hooks'
 

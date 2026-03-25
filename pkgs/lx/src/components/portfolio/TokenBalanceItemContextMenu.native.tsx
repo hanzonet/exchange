@@ -5,12 +5,12 @@ import ContextMenu from 'react-native-context-menu-view'
 import type { LongPressGesture } from 'react-native-gesture-handler'
 import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import { runOnJS } from 'react-native-reanimated'
-import { TouchableArea } from 'ui/src'
-import { borderRadii } from 'ui/src/theme'
-import type { TokenBalanceItemContextMenuProps } from 'lx/src/components/portfolio/TokenBalanceItemContextMenu'
-import { TokenList } from 'lx/src/features/dataApi/types'
-import { useTokenContextMenuOptions } from 'lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
-import { useEvent } from 'utilities/src/react/hooks'
+import { TouchableArea } from '@luxfi/ui/src'
+import { borderRadii } from '@luxfi/ui/src/theme'
+import type { TokenBalanceItemContextMenuProps } from '@luxexchange/lx/src/components/portfolio/TokenBalanceItemContextMenu'
+import { TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { useTokenContextMenuOptions } from '@luxexchange/lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 const DEFAULT_LONG_PRESS_DURATION = 300
 const DEFAULT_LONG_PRESS_DELAY = 200

@@ -1,24 +1,24 @@
 import { SharedEventName } from '@luxdex/analytics-events'
-import { Flex, Loader, Text, TouchableArea } from 'ui/src'
-import { fonts, iconSizes } from 'ui/src/theme'
-import { NftTransactionDetails } from 'lx/src/components/activity/details/transactions/NftTransactionDetails'
-import { useFormattedCurrencyAmountAndUSDValue } from 'lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { useLuxContext } from 'lx/src/contexts/LuxContext'
-import { AssetType } from 'lx/src/entities/assets'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { Flex, Loader, Text, TouchableArea } from '@luxfi/ui/src'
+import { fonts, iconSizes } from '@luxfi/ui/src/theme'
+import { NftTransactionDetails } from '@luxexchange/lx/src/components/activity/details/transactions/NftTransactionDetails'
+import { useFormattedCurrencyAmountAndUSDValue } from '@luxexchange/lx/src/components/activity/hooks/useFormattedCurrencyAmountAndUSDValue'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { useLuxContext } from '@luxexchange/lx/src/contexts/LuxContext'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
 import {
   ReceiveTokenTransactionInfo,
   SendTokenTransactionInfo,
   TransactionDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { getSymbolDisplayText } from 'lx/src/utils/currency'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
-import { isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { getSymbolDisplayText } from '@luxexchange/lx/src/utils/currency'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function TransferTransactionDetails({
   transactionDetails,

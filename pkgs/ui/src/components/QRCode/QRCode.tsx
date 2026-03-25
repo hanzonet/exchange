@@ -4,9 +4,9 @@
 import { create, type QRCodeErrorCorrectionLevel, type QRCodeSegment } from 'qrcode'
 import { useMemo } from 'react'
 import Svg, { Defs, G, LinearGradient, Path, Rect, Stop } from 'react-native-svg'
-import type { BaseQRProps } from 'ui/src/components/QRCode/QRCodeDisplay'
-import { useSporeColors } from 'ui/src/hooks/useSporeColors'
-import { isWebPlatform } from 'utilities/src/platform'
+import type { BaseQRProps } from '@luxfi/ui/src/components/QRCode/QRCodeDisplay'
+import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
+import { isWebPlatform } from '@luxfi/utilities/src/platform'
 
 // size of the SVG element of the eye for the SVG we use in particular.
 const SVG_SIZE = 40

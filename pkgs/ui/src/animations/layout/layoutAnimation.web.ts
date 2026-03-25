@@ -1,5 +1,5 @@
-import { DEFAULT_LAYOUT_ANIMATION_DURATION } from 'ui/src/animations/layout/constants'
-import type { LayoutAnimationOptions } from 'ui/src/animations/layout/types'
+import { DEFAULT_LAYOUT_ANIMATION_DURATION } from '@luxfi/ui/src/animations/layout/constants'
+import type { LayoutAnimationOptions } from '@luxfi/ui/src/animations/layout/types'
 
 const DEFAULT_OPTIONS: Required<LayoutAnimationOptions> = {
   preset: 'easeInEaseOut',

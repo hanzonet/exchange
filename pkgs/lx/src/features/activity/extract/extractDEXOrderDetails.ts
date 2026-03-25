@@ -1,8 +1,8 @@
 import { GraphQLApi, TradingApi } from '@luxfi/api'
 
-import { deriveCurrencyAmountFromAssetResponse } from 'lx/src/features/activity/utils/remote'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+import { deriveCurrencyAmountFromAssetResponse } from '@luxexchange/lx/src/features/activity/utils/remote'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
 import {
   ConfirmedSwapTransactionInfo,
   TransactionDetails,
@@ -10,9 +10,9 @@ import {
   TransactionListQueryResponse,
   TransactionOriginType,
   TransactionType,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { remoteOrderStatusToLocalTxStatus } from 'lx/src/features/transactions/utils/dex.utils'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { remoteOrderStatusToLocalTxStatus } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export function extractDEXOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
   if (transaction?.details.__typename !== TransactionDetailsType.DEXOrder) {

@@ -1,5 +1,5 @@
 import { useFeatureFlag } from '@luxexchange/gating'
-import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
+import { CONNECTION_PROVIDER_IDS } from '@luxexchange/lx/src/constants/web3'
 import { LuxWalletOptions } from '~/components/WalletModal/LuxWalletOptions'
 import { useWalletWithId } from '~/features/accounts/store/hooks'
 import { ExternalWallet } from '~/features/accounts/store/types'

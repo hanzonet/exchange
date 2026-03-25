@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/prices",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "@tanstack/react-query": "5.90.20",
     "@uniswap/sdk-core": "7.10.1",

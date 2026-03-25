@@ -1,6 +1,6 @@
 import type { QueryClient } from '@tanstack/react-query'
-import type { TokenPriceMessage, TokenSubscriptionParams } from '@universe/prices/src/types'
-import type { WebSocketClient } from '@universe/websocket'
+import type { TokenPriceMessage, TokenSubscriptionParams } from '@luxexchange/prices/src/types'
+import type { WebSocketClient } from '@luxexchange/websocket'
 import { createContext, type ReactElement, type ReactNode, useContext } from 'react'
 
 interface PricesContextValue {

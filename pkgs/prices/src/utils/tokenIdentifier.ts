@@ -1,6 +1,6 @@
 import type { Currency, Token } from '@uniswap/sdk-core'
-import type { PriceKey, TokenIdentifier, TokenInput, TokenSubscriptionParams } from '@universe/prices'
-import { isEVMAddress } from 'utilities/src/addresses/evm/evm'
+import type { PriceKey, TokenIdentifier, TokenInput, TokenSubscriptionParams } from '@luxexchange/prices'
+import { isEVMAddress } from '@luxfi/utilities/src/addresses/evm/evm'
 
 /** Address that represents native currencies on ETH, Arbitrum, etc. */
 const DEFAULT_NATIVE_ADDRESS_LEGACY = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'

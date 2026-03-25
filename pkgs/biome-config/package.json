@@ -1,6 +1,7 @@
 {
   "name": "@luxfi/biome-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "private": false,
   "description": "Shared Biome configuration for Lux Universe",
   "devDependencies": {
     "jsonc-parser": "3.2.0"

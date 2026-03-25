@@ -1,11 +1,11 @@
 import { queryOptions, useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { useProvider } from 'lx/src/contexts/LuxContext'
-import { type UniverseChainId } from 'lx/src/features/chains/types'
-import { isDelegatedEOA } from 'lx/src/features/smartWallet/delegation/isDelegatedEOA'
-import { ensure0xHex } from 'utilities/src/addresses/hex'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import { useProvider } from '@luxexchange/lx/src/contexts/LuxContext'
+import { type UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isDelegatedEOA } from '@luxexchange/lx/src/features/smartWallet/delegation/isDelegatedEOA'
+import { ensure0xHex } from '@luxfi/utilities/src/addresses/hex'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import type { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 export function useIsSmartContractAddress(
   address: string | undefined,

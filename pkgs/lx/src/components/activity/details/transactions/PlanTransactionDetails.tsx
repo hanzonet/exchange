@@ -1,16 +1,16 @@
-import { Flex, Text } from 'ui/src'
-import { ArrowDown, InfoCircle } from 'ui/src/components/icons'
-import { iconSizes } from 'ui/src/theme'
+import { Flex, Text } from '@luxfi/ui/src'
+import { ArrowDown, InfoCircle } from '@luxfi/ui/src/components/icons'
+import { iconSizes } from '@luxfi/ui/src/theme'
 import {
   TwoTokenDetails,
   useTokenAmountInfo,
-} from 'lx/src/components/activity/details/transactions/utilityComponents'
-import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useIntermediaryPlanState } from 'lx/src/features/transactions/swap/plan/intermediaryState/useIntermediaryPlanState'
-import { useIntermediaryPlanStateDescriptor } from 'lx/src/features/transactions/swap/plan/intermediaryState/useIntermediaryPlanStateDescriptor'
-import { PlanTransactionInfo, TransactionStatus } from 'lx/src/features/transactions/types/transactionDetails'
-import { currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/components/activity/details/transactions/utilityComponents'
+import { CurrencyLogo } from '@luxexchange/lx/src/components/CurrencyLogo/CurrencyLogo'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useIntermediaryPlanState } from '@luxexchange/lx/src/features/transactions/swap/plan/intermediaryState/useIntermediaryPlanState'
+import { useIntermediaryPlanStateDescriptor } from '@luxexchange/lx/src/features/transactions/swap/plan/intermediaryState/useIntermediaryPlanStateDescriptor'
+import { PlanTransactionInfo, TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 /**
  * This component displays the details of a plan transaction. If partially executed,

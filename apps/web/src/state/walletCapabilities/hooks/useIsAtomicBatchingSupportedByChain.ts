@@ -1,4 +1,4 @@
-import { useEvent } from 'utilities/src/react/hooks'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { useAppSelector } from '~/state/hooks'
 import { selectIsAtomicBatchingSupportedByChainId } from '~/state/walletCapabilities/reducer'
 

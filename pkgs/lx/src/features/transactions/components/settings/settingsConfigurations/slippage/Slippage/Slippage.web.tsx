@@ -1,11 +1,11 @@
-import { TradingApi } from '@universe/api'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { SlippageControl } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/SlippageControl.web'
-import { SlippageWarning } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageWarning'
+import { TradingApi } from '@luxexchange/api'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { SlippageControl } from '@luxexchange/lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/SlippageControl.web'
+import { SlippageWarning } from '@luxexchange/lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageWarning'
 import {
   type TransactionSettingConfig,
   TransactionSettingId,
-} from 'lx/src/features/transactions/components/settings/types'
+} from '@luxexchange/lx/src/features/transactions/components/settings/types'
 
 export const Slippage: TransactionSettingConfig = {
   applicablePlatforms: [Platform.EVM, Platform.SVM],

@@ -1,8 +1,8 @@
-import { AccountType } from 'lx/src/features/accounts/types'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
-import { EVMAccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
-import { WalletMeta } from 'lx/src/features/wallet/types/WalletMeta'
-import { HexString } from 'utilities/src/addresses/hex'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
+import { EVMAccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { WalletMeta } from '@luxexchange/lx/src/features/wallet/types/WalletMeta'
+import { HexString } from '@luxfi/utilities/src/addresses/hex'
 
 export const createMockEVMAccountDetails = (overrides: Partial<EVMAccountDetails> = {}): EVMAccountDetails => {
   return {

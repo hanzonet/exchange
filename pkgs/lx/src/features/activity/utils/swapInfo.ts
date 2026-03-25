@@ -1,10 +1,10 @@
-import { SwapTypeTransactionInfo } from 'lx/src/components/activity/details/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { getAmountsFromTrade } from 'lx/src/features/transactions/swap/utils/getAmountsFromTrade'
-import { BridgeTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { NumberType } from 'utilities/src/format/types'
+import { SwapTypeTransactionInfo } from '@luxexchange/lx/src/components/activity/details/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { LocalizationContextState } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { getAmountsFromTrade } from '@luxexchange/lx/src/features/transactions/swap/utils/getAmountsFromTrade'
+import { BridgeTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function getFormattedSwapRatio({
   typeInfo,

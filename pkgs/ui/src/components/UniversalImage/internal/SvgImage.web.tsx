@@ -1,7 +1,7 @@
-import { Flex } from 'ui/src/components/layout/Flex'
-import { PlainImage } from 'ui/src/components/UniversalImage/internal/PlainImage'
-import type { SvgImageProps } from 'ui/src/components/UniversalImage/types'
-import { useSvgData } from 'ui/src/components/UniversalImage/utils'
+import { Flex } from '@luxfi/ui/src/components/layout/Flex'
+import { PlainImage } from '@luxfi/ui/src/components/UniversalImage/internal/PlainImage'
+import type { SvgImageProps } from '@luxfi/ui/src/components/UniversalImage/types'
+import { useSvgData } from '@luxfi/ui/src/components/UniversalImage/utils'
 
 export function SvgImage({ uri, size, autoplay, fallback }: SvgImageProps): JSX.Element | null {
   const svgData = useSvgData(uri, autoplay)

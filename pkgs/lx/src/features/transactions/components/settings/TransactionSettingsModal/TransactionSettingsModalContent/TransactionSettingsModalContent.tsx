@@ -1,12 +1,12 @@
 import { PropsWithChildren, useCallback, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AnimatedPager, Button, Flex, Text, TouchableArea, useMedia } from 'ui/src'
-import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
-import { iconSizes } from 'ui/src/theme'
-import { TransactionSettingRow } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsRow'
-import type { TransactionSettingsModalProps } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
-import { type TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
-import { isExtensionApp, isMobileApp, isMobileWeb, isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
+import { AnimatedPager, Button, Flex, Text, TouchableArea, useMedia } from '@luxfi/ui/src'
+import { RotatableChevron } from '@luxfi/ui/src/components/icons/RotatableChevron'
+import { iconSizes } from '@luxfi/ui/src/theme'
+import { TransactionSettingRow } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsRow'
+import type { TransactionSettingsModalProps } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
+import { type TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { isExtensionApp, isMobileApp, isMobileWeb, isWebAppDesktop, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 const TopLevelSettings = ({
   settings,

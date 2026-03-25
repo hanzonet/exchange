@@ -1,4 +1,4 @@
-import { isExtensionApp } from 'utilities/src/platform'
+import { isExtensionApp } from '@luxfi/utilities/src/platform'
 
 export const getVersionHeader = (): string => {
   if (isExtensionApp) {

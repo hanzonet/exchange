@@ -1,9 +1,9 @@
 import PoissonDiskSampling from 'poisson-disk-sampling'
 import { useMemo, useRef } from 'react'
-import { Flex } from 'ui/src'
-import { CloudItem } from 'lx/src/components/IconCloud/CloudItem'
-import { randomFloat, randomInt } from 'lx/src/components/IconCloud/utils'
-import { useIsWindowVisible } from 'utilities/src/react/useIsWindowVisible'
+import { Flex } from '@luxfi/ui/src'
+import { CloudItem } from '@luxexchange/lx/src/components/IconCloud/CloudItem'
+import { randomFloat, randomInt } from '@luxexchange/lx/src/components/IconCloud/utils'
+import { useIsWindowVisible } from '@luxfi/utilities/src/react/useIsWindowVisible'
 
 export type FloatingElementPosition = 'left' | 'right'
 

@@ -1,23 +1,23 @@
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, ModalCloseIcon, Text, useExtractedTokenColor, useSporeColors } from 'ui/src'
-import { zIndexes } from 'ui/src/theme'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { ModalName } from 'lx/src/features/telemetry/constants'
+import { Button, Flex, ModalCloseIcon, Text, useExtractedTokenColor, useSporeColors } from '@luxfi/ui/src'
+import { zIndexes } from '@luxfi/ui/src/theme'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { AnimatedTokenFlip } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/AnimatedTokenFlip'
-import { GradientContainer } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/GradientContainer'
-import { useActualCompletionTime } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useActualCompletionTime'
-import { useActualSwapOutput } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useActualSwapOutput'
-import { useBackgroundColor } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
-import { useClearFlashblocksSwapNotifications } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useClearFlashblocksSwapNotifications'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { UnichainPoweredMessage } from 'lx/src/features/transactions/TransactionDetails/UnichainPoweredMessage'
-import { isWebApp, isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { AnimatedTokenFlip } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/AnimatedTokenFlip'
+import { GradientContainer } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/GradientContainer'
+import { useActualCompletionTime } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useActualCompletionTime'
+import { useActualSwapOutput } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useActualSwapOutput'
+import { useBackgroundColor } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
+import { useClearFlashblocksSwapNotifications } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useClearFlashblocksSwapNotifications'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { UnichainPoweredMessage } from '@luxexchange/lx/src/features/transactions/TransactionDetails/UnichainPoweredMessage'
+import { isWebApp, isWebAppDesktop, isWebPlatform } from '@luxfi/utilities/src/platform'
 
 export function UnichainInstantBalanceModal(): JSX.Element | null {
   const { t } = useTranslation()

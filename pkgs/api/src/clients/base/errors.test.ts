@@ -1,5 +1,5 @@
 import { Code, ConnectError } from '@connectrpc/connect'
-import { FetchError, is401Error } from '@universe/api/src/clients/base/errors'
+import { FetchError, is401Error } from '@luxexchange/api/src/clients/base/errors'
 import { describe, expect, it } from 'vitest'
 
 describe('is401Error', () => {

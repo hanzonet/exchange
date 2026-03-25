@@ -11,7 +11,7 @@
  */
 
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
-import { getGChainGraphqlHttpLink } from 'lx/src/data/links'
+import { getGChainGraphqlHttpLink } from '@luxexchange/lx/src/data/links'
 
 // Create a dedicated Apollo client for G-Chain
 let gChainClient: ApolloClient<object> | null = null

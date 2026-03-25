@@ -1,21 +1,21 @@
 import { TFunction } from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AnimateTransition, Flex, LabeledCheckbox, Text, useSporeColors } from 'ui/src'
-import { PoweredByBlockaid } from 'lx/src/components/logos/PoweredByBlockaid'
-import { Modal } from 'lx/src/components/modals/Modal'
-import { getAlertColor } from 'lx/src/components/modals/WarningModal/getAlertColor'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { WarningModalContent } from 'lx/src/components/modals/WarningModal/WarningModal'
-import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
-import WarningIcon from 'lx/src/components/warnings/WarningIcon'
-import { luxUrls } from 'lx/src/constants/urls'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { submitTokenWarningDataReport } from 'lx/src/features/reporting/reports'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import Trace from 'lx/src/features/telemetry/Trace'
-import { useBlockaidFeeComparisonAnalytics } from 'lx/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
-import { useWarningModalCurrenciesDismissed } from 'lx/src/features/tokens/warnings/hooks/useWarningModalCurrenciesDismissed'
+import { AnimateTransition, Flex, LabeledCheckbox, Text, useSporeColors } from '@luxfi/ui/src'
+import { PoweredByBlockaid } from '@luxexchange/lx/src/components/logos/PoweredByBlockaid'
+import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
+import { getAlertColor } from '@luxexchange/lx/src/components/modals/WarningModal/getAlertColor'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { WarningModalContent } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
+import WarningIcon from '@luxexchange/lx/src/components/warnings/WarningIcon'
+import { luxUrls } from '@luxexchange/lx/src/constants/urls'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { submitTokenWarningDataReport } from '@luxexchange/lx/src/features/reporting/reports'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
+import { useBlockaidFeeComparisonAnalytics } from '@luxexchange/lx/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
+import { useWarningModalCurrenciesDismissed } from '@luxexchange/lx/src/features/tokens/warnings/hooks/useWarningModalCurrenciesDismissed'
 import {
   getCurrencyFeeOnTransfer,
   getFeeWarning,
@@ -27,11 +27,11 @@ import {
   getTokenWarningSeverity,
   useModalHeaderText,
   useModalSubtitleText,
-} from 'lx/src/features/tokens/warnings/safetyUtils'
-import { TokenWarningFlagsTable } from 'lx/src/features/tokens/warnings/TokenWarningFlagsTable'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { currencyIdToAddress } from 'lx/src/utils/currencyId'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { TokenWarningFlagsTable } from '@luxexchange/lx/src/features/tokens/warnings/TokenWarningFlagsTable'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export interface FoTPercent {
   buyFeePercent?: number

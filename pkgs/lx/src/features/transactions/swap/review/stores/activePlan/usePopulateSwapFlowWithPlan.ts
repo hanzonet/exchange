@@ -1,10 +1,10 @@
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
-import { AssetType } from 'lx/src/entities/assets'
-import { extractPlanResponseAssetDetails } from 'lx/src/features/activity/extract/extractPlanResponseDetails'
-import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { CurrencyField } from 'lx/src/types/currency'
-import { currencyIdToAddress } from 'lx/src/utils/currencyId'
-import { useEvent } from 'utilities/src/react/hooks'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
+import { AssetType } from '@luxexchange/lx/src/entities/assets'
+import { extractPlanResponseAssetDetails } from '@luxexchange/lx/src/features/activity/extract/extractPlanResponseDetails'
+import { useSwapFormStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
+import { currencyIdToAddress } from '@luxexchange/lx/src/utils/currencyId'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function usePopulateSwapFlowWithPlan(): (planResponse: PlanResponse) => void {
   const updateSwapForm = useSwapFormStore((s) => s.updateSwapForm)

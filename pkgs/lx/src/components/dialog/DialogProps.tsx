@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
-import type { FlexProps, TextProps } from 'ui/src'
-import type { ButtonConfig } from 'lx/src/components/dialog/DialogButtons'
-import type { DialogPreferencesService } from 'lx/src/dialog-preferences'
-import type { DialogVisibilityId } from 'lx/src/dialog-preferences/types'
-import type { ModalNameType } from 'lx/src/features/telemetry/constants'
+import type { FlexProps, TextProps } from '@luxfi/ui/src'
+import type { ButtonConfig } from '@luxexchange/lx/src/components/dialog/DialogButtons'
+import type { DialogPreferencesService } from '@luxexchange/lx/src/dialog-preferences'
+import type { DialogVisibilityId } from '@luxexchange/lx/src/dialog-preferences/types'
+import type { ModalNameType } from '@luxexchange/lx/src/features/telemetry/constants'
 
 export interface DialogProps {
   isOpen: boolean

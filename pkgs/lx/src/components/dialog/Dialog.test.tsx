@@ -1,11 +1,11 @@
 import { fireEvent, waitFor } from '@testing-library/react-native'
-import { SharedQueryClient } from '@universe/api'
-import { Flex, Text } from 'ui/src'
-import { Dialog } from 'lx/src/components/dialog/Dialog.web'
-import type { DialogPreferencesService } from 'lx/src/dialog-preferences'
-import { DialogVisibilityId } from 'lx/src/dialog-preferences/types'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { renderWithProviders } from 'lx/src/test/render'
+import { SharedQueryClient } from '@luxexchange/api'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Dialog } from '@luxexchange/lx/src/components/dialog/Dialog.web'
+import type { DialogPreferencesService } from '@luxexchange/lx/src/dialog-preferences'
+import { DialogVisibilityId } from '@luxexchange/lx/src/dialog-preferences/types'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { renderWithProviders } from '@luxexchange/lx/src/test/render'
 import type { Mocked } from 'vitest'
 
 // Mock the Modal component to avoid BottomSheetModal context issues

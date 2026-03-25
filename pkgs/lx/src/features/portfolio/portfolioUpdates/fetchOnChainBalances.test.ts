@@ -1,9 +1,9 @@
 import { ApolloCache, NormalizedCacheObject } from '@apollo/client'
-import { GraphQLApi } from '@universe/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { fetchOnChainCurrencyBalance } from 'lx/src/features/portfolio/api'
-import { fetchOnChainBalances } from 'lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
-import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import { GraphQLApi } from '@luxexchange/api'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { fetchOnChainCurrencyBalance } from '@luxexchange/lx/src/features/portfolio/api'
+import { fetchOnChainBalances } from '@luxexchange/lx/src/features/portfolio/portfolioUpdates/fetchOnChainBalances'
+import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import type { Mock, MockedFunction } from 'vitest'
 
 vi.mock('lx/src/data/apiClients/tradingApi/useTradingApiIndicativeQuoteQuery', () => ({

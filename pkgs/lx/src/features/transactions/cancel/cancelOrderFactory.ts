@@ -9,9 +9,9 @@ import {
 } from '@luxdex/sdk'
 import { TradingApi } from '@luxfi/api'
 import { providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { createPermit2Contract } from 'lx/src/features/transactions/utils/permit2'
-import { logger } from 'utilities/src/logger/logger'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { createPermit2Contract } from '@luxexchange/lx/src/features/transactions/utils/permit2'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const ROUTING_TO_ORDER_CLASS = {
   [TradingApi.Routing.DUTCH_V2]: CosignedV2DutchOrder,

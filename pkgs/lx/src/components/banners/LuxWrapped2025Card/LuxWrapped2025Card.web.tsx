@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex } from 'ui/src/components/layout'
-import { useSporeColorsForTheme } from 'ui/src/hooks/useSporeColors'
-import { styled, Text, TouchableArea } from 'ui/src/index'
+import { Flex } from '@luxfi/ui/src/components/layout'
+import { useSporeColorsForTheme } from '@luxfi/ui/src/hooks/useSporeColors'
+import { styled, Text, TouchableArea } from '@luxfi/ui/src/index'
 import {
   MouseGlow,
   renderSnowflakesWeb,
   SnowflakeContainer,
-} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
-import { LuxWrapped2025CardProps } from 'lx/src/components/banners/LuxWrapped2025Card/types'
-import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
+} from '@luxexchange/lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { LuxWrapped2025CardProps } from '@luxexchange/lx/src/components/banners/LuxWrapped2025Card/types'
+import { useSnowflakeAnimation } from '@luxexchange/lx/src/hooks/useSnowflakeAnimation'
 
 const CARD_HEIGHT = 80
 

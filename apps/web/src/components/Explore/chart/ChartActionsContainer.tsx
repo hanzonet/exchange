@@ -1,4 +1,4 @@
-import { Flex, styled } from 'ui/src'
+import { Flex, styled } from '@luxfi/ui/src'
 
 export const ChartActionsContainer = styled(Flex, {
   flexDirection: 'row-reverse',

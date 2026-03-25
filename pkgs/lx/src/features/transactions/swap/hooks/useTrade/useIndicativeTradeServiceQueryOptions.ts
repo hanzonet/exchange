@@ -1,9 +1,9 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { TradeService } from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
-import type { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import type { IndicativeTrade, UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
-import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
-import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
+import type { TradeService } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/tradeService'
+import type { ValidatedTradeInput } from '@luxexchange/lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import type { IndicativeTrade, UseTradeArgs } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { ReactQueryCacheKey } from '@luxfi/utilities/src/reactQuery/cache'
+import type { QueryOptionsResult } from '@luxfi/utilities/src/reactQuery/queryOptions'
 
 export type IndicativeTradeServiceQueryOptions = QueryOptionsResult<
   IndicativeTrade | null,

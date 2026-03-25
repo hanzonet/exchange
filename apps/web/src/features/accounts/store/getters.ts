@@ -1,15 +1,15 @@
 /* eslint-disable import/no-unused-modules */
 
-import { Account } from 'lx/src/features/accounts/store/types/Account'
-import { AccountsGetters } from 'lx/src/features/accounts/store/types/AccountsState'
-import { ConnectorStatus } from 'lx/src/features/accounts/store/types/Connector'
-import { CrossChainAddresses } from 'lx/src/features/accounts/store/types/Wallet'
-import { toConnectionStatusInfo } from 'lx/src/features/accounts/store/utils/connection'
+import { Account } from '@luxexchange/lx/src/features/accounts/store/types/Account'
+import { AccountsGetters } from '@luxexchange/lx/src/features/accounts/store/types/AccountsState'
+import { ConnectorStatus } from '@luxexchange/lx/src/features/accounts/store/types/Connector'
+import { CrossChainAddresses } from '@luxexchange/lx/src/features/accounts/store/types/Wallet'
+import { toConnectionStatusInfo } from '@luxexchange/lx/src/features/accounts/store/utils/connection'
 import {
   FlexiblePlatformInput as Flexible,
   resolvePlatform,
-} from 'lx/src/features/accounts/store/utils/flexibleInput'
-import { Platform } from 'lx/src/features/platforms/types/Platform'
+} from '@luxexchange/lx/src/features/accounts/store/utils/flexibleInput'
+import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import type { WebAccountsData } from '~/features/accounts/store/types'
 
 export function createAccountsStoreGetters(getState: () => WebAccountsData) {

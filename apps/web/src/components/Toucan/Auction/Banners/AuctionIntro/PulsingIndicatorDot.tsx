@@ -1,4 +1,4 @@
-import { Flex } from 'ui/src'
+import { Flex } from '@luxfi/ui/src'
 
 interface PulsingIndicatorDotProps {
   color: string

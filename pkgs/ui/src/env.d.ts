@@ -12,8 +12,8 @@ declare global {
   }
 }
 
-import { config } from 'ui/src/gui.config'
-import { shorthands } from 'ui/src/theme/shorthands'
+import { config } from '@luxfi/ui/src/gui.config'
+import { shorthands } from '@luxfi/ui/src/theme/shorthands'
 
 type Conf = typeof config
 

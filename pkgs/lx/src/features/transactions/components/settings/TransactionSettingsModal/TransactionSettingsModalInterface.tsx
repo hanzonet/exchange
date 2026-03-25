@@ -1,7 +1,7 @@
-import { AdaptiveWebPopoverContent } from 'ui/src'
-import { TransactionSettingsModalContent } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsModalContent'
-import { TransactionSettingsModalProps } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { AdaptiveWebPopoverContent } from '@luxfi/ui/src'
+import { TransactionSettingsModalContent } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsModalContent'
+import { TransactionSettingsModalProps } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
 const POPOVER_WIDTH = 320
 

@@ -17,7 +17,7 @@ const sharedRules = {
     {
       name: 'utilities/src/telemetry/analytics/analytics',
       message:
-        'Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `packages/lux/src/features/telemetry`',
+        'Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lux/src/features/telemetry`',
     },
     {
       name: '@uniswap/analytics',
@@ -84,7 +84,7 @@ const sharedRules = {
     {
       name: 'lux/src/features/chains/chainInfo',
       importNames: ['UNIVERSE_CHAIN_INFO'],
-      message: 'Use useChainInfo or helpers in packages/lux/src/features/chains/utils.ts when possible!',
+      message: 'Use useChainInfo or helpers in pkgs/lux/src/features/chains/utils.ts when possible!',
     },
     {
       name: 'lux/src/features/settings/selectors',
@@ -135,7 +135,7 @@ const nativeRules = {
       name: '@ethersproject',
       message: "Please import from 'ethers' directly to support tree-shaking.",
     },
-    // Native specific packages/restrictions
+    // Native specific pkgs/restrictions
     {
       name: 'statsig-react-native',
       message: 'Import from internal module lux/src/features/gating instead',
@@ -164,7 +164,7 @@ const nativeRules = {
     {
       name: 'expo-haptics',
       message:
-        "Use our internal `HapticFeedback` wrapper instead: `import { HapticFeedback } from 'packages/lux/src/features/settings/useHapticFeedback/types'`",
+        "Use our internal `HapticFeedback` wrapper instead: `import { HapticFeedback } from 'pkgs/lux/src/features/settings/useHapticFeedback/types'`",
     },
     {
       name: 'react-router',

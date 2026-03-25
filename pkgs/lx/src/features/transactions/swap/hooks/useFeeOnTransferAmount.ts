@@ -1,14 +1,14 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { useUSDCValue } from 'lx/src/features/transactions/hooks/useUSDCPriceWrapper'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { getTradeAmounts } from 'lx/src/features/transactions/swap/utils/getTradeAmounts'
-import { isBridge } from 'lx/src/features/transactions/swap/utils/routing'
-import { FeeOnTransferFeeGroupProps } from 'lx/src/features/transactions/TransactionDetails/types'
-import { NumberType } from 'utilities/src/format/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { useUSDCValue } from '@luxexchange/lx/src/features/transactions/hooks/useUSDCPriceWrapper'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { getTradeAmounts } from '@luxexchange/lx/src/features/transactions/swap/utils/getTradeAmounts'
+import { isBridge } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { FeeOnTransferFeeGroupProps } from '@luxexchange/lx/src/features/transactions/TransactionDetails/types'
+import { NumberType } from '@luxfi/utilities/src/format/types'
 
 export function useFeeOnTransferAmounts(
   acceptedDerivedSwapInfo?: DerivedSwapInfo<CurrencyInfo, CurrencyInfo>,

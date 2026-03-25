@@ -1,7 +1,7 @@
-import { TransactionSettingsModalInterface } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalInterface'
-import { TransactionSettingsModalWallet } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalWallet'
-import { TransactionSettingsModalProps } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
-import { isWebApp } from 'utilities/src/platform'
+import { TransactionSettingsModalInterface } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalInterface'
+import { TransactionSettingsModalWallet } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalWallet'
+import { TransactionSettingsModalProps } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
+import { isWebApp } from '@luxfi/utilities/src/platform'
 
 export function TransactionSettingsModal(props: TransactionSettingsModalProps): JSX.Element {
   if (isWebApp) {

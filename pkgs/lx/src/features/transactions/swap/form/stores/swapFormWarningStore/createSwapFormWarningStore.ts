@@ -1,4 +1,4 @@
-import { isDevEnv } from 'utilities/src/environment/env'
+import { isDevEnv } from '@luxfi/utilities/src/environment/env'
 import type { StoreApi, UseBoundStore } from 'zustand'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'

@@ -1,4 +1,4 @@
-import { createSessionTransport } from '@universe/api/src/session/createSessionTransport'
+import { createSessionTransport } from '@luxexchange/api/src/session/createSessionTransport'
 import { describe, expect, it } from 'vitest'
 
 describe('createSessionTransport', () => {

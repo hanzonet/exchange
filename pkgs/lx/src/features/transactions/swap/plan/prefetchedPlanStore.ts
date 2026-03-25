@@ -1,11 +1,11 @@
-import { TradingApi } from '@universe/api'
-import { PlanResponse } from '@universe/api/src/clients/trading/__generated__/models/PlanResponse'
-import { TradingApiSessionClient } from 'lx/src/data/apiClients/tradingApi/TradingApiSessionClient'
-import { Trade } from 'lx/src/features/transactions/swap/types/trade'
-import { isChained } from 'lx/src/features/transactions/swap/utils/routing'
-import { requireAcceptNewTrade } from 'lx/src/features/transactions/swap/utils/trade'
-import { logger } from 'utilities/src/logger/logger'
-import { ONE_SECOND_MS } from 'utilities/src/time/time'
+import { TradingApi } from '@luxexchange/api'
+import { PlanResponse } from '@luxexchange/api/src/clients/trading/__generated__/models/PlanResponse'
+import { TradingApiSessionClient } from '@luxexchange/lx/src/data/apiClients/tradingApi/TradingApiSessionClient'
+import { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { isChained } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { requireAcceptNewTrade } from '@luxexchange/lx/src/features/transactions/swap/utils/trade'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 
 const PREFETCH_TTL_MS = 15 * ONE_SECOND_MS
 

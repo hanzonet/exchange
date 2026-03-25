@@ -1,6 +1,6 @@
-import { PROD_WEBSOCKET_BASE_URL, STAGING_WEBSOCKET_BASE_URL } from '@universe/api/src/clients/base/urls'
-import { getConfig } from '@universe/config'
-import { Environment, getCurrentEnv } from 'utilities/src/environment/getCurrentEnv'
+import { PROD_WEBSOCKET_BASE_URL, STAGING_WEBSOCKET_BASE_URL } from '@luxexchange/api/src/clients/base/urls'
+import { getConfig } from '@luxexchange/config'
+import { Environment, getCurrentEnv } from '@luxfi/utilities/src/environment/getCurrentEnv'
 
 /**
  * Returns the appropriate WebSocket URL based on the current environment.

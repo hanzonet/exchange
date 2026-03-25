@@ -1,12 +1,12 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
-import { Language } from 'lx/src/features/language/constants'
-import { getCurrentLanguageFromNavigator } from 'lx/src/features/language/utils'
-import { DEFAULT_DEVICE_ACCESS_TIMEOUT, type DeviceAccessTimeout } from 'lx/src/features/settings/constants'
-import { WALLET_TESTNET_CONFIG } from 'lx/src/features/telemetry/constants'
-import { isExtensionApp, isWebApp } from 'utilities/src/platform'
+import { FiatCurrency } from '@luxexchange/lx/src/features/fiatCurrency/constants'
+import { Language } from '@luxexchange/lx/src/features/language/constants'
+import { getCurrentLanguageFromNavigator } from '@luxexchange/lx/src/features/language/utils'
+import { DEFAULT_DEVICE_ACCESS_TIMEOUT, type DeviceAccessTimeout } from '@luxexchange/lx/src/features/settings/constants'
+import { WALLET_TESTNET_CONFIG } from '@luxexchange/lx/src/features/telemetry/constants'
+import { isExtensionApp, isWebApp } from '@luxfi/utilities/src/platform'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { analytics } from 'utilities/src/telemetry/analytics/analytics'
+import { analytics } from '@luxfi/utilities/src/telemetry/analytics/analytics'
 
 export interface UserSettingsState {
   currentLanguage: Language

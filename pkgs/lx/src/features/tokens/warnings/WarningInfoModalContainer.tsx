@@ -1,5 +1,5 @@
-import { Flex, styled } from 'ui/src'
-import { isMobileApp } from 'utilities/src/platform'
+import { Flex, styled } from '@luxfi/ui/src'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
 
 export const WarningModalInfoContainer = styled(Flex, {
   width: '100%',

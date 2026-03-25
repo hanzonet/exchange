@@ -1,7 +1,7 @@
 import { GraphQLApi } from '@luxexchange/api'
 import { PersistState } from 'redux-persist'
-import { createPersistState, createSafeMigration } from 'lx/src/state/createSafeMigration'
-import { PreV55SearchResult, PreV55SearchResultType, TokenSearchResult } from 'lx/src/state/oldTypes'
+import { createPersistState, createSafeMigration } from '@luxexchange/lx/src/state/createSafeMigration'
+import { PreV55SearchResult, PreV55SearchResultType, TokenSearchResult } from '@luxexchange/lx/src/state/oldTypes'
 
 export type PersistAppStateV15 = {
   _persist: PersistState

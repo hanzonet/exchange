@@ -1,24 +1,24 @@
-import type { ColorTokens, FlexProps, GeneratedIcon } from 'ui/src'
-import { Flex, Popover, TouchableArea } from 'ui/src'
-import { Settings } from 'ui/src/components/icons/Settings'
-import type { IconSizeTokens } from 'ui/src/theme'
-import { AccountType } from 'lx/src/features/accounts/types'
-import { TransactionSettingsModalId } from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
+import type { ColorTokens, FlexProps, GeneratedIcon } from '@luxfi/ui/src'
+import { Flex, Popover, TouchableArea } from '@luxfi/ui/src'
+import { Settings } from '@luxfi/ui/src/components/icons/Settings'
+import type { IconSizeTokens } from '@luxfi/ui/src/theme'
+import { AccountType } from '@luxexchange/lx/src/features/accounts/types'
+import { TransactionSettingsModalId } from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
 import {
   useModalHide,
   useModalShow,
   useModalVisibility,
-} from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
-import { TransactionSettingsButton } from 'lx/src/features/transactions/components/settings/TransactionSettingsButton'
-import { TransactionSettingsModal } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModal'
-import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
-import { ViewOnlyButton } from 'lx/src/features/transactions/components/settings/ViewOnlyButton'
-import { ViewOnlyModal } from 'lx/src/features/transactions/modals/ViewOnlyModal'
-import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { dismissNativeKeyboard } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
-import { isMobileApp, isWebApp } from 'utilities/src/platform'
-import { useEvent } from 'utilities/src/react/hooks'
+} from '@luxexchange/lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
+import { TransactionSettingsButton } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsButton'
+import { TransactionSettingsModal } from '@luxexchange/lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModal'
+import type { TransactionSettingConfig } from '@luxexchange/lx/src/features/transactions/components/settings/types'
+import { ViewOnlyButton } from '@luxexchange/lx/src/features/transactions/components/settings/ViewOnlyButton'
+import { ViewOnlyModal } from '@luxexchange/lx/src/features/transactions/modals/ViewOnlyModal'
+import { useWallet } from '@luxexchange/lx/src/features/wallet/hooks/useWallet'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { dismissNativeKeyboard } from '@luxfi/utilities/src/device/keyboard/dismissNativeKeyboard'
+import { isMobileApp, isWebApp } from '@luxfi/utilities/src/platform'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export interface TransactionSettingsProps {
   settings: TransactionSettingConfig[]

@@ -1,13 +1,13 @@
 import { TFunction } from 'i18next'
 import { PropsWithChildren, useMemo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { Flag } from 'ui/src/components/icons/Flag'
-import { CurrencyInfo, TokenList } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { getFeeColor } from 'lx/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { WarningModalInfoContainer } from 'lx/src/features/tokens/warnings/WarningInfoModalContainer'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Flag } from '@luxfi/ui/src/components/icons/Flag'
+import { CurrencyInfo, TokenList } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { getFeeColor } from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { WarningModalInfoContainer } from '@luxexchange/lx/src/features/tokens/warnings/WarningInfoModalContainer'
 
 function getWarningFlags({
   currencyInfo,

@@ -1,5 +1,5 @@
-import { logger } from 'utilities/src/logger/logger'
-import { ScantasticParams } from 'wallet/src/features/scantastic/types'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { ScantasticParams } from '@luxfi/wallet/src/features/scantastic/types'
 
 export const KEY_PARAMS = {
   name: 'RSA-OAEP',

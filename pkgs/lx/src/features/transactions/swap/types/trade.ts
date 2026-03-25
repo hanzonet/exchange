@@ -22,20 +22,20 @@ import type {
   PriorityQuoteResponse,
   UnwrapQuoteResponse,
   WrapQuoteResponse,
-} from '@universe/api'
-import { TradingApi } from '@universe/api'
+} from '@luxexchange/api'
+import { TradingApi } from '@luxexchange/api'
 import { BigNumber, providers } from 'ethers/lib/ethers'
-import { PollingInterval } from 'lx/src/constants/misc'
-import { MAX_AUTO_SLIPPAGE_TOLERANCE } from 'lx/src/constants/transactions'
-import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
-import { getPlanCompoundSlippageTolerance } from 'lx/src/features/transactions/swap/plan/slippage'
-import { BlockingTradeError } from 'lx/src/features/transactions/swap/types/BlockingTradeError'
-import { getTradingApiSwapFee } from 'lx/src/features/transactions/swap/types/getTradingApiSwapFee'
-import { SolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
-import { slippageToleranceToPercent } from 'lx/src/features/transactions/swap/utils/format'
-import { FrontendSupportedProtocol } from 'lx/src/features/transactions/swap/utils/protocols'
-import { AccountDetails } from 'lx/src/features/wallet/types/AccountDetails'
-import { CurrencyField } from 'lx/src/types/currency'
+import { PollingInterval } from '@luxexchange/lx/src/constants/misc'
+import { MAX_AUTO_SLIPPAGE_TOLERANCE } from '@luxexchange/lx/src/constants/transactions'
+import { getCurrencyAmount, ValueType } from '@luxexchange/lx/src/features/tokens/getCurrencyAmount'
+import { getPlanCompoundSlippageTolerance } from '@luxexchange/lx/src/features/transactions/swap/plan/slippage'
+import { BlockingTradeError } from '@luxexchange/lx/src/features/transactions/swap/types/BlockingTradeError'
+import { getTradingApiSwapFee } from '@luxexchange/lx/src/features/transactions/swap/types/getTradingApiSwapFee'
+import { SolanaTrade } from '@luxexchange/lx/src/features/transactions/swap/types/solana'
+import { slippageToleranceToPercent } from '@luxexchange/lx/src/features/transactions/swap/utils/format'
+import { FrontendSupportedProtocol } from '@luxexchange/lx/src/features/transactions/swap/utils/protocols'
+import { AccountDetails } from '@luxexchange/lx/src/features/wallet/types/AccountDetails'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 type QuoteResponseWithAggregatedOutputs =
   | ClassicQuoteResponse

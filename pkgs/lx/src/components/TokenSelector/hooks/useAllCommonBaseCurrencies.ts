@@ -1,6 +1,6 @@
 import { GqlResult } from '@luxfi/api'
 import { useMemo } from 'react'
-import { useCurrencies } from 'lx/src/components/TokenSelector/hooks/useCurrencies'
+import { useCurrencies } from '@luxexchange/lx/src/components/TokenSelector/hooks/useCurrencies'
 import {
   LBTC_LUX,
   LBTC_LUX_TESTNET,
@@ -17,12 +17,12 @@ import {
   ZBTC_ZOO,
   ZETH_ZOO,
   ZUSD_ZOO,
-} from 'lx/src/constants/tokens'
-import { COMMON_BASES } from 'lx/src/constants/routing'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { buildNativeCurrencyId, buildWrappedNativeCurrencyId, currencyId } from 'lx/src/utils/currencyId'
+} from '@luxexchange/lx/src/constants/tokens'
+import { COMMON_BASES } from '@luxexchange/lx/src/constants/routing'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildNativeCurrencyId, buildWrappedNativeCurrencyId, currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 // Base currency IDs for traditional EVM chains
 const evmBaseCurrencyIds = [

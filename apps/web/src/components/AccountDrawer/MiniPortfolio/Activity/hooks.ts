@@ -1,21 +1,21 @@
 import { TradingApi } from '@luxexchange/api'
 import { useEffect, useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { useMergeLocalAndRemoteTransactions } from 'lx/src/features/activity/hooks/useMergeLocalAndRemoteTransactions'
-import { useOpenLimitOrders as useOpenLimitOrdersREST } from 'lx/src/features/activity/hooks/useOpenLimitOrders'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { isL2ChainId } from 'lx/src/features/chains/utils'
-import { CancellationGasFeeDetails } from 'lx/src/features/gas/hooks'
-import { useCancellationGasFeeInfo } from 'lx/src/features/gas/hooks/useCancellationGasFeeInfo'
-import { addTransaction } from 'lx/src/features/transactions/slice'
-import { isDEX } from 'lx/src/features/transactions/swap/utils/routing'
+import { useMergeLocalAndRemoteTransactions } from '@luxexchange/lx/src/features/activity/hooks/useMergeLocalAndRemoteTransactions'
+import { useOpenLimitOrders as useOpenLimitOrdersREST } from '@luxexchange/lx/src/features/activity/hooks/useOpenLimitOrders'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
+import { CancellationGasFeeDetails } from '@luxexchange/lx/src/features/gas/hooks'
+import { useCancellationGasFeeInfo } from '@luxexchange/lx/src/features/gas/hooks/useCancellationGasFeeInfo'
+import { addTransaction } from '@luxexchange/lx/src/features/transactions/slice'
+import { isDEX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
   TransactionType,
   DEXOrderDetails,
-} from 'lx/src/features/transactions/types/transactionDetails'
-import { isLimitOrder, isDEXOrderPending } from 'lx/src/features/transactions/utils/dex.utils'
+} from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { isLimitOrder, isDEXOrderPending } from '@luxexchange/lx/src/features/transactions/utils/dex.utils'
 import { usePendingTransactions, usePendingDEXOrders } from '~/state/transactions/hooks'
 import { isExistingTransaction } from '~/state/transactions/utils'
 

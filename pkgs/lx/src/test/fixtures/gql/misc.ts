@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxfi/api'
-import { faker } from 'lx/src/test/shared'
-import { createFixture } from 'lx/src/test/utils'
+import { faker } from '@luxexchange/lx/src/test/shared'
+import { createFixture } from '@luxexchange/lx/src/test/utils'
 
 export const GQL_CHAINS = [
   GraphQLApi.Chain.Ethereum,

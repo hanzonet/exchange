@@ -4,7 +4,7 @@ import {
   getChromeRuntime,
   getChromeRuntimeWithThrow,
   getChromeWithThrow,
-} from 'utilities/src/chrome/chrome.web'
+} from '@luxfi/utilities/src/chrome/chrome.web'
 
 describe('Chrome utilities', () => {
   const originalChrome = global.chrome

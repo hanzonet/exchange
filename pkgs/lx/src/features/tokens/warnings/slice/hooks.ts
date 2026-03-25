@@ -5,16 +5,16 @@ import {
   dismissedBridgedAssetWarningsSelector,
   dismissedCompatibleAddressWarningsSelector,
   dismissedWarningTokensSelector,
-} from 'lx/src/features/tokens/warnings/slice/selectors'
+} from '@luxexchange/lx/src/features/tokens/warnings/slice/selectors'
 import {
   dismissBridgedAssetWarning,
   dismissCompatibleAddressWarning,
   dismissTokenWarning,
-} from 'lx/src/features/tokens/warnings/slice/slice'
-import { BasicTokenInfo, isBasicTokenInfo } from 'lx/src/features/tokens/warnings/slice/types'
-import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
-import { getValidAddress } from 'lx/src/utils/addresses'
-import { serializeToken } from 'lx/src/utils/currency'
+} from '@luxexchange/lx/src/features/tokens/warnings/slice/slice'
+import { BasicTokenInfo, isBasicTokenInfo } from '@luxexchange/lx/src/features/tokens/warnings/slice/types'
+import { TokenProtectionWarning } from '@luxexchange/lx/src/features/tokens/warnings/types'
+import { getValidAddress } from '@luxexchange/lx/src/utils/addresses'
+import { serializeToken } from '@luxexchange/lx/src/utils/currency'
 
 /**
  * Result returned by dismissed-warning hooks.

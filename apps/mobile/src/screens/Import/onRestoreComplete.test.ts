@@ -1,12 +1,12 @@
 import { NavigationProp } from '@react-navigation/core'
 import { OnboardingStackParamList } from 'src/app/navigation/types'
 import { onRestoreComplete } from 'src/screens/Import/onRestoreComplete'
-import { MobileEventName } from 'lx/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
-import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
-import { OnboardingScreens } from 'lx/src/types/screens/mobile'
-import { setHasCopiedPrivateKeys } from 'wallet/src/features/behaviorHistory/slice'
-import { restoreMnemonicComplete } from 'wallet/src/features/wallet/slice'
+import { MobileEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
+import { ImportType, OnboardingEntryPoint } from '@luxexchange/lx/src/types/onboarding'
+import { OnboardingScreens } from '@luxexchange/lx/src/types/screens/mobile'
+import { setHasCopiedPrivateKeys } from '@luxfi/wallet/src/features/behaviorHistory/slice'
+import { restoreMnemonicComplete } from '@luxfi/wallet/src/features/wallet/slice'
 
 jest.mock('lx/src/features/telemetry/send', () => ({
   sendAnalyticsEvent: jest.fn(),

@@ -2,9 +2,9 @@ import {
   createSignedRequestBody,
   createSignedRequestParams,
   type SignedRequestParams,
-} from '@universe/api/src/clients/base/auth'
-import { type FetchClient } from '@universe/api/src/clients/base/types'
-import { createFetcher } from '@universe/api/src/clients/base/utils'
+} from '@luxexchange/api/src/clients/base/auth'
+import { type FetchClient } from '@luxexchange/api/src/clients/base/types'
+import { createFetcher } from '@luxexchange/api/src/clients/base/utils'
 import {
   type ProfileMetadata,
   type UnitagAddressesRequest,
@@ -22,8 +22,8 @@ import {
   type UnitagUpdateMetadataResponse,
   type UnitagUsernameRequest,
   type UnitagUsernameResponse,
-} from '@universe/api/src/clients/unitags/types'
-import { sanitizeAvatarUrl } from 'utilities/src/format/urls'
+} from '@luxexchange/api/src/clients/unitags/types'
+import { sanitizeAvatarUrl } from '@luxfi/utilities/src/format/urls'
 
 const UNI_SIG_HEADER_KEY = 'x-uni-sig'
 

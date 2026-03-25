@@ -1,8 +1,8 @@
 import { TradingApi } from '@luxfi/api'
-import type { ApprovalTxInfo } from 'lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import type { SwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
-import type { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import type { ApprovalTxInfo } from '@luxexchange/lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import type { SwapTxAndGasInfo } from '@luxexchange/lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { Trade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 
 export type SwapTxAndGasInfoParameters<T extends Trade = Trade> = {
   derivedSwapInfo: DerivedSwapInfo

@@ -1,19 +1,19 @@
 import { type Currency, CurrencyAmount, type Token, TradeType } from '@luxamm/sdk-core'
 import { FeeAmount, Pool, Route } from '@luxamm/v3-sdk'
 import { type ClassicQuoteResponse, TradingApi } from '@luxfi/api'
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { type DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { type DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
 import {
   ApprovalAction,
   ClassicTrade,
   type TokenApprovalInfo,
   type TradeWithStatus,
   DEXV2Trade,
-} from 'lx/src/features/transactions/swap/types/trade'
-import { WrapType } from 'lx/src/features/transactions/types/wrap'
-import { benignSafetyInfo } from 'lx/src/test/fixtures'
-import { createGasEstimate } from 'lx/src/test/fixtures/tradingApi'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/swap/types/trade'
+import { WrapType } from '@luxexchange/lx/src/features/transactions/types/wrap'
+import { benignSafetyInfo } from '@luxexchange/lx/src/test/fixtures'
+import { createGasEstimate } from '@luxexchange/lx/src/test/fixtures/tradingApi'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 
 export const TWENTY_MINUTES_FROM_NOW = Math.floor(Date.now() / 1000) + 60 * 20 // 20 minutes from now
 

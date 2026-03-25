@@ -1,4 +1,4 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
 export type TokenItemData = {
   name: string

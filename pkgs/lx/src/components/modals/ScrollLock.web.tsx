@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { logger } from 'utilities/src/logger/logger'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * These utils are used to lock the scroll position when a modal is open.

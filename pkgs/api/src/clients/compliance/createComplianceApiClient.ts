@@ -3,14 +3,14 @@ import type {
   ComplianceApiClientContext,
   ScreenRequest,
   ScreenResponse,
-} from '@universe/api/src/clients/compliance/types'
+} from '@luxexchange/api/src/clients/compliance/types'
 
 export type {
   ComplianceApiClient,
   ComplianceApiClientContext,
   ScreenRequest,
   ScreenResponse,
-} from '@universe/api/src/clients/compliance/types'
+} from '@luxexchange/api/src/clients/compliance/types'
 
 const COMPLIANCE_API_PATHS = {
   screenAddress: '/uniswap.compliancev2service.v1.compliancev2Service/ScreenAddress',

@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { Flex, Text } from 'ui/src'
-import { IndicativeLoadingWrapper } from 'lx/src/components/misc/IndicativeLoadingWrapper'
-import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
-import { SlippageInfo } from 'lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/SlippageInfo'
-import { AutoSlippageBadge } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/MaxSlippageTooltip'
-import { usePriceUXEnabled } from 'lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
-import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
-import { BridgeTrade } from 'lx/src/features/transactions/swap/types/trade'
+import { Flex, Text } from '@luxfi/ui/src'
+import { IndicativeLoadingWrapper } from '@luxexchange/lx/src/components/misc/IndicativeLoadingWrapper'
+import type { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
+import { SlippageInfo } from '@luxexchange/lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/SlippageInfo'
+import { AutoSlippageBadge } from '@luxexchange/lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/MaxSlippageTooltip'
+import { usePriceUXEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/usePriceUXEnabled'
+import type { DerivedSwapInfo } from '@luxexchange/lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { BridgeTrade } from '@luxexchange/lx/src/features/transactions/swap/types/trade'
 
 interface MaxSlippageRowProps {
   acceptedDerivedSwapInfo: DerivedSwapInfo<CurrencyInfo, CurrencyInfo>

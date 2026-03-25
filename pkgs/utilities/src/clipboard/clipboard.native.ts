@@ -1,6 +1,6 @@
 import * as ExpoClipboard from 'expo-clipboard'
-import { IClipboard } from 'utilities/src/clipboard/clipboard'
-import { logger } from 'utilities/src/logger/logger'
+import { IClipboard } from '@luxfi/utilities/src/clipboard/clipboard'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 const Clipboard: IClipboard = {
   setClipboard: async (value: string) => {

@@ -1,6 +1,6 @@
-import { Flex, Separator, Text, TouchableArea, useLayoutAnimationOnChange, type SpaceTokens } from 'ui/src'
-import { AnglesDownUp } from 'ui/src/components/icons/AnglesDownUp'
-import { SortVertical } from 'ui/src/components/icons/SortVertical'
+import { Flex, Separator, Text, TouchableArea, useLayoutAnimationOnChange, type SpaceTokens } from '@luxfi/ui/src'
+import { AnglesDownUp } from '@luxfi/ui/src/components/icons/AnglesDownUp'
+import { SortVertical } from '@luxfi/ui/src/components/icons/SortVertical'
 
 export type ExpandoRowProps = {
   isExpanded: boolean

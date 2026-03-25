@@ -19,31 +19,31 @@ import { useFiatOnRampContext } from 'src/features/fiatOnRamp/FiatOnRampContext'
 import { FiatOnRampCountryListModal } from 'src/features/fiatOnRamp/FiatOnRampCountryListModal'
 import { FiatOnRampTokenSelectorModal } from 'src/features/fiatOnRamp/FiatOnRampTokenSelector'
 import { OffRampPopover } from 'src/features/fiatOnRamp/OffRampPopover'
-import { Flex, useIsDarkMode, useIsShortMobileDevice } from 'ui/src'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { useBottomSheetContext } from 'lx/src/components/modals/BottomSheetContext'
-import { HandleBar } from 'lx/src/components/modals/HandleBar'
-import { PillMultiToggle } from 'lx/src/components/pill/PillMultiToggle'
-import { MAX_FIAT_INPUT_DECIMALS } from 'lx/src/constants/transactions'
-import { usePortfolioBalances } from 'lx/src/features/dataApi/balances/balances'
-import { FiatOnRampCountryPicker } from 'lx/src/features/fiatOnRamp/FiatOnRampCountryPicker'
+import { Flex, useIsDarkMode, useIsShortMobileDevice } from '@luxfi/ui/src'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { useBottomSheetContext } from '@luxexchange/lx/src/components/modals/BottomSheetContext'
+import { HandleBar } from '@luxexchange/lx/src/components/modals/HandleBar'
+import { PillMultiToggle } from '@luxexchange/lx/src/components/pill/PillMultiToggle'
+import { MAX_FIAT_INPUT_DECIMALS } from '@luxexchange/lx/src/constants/transactions'
+import { usePortfolioBalances } from '@luxexchange/lx/src/features/dataApi/balances/balances'
+import { FiatOnRampCountryPicker } from '@luxexchange/lx/src/features/fiatOnRamp/FiatOnRampCountryPicker'
 import {
   useFiatOnRampQuotes,
   useFiatOnRampSupportedTokens,
   useIsFORLoading,
   useMeldFiatCurrencySupportInfo,
   useParseFiatOnRampError,
-} from 'lx/src/features/fiatOnRamp/hooks'
-import { useFiatOnRampAggregatorGetCountryQuery } from 'lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
-import { TokenSelectorBalanceDisplay } from 'lx/src/features/fiatOnRamp/TokenSelectorBalanceDisplay'
+} from '@luxexchange/lx/src/features/fiatOnRamp/hooks'
+import { useFiatOnRampAggregatorGetCountryQuery } from '@luxexchange/lx/src/features/fiatOnRamp/hooks/useFiatOnRampQueries'
+import { TokenSelectorBalanceDisplay } from '@luxexchange/lx/src/features/fiatOnRamp/TokenSelectorBalanceDisplay'
 import {
   type FiatOnRampCurrency,
   type FORCurrencyOrBalance,
   type FORServiceProvider,
   RampDirection,
   RampToggle,
-} from 'lx/src/features/fiatOnRamp/types'
-import UnsupportedTokenModal from 'lx/src/features/fiatOnRamp/UnsupportedTokenModal'
+} from '@luxexchange/lx/src/features/fiatOnRamp/types'
+import UnsupportedTokenModal from '@luxexchange/lx/src/features/fiatOnRamp/UnsupportedTokenModal'
 import {
   getOptionalServiceProviderLogo,
   isSupportedFORCurrency,
@@ -64,13 +64,13 @@ import { useUSDTokenUpdater } from 'uniswap/src/features/transactions/hooks/useU
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { FiatOnRampScreens } from 'uniswap/src/types/screens/mobile'
 import { currencyIdToAddress } from 'uniswap/src/utils/currencyId'
-import { truncateToMaxDecimals } from 'utilities/src/format/truncateToMaxDecimals'
-import { logger } from 'utilities/src/logger/logger'
-import { isIOS, isWebPlatform } from 'utilities/src/platform'
-import { usePrevious } from 'utilities/src/react/hooks'
-import { DEFAULT_DELAY, useDebounce } from 'utilities/src/time/timing'
-import { useWalletNavigation } from 'wallet/src/contexts/WalletNavigationContext'
-import { useActiveAccountWithThrow } from 'wallet/src/features/wallet/hooks'
+import { truncateToMaxDecimals } from '@luxfi/utilities/src/format/truncateToMaxDecimals'
+import { logger } from '@luxfi/utilities/src/logger/logger'
+import { isIOS, isWebPlatform } from '@luxfi/utilities/src/platform'
+import { usePrevious } from '@luxfi/utilities/src/react/hooks'
+import { DEFAULT_DELAY, useDebounce } from '@luxfi/utilities/src/time/timing'
+import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
+import { useActiveAccountWithThrow } from '@luxfi/wallet/src/features/wallet/hooks'
 
 type Props = NativeStackScreenProps<FiatOnRampStackParamList, FiatOnRampScreens.AmountInput>
 

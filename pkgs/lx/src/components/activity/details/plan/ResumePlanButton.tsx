@@ -1,11 +1,11 @@
 import { formatUnits } from 'ethers/lib/utils'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, SpinningLoader } from 'ui/src'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { useResumePlanMutation } from 'lx/src/features/transactions/swap/plan/intermediaryState/useResumePlanMutation'
-import { PlanTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { useEvent } from 'utilities/src/react/hooks'
+import { Button, SpinningLoader } from '@luxfi/ui/src'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { useResumePlanMutation } from '@luxexchange/lx/src/features/transactions/swap/plan/intermediaryState/useResumePlanMutation'
+import { PlanTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
 
 export function ResumePlanButton({
   typeInfo,

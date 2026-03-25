@@ -1,24 +1,24 @@
 import noop from 'lodash/noop'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Flex, Text, useSporeColors } from 'ui/src'
-import { Check } from 'ui/src/components/icons/Check'
+import { Button, Flex, Text, useSporeColors } from '@luxfi/ui/src'
+import { Check } from '@luxfi/ui/src/components/icons/Check'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import {
   FLASHBLOCKS_INSTANT_BALANCE_TIMEOUT,
   NON_FLASHBLOCKS_INSTANT_BALANCE_BUTTON_DURATION,
-} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/constants'
-import { useInstantReceiptOutput } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useInstantReceiptOutput'
-import { shouldShowFlashblocksUI } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
-import { useIsUnichainFlashblocksEnabled } from 'lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
-import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+} from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/constants'
+import { useInstantReceiptOutput } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useInstantReceiptOutput'
+import { shouldShowFlashblocksUI } from '@luxexchange/lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
+import { useIsUnichainFlashblocksEnabled } from '@luxexchange/lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
+import { useSwapDependenciesStore } from '@luxexchange/lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 export function FlashblocksConfirmButton({ size }: { size: 'medium' | 'large' }): JSX.Element {
   const { t } = useTranslation()

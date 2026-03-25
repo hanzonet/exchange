@@ -122,7 +122,7 @@ module.exports = {
     ],
     // React Plugin
     // Overrides rules from @react-native-community:
-    // https://github.com/facebook/react-native/blob/3cf0291008dfeed4d967ebb95bdccbe2d52c5b81/packages/eslint-config-react-native-community/index.js#L287
+    // https://github.com/facebook/react-native/blob/3cf0291008dfeed4d967ebb95bdccbe2d52c5b81/pkgs/eslint-config-react-native-community/index.js#L287
     'react/jsx-sort-props': [
       2,
       {
@@ -135,7 +135,7 @@ module.exports = {
     ],
     // React-Native Plugin
     // Overrides rules from @react-native-community:
-    // https://github.com/facebook/react-native/blob/3cf0291008dfeed4d967ebb95bdccbe2d52c5b81/packages/eslint-config-react-native-community/index.js#L313
+    // https://github.com/facebook/react-native/blob/3cf0291008dfeed4d967ebb95bdccbe2d52c5b81/pkgs/eslint-config-react-native-community/index.js#L313
     'react-native/no-unused-styles': 'error',
     'react-native/sort-styles': 'error',
 

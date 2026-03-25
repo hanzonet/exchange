@@ -6,27 +6,27 @@ import { navigate } from 'src/app/navigation/rootNavigation'
 import { useTokenDetailsContext } from 'src/components/TokenDetails/TokenDetailsContext'
 import { TokenDetailsFavoriteButton } from 'src/components/TokenDetails/TokenDetailsFavoriteButton'
 import { useTokenDetailsCurrentChainBalance } from 'src/components/TokenDetails/useTokenDetailsCurrentChainBalance'
-import { Flex, Text } from 'ui/src'
-import { Ellipsis } from 'ui/src/components/icons'
-import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
-import { iconSizes, spacing } from 'ui/src/theme'
-import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
-import { ContextMenu } from 'lx/src/components/menus/ContextMenu'
-import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
+import { Flex, Text } from '@luxfi/ui/src'
+import { Ellipsis } from '@luxfi/ui/src/components/icons'
+import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
+import { iconSizes, spacing } from '@luxfi/ui/src/theme'
+import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
+import { ContextMenu } from '@luxexchange/lx/src/components/menus/ContextMenu'
+import { ContextMenuTriggerMode } from '@luxexchange/lx/src/components/menus/types'
 import {
   useTokenBasicInfoPartsFragment,
   useTokenBasicProjectPartsFragment,
-} from 'lx/src/data/graphql/lux-data-api/fragments'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { TokenList } from 'lx/src/features/dataApi/types'
+} from '@luxexchange/lx/src/data/graphql/lux-data-api/fragments'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { TokenList } from '@luxexchange/lx/src/features/dataApi/types'
 import {
   TokenMenuActionType,
   useTokenContextMenuOptions,
-} from 'lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
-import { ModalName } from 'lx/src/features/telemetry/constants'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
+} from '@luxexchange/lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
+import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 
 export const HeaderTitleElement = memo(function HeaderTitleElement(): JSX.Element {
   const { t } = useTranslation()

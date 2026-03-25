@@ -1,35 +1,35 @@
 import type { MutableRefObject, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { TextInputProps } from 'react-native'
-import type { CurrencyInputPanelRef } from 'lx/src/components/CurrencyInputPanel/types'
-import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
-import { usePrefetchSwappableTokens } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
-import { getTokenWarningSeverity } from 'lx/src/features/tokens/warnings/safetyUtils'
-import type { DecimalPadInputRef } from 'lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
+import type { CurrencyInputPanelRef } from '@luxexchange/lx/src/components/CurrencyInputPanel/types'
+import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
+import { usePrefetchSwappableTokens } from '@luxexchange/lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
+import { getTokenWarningSeverity } from '@luxexchange/lx/src/features/tokens/warnings/safetyUtils'
+import type { DecimalPadInputRef } from '@luxexchange/lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useDecimalPadControlledField } from 'lx/src/features/transactions/swap/form/hooks/useDecimalPadControlledField'
-import { useSyncFiatAndTokenAmountUpdater } from 'lx/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
-import { createSwapFormScreenStore } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/createSwapFormScreenStore'
-import { useSwapNetworkChangeEffect } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
-import { useTemporaryExactOutputUnavailableWarning } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useTemporaryExactOutputUnavailableWarning'
-import { useUpdateSwapFormOnMountIfExactOutputWillFail } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useUpdateSwapFormOnMountIfExactOutputWillFail'
-import { SwapFormScreenStoreContext } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/SwapFormScreenStoreContext'
-import { useSwapFormScreenCallbacks } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
+} from '@luxexchange/lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useDecimalPadControlledField } from '@luxexchange/lx/src/features/transactions/swap/form/hooks/useDecimalPadControlledField'
+import { useSyncFiatAndTokenAmountUpdater } from '@luxexchange/lx/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
+import { createSwapFormScreenStore } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/createSwapFormScreenStore'
+import { useSwapNetworkChangeEffect } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
+import { useTemporaryExactOutputUnavailableWarning } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useTemporaryExactOutputUnavailableWarning'
+import { useUpdateSwapFormOnMountIfExactOutputWillFail } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useUpdateSwapFormOnMountIfExactOutputWillFail'
+import { SwapFormScreenStoreContext } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/SwapFormScreenStoreContext'
+import { useSwapFormScreenCallbacks } from '@luxexchange/lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
 
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { getExactOutputWillFail } from 'lx/src/features/transactions/swap/utils/getExactOutputWillFail'
-import { CurrencyField } from 'lx/src/types/currency'
+} from '@luxexchange/lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { getExactOutputWillFail } from '@luxexchange/lx/src/features/transactions/swap/utils/getExactOutputWillFail'
+import { CurrencyField } from '@luxexchange/lx/src/types/currency'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { formatCurrencyAmount } from 'utilities/src/format/localeBased'
-import { NumberType } from 'utilities/src/format/types'
-import { isMobileApp } from 'utilities/src/platform'
-import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
+import { formatCurrencyAmount } from '@luxfi/utilities/src/format/localeBased'
+import { NumberType } from '@luxfi/utilities/src/format/types'
+import { isMobileApp } from '@luxfi/utilities/src/platform'
+import { useHasValueChanged } from '@luxfi/utilities/src/react/useHasValueChanged'
 
 const useExactValueRef = (): MutableRefObject<string> => {
   return useSwapFormStore((s) => (s.isFiatMode ? s.exactAmountFiatRef : s.exactAmountTokenRef))

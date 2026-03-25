@@ -1,5 +1,5 @@
-import { UniverseChainId } from 'lx/src/features/chains/types'
-import { parseChainFromTokenSearchQuery } from 'lx/src/utils/search/parseChainFromTokenSearchQuery'
+import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
+import { parseChainFromTokenSearchQuery } from '@luxexchange/lx/src/utils/search/parseChainFromTokenSearchQuery'
 
 describe('parseChainFromTokenSearchQuery', () => {
   const enabledChains: UniverseChainId[] = [

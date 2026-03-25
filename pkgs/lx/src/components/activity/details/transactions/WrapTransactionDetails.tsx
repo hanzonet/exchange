@@ -1,7 +1,7 @@
-import { SwapTransactionContent } from 'lx/src/components/activity/details/transactions/SwapTransactionDetails'
-import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
-import { TransactionDetails, WrapTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
-import { buildNativeCurrencyId, buildWrappedNativeCurrencyId } from 'lx/src/utils/currencyId'
+import { SwapTransactionContent } from '@luxexchange/lx/src/components/activity/details/transactions/SwapTransactionDetails'
+import { useCurrencyInfo } from '@luxexchange/lx/src/features/tokens/useCurrencyInfo'
+import { TransactionDetails, WrapTransactionInfo } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
+import { buildNativeCurrencyId, buildWrappedNativeCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 export function WrapTransactionDetails({
   transactionDetails,

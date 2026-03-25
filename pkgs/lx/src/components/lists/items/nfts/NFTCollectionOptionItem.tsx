@@ -1,10 +1,10 @@
-import { Text, UniversalImage } from 'ui/src'
-import { Verified } from 'ui/src/components/icons/Verified'
-import { borderRadii, iconSizes } from 'ui/src/theme'
-import { OptionItem, OptionItemProps } from 'lx/src/components/lists/items/OptionItem'
-import { NFTCollectionOption } from 'lx/src/components/lists/items/types'
-import { TestID } from 'lx/src/test/fixtures/testIDs'
-import { uriToHttpUrls } from 'utilities/src/format/urls'
+import { Text, UniversalImage } from '@luxfi/ui/src'
+import { Verified } from '@luxfi/ui/src/components/icons/Verified'
+import { borderRadii, iconSizes } from '@luxfi/ui/src/theme'
+import { OptionItem, OptionItemProps } from '@luxexchange/lx/src/components/lists/items/OptionItem'
+import { NFTCollectionOption } from '@luxexchange/lx/src/components/lists/items/types'
+import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
+import { uriToHttpUrls } from '@luxfi/utilities/src/format/urls'
 
 type NFTCollectionOptionItemProps = {
   collectionOption: NFTCollectionOption

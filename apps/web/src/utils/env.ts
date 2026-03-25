@@ -1,4 +1,4 @@
-import { isBetaEnv, isProdEnv } from 'utilities/src/environment/env'
+import { isBetaEnv, isProdEnv } from '@luxfi/utilities/src/environment/env'
 
 function isAppLuxExchange({ hostname }: { hostname: string }): boolean {
   return hostname === 'lux.exchange' || hostname === 'app.lux.exchange'

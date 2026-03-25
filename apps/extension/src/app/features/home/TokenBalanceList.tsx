@@ -3,12 +3,12 @@ import { memo, useState } from 'react'
 import { useInterfaceBuyNavigator } from 'src/app/features/for/utils'
 import { AppRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
-import { TokenBalanceListWeb } from 'lx/src/components/portfolio/TokenBalanceListWeb'
-import { ReportTokenIssueModal } from 'lx/src/components/reporting/ReportTokenIssueModal'
-import { ElementName } from 'lx/src/features/telemetry/constants'
-import { useEvent } from 'utilities/src/react/hooks'
-import { useBooleanState } from 'utilities/src/react/useBooleanState'
-import { usePortfolioEmptyStateBackground } from 'wallet/src/components/portfolio/empty'
+import { TokenBalanceListWeb } from '@luxexchange/lx/src/components/portfolio/TokenBalanceListWeb'
+import { ReportTokenIssueModal } from '@luxexchange/lx/src/components/reporting/ReportTokenIssueModal'
+import { ElementName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { useEvent } from '@luxfi/utilities/src/react/hooks'
+import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
+import { usePortfolioEmptyStateBackground } from '@luxfi/wallet/src/components/portfolio/empty'
 
 export const ExtensionTokenBalanceList = memo(function _ExtensionTokenBalanceList({
   owner,

@@ -1,9 +1,9 @@
 import { GetPortfolioResponse } from '@uniswap/client-data-api/dist/data/v1/api_pb'
 import { GraphQLApi } from '@luxfi/api'
 import { useEffect, useState } from 'react'
-import { getChainInfo } from 'lx/src/features/chains/chainInfo'
-import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
-import { logger } from 'utilities/src/logger/logger'
+import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
+import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
+import { logger } from '@luxfi/utilities/src/logger/logger'
 
 /**
  * Computes the total balances in USD per chain asynchronously to avoid blocking the main thread.

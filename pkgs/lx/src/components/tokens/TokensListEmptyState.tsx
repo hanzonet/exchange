@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { StyleProp, ViewStyle } from 'react-native'
-import { Flex } from 'ui/src'
-import { NoTokens } from 'ui/src/components/icons/NoTokens'
-import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
-import { isExtensionApp } from 'utilities/src/platform'
+import { Flex } from '@luxfi/ui/src'
+import { NoTokens } from '@luxfi/ui/src/components/icons/NoTokens'
+import { BaseCard } from '@luxexchange/lx/src/components/BaseCard/BaseCard'
+import { isExtensionApp } from '@luxfi/utilities/src/platform'
 
 interface TokensListEmptyStateProps {
   buttonDataTestId?: string

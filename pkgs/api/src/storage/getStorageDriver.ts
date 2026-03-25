@@ -1,5 +1,5 @@
 import { StorageDriver } from '@luxfi/api/src/storage/types'
-import { PlatformSplitStubError } from 'utilities/src/errors'
+import { PlatformSplitStubError } from '@luxfi/utilities/src/errors'
 
 export function getStorageDriver(): StorageDriver {
   throw new PlatformSplitStubError('getStorageDriver')

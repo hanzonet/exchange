@@ -9,12 +9,12 @@ import {
 } from '@luxdex/client-explore/dist/uniswap/explore/v1/service_pb'
 import { tokenRankings } from '@luxdex/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
 import { parseProtectionInfo, parseSafetyLevel } from '@luxfi/api'
-import { luxGetTransport } from 'lx/src/data/rest/base'
-import { fromGraphQLChain } from 'lx/src/features/chains/utils'
-import { CurrencyInfo } from 'lx/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { currencyId } from 'lx/src/utils/currencyId'
+import { luxGetTransport } from '@luxexchange/lx/src/data/rest/base'
+import { fromGraphQLChain } from '@luxexchange/lx/src/features/chains/utils'
+import { CurrencyInfo } from '@luxexchange/lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from '@luxexchange/lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from '@luxexchange/lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { currencyId } from '@luxexchange/lx/src/utils/currencyId'
 
 /**
  * Wrapper around Tanstack useQuery for the Lux REST BE service TokenRankings
