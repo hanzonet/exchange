@@ -44,7 +44,7 @@ jobs:
             --reporter=list \
             --retries=2
         env:
-          BASE_URL: https://exchange.lux.network
+          BASE_URL: https://lux.exchange
 
       - name: Upload test results
         if: failure()
@@ -81,7 +81,7 @@ jobs:
             --reporter=list \
             --retries=2
         env:
-          BASE_URL: https://exchange.lux.network
+          BASE_URL: https://lux.exchange
 
       - name: Upload test results
         if: failure()
