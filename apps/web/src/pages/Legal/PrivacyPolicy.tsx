@@ -5,8 +5,8 @@ import { LEGAL_UPDATED } from '@luxexchange/config/src/legal'
  * Privacy Policy page — served at /privacy on all Lux ecosystem apps.
  */
 export default function PrivacyPolicyPage() {
-  const name = brand.name || 'Lux Exchange'
-  const entity = 'Lux Industries Inc.'
+  const name = brand.name || 'Exchange'
+  const entity = brand.legalEntity || 'the protocol operator'
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px 80px', color: 'var(--neutral1, #fff)' }}>
@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
       </Section>
 
       <p style={{ marginTop: '40px', color: 'var(--neutral3, #555)', fontSize: '12px', fontStyle: 'italic' }}>
-        This Privacy Policy is published for informational purposes. The Lux Network Protocol is
+        This Privacy Policy is published for informational purposes. The protocol is
         decentralized, open-source, experimental research software. The Protocol is permissionless —
         no entity can restrict access to or control the Protocol itself.
       </p>

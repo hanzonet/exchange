@@ -7,10 +7,7 @@ import { LEGAL_UPDATED } from '@luxexchange/config/src/legal'
  */
 export default function TermsOfService() {
   const name = brand.name || 'Exchange'
-  const entity = brand.description?.includes('Zoo') ? 'Zoo Labs Foundation' :
-    brand.description?.includes('Pars') ? 'Pars Network Foundation' :
-    brand.description?.includes('Hanzo') ? 'Hanzo AI Inc.' :
-    'Lux Industries Inc.'
+  const entity = brand.legalEntity || 'the protocol operator'
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 24px 80px', color: 'var(--neutral1, #fff)' }}>
@@ -22,7 +19,7 @@ export default function TermsOfService() {
       <Section title="1. Overview">
         <p>
           These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of {name} and associated
-          interfaces (the &ldquo;Interface&rdquo;) that provide access to the Lux Network decentralized protocol
+          interfaces (the &ldquo;Interface&rdquo;) that provide access to the decentralized protocol
           (the &ldquo;Protocol&rdquo;). The Interface is provided by {entity} and its affiliates
           (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).
         </p>
@@ -162,7 +159,7 @@ export default function TermsOfService() {
 
       <p style={{ marginTop: '40px', color: 'var(--neutral3, #555)', fontSize: '12px', fontStyle: 'italic' }}>
         These Terms are published for informational purposes and do not constitute legal advice.
-        The Lux Network Protocol is decentralized, open-source, experimental research software.
+        The protocol is decentralized, open-source, experimental research software.
       </p>
 
       <p style={{ marginTop: '16px', color: 'var(--neutral3, #555)', fontSize: '12px' }}>

@@ -16,11 +16,11 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
-const STORAGE_KEY = 'lux-legal-accepted'
+const STORAGE_KEY = 'protocol-legal-accepted'
 const STORAGE_VERSION = '2026-03-25' // bump to re-show after major legal updates
 
 export interface LegalAcceptanceBannerProps {
-  /** Brand name for display, e.g. "Lux Exchange", "Lux Bridge" */
+  /** Brand name for display — injected from runtime brand config */
   brandName?: string
   /** Terms of service URL */
   termsUrl?: string
@@ -65,10 +65,10 @@ export function useLegalAcceptance() {
 }
 
 export function LegalAcceptanceBanner({
-  brandName = 'Lux Network',
-  termsUrl = 'https://lux.network/terms',
-  privacyUrl = 'https://lux.network/privacy',
-  regulatoryUrl = 'https://lps.lux.network/legal/regulatory-status',
+  brandName = 'Protocol',
+  termsUrl = '/terms',
+  privacyUrl = '/privacy',
+  regulatoryUrl = '/legal/regulatory-status',
   onAccept,
   className,
 }: LegalAcceptanceBannerProps) {
@@ -121,11 +121,11 @@ export function LegalAcceptanceBanner({
           This interface uses minimal cookies for functionality and privacy-respecting analytics.
           By continuing, you agree to our{' '}
           <a href={termsUrl} target="_blank" rel="noopener noreferrer"
-            style={{ color: '#7C3AED', textDecoration: 'underline' }}>
+            style={{ color: 'var(--accent1, #7C3AED)', textDecoration: 'underline' }}>
             Terms of Service
           </a>{' '}and{' '}
           <a href={privacyUrl} target="_blank" rel="noopener noreferrer"
-            style={{ color: '#7C3AED', textDecoration: 'underline' }}>
+            style={{ color: 'var(--accent1, #7C3AED)', textDecoration: 'underline' }}>
             Privacy Policy
           </a>.{' '}
           <a href={regulatoryUrl} target="_blank" rel="noopener noreferrer"
@@ -138,7 +138,7 @@ export function LegalAcceptanceBanner({
           <button
             onClick={handleAccept}
             style={{
-              background: '#7C3AED',
+              background: 'var(--accent1, #7C3AED)',
               color: '#fff',
               border: 'none',
               borderRadius: '8px',
