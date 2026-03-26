@@ -52,10 +52,10 @@ export function OtherWalletsModal() {
           >
             {/* If uniswap mobile was the last used connector it will be show on the primary window */}
             {/* If Embedded Wallet is enabled, it will be shown on the primary window */}
-            {recentConnectorId !== CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID &&
+            {recentConnectorId !== CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID &&
               !isEmbeddedWalletEnabled && (
                 <>
-                  <UniswapMobileWalletConnectorOption />
+                  <LxMobileWalletConnectorOption />
                   {wallets.length > 0 && <Separator />}
                 </>
               )}

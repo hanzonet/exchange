@@ -2,10 +2,10 @@
  * Uniswap Identifier provider interface
  * Platform-specific implementations handle uniswap identifier persistence
  */
-interface UniswapIdentifierService {
-  getUniswapIdentifier(): Promise<string | null>
-  setUniswapIdentifier(identifier: string): Promise<void>
-  removeUniswapIdentifier(): Promise<void>
+interface LxIdentifierService {
+  getLxIdentifier(): Promise<string | null>
+  setLxIdentifier(identifier: string): Promise<void>
+  removeLxIdentifier(): Promise<void>
 }
 
-export type { UniswapIdentifierService }
+export type { LxIdentifierService }

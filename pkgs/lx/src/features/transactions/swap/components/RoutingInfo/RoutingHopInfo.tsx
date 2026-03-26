@@ -15,10 +15,10 @@ import { useLocalizationContext } from 'uniswap/src/features/language/Localizati
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import {
   BestRouteTooltip,
-  BestRouteUniswapXTooltip,
+  BestRouteLxSwapTooltip,
 } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormTooltips/BestRouteTooltip'
 import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { useRoutingEntries } from 'uniswap/src/utils/routingDiagram/routingRegistry'
 import { NumberType } from 'utilities/src/format/types'
 import { isWebPlatform } from 'utilities/src/platform'
@@ -44,11 +44,11 @@ export function RoutingHopInfo({
     const textVariant = isWebPlatform ? 'body4' : 'body2'
     const textAlign = isWebPlatform ? 'left' : 'center'
 
-    if (isUniswapX(trade)) {
+    if (isLxSwap(trade)) {
       return (
         <Text variant={textVariant} textAlign={textAlign} color="$neutral2">
           <Trans
-            i18nKey="uniswapX.aggregatesLiquidity"
+            i18nKey="lxSwap.aggregatesLiquidity"
             components={{
               logo: (
                 <>
@@ -94,8 +94,8 @@ export function RoutingHopInfo({
           zIndex: zIndexes.popover,
         }}
         tooltipProps={{
-          text: isUniswapX(trade) ? (
-            <BestRouteUniswapXTooltip />
+          text: isLxSwap(trade) ? (
+            <BestRouteLxSwapTooltip />
           ) : routes && routes.length > 0 ? (
             <BestRouteTooltip />
           ) : (

@@ -6,12 +6,12 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import {
   chainIdToHexadecimalString,
   fromGraphQLChain,
-  fromUniswapWebAppLink,
+  fromLxWebAppLink,
   getEnabledChains,
   getPollingIntervalByBlocktime,
   hexadecimalStringToInt,
   toSupportedChainId,
-  toUniswapWebAppLink,
+  toLxWebAppLink,
 } from 'uniswap/src/features/chains/utils'
 
 describe(toSupportedChainId, () => {
@@ -52,31 +52,31 @@ describe(getPollingIntervalByBlocktime, () => {
   })
 })
 
-describe(fromUniswapWebAppLink, () => {
+describe(fromLxWebAppLink, () => {
   it('handles supported chain', () => {
-    expect(fromUniswapWebAppLink(GraphQLApi.Chain.Ethereum.toLowerCase())).toEqual(UniverseChainId.Mainnet)
-    expect(fromUniswapWebAppLink(GraphQLApi.Chain.Arbitrum.toLowerCase())).toEqual(UniverseChainId.ArbitrumOne)
-    expect(fromUniswapWebAppLink(GraphQLApi.Chain.Optimism.toLowerCase())).toEqual(UniverseChainId.Optimism)
-    expect(fromUniswapWebAppLink(GraphQLApi.Chain.Polygon.toLowerCase())).toEqual(UniverseChainId.Polygon)
+    expect(fromLxWebAppLink(GraphQLApi.Chain.Ethereum.toLowerCase())).toEqual(UniverseChainId.Mainnet)
+    expect(fromLxWebAppLink(GraphQLApi.Chain.Arbitrum.toLowerCase())).toEqual(UniverseChainId.ArbitrumOne)
+    expect(fromLxWebAppLink(GraphQLApi.Chain.Optimism.toLowerCase())).toEqual(UniverseChainId.Optimism)
+    expect(fromLxWebAppLink(GraphQLApi.Chain.Polygon.toLowerCase())).toEqual(UniverseChainId.Polygon)
     // TODO: add Base test once GraphQLApi.Chain includes Base (GQL reliant)
   })
 
   it('handle unsupported chain', () => {
-    expect(() => fromUniswapWebAppLink('unkwnown')).toThrow('Network "unkwnown" can not be mapped')
+    expect(() => fromLxWebAppLink('unkwnown')).toThrow('Network "unkwnown" can not be mapped')
   })
 })
 
-describe(toUniswapWebAppLink, () => {
+describe(toLxWebAppLink, () => {
   it('handles supported chain', () => {
-    expect(toUniswapWebAppLink(UniverseChainId.Mainnet)).toEqual(GraphQLApi.Chain.Ethereum.toLowerCase())
-    expect(toUniswapWebAppLink(UniverseChainId.ArbitrumOne)).toEqual(GraphQLApi.Chain.Arbitrum.toLowerCase())
-    expect(toUniswapWebAppLink(UniverseChainId.Optimism)).toEqual(GraphQLApi.Chain.Optimism.toLowerCase())
-    expect(toUniswapWebAppLink(UniverseChainId.Polygon)).toEqual(GraphQLApi.Chain.Polygon.toLowerCase())
+    expect(toLxWebAppLink(UniverseChainId.Mainnet)).toEqual(GraphQLApi.Chain.Ethereum.toLowerCase())
+    expect(toLxWebAppLink(UniverseChainId.ArbitrumOne)).toEqual(GraphQLApi.Chain.Arbitrum.toLowerCase())
+    expect(toLxWebAppLink(UniverseChainId.Optimism)).toEqual(GraphQLApi.Chain.Optimism.toLowerCase())
+    expect(toLxWebAppLink(UniverseChainId.Polygon)).toEqual(GraphQLApi.Chain.Polygon.toLowerCase())
     // TODO: add Base test once GraphQLApi.Chain includes Base (GQL reliant)
   })
 
   it('handle unsupported chain', () => {
-    expect(() => fromUniswapWebAppLink('unkwnown')).toThrow('Network "unkwnown" can not be mapped')
+    expect(() => fromLxWebAppLink('unkwnown')).toThrow('Network "unkwnown" can not be mapped')
   })
 })
 

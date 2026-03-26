@@ -4,9 +4,9 @@ import { extractOnRampTransactionDetails } from 'uniswap/src/features/activity/e
 import extractRestOnChainTransactionDetails from 'uniswap/src/features/activity/extract/extractOnChainTransactionDetails'
 import extractPlanDetails from 'uniswap/src/features/activity/extract/extractPlanDetails'
 import extractRestFiatOnRampDetails from 'uniswap/src/features/activity/extract/extractRestFiatOnRampDetails'
-import extractRestUniswapXOrderDetails from 'uniswap/src/features/activity/extract/extractRestUniswapXOrderDetails'
+import extractRestLxSwapOrderDetails from 'uniswap/src/features/activity/extract/extractRestLxSwapOrderDetails'
 import extractTransactionDetails from 'uniswap/src/features/activity/extract/extractTransactionDetails'
-import { extractUniswapXOrderDetails } from 'uniswap/src/features/activity/extract/extractUniswapXOrderDetails'
+import { extractLxSwapOrderDetails } from 'uniswap/src/features/activity/extract/extractLxSwapOrderDetails'
 import { getIsNftHidden } from 'uniswap/src/features/nfts/utils'
 import {
   TransactionDetails,
@@ -24,7 +24,7 @@ let hasLoggedMissingTransactionField = false
 
 export enum RestTransactionType {
   OnChain = 'onChain',
-  LX = 'uniswapX',
+  LX = 'lxSwap',
   FiatOnRamp = 'fiatOnRamp',
   Plan = 'plan',
 }
@@ -61,8 +61,8 @@ export function parseDataResponseToTransactionDetails({
         if (parsed) {
           accum.push(parsed)
         }
-      } else if (t?.details.__typename === TransactionDetailsType.UniswapXOrder) {
-        const parsed = extractUniswapXOrderDetails(t as TransactionListQueryResponse)
+      } else if (t?.details.__typename === TransactionDetailsType.LxSwapOrder) {
+        const parsed = extractLxSwapOrderDetails(t as TransactionListQueryResponse)
         if (parsed) {
           accum.push(parsed)
         }
@@ -113,7 +113,7 @@ export function parseRestResponseToTransactionDetails({
         break
       }
       case RestTransactionType.LX: {
-        const parsed = extractRestUniswapXOrderDetails(transaction.transaction.value)
+        const parsed = extractRestLxSwapOrderDetails(transaction.transaction.value)
         if (parsed) {
           accum.push(parsed)
         }

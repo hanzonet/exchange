@@ -23,10 +23,10 @@ import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFille
 import { iconSizes } from '@luxfi/ui/src/theme'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
 import { InfoTooltip } from '@luxexchange/lx/src/components/tooltip/InfoTooltip'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useGetPoolsRewards } from '@luxexchange/lx/src/data/rest/getPoolsRewards'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
-import { UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { LxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
 import { HexString } from '@luxfi/utilities/src/addresses/hex'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -246,8 +246,8 @@ function LpIncentiveRewardsCard({
                           : t('pool.incentives.administeredRewards')}
                       </Text>
                       {!rewardsError && (
-                        <Trace logPress eventOnTrigger={UniswapEventName.LpIncentiveLearnMoreCtaClicked}>
-                          <LearnMoreLink textVariant="buttonLabel4" url={uniswapUrls.helpArticleUrls.lpIncentiveInfo} />
+                        <Trace logPress eventOnTrigger={LxEventName.LpIncentiveLearnMoreCtaClicked}>
+                          <LearnMoreLink textVariant="buttonLabel4" url={lxUrls.helpArticleUrls.lpIncentiveInfo} />
                         </Trace>
                       )}
                     </Flex>
@@ -258,7 +258,7 @@ function LpIncentiveRewardsCard({
           </Flex>
         </Flex>
         <Flex gap="$spacing2">
-          <Trace logPress eventOnTrigger={UniswapEventName.LpIncentiveLearnMoreCtaClicked}>
+          <Trace logPress eventOnTrigger={LxEventName.LpIncentiveLearnMoreCtaClicked}>
             <TouchableArea
               group="item"
               animation={null}

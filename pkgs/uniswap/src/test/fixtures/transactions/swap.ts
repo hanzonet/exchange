@@ -116,7 +116,7 @@ export function createMockDerivedSwapInfo({
   }
 }
 
-const createMockUniswapXOrder = (inputToken: string, outputToken: string): TradingApi.DutchOrderInfoV2 => ({
+const createMockLxSwapOrder = (inputToken: string, outputToken: string): TradingApi.DutchOrderInfoV2 => ({
   chainId: 1,
   reactor: '0x00000011F84B9aa48e5f8aA8B9897600006289Be',
   swapper: '0x123',
@@ -138,7 +138,7 @@ const createMockUniswapXOrder = (inputToken: string, outputToken: string): Tradi
 export const createMockLXQuote = (inputToken: string, outputToken: string): TradingApi.DutchQuoteV2 => ({
   encodedOrder: '0x000',
   orderId: '0xbbb',
-  orderInfo: createMockUniswapXOrder(inputToken, outputToken),
+  orderInfo: createMockLxSwapOrder(inputToken, outputToken),
   slippageTolerance: 0.5,
   quoteId: '123',
   classicGasUseEstimateUSD: '10',

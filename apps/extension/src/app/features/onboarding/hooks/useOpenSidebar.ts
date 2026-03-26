@@ -3,7 +3,7 @@ import { getCurrentTabAndWindowId } from 'src/app/navigation/utils'
 import { onboardingMessageChannel } from 'src/background/messagePassing/messageChannels'
 import { OnboardingMessageType } from 'src/background/messagePassing/types/ExtensionMessages'
 import { openSidePanel } from 'src/background/utils/chromeSidePanelUtils'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
 
@@ -34,7 +34,7 @@ export function useOpenSidebar() {
   }
 
   const handleOpenWebApp = async (): Promise<void> => {
-    window.location.href = uniswapUrls.webInterfaceSwapUrl
+    window.location.href = lxUrls.webInterfaceSwapUrl
   }
 
   return { openedSideBar, handleOpenSidebar, handleOpenWebApp }

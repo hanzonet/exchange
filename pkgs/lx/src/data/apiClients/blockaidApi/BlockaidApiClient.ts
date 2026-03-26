@@ -1,8 +1,8 @@
 import { type BlockaidApiClient as BlockaidApiClientType, createBlockaidApiClient } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
-import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
+import { createLxFetchClient } from 'uniswap/src/data/apiClients/createLxFetchClient'
 
-const BlockaidFetchClient = createUniswapFetchClient({
+const BlockaidFetchClient = createLxFetchClient({
   baseUrl: `${config.blockaidProxyUrl}`,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,

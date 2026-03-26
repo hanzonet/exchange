@@ -372,7 +372,7 @@ export default function FeatureFlagModal(): JSX.Element {
             <FeatureFlagOption flag={FeatureFlags.TDPTokenCarousel} label="Enable TDP Token Carousel" />
           </FeatureFlagGroup>
           <FeatureFlagGroup name="Misc">
-            <FeatureFlagOption flag={FeatureFlags.UniswapWrapped2025} label="Enable Uniswap Wrapped 2025" />
+            <FeatureFlagOption flag={FeatureFlags.LxWrapped2025} label="Enable Uniswap Wrapped 2025" />
             <FeatureFlagOption flag={FeatureFlags.UnificationCopy} label="Enable Unification Copy" />
           </FeatureFlagGroup>
           <FeatureFlagGroup name="Prices">

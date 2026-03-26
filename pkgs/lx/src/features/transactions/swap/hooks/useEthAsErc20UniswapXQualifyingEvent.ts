@@ -59,7 +59,7 @@ function useMinUsdThresholds(): Partial<Record<UniverseChainId, number>> {
   } catch (error) {
     logger.error(error, {
       tags: {
-        file: 'useEthAsErc20UniswapXQualifyingEvent',
+        file: 'useEthAsErc20LxSwapQualifyingEvent',
         function: 'useMinUsdThresholds',
       },
       extra: {
@@ -190,7 +190,7 @@ function useNativeAllowanceCheck({
  * 7. Wallet is delegated to Uniswap (via /check_delegation API)
  * 8. Wallet has native allowance > 0 for the ERC20 ETH contract (on-chain check)
  */
-export function useEthAsErc20UniswapXQualifyingEvent(derivedSwapInfo: DerivedSwapInfo): void {
+export function useEthAsErc20LxSwapQualifyingEvent(derivedSwapInfo: DerivedSwapInfo): void {
   const { evmAccount } = useWallet()
   const walletAddress = evmAccount?.address
   const { chainId } = derivedSwapInfo

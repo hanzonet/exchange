@@ -4,7 +4,7 @@ import { useReactNavigationModal } from 'src/components/modals/useReactNavigatio
 import { Button, Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
 import { SmartWallet } from '@luxfi/ui/src/components/icons'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
 
@@ -29,7 +29,7 @@ export function SmartWalletInfoModal(): JSX.Element {
           <Text textAlign="center" variant="body3" color="$neutral2">
             {t('smartWallet.modal.description.block2')}
           </Text>
-          <TouchableArea onPress={() => onPressLearnMore(uniswapUrls.helpArticleUrls.smartWalletDelegation)}>
+          <TouchableArea onPress={() => onPressLearnMore(lxUrls.helpArticleUrls.smartWalletDelegation)}>
             <Text textAlign="center" variant="buttonLabel3" color="$neutral1">
               {t('common.button.learn')}
             </Text>

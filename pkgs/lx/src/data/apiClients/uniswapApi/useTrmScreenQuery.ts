@@ -1,6 +1,6 @@
 import { skipToken, type UseQueryResult, useQuery } from '@tanstack/react-query'
 import { type ScreenRequest, type ScreenResponse, type UseQueryApiHelperHookArgs } from '@luxexchange/api'
-import { ComplianceApiClient } from 'uniswap/src/data/apiClients/uniswapApi/ComplianceApiClient'
+import { ComplianceApiClient } from 'uniswap/src/data/apiClients/lxApi/ComplianceApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export function useTrmScreenQuery({

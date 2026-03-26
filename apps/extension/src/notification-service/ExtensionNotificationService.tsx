@@ -29,7 +29,7 @@ import { extensionNotificationStore } from 'src/notification-service/notificatio
 import { getNotificationTelemetry } from 'src/notification-service/notification-telemetry/getNotificationTelemetry'
 import { createExtensionLocalTriggerDataSource } from 'src/notification-service/triggers/createExtensionLocalTriggerDataSource'
 import { getReduxStore } from 'src/store/store'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { mapLocaleToBackendLocale } from '@luxexchange/lx/src/features/language/constants'
 import { getLocale } from '@luxexchange/lx/src/features/language/navigatorLocale'
 import { selectCurrentLanguage } from '@luxexchange/lx/src/features/settings/selectors'
@@ -139,7 +139,7 @@ function provideExtensionNotificationService(ctx: {
     // Handle explore paths by opening in web interface
     if (url.startsWith('/explore/')) {
       focusOrCreateLuxInterfaceTab({
-        url: `${uniswapUrls.requestOriginUrl}${url}`,
+        url: `${lxUrls.requestOriginUrl}${url}`,
       }).catch((error) => {
         getLogger().error(error, {
           tags: {

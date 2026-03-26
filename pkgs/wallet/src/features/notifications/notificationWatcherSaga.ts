@@ -11,7 +11,7 @@ import {
   TransactionStatus,
   TransactionType,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 import { WalletConnectEvent } from 'uniswap/src/types/walletConnect'
 import { buildReceiveNotification } from '@luxfi/wallet/src/features/notifications/buildReceiveNotification'
 import { selectActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/selectors'
@@ -22,7 +22,7 @@ export function* notificationWatcher() {
 
 export function* pushTransactionNotification(action: ReturnType<typeof finalizeTransaction>) {
   const activeAddress = yield* select(selectActiveAccountAddress)
-  const existingNotifications = yield* select((state: UniswapState) =>
+  const existingNotifications = yield* select((state: LxState) =>
     makeSelectAddressNotifications()(state, activeAddress),
   )
   if (shouldSuppressNotification({ tx: action.payload, existingNotifications })) {

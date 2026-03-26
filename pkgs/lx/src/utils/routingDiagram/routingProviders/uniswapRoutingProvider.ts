@@ -3,16 +3,16 @@ import { Percent, TradeType } from '@luxamm/sdk-core'
 import { Pair } from '@luxamm/v2-sdk'
 import { Pool as V3Pool } from '@luxamm/v3-sdk'
 import { Pool as V4Pool } from '@luxamm/v4-sdk'
-import { UniswapLogo } from 'ui/src/components/icons/UniswapLogo'
+import { LxLogo } from 'ui/src/components/icons/LxLogo'
 import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'uniswap/src/constants/pools'
 import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { isChained, isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { currencyId } from 'uniswap/src/utils/currencyId'
 import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'uniswap/src/utils/routingDiagram/types'
 
-type UniswapPool = Pair | V3Pool | V4Pool
+type LxPool = Pair | V3Pool | V4Pool
 
-function getPoolType(pool: UniswapPool): 'V2' | 'V3' | 'V4' {
+function getPoolType(pool: LxPool): 'V2' | 'V3' | 'V4' {
   if (pool instanceof Pair) {
     return 'V2'
   }
@@ -41,7 +41,7 @@ function getPoolType(pool: UniswapPool): 'V2' | 'V3' | 'V4' {
  *   pools: [v2Pool, v4Pool, v3Pool]
  * }) // Returns: "V2 + V3 + V4"
  */
-function getProtocolLabel(route: { protocol: Protocol; pools: UniswapPool[] }): string {
+function getProtocolLabel(route: { protocol: Protocol; pools: LxPool[] }): string {
   if (route.protocol === Protocol.MIXED) {
     const poolTypes = route.pools.map((pool) => getPoolType(pool))
     return [...new Set(poolTypes)].sort().join(' + ')
@@ -49,14 +49,14 @@ function getProtocolLabel(route: { protocol: Protocol; pools: UniswapPool[] }): 
   return route.protocol.toUpperCase()
 }
 
-export const uniswapRoutingProvider: RoutingProvider = {
+export const lxRoutingProvider: RoutingProvider = {
   name: 'Uniswap API',
-  icon: UniswapLogo,
+  icon: LxLogo,
   iconColor: '$accent1',
 
   getRoutingEntries: (trade: Trade): RoutingDiagramEntry[] => {
     if (!isClassic(trade)) {
-      throw new Error(`Invalid call to uniswapProvider.getRoutingEntries with non-classic trade: ${trade.routing}`)
+      throw new Error(`Invalid call to lxProvider.getRoutingEntries with non-classic trade: ${trade.routing}`)
     }
 
     return trade.swaps.map(({ route, inputAmount, outputAmount }) => {
@@ -87,7 +87,7 @@ export const uniswapRoutingProvider: RoutingProvider = {
         }
 
         return {
-          type: 'uniswapPool',
+          type: 'lxPool',
           inputCurrencyId: currencyId(inputCurrency),
           outputCurrencyId: currencyId(outputCurrency),
           poolType: getPoolType(pool),
@@ -106,22 +106,22 @@ export const uniswapRoutingProvider: RoutingProvider = {
     })
   },
 
-  getDescription: (t) => t('swap.routing.uniswapAutoRouter.description'),
+  getDescription: (t) => t('swap.routing.lxAutoRouter.description'),
 }
 
-export const uniswapChainedRoutingProvider: RoutingProvider = {
+export const lxChainedRoutingProvider: RoutingProvider = {
   name: 'Uniswap API',
   icon: undefined,
   iconColor: '$neutral1',
 
   getRoutingEntries: (trade: Trade): RoutingDiagramEntry[] => {
     if (!isChained(trade)) {
-      throw new Error(`Invalid call to uniswapProvider.getRoutingEntries with non-chained trade: ${trade.routing}`)
+      throw new Error(`Invalid call to lxProvider.getRoutingEntries with non-chained trade: ${trade.routing}`)
     }
 
     // TODO: SWAP-770 - Implement chained routing diagram
     return []
   },
 
-  getDescription: (t) => t('swap.routing.uniswapAutoRouter.description'),
+  getDescription: (t) => t('swap.routing.lxAutoRouter.description'),
 }

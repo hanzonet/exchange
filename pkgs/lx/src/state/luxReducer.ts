@@ -1,2 +1,2 @@
-export { uniswapReducers as luxReducers, uniswapReducer as luxReducer, uniswapPersistedStateList as luxPersistedStateList } from "./uniswapReducer"
-export type { UniswapState as LuxState } from "./uniswapReducer"
+export { lxReducers as luxReducers, lxReducer as luxReducer, lxPersistedStateList as luxPersistedStateList } from "./lxReducer"
+export type { LxState as LuxState } from "./lxReducer"

@@ -13,11 +13,11 @@ function NetworkFeeWarningContent({ gasInfo }: { gasInfo?: GasInfo }): JSX.Eleme
   }
 
   const color = gasInfo.isHighRelativeToValue && !isWebApp ? '$statusCritical' : '$neutral2' // Avoid high gas UI on interface
-  const uniswapXSavings = gasInfo.uniswapXGasFeeInfo?.preSavingsGasFeeFormatted
+  const lxSwapSavings = gasInfo.lxSwapGasFeeInfo?.preSavingsGasFeeFormatted
   const isGasFeeFree = gasInfo.gasFee.value !== undefined && isZero(gasInfo.gasFee.value)
 
-  return uniswapXSavings ? (
-    <LXFee gasFee={gasInfo.fiatPriceFormatted} isFree={isGasFeeFree} preSavingsGasFee={uniswapXSavings} />
+  return lxSwapSavings ? (
+    <LXFee gasFee={gasInfo.fiatPriceFormatted} isFree={isGasFeeFree} preSavingsGasFee={lxSwapSavings} />
   ) : (
     <>
       <Gas color={color} size="$icon.16" />
@@ -44,7 +44,7 @@ export function GasInfoRow({ gasInfo, hidden }: { gasInfo: GasInfo; hidden?: boo
           </Flex>
         }
         disabled={hidden}
-        uniswapXGasFeeInfo={gasInfo.uniswapXGasFeeInfo}
+        lxSwapGasFeeInfo={gasInfo.lxSwapGasFeeInfo}
         chainId={gasInfo.chainId}
       />
     </Flex>

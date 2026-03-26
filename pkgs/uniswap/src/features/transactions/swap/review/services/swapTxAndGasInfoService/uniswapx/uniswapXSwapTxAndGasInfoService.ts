@@ -2,7 +2,7 @@ import { SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/
 import {
   getLXSwapTxAndGasInfo,
   processLXResponse,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/utils'
+} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
 import { LXTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 
 export function createLXSwapTxAndGasInfoService(): SwapTxAndGasInfoService<LXTrade> {

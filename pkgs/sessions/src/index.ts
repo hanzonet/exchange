@@ -12,9 +12,9 @@
 export { createDeviceIdService } from '@luxexchange/sessions/src/device-id/createDeviceIdService'
 export type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
 // Uniswap Identifier
-export { createUniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/createUniswapIdentifierService'
-export { uniswapIdentifierQuery } from '@luxexchange/sessions/src/uniswap-identifier/uniswapIdentifierQuery'
-export type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+export { createLxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/createLxIdentifierService'
+export { lxIdentifierQuery } from '@luxexchange/sessions/src/uniswap-identifier/lxIdentifierQuery'
+export type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 // Session Repository
 export { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
 export { ChallengeRejectedError } from '@luxexchange/sessions/src/session-repository/errors'
@@ -129,11 +129,11 @@ export { createNoopPerformanceTracker } from '@luxexchange/sessions/src/performa
 export {
   InMemorySessionStorage,
   InMemoryDeviceIdService,
-  InMemoryUniswapIdentifierService,
+  InMemoryLxIdentifierService,
 } from '@luxexchange/sessions/src/test-utils'
 export {
   createCookieJar,
   createLocalCookieTransport,
 } from '@luxexchange/sessions/src/test-utils/createLocalCookieTransport'
 
-export const luxIdentifierQuery = uniswapIdentifierQuery
+export const luxIdentifierQuery = lxIdentifierQuery

@@ -5,7 +5,7 @@ import { BINANCE_WALLET_ICON, LUX_LOGO } from '@luxfi/ui/src/assets'
 import { Chevron } from '@luxfi/ui/src/components/icons/Chevron'
 import { Passkey } from '@luxfi/ui/src/components/icons/Passkey'
 import { ScanQr } from '@luxfi/ui/src/components/icons/ScanQr'
-import { UniswapLogo } from '@luxfi/ui/src/components/icons/UniswapLogo'
+import { LxLogo } from '@luxfi/ui/src/components/icons/LxLogo'
 import { WalletFilled } from '@luxfi/ui/src/components/icons/WalletFilled'
 import { UseSporeColorsReturn } from '@luxfi/ui/src/hooks/useSporeColors'
 import { iconSizes, opacify } from '@luxfi/ui/src/theme'
@@ -82,7 +82,7 @@ function getIcon({
 
   if (wallet.id === CONNECTION_PROVIDER_IDS.EMBEDDED_WALLET_CONNECTOR_ID) {
     return <EmbeddedWalletIcon />
-  } else if (wallet.id === CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID) {
+  } else if (wallet.id === CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID) {
     return isEmbeddedWalletEnabled ? (
       <Flex
         p="$spacing4"
@@ -91,10 +91,10 @@ function getIcon({
         borderWidth="$spacing1"
         borderColor={opacify(20, themeColors.accent1.val)}
       >
-        <UniswapLogo size={iconSize - 10} color="$accent1" />
+        <LxLogo size={iconSize - 10} color="$accent1" />
       </Flex>
     ) : (
-      <UniswapMobileIcon iconSize={iconSize} />
+      <LxMobileIcon iconSize={iconSize} />
     )
   } else if (wallet.id === CONNECTION_PROVIDER_IDS.BINANCE_WALLET_CONNECTOR_ID) {
     return <BinanceWalletIcon iconSize={iconSize} />

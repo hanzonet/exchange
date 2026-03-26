@@ -51,7 +51,7 @@ export const isMobileWebAndroid: boolean = isTouchable && isWebAndroid
 export const isBrowser: boolean = typeof window !== 'undefined'
 
 // App
-export const isExtensionApp: boolean = process.env.IS_UNISWAP_EXTENSION === 'true'
+export const isExtensionApp: boolean = process.env.IS_LX_EXTENSION === 'true'
 export const isMobileApp: boolean = false
-export const isWebApp: boolean = process.env.REACT_APP_IS_UNISWAP_INTERFACE === 'true'
+export const isWebApp: boolean = process.env.IS_WEB === 'true'
 export const isWebAppDesktop: boolean = isWebApp && !isMobileWeb

@@ -17,7 +17,7 @@ import { createSafeMigrationFactory } from 'uniswap/src/state/createSafeMigratio
 import { PreV55SearchResultType } from 'uniswap/src/state/oldTypes'
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 
-const createSafeMigration = createSafeMigrationFactory('uniswapMigrations')
+const createSafeMigration = createSafeMigrationFactory('lxMigrations')
 
 // Mobile: 82
 // Extension: 18

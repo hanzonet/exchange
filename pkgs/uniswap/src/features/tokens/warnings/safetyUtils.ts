@@ -317,7 +317,7 @@ export function useModalSubtitleText({
         ' ' +
         t('token.safety.warning.mayResultInLoss') +
         ' ' +
-        t('token.safety.fees.uniswapLabsDoesNotReceive')
+        t('token.safety.fees.lxDoesNotReceive')
       )
     }
     case TokenProtectionWarning.NonDefault:

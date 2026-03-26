@@ -14,7 +14,7 @@ import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink
 import { getNativeAddress } from '@luxexchange/lx/src/constants/addresses'
 import { BIPS_BASE } from '@luxexchange/lx/src/constants/misc'
 import { UNI } from '@luxexchange/lx/src/constants/tokens'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { useLocalizationContext } from '@luxexchange/lx/src/features/language/LocalizationContext'
@@ -115,7 +115,7 @@ function PoolTableHeader({
     [PoolSortFields.RewardApr]: (
       <>
         {t('pool.incentives.merklDocs')}
-        <LearnMoreLink textVariant="buttonLabel4" url={uniswapUrls.merklDocsUrl} />
+        <LearnMoreLink textVariant="buttonLabel4" url={lxUrls.merklDocsUrl} />
       </>
     ),
   }

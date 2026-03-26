@@ -7,7 +7,7 @@ import {
   isBridge,
   isChained,
   isClassic,
-  isUniswapX,
+  isLxSwap,
   isWrap,
 } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { isPrivateRpcSupportedOnChain } from '@luxfi/wallet/src/features/providers/utils'
@@ -104,7 +104,7 @@ export function createPrepareAndSignSwapSaga(dependencies: TransactionSagaDepend
 
       let preSignedSwapTx: PreSignedSwapTransaction
       // Main transaction preparation based on routing type
-      if (isUniswapX(swapTxContext)) {
+      if (isLxSwap(swapTxContext)) {
         // LX - Sign typed data for order
         const { permit } = swapTxContext
 

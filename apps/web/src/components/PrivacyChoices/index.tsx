@@ -5,7 +5,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { Anchor, Button, Checkbox, Flex, ModalCloseIcon, Text } from '@luxfi/ui/src'
 import { Lock } from '@luxfi/ui/src/components/icons/Lock'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { PRIVACY_SHARING_OPT_OUT_STORAGE_KEY } from '~/components/PrivacyChoices/constants'
@@ -49,7 +49,7 @@ export function PrivacyChoicesModal() {
                 components={{
                   privacyLink: (
                     <Anchor
-                      href={uniswapUrls.privacyPolicyUrl}
+                      href={lxUrls.privacyPolicyUrl}
                       target="_blank"
                       textDecorationLine="none"
                       fontSize="inherit"

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { type PersistState } from 'redux-persist'
-import { uniswapPersistedStateList, uniswapReducers } from 'uniswap/src/state/uniswapReducer'
+import { lxPersistedStateList, lxReducers } from 'uniswap/src/state/lxReducer'
 import { type SagaState } from 'uniswap/src/utils/saga'
 import { batchedTransactionsReducer } from '@luxfi/wallet/src/features/batchedTransactions/slice'
 import { behaviorHistoryReducer } from '@luxfi/wallet/src/features/behaviorHistory/slice'
@@ -8,7 +8,7 @@ import { telemetryReducer } from '@luxfi/wallet/src/features/telemetry/slice'
 import { walletReducer } from '@luxfi/wallet/src/features/wallet/slice'
 
 export const walletReducers = {
-  ...uniswapReducers,
+  ...lxReducers,
   behaviorHistory: behaviorHistoryReducer,
   telemetry: telemetryReducer,
   wallet: walletReducer,
@@ -19,7 +19,7 @@ export const walletReducers = {
 export const walletRootReducer = combineReducers(walletReducers)
 
 export const walletPersistedStateList: Array<keyof typeof walletReducers> = [
-  ...uniswapPersistedStateList,
+  ...lxPersistedStateList,
   'behaviorHistory',
   'notifications',
   'telemetry',

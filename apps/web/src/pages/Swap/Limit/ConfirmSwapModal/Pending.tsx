@@ -1,7 +1,7 @@
 import { TFunction } from 'i18next'
 import { ReactNode, useMemo, useRef } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { ExplorerDataType, getExplorerLink } from '@luxexchange/lx/src/utils/linking'
@@ -195,8 +195,8 @@ export function Pending({
               <ExternalLink
                 href={
                   isLimitTrade(initialTrade)
-                    ? uniswapUrls.helpArticleUrls.limitsInfo
-                    : uniswapUrls.helpArticleUrls.dexInfo
+                    ? lxUrls.helpArticleUrls.limitsInfo
+                    : lxUrls.helpArticleUrls.dexInfo
                 }
               >
                 {isLimitTrade(initialTrade) ? (

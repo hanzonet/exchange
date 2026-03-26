@@ -13,7 +13,7 @@ import { SwapRateRatio } from 'uniswap/src/features/transactions/swap/components
 import { useIsUnichainFlashblocksEnabled } from 'uniswap/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
 import { AcceptNewQuoteRow } from 'uniswap/src/features/transactions/swap/review/SwapDetails/AcceptNewQuoteRow'
 import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import type { UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { LxSwapGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { getSwapFeeUsdFromDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
 import { isBridge, isChained, isMultiChainGasQuote } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { TransactionDetails } from 'uniswap/src/features/transactions/TransactionDetails/TransactionDetails'
@@ -34,7 +34,7 @@ interface SwapDetailsProps {
   tokenWarningChecked?: boolean
   gasFallbackUsed?: boolean
   gasFee: GasFeeResult
-  uniswapXGasBreakdown?: UniswapXGasBreakdown
+  lxSwapGasBreakdown?: LxSwapGasBreakdown
   newTradeRequiresAcceptance: boolean
   warning?: Warning
   onAcceptTrade: () => void
@@ -53,7 +53,7 @@ export function SwapDetails({
   tokenWarningProps,
   tokenWarningChecked,
   gasFee,
-  uniswapXGasBreakdown,
+  lxSwapGasBreakdown,
   newTradeRequiresAcceptance,
   warning,
   onAcceptTrade,
@@ -129,7 +129,7 @@ export function SwapDetails({
         showNetworkLogo={showNetworkLogo}
         showWarning={warning && !newTradeRequiresAcceptance}
         transactionUSDValue={derivedSwapInfo.currencyAmountsUSDValue[CurrencyField.OUTPUT]}
-        uniswapXGasBreakdown={uniswapXGasBreakdown}
+        lxSwapGasBreakdown={lxSwapGasBreakdown}
         warning={warning}
         estimatedSwapTime={estimatedSwapTime}
         routingType={routing}

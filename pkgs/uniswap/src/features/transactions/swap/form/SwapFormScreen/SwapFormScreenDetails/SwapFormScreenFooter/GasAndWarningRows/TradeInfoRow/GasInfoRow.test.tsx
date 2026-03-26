@@ -55,10 +55,10 @@ describe('GasInfoRow', () => {
   })
 
   describe('LX fees', () => {
-    it('should render LXFee component when uniswapXGasFeeInfo is present', () => {
+    it('should render LXFee component when lxSwapGasFeeInfo is present', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
-        uniswapXGasFeeInfo: {
+        lxSwapGasFeeInfo: {
           swapFeeFormatted: 'Free',
           preSavingsGasFeeFormatted: '$2.50',
           inputTokenSymbol: 'ETH',
@@ -75,7 +75,7 @@ describe('GasInfoRow', () => {
     it('should render LXFee without approval fee', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
-        uniswapXGasFeeInfo: {
+        lxSwapGasFeeInfo: {
           swapFeeFormatted: 'Free',
           preSavingsGasFeeFormatted: '$1.25',
         },
@@ -91,7 +91,7 @@ describe('GasInfoRow', () => {
     it('should render LXFee with approval fee', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
-        uniswapXGasFeeInfo: {
+        lxSwapGasFeeInfo: {
           approvalFeeFormatted: '$0.50',
           swapFeeFormatted: 'Free',
           preSavingsGasFeeFormatted: '$2.00',
@@ -108,7 +108,7 @@ describe('GasInfoRow', () => {
     it('should display LX savings', () => {
       const gasInfo = createGasInfo({
         fiatPriceFormatted: 'Free',
-        uniswapXGasFeeInfo: {
+        lxSwapGasFeeInfo: {
           swapFeeFormatted: 'Free',
           preSavingsGasFeeFormatted: '$3.00',
         },

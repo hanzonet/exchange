@@ -10,7 +10,7 @@ import { getEncryptedMnemonic } from 'src/features/scantastic/ScantasticEncrypti
 import { Button, Flex, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
 import { AlertTriangleFilled, Faceid, Laptop, LinkBrokenHorizontal, Wifi } from '@luxfi/ui/src/components/icons'
 import { Modal } from '@luxexchange/lx/src/components/modals/Modal'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { pushNotification } from '@luxexchange/lx/src/features/notifications/slice/slice'
 import { AppNotificationType } from '@luxexchange/lx/src/features/notifications/slice/types'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
@@ -121,7 +121,7 @@ export function ScantasticModal({ route }: AppStackScreenProp<typeof ModalName.S
 
     try {
       // submit encrypted blob
-      const response = await fetch(`${uniswapUrls.scantasticApiUrl}/blob`, {
+      const response = await fetch(`${lxUrls.scantasticApiUrl}/blob`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -181,7 +181,7 @@ export function ScantasticModal({ route }: AppStackScreenProp<typeof ModalName.S
       return
     }
     try {
-      const response = await fetch(`${uniswapUrls.scantasticApiUrl}/otp-state/${uuid}`, {
+      const response = await fetch(`${lxUrls.scantasticApiUrl}/otp-state/${uuid}`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

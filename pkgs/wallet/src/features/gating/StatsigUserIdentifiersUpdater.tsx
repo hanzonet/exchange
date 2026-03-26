@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import { provideUniswapIdentifierService } from '@luxexchange/api'
-import { uniswapIdentifierQuery } from '@luxexchange/sessions'
+import { provideLxIdentifierService } from '@luxexchange/api'
+import { lxIdentifierQuery } from '@luxexchange/sessions'
 import { useSyncStatsigUserIdentifiers } from 'uniswap/src/features/gating/useSyncStatsigUserIdentifiers'
 import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks'
 
@@ -15,11 +15,11 @@ import { useActiveAccountAddress } from '@luxfi/wallet/src/features/wallet/hooks
  */
 export function StatsigUserIdentifiersUpdater(): null {
   const activeAddress = useActiveAccountAddress()
-  const { data: uniswapIdentifier } = useQuery(uniswapIdentifierQuery(provideUniswapIdentifierService))
+  const { data: lxIdentifier } = useQuery(lxIdentifierQuery(provideLxIdentifierService))
 
   useSyncStatsigUserIdentifiers({
     address: activeAddress,
-    uniswapIdentifier,
+    lxIdentifier,
   })
 
   return null

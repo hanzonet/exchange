@@ -6,7 +6,7 @@ import { useTradingApiSwapQuery } from 'uniswap/src/data/apiClients/tradingApi/u
 import { useActiveGasStrategy } from 'uniswap/src/features/gas/hooks'
 import { useAllTransactionSettings } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 import { FALLBACK_SWAP_REQUEST_POLL_INTERVAL_MS } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
-import { processLXResponse } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/utils'
+import { processLXResponse } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
 import type { TransactionRequestInfo } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import {
   createLogSwapRequestErrors,
@@ -18,7 +18,7 @@ import { usePermit2SignatureWithData } from 'uniswap/src/features/transactions/s
 import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
 import type { TokenApprovalInfo } from 'uniswap/src/features/transactions/swap/types/trade'
 import { ApprovalAction } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isBridge, isClassic, isUniswapX, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isBridge, isClassic, isLxSwap, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { isWebApp } from 'utilities/src/platform'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
@@ -178,13 +178,13 @@ export function useTransactionRequestInfo({
   derivedSwapInfo: DerivedSwapInfo
   tokenApprovalInfo: TokenApprovalInfo | undefined
 }): TransactionRequestInfo {
-  const uniswapXTransactionRequestInfo = useLXTransactionRequestInfo(
+  const lxSwapTransactionRequestInfo = useLXTransactionRequestInfo(
     derivedSwapInfo.trade.trade?.quote.permitData,
   )
   const swapTransactionRequestInfo = useSwapTransactionRequestInfo({ derivedSwapInfo, tokenApprovalInfo })
 
-  if (derivedSwapInfo.trade.trade && isUniswapX(derivedSwapInfo.trade.trade)) {
-    return uniswapXTransactionRequestInfo
+  if (derivedSwapInfo.trade.trade && isLxSwap(derivedSwapInfo.trade.trade)) {
+    return lxSwapTransactionRequestInfo
   }
 
   return swapTransactionRequestInfo

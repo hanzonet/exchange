@@ -7,7 +7,7 @@ import {
   TokenDataReportOption,
   TokenReportOption,
 } from 'uniswap/src/features/reporting/reports'
-import { UniswapEventName } from 'uniswap/src/features/telemetry/constants'
+import { LxEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import type { Mock } from 'vitest'
 
@@ -33,7 +33,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.SpamReportSubmitted,
+        LxEventName.SpamReportSubmitted,
         expect.objectContaining({
           spam_token: true,
           something_else: true,
@@ -52,7 +52,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.SpamReportSubmitted,
+        LxEventName.SpamReportSubmitted,
         expect.objectContaining({
           spam_token: true,
           something_else: false,
@@ -74,7 +74,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           type: 'data',
           something_else: true,
@@ -96,7 +96,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           type: 'data',
           performance: true,
@@ -121,7 +121,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           type: 'data',
           performance: true,
@@ -141,7 +141,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           price: true,
           performance_text: undefined,
@@ -172,7 +172,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           type: 'pool',
           volume: true,
@@ -194,7 +194,7 @@ describe('report submission analytics', () => {
       })
 
       expect(mockSendAnalyticsEvent).toHaveBeenCalledWith(
-        UniswapEventName.DataReportSubmitted,
+        LxEventName.DataReportSubmitted,
         expect.objectContaining({
           type: 'pool',
           volume: true,

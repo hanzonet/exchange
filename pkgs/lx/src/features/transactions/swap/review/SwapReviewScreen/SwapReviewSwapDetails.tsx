@@ -19,7 +19,7 @@ export const SwapReviewSwapDetails = memo(function SwapReviewSwapDetails(): JSX.
     tokenWarningProps,
     gasFee,
     newTradeRequiresAcceptance,
-    uniswapXGasBreakdown,
+    lxSwapGasBreakdown,
     reviewScreenWarning,
     txSimulationErrors,
     swapTxContext,
@@ -31,7 +31,7 @@ export const SwapReviewSwapDetails = memo(function SwapReviewSwapDetails(): JSX.
     tokenWarningProps: s.tokenWarningProps,
     gasFee: s.gasFee,
     newTradeRequiresAcceptance: s.newTradeRequiresAcceptance,
-    uniswapXGasBreakdown: s.uniswapXGasBreakdown,
+    lxSwapGasBreakdown: s.lxSwapGasBreakdown,
     reviewScreenWarning: s.reviewScreenWarning,
     txSimulationErrors: s.txSimulationErrors,
     swapTxContext: s.swapTxContext,
@@ -69,7 +69,7 @@ export const SwapReviewSwapDetails = memo(function SwapReviewSwapDetails(): JSX.
       setTokenWarningChecked={setTokenWarningChecked}
       gasFee={gasFee}
       newTradeRequiresAcceptance={newTradeRequiresAcceptance}
-      uniswapXGasBreakdown={uniswapXGasBreakdown}
+      lxSwapGasBreakdown={lxSwapGasBreakdown}
       warning={reviewScreenWarning?.warning}
       txSimulationErrors={txSimulationErrors}
       includesDelegation={stableIncludesDelegation}

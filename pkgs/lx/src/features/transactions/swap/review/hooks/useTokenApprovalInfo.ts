@@ -6,7 +6,7 @@ import { useCheckApprovalQuery } from 'uniswap/src/data/apiClients/tradingApi/us
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { convertGasFeeToDisplayValue, useActiveGasStrategy } from 'uniswap/src/features/gas/hooks'
 import { ApprovalAction, TokenApprovalInfo } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   getTokenAddressForApi,
   toTradingApiSupportedChainId,
@@ -34,7 +34,7 @@ function useApprovalWillBeBatchedWithSwap(chainId: UniverseChainId, routing: Tra
   const canBatchTransactions = useLuxContextSelector((ctx) => ctx.getCanBatchTransactions?.(chainId))
   const swapDelegationInfo = useLuxContextSelector((ctx) => ctx.getSwapDelegationInfo?.(chainId))
 
-  const isBatchableFlow = Boolean(routing && !isUniswapX({ routing }))
+  const isBatchableFlow = Boolean(routing && !isLxSwap({ routing }))
 
   return Boolean((canBatchTransactions || swapDelegationInfo?.delegationAddress) && isBatchableFlow)
 }

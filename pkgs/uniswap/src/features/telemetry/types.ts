@@ -32,7 +32,7 @@ import {
   type SessionsEventName,
   type SwapBlockedCategory,
   type SwapEventName,
-  type UniswapEventName,
+  type LxEventName,
   type UnitagEventName,
   type WalletEventName,
 } from 'uniswap/src/features/telemetry/constants'
@@ -137,8 +137,8 @@ export type SwapRouting =
   | 'jupiter'
   | 'classic'
   | 'uniswap_x'
-  | 'uniswap_x_v2'
-  | 'uniswap_x_v3'
+  | 'lx_swap_v2'
+  | 'lx_swap_v3'
   | 'priority_order'
   | 'bridge'
   | 'limit_order'
@@ -255,7 +255,7 @@ type LXTransactionResultProperties = BaseSwapTransactionResultProperties & {
 
 type BridgeSwapTransactionResultProperties = BaseSwapTransactionResultProperties
 
-type FailedUniswapXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
+type FailedLxSwapOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type FailedClassicSwapResultProperties = Omit<ClassicSwapTransactionResultProperties, 'hash'> & {
   hash: string | undefined
@@ -267,7 +267,7 @@ type FailedBridgeSwapResultProperties = Omit<BridgeSwapTransactionResultProperti
   hash: string | undefined
 }
 
-type CancelledUniswapXOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
+type CancelledLxSwapOrderResultProperties = Omit<LXTransactionResultProperties, 'hash'>
 
 type CancelledClassicSwapResultProperties = ClassicSwapTransactionResultProperties & {
   replaced_transaction_hash: string | undefined
@@ -654,7 +654,7 @@ export type UniverseEventProperties = {
     token_symbol?: string
   }
   [InterfaceEventName.FiatOnrampWidgetOpened]: undefined
-  [InterfaceEventName.UniswapWalletConnectModalOpened]: undefined
+  [InterfaceEventName.LxWalletConnectModalOpened]: undefined
   [InterfaceEventName.ExternalLinkClicked]: {
     label: string
   }
@@ -691,8 +691,8 @@ export type UniverseEventProperties = {
   }
   [InterfaceEventName.WrapTokenTxnInvalidated]: WrapProperties
   [InterfaceEventName.WrapTokenTxnSubmitted]: WrapProperties
-  [InterfaceEventName.UniswapWalletMicrositeOpened]: ITraceContext
-  [InterfaceEventName.UniswapWalletAppDownloadOpened]: ITraceContext & {
+  [InterfaceEventName.LxWalletMicrositeOpened]: ITraceContext
+  [InterfaceEventName.LxWalletAppDownloadOpened]: ITraceContext & {
     appPlatform?: AppDownloadPlatform
   }
   [InterfaceEventName.MiniPortfolioToggled]: {
@@ -706,10 +706,10 @@ export type UniverseEventProperties = {
     wallet_type: string
   }
   [InterfaceEventName.PortfolioMenuOpened]: { name: string } | { name: string; platform: Platform }
-  [InterfaceEventName.UniswapXOrderDetailsSheetOpened]: {
+  [InterfaceEventName.LxSwapOrderDetailsSheetOpened]: {
     order: string
   }
-  [InterfaceEventName.UniswapXOrderCancelInitiated]: {
+  [InterfaceEventName.LxSwapOrderCancelInitiated]: {
     orders: string[]
   }
   [InterfaceEventName.LimitPresetRateSelected]: {
@@ -751,8 +751,8 @@ export type UniverseEventProperties = {
     resultTime: number
   }
   [InterfaceEventName.LXSignatureRequested]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.UniswapXOrderPostError]: Record<string, unknown> // TODO specific type
-  [InterfaceEventName.UniswapXOrderSubmitted]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.LxSwapOrderPostError]: Record<string, unknown> // TODO specific type
+  [InterfaceEventName.LxSwapOrderSubmitted]: Record<string, unknown> // TODO specific type
   [InterfaceEventName.CreatePositionFailed]: {
     message: string
   } & PartialMessage<CreateLPPositionRequest>
@@ -1015,11 +1015,11 @@ export type UniverseEventProperties = {
     | BridgeSwapTransactionResultProperties
   [SwapEventName.SwapTransactionFailed]:
     | FailedClassicSwapResultProperties
-    | FailedUniswapXOrderResultProperties
+    | FailedLxSwapOrderResultProperties
     | FailedBridgeSwapResultProperties
   [WalletEventName.SwapTransactionCancelled]:
     | CancelledClassicSwapResultProperties
-    | CancelledUniswapXOrderResultProperties
+    | CancelledLxSwapOrderResultProperties
     | CancelledBridgeSwapResultProperties
   [SwapEventName.SwapDetailsExpanded]: ITraceContext | undefined
   [SwapEventName.SwapAutorouterVisualizationExpanded]: ITraceContext
@@ -1085,34 +1085,34 @@ export type UniverseEventProperties = {
     output?: Currency
   }
   [SwapEventName.SwapTokensReversed]: undefined
-  [UniswapEventName.TooltipOpened]: ITraceContext & {
+  [LxEventName.TooltipOpened]: ITraceContext & {
     tooltip_name: string
   }
-  [UniswapEventName.DelegationDetected]: {
+  [LxEventName.DelegationDetected]: {
     chainId: number
     delegationAddress: string
     isActiveChain?: boolean
   }
-  [UniswapEventName.ExperimentQualifyingEvent]: {
+  [LxEventName.ExperimentQualifyingEvent]: {
     experiment: Experiments
   }
-  [UniswapEventName.BalancesReport]: {
+  [LxEventName.BalancesReport]: {
     total_balances_usd: number
     wallets: string[]
     balances: number[]
   }
-  [UniswapEventName.BalancesReportPerChain]: {
+  [LxEventName.BalancesReportPerChain]: {
     total_balances_usd_per_chain: Record<string, number>
     wallet: string
     view_only: boolean
   }
-  [UniswapEventName.ConversionEventSubmitted]: {
+  [LxEventName.ConversionEventSubmitted]: {
     id: string
     eventId: string
     eventName: string
     platformIdType: string
   }
-  [UniswapEventName.DataReportSubmitted]:
+  [LxEventName.DataReportSubmitted]:
     | (TokenReportProperties & {
         type: 'data'
         price?: boolean
@@ -1135,7 +1135,7 @@ export type UniverseEventProperties = {
         something_else: boolean
         text?: string
       })
-  [UniswapEventName.TokenSelected]:
+  [LxEventName.TokenSelected]:
     | (ITraceContext &
         AssetDetailsBaseProperties &
         SearchResultContextProperties & {
@@ -1144,7 +1144,7 @@ export type UniverseEventProperties = {
           tokenSection?: OnchainItemSectionName
         })
     | { token_balance_usd?: number | string }
-  [UniswapEventName.BlockaidFeesMismatch]: {
+  [LxEventName.BlockaidFeesMismatch]: {
     symbol: string
     address: string
     chainId: number
@@ -1155,31 +1155,31 @@ export type UniverseEventProperties = {
     attackType?: string
     protectionResult?: string
   }
-  [UniswapEventName.ContextMenuClosed]: ITraceContext
-  [UniswapEventName.ContextMenuItemClicked]: ITraceContext & {
+  [LxEventName.ContextMenuClosed]: ITraceContext
+  [LxEventName.ContextMenuItemClicked]: ITraceContext & {
     menu_item: string
     menu_item_index: number
   }
-  [UniswapEventName.ContextMenuOpened]: ITraceContext
-  [UniswapEventName.LowNetworkTokenInfoModalOpened]: {
+  [LxEventName.ContextMenuOpened]: ITraceContext
+  [LxEventName.LowNetworkTokenInfoModalOpened]: {
     location: 'send' | 'swap'
   }
-  [UniswapEventName.LpIncentiveCollectRewardsButtonClicked]: undefined
-  [UniswapEventName.LpIncentiveCollectRewardsErrorThrown]: { error: string }
-  [UniswapEventName.LpIncentiveCollectRewardsRetry]: undefined
-  [UniswapEventName.LpIncentiveCollectRewardsSuccess]: { token_rewards: string }
-  [UniswapEventName.LpIncentiveLearnMoreCtaClicked]: undefined
-  [UniswapEventName.AuctionFilterSelected]: {
+  [LxEventName.LpIncentiveCollectRewardsButtonClicked]: undefined
+  [LxEventName.LpIncentiveCollectRewardsErrorThrown]: { error: string }
+  [LxEventName.LpIncentiveCollectRewardsRetry]: undefined
+  [LxEventName.LpIncentiveCollectRewardsSuccess]: { token_rewards: string }
+  [LxEventName.LpIncentiveLearnMoreCtaClicked]: undefined
+  [LxEventName.AuctionFilterSelected]: {
     filter: 'all' | 'verified' | 'unverified' | 'active' | 'complete'
   }
-  [UniswapEventName.NetworkFilterSelected]: ITraceContext & {
+  [LxEventName.NetworkFilterSelected]: ITraceContext & {
     chain: UniverseChainId | 'All'
   }
-  [UniswapEventName.SmartWalletMismatchDetected]: {
+  [LxEventName.SmartWalletMismatchDetected]: {
     chainId: string
     delegatedAddress: string
   }
-  [UniswapEventName.SpamReportSubmitted]:
+  [LxEventName.SpamReportSubmitted]:
     | (TokenReportProperties & {
         type: 'token'
         source: 'portfolio' | 'token-details'

@@ -13,7 +13,7 @@ import type { TokenRevocationTransactionStep } from 'uniswap/src/features/transa
 import type { WrapTransactionStep } from 'uniswap/src/features/transactions/steps/wrap'
 import type { PlanSagaAnalytics } from 'uniswap/src/features/transactions/swap/plan/types'
 import type { ClassicSwapSteps } from 'uniswap/src/features/transactions/swap/steps/classicSteps'
-import type { UniswapXPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import type { LxSwapPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
 import type {
   SwapTransactionStep,
   SwapTransactionStepAsync,
@@ -42,7 +42,7 @@ export enum TransactionStepType {
    * than LXSignatureStep. The signature is submitted to the TAPI which
    * then submits the order.
    */
-  UniswapXPlanSignature = 'UniswapXPlanSignature',
+  LxSwapPlanSignature = 'LxSwapPlanSignature',
   IncreasePositionTransaction = 'IncreasePositionTransaction',
   IncreasePositionTransactionAsync = 'IncreasePositionTransactionAsync',
   IncreasePositionTransactionBatched = 'IncreasePositionTransactionBatched',
@@ -59,7 +59,7 @@ export enum TransactionStepType {
 export type TransactionStep =
   | ClassicSwapSteps
   | LXSwapSteps
-  | UniswapXPlanSignatureStep
+  | LxSwapPlanSignatureStep
   | IncreaseLiquiditySteps
   | DecreaseLiquiditySteps
   | MigrationSteps
@@ -149,6 +149,6 @@ export interface HandleSwapBatchedStepParams extends Omit<HandleOnChainStepParam
   analytics: PlanSagaAnalytics
   disableOneClickSwap: () => void
 }
-export interface HandleUniswapXPlanSignatureStepParams extends HandleSignatureStepParams<UniswapXPlanSignatureStep> {
+export interface HandleLxSwapPlanSignatureStepParams extends HandleSignatureStepParams<LxSwapPlanSignatureStep> {
   analytics: PlanSagaAnalytics
 }

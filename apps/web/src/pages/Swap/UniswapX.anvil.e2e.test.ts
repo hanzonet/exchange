@@ -2,7 +2,7 @@ import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataA
 import { WETH9 } from '@luxamm/sdk-core'
 import { ZERO_ADDRESS } from 'uniswap/src/constants/misc'
 import { DAI, USDC_MAINNET } from 'uniswap/src/constants/tokens'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { TestID } from 'uniswap/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
@@ -13,7 +13,7 @@ import { assume0xAddress } from '~/utils/wagmi'
 
 const test = getTest({ withAnvil: true })
 
-const UNISWAP_X_ORDERS_ENDPOINT = `https://interface.gateway.uniswap.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
+const LX_SWAP_ORDERS_ENDPOINT = `https://interface.gateway.uniswap.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
 
 test.describe(
   'LX',
@@ -30,7 +30,7 @@ test.describe(
         address: assume0xAddress(WETH9[UniverseChainId.Mainnet].address),
         balance: parseEther('1000000'),
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.quote}`, async (route, request) => {
+      await page.route(`${lxUrls.tradingApiUrl}${lxUrls.tradingApiPaths.quote}`, async (route, request) => {
         const postData = await request.postData()
         const data = JSON.parse(postData ?? '{}')
         if (data.tokenOut === USDC_MAINNET.address) {
@@ -39,7 +39,7 @@ test.describe(
           await route.fulfill({ path: Mocks.LX.quote })
         }
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.order}`, async (route) => {
+      await page.route(`${lxUrls.tradingApiUrl}${lxUrls.tradingApiPaths.order}`, async (route) => {
         await route.fulfill({ path: Mocks.LX.openOrder })
       })
       await page.goto(`/swap?inputCurrency=${WETH9[UniverseChainId.Mainnet].address}&outputCurrency=${DAI.address}`)
@@ -49,8 +49,8 @@ test.describe(
       await page.getByTestId(TestID.Swap).click()
     })
 
-    test('can swap using uniswapX with WETH as input', async ({ page }) => {
-      await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
+    test('can swap using lxSwap with WETH as input', async ({ page }) => {
+      await page.route(LX_SWAP_ORDERS_ENDPOINT, async (route) => {
         await route.fulfill({
           path: Mocks.LX.filledOrders,
         })
@@ -61,7 +61,7 @@ test.describe(
     })
 
     test('renders error view if lx order expires', async ({ page }) => {
-      await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
+      await page.route(LX_SWAP_ORDERS_ENDPOINT, async (route) => {
         await route.fulfill({ path: Mocks.LX.expiredOrders })
       })
 
@@ -78,7 +78,7 @@ test.describe(
     })
 
     test('deduplicates remote vs local lx orders', async ({ page, dataApi }) => {
-      await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
+      await page.route(LX_SWAP_ORDERS_ENDPOINT, async (route) => {
         await route.fulfill({ path: Mocks.LX.filledOrders })
       })
 

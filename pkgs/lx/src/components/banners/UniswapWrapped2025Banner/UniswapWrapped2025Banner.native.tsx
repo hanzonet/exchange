@@ -8,7 +8,7 @@ import {
   renderSnowflakesNative,
   SnowflakeContainer,
 } from 'uniswap/src/components/banners/shared/SharedSnowflakeComponents'
-import { UniswapWrapped2025BannerProps } from 'uniswap/src/components/banners/UniswapWrapped2025Banner/types'
+import { LxWrapped2025BannerProps } from 'uniswap/src/components/banners/LxWrapped2025Banner/types'
 import { useSnowflakeAnimation } from 'uniswap/src/hooks/useSnowflakeAnimation'
 
 const BannerWrapper = styled(Flex, {
@@ -20,11 +20,11 @@ const BannerWrapper = styled(Flex, {
   zIndex: '$sticky',
 })
 
-export function UniswapWrapped2025Banner({
+export function LxWrapped2025Banner({
   handleDismiss,
   handlePress,
   bannerHeight = 116,
-}: UniswapWrapped2025BannerProps): JSX.Element {
+}: LxWrapped2025BannerProps): JSX.Element {
   const { t } = useTranslation()
   const { snowflakes, removeSnowflake } = useSnowflakeAnimation({})
   const darkColors = useSporeColorsForTheme('dark')
@@ -58,10 +58,10 @@ export function UniswapWrapped2025Banner({
 
         <Flex justifyContent="flex-start" gap="$spacing2">
           <Text variant="buttonLabel2" color={darkColors.neutral1.val}>
-            {t('home.banner.uniswapWrapped2025.title')}
+            {t('home.banner.lxWrapped2025.title')}
           </Text>
           <Text variant="body3" color="$pinkLight">
-            {t('home.banner.uniswapWrapped2025.subtitle')}
+            {t('home.banner.lxWrapped2025.subtitle')}
           </Text>
         </Flex>
 

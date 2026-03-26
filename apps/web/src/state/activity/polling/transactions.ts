@@ -7,7 +7,7 @@ import { RetryOptions, UniverseChainId } from '@luxexchange/lx/src/features/chai
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { checkedTransaction } from '@luxexchange/lx/src/features/transactions/slice'
-import { isUniswapX } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { toTradingApiSupportedChainId } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
 import { TransactionReceipt, TransactionStatus } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
 import { receiptFromViemReceipt } from '@luxexchange/lx/src/features/transactions/utils/receipt'
@@ -38,7 +38,7 @@ function usePendingTransactions(chainId?: UniverseChainId): PendingTransactionDe
     return multichainTransactions.flatMap(([tx, txChainId]) => {
       // Avoid polling for already-deposited bridge transactions, as they will be finalized by the bridge updater.
       // Also avoid polling DEX orders, as they are polled by usePollPendingOrders using the DEX backend API.
-      if (isPendingTx(tx, /* skipDepositedBridgeTxs = */ true) && txChainId === chainId && !isUniswapX(tx)) {
+      if (isPendingTx(tx, /* skipDepositedBridgeTxs = */ true) && txChainId === chainId && !isLxSwap(tx)) {
         // Ignore batch txs which need to be polled against wallet instead of chain.
         return tx.batchInfo ? [] : [tx]
       }

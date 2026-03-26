@@ -1,7 +1,7 @@
 import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import { Currency } from '@luxamm/sdk-core'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { UniswapEventName } from 'uniswap/src/features/telemetry/constants'
+import { LxEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { NATIVE_ANALYTICS_ADDRESS_VALUE } from 'uniswap/src/utils/currencyId'
@@ -47,7 +47,7 @@ export function submitTokenIssueReport({
   reportOptions: TokenReportOption[]
   reportTexts: Map<TokenReportOption, string>
 }): void {
-  sendAnalyticsEvent(UniswapEventName.SpamReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.SpamReportSubmitted, {
     type: 'token',
     source,
     token_name: tokenName,
@@ -77,7 +77,7 @@ export function submitTokenDataReport({
   reportOptions: TokenDataReportOption[]
   reportTexts: Map<TokenDataReportOption, string>
 }): void {
-  sendAnalyticsEvent(UniswapEventName.DataReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.DataReportSubmitted, {
     type: 'data',
     token_name: tokenName,
     token_contract_address: tokenAddress ?? NATIVE_ANALYTICS_ADDRESS_VALUE,
@@ -107,7 +107,7 @@ export function submitTokenWarningDataReport({
   isMarkedSpam?: Maybe<boolean>
   reportText: string
 }): void {
-  sendAnalyticsEvent(UniswapEventName.DataReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.DataReportSubmitted, {
     type: 'token_warning',
     token_name: tokenName,
     token_contract_address: tokenAddress ?? NATIVE_ANALYTICS_ADDRESS_VALUE,
@@ -124,7 +124,7 @@ export function submitNFTSpamReport({
   chainId: UniverseChainId
   contractAddress?: string
 }): void {
-  sendAnalyticsEvent(UniswapEventName.SpamReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.SpamReportSubmitted, {
     type: 'nft',
     chain_id: chainId,
     contract_address: contractAddress,
@@ -132,7 +132,7 @@ export function submitNFTSpamReport({
 }
 
 export function submitActivitySpamReport({ transactionDetails }: { transactionDetails: TransactionDetails }): void {
-  sendAnalyticsEvent(UniswapEventName.SpamReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.SpamReportSubmitted, {
     type: 'activity',
     address: transactionDetails.ownerAddress,
     transaction_id: transactionDetails.id,
@@ -155,7 +155,7 @@ export function submitPoolSpamReport({
   token0: Currency
   token1: Currency
 }): void {
-  sendAnalyticsEvent(UniswapEventName.SpamReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.SpamReportSubmitted, {
     type: 'pool',
     pool_id: poolId,
     chain_id: chainId,
@@ -182,7 +182,7 @@ export function submitPoolDataReport({
   reportOptions: PoolDataReportOption[]
   reportTexts: Map<PoolDataReportOption, string>
 }): void {
-  sendAnalyticsEvent(UniswapEventName.DataReportSubmitted, {
+  sendAnalyticsEvent(LxEventName.DataReportSubmitted, {
     type: 'pool',
     pool_id: poolId,
     chain_id: chainId,

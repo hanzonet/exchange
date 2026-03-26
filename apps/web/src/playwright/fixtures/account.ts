@@ -1,5 +1,5 @@
 import { getPortfolio } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { shortenAddress } from '@luxfi/utilities/src/addresses'
 import { expect, type Page } from '~/playwright/fixtures'
@@ -24,7 +24,7 @@ export async function mockUnitagResponse({
 }) {
   await page.route(
     // eslint-disable-next-line security/detect-non-literal-regexp -- Test fixture using known-safe URL constant
-    new RegExp(`${uniswapUrls.unitagsApiUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/address\\?address=${address}`),
+    new RegExp(`${lxUrls.unitagsApiUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/address\\?address=${address}`),
     async (route) => {
       await route.fulfill({
         body: JSON.stringify({

@@ -5,7 +5,7 @@ import { Check } from '@luxfi/ui/src/components/icons/Check'
 import { Faceid } from '@luxfi/ui/src/components/icons/Faceid'
 import { Fingerprint } from '@luxfi/ui/src/components/icons/Fingerprint'
 import { Passkey } from '@luxfi/ui/src/components/icons/Passkey'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ElementName, ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { Trace } from '@luxexchange/lx/src/features/telemetry/Trace'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
@@ -74,7 +74,7 @@ export function PasskeyGenerationModal({
             </Flex>
           </Flex>
         }
-        learnMoreLink={uniswapUrls.helpArticleUrls.passkeysInfo}
+        learnMoreLink={lxUrls.helpArticleUrls.passkeysInfo}
         onClose={onClose}
         goBack={goBack}
       >

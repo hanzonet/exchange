@@ -12,7 +12,7 @@ import { useOnboardingSteps } from 'src/app/features/onboarding/OnboardingSteps'
 import { cryptoKeyToJWK, KEY_PARAMS } from 'src/app/features/onboarding/scan/utils'
 import { OnboardingRoutes, TopLevelRoutes } from 'src/app/navigation/constants'
 import { navigate } from 'src/app/navigation/state'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { ONE_DAY_MS, ONE_MINUTE_MS, ONE_SECOND_MS } from '@luxfi/utilities/src/time/time'
 import { ScantasticParamsSchema } from '@luxfi/wallet/src/features/scantastic/types'
@@ -75,7 +75,7 @@ export function ScantasticContextProvider({ children }: PropsWithChildren): JSX.
       }
 
       // Initiate scantastic onboarding session
-      const response = await fetch(`${uniswapUrls.scantasticApiUrl}/uuid`, {
+      const response = await fetch(`${lxUrls.scantasticApiUrl}/uuid`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

@@ -8,7 +8,7 @@ import {
   renderSnowflakesWeb,
   SnowflakeContainer,
 } from 'uniswap/src/components/banners/shared/SharedSnowflakeComponents'
-import { UniswapWrapped2025CardProps } from 'uniswap/src/components/banners/UniswapWrapped2025Card/types'
+import { LxWrapped2025CardProps } from 'uniswap/src/components/banners/LxWrapped2025Card/types'
 import { useSnowflakeAnimation } from 'uniswap/src/hooks/useSnowflakeAnimation'
 
 const CARD_HEIGHT = 80
@@ -32,7 +32,7 @@ const GlowEffect = styled(Flex, {
   opacity: 0.6,
 })
 
-export function UniswapWrapped2025Card({ onPress }: UniswapWrapped2025CardProps): JSX.Element {
+export function LxWrapped2025Card({ onPress }: LxWrapped2025CardProps): JSX.Element {
   const { t } = useTranslation()
   const darkColors = useSporeColorsForTheme('dark')
   const [cardWidth, setCardWidth] = useState<number>(0)
@@ -70,10 +70,10 @@ export function UniswapWrapped2025Card({ onPress }: UniswapWrapped2025CardProps)
         >
           <GradientBackground>
             <Text color={darkColors.neutral1.val} variant="buttonLabel2">
-              {t('home.banner.uniswapWrapped2025.title')}
+              {t('home.banner.lxWrapped2025.title')}
             </Text>
             <Text color="$pinkLight" variant="body3">
-              {t('home.banner.uniswapWrapped2025.subtitle')}
+              {t('home.banner.lxWrapped2025.subtitle')}
             </Text>
           </GradientBackground>
           <GlowEffect />

@@ -4,13 +4,13 @@ import {
   NFTKeyToVisibility,
   PositionKeyToVisibility,
 } from 'uniswap/src/features/visibility/slice'
-import { UniswapRootState } from 'uniswap/src/state'
+import { LxRootState } from 'uniswap/src/state'
 
-export const selectPositionsVisibility = (state: UniswapRootState): PositionKeyToVisibility =>
+export const selectPositionsVisibility = (state: LxRootState): PositionKeyToVisibility =>
   state.visibility.positions
 
-export const selectTokensVisibility = (state: UniswapRootState): CurrencyIdToVisibility => state.visibility.tokens
+export const selectTokensVisibility = (state: LxRootState): CurrencyIdToVisibility => state.visibility.tokens
 
-export const selectNftsVisibility = (state: UniswapRootState): NFTKeyToVisibility => state.visibility.nfts
+export const selectNftsVisibility = (state: LxRootState): NFTKeyToVisibility => state.visibility.nfts
 
-export const selectActivityVisibility = (state: UniswapRootState): ActivityIdToVisibility => state.visibility.activity
+export const selectActivityVisibility = (state: LxRootState): ActivityIdToVisibility => state.visibility.activity

@@ -1,21 +1,21 @@
-import { createUniswapApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
+import { createLxApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
 import { config } from 'uniswap/src/config'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
-import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
+import { lxUrls } from 'uniswap/src/constants/urls'
+import { createLxFetchClient } from 'uniswap/src/data/apiClients/createLxFetchClient'
 import { convertGasFeeToDisplayValue } from 'uniswap/src/features/gas/hooks'
 import { estimateGasWithClientSideProvider, extractGasFeeParams } from 'uniswap/src/features/gas/utils'
 import { isWebApp } from 'utilities/src/platform'
 
-const UniswapFetchClient = createUniswapFetchClient({
-  baseUrl: uniswapUrls.apiBaseUrl,
+const LxFetchClient = createLxFetchClient({
+  baseUrl: lxUrls.apiBaseUrl,
   additionalHeaders: {
-    'x-api-key': config.uniswapApiKey,
+    'x-api-key': config.lxApiKey,
   },
-  includeBaseUniswapHeaders: !isWebApp,
+  includeBaseLxHeaders: !isWebApp,
 })
 
-export const UniswapApiClient = createUniswapApiClient({
-  fetchClient: UniswapFetchClient,
+export const LxApiClient = createLxApiClient({
+  fetchClient: LxFetchClient,
   processGasFeeResponse: (gasFeeResponse: GasFeeResponse, gasStrategy: GasStrategy) => {
     const gasEstimate = gasFeeResponse.gasEstimates[0]
     if (!gasEstimate) {

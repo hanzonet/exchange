@@ -47,7 +47,7 @@ export const WC_PARAMS = {
   },
 }
 
-export function uniswapWalletConnect(): CreateConnectorFn {
+export function lxWalletConnect(): CreateConnectorFn {
   return createConnector((config) => {
     const wc = walletConnect({
       ...WC_PARAMS,
@@ -81,4 +81,4 @@ export function uniswapWalletConnect(): CreateConnectorFn {
   })
 }
 
-export const luxWalletConnect = uniswapWalletConnect
+export const luxWalletConnect = lxWalletConnect

@@ -1,4 +1,4 @@
-export enum UniswapEventName {
+export enum LxEventName {
   AuctionFilterSelected = 'Auction Filter Selected',
   BalancesReport = 'Balances Report',
   BalancesReportPerChain = 'Balances Report Per Chain',

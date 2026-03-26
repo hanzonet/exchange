@@ -4,12 +4,12 @@ import { createPermit2SignatureStep } from 'uniswap/src/features/transactions/st
 import { TransactionStep } from 'uniswap/src/features/transactions/steps/types'
 import { PlanValidationError } from 'uniswap/src/features/transactions/swap/plan/types'
 import { parseSendCallsPlanStepPayload } from 'uniswap/src/features/transactions/swap/plan/utils'
-import { createUniswapXPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import { createLxSwapPlanSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
 import {
   createSwapTransactionStep,
   createSwapTransactionStepBatched,
 } from 'uniswap/src/features/transactions/swap/steps/swap'
-import { isUniswapX, planStepTypeToTradingRoute } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap, planStepTypeToTradingRoute } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { validatePermitTypeGuard, validateTransactionRequest } from 'uniswap/src/features/transactions/swap/utils/trade'
 import { tradingApiToUniverseChainId } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
 
@@ -24,8 +24,8 @@ export const transformStep = (step: TradingApi.PlanStep): TransactionAndPlanStep
         if (!validatePermitTypeGuard(step.payload)) {
           throw new PlanValidationError('Invalid permit type guard')
         }
-        if (step.stepType && isUniswapX({ routing: planStepTypeToTradingRoute(step.stepType) })) {
-          return createUniswapXPlanSignatureStep(step.payload, step)
+        if (step.stepType && isLxSwap({ routing: planStepTypeToTradingRoute(step.stepType) })) {
+          return createLxSwapPlanSignatureStep(step.payload, step)
         }
         return {
           ...step,

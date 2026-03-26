@@ -10,7 +10,7 @@ import {
   renderSnowflakesWeb,
   SnowflakeContainer,
 } from 'uniswap/src/components/banners/shared/SharedSnowflakeComponents'
-import { UniswapWrapped2025BannerProps } from 'uniswap/src/components/banners/UniswapWrapped2025Banner/types'
+import { LxWrapped2025BannerProps } from 'uniswap/src/components/banners/LxWrapped2025Banner/types'
 import { ElementName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { useSnowflakeAnimation } from 'uniswap/src/hooks/useSnowflakeAnimation'
@@ -78,11 +78,11 @@ const RisingTextContainer = styled(Flex, {
 
 const MOUSE_WAKE_RADIUS = 120
 
-export function UniswapWrapped2025Banner({
+export function LxWrapped2025Banner({
   handleDismiss,
   handlePress,
   bannerHeight = 56,
-}: UniswapWrapped2025BannerProps): JSX.Element {
+}: LxWrapped2025BannerProps): JSX.Element {
   const { t } = useTranslation()
   const [isTextVisible, setIsTextVisible] = useState(false)
   const darkColors = useSporeColorsForTheme('dark')
@@ -112,7 +112,7 @@ export function UniswapWrapped2025Banner({
       onMouseLeave={mouseInteraction?.handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
-      <Trace logPress element={ElementName.UniswapWrappedBanner}>
+      <Trace logPress element={ElementName.LxWrappedBanner}>
         <BannerWrapper height={bannerHeight} onPress={handlePress}>
           <GradientBackground />
           <GlowEffect />
@@ -147,17 +147,17 @@ export function UniswapWrapped2025Banner({
             <Flex row={!isExtensionApp} centered={!isExtensionApp} gap={isExtensionApp ? '$spacing4' : '$spacing8'}>
               {!isExtensionApp && <Gift color={darkColors.neutral1.val} size="$icon.20" />}
               <Text variant="buttonLabel3" color={darkColors.neutral1.val}>
-                {t('home.banner.uniswapWrapped2025.title')}
+                {t('home.banner.lxWrapped2025.title')}
               </Text>
             </Flex>
             {isExtensionApp ? (
               <Text variant="body4" color="$pinkLight">
-                {t('home.banner.uniswapWrapped2025.subtitle')}
+                {t('home.banner.lxWrapped2025.subtitle')}
               </Text>
             ) : (
               <Badge>
                 <Text variant="body4" color="$pinkLight">
-                  {t('home.banner.uniswapWrapped2025.subtitle')}
+                  {t('home.banner.lxWrapped2025.subtitle')}
                 </Text>
               </Badge>
             )}

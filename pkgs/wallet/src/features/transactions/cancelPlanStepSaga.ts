@@ -102,7 +102,7 @@ export function* cancelPlanStep(params: CancelPlanStepParams) {
       if (!cancelableStepInfo.orderId) {
         throw new Error('Cannot cancel LX step without orderId')
       }
-      yield* call(cancelUniswapXPlanStep, {
+      yield* call(cancelLxSwapPlanStep, {
         planTransaction,
         cancelRequest,
         orderId: cancelableStepInfo.orderId,
@@ -200,7 +200,7 @@ function* cancelClassicPlanStep(params: {
 /**
  * Cancels a LX order step by submitting a permit2 nonce invalidation transaction
  */
-function* cancelUniswapXPlanStep(params: {
+function* cancelLxSwapPlanStep(params: {
   planTransaction: PlanTransactionDetails
   cancelRequest: providers.TransactionRequest
   orderId: string
@@ -225,7 +225,7 @@ function* cancelUniswapXPlanStep(params: {
   // Submit the permit2 invalidation transaction
   yield* call(executeTransaction, executeTransactionParams)
 
-  logger.debug('cancelPlanStepSaga', 'cancelUniswapXPlanStep', 'Permit2 invalidation submitted', {
+  logger.debug('cancelPlanStepSaga', 'cancelLxSwapPlanStep', 'Permit2 invalidation submitted', {
     orderId,
     planId: planTransaction.typeInfo.planId,
   })

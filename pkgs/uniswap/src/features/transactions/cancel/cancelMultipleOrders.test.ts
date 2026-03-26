@@ -5,17 +5,17 @@ import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { InterfaceEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import {
-  cancelMultipleUniswapXOrders,
+  cancelMultipleLxSwapOrders,
   extractCancellationData,
   fetchLimitOrdersEncodedOrderData,
-  getCancelMultipleUniswapXOrdersTransaction,
+  getCancelMultipleLxSwapOrdersTransaction,
   getOrdersMatchingCancellationData,
   LimitOrdersFetcher,
   trackOrderCancellation,
 } from 'uniswap/src/features/transactions/cancel/cancelMultipleOrders'
 import { buildBatchCancellation } from 'uniswap/src/features/transactions/cancel/cancelOrderFactory'
-import { UniswapXOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { uniswapXOrderDetails } from 'uniswap/src/test/fixtures'
+import { LxSwapOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { lxSwapOrderDetails } from 'uniswap/src/test/fixtures'
 import type { Mock, Mocked } from 'vitest'
 
 vi.mock('uniswap/src/features/telemetry/send')
@@ -38,14 +38,14 @@ describe('useCancelMultipleOrders', () => {
   describe('trackOrderCancellation', () => {
     it('should send analytics event with order hashes', () => {
       const orders = [
-        uniswapXOrderDetails({ orderHash: '0x123' }),
-        uniswapXOrderDetails({ orderHash: '0x456' }),
-        uniswapXOrderDetails({ orderHash: undefined }),
+        lxSwapOrderDetails({ orderHash: '0x123' }),
+        lxSwapOrderDetails({ orderHash: '0x456' }),
+        lxSwapOrderDetails({ orderHash: undefined }),
       ]
 
       trackOrderCancellation(orders)
 
-      expect(sendAnalyticsEvent).toHaveBeenCalledWith(InterfaceEventName.UniswapXOrderCancelInitiated, {
+      expect(sendAnalyticsEvent).toHaveBeenCalledWith(InterfaceEventName.LxSwapOrderCancelInitiated, {
         orders: ['0x123', '0x456'],
       })
     })
@@ -53,23 +53,23 @@ describe('useCancelMultipleOrders', () => {
 
   describe('extractCancellationData', () => {
     it('should extract valid cancellation data from orders', () => {
-      const orders: UniswapXOrderDetails[] = [
-        uniswapXOrderDetails({
+      const orders: LxSwapOrderDetails[] = [
+        lxSwapOrderDetails({
           orderHash: '0x123',
           encodedOrder: '0xencoded1',
           routing: TradingApi.Routing.DUTCH_V2,
         }),
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0x456',
           encodedOrder: '0xencoded2',
           routing: TradingApi.Routing.DUTCH_V3,
         }),
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: undefined,
           encodedOrder: '0xencoded3',
           routing: TradingApi.Routing.PRIORITY,
         }),
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0x789',
           encodedOrder: undefined,
           routing: TradingApi.Routing.DUTCH_LIMIT,
@@ -88,9 +88,9 @@ describe('useCancelMultipleOrders', () => {
   describe('getOrdersMatchingCancellationData', () => {
     it('should filter orders based on cancellation data', () => {
       const allOrders = [
-        uniswapXOrderDetails({ orderHash: '0x123' }),
-        uniswapXOrderDetails({ orderHash: '0x456' }),
-        uniswapXOrderDetails({ orderHash: '0x789' }),
+        lxSwapOrderDetails({ orderHash: '0x123' }),
+        lxSwapOrderDetails({ orderHash: '0x456' }),
+        lxSwapOrderDetails({ orderHash: '0x789' }),
       ]
 
       const cancellationData = [{ orderHash: '0x123' }, { orderHash: '0x789' }]
@@ -110,12 +110,12 @@ describe('useCancelMultipleOrders', () => {
 
     it('should fetch limit orders with injected fetcher', async () => {
       const limitOrders = [
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0xlimit1',
           encodedOrder: undefined,
           routing: TradingApi.Routing.DUTCH_LIMIT,
         }),
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0xlimit2',
           encodedOrder: undefined,
           routing: TradingApi.Routing.DUTCH_LIMIT,
@@ -146,7 +146,7 @@ describe('useCancelMultipleOrders', () => {
     })
     it('should return empty array when no fetcher provided for limit orders', async () => {
       const limitOrders = [
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0xlimit1',
           encodedOrder: undefined,
           routing: TradingApi.Routing.DUTCH_LIMIT,
@@ -160,7 +160,7 @@ describe('useCancelMultipleOrders', () => {
 
     it('should skip orders that already have encodedOrder', async () => {
       const orders = [
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0x123',
           encodedOrder: '0xalreadyEncoded',
           routing: TradingApi.Routing.DUTCH_V2,
@@ -175,7 +175,7 @@ describe('useCancelMultipleOrders', () => {
 
     it('should handle errors gracefully', async () => {
       const orders = [
-        uniswapXOrderDetails({
+        lxSwapOrderDetails({
           orderHash: '0x123',
           encodedOrder: undefined,
           routing: TradingApi.Routing.DUTCH_V2,
@@ -190,7 +190,7 @@ describe('useCancelMultipleOrders', () => {
     })
   })
 
-  describe('getCancelMultipleUniswapXOrdersTransaction', () => {
+  describe('getCancelMultipleLxSwapOrdersTransaction', () => {
     const mockBuildBatchCancellation = buildBatchCancellation as Mock
 
     beforeEach(() => {
@@ -198,7 +198,7 @@ describe('useCancelMultipleOrders', () => {
     })
 
     it('should return undefined for empty orders', async () => {
-      const result = await getCancelMultipleUniswapXOrdersTransaction({
+      const result = await getCancelMultipleLxSwapOrdersTransaction({
         orders: [],
         chainId: UniverseChainId.Mainnet,
         from: '0xuser',
@@ -214,7 +214,7 @@ describe('useCancelMultipleOrders', () => {
 
       const orders = [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }]
 
-      const result = await getCancelMultipleUniswapXOrdersTransaction({
+      const result = await getCancelMultipleLxSwapOrdersTransaction({
         orders,
         chainId: UniverseChainId.Mainnet,
         from: '0xuser',
@@ -239,7 +239,7 @@ describe('useCancelMultipleOrders', () => {
         { encodedOrder: '0xencoded2', routing: TradingApi.Routing.DUTCH_V3 },
       ]
 
-      const result = await getCancelMultipleUniswapXOrdersTransaction({
+      const result = await getCancelMultipleLxSwapOrdersTransaction({
         orders,
         chainId: UniverseChainId.Mainnet,
         from: '0xuser',
@@ -253,7 +253,7 @@ describe('useCancelMultipleOrders', () => {
 
       const orders = [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }]
 
-      const result = await getCancelMultipleUniswapXOrdersTransaction({
+      const result = await getCancelMultipleLxSwapOrdersTransaction({
         orders,
         chainId: UniverseChainId.Mainnet,
         from: '0xuser',
@@ -263,7 +263,7 @@ describe('useCancelMultipleOrders', () => {
     })
   })
 
-  describe('cancelMultipleUniswapXOrders', () => {
+  describe('cancelMultipleLxSwapOrders', () => {
     const mockBuildBatchCancellation = buildBatchCancellation as Mock
     let mockSigner: {
       sendTransaction: Mock
@@ -291,7 +291,7 @@ describe('useCancelMultipleOrders', () => {
 
       const orders = [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }]
 
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders,
         chainId: UniverseChainId.Mainnet,
         signerAddress: '0xuser',
@@ -318,7 +318,7 @@ describe('useCancelMultipleOrders', () => {
         { encodedOrder: '0xencoded2', routing: TradingApi.Routing.DUTCH_V3 },
       ]
 
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders,
         chainId: UniverseChainId.Mainnet,
         signerAddress: '0xuser',
@@ -336,7 +336,7 @@ describe('useCancelMultipleOrders', () => {
       mockBuildBatchCancellation.mockResolvedValue(mockTx)
       mockSigner.sendTransaction.mockResolvedValue(mockSentTx)
 
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders: [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }],
         chainId: UniverseChainId.Mainnet,
         signerAddress: '0xspecificsigner',
@@ -349,7 +349,7 @@ describe('useCancelMultipleOrders', () => {
     })
 
     it('should return undefined if no provider available', async () => {
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders: [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }],
         chainId: UniverseChainId.Mainnet,
       })
@@ -360,7 +360,7 @@ describe('useCancelMultipleOrders', () => {
     it('should return undefined if factory function returns null', async () => {
       mockBuildBatchCancellation.mockResolvedValue(null)
 
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders: [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }],
         chainId: UniverseChainId.Mainnet,
         signerAddress: '0xuser',
@@ -373,7 +373,7 @@ describe('useCancelMultipleOrders', () => {
     it('should handle errors gracefully', async () => {
       mockBuildBatchCancellation.mockRejectedValue(new Error('Build failed'))
 
-      const result = await cancelMultipleUniswapXOrders({
+      const result = await cancelMultipleLxSwapOrders({
         orders: [{ encodedOrder: '0xencoded', routing: TradingApi.Routing.DUTCH_V2 }],
         chainId: UniverseChainId.Mainnet,
         signerAddress: '0xuser',

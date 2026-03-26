@@ -1,8 +1,8 @@
 import { getOverrideAdapter, getStatsigEnvName, StatsigOptions } from '@luxexchange/gating'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 
 export const statsigBaseConfig: StatsigOptions = {
-  networkConfig: { api: uniswapUrls.statsigProxyUrl },
+  networkConfig: { api: lxUrls.statsigProxyUrl },
   environment: {
     tier: getStatsigEnvName(),
   },

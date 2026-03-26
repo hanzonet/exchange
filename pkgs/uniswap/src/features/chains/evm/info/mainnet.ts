@@ -75,7 +75,7 @@ export const MAINNET_CHAIN_INFO = {
     ? getPlaywrightRpcUrls(LOCAL_MAINNET_PLAYWRIGHT_RPC_URL)
     : {
         [RPCType.Private]: {
-          http: ['https://rpc.mevblocker.io/?referrer=uniswapwallet'],
+          http: ['https://rpc.mevblocker.io/?referrer=lxwallet'],
         },
         [RPCType.Public]: {
           http: [getQuicknodeEndpointUrl(UniverseChainId.Mainnet)],

@@ -2,11 +2,11 @@ import { SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/
 import {
   getLXSwapTxAndGasInfo,
   processLXResponse,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/utils'
-import { UniswapXTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
+import { LxSwapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 
-export function createUniswapXSwapTxAndGasInfoService(): SwapTxAndGasInfoService<UniswapXTrade> {
-  const service: SwapTxAndGasInfoService<UniswapXTrade> = {
+export function createLxSwapSwapTxAndGasInfoService(): SwapTxAndGasInfoService<LxSwapTrade> {
+  const service: SwapTxAndGasInfoService<LxSwapTrade> = {
     async getSwapTxAndGasInfo(params) {
       const permitData = params.trade.quote.permitData
 

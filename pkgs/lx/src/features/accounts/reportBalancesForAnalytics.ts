@@ -1,4 +1,4 @@
-import { UniswapEventName } from 'uniswap/src/features/telemetry/constants'
+import { LxEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 
 interface ReportBalancesParams {
@@ -46,13 +46,13 @@ export function reportBalancesForAnalytics({
     return
   }
 
-  sendAnalyticsEvent(UniswapEventName.BalancesReport, {
+  sendAnalyticsEvent(LxEventName.BalancesReport, {
     total_balances_usd: requiredData.totalBalancesUsd,
     wallets,
     balances,
   })
 
-  sendAnalyticsEvent(UniswapEventName.BalancesReportPerChain, {
+  sendAnalyticsEvent(LxEventName.BalancesReportPerChain, {
     total_balances_usd_per_chain: requiredData.totalBalancesUsdPerChain,
     wallet: requiredData.wallet,
     view_only: isViewOnly,

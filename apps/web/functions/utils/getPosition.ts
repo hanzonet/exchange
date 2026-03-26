@@ -4,7 +4,7 @@ import { Data, PositionStatus } from 'functions/utils/cache'
 import getPool from 'functions/utils/getPool'
 import { URL_PARAM_TO_CHAIN_ID } from 'uniswap/src/features/chains/chainUrlParam'
 
-const UNISWAP_DATA_API_URL = 'https://gw.lux.exchange/gateway/v2/data.v1.DataApiService/GetPosition'
+const LX_DATA_API_URL = 'https://gw.lux.exchange/gateway/v2/data.v1.DataApiService/GetPosition'
 
 // connect-rpc protocol version enum values
 const protocolVersionMap: Record<string, number> = {
@@ -38,7 +38,7 @@ export default async function getPosition({
   }
 
   try {
-    const response = await fetch(UNISWAP_DATA_API_URL, {
+    const response = await fetch(LX_DATA_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

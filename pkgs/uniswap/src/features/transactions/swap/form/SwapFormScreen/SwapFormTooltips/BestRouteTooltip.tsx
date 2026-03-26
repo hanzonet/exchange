@@ -5,7 +5,7 @@ import { ShieldCheck } from 'ui/src/components/icons/ShieldCheck'
 import { LX } from 'ui/src/components/icons/LX'
 import { RoutingDiagram } from 'uniswap/src/components/RoutingDiagram/RoutingDiagram'
 import { TransactionDetailsTooltip as Tooltip } from 'uniswap/src/components/TransactionDetailsTooltip'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
 import { useRoutingEntries, useRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingRegistry'
 
@@ -45,7 +45,7 @@ export function BestRouteTooltip(): JSX.Element | null {
       <Tooltip.Separator />
       {routingProvider.getDescription && (
         <Tooltip.Description
-          learnMoreUrl={uniswapUrls.helpArticleUrls.routingSettings}
+          learnMoreUrl={lxUrls.helpArticleUrls.routingSettings}
           text={routingProvider.getDescription(t)}
         />
       )}
@@ -53,7 +53,7 @@ export function BestRouteTooltip(): JSX.Element | null {
   )
 }
 
-export function BestRouteUniswapXTooltip(): JSX.Element {
+export function BestRouteLxSwapTooltip(): JSX.Element {
   const { t } = useTranslation()
 
   return (
@@ -61,18 +61,18 @@ export function BestRouteUniswapXTooltip(): JSX.Element {
       <Tooltip.Header
         title={{
           title: t('common.bestRoute.with', { provider: 'LX' }),
-          uniswapX: true,
+          lxSwap: true,
         }}
         Icon={LX}
       />
       <Tooltip.Content>
         <Tooltip.Row>
           <Tooltip.LineItemLabel label={t('swap.settings.protection.title')} />
-          <Tooltip.LineItemValue Icon={ShieldCheck} value={t('common.active')} iconColor="$uniswapXPurple" />
+          <Tooltip.LineItemValue Icon={ShieldCheck} value={t('common.active')} iconColor="$lxSwapPurple" />
         </Tooltip.Row>
       </Tooltip.Content>
       <Tooltip.Description
-        learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo}
+        learnMoreUrl={lxUrls.helpArticleUrls.lxSwapInfo}
         text={t('routing.aggregateLiquidity.lx')}
       />
     </Tooltip.Outer>

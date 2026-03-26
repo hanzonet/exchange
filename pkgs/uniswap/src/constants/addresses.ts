@@ -36,7 +36,7 @@ export function getWrappedNativeAddress(chainId: UniverseChainId): string {
 }
 
 // TODO: Load this from config or backend once we have it (WALL-6592)
-export const UNISWAP_DELEGATION_ADDRESS: Address = '0x227380efd3392EC33cf148Ade5e0a89D33121814'
+export const LX_DELEGATION_ADDRESS: Address = '0x227380efd3392EC33cf148Ade5e0a89D33121814'
 
 // The ERC20 ETH contract address — this is the spender that wallets grant `nativeAllowance` to.
 // https://github.com/Uniswap/ERC20-eth

@@ -1,19 +1,19 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 
-type UniswapIdentifierQueryOptions = QueryOptionsResult<
+type LxIdentifierQueryOptions = QueryOptionsResult<
   string | null,
   Error,
   string | null,
-  [ReactQueryCacheKey.UniswapIdentifier]
+  [ReactQueryCacheKey.LxIdentifier]
 >
 
-export function uniswapIdentifierQuery(getService: () => UniswapIdentifierService): UniswapIdentifierQueryOptions {
+export function lxIdentifierQuery(getService: () => LxIdentifierService): LxIdentifierQueryOptions {
   return queryOptions({
-    queryKey: [ReactQueryCacheKey.UniswapIdentifier],
-    queryFn: async () => getService().getUniswapIdentifier(),
+    queryKey: [ReactQueryCacheKey.LxIdentifier],
+    queryFn: async () => getService().getLxIdentifier(),
     staleTime: Infinity,
     gcTime: Infinity,
   })

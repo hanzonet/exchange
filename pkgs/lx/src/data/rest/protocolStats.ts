@@ -4,7 +4,7 @@ import { useQuery } from '@connectrpc/connect-query'
 import { UseQueryResult } from '@tanstack/react-query'
 import { ProtocolStatsRequest, ProtocolStatsResponse } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
 import { protocolStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
-import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
+import { lxGetTransport } from 'uniswap/src/data/rest/base'
 
 /**
  * Wrapper around Tanstack useQuery for the Uniswap REST BE service ProtocolStats
@@ -15,5 +15,5 @@ import { uniswapGetTransport } from 'uniswap/src/data/rest/base'
 export function useProtocolStatsQuery(
   input?: PartialMessage<ProtocolStatsRequest>,
 ): UseQueryResult<ProtocolStatsResponse, ConnectError> {
-  return useQuery(protocolStats, input, { transport: uniswapGetTransport })
+  return useQuery(protocolStats, input, { transport: lxGetTransport })
 }

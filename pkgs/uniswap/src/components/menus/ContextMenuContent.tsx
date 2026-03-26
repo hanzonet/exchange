@@ -1,7 +1,7 @@
 import { Fragment, useCallback } from 'react'
 import { DropdownMenuSheetItem, DropdownMenuSheetItemProps, Flex, FlexProps, getMenuItemColor, Separator } from 'ui/src'
 import { MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
-import { ElementName, SectionName, UniswapEventName } from 'uniswap/src/features/telemetry/constants'
+import { ElementName, SectionName, LxEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { isWebPlatform } from 'utilities/src/platform'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
@@ -32,7 +32,7 @@ export function MenuContent({
     ({ originalOnPress, label, index }: { originalOnPress: () => void; label: string; index: number }) => {
       return () => {
         if (trackItemClicks && elementName && sectionName) {
-          sendAnalyticsEvent(UniswapEventName.ContextMenuItemClicked, {
+          sendAnalyticsEvent(LxEventName.ContextMenuItemClicked, {
             element: elementName,
             section: sectionName,
             menu_item: label,

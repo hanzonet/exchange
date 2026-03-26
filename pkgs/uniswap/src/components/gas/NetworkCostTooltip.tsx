@@ -1,11 +1,11 @@
-import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
+import { FormattedLxSwapGasFeeInfo } from '@luxexchange/api'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { LX } from 'ui/src/components/icons/LX'
 import { LXText } from 'ui/src/components/text/LXText'
 import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
 import { TransactionDetailsTooltip as Tooltip } from 'uniswap/src/components/TransactionDetailsTooltip'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 
@@ -19,8 +19,8 @@ export function NetworkCostTooltip({
   const { t } = useTranslation()
 
   const learnMoreUrl = includesDelegation
-    ? uniswapUrls.helpArticleUrls.smartWalletDelegation
-    : uniswapUrls.helpArticleUrls.networkFeeInfo
+    ? lxUrls.helpArticleUrls.smartWalletDelegation
+    : lxUrls.helpArticleUrls.networkFeeInfo
   const text = includesDelegation
     ? t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })
     : t('transaction.networkCost.description')
@@ -36,17 +36,17 @@ export function NetworkCostTooltip({
 }
 
 export function NetworkCostTooltipLX({
-  uniswapXGasFeeInfo,
+  lxSwapGasFeeInfo,
 }: {
-  uniswapXGasFeeInfo: FormattedUniswapXGasFeeInfo
+  lxSwapGasFeeInfo: FormattedLxSwapGasFeeInfo
 }): JSX.Element {
   const { t } = useTranslation()
-  const { approvalFeeFormatted, swapFeeFormatted, inputTokenSymbol } = uniswapXGasFeeInfo
+  const { approvalFeeFormatted, swapFeeFormatted, inputTokenSymbol } = lxSwapGasFeeInfo
 
   return (
     <Tooltip.Outer>
       <Tooltip.Header
-        title={{ title: t('swap.warning.networkFee.message.uniswapX.title'), uniswapX: true }}
+        title={{ title: t('swap.warning.networkFee.message.lxSwap.title'), lxSwap: true }}
         Icon={LX}
       />
       <Tooltip.Content>
@@ -69,7 +69,7 @@ export function NetworkCostTooltipLX({
         )}
       </Tooltip.Content>
       <Tooltip.Separator />
-      <Tooltip.Description learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
+      <Tooltip.Description learnMoreUrl={lxUrls.helpArticleUrls.lxSwapInfo} text={t('lxSwap.cost')} />
     </Tooltip.Outer>
   )
 }

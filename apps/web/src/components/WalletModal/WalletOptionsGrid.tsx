@@ -6,7 +6,7 @@ import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
 import { isMobileWeb } from '@luxfi/utilities/src/platform'
 import { MenuStateVariant, useSetMenuCallback } from '~/components/AccountDrawer/menuState'
 import { NoSolanaWalletConnectedView } from '~/components/WalletModal/NoSolanaWalletConnectedView'
-import { UniswapMobileWalletConnectorOption } from '~/components/WalletModal/UniswapMobileWalletConnectorOption'
+import { LxMobileWalletConnectorOption } from '~/components/WalletModal/LxMobileWalletConnectorOption'
 import { OtherWalletsOption, WalletConnectorOption } from '~/components/WalletModal/WalletConnectorOption'
 import { useRecentConnectorId } from '~/components/Web3Provider/constants'
 import { useOrderedWallets } from '~/features/wallet/connection/hooks/useOrderedWalletConnectors'
@@ -36,7 +36,7 @@ export function WalletOptionsGrid({
 
   const shouldShowMobileConnector =
     showMobileConnector &&
-    (recentConnectorId === CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID ||
+    (recentConnectorId === CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID ||
       isMobileWeb ||
       isEmbeddedWalletEnabled)
 
@@ -57,7 +57,7 @@ export function WalletOptionsGrid({
       >
         {shouldShowMobileConnector && (
           <>
-            <UniswapMobileWalletConnectorOption />
+            <LxMobileWalletConnectorOption />
             {isEmbeddedWalletEnabled ? <Flex height={2} backgroundColor="$surface1" /> : <Separator />}
           </>
         )}

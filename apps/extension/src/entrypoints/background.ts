@@ -19,7 +19,7 @@ import {
   readDeviceAccessTimeoutMinutesFromStorage,
   readIsOnboardedFromStorage,
 } from 'src/background/utils/persistedStateUtils'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ExtensionEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { logger } from '@luxfi/utilities/src/logger/logger'
@@ -55,7 +55,7 @@ async function initApp(): Promise<void> {
   })
 
   // Sets uninstall URL
-  chrome.runtime.setUninstallURL(uniswapUrls.chromeExtensionUninstallUrl)
+  chrome.runtime.setUninstallURL(lxUrls.chromeExtensionUninstallUrl)
 
   await backgroundStore.init()
 }

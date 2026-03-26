@@ -293,7 +293,7 @@ describe(handleDeepLink, () => {
 
   it('Handles Share currently active Account Address Universal Link', () => {
     const hash = `#/portfolio/${account.address}`
-    const url = `${UNISWAP_WEB_URL}/${hash}`
+    const url = `${LX_WEB_URL}/${hash}`
     return expectSaga(handleDeepLink, {
       payload: {
         url,
@@ -313,7 +313,7 @@ describe(handleDeepLink, () => {
 
   it('Handles Share already added Account Address Universal Link', () => {
     const hash = `#/portfolio/${SAMPLE_SEED_ADDRESS_2}`
-    const url = `${UNISWAP_WEB_URL}/${hash}`
+    const url = `${LX_WEB_URL}/${hash}`
     return expectSaga(handleDeepLink, {
       payload: {
         url,
@@ -342,8 +342,8 @@ describe(handleDeepLink, () => {
 
   it('Handles Share external Account Address Universal Link', async () => {
     const path = `portfolio/${SAMPLE_SEED_ADDRESS_2}`
-    const pathUrl = `${UNISWAP_WEB_URL}/${path}`
-    const hashedUrl = `${UNISWAP_WEB_URL}/#/${path}`
+    const pathUrl = `${LX_WEB_URL}/${path}`
+    const hashedUrl = `${LX_WEB_URL}/#/${path}`
     const expectedModalState = {
       address: SAMPLE_SEED_ADDRESS_2,
     }

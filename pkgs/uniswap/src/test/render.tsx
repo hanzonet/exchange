@@ -20,7 +20,7 @@ import { LuxProvider } from 'uniswap/src/contexts/LuxContext'
 import { UrlContext } from 'uniswap/src/contexts/UrlContext'
 import { SharedPersistQueryClientProvider } from 'uniswap/src/data/apiClients/SharedPersistQueryClientProvider'
 import 'uniswap/src/i18n'
-import { UniswapState, uniswapReducer } from 'uniswap/src/state/uniswapReducer'
+import { LxState, lxReducer } from 'uniswap/src/state/lxReducer'
 import { createMockFn } from 'uniswap/src/test/mockFn'
 import { AutoMockedApolloProvider } from 'uniswap/src/test/mocks'
 
@@ -52,8 +52,8 @@ export const mockLuxContext = {
 type ExtendedRenderOptions = RenderOptions & {
   cache?: InMemoryCache
   resolvers?: Resolvers
-  preloadedState?: PreloadedState<UniswapState>
-  store?: EnhancedStore<UniswapState>
+  preloadedState?: PreloadedState<LxState>
+  store?: EnhancedStore<LxState>
 }
 
 /**
@@ -71,7 +71,7 @@ export function renderWithProviders(
     preloadedState = {},
     // Automatically create a store instance if no store was passed in
     store = configureStore({
-      reducer: uniswapReducer,
+      reducer: lxReducer,
       preloadedState,
       middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     }),
@@ -99,8 +99,8 @@ export function renderWithProviders(
 type ExtendedRenderHookOptions<P> = RenderHookOptions<P> & {
   cache?: InMemoryCache
   resolvers?: Resolvers
-  preloadedState?: PreloadedState<UniswapState>
-  store?: EnhancedStore<UniswapState>
+  preloadedState?: PreloadedState<LxState>
+  store?: EnhancedStore<LxState>
 }
 
 type RenderHookWithProvidersResult<R, P extends any[] | undefined = undefined> = Omit<
@@ -140,7 +140,7 @@ export function renderHookWithProviders<P extends any[], R>(
     preloadedState = {},
     // Automatically create a store instance if no store was passed in
     store = configureStore({
-      reducer: uniswapReducer,
+      reducer: lxReducer,
       preloadedState,
       middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     }),

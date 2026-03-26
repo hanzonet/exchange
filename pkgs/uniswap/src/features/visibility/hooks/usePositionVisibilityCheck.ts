@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { selectPositionsVisibility } from 'uniswap/src/features/visibility/selectors'
 import { getUniquePositionId } from 'uniswap/src/features/visibility/utils'
-import { UniswapRootState } from 'uniswap/src/state'
+import { LxRootState } from 'uniswap/src/state'
 
 type VisibilityCheckParams = {
   poolId: string
@@ -13,7 +13,7 @@ type VisibilityCheckParams = {
 }
 
 export function usePositionVisibilityCheck(): (params: VisibilityCheckParams) => boolean {
-  const positionVisibilities = useSelector((state: UniswapRootState) => selectPositionsVisibility(state))
+  const positionVisibilities = useSelector((state: LxRootState) => selectPositionsVisibility(state))
 
   const isPositionVisible = useCallback(
     ({ poolId, tokenId, chainId, isFlaggedSpam = false }: VisibilityCheckParams): boolean => {

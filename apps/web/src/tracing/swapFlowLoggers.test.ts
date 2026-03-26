@@ -7,7 +7,7 @@ import {
   TransactionStatus,
   TransactionType,
 } from '@luxexchange/lx/src/features/transactions/types/transactionDetails'
-import { logSwapFinalized, logUniswapXSwapFinalized } from '~/tracing/swapFlowLoggers'
+import { logSwapFinalized, logLxSwapSwapFinalized } from '~/tracing/swapFlowLoggers'
 
 vi.mock('lx/src/features/telemetry/send', () => ({
   sendAnalyticsEvent: vi.fn(),
@@ -70,13 +70,13 @@ describe('swapFlowLoggers', () => {
     })
   })
 
-  it('logUniswapXSwapSuccess calls sendAnalyticsEvent with correct parameters', () => {
+  it('logLxSwapSwapSuccess calls sendAnalyticsEvent with correct parameters', () => {
     const mockHash = 'mockHash'
     const mockOrderHash = 'mockOrderHash'
     const mockChainId = 1
     const mockAnalyticsContext = { page: 'mockContext' }
 
-    logUniswapXSwapFinalized({
+    logLxSwapSwapFinalized({
       id: 'mockId',
       hash: mockHash,
       orderHash: mockOrderHash,

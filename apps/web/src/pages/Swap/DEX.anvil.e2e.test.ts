@@ -2,7 +2,7 @@ import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataA
 import { WETH9 } from '@luxamm/sdk-core'
 import { ZERO_ADDRESS } from '@luxexchange/lx/src/constants/misc'
 import { DAI, USDC_MAINNET } from '@luxexchange/lx/src/constants/tokens'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
@@ -30,7 +30,7 @@ test.describe(
         address: assume0xAddress(WETH9[UniverseChainId.Mainnet].address),
         balance: parseEther('1000000'),
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.quote}`, async (route, request) => {
+      await page.route(`${lxUrls.tradingApiUrl}${lxUrls.tradingApiPaths.quote}`, async (route, request) => {
         const postData = await request.postData()
         const data = JSON.parse(postData ?? '{}')
         if (data.tokenOut === USDC_MAINNET.address) {
@@ -39,7 +39,7 @@ test.describe(
           await route.fulfill({ path: Mocks.DEX.quote })
         }
       })
-      await page.route(`${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.order}`, async (route) => {
+      await page.route(`${lxUrls.tradingApiUrl}${lxUrls.tradingApiPaths.order}`, async (route) => {
         await route.fulfill({ path: Mocks.DEX.openOrder })
       })
       await page.goto(`/swap?inputCurrency=${WETH9[UniverseChainId.Mainnet].address}&outputCurrency=${DAI.address}`)
@@ -78,7 +78,7 @@ test.describe(
     })
 
     test('deduplicates remote vs local lx orders', async ({ page, dataApi }) => {
-      await page.route(UNISWAP_X_ORDERS_ENDPOINT, async (route) => {
+      await page.route(LX_SWAP_ORDERS_ENDPOINT, async (route) => {
         await route.fulfill({ path: Mocks.LX.filledOrders })
       })
 

@@ -52,7 +52,7 @@ function useHopBadgeContent({ hop, tokenPair }: { hop: RoutingHop; tokenPair: st
   // eslint-disable-next-line consistent-return
   return useMemo(() => {
     switch (hop.type) {
-      case 'uniswapPool': {
+      case 'lxPool': {
         const feePercent = hop.fee / BIPS_BASE
         const poolFeeText = hop.isDynamic ? t('pool.dynamic') : t('pool.percent', { pct: feePercent })
 

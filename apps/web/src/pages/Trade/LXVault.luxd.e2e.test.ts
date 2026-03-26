@@ -308,7 +308,7 @@ test.describe(
       expect(bookCode !== undefined).toBe(true)
     })
 
-    test('should verify UniswapXFeed is accessible for mark prices', async ({ anvil }) => {
+    test('should verify LxSwapFeed is accessible for mark prices', async ({ anvil }) => {
       const feedCode = await anvil.getCode({ address: LX.LX_FEED })
       expect(feedCode !== undefined).toBe(true)
     })

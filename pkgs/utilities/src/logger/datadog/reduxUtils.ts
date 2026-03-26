@@ -34,7 +34,7 @@ const ALLOWED_REDUX_FIELDS: string[] = [
   // Uniswap
   'searchHistory',
   'transactions',
-  'uniswapBehaviorHistory',
+  'lxBehaviorHistory',
   'userSettings',
   // Wallet
   'appearanceSettings',

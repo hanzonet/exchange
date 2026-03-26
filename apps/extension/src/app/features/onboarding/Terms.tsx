@@ -2,15 +2,15 @@ import { PropsWithChildren } from 'react'
 import { Trans } from 'react-i18next'
 import { Link, LinkProps } from 'react-router'
 import { Text } from '@luxfi/ui/src'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 
 export function Terms(): JSX.Element {
   return (
     <Text color="$neutral3" textAlign="center" variant="body4">
       <Trans
         components={{
-          highlightTerms: <LinkWrapper to={uniswapUrls.termsOfServiceUrl} />,
-          highlightPrivacy: <LinkWrapper to={uniswapUrls.privacyPolicyUrl} />,
+          highlightTerms: <LinkWrapper to={lxUrls.termsOfServiceUrl} />,
+          highlightPrivacy: <LinkWrapper to={lxUrls.privacyPolicyUrl} />,
         }}
         i18nKey="onboarding.termsOfService"
       />

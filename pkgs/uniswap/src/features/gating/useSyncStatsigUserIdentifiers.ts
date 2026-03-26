@@ -10,38 +10,38 @@ export const StatsigCustomIdKeys = {
   /** Wallet address for the currently active account */
   Address: 'address',
   /** Server-assigned identifier from the sessions service */
-  UniswapIdentifier: 'uniswap_identifier',
+  LxIdentifier: 'lx_identifier',
 } as const
 
 interface UseStatsigUserIdentifiersParams {
   /** The currently active wallet address */
   address?: string | null
   /** The uniswap identifier from the sessions service */
-  uniswapIdentifier?: string | null
+  lxIdentifier?: string | null
 }
 
 /**
- * Hook that syncs Statsig user with custom identifiers (address and uniswap_identifier).
+ * Hook that syncs Statsig user with custom identifiers (address and lx_identifier).
  *
  * This hook should be called within a component that has access to the Statsig provider.
- * It will update the Statsig user whenever the address or uniswapIdentifier changes.
+ * It will update the Statsig user whenever the address or lxIdentifier changes.
  *
  * @example
  * ```tsx
  * function MyComponent() {
  *   const address = useActiveAccountAddress()
- *   const { data: uniswapIdentifier } = useQuery(uniswapIdentifierQuery())
+ *   const { data: lxIdentifier } = useQuery(lxIdentifierQuery())
  *
- *   useSyncStatsigUserIdentifiers({ address, uniswapIdentifier })
+ *   useSyncStatsigUserIdentifiers({ address, lxIdentifier })
  *
  *   return <div>...</div>
  * }
  * ```
  */
-export function useSyncStatsigUserIdentifiers({ address, uniswapIdentifier }: UseStatsigUserIdentifiersParams): void {
+export function useSyncStatsigUserIdentifiers({ address, lxIdentifier }: UseStatsigUserIdentifiersParams): void {
   useEffect(() => {
     // Skip if neither identifier is available
-    if (!address && !uniswapIdentifier) {
+    if (!address && !lxIdentifier) {
       return
     }
 
@@ -55,7 +55,7 @@ export function useSyncStatsigUserIdentifiers({ address, uniswapIdentifier }: Us
           ...currentUser.customIDs,
           // Only update each identifier if available (preserves existing values)
           ...(address ? { [StatsigCustomIdKeys.Address]: address } : {}),
-          ...(uniswapIdentifier ? { [StatsigCustomIdKeys.UniswapIdentifier]: uniswapIdentifier } : {}),
+          ...(lxIdentifier ? { [StatsigCustomIdKeys.LxIdentifier]: lxIdentifier } : {}),
         },
       }
 
@@ -66,5 +66,5 @@ export function useSyncStatsigUserIdentifiers({ address, uniswapIdentifier }: Us
       // Statsig client may not be initialized yet, which is fine
       logger.debug('useSyncStatsigUserIdentifiers', 'useEffect', 'Could not update Statsig user', { error })
     }
-  }, [address, uniswapIdentifier])
+  }, [address, lxIdentifier])
 }

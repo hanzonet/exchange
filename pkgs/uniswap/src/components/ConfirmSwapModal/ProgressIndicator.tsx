@@ -211,7 +211,7 @@ function Step({
     case TransactionStepType.SwapTransaction:
     case TransactionStepType.SwapTransactionAsync:
     case TransactionStepType.LXSignature:
-    case TransactionStepType.UniswapXPlanSignature:
+    case TransactionStepType.LxSwapPlanSignature:
     case TransactionStepType.SwapTransactionBatched:
       if (isPlanStep) {
         return <SwapTransactionPlanStepRow step={step as SwapSteps} {...commonProps} />

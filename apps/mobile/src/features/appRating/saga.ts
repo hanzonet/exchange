@@ -1,6 +1,6 @@
 import { Alert, Platform } from 'react-native'
 import { call, delay, put, select, takeLatest } from 'typed-redux-saga'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { WalletEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import { finalizeTransaction } from '@luxexchange/lx/src/features/transactions/slice'
@@ -165,7 +165,7 @@ async function openFeedbackRequestAlert() {
       {
         text: i18n.t('appRating.feedback.button.send'),
         onPress: () => {
-          openUri({ uri: uniswapUrls.walletFeedbackForm }).catch((e) =>
+          openUri({ uri: lxUrls.walletFeedbackForm }).catch((e) =>
             logger.error(e, { tags: { file: 'appRating/saga', function: 'openFeedbackAlert' } }),
           )
           resolve(true)

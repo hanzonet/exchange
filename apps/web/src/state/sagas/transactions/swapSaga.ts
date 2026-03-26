@@ -52,7 +52,7 @@ import {
   isClassic,
   isJupiter,
   requireRouting,
-  UNISWAPX_ROUTING_VARIANTS,
+  LXSWAP_ROUTING_VARIANTS,
 } from '@luxexchange/lx/src/features/transactions/swap/utils/routing'
 import { getClassicQuoteFromResponse } from '@luxexchange/lx/src/features/transactions/swap/utils/tradingApi'
 import { createMonitoredSaga } from '@luxexchange/lx/src/utils/saga'
@@ -294,7 +294,7 @@ function* swap(params: SwapParams) {
           break
         }
         case TransactionStepType.DEXSignature: {
-          requireRouting(trade, UNISWAPX_ROUTING_VARIANTS)
+          requireRouting(trade, LXSWAP_ROUTING_VARIANTS)
           yield* call(handleDEXSignatureStep, { address, step, setCurrentStep, trade, analytics })
           break
         }

@@ -4,7 +4,7 @@
  * Tests each migration independently with various input states, edge cases,
  * and error handling, without relying on output from previous migrations.
  *
- * For tests of the full migration chain, see uniswapMigrationTests.ts.
+ * For tests of the full migration chain, see lxMigrationTests.ts.
  */
 /* biome-ignore-all lint/suspicious/noExplicitAny: legacy code needs review */
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -18,7 +18,7 @@ import {
   migrateSearchHistory,
   removeThaiBahtFromFiatCurrency,
   unchecksumDismissedTokenWarningKeys,
-} from 'uniswap/src/state/uniswapMigrations'
+} from 'uniswap/src/state/lxMigrations'
 import { createThrowingProxy } from 'utilities/src/test/utils'
 
 // Mobile: 82

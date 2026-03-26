@@ -8,7 +8,7 @@ import { TradeableAsset } from 'uniswap/src/entities/assets'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { SearchContext } from 'uniswap/src/features/search/SearchModal/analytics/SearchContext'
-import { ElementName, UniswapEventName } from 'uniswap/src/features/telemetry/constants'
+import { ElementName, LxEventName } from 'uniswap/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { isChainSupportedForChainedActions } from 'uniswap/src/features/transactions/swap/utils/chainedActions'
 import { CurrencyField } from 'uniswap/src/types/currency'
@@ -66,7 +66,7 @@ export function useTokenSelectionHandler({
       // log event that a currency was selected
       const tokenOption = section.data[index]
       const balanceUSD = Array.isArray(tokenOption) ? undefined : (tokenOption?.balanceUSD ?? undefined)
-      sendAnalyticsEvent(UniswapEventName.TokenSelected, {
+      sendAnalyticsEvent(LxEventName.TokenSelected, {
         name: currencyInfo.currency.name,
         address: currencyAddress(currencyInfo.currency),
         chain: currencyInfo.currency.chainId,

@@ -6,16 +6,16 @@ import { AppNotificationType } from 'uniswap/src/features/notifications/slice/ty
 import { selectIncompleteTransactions } from 'uniswap/src/features/transactions/selectors'
 import {
   addTransaction,
-  cancelRemoteUniswapXOrder,
+  cancelRemoteLxSwapOrder,
   transactionActions,
   updateTransaction,
 } from 'uniswap/src/features/transactions/slice'
 import { PlanWatcher } from 'uniswap/src/features/transactions/swap/plan/planWatcherSaga'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { QueuedOrderStatus } from 'uniswap/src/features/transactions/types/transactionDetails'
 import i18n from 'uniswap/src/i18n'
 import { logger } from 'utilities/src/logger/logger'
-import { attemptCancelRemoteUniswapXOrder } from '@luxfi/wallet/src/features/transactions/cancelTransactionSaga'
+import { attemptCancelRemoteLxSwapOrder } from '@luxfi/wallet/src/features/transactions/cancelTransactionSaga'
 import { isFORTransaction } from '@luxfi/wallet/src/features/transactions/utils'
 import { OrderWatcher } from '@luxfi/wallet/src/features/transactions/watcher/orderWatcherSaga'
 import { watchFiatOnRampTransaction } from '@luxfi/wallet/src/features/transactions/watcher/watchFiatOnRampSaga'
@@ -39,7 +39,7 @@ export function* transactionWatcher({
 
   // Listen for remote LX order cancellation requests (orders not in local Redux state)
   yield* fork(function* watchRemoteOrderCancellation() {
-    yield* takeEvery(cancelRemoteUniswapXOrder.type, attemptCancelRemoteUniswapXOrder)
+    yield* takeEvery(cancelRemoteLxSwapOrder.type, attemptCancelRemoteLxSwapOrder)
   })
 
   // First, fork off watchers for any incomplete txs that are already in store
@@ -50,7 +50,7 @@ export function* transactionWatcher({
       yield* fork(watchFiatOnRampTransaction, transaction as FORTransactionDetails)
     } else {
       // If the transaction was a queued LX order that never became submitted, update UI to show failure
-      if (isUniswapX(transaction) && transaction.queueStatus === QueuedOrderStatus.Waiting) {
+      if (isLxSwap(transaction) && transaction.queueStatus === QueuedOrderStatus.Waiting) {
         const updatedOrder = { ...transaction, queueStatus: QueuedOrderStatus.AppClosed }
         yield* put(transactionActions.updateTransaction(updatedOrder))
         continue

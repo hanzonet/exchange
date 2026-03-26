@@ -11,7 +11,7 @@ import { MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningModal } from 'uniswap/src/components/modals/WarningModal/WarningModal'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { AccountType } from 'uniswap/src/features/accounts/types'
 import { AuthTrigger } from 'uniswap/src/features/auth/types'
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
@@ -26,16 +26,16 @@ import { useIsCancelable } from 'uniswap/src/features/transactions/hooks/useIsCa
 import { useSelectTransaction } from 'uniswap/src/features/transactions/hooks/useSelectTransaction'
 import {
   cancelPlanStep,
-  cancelRemoteUniswapXOrder,
+  cancelRemoteLxSwapOrder,
   cancelTransaction,
   finalizeTransaction,
 } from 'uniswap/src/features/transactions/slice'
-import { isBridge, isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isBridge, isClassic, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
   TransactionType,
-  UniswapXOrderDetails,
+  LxSwapOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { isFinalizedTx } from 'uniswap/src/features/transactions/types/utils'
 import { useIsActivityHidden } from 'uniswap/src/features/visibility/hooks/useIsActivityHidden'
@@ -116,14 +116,14 @@ export function useTransactionActions({
             cancelableStepInfo: planCancellationInfo.cancelableStepInfo,
           }),
         )
-      } else if (!isInLocalState && isUniswapX(transaction)) {
+      } else if (!isInLocalState && isLxSwap(transaction)) {
         // Remote LX order (e.g. submitted from web app) — bypass Redux cancelTransaction
         // reducer and directly submit the Permit2 nonce invalidation transaction via saga.
         dispatch(
-          cancelRemoteUniswapXOrder({
+          cancelRemoteLxSwapOrder({
             chainId: transaction.chainId,
             address: transaction.from,
-            orderHash: (transaction as UniswapXOrderDetails).orderHash ?? transaction.id,
+            orderHash: (transaction as LxSwapOrderDetails).orderHash ?? transaction.id,
             cancelRequest: txRequest,
           }),
         )
@@ -362,7 +362,7 @@ async function openSupportLink(transactionDetails: TransactionDetails): Promise<
       params.append(SupportLinkParams.ReportType, isWebPlatform ? 'uniswap_extension_issue' : 'uw_ios_app') // Report Type Dropdown
       params.append(SupportLinkParams.IssueType, 'uw_transaction_details_page_submission') // Issue type Dropdown
       params.append(SupportLinkParams.TransactionId, transactionDetails.hash ?? 'N/A') // Transaction id
-      return openUri({ uri: uniswapUrls.helpRequestUrl + '?' + params.toString() }).catch((e) =>
+      return openUri({ uri: lxUrls.helpRequestUrl + '?' + params.toString() }).catch((e) =>
         logger.error(e, { tags: { file: 'TransactionActionsModal', function: 'getHelpLink' } }),
       )
   }

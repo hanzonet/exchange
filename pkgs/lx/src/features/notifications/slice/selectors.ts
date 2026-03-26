@@ -1,17 +1,17 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
 import { AppNotification } from 'uniswap/src/features/notifications/slice/types'
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 
-const selectNotificationQueue = (state: UniswapState): AppNotification[] => state.notifications.notificationQueue
+const selectNotificationQueue = (state: LxState): AppNotification[] => state.notifications.notificationQueue
 
 export const makeSelectAddressNotifications = (): Selector<
-  UniswapState,
+  LxState,
   AppNotification[] | undefined,
   [Address | null]
 > =>
   createSelector(
     selectNotificationQueue,
-    (_: UniswapState, address: Address | null) => address,
+    (_: LxState, address: Address | null) => address,
     (notificationQueue, address) => {
       if (!address) {
         return undefined
@@ -22,15 +22,15 @@ export const makeSelectAddressNotifications = (): Selector<
   )
 
 const selectNotificationStatus = (
-  state: UniswapState,
+  state: LxState,
 ): {
   [userAddress: string]: boolean | undefined
 } => state.notifications.notificationStatus
 
-export const makeSelectHasNotifications = (): Selector<UniswapState, boolean | undefined, [Address | null]> =>
+export const makeSelectHasNotifications = (): Selector<LxState, boolean | undefined, [Address | null]> =>
   createSelector(
     selectNotificationStatus,
-    (_: UniswapState, address: Address | null) => address,
+    (_: LxState, address: Address | null) => address,
     (notificationStatuses, address) => {
       if (!address) {
         return undefined
@@ -40,7 +40,7 @@ export const makeSelectHasNotifications = (): Selector<UniswapState, boolean | u
   )
 
 export const selectLastTxNotificationUpdate = (
-  state: UniswapState,
+  state: LxState,
 ): {
   [address: string]: number | undefined
 } => state.notifications.lastTxNotificationUpdate

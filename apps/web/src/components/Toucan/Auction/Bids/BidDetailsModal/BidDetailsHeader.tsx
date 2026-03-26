@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
 import { TokenLogo } from '@luxexchange/lx/src/components/CurrencyLogo/TokenLogo'
 import { GetHelpHeader } from '@luxexchange/lx/src/components/dialog/GetHelpHeader'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { StatusIndicator } from '~/components/Toucan/Auction/Bids/BidDetailsModal/StatusIndicator'
 import { AuctionDetails } from '~/components/Toucan/Auction/store/types'
 import { type BidDisplayState } from '~/components/Toucan/Auction/utils/bidDetails'
@@ -20,7 +20,7 @@ export function BidDetailsHeader({ auctionDetails, displayState, onClose }: BidD
   const tokenName = auctionDetails.token?.currency.name ?? ''
   const logoUrl = auctionDetails.token?.logoUrl ?? null
 
-  const helpLink = uniswapUrls.helpArticleUrls.toucanBidDetailsHelp
+  const helpLink = lxUrls.helpArticleUrls.toucanBidDetailsHelp
 
   return (
     <Flex gap="$spacing16">

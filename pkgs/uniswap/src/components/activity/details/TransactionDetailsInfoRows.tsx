@@ -29,7 +29,7 @@ import { FORMAT_DATE_TIME_MEDIUM, useFormattedDateTime } from 'uniswap/src/featu
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
 import { AppNotificationType, CopyNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   BridgeTransactionInfo,
   LiquidityTransactionBaseInfos,
@@ -228,12 +228,12 @@ function NetworkFeeRow({ transactionDetails }: { transactionDetails: Transaction
   const { value: networkFeeValue, isLoading } = useNetworkFee(transactionDetails)
 
   const isPlanTransaction = isPlanTransactionDetails(transactionDetails)
-  const GasText = isUniswapX(transactionDetails) ? LXText : Text
+  const GasText = isLxSwap(transactionDetails) ? LXText : Text
   const chainIds = isPlanTransaction
     ? [...new Set(transactionDetails.typeInfo.stepDetails.map((step) => step.chainId))]
     : [transactionDetails.chainId]
   const showNetworkLogo = chainIds.length === 1
-  const Logo = isUniswapX(transactionDetails) ? LX : showNetworkLogo ? NetworkLogo : undefined
+  const Logo = isLxSwap(transactionDetails) ? LX : showNetworkLogo ? NetworkLogo : undefined
 
   return (
     <InfoRow key="networkFee" label={t('transaction.details.networkFee')}>

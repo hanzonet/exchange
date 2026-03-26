@@ -9,7 +9,7 @@ import { encodeFunctionData } from 'viem'
 import { LX } from '../precompile/addresses'
 import { LX_BOOK_ABI } from '../precompile/abis'
 import {
-  type UniswapXOrder,
+  type LxSwapOrder,
   type LXAction,
   type LXPlaceResult,
   type LXL1,
@@ -93,7 +93,7 @@ function buildAction(
 /**
  * Encode order data for placement
  */
-function encodeOrderData(order: UniswapXOrder): `0x${string}` {
+function encodeOrderData(order: LxSwapOrder): `0x${string}` {
   // Pack order into bytes - this matches the Go/Solidity struct layout
   const encoded = encodeFunctionData({
     abi: [{
@@ -217,7 +217,7 @@ export function useLXBookPlaceOrder(): UseLXBookPlaceOrderResult {
       reduceOnly?: boolean
       cloid?: `0x${string}`
     }) => {
-      const order: UniswapXOrder = {
+      const order: LxSwapOrder = {
         marketId: params.marketId,
         isBuy: params.isBuy,
         kind: OrderKind.LIMIT,
@@ -250,7 +250,7 @@ export function useLXBookPlaceOrder(): UseLXBookPlaceOrderResult {
       size: bigint
       reduceOnly?: boolean
     }) => {
-      const order: UniswapXOrder = {
+      const order: LxSwapOrder = {
         marketId: params.marketId,
         isBuy: params.isBuy,
         kind: OrderKind.MARKET,

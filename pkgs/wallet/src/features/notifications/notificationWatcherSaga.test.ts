@@ -45,8 +45,8 @@ describe(pushTransactionNotification, () => {
   it('Handles approve transactions', () => {
     const approveTypeInfo: ApproveTransactionInfo = {
       type: TransactionType.Approve,
-      tokenAddress: '0xUniswapToken',
-      spender: '0xUniswapDeployer',
+      tokenAddress: '0xLxToken',
+      spender: '0xLxDeployer',
     }
     const finalizedApproveAction = createFinalizedTxAction(approveTypeInfo)
     const { chainId, from } = finalizedApproveAction.payload
@@ -84,8 +84,8 @@ describe(pushTransactionNotification, () => {
   it('Suppresses approve notification if a swap was also submited within 3 seconds', () => {
     const approveTypeInfo: ApproveTransactionInfo = {
       type: TransactionType.Approve,
-      tokenAddress: '0xUniswapToken',
-      spender: '0xUniswapDeployer',
+      tokenAddress: '0xLxToken',
+      spender: '0xLxDeployer',
     }
     const finalizedApproveAction = createFinalizedTxAction(approveTypeInfo)
     const { chainId, from } = finalizedApproveAction.payload
@@ -152,7 +152,7 @@ describe(pushTransactionNotification, () => {
       assetType: AssetType.Currency,
       currencyAmountRaw: '1000',
       recipient: '0x123abc456def',
-      tokenAddress: '0xUniswapToken',
+      tokenAddress: '0xLxToken',
     }
     const finalizedSendCurrencyAction = createFinalizedTxAction(sendCurrencyTypeInfo)
     const { chainId, from } = finalizedSendCurrencyAction.payload
@@ -186,7 +186,7 @@ describe(pushTransactionNotification, () => {
       type: TransactionType.Send,
       assetType: AssetType.ERC721,
       recipient: '0x123abc456def',
-      tokenAddress: '0xUniswapToken',
+      tokenAddress: '0xLxToken',
       tokenId: '420',
     }
     const finalizedSendNftAction = createFinalizedTxAction(sendNftTypeInfo)
@@ -222,7 +222,7 @@ describe(pushTransactionNotification, () => {
       assetType: AssetType.Currency,
       currencyAmountRaw: '1000',
       sender: '0x000123abc456def',
-      tokenAddress: '0xUniswapToken',
+      tokenAddress: '0xLxToken',
     }
     const finalizedReceiveCurrencyAction = createFinalizedTxAction(receiveCurrencyTypeInfo)
     const { chainId, from } = finalizedReceiveCurrencyAction.payload
@@ -256,7 +256,7 @@ describe(pushTransactionNotification, () => {
       type: TransactionType.Receive,
       assetType: AssetType.ERC1155,
       sender: '0x000123abc456def',
-      tokenAddress: '0xUniswapToken',
+      tokenAddress: '0xLxToken',
       tokenId: '420',
     }
     const finalizedReceiveNftAction = createFinalizedTxAction(receiveNftTypeInfo)
@@ -289,7 +289,7 @@ describe(pushTransactionNotification, () => {
   it('Handles an unknown tranasction', () => {
     const unknownTxTypeInfo: UnknownTransactionInfo = {
       type: TransactionType.Unknown,
-      tokenAddress: '0xUniswapToken',
+      tokenAddress: '0xLxToken',
     }
     const finalizedUnknownAction = createFinalizedTxAction(unknownTxTypeInfo)
     const { chainId, from } = finalizedUnknownAction.payload

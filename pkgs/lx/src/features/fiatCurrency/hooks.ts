@@ -7,7 +7,7 @@ import { FiatCurrency, ORDERED_CURRENCIES } from 'uniswap/src/features/fiatCurre
 import { FiatCurrencyInfo } from 'uniswap/src/features/fiatOnRamp/types'
 import { useCurrentLocale } from 'uniswap/src/features/language/hooks'
 import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
 import { FiatCurrencyComponents, getFiatCurrencyComponents } from 'utilities/src/format/localeBased'
 
@@ -134,7 +134,7 @@ function useUrlLocalCurrency(): FiatCurrency | undefined {
  * @returns currently selected fiat currency
  */
 export function useAppFiatCurrency(): FiatCurrency {
-  const storeFiatCurrency = useSelector((state: UniswapState) => state.userSettings.currentCurrency)
+  const storeFiatCurrency = useSelector((state: LxState) => state.userSettings.currentCurrency)
   const urlFiatCurrency = useUrlLocalCurrency()
 
   return useMemo(() => urlFiatCurrency ?? storeFiatCurrency, [storeFiatCurrency, urlFiatCurrency])

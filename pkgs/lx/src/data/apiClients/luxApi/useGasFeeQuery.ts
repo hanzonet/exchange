@@ -7,9 +7,9 @@ import {
   useQueryWithImmediateGarbageCollection,
 } from '@luxexchange/api'
 import { FeatureFlags, getFeatureFlag, useStatsigClientStatus } from '@luxexchange/gating'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { fetchGasFeeV2 } from 'uniswap/src/data/apiClients/gasService/fetchGasFeeV2'
-import { UniswapApiClient } from 'uniswap/src/data/apiClients/uniswapApi/UniswapApiClient'
+import { LxApiClient } from 'uniswap/src/data/apiClients/lxApi/LxApiClient'
 import { getActiveGasStrategy } from 'uniswap/src/features/gas/utils'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
@@ -30,7 +30,7 @@ export function useGasFeeQuery({
   const { isStatsigReady } = useStatsigClientStatus()
   const queryKey = [
     ReactQueryCacheKey.LuxApi,
-    uniswapUrls.gasServicePath,
+    lxUrls.gasServicePath,
     params?.tx,
     params?.fallbackGasLimit,
     params?.smartContractDelegationAddress,
@@ -70,5 +70,5 @@ export async function fetchGasFeeQuery(params: {
     return fetchGasFeeV2({ tx, gasStrategy, smartContractDelegationAddress, fallbackGasLimit })
   }
 
-  return UniswapApiClient.fetchGasFee({ tx, fallbackGasLimit, gasStrategy, smartContractDelegationAddress })
+  return LxApiClient.fetchGasFee({ tx, fallbackGasLimit, gasStrategy, smartContractDelegationAddress })
 }

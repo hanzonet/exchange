@@ -27,7 +27,7 @@ import type {
   SwapTxAndGasInfoService,
 } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import { createSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { createUniswapXSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/uniswapx/uniswapXSwapTxAndGasInfoService'
+import { createLxSwapSwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/lxSwapSwapTxAndGasInfoService'
 import { createWrapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/wrap/wrapTxAndGasInfoService'
 import {
   useSwapFormStore,
@@ -112,8 +112,8 @@ export function useSwapTxAndGasInfoService(): SwapTxAndGasInfoService {
     return decorateWithEVMLogging(bridgeService)
   }, [swapConfig, transactionSettings, instructionService, decorateWithEVMLogging])
 
-  const uniswapXSwapTxInfoService = useMemo(() => {
-    return createUniswapXSwapTxAndGasInfoService()
+  const lxSwapSwapTxInfoService = useMemo(() => {
+    return createLxSwapSwapTxAndGasInfoService()
   }, [])
 
   const chainedSwapTxInfoService = useMemo(() => {
@@ -135,9 +135,9 @@ export function useSwapTxAndGasInfoService(): SwapTxAndGasInfoService {
     return {
       [TradingApi.Routing.CLASSIC]: classicSwapTxInfoService,
       [TradingApi.Routing.BRIDGE]: bridgeSwapTxInfoService,
-      [TradingApi.Routing.PRIORITY]: uniswapXSwapTxInfoService,
-      [TradingApi.Routing.DUTCH_V2]: uniswapXSwapTxInfoService,
-      [TradingApi.Routing.DUTCH_V3]: uniswapXSwapTxInfoService,
+      [TradingApi.Routing.PRIORITY]: lxSwapSwapTxInfoService,
+      [TradingApi.Routing.DUTCH_V2]: lxSwapSwapTxInfoService,
+      [TradingApi.Routing.DUTCH_V3]: lxSwapSwapTxInfoService,
       [TradingApi.Routing.WRAP]: wrapTxInfoService,
       [TradingApi.Routing.UNWRAP]: wrapTxInfoService,
       [TradingApi.Routing.CHAINED]: chainedSwapTxInfoService,
@@ -148,7 +148,7 @@ export function useSwapTxAndGasInfoService(): SwapTxAndGasInfoService {
   }, [
     classicSwapTxInfoService,
     bridgeSwapTxInfoService,
-    uniswapXSwapTxInfoService,
+    lxSwapSwapTxInfoService,
     chainedSwapTxInfoService,
     wrapTxInfoService,
     solanaSwapTxInfoService,

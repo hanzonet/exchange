@@ -15,7 +15,7 @@ import { MAX_REACT_QUERY_CACHE_TIME_MS, ONE_HOUR_MS } from 'utilities/src/time/t
 import { type DelegationCheckResult } from '@luxfi/wallet/src/features/smartWallet/delegation/types'
 import {
   doesAccountNeedDelegationForChain,
-  isNonUniswapDelegation,
+  isNonLxDelegation,
 } from '@luxfi/wallet/src/features/smartWallet/delegation/utils'
 import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 import { selectSortedSignerMnemonicAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
@@ -244,7 +244,7 @@ const selectDelegationDetailsByAccount = (
         delegationDetailsForAccountAndChain
 
       // If delegated to another protocol, mark as not needing delegation
-      if (isNonUniswapDelegation(delegationDetailsForAccountAndChain)) {
+      if (isNonLxDelegation(delegationDetailsForAccountAndChain)) {
         chainIdToDelegationDetails[supportedChainId] = {
           needsDelegation: false,
           currentDelegationAddress,

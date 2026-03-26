@@ -8,7 +8,7 @@ export function LXText({ children, ...props }: GetProps<typeof Text>): JSX.Eleme
     <GradientText
       {...props}
       gradient={{
-        colors: [colors.uniswapXViolet, colors.uniswapXPurple],
+        colors: [colors.lxSwapViolet, colors.lxSwapPurple],
         start: { x: -1.07, y: 0 },
         end: { x: 1.07, y: 0 },
       }}

@@ -1,7 +1,7 @@
 import {
-  UniswapXOrderType,
+  LxSwapOrderType,
   LXTransaction,
-  UniswapXTransactionStatus,
+  LxSwapTransactionStatus,
 } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { TradeType } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxfi/api'
@@ -15,18 +15,18 @@ import {
 import { buildCurrencyId } from '@luxexchange/lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 
-function mapDEXStatusToLocalTxStatus(status: UniswapXTransactionStatus): TransactionStatus {
+function mapDEXStatusToLocalTxStatus(status: LxSwapTransactionStatus): TransactionStatus {
   switch (status) {
-    case UniswapXTransactionStatus.FILLED:
+    case LxSwapTransactionStatus.FILLED:
       return TransactionStatus.Success
-    case UniswapXTransactionStatus.OPEN:
+    case LxSwapTransactionStatus.OPEN:
       return TransactionStatus.Pending
-    case UniswapXTransactionStatus.CANCELLED:
+    case LxSwapTransactionStatus.CANCELLED:
       return TransactionStatus.Canceled
-    case UniswapXTransactionStatus.INSUFFICIENT_FUNDS:
+    case LxSwapTransactionStatus.INSUFFICIENT_FUNDS:
       return TransactionStatus.InsufficientFunds
-    case UniswapXTransactionStatus.ERROR:
-    case UniswapXTransactionStatus.EXPIRED:
+    case LxSwapTransactionStatus.ERROR:
+    case LxSwapTransactionStatus.EXPIRED:
       return TransactionStatus.Failed
     default:
       return TransactionStatus.Unknown
@@ -63,7 +63,7 @@ export default function extractRestDEXOrderDetails(transaction: LXTransaction): 
     return {
       id: orderHash,
       // TODO(CONS-722): update to only TradingApi.Routing.DUTCH_V2 once limit orders can be excluded from REST query
-      routing: orderType === UniswapXOrderType.LIMIT ? TradingApi.Routing.DUTCH_LIMIT : TradingApi.Routing.DUTCH_V2,
+      routing: orderType === LxSwapOrderType.LIMIT ? TradingApi.Routing.DUTCH_LIMIT : TradingApi.Routing.DUTCH_V2,
       chainId,
       orderHash,
       encodedOrder: encodedOrder || undefined,
@@ -73,7 +73,7 @@ export default function extractRestDEXOrderDetails(transaction: LXTransaction): 
       expiry: expiryMillis ? Number(expiryMillis) / 1000 : undefined,
       // TODO(CONS-722): remove special limit typeInfo once limit orders can be excluded from REST query
       typeInfo:
-        orderType === UniswapXOrderType.LIMIT
+        orderType === LxSwapOrderType.LIMIT
           ? {
               type: TransactionType.Swap,
               tradeType: TradeType.EXACT_INPUT, // Limit orders are always exact input

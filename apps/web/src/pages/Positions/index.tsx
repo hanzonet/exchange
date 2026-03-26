@@ -12,12 +12,12 @@ import { CloseIconWithHover } from '@luxfi/ui/src/components/icons/CloseIconWith
 import { InfoCircleFilled } from '@luxfi/ui/src/components/icons/InfoCircleFilled'
 import { Pools } from '@luxfi/ui/src/components/icons/Pools'
 import { Wallet } from '@luxfi/ui/src/components/icons/Wallet'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { useGetPositionsInfiniteQuery } from '@luxexchange/lx/src/data/rest/getPositions'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 import { Platform } from '@luxexchange/lx/src/features/platforms/types/Platform'
-import { InterfacePageName, UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { InterfacePageName, LxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { useIsMissingPlatformWallet } from '@luxexchange/lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsMissingPlatformWallet'
@@ -124,19 +124,19 @@ function DisconnectedWalletView() {
             width="100%"
             img={PROVIDE_LIQUIDITY}
             text={t('liquidity.provideOnProtocols')}
-            link={uniswapUrls.helpArticleUrls.providingLiquidityInfo}
+            link={lxUrls.helpArticleUrls.providingLiquidityInfo}
           />
           <LearnMoreTile
             width="100%"
             img={V4_HOOK}
             text={t('liquidity.hooks')}
-            link={uniswapUrls.helpArticleUrls.v4HooksInfo}
+            link={lxUrls.helpArticleUrls.v4HooksInfo}
           />
           <LearnMoreTile
             width="100%"
             img={ALLOWLISTED_HOOKS}
             text={t('liquidity.hooks.allowlisted')}
-            link={uniswapUrls.helpArticleUrls.allowlistedHooks}
+            link={lxUrls.helpArticleUrls.allowlistedHooks}
           />
         </Flex>
       </Flex>
@@ -460,7 +460,7 @@ export default function Pool() {
             <LpIncentiveRewardsCard
               walletAddress={account.address}
               onCollectRewards={() => {
-                sendAnalyticsEvent(UniswapEventName.LpIncentiveCollectRewardsButtonClicked)
+                sendAnalyticsEvent(LxEventName.LpIncentiveCollectRewardsButtonClicked)
                 openModal()
               }}
               setTokenRewards={setTokenRewards}
@@ -572,20 +572,20 @@ export default function Pool() {
                 <LearnMoreTile
                   img={PROVIDE_LIQUIDITY}
                   text={t('liquidity.provideOnProtocols')}
-                  link={uniswapUrls.helpArticleUrls.providingLiquidityInfo}
+                  link={lxUrls.helpArticleUrls.providingLiquidityInfo}
                 />
                 <LearnMoreTile
                   img={V4_HOOK}
                   text={t('liquidity.hooks')}
-                  link={uniswapUrls.helpArticleUrls.v4HooksInfo}
+                  link={lxUrls.helpArticleUrls.v4HooksInfo}
                 />
                 <LearnMoreTile
                   img={ALLOWLISTED_HOOKS}
                   text={t('liquidity.hooks.allowlisted')}
-                  link={uniswapUrls.helpArticleUrls.allowlistedHooks}
+                  link={lxUrls.helpArticleUrls.allowlistedHooks}
                 />
               </Flex>
-              <ExternalArrowLink href={uniswapUrls.helpArticleUrls.positionsLearnMore}>
+              <ExternalArrowLink href={lxUrls.helpArticleUrls.positionsLearnMore}>
                 {t('common.button.learn')}
               </ExternalArrowLink>
             </Flex>
@@ -597,7 +597,7 @@ export default function Pool() {
           isOpen={isModalOpen}
           onClose={() => closeModal()}
           onSuccess={() => {
-            sendAnalyticsEvent(UniswapEventName.LpIncentiveCollectRewardsSuccess, {
+            sendAnalyticsEvent(LxEventName.LpIncentiveCollectRewardsSuccess, {
               token_rewards: tokenRewards,
             })
             onTransactionSuccess()

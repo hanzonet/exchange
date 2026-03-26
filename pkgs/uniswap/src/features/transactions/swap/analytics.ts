@@ -21,7 +21,7 @@ import type { TransactionSettings } from 'uniswap/src/features/transactions/comp
 import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
 import type { ClassicTrade, Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { getSwapFeeUsd } from 'uniswap/src/features/transactions/swap/utils/getSwapFeeUsd'
-import { isChained, isClassic, isJupiter, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isChained, isClassic, isJupiter, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { SwapEventType, timestampTracker } from 'uniswap/src/features/transactions/swap/utils/SwapEventTimestampTracker'
 import { getProtocolVersionFromTrade } from 'uniswap/src/features/transactions/swap/utils/trade'
 import { getClassicQuoteFromResponse } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
@@ -50,7 +50,7 @@ export interface SwapRoutesAnalyticsData {
   v2Used: boolean
   v3Used: boolean
   v4Used: boolean
-  uniswapXUsed: boolean
+  lxSwapUsed: boolean
   jupiterUsed: boolean
 }
 
@@ -58,7 +58,7 @@ const DEFAULT_RESULT = {
   v2Used: false,
   v3Used: false,
   v4Used: false,
-  uniswapXUsed: false,
+  lxSwapUsed: false,
   jupiterUsed: false,
 }
 
@@ -208,17 +208,17 @@ export function getRouteAnalyticsData({
       v2Used,
       v3Used,
       v4Used,
-      uniswapXUsed: false,
+      lxSwapUsed: false,
       jupiterUsed: false,
     }
   }
 
-  if (isUniswapX({ routing })) {
+  if (isLxSwap({ routing })) {
     // For LX trades, we don't have detailed route information in the same way
     // But we can mark it as using X
     return {
       ...DEFAULT_RESULT,
-      uniswapXUsed: true,
+      lxSwapUsed: true,
     }
   }
 
@@ -236,7 +236,7 @@ export function getRouteAnalyticsData({
 }
 
 export function getPriceImpact(trade: Trade | null | undefined): string | undefined {
-  if (!trade || isUniswapX(trade) || isChained(trade)) {
+  if (!trade || isLxSwap(trade) || isChained(trade)) {
     return undefined
   }
   return trade.priceImpact?.multiply(100).toSignificant()
@@ -283,7 +283,7 @@ function getQuoteRequestIdFields(trade: Trade): {
   }
 
   // Backwards compatibility with old ura_request_id field
-  if (isClassic(trade) || isUniswapX(trade)) {
+  if (isClassic(trade) || isLxSwap(trade)) {
     uraRequestId = requestId
   }
 
@@ -564,9 +564,9 @@ export function tradeRoutingToFillType({
 
   switch (routing) {
     case TradingApi.Routing.DUTCH_V3:
-      return 'uniswap_x_v3'
+      return 'lx_swap_v3'
     case TradingApi.Routing.DUTCH_V2:
-      return 'uniswap_x_v2'
+      return 'lx_swap_v2'
     case TradingApi.Routing.DUTCH_LIMIT:
       return 'uniswap_x'
     case TradingApi.Routing.PRIORITY:

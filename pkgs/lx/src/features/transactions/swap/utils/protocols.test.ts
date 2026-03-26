@@ -43,7 +43,7 @@ const mockCreateGetSupportedChainId = createGetSupportedChainId as Mock
 
 describe('protocols', () => {
   const allProtocols: FrontendSupportedProtocol[] = [
-    TradingApi.ProtocolItems.UNISWAPX_V2,
+    TradingApi.ProtocolItems.LXSWAP_V2,
     TradingApi.ProtocolItems.V4,
     TradingApi.ProtocolItems.V3,
     TradingApi.ProtocolItems.V2,
@@ -66,7 +66,7 @@ describe('protocols', () => {
       expect(result).toEqual(allProtocols)
     })
 
-    it('filters out LX when uniswapXEnabled is false', () => {
+    it('filters out LX when lxSwapEnabled is false', () => {
       const protocolFilter = createProtocolFilter({
         getLXEnabled: () => false,
         getPriorityOrderFlag: () => false,
@@ -78,7 +78,7 @@ describe('protocols', () => {
       expect(result).toEqual([TradingApi.ProtocolItems.V4, TradingApi.ProtocolItems.V3, TradingApi.ProtocolItems.V2])
     })
 
-    it('filters out LX when chain is not in LAUNCHED_UNISWAPX_CHAINS and no special conditions', () => {
+    it('filters out LX when chain is not in LAUNCHED_LXSWAP_CHAINS and no special conditions', () => {
       const protocolFilter = createProtocolFilter({
         getLXEnabled: () => true,
         getPriorityOrderFlag: () => false,
@@ -86,7 +86,7 @@ describe('protocols', () => {
         getArbitrumDutchV3Enabled: () => false,
       })
 
-      // Polygon is not in LAUNCHED_UNISWAPX_CHAINS
+      // Polygon is not in LAUNCHED_LXSWAP_CHAINS
       const result = protocolFilter(allProtocols, UniverseChainId.Polygon)
       expect(result).toEqual([TradingApi.ProtocolItems.V4, TradingApi.ProtocolItems.V3, TradingApi.ProtocolItems.V2])
     })
@@ -99,7 +99,7 @@ describe('protocols', () => {
         getArbitrumDutchV3Enabled: () => false,
       })
 
-      // Even though Base is not in LAUNCHED_UNISWAPX_CHAINS, priority orders allow it
+      // Even though Base is not in LAUNCHED_LXSWAP_CHAINS, priority orders allow it
       const result = protocolFilter(allProtocols, UniverseChainId.Base)
       expect(result).toEqual(allProtocols)
     })
@@ -114,7 +114,7 @@ describe('protocols', () => {
 
       const result = protocolFilter(allProtocols, UniverseChainId.ArbitrumOne)
       expect(result).toEqual([
-        TradingApi.ProtocolItems.UNISWAPX_V3, // V2 replaced with V3
+        TradingApi.ProtocolItems.LXSWAP_V3, // V2 replaced with V3
         TradingApi.ProtocolItems.V4,
         TradingApi.ProtocolItems.V3,
         TradingApi.ProtocolItems.V2,
@@ -131,7 +131,7 @@ describe('protocols', () => {
 
       const result = protocolFilter(allProtocols, UniverseChainId.Mainnet)
       expect(result).toEqual([
-        TradingApi.ProtocolItems.UNISWAPX_V2,
+        TradingApi.ProtocolItems.LXSWAP_V2,
         TradingApi.ProtocolItems.V3,
         TradingApi.ProtocolItems.V2,
       ])
@@ -158,7 +158,7 @@ describe('protocols', () => {
       })
 
       const result = protocolFilter(allProtocols, undefined)
-      // When chainId is undefined, uniswapXAllowedForChain is false
+      // When chainId is undefined, lxSwapAllowedForChain is false
       expect(result).toEqual([TradingApi.ProtocolItems.V4, TradingApi.ProtocolItems.V3, TradingApi.ProtocolItems.V2])
     })
 
@@ -170,10 +170,10 @@ describe('protocols', () => {
         getArbitrumDutchV3Enabled: () => false,
       })
 
-      // Start with duplicate UNISWAPX_V2 entries
+      // Start with duplicate LXSWAP_V2 entries
       const protocolsWithDuplicates: FrontendSupportedProtocol[] = [
-        TradingApi.ProtocolItems.UNISWAPX_V2,
-        TradingApi.ProtocolItems.UNISWAPX_V2,
+        TradingApi.ProtocolItems.LXSWAP_V2,
+        TradingApi.ProtocolItems.LXSWAP_V2,
         TradingApi.ProtocolItems.V4,
         TradingApi.ProtocolItems.V3,
       ]
@@ -275,9 +275,9 @@ describe('protocols', () => {
       })
 
       const result = getProtocolsFilter(allProtocols, UniverseChainId.ArbitrumOne)
-      // Should have UNISWAPX_V3 instead of V2 due to ArbitrumDutchV3 flag
-      expect(result).toContain(TradingApi.ProtocolItems.UNISWAPX_V3)
-      expect(result).not.toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
+      // Should have LXSWAP_V3 instead of V2 due to ArbitrumDutchV3 flag
+      expect(result).toContain(TradingApi.ProtocolItems.LXSWAP_V3)
+      expect(result).not.toContain(TradingApi.ProtocolItems.LXSWAP_V2)
     })
 
     it('handles missing getIsLXSupported (uses feature flag only)', () => {
@@ -291,7 +291,7 @@ describe('protocols', () => {
       })
 
       const result = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
-      expect(result).toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
+      expect(result).toContain(TradingApi.ProtocolItems.LXSWAP_V2)
     })
 
     it('handles present getIsLXSupported (combines with feature flag)', () => {
@@ -308,7 +308,7 @@ describe('protocols', () => {
 
       const result = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
       // Should not contain LX because chain support returned false
-      expect(result).not.toContain(TradingApi.ProtocolItems.UNISWAPX_V2)
+      expect(result).not.toContain(TradingApi.ProtocolItems.LXSWAP_V2)
       expect(getIsLXSupported).toHaveBeenCalledWith(UniverseChainId.Mainnet)
     })
 
@@ -341,11 +341,11 @@ describe('protocols', () => {
         getIsLXSupported: () => true,
       })
 
-      // Mainnet should have all protocols (it's in LAUNCHED_UNISWAPX_CHAINS)
+      // Mainnet should have all protocols (it's in LAUNCHED_LXSWAP_CHAINS)
       const mainnetResult = getProtocolsFilter(allProtocols, UniverseChainId.Mainnet)
       expect(mainnetResult).toEqual(allProtocols)
 
-      // Base should not have LX (not in LAUNCHED_UNISWAPX_CHAINS and no priority flag)
+      // Base should not have LX (not in LAUNCHED_LXSWAP_CHAINS and no priority flag)
       mockGetFeatureFlag.mockImplementation((flag: FeatureFlags) => {
         if (flag === FeatureFlags.LX) {
           return true

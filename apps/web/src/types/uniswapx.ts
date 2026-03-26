@@ -1,7 +1,7 @@
 import { TradingApi } from '@universe/api'
 import { OffchainOrderType } from '~/state/routing/types'
 
-// Mirrors UniswapXOrderEntity type at https://github.com/Uniswap/lx-service/blob/main/lib/entities/Order.ts
+// Mirrors LxSwapOrderEntity type at https://github.com/Uniswap/lx-service/blob/main/lib/entities/Order.ts
 interface BaseLXBackendOrder {
   type: OffchainOrderType
   encodedOrder: string

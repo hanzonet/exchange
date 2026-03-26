@@ -23,7 +23,7 @@ import {
   createTestTransport,
   InMemoryDeviceIdService,
   InMemorySessionStorage,
-  InMemoryUniswapIdentifierService,
+  InMemoryLxIdentifierService,
   type MockEndpoints,
 } from '@luxexchange/sessions/src/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
@@ -52,7 +52,7 @@ const mockTurnstileSolve = vi.fn()
 describe('Challenge Flow Integration Tests', () => {
   let sessionStorage: InMemorySessionStorage
   let deviceIdService: InMemoryDeviceIdService
-  let uniswapIdentifierService: InMemoryUniswapIdentifierService
+  let lxIdentifierService: InMemoryLxIdentifierService
   let sessionService: SessionService
   let sessionInitializationService: SessionInitializationService
   let mockEndpoints: MockEndpoints
@@ -61,7 +61,7 @@ describe('Challenge Flow Integration Tests', () => {
     // Initialize in-memory storage
     sessionStorage = new InMemorySessionStorage()
     deviceIdService = new InMemoryDeviceIdService()
-    uniswapIdentifierService = new InMemoryUniswapIdentifierService()
+    lxIdentifierService = new InMemoryLxIdentifierService()
 
     // Set up mock endpoints with default responses
     mockEndpoints = {
@@ -110,7 +110,7 @@ describe('Challenge Flow Integration Tests', () => {
     sessionService = createSessionService({
       sessionStorage,
       deviceIdService,
-      uniswapIdentifierService,
+      lxIdentifierService,
       sessionRepository,
     })
 

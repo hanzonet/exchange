@@ -118,7 +118,7 @@ export function getPollingIntervalByBlocktime(chainId?: UniverseChainId): Pollin
 }
 
 // eslint-disable-next-line complexity
-export function fromUniswapWebAppLink(network: string | null): UniverseChainId {
+export function fromLxWebAppLink(network: string | null): UniverseChainId {
   switch (network) {
     case GraphQLApi.Chain.Ethereum.toLowerCase():
       return UniverseChainId.Mainnet
@@ -164,7 +164,7 @@ export function fromUniswapWebAppLink(network: string | null): UniverseChainId {
   }
 }
 
-export function toUniswapWebAppLink(chainId: UniverseChainId): string | null {
+export function toLxWebAppLink(chainId: UniverseChainId): string | null {
   switch (chainId) {
     case UniverseChainId.Mainnet:
       return GraphQLApi.Chain.Ethereum.toLowerCase()

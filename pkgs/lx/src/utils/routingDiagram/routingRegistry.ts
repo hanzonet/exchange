@@ -3,9 +3,9 @@ import { useMemo } from 'react'
 import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { jupiterRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingProviders/jupiterRoutingProvider'
 import {
-  uniswapChainedRoutingProvider,
-  uniswapRoutingProvider,
-} from 'uniswap/src/utils/routingDiagram/routingProviders/uniswapRoutingProvider'
+  lxChainedRoutingProvider,
+  lxRoutingProvider,
+} from 'uniswap/src/utils/routingDiagram/routingProviders/lxRoutingProvider'
 import type { RoutingDiagramEntry, RoutingProvider } from 'uniswap/src/utils/routingDiagram/types'
 import { logger } from 'utilities/src/logger/logger'
 
@@ -14,8 +14,8 @@ import { logger } from 'utilities/src/logger/logger'
  * For routing types that do not render a routing diagram, it should be set to `undefined`.
  */
 const ROUTING_PROVIDER_MAP: Record<TradingApi.Routing, RoutingProvider | undefined> = {
-  [TradingApi.Routing.CLASSIC]: uniswapRoutingProvider,
-  [TradingApi.Routing.CHAINED]: uniswapChainedRoutingProvider,
+  [TradingApi.Routing.CLASSIC]: lxRoutingProvider,
+  [TradingApi.Routing.CHAINED]: lxChainedRoutingProvider,
   [TradingApi.Routing.JUPITER]: jupiterRoutingProvider,
   [TradingApi.Routing.DUTCH_V2]: undefined,
   [TradingApi.Routing.DUTCH_V3]: undefined,

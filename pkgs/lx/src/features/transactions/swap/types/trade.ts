@@ -104,8 +104,8 @@ function getQuoteOutputAmountUserWillReceive<T extends QuoteResponseWithAggregat
     : CurrencyAmount.fromRawAmount(outputCurrency, '0')
 }
 
-export type UniswapXTrade = UniswapXV2Trade | UniswapXV3Trade | PriorityOrderTrade
-export class UniswapXV2Trade extends V2DutchOrderTrade<Currency, Currency, TradeType> {
+export type LxSwapTrade = LxSwapV2Trade | LxSwapV3Trade | PriorityOrderTrade
+export class LxSwapV2Trade extends V2DutchOrderTrade<Currency, Currency, TradeType> {
   readonly routing = TradingApi.Routing.DUTCH_V2
   readonly quote: DutchQuoteResponse
   readonly slippageTolerance: number
@@ -174,7 +174,7 @@ export class UniswapXV2Trade extends V2DutchOrderTrade<Currency, Currency, Trade
   }
 }
 
-export class UniswapXV3Trade extends V3DutchOrderTrade<Currency, Currency, TradeType> {
+export class LxSwapV3Trade extends V3DutchOrderTrade<Currency, Currency, TradeType> {
   readonly routing = TradingApi.Routing.DUTCH_V3
   readonly quote: DutchV3QuoteResponse
   readonly slippageTolerance: number
@@ -420,7 +420,7 @@ export type Trade<
   TTradeType extends TradeType = TradeType,
 > =
   | ClassicTrade<TInput, TOutput, TTradeType>
-  | UniswapXTrade
+  | LxSwapTrade
   | BridgeTrade
   | WrapTrade
   | UnwrapTrade

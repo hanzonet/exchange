@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
 import {
-  useFormattedUniswapXGasFeeInfo,
+  useFormattedLxSwapGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
 } from 'uniswap/src/features/gas/hooks'
 import type { GasInfo } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
 import { useSwapFormStoreDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { usePrevious } from 'utilities/src/react/hooks'
 
@@ -25,7 +25,7 @@ export function useDebouncedGasInfo(): GasInfo {
   const outputUSDValue = currencyAmountsUSDValue[CurrencyField.OUTPUT]
 
   const { gasFee, gasFeeBreakdown } = useSwapTxStore((s) => {
-    if (isUniswapX(s)) {
+    if (isLxSwap(s)) {
       return {
         gasFee: s.gasFee,
         gasFeeBreakdown: s.gasFeeBreakdown,
@@ -38,7 +38,7 @@ export function useDebouncedGasInfo(): GasInfo {
     }
   })
 
-  const uniswapXGasFeeInfo = useFormattedUniswapXGasFeeInfo(gasFeeBreakdown, chainId)
+  const lxSwapGasFeeInfo = useFormattedLxSwapGasFeeInfo(gasFeeBreakdown, chainId)
 
   const { gasFeeFormatted, gasFeeUSD } = useGasFeeFormattedDisplayAmounts({
     gasFee,
@@ -61,10 +61,10 @@ export function useDebouncedGasInfo(): GasInfo {
       gasFee,
       fiatPriceFormatted: gasFeeFormatted ?? undefined,
       isHighRelativeToValue,
-      uniswapXGasFeeInfo,
+      lxSwapGasFeeInfo,
       isLoading,
       chainId,
     }),
-    [gasFee, gasFeeFormatted, isHighRelativeToValue, isLoading, uniswapXGasFeeInfo, chainId],
+    [gasFee, gasFeeFormatted, isHighRelativeToValue, isLoading, lxSwapGasFeeInfo, chainId],
   )
 }

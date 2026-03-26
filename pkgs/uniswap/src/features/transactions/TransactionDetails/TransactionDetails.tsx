@@ -13,7 +13,7 @@ import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
 import { TransactionSettingsModal } from 'uniswap/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModal'
 import { EstimatedSwapTime } from 'uniswap/src/features/transactions/swap/components/EstimatedBridgeTime'
 import { SlippageUpdate } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippageUpdate/SlippageUpdate'
-import type { UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import type { LxSwapGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import type { SwapFee as SwapFeeType } from 'uniswap/src/features/transactions/swap/types/trade'
 import { isBridge, isChained, isWrap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import { ExpectedFailureBanner } from 'uniswap/src/features/transactions/TransactionDetails/ExpectedFailureBanner'
@@ -35,7 +35,7 @@ interface TransactionDetailsProps {
   gasFee: GasFeeResult
   swapFee?: SwapFeeType
   swapFeeUsd?: number
-  uniswapXGasBreakdown?: UniswapXGasBreakdown
+  lxSwapGasBreakdown?: LxSwapGasBreakdown
   showExpandedChildren?: boolean
   showGasFeeError?: boolean
   showNetworkLogo?: boolean
@@ -69,7 +69,7 @@ export function TransactionDetails({
   chainId,
   gasFee,
   outputCurrency,
-  uniswapXGasBreakdown,
+  lxSwapGasBreakdown,
   swapFee,
   swapFeeUsd,
   showGasFeeError = true,
@@ -146,7 +146,7 @@ export function TransactionDetails({
             gasFee={gasFee}
             indicative={indicative}
             transactionUSDValue={transactionUSDValue}
-            uniswapXGasBreakdown={uniswapXGasBreakdown}
+            lxSwapGasBreakdown={lxSwapGasBreakdown}
             includesDelegation={includesDelegation}
             showNetworkLogo={showNetworkLogo}
           />

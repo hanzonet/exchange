@@ -67,7 +67,7 @@ export {
   OrderKind,
   GroupType,
   ActionType,
-  type UniswapXOrder,
+  type LxSwapOrder,
   type LXAction,
   type LXPlaceResult,
   type LXL1,

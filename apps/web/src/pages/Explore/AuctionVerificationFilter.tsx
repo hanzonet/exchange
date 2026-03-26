@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text, Tooltip, useMedia } from '@luxfi/ui/src'
 import { Check } from '@luxfi/ui/src/components/icons/Check'
 import { zIndexes } from '@luxfi/ui/src/theme'
-import { ModalName, UniswapEventName } from '@luxexchange/lx/src/features/telemetry/constants'
+import { ModalName, LxEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { Dropdown, InternalMenuItem } from '~/components/Dropdowns/Dropdown'
@@ -24,7 +24,7 @@ export function AuctionVerificationFilter() {
     (filter: AuctionVerificationFilterEnum) => {
       setSelectedFilter(filter)
       setOpen(false)
-      sendAnalyticsEvent(UniswapEventName.AuctionFilterSelected, {
+      sendAnalyticsEvent(LxEventName.AuctionFilterSelected, {
         filter,
       })
     },

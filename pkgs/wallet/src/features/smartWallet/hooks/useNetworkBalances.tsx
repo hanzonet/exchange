@@ -1,6 +1,6 @@
 import { useStatsigClientStatus } from '@luxexchange/gating'
 import { useEffect, useState } from 'react'
-import { fetchGasFeeQuery } from 'uniswap/src/data/apiClients/uniswapApi/useGasFeeQuery'
+import { fetchGasFeeQuery } from 'uniswap/src/data/apiClients/lxApi/useGasFeeQuery'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
 import { createEthersProvider } from 'uniswap/src/features/providers/createEthersProvider'

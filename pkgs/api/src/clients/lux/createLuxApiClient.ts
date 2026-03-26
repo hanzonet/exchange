@@ -7,7 +7,7 @@ import {
 } from '@luxexchange/api/src/clients/trading/types'
 import { isWebApp } from 'utilities/src/platform'
 
-// TODO(app-infra), de-duplicate with uniswapUrls when other consumers are migrated to use this client
+// TODO(app-infra), de-duplicate with lxUrls when other consumers are migrated to use this client
 const LUX_API_PATHS = {
   gasFee: '/v1/gas-fee',
 }
@@ -22,7 +22,7 @@ type FetchGasFn = ({
   smartContractDelegationAddress?: Address
 }) => Promise<GasFeeResultWithoutState>
 
-export interface UniswapApiClientContext {
+export interface LxApiClientContext {
   fetchClient: FetchClient
   processGasFeeResponse: (gasFeeResponse: GasFeeResponse, gasStrategy: GasStrategy) => GasFeeResultWithoutState
   estimateGasWithClientSideProvider: (params: {

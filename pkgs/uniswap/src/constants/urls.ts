@@ -24,8 +24,8 @@ function getComplianceApiBaseUrl(): string {
   return PROD_ENTRY_GATEWAY_API_BASE_URL
 }
 
-export const UNISWAP_WEB_HOSTNAME = process.env.REACT_APP_WEB_HOSTNAME || brand.appDomain
-const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : UNISWAP_WEB_HOSTNAME
+export const LX_WEB_HOSTNAME = process.env.REACT_APP_WEB_HOSTNAME || brand.appDomain
+const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? 'staging.ew.unihq.org' : LX_WEB_HOSTNAME
 
 function getPrivyEmbeddedWalletUrl(): string {
   const host = process.env.REACT_APP_PRIVY_WALLET_HOST || `api.${brand.appDomain}`
@@ -55,16 +55,16 @@ export function getForApiUrl(): string {
   return getCloudflareApiBaseUrl({ flow: TrafficFlows.FOR, postfix: 'v2/FOR.v1.FORService' })
 }
 
-export const UNISWAP_WEB_URL = `https://${UNISWAP_WEB_HOSTNAME}`
+export const LX_WEB_URL = `https://${LX_WEB_HOSTNAME}`
 export const UNISWAP_APP_URL = getBrandUrl('/app')
-export const UNISWAP_MOBILE_REDIRECT_URL = getBrandUrl('/mobile-redirect')
+export const LX_MOBILE_REDIRECT_URL = getBrandUrl('/mobile-redirect')
 
 // The trading api uses custom builds for testing which may not use the v1 prefix
 export const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? '' : '/v1'
 
 export const CHROME_EXTENSION_UNINSTALL_URL_PATH = '/extension/uninstall'
 
-export const uniswapUrls = {
+export const lxUrls = {
   // Help and web articles/items
   helpUrl,
   helpRequestUrl: `${helpUrl}/requests/new`,
@@ -138,12 +138,12 @@ export const uniswapUrls = {
       '43106804833421-How-to-participate-in-token-auctions-on-Uniswap#claiming-your-tokens-and-unspent-budget',
     ),
     transactionFailure: createHelpArticleUrl('8643975058829-Why-did-my-transaction-fail-'),
-    uniswapXInfo: createHelpArticleUrl('17544708791821'),
-    uniswapXFailure: createHelpArticleUrl('17515489874189-Why-can-my-swap-not-be-filled-'),
+    lxSwapInfo: createHelpArticleUrl('17544708791821'),
+    lxSwapFailure: createHelpArticleUrl('17515489874189-Why-can-my-swap-not-be-filled-'),
     unsupportedTokenPolicy: createHelpArticleUrl('18783694078989-Unsupported-Token-Policy'),
     addingV4Hooks: createHelpArticleUrl('32402040565133'),
     routingSettings: createHelpArticleUrl('27362707722637'),
-    uniswapVersionsInfo: createHelpArticleUrl('7425482965517-Uniswap-v2-v3-and-v4'),
+    lxVersionsInfo: createHelpArticleUrl('7425482965517-Uniswap-v2-v3-and-v4'),
     v4HooksInfo: createHelpArticleUrl('30998263256717'),
     allowlistedHooks: createHelpArticleUrl('41305283155597'),
     subgraphDowntime: createHelpArticleUrl('23952001935373-Subgraph-downtime'),
@@ -154,7 +154,7 @@ export const uniswapUrls = {
   downloadWalletUrl: brand.downloadUrl,
   tradingApiDocsUrl: getDocsUrl('/api'),
   unichainUrl: 'https://www.unichain.org/',
-  uniswapXUrl: getBrandUrl('/dex'),
+  lxSwapUrl: getBrandUrl('/dex'),
   helpCenterUrl: brand.helpUrl,
   blogUrl: getBrandUrl('/blog'),
   docsUrl: getDocsUrl('/'),
@@ -172,7 +172,7 @@ export const uniswapUrls = {
   termsOfServiceUrl: brand.termsUrl,
   privacyPolicyUrl: brand.privacyUrl,
   chromeExtension: getBrandUrl('/ext'),
-  chromeExtensionUninstallUrl: `${UNISWAP_WEB_URL}${CHROME_EXTENSION_UNINSTALL_URL_PATH}`,
+  chromeExtensionUninstallUrl: `${LX_WEB_URL}${CHROME_EXTENSION_UNINSTALL_URL_PATH}`,
 
   // Download links
   appStoreDownloadUrl: 'https://apps.apple.com/us/app/uniswap-crypto-nft-wallet/id6443944476',
@@ -254,15 +254,15 @@ export const uniswapUrls = {
 
   // App and Redirect URL's
   appBaseUrl: UNISWAP_APP_URL,
-  redirectUrlBase: UNISWAP_MOBILE_REDIRECT_URL,
-  requestOriginUrl: UNISWAP_WEB_URL,
+  redirectUrlBase: LX_MOBILE_REDIRECT_URL,
+  requestOriginUrl: LX_WEB_URL,
 
   // Web Interface Urls
-  webInterfaceSwapUrl: `${UNISWAP_WEB_URL}/#/swap`,
-  webInterfaceTokensUrl: `${UNISWAP_WEB_URL}/explore/tokens`,
-  webInterfacePoolsUrl: `${UNISWAP_WEB_URL}/explore/pools`,
-  webInterfacePortfolioUrl: `${UNISWAP_WEB_URL}/portfolio`,
-  webInterfaceBuyUrl: `${UNISWAP_WEB_URL}/buy`,
+  webInterfaceSwapUrl: `${LX_WEB_URL}/#/swap`,
+  webInterfaceTokensUrl: `${LX_WEB_URL}/explore/tokens`,
+  webInterfacePoolsUrl: `${LX_WEB_URL}/explore/pools`,
+  webInterfacePortfolioUrl: `${LX_WEB_URL}/portfolio`,
+  webInterfaceBuyUrl: `${LX_WEB_URL}/buy`,
 
   // Feedback Links
   walletFeedbackForm:

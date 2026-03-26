@@ -124,7 +124,7 @@ describe(useSmartWalletDelegationStatus, () => {
 
   it('returns ShowConflict when a non-Uniswap delegation exists', async () => {
     setupMocks({
-      getDelegationDetails: jest.fn().mockReturnValue(delegation({ currentDelegationAddress: '0xNonUniswapContract' })),
+      getDelegationDetails: jest.fn().mockReturnValue(delegation({ currentDelegationAddress: '0xNonLxContract' })),
     })
 
     const { result } = renderHook(() => useSmartWalletDelegationStatus())
@@ -141,7 +141,7 @@ describe(useSmartWalletDelegationStatus, () => {
       getDelegationDetails: jest
         .fn()
         .mockReturnValue(
-          delegation({ currentDelegationAddress: '0xUniswapContract', isWalletDelegatedToUniswap: true }),
+          delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToUniswap: true }),
         ),
     })
 
@@ -157,7 +157,7 @@ describe(useSmartWalletDelegationStatus, () => {
   it('returns ShowConflict if any chain has a non-Uniswap delegation', async () => {
     const getDelegationDetails = jest.fn().mockImplementation((_address: string, chainId: UniverseChainId) => {
       if (chainId === UniverseChainId.Mainnet) {
-        return delegation({ currentDelegationAddress: '0xUniswapContract', isWalletDelegatedToUniswap: true })
+        return delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToUniswap: true })
       }
       return delegation({ currentDelegationAddress: '0xOtherProtocol' })
     })

@@ -9,7 +9,7 @@ import { useSubmitOnEnter } from 'src/app/features/onboarding/utils'
 import { Flex, ScrollView, SpinningLoader, Square, Text, Tooltip, TouchableArea } from '@luxfi/ui/src'
 import { WalletFilled } from '@luxfi/ui/src/components/icons'
 import { iconSizes, zIndexes } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import Trace from '@luxexchange/lx/src/features/telemetry/Trace'
 import { ExtensionOnboardingFlow, ExtensionOnboardingScreens } from '@luxexchange/lx/src/types/screens/extension'
 import { openUri } from '@luxexchange/lx/src/utils/linking'
@@ -138,7 +138,7 @@ function SmartWalletTooltip(): JSX.Element | undefined {
           <Text variant="body4" color="$neutral2">
             {`${t('smartWallet.modal.description.block1')} ${t('smartWallet.modal.description.block2')}`}
           </Text>
-          <TouchableArea onPress={() => onPressLearnMore(uniswapUrls.helpArticleUrls.smartWalletDelegation)}>
+          <TouchableArea onPress={() => onPressLearnMore(lxUrls.helpArticleUrls.smartWalletDelegation)}>
             <Text variant="buttonLabel4" color="$neutral1" mt="$spacing4">
               {t('common.button.learn')}
             </Text>

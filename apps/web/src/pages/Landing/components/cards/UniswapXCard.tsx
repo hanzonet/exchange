@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Image } from 'ui/src'
 import { LX } from 'ui/src/components/icons/LX'
 import { opacify } from 'ui/src/theme'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { CardContents } from '~/pages/Landing/components/cards/CardContents'
 import { PillButton } from '~/pages/Landing/components/cards/PillButton'
 import ValuePropCard from '~/pages/Landing/components/cards/ValuePropCard'
@@ -14,15 +14,15 @@ export function LXCard() {
 
   return (
     <ValuePropCard
-      href={uniswapUrls.uniswapXUrl}
+      href={lxUrls.lxSwapUrl}
       color={primary}
       backgroundColor={opacify(6, primary)}
       title={
-        <PillButton color={primary} label={t('common.uniswapX')} icon={<LX size="$icon.24" fill={primary} />} />
+        <PillButton color={primary} label={t('common.lxSwap')} icon={<LX size="$icon.24" fill={primary} />} />
       }
-      bodyText={t('landing.uniswapX.body')}
-      subtitle={t('landing.uniswapX.subtitle')}
-      button={<PillButton color={primary} label={t('landing.uniswapX.button')} backgroundColor="$surface1" />}
+      bodyText={t('landing.lxSwap.body')}
+      subtitle={t('landing.lxSwap.subtitle')}
+      button={<PillButton color={primary} label={t('landing.lxSwap.button')} backgroundColor="$surface1" />}
       alignTextToBottom
     >
       <CardContents alignItems="flex-end">
@@ -32,7 +32,7 @@ export function LXCard() {
           width="45%"
           height="30%"
           style={{ objectFit: 'contain', transform: 'translateX(5%)', marginBottom: '8%' }}
-          alt={t('common.uniswapX')}
+          alt={t('common.lxSwap')}
         />
       </CardContents>
     </ValuePropCard>

@@ -5,4 +5,4 @@ export * from './__generated__/operations'
 export * from './__generated__/react-hooks'
 
 // Aliases for Lux branding
-export { useUniswapPricesQuery as useLuxPricesQuery } from './__generated__/react-hooks'
+export { useLxPricesQuery as useLuxPricesQuery } from './__generated__/react-hooks'

@@ -1,7 +1,7 @@
 import { getStorageDriver } from '@luxexchange/api/src/storage/getStorageDriver'
 import { createDeviceIdService, DeviceIdService } from '@luxexchange/sessions'
 
-const DEVICE_ID_KEY = 'UNISWAP_DEVICE_ID'
+const DEVICE_ID_KEY = 'LX_DEVICE_ID'
 
 function provideDeviceIdService(): DeviceIdService {
   const driver = getStorageDriver()

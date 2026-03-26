@@ -27,7 +27,7 @@ import {
   Sliders,
   Wrench,
 } from '@luxfi/ui/src/components/icons'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { resetLuxBehaviorHistory } from '@luxexchange/lx/src/features/behaviorHistory/slice'
 import { useEnabledChains } from '@luxexchange/lx/src/features/chains/hooks/useEnabledChains'
 import { FiatCurrency, ORDERED_CURRENCIES } from '@luxexchange/lx/src/features/fiatCurrency/constants'
@@ -289,7 +289,7 @@ export function SettingsScreen(): JSX.Element {
               <SettingsItem
                 Icon={HelpCenter}
                 title={t('settings.setting.helpCenter.title')}
-                url={uniswapUrls.helpArticleUrls.extensionHelp}
+                url={lxUrls.helpArticleUrls.extensionHelp}
                 RightIcon={ArrowUpRight}
               />
               <Text

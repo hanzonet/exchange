@@ -21,7 +21,7 @@ import {
 import type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
 import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
 import type { SessionState, SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
-import type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 // Types for our test transport
 export interface MockEndpointHandler {
   (request: any, headers: Record<string, string>): Promise<any>
@@ -109,18 +109,18 @@ export class InMemoryDeviceIdService implements DeviceIdService {
   }
 }
 
-export class InMemoryUniswapIdentifierService implements UniswapIdentifierService {
+export class InMemoryLxIdentifierService implements LxIdentifierService {
   private identifier: string | null = null
 
-  async getUniswapIdentifier(): Promise<string | null> {
+  async getLxIdentifier(): Promise<string | null> {
     return this.identifier
   }
 
-  async setUniswapIdentifier(id: string): Promise<void> {
+  async setLxIdentifier(id: string): Promise<void> {
     this.identifier = id
   }
 
-  async removeUniswapIdentifier(): Promise<void> {
+  async removeLxIdentifier(): Promise<void> {
     this.identifier = null
   }
 }

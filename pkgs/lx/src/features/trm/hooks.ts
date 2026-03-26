@@ -1,4 +1,4 @@
-import { useTrmScreenQuery } from 'uniswap/src/data/apiClients/uniswapApi/useTrmScreenQuery'
+import { useTrmScreenQuery } from 'uniswap/src/data/apiClients/lxApi/useTrmScreenQuery'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 
 export interface IsBlockedResult {

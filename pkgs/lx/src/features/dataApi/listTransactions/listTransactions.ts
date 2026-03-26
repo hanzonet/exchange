@@ -164,7 +164,7 @@ function getUniqueTransactionId(transaction: ListTransactionsResponse['transacti
       return transaction.transaction.value.planId
     case 'onChain':
       return transaction.transaction.value.transactionHash
-    case 'uniswapX':
+    case 'lxSwap':
       return transaction.transaction.value.orderHash
     case 'fiatOnRamp':
       return transaction.transaction.value.externalSessionId

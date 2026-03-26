@@ -113,7 +113,7 @@ export {
 } from '@luxexchange/api/src/clients/trading/tradeTypes'
 export {
   FeeType,
-  type FormattedUniswapXGasFeeInfo,
+  type FormattedLxSwapGasFeeInfo,
   type GasEstimate,
   type GasEstimateEip1559,
   type GasEstimateLegacy,
@@ -149,10 +149,10 @@ export {
 
 // Uniswap API
 export {
-  createUniswapApiClient,
-  type UniswapApiClient,
-  type UniswapApiClientContext,
-} from '@luxexchange/api/src/clients/uniswap/createUniswapApiClient'
+  createLxApiClient,
+  type LxApiClient,
+  type LxApiClientContext,
+} from '@luxexchange/api/src/clients/uniswap/createLxApiClient'
 
 // Compliance API
 export {
@@ -342,6 +342,6 @@ export { getEntryGatewayUrl, getMigratedForApiUrl } from '@luxexchange/api/src/g
 
 export { getWebSocketUrl } from '@luxexchange/api/src/getWebSocketUrl'
 
-export { provideUniswapIdentifierService } from '@luxexchange/api/src/provideUniswapIdentifierService'
+export { provideLxIdentifierService } from '@luxexchange/api/src/provideLxIdentifierService'
 
-export const provideLuxIdentifierService = provideUniswapIdentifierService
+export const provideLuxIdentifierService = provideLxIdentifierService

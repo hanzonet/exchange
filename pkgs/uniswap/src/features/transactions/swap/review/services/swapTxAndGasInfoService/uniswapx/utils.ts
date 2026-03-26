@@ -6,7 +6,7 @@ import {
   createGasFields,
 } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import type {
-  UniswapXGasBreakdown,
+  LxSwapGasBreakdown,
   LXSwapTxAndGasInfo,
 } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { PermitMethod } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
@@ -27,7 +27,7 @@ export function processLXResponse({
   }
 }
 
-function createUniswapXGasBreakdown({
+function createLxSwapGasBreakdown({
   trade,
   approvalTxInfo,
   swapTxInfo,
@@ -35,7 +35,7 @@ function createUniswapXGasBreakdown({
   trade: LXTrade
   approvalTxInfo: ApprovalTxInfo
   swapTxInfo: TransactionRequestInfo
-}): { gasFeeBreakdown: UniswapXGasBreakdown } {
+}): { gasFeeBreakdown: LxSwapGasBreakdown } {
   const { approvalGasFeeResult } = approvalTxInfo
   const gasFeeBreakdown = {
     classicGasUseEstimateUSD: trade.quote.quote.classicGasUseEstimateUSD,
@@ -63,7 +63,7 @@ export function getLXSwapTxAndGasInfo({
     trade,
     ...createGasFields({ swapTxInfo, approvalTxInfo }),
     ...createApprovalFields({ approvalTxInfo }),
-    ...createUniswapXGasBreakdown({ trade, approvalTxInfo, swapTxInfo }),
+    ...createLxSwapGasBreakdown({ trade, approvalTxInfo, swapTxInfo }),
     permit: permit ? { method: PermitMethod.TypedData, typedData: permit } : undefined,
   }
 }

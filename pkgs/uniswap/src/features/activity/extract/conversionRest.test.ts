@@ -465,9 +465,9 @@ const MOCK_NATIVE_SWAP: OnChainTransaction = {
   ],
 } as OnChainTransaction
 
-const MOCK_UNISWAP_X_SWAP: OnChainTransaction = {
+const MOCK_LX_SWAP_SWAP: OnChainTransaction = {
   ...MOCK_ERC20_SWAP,
-  label: OnChainTransactionLabel.UNISWAP_X,
+  label: OnChainTransactionLabel.LX_SWAP,
 } as OnChainTransaction
 
 const MOCK_MULTI_TRANSFER_SWAP: OnChainTransaction = {
@@ -572,7 +572,7 @@ describe(parseRestSwapTransaction, () => {
     })
   })
   it('Swap: parse LX swap', () => {
-    expect(parseRestSwapTransaction(MOCK_UNISWAP_X_SWAP)).toEqual({
+    expect(parseRestSwapTransaction(MOCK_LX_SWAP_SWAP)).toEqual({
       type: TransactionType.Swap,
       inputCurrencyId: `1-${ERC20_ASSET_ADDRESS}`,
       outputCurrencyId: `1-${WRAPPED_NATIVE_ADDRESS}`,
@@ -1226,7 +1226,7 @@ describe(extractRestOnChainTransactionDetails, () => {
     expect(txns[0]?.routing).toEqual(TradingApi.Routing.CLASSIC)
   })
   it('LX swap', () => {
-    const txns = extractRestOnChainTransactionDetails(MOCK_UNISWAP_X_SWAP)
+    const txns = extractRestOnChainTransactionDetails(MOCK_LX_SWAP_SWAP)
     expect(txns).toHaveLength(1)
     expect(txns[0]?.typeInfo.type).toEqual(TransactionType.Swap)
     expect(txns[0]?.routing).toEqual(TradingApi.Routing.DUTCH_V2)

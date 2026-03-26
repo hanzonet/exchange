@@ -1,5 +1,5 @@
 // TODO(WALL-6098): this is a temporary solution until the delay typing is updated
-// thread: https://uniswapteam.slack.com/messages/C07AHFK2QRK/p1740698259468079
+// thread: https://luxfi.slack.com/messages/C07AHFK2QRK/p1740698259468079
 type DelayAnimationKey =
   | '200msDelayed1ms'
   | '200msDelayed40ms'

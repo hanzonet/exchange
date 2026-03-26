@@ -1,19 +1,19 @@
 import { Language } from 'uniswap/src/features/language/constants'
 import { deviceAccessTimeoutToMinutes } from 'uniswap/src/features/settings/constants'
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 
-export const selectWalletHideSmallBalancesSetting = (state: UniswapState): boolean =>
+export const selectWalletHideSmallBalancesSetting = (state: LxState): boolean =>
   state.userSettings.hideSmallBalances
 
-export const selectWalletHideSpamTokensSetting = (state: UniswapState): boolean => state.userSettings.hideSpamTokens
+export const selectWalletHideSpamTokensSetting = (state: LxState): boolean => state.userSettings.hideSpamTokens
 
-export const selectWalletHideReportedActivitySetting = (state: UniswapState): boolean =>
+export const selectWalletHideReportedActivitySetting = (state: LxState): boolean =>
   state.userSettings.hideReportedActivity ?? true
 
-export const selectCurrentLanguage = (state: UniswapState): Language => state.userSettings.currentLanguage
+export const selectCurrentLanguage = (state: LxState): Language => state.userSettings.currentLanguage
 
-export const selectIsTestnetModeEnabled = (state: UniswapState): boolean =>
+export const selectIsTestnetModeEnabled = (state: LxState): boolean =>
   state.userSettings.isTestnetModeEnabled ?? false
 
-export const selectDeviceAccessTimeoutMinutes = (state: UniswapState): number | undefined =>
+export const selectDeviceAccessTimeoutMinutes = (state: LxState): number | undefined =>
   deviceAccessTimeoutToMinutes(state.userSettings.deviceAccessTimeout)

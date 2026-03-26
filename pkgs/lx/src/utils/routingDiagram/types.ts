@@ -4,7 +4,7 @@ import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
 
 export type RoutingHop =
   | {
-      type: 'uniswapPool'
+      type: 'lxPool'
       inputCurrencyId: string
       outputCurrencyId: string
       poolType: 'V2' | 'V3' | 'V4'

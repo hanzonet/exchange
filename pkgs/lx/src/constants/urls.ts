@@ -24,8 +24,8 @@ function getComplianceApiBaseUrl(): string {
   return PROD_ENTRY_GATEWAY_API_BASE_URL
 }
 
-export const UNISWAP_WEB_HOSTNAME = brand.appDomain
-const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? `staging.ew.${brand.appDomain}` : UNISWAP_WEB_HOSTNAME
+export const LX_WEB_HOSTNAME = brand.appDomain
+const EMBEDDED_WALLET_HOSTNAME = isPlaywrightEnv() || isDevEnv() ? `staging.ew.${brand.appDomain}` : LX_WEB_HOSTNAME
 
 function getPrivyEmbeddedWalletUrl(): string {
   const apiHost = `api.${brand.appDomain}`
@@ -55,8 +55,8 @@ export function getForApiUrl(): string {
   return getCloudflareApiBaseUrl({ flow: TrafficFlows.FOR, postfix: 'v2/FOR.v1.FORService' })
 }
 
-export const LUX_WEB_URL = `https://${UNISWAP_WEB_HOSTNAME}`
-export const UNISWAP_WEB_URL = LUX_WEB_URL
+export const LUX_WEB_URL = `https://${LX_WEB_HOSTNAME}`
+export const LX_WEB_URL = LUX_WEB_URL
 export const LUX_APP_URL = getBrandUrl('/app')
 export const LUX_MOBILE_REDIRECT_URL = getBrandUrl('/mobile-redirect')
 
@@ -65,7 +65,7 @@ export const tradingApiVersionPrefix = config.tradingApiWebTestEnv === 'true' ? 
 
 export const CHROME_EXTENSION_UNINSTALL_URL_PATH = '/extension/uninstall'
 
-export const uniswapUrls = {
+export const lxUrls = {
   // Help and web articles/items
   helpUrl,
   helpRequestUrl: `${helpUrl}/requests/new`,
@@ -259,11 +259,11 @@ export const uniswapUrls = {
   requestOriginUrl: LUX_WEB_URL,
 
   // Web Interface Urls
-  webInterfaceSwapUrl: `${UNISWAP_WEB_URL}/#/swap`,
-  webInterfaceTokensUrl: `${UNISWAP_WEB_URL}/explore/tokens`,
-  webInterfacePoolsUrl: `${UNISWAP_WEB_URL}/explore/pools`,
-  webInterfacePortfolioUrl: `${UNISWAP_WEB_URL}/portfolio`,
-  webInterfaceBuyUrl: `${UNISWAP_WEB_URL}/buy`,
+  webInterfaceSwapUrl: `${LX_WEB_URL}/#/swap`,
+  webInterfaceTokensUrl: `${LX_WEB_URL}/explore/tokens`,
+  webInterfacePoolsUrl: `${LX_WEB_URL}/explore/pools`,
+  webInterfacePortfolioUrl: `${LX_WEB_URL}/portfolio`,
+  webInterfaceBuyUrl: `${LX_WEB_URL}/buy`,
 
   // Feedback Links
   walletFeedbackForm:

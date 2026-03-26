@@ -15,7 +15,7 @@ interface NetworkFeeFooterProps {
   chainId: UniverseChainId
   showNetworkLogo: boolean
   gasFee: GasFeeResult | undefined
-  isUniswapX?: boolean
+  isLxSwap?: boolean
   requestMethod?: string
   showSmartWalletActivation?: boolean
 }
@@ -40,7 +40,7 @@ export function NetworkFeeFooter({
   chainId,
   showNetworkLogo,
   gasFee,
-  isUniswapX,
+  isLxSwap,
   requestMethod,
   showSmartWalletActivation,
 }: NetworkFeeFooterProps): JSX.Element | null {
@@ -79,7 +79,7 @@ export function NetworkFeeFooter({
       >
         <Flex centered row gap="$spacing4">
           {showNetworkLogo && <NetworkLogo chainId={chainId} size={iconSizes.icon16} />}
-          {isUniswapX ? (
+          {isLxSwap ? (
             <LXFee gasFee={gasFeeFormatted} />
           ) : (
             <Text color="$neutral1" variant={variant}>

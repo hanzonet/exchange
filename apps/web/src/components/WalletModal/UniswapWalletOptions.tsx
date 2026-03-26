@@ -2,7 +2,7 @@ import { useAtom } from 'jotai'
 import { PropsWithChildren } from 'react'
 import { Trans } from 'react-i18next'
 import { Flex, Image, Text } from 'ui/src'
-import { UNISWAP_LOGO } from 'ui/src/assets'
+import { LX_LOGO } from 'ui/src/assets'
 import { AppStoreLogo } from 'ui/src/components/icons/AppStoreLogo'
 import { PhoneDownload } from 'ui/src/components/icons/PhoneDownload'
 import { ScanQr } from 'ui/src/components/icons/ScanQr'
@@ -52,11 +52,11 @@ export function OptionContainer({ hideBackground, recent, children, onPress, tes
   )
 }
 
-export function UniswapWalletOptions() {
+export function LxWalletOptions() {
   const [, setPersistHideMobileAppPromoBanner] = useAtom(persistHideMobileAppPromoBannerAtom)
 
-  const uniswapExtensionWallet = useWalletWithId(CONNECTION_PROVIDER_IDS.UNISWAP_EXTENSION_RDNS)
-  const uniswapMobileWallet = useWalletWithId(CONNECTION_PROVIDER_IDS.UNISWAP_WALLET_CONNECT_CONNECTOR_ID)
+  const lxExtensionWallet = useWalletWithId(CONNECTION_PROVIDER_IDS.LX_EXTENSION_RDNS)
+  const lxMobileWallet = useWalletWithId(CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID)
 
   const accountDrawer = useAccountDrawer()
   const setMenu = useSetMenu()
@@ -71,15 +71,15 @@ export function UniswapWalletOptions() {
   return (
     <Flex gap={16}>
       <Flex gap={8}>
-        {uniswapExtensionWallet ? (
+        {lxExtensionWallet ? (
           // If the extension is detected, show the option to connect
           <OptionContainer
-            onPress={() => connectWallet({ wallet: uniswapExtensionWallet, onSuccess })}
-            testID="connect-uniswap-extension"
+            onPress={() => connectWallet({ wallet: lxExtensionWallet, onSuccess })}
+            testID="connect-lx-extension"
           >
             <Flex row grow justifyContent="space-between" alignItems="center">
               <Flex row gap="$gap12" alignItems="center">
-                <Image height={iconSizes.icon40} source={UNISWAP_LOGO} width={iconSizes.icon40} />
+                <Image height={iconSizes.icon40} source={LX_LOGO} width={iconSizes.icon40} />
                 <Text variant="buttonLabel2" color="$neutral1" whiteSpace="nowrap">
                   <Trans i18nKey="common.extension" />
                 </Text>
@@ -91,10 +91,10 @@ export function UniswapWalletOptions() {
           <DownloadWalletOption />
         ) : null}
         <OptionContainer
-          onPress={() => (uniswapMobileWallet ? connectWallet({ wallet: uniswapMobileWallet, onSuccess }) : undefined)}
+          onPress={() => (lxMobileWallet ? connectWallet({ wallet: lxMobileWallet, onSuccess }) : undefined)}
         >
           {isMobileWeb ? (
-            <Image height={iconSizes.icon40} source={UNISWAP_LOGO} width={iconSizes.icon40} />
+            <Image height={iconSizes.icon40} source={LX_LOGO} width={iconSizes.icon40} />
           ) : (
             <ScanQr
               size={iconSizes.icon40}
@@ -108,7 +108,7 @@ export function UniswapWalletOptions() {
           <Flex row justifyContent="space-between">
             <Flex>
               <Text variant="buttonLabel2" color="$neutral1" whiteSpace="nowrap">
-                <Trans i18nKey="common.uniswapMobile" />
+                <Trans i18nKey="common.lxMobile" />
               </Text>
               <Text variant="body4" color="$neutral2" whiteSpace="nowrap">
                 {isMobileWeb ? <Trans i18nKey="wallet.appSignIn" /> : <Trans i18nKey="wallet.scanToConnect" />}
@@ -122,14 +122,14 @@ export function UniswapWalletOptions() {
           <OptionContainer
             onPress={() => {
               setPersistHideMobileAppPromoBanner(true)
-              openDownloadApp({ element: ElementName.UniswapWalletModalDownloadButton })
+              openDownloadApp({ element: ElementName.LxWalletModalDownloadButton })
             }}
           >
             <PhoneDownload size="$icon.40" minWidth={40} color="$accent1" backgroundColor="$accent2" borderRadius={8} />
             <Flex row grow alignItems="center">
               <Flex grow>
                 <Text variant="buttonLabel3" color="$neutral1" whiteSpace="nowrap">
-                  <Trans i18nKey="common.getUniswapWallet" />
+                  <Trans i18nKey="common.getLxWallet" />
                 </Text>
                 <Text variant="body4" color="$neutral2" whiteSpace="nowrap">
                   {isWebIOS ? (

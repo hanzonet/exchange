@@ -60,18 +60,18 @@ export function useSmartWalletDelegationStatus({ overrideAddress }: { overrideAd
       }
 
       let hasExistingDelegation = false
-      let hasNonUniswapDelegation = false
+      let hasNonLxDelegation = false
       for (const chain of enabledChains) {
         const result = getDelegationDetails(activeAccount.address, chain)
         if (result?.currentDelegationAddress) {
           hasExistingDelegation = true
           if (!result.isWalletDelegatedToUniswap) {
-            hasNonUniswapDelegation = true
+            hasNonLxDelegation = true
           }
         }
       }
 
-      if (hasNonUniswapDelegation) {
+      if (hasNonLxDelegation) {
         setStatus(SmartWalletDelegationAction.ShowConflict)
         return
       }

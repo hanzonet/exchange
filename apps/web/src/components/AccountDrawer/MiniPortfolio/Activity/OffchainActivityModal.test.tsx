@@ -34,7 +34,7 @@ describe('OrderContent', () => {
       addedTime: 1701715079,
       transactionOriginType: TransactionOriginType.Internal,
       typeInfo: {
-        isUniswapXOrder: true,
+        isLxSwapOrder: true,
         type: TransactionType.Swap,
         tradeType: 0,
         inputCurrencyId: currencyId(DAI),
@@ -64,7 +64,7 @@ describe('OrderContent', () => {
       id: 'tx123',
       transactionOriginType: TransactionOriginType.Internal,
       typeInfo: {
-        isUniswapXOrder: true,
+        isLxSwapOrder: true,
         type: TransactionType.Swap,
         tradeType: 0,
         inputCurrencyId: currencyId(DAI),
@@ -95,7 +95,7 @@ describe('OrderContent', () => {
       id: 'tx123',
       transactionOriginType: TransactionOriginType.Internal,
       typeInfo: {
-        isUniswapXOrder: true,
+        isLxSwapOrder: true,
         type: TransactionType.Swap,
         tradeType: 0,
         inputCurrencyId: currencyId(DAI),

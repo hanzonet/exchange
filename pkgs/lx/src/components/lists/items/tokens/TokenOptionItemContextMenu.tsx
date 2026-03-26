@@ -14,7 +14,7 @@ import { SendAction } from 'ui/src/components/icons/SendAction'
 import { ShareArrow } from 'ui/src/components/icons/ShareArrow'
 import { ContextMenu, ContextMenuProps, MenuOptionItem } from 'uniswap/src/components/menus/ContextMenu'
 import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
-import { UNISWAP_WEB_URL } from 'uniswap/src/constants/urls'
+import { LX_WEB_URL } from 'uniswap/src/constants/urls'
 import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
 import { useActiveAddress } from 'uniswap/src/features/accounts/store/hooks'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
@@ -135,7 +135,7 @@ function _TokenOptionItemContextMenu({
   const onShare = useCallback(async () => {
     if (isWebPlatform) {
       const url =
-        UNISWAP_WEB_URL +
+        LX_WEB_URL +
         getTokenDetailsURL({
           address: currencyIdToAddress(id),
           chain: currencyIdToChain(id) ?? undefined,

@@ -35,9 +35,9 @@ export interface Config {
   tradingApiUrlOverride: string
   tradingApiWebTestEnv: string
   liquidityServiceUrlOverride: string
-  uniswapApiKey: string
+  lxApiKey: string
   unitagsApiUrlOverride: string
-  uniswapNotifApiBaseUrlOverride: string
+  lxNotifApiBaseUrlOverride: string
   entryGatewayApiUrlOverride: string
   walletConnectProjectId: string
   walletConnectProjectIdBeta: string

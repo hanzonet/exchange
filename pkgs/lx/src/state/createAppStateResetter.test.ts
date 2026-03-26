@@ -3,12 +3,12 @@ import { addFavoriteToken } from 'uniswap/src/features/favorites/slice'
 import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
 import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
 import { createAppStateResetter } from 'uniswap/src/state/createAppStateResetter'
-import { type UniswapState, uniswapReducer } from 'uniswap/src/state/uniswapReducer'
+import { type LxState, lxReducer } from 'uniswap/src/state/lxReducer'
 import { sleep } from 'utilities/src/time/timing'
 import type { Mock } from 'vitest'
 
 describe('createAppStateResetter', () => {
-  let store: ReturnType<typeof configureStore<UniswapState>>
+  let store: ReturnType<typeof configureStore<LxState>>
   let resetter: ReturnType<typeof createAppStateResetter>
   let onResetAccountHistory: Mock
   let onResetUserSettings: Mock
@@ -16,7 +16,7 @@ describe('createAppStateResetter', () => {
 
   beforeEach(() => {
     store = configureStore({
-      reducer: uniswapReducer,
+      reducer: lxReducer,
     })
     onResetAccountHistory = vi.fn()
     onResetUserSettings = vi.fn()

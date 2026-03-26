@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { appearanceSettingsReducer } from 'uniswap/src/features/appearance/slice'
-import { uniswapBehaviorHistoryReducer } from 'uniswap/src/features/behaviorHistory/slice'
+import { lxBehaviorHistoryReducer } from 'uniswap/src/features/behaviorHistory/slice'
 import { favoritesReducer } from 'uniswap/src/features/favorites/slice'
 import { notificationReducer } from 'uniswap/src/features/notifications/slice/slice'
 import { portfolioReducer } from 'uniswap/src/features/portfolio/slice/slice'
@@ -13,7 +13,7 @@ import { transactionReducer } from 'uniswap/src/features/transactions/slice'
 import { swapSettingsReducer } from 'uniswap/src/features/transactions/swap/state/slice'
 import { visibilityReducer } from 'uniswap/src/features/visibility/slice'
 
-export const uniswapReducers = {
+export const lxReducers = {
   appearanceSettings: appearanceSettingsReducer,
   swapSettings: swapSettingsReducer,
   favorites: favoritesReducer,
@@ -23,25 +23,25 @@ export const uniswapReducers = {
   timing: timingReducer,
   tokens: tokensReducer,
   transactions: transactionReducer,
-  uniswapBehaviorHistory: uniswapBehaviorHistoryReducer,
+  lxBehaviorHistory: lxBehaviorHistoryReducer,
   userSettings: userSettingsReducer,
   visibility: visibilityReducer,
   delegation: delegationReducer,
 } as const
 
 // used to type RootState
-export const uniswapReducer = combineReducers(uniswapReducers)
+export const lxReducer = combineReducers(lxReducers)
 
-export const uniswapPersistedStateList: Array<keyof typeof uniswapReducers> = [
+export const lxPersistedStateList: Array<keyof typeof lxReducers> = [
   'appearanceSettings',
   'favorites',
   'portfolio',
   'searchHistory',
   'tokens',
   'transactions',
-  'uniswapBehaviorHistory',
+  'lxBehaviorHistory',
   'userSettings',
   'visibility',
 ]
 
-export type UniswapState = ReturnType<typeof uniswapReducer>
+export type LxState = ReturnType<typeof lxReducer>

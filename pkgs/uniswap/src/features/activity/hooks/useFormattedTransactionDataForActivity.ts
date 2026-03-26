@@ -18,7 +18,7 @@ import { PaginationControls } from 'uniswap/src/features/dataApi/types'
 import { useLocalizedDayjs } from 'uniswap/src/features/language/localizedDayjs'
 import { useCurrencyIdToVisibility } from 'uniswap/src/features/transactions/selectors'
 import { TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { isLimitOrder } from 'uniswap/src/features/transactions/utils/uniswapX.utils'
+import { isLimitOrder } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
 import { selectNftsVisibility } from 'uniswap/src/features/visibility/selectors'
 import { isAndroid } from 'utilities/src/platform'
 

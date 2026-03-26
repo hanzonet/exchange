@@ -14,7 +14,7 @@ export function extractDappInfo(transaction: OnChainTransaction): DappInfoTransa
   }
 
   // Fallback: infer protocol from transaction label when protocol field is empty
-  if (transaction.label === OnChainTransactionLabel.UNISWAP_X) {
+  if (transaction.label === OnChainTransactionLabel.LX_SWAP) {
     return {
       name: 'Uniswap',
       icon: 'https://protocol-icons.s3.amazonaws.com/icons/uniswap-v4.jpg',

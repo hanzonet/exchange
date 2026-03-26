@@ -25,7 +25,7 @@ test.describe(
       await page.getByTestId(TestID.NavConnectWalletButton).click()
       await getVisibleDropdownElementByTestId(page, TestID.CreateAccount).click()
 
-      await expect(page.getByTestId(TestID.DownloadUniswapModal)).toBeVisible()
+      await expect(page.getByTestId(TestID.DownloadLxModal)).toBeVisible()
       await expect(page.getByText('Choose a username')).toBeVisible()
     })
 

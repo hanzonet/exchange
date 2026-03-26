@@ -5,32 +5,32 @@ import { AlertCircleFilled } from 'ui/src/components/icons/AlertCircleFilled'
 import { zIndexes } from 'ui/src/theme'
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { openUri } from 'uniswap/src/utils/linking'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function SwapFeeWarning({
-  noUniswapInterfaceFees,
+  noLxInterfaceFees,
   noFeeOnThisSwap,
   children,
   isJupiter,
-}: PropsWithChildren<{ noUniswapInterfaceFees: boolean; noFeeOnThisSwap: boolean; isJupiter: boolean }>): JSX.Element {
+}: PropsWithChildren<{ noLxInterfaceFees: boolean; noFeeOnThisSwap: boolean; isJupiter: boolean }>): JSX.Element {
   const colors = useSporeColors()
   const { t } = useTranslation()
 
   const onPressLearnMore = async (): Promise<void> => {
-    await openUri({ uri: uniswapUrls.helpArticleUrls.swapFeeInfo })
+    await openUri({ uri: lxUrls.helpArticleUrls.swapFeeInfo })
   }
 
   const caption =
-    noUniswapInterfaceFees && !isJupiter
+    noLxInterfaceFees && !isJupiter
       ? t('swap.warning.noInterfaceFees.message')
       : noFeeOnThisSwap
-        ? t('swap.warning.uniswapFee.message.default')
+        ? t('swap.warning.lxFee.message.default')
         : isJupiter
           ? t('swap.fees.jupiter.message')
-          : t('swap.warning.uniswapFee.message.included')
+          : t('swap.warning.lxFee.message.included')
 
   return (
     <WarningInfo
@@ -56,7 +56,7 @@ export function SwapFeeWarning({
         rejectText: t('common.button.close'),
         modalName: ModalName.NetworkFeeInfo,
         severity: WarningSeverity.None,
-        title: t('swap.warning.uniswapFee.title'),
+        title: t('swap.warning.lxFee.title'),
         zIndex: zIndexes.popover,
       }}
       tooltipProps={{ text: caption, placement: 'top' }}

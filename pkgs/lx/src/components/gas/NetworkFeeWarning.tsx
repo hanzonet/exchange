@@ -1,4 +1,4 @@
-import { FormattedUniswapXGasFeeInfo } from '@luxexchange/api'
+import { FormattedLxSwapGasFeeInfo } from '@luxexchange/api'
 import { PropsWithChildren } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Text, LXText, useSporeColors } from 'ui/src'
@@ -9,7 +9,7 @@ import { NetworkCostTooltip, NetworkCostTooltipDEX } from 'uniswap/src/component
 import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
 import { InfoTooltipProps } from 'uniswap/src/components/tooltip/InfoTooltipProps'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { NetworkCostBanner } from 'uniswap/src/features/smartWallet/banner/NetworkCostBanner'
@@ -22,7 +22,7 @@ export function NetworkFeeWarning({
   disabled = false,
   tooltipTrigger,
   placement = 'top',
-  uniswapXGasFeeInfo,
+  lxSwapGasFeeInfo,
   chainId,
   includesDelegation,
 }: PropsWithChildren<{
@@ -30,14 +30,14 @@ export function NetworkFeeWarning({
   disabled?: boolean
   tooltipTrigger?: InfoTooltipProps['trigger']
   placement?: InfoTooltipProps['placement']
-  uniswapXGasFeeInfo?: FormattedUniswapXGasFeeInfo
+  lxSwapGasFeeInfo?: FormattedLxSwapGasFeeInfo
   chainId: UniverseChainId
   includesDelegation?: boolean
 }>): JSX.Element {
   const colors = useSporeColors()
   const { t } = useTranslation()
 
-  const showHighGasFeeUI = gasFeeHighRelativeToValue && !uniswapXGasFeeInfo && !isWebApp // Avoid high gas UI on interface
+  const showHighGasFeeUI = gasFeeHighRelativeToValue && !lxSwapGasFeeInfo && !isWebApp // Avoid high gas UI on interface
 
   return (
     <WarningInfo
@@ -46,7 +46,7 @@ export function NetworkFeeWarning({
         isMobileApp && (
           <NetworkCostBanner
             bannerText={t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })}
-            url={uniswapUrls.helpArticleUrls.smartWalletDelegation}
+            url={lxUrls.helpArticleUrls.smartWalletDelegation}
           />
         )
       }
@@ -56,7 +56,7 @@ export function NetworkFeeWarning({
           <NetworkFeeText
             includesDelegation={includesDelegation}
             showHighGasFeeUI={showHighGasFeeUI}
-            uniswapXGasFeeInfo={uniswapXGasFeeInfo}
+            lxSwapGasFeeInfo={lxSwapGasFeeInfo}
             chainId={chainId}
           />
         ),
@@ -72,8 +72,8 @@ export function NetworkFeeWarning({
         zIndex: zIndexes.popover,
       }}
       tooltipProps={{
-        text: uniswapXGasFeeInfo ? (
-          <NetworkCostTooltipDEX uniswapXGasFeeInfo={uniswapXGasFeeInfo} />
+        text: lxSwapGasFeeInfo ? (
+          <NetworkCostTooltipDEX lxSwapGasFeeInfo={lxSwapGasFeeInfo} />
         ) : (
           <NetworkCostTooltip chainId={chainId} includesDelegation={includesDelegation ?? false} />
         ),
@@ -93,12 +93,12 @@ export function NetworkFeeWarning({
 function NetworkFeeText({
   includesDelegation,
   showHighGasFeeUI,
-  uniswapXGasFeeInfo,
+  lxSwapGasFeeInfo,
   chainId,
 }: {
   includesDelegation?: boolean
   showHighGasFeeUI?: boolean
-  uniswapXGasFeeInfo?: FormattedUniswapXGasFeeInfo
+  lxSwapGasFeeInfo?: FormattedLxSwapGasFeeInfo
   chainId: UniverseChainId
 }): JSX.Element {
   const { t } = useTranslation()
@@ -107,7 +107,7 @@ function NetworkFeeText({
   // we need to remove `NATIVE_LINE_HEIGHT_SCALE` if we switch to a button label font
   const lineHeight = fonts[variant].lineHeight / (isWebPlatform ? 1 : NATIVE_LINE_HEIGHT_SCALE)
 
-  if (uniswapXGasFeeInfo) {
+  if (lxSwapGasFeeInfo) {
     // TODO(WEB-4313): Remove need to manually adjust the height of the LXText component for mobile.
     const components = { gradient: <LXText height={lineHeight} variant={variant} /> }
 
@@ -115,9 +115,9 @@ function NetworkFeeText({
       <Text color="$neutral2" textAlign={isWebPlatform ? 'left' : 'center'} variant={variant}>
         {/* TODO(WALL-5311): Investigate Trans component vertical alignment on android */}
         {chainId === UniverseChainId.Unichain ? (
-          <Trans components={components} i18nKey="swap.warning.networkFee.message.uniswapX.unichain" />
+          <Trans components={components} i18nKey="swap.warning.networkFee.message.lxSwap.unichain" />
         ) : (
-          <Trans components={components} i18nKey="swap.warning.networkFee.message.uniswapX" />
+          <Trans components={components} i18nKey="swap.warning.networkFee.message.lxSwap" />
         )}
       </Text>
     )

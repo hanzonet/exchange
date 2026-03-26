@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useIsDarkMode } from 'ui/src'
 import {
   NO_FEES_ICON,
-  NO_UNISWAP_INTERFACE_FEES_BANNER_DARK,
-  NO_UNISWAP_INTERFACE_FEES_BANNER_LIGHT,
+  NO_LX_INTERFACE_FEES_BANNER_DARK,
+  NO_LX_INTERFACE_FEES_BANNER_LIGHT,
 } from 'ui/src/assets'
 import { Person, ShieldCheck } from 'ui/src/components/icons'
 import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
@@ -69,7 +69,7 @@ export function useSharedIntroCards({
   const handleNavigateToSwapFlow = useEvent(() =>
     navigateToSwapFlow({ inputCurrencyId: buildNativeCurrencyId(UniverseChainId.Mainnet) }),
   )
-  const isNoAppFeesAnnouncementEnabled = useFeatureFlag(FeatureFlags.NoUniswapInterfaceFees)
+  const isNoAppFeesAnnouncementEnabled = useFeatureFlag(FeatureFlags.NoLxInterfaceFees)
   const isNoAppFeesCardDismissed = useSelector(selectHasDismissedNoAppFeesAnnouncement)
 
   const handleNoAppFeesCardDismiss = useCallback(() => {
@@ -86,7 +86,7 @@ export function useSharedIntroCards({
         graphic: {
           type: IntroCardGraphicType.Gradient,
           icon: NO_FEES_ICON,
-          gradientImage: isDarkMode ? NO_UNISWAP_INTERFACE_FEES_BANNER_DARK : NO_UNISWAP_INTERFACE_FEES_BANNER_LIGHT,
+          gradientImage: isDarkMode ? NO_LX_INTERFACE_FEES_BANNER_DARK : NO_LX_INTERFACE_FEES_BANNER_LIGHT,
         },
         title: t('notification.noAppFees.title'),
         description: t('notification.noAppFees.subtitle'),

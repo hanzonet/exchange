@@ -1,6 +1,6 @@
 // biome-ignore lint/style/noRestrictedImports: Trading API fixtures need direct Playwright imports
 import { test as base, type Page, type Route } from '@playwright/test'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { Mocks } from '~/playwright/mocks/mocks'
 
 const DEFAULT_TEST_GAS_LIMIT = '20000000'
@@ -67,7 +67,7 @@ export async function stubTradingApiEndpoint({
       }
 
       // Set a high gas limit to avoid OutOfGas
-      if (endpoint === uniswapUrls.tradingApiPaths.swap) {
+      if (endpoint === lxUrls.tradingApiPaths.swap) {
         responseJson.swap.gasLimit = DEFAULT_TEST_GAS_LIMIT
       }
 
@@ -90,7 +90,7 @@ export async function stubTradingApiEndpoint({
 
   // Match the exact endpoint path, optionally followed by query params
   // Avoids matching longer paths (e.g., /v1/swap should not match /v1/swappable_tokens or /v1/swaps)
-  const escapedUrl = `${uniswapUrls.tradingApiUrl}${endpoint}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const escapedUrl = `${lxUrls.tradingApiUrl}${endpoint}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
   // eslint-disable-next-line security/detect-non-literal-regexp -- escapedUrl is sanitized above via regex escaping
   await page.route(new RegExp(`^${escapedUrl}(\\?.*)?$`), handler)
 }
@@ -101,7 +101,7 @@ export async function stubTradingApiEndpoint({
  */
 // eslint-disable-next-line import/no-unused-modules
 export async function mockTradingApiSwapResponse({ page }: { page: Page }) {
-  await page.route(`**/${uniswapUrls.tradingApiPaths.swap}`, async (route) => {
+  await page.route(`**/${lxUrls.tradingApiPaths.swap}`, async (route) => {
     await route.fulfill({ path: Mocks.TradingApi.swap })
   })
 }
@@ -127,7 +127,7 @@ export const test = base.extend<TradingApiFixture>({
     async ({ page }, use) => {
       try {
         await page.route(
-          `${uniswapUrls.tradingApiUrl}${uniswapUrls.tradingApiPaths.swaps}?txHashes=*`,
+          `${lxUrls.tradingApiUrl}${lxUrls.tradingApiPaths.swaps}?txHashes=*`,
           async (route) => {
             try {
               const response = await route.fetch()

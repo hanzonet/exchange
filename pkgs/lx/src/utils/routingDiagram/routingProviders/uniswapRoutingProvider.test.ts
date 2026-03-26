@@ -5,7 +5,7 @@ import { Pool as V3Pool } from '@luxamm/v3-sdk'
 import { Pool as V4Pool } from '@luxamm/v4-sdk'
 import { TradingApi } from '@luxexchange/api'
 import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'uniswap/src/constants/pools'
-import { uniswapRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingProviders/uniswapRoutingProvider'
+import { lxRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingProviders/lxRoutingProvider'
 
 // Mock currency objects
 const mockTokenA = new Token(1, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD Coin')
@@ -53,7 +53,7 @@ function createMockTrade(overrides: any): any {
   }
 }
 
-describe('uniswapProvider', () => {
+describe('lxProvider', () => {
   describe('getPoolType', () => {
     it('identifies V2 pools correctly', () => {
       const mockV2Pool = createMockV2Pool()
@@ -71,7 +71,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('poolType', 'V2')
     })
 
@@ -91,7 +91,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('poolType', 'V3')
     })
 
@@ -111,7 +111,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('poolType', 'V4')
     })
 
@@ -131,7 +131,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      expect(() => uniswapRoutingProvider.getRoutingEntries(trade as any)).toThrow('Unknown pool type')
+      expect(() => lxRoutingProvider.getRoutingEntries(trade as any)).toThrow('Unknown pool type')
     })
   })
 
@@ -167,7 +167,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.percent.toFixed(0)).toBe('60')
       expect(result[1]!.percent.toFixed(0)).toBe('40')
     })
@@ -203,7 +203,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.percent.toFixed(0)).toBe('70')
       expect(result[1]!.percent.toFixed(0)).toBe('30')
     })
@@ -225,7 +225,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('fee', V2_DEFAULT_FEE_TIER)
     })
 
@@ -245,7 +245,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('fee', customFee)
     })
 
@@ -264,7 +264,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('fee', DYNAMIC_FEE_AMOUNT)
       expect(result[0]!.path[0]).toHaveProperty('isDynamic', true)
     })
@@ -285,7 +285,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path[0]).toHaveProperty('fee', staticFee)
       expect(result[0]!.path[0]).toHaveProperty('isDynamic', false)
     })
@@ -307,7 +307,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path).toHaveLength(1)
       expect(result[0]!.path[0]!.inputCurrencyId).toContain(mockTokenA.address)
       expect(result[0]!.path[0]!.outputCurrencyId).toContain(mockTokenB.address)
@@ -328,7 +328,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path).toHaveLength(2)
       expect(result[0]!.path[0]!.inputCurrencyId).toContain(mockTokenA.address)
       expect(result[0]!.path[0]!.outputCurrencyId).toContain(mockTokenB.address)
@@ -351,7 +351,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.path).toHaveLength(3)
       expect(result[0]!.path[0]).toHaveProperty('poolType', 'V2')
       expect(result[0]!.path[1]).toHaveProperty('poolType', 'V3')
@@ -374,7 +374,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      expect(() => uniswapRoutingProvider.getRoutingEntries(trade as any)).toThrow('Invalid route path')
+      expect(() => lxRoutingProvider.getRoutingEntries(trade as any)).toThrow('Invalid route path')
     })
   })
 
@@ -384,7 +384,7 @@ describe('uniswapProvider', () => {
         swaps: [],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result).toHaveLength(0)
     })
 
@@ -421,7 +421,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result).toHaveLength(3)
       expect(result[0]!.protocolLabel).toBe('V2')
       expect(result[1]!.protocolLabel).toBe('V3')
@@ -443,7 +443,7 @@ describe('uniswapProvider', () => {
         ],
       })
 
-      const result = uniswapRoutingProvider.getRoutingEntries(trade)
+      const result = lxRoutingProvider.getRoutingEntries(trade)
       expect(result[0]!.protocolLabel).toBe('V3')
     })
   })

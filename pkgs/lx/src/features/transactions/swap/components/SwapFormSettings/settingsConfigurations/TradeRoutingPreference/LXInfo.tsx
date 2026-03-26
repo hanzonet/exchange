@@ -7,11 +7,11 @@ import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/type
 import { WarningInfo } from 'uniswap/src/components/modals/WarningModal/WarningInfo'
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import type { InfoTooltipProps } from 'uniswap/src/components/tooltip/InfoTooltipProps'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { isWebPlatform } from 'utilities/src/platform'
 
-export function UniswapXInfo({
+export function LxSwapInfo({
   children,
   tooltipTrigger,
   placement = 'top',
@@ -26,15 +26,15 @@ export function UniswapXInfo({
       infoButton={
         <LearnMoreLink
           textVariant={isWebPlatform ? 'body4' : undefined}
-          url={uniswapUrls.helpArticleUrls.uniswapXInfo}
+          url={lxUrls.helpArticleUrls.lxSwapInfo}
         />
       }
       modalProps={{
-        backgroundIconColor: opacify(16, colors.uniswapXPurple),
+        backgroundIconColor: opacify(16, colors.lxSwapPurple),
         caption: t('lx.description'),
         rejectText: t('common.button.close'),
         icon: <LX size="$icon.24" />,
-        modalName: ModalName.UniswapXInfo,
+        modalName: ModalName.LxSwapInfo,
         severity: WarningSeverity.None,
         titleComponent: (
           <LXText variant={isWebPlatform ? 'subheading2' : 'body1'}>{t('lx.label')}</LXText>

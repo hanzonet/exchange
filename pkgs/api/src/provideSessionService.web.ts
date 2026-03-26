@@ -1,6 +1,6 @@
 import { provideDeviceIdService } from '@luxexchange/api/src/provideDeviceIdService'
 import { provideSessionStorage } from '@luxexchange/api/src/provideSessionStorage'
-import { provideUniswapIdentifierService } from '@luxexchange/api/src/provideUniswapIdentifierService'
+import { provideLxIdentifierService } from '@luxexchange/api/src/provideLxIdentifierService'
 import { getTransport } from '@luxexchange/api/src/transport'
 import {
   createNoopSessionService,
@@ -8,7 +8,7 @@ import {
   createSessionRepository,
   createSessionService,
   type SessionService,
-  type UniswapIdentifierService,
+  type LxIdentifierService,
 } from '@luxexchange/sessions'
 import type { Logger } from 'utilities/src/logger/logger'
 import { isWebApp } from 'utilities/src/platform'
@@ -18,8 +18,8 @@ function provideSessionService(ctx: {
   getBaseUrl: () => string
   getIsSessionServiceEnabled: () => boolean
   getLogger?: () => Logger
-  /** Optional custom UniswapIdentifierService. If not provided, uses default localStorage-based service. */
-  uniswapIdentifierService?: UniswapIdentifierService
+  /** Optional custom LxIdentifierService. If not provided, uses default localStorage-based service. */
+  lxIdentifierService?: LxIdentifierService
 }): SessionService {
   if (!ctx.getIsSessionServiceEnabled()) {
     return createNoopSessionService()
@@ -40,7 +40,7 @@ function provideSessionService(ctx: {
 function getWebAppSessionService(ctx: {
   getBaseUrl: () => string
   getLogger?: () => Logger
-  uniswapIdentifierService?: UniswapIdentifierService
+  lxIdentifierService?: LxIdentifierService
 }): SessionService {
   const sessionClient = createSessionClient({
     transport: getTransport({
@@ -57,7 +57,7 @@ function getWebAppSessionService(ctx: {
   return createSessionService({
     sessionStorage: provideSessionStorage(),
     deviceIdService: provideDeviceIdService(),
-    uniswapIdentifierService: ctx.uniswapIdentifierService ?? provideUniswapIdentifierService(),
+    lxIdentifierService: ctx.lxIdentifierService ?? provideLxIdentifierService(),
     sessionRepository,
   })
 }
@@ -65,7 +65,7 @@ function getWebAppSessionService(ctx: {
 function getExtensionSessionService(ctx: {
   getBaseUrl: () => string
   getLogger?: () => Logger
-  uniswapIdentifierService?: UniswapIdentifierService
+  lxIdentifierService?: LxIdentifierService
 }): SessionService {
   const sessionClient = createSessionClient({
     transport: getTransport({
@@ -79,7 +79,7 @@ function getExtensionSessionService(ctx: {
   return createSessionService({
     sessionStorage: provideSessionStorage(),
     deviceIdService: provideDeviceIdService(),
-    uniswapIdentifierService: ctx.uniswapIdentifierService ?? provideUniswapIdentifierService(),
+    lxIdentifierService: ctx.lxIdentifierService ?? provideLxIdentifierService(),
     sessionRepository,
   })
 }

@@ -15,7 +15,7 @@ import { WarningModal } from 'uniswap/src/components/modals/WarningModal/Warning
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
 import { InfoTooltip } from 'uniswap/src/components/tooltip/InfoTooltip'
 import WarningIcon from 'uniswap/src/components/warnings/WarningIcon'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
@@ -52,7 +52,7 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
       isV4HookPoolsEnabled,
     }),
   )
-  const uniswapXEnabled = useFeatureFlag(FeatureFlags.LX)
+  const lxSwapEnabled = useFeatureFlag(FeatureFlags.LX)
   const allowLXOnly = useFeatureFlag(FeatureFlags.AllowLXOnlyRoutesInSwapSettings)
 
   const chainId = useSwapFormStoreDerivedSwapInfo((s) => s.chainId)
@@ -69,7 +69,7 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
       return false
     }
 
-    return p !== TradingApi.ProtocolItems.UNISWAPX_V2
+    return p !== TradingApi.ProtocolItems.LXSWAP_V2
   }).length
 
   // Prevent the user from deselecting all on-chain protocols (AKA only selecting LX)
@@ -107,23 +107,23 @@ export function TradeRoutingPreferenceScreen(): JSX.Element {
         footerContent={
           <DefaultOptionFooterContent
             isLXSupported={isLXSupported}
-            isLXEnabled={uniswapXEnabled}
+            isLXEnabled={lxSwapEnabled}
             isDefault={isDefault}
           />
         }
         onSelect={toggleDefault}
       />
       <HeightAnimator open={!isDefault} animationDisabled={isMobileApp || isMobileWeb}>
-        {uniswapXEnabled && (
+        {lxSwapEnabled && (
           <OptionRow
             active={
-              isLXSupported === false ? false : selectedProtocols.includes(TradingApi.ProtocolItems.UNISWAPX_V2)
+              isLXSupported === false ? false : selectedProtocols.includes(TradingApi.ProtocolItems.LXSWAP_V2)
             }
             elementName={ElementName.SwapRoutingPreferenceLX}
-            title={getProtocolTitle(TradingApi.ProtocolItems.UNISWAPX_V2)}
+            title={getProtocolTitle(TradingApi.ProtocolItems.LXSWAP_V2)}
             cantDisable={onlyOneProtocolSelected}
             disabled={isLXSupported === false}
-            onSelect={() => toggleProtocol(TradingApi.ProtocolItems.UNISWAPX_V2)}
+            onSelect={() => toggleProtocol(TradingApi.ProtocolItems.LXSWAP_V2)}
           />
         )}
         <OptionRow
@@ -169,7 +169,7 @@ function createGetProtocolTitle(ctx: {
   const { isLXSupported, t } = ctx
   return (preference: FrontendSupportedProtocol) => {
     switch (preference) {
-      case TradingApi.ProtocolItems.UNISWAPX_V2: {
+      case TradingApi.ProtocolItems.LXSWAP_V2: {
         if (isLXSupported === false) {
           return <LXTitleInfoTooltip />
         }
@@ -355,7 +355,7 @@ const LXNotSupportedDescription = (): JSX.Element => {
     <Flex cursor="default" gap="$spacing4" alignItems="flex-start" flexDirection="row">
       <WarningIcon color="$neutral2" size="$icon.16" />
       <Text color="$neutral2" variant="body3">
-        {t('swap.settings.routingPreference.option.default.description.uniswapXUnavailable')}
+        {t('swap.settings.routingPreference.option.default.description.lxSwapUnavailable')}
       </Text>
     </Flex>
   )
@@ -392,7 +392,7 @@ function LXInfoTooltipText(props?: { onPress?: () => void }): JSX.Element {
 
   const onPress = useEvent(() => {
     if (isExtensionApp) {
-      openUri({ uri: uniswapUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
+      openUri({ uri: lxUrls.helpArticleUrls.multichainDelegation }).catch(() => {})
     } else {
       handleOnPressLXUnsupported?.()
       handleHideTransactionSettingsModal()
@@ -466,7 +466,7 @@ function LXInfoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
     >
       <LearnMoreLink
         textVariant={isWebPlatform ? 'body4' : 'buttonLabel3'}
-        url={uniswapUrls.helpArticleUrls.multichainDelegation}
+        url={lxUrls.helpArticleUrls.multichainDelegation}
       />
     </WarningModal>
   )

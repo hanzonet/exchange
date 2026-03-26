@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { CONNECTION_PROVIDER_IDS, CONNECTION_PROVIDER_NAMES } from '@luxexchange/lx/src/constants/web3'
 import { CONNECTOR_ICON_OVERRIDE_MAP } from '~/components/Web3Provider/constants'
 import { wagmiConfig } from '~/components/Web3Provider/wagmiConfig'
-import { uniswapWalletConnect } from '~/components/Web3Provider/walletConnect'
+import { lxWalletConnect } from '~/components/Web3Provider/walletConnect'
 import { ConnectionService } from '~/features/wallet/connection/services/IConnectionService'
 import { WalletConnectorMeta } from '~/features/wallet/connection/types/WalletConnectorMeta'
 import { useSignInWithPasskey } from '~/hooks/useSignInWithPasskey'
@@ -58,7 +58,7 @@ export function useLuxMobileConnectionService(): ConnectionService {
         // Initialize Lux Wallet on click instead of in wagmi config
         // to avoid multiple wallet connect sockets being opened
         // and causing issues with messages getting dropped
-        await connect(wagmiConfig, { connector: uniswapWalletConnect() })
+        await connect(wagmiConfig, { connector: lxWalletConnect() })
         return { connected: true }
       },
     }),

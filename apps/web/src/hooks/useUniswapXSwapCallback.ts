@@ -57,9 +57,9 @@ function isV2DutchAuctionOrderSuccess(response: any): response is V2DutchAuction
 const isErrorResponse = (res: Response, order: DutchAuctionOrderResponse): order is DutchAuctionOrderError =>
   res.status < 200 || res.status > 202
 
-const UNISWAP_GATEWAY_DNS_URL = process.env.REACT_APP_UNISWAP_GATEWAY_DNS
-if (UNISWAP_GATEWAY_DNS_URL === undefined) {
-  throw new Error(`UNISWAP_GATEWAY_DNS_URL must be defined environment variables`)
+const LX_GATEWAY_DNS_URL = process.env.REACT_APP_LX_GATEWAY_DNS
+if (LX_GATEWAY_DNS_URL === undefined) {
+  throw new Error(`LX_GATEWAY_DNS_URL must be defined environment variables`)
 }
 
 // getUpdatedNonce queries the LX service for the most up-to-date nonce for a user.
@@ -70,7 +70,7 @@ async function getUpdatedNonce(swapper: string, chainId: number): Promise<BigNum
   try {
     // endpoint fetches current nonce
     const res = await fetch(
-      `${UNISWAP_GATEWAY_DNS_URL}/nonce?address=${getValidAddress({ address: swapper, chainId, withEVMChecksum: false })}&chainId=${chainId}`,
+      `${LX_GATEWAY_DNS_URL}/nonce?address=${getValidAddress({ address: swapper, chainId, withEVMChecksum: false })}&chainId=${chainId}`,
     )
 
     const { nonce } = await res.json()
@@ -266,7 +266,7 @@ export function useLXSwapCallback({
         }
       }
 
-      const res = await fetch(`${UNISWAP_GATEWAY_DNS_URL}/${endpoint}`, {
+      const res = await fetch(`${LX_GATEWAY_DNS_URL}/${endpoint}`, {
         method: 'POST',
         body: JSON.stringify(body),
       })
@@ -275,7 +275,7 @@ export function useLXSwapCallback({
       // TODO(LX): For now, `errorCode` is not always present in the response, so we have to fallback
       // check for status code and perform this type narrowing.
       if (isErrorResponse(res, responseBody)) {
-        sendAnalyticsEvent(InterfaceEventName.UniswapXOrderPostError, {
+        sendAnalyticsEvent(InterfaceEventName.LxSwapOrderPostError, {
           ...formatSwapSignedAnalyticsEventProperties({
             trade,
             allowedSlippage,
@@ -297,7 +297,7 @@ export function useLXSwapCallback({
         throw new Error(`${responseBody.errorCode ?? responseBody.detail ?? 'Unknown error'}`)
       }
       sendAnalyticsEvent(
-        InterfaceEventName.UniswapXOrderSubmitted,
+        InterfaceEventName.LxSwapOrderSubmitted,
         formatSwapSignedAnalyticsEventProperties({
           trade,
           allowedSlippage,

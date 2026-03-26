@@ -1,6 +1,6 @@
 import { getPosition } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
 import { LiquidityService } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { createExpectSingleTransaction } from '~/playwright/anvil/transactions'
 import { expect, getTest } from '~/playwright/fixtures'
@@ -46,7 +46,7 @@ test.describe(
         modifyRequestData,
       })
       await page.route(
-        `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+        `${lxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
         async (route) => {
           await route.fulfill({ path: Mocks.Positions.get_v3_position })
         },
@@ -74,7 +74,7 @@ test.describe(
         modifyRequestData,
       })
       await page.route(
-        `${uniswapUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
+        `${lxUrls.apiBaseUrlV2}/${getPosition.service.typeName}/${getPosition.name}`,
         async (route) => {
           await route.fulfill({ path: Mocks.Positions.get_v4_position })
         },

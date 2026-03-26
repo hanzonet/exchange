@@ -4,7 +4,7 @@ import { QueryKey, queryOptions, UseQueryResult, useQuery } from '@tanstack/reac
 import { DataApiService } from '@luxamm/client-data-api/dist/data/v1/api_connect'
 import { GetPortfolioChartRequest, GetPortfolioChartResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { transformInput, WithoutWalletAccount } from '@luxfi/api'
-import { uniswapPostTransport } from '@luxexchange/lx/src/data/rest/base'
+import { lxPostTransport } from '@luxexchange/lx/src/data/rest/base'
 import { buildAccountAddressesByPlatform } from '@luxexchange/lx/src/data/rest/buildAccountAddressesByPlatform'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
@@ -18,7 +18,7 @@ export type GetPortfolioChartInput = {
   enabled?: boolean
 }
 
-const portfolioChartClient = createPromiseClient(DataApiService, uniswapPostTransport)
+const portfolioChartClient = createPromiseClient(DataApiService, lxPostTransport)
 
 export const getPortfolioHistoricalValueChartQuery = ({
   input,

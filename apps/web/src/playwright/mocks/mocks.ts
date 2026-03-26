@@ -18,10 +18,10 @@ export const Mocks = {
     quotes: path.resolve(__dirname, '../mocks/fiatOnRamp/quotes.json'),
   },
   LX: {
-    quote: path.resolve(__dirname, '../mocks/rest/uniswapX/quote.json'),
-    openOrder: path.resolve(__dirname, '../mocks/rest/uniswapX/open_order.json'),
-    filledOrders: path.resolve(__dirname, '../mocks/rest/uniswapX/filled_orders.json'),
-    expiredOrders: path.resolve(__dirname, '../mocks/rest/uniswapX/expired_orders.json'),
+    quote: path.resolve(__dirname, '../mocks/rest/lxSwap/quote.json'),
+    openOrder: path.resolve(__dirname, '../mocks/rest/lxSwap/open_order.json'),
+    filledOrders: path.resolve(__dirname, '../mocks/rest/lxSwap/filled_orders.json'),
+    expiredOrders: path.resolve(__dirname, '../mocks/rest/lxSwap/expired_orders.json'),
   },
   PortfolioBalances: PortfolioBalancesMocks,
   Token: {

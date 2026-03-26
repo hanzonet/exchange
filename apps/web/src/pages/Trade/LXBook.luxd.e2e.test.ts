@@ -9,7 +9,7 @@
 import { isLuxdMode } from 'playwright/anvil/anvil-manager'
 import { expect, getTest } from 'playwright/fixtures'
 import { stubLuxGatewayEndpoint, stubTradingApiEndpoint } from 'playwright/fixtures/tradingApi'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 import { parseEther, parseUnits, encodeFunctionData, type Address } from 'viem'
 
@@ -97,7 +97,7 @@ test.describe(
 
       // Stub API endpoints
       await stubLuxGatewayEndpoint({ page })
-      await stubTradingApiEndpoint({ page, endpoint: uniswapUrls.tradingApiPaths.quote })
+      await stubTradingApiEndpoint({ page, endpoint: lxUrls.tradingApiPaths.quote })
     })
 
     test('should verify LXBook precompile is accessible', async ({ anvil }) => {
@@ -109,7 +109,7 @@ test.describe(
       const vaultCode = await anvil.getCode({ address: LX.LX_VAULT })
       expect(vaultCode !== undefined).toBe(true)
 
-      // Verify UniswapXFeed precompile (required for mark prices)
+      // Verify LxSwapFeed precompile (required for mark prices)
       const feedCode = await anvil.getCode({ address: LX.LX_FEED })
       expect(feedCode !== undefined).toBe(true)
     })
@@ -152,8 +152,8 @@ test.describe(
       expect(vaultCode !== undefined).toBe(true)
     })
 
-    test('should verify UniswapXFeed provides mark prices', async ({ anvil }) => {
-      // LXBook uses UniswapXFeed for mark price calculations
+    test('should verify LxSwapFeed provides mark prices', async ({ anvil }) => {
+      // LXBook uses LxSwapFeed for mark price calculations
       const feedCode = await anvil.getCode({ address: LX.LX_FEED })
       expect(feedCode !== undefined).toBe(true)
     })

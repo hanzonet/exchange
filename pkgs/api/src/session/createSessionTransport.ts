@@ -40,7 +40,7 @@ export interface CreateSessionTransportOptions {
  *   baseUrl: entryGatewayUrl,
  *   credentials: 'include',
  *   headers: {
- *     'x-request-source': 'uniswap-web',
+ *     'x-request-source': 'lx-web',
  *     'x-uniswap-timezone': Intl.DateTimeFormat().resolvedOptions().timeZone,
  *   },
  * })
@@ -51,7 +51,7 @@ export interface CreateSessionTransportOptions {
  *   baseUrl: config.entryGatewayUrl,
  *   cookie: request.headers.get('Cookie'),
  *   headers: {
- *     'x-request-source': 'uniswap-web',
+ *     'x-request-source': 'lx-web',
  *     'x-uniswap-timezone': timezone,
  *   },
  * })

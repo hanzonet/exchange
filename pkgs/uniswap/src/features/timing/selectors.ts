@@ -1,3 +1,3 @@
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 
-export const selectSwapStartTimestamp = (state: UniswapState): number | undefined => state.timing.swap.startTimestamp
+export const selectSwapStartTimestamp = (state: LxState): number | undefined => state.timing.swap.startTimestamp

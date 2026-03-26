@@ -2,7 +2,7 @@ import { Fragment, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Anchor, AnchorProps, Flex, Text, TouchableArea } from '@luxfi/ui/src'
 import { spacing } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { isMobileWeb } from '@luxfi/utilities/src/platform'
 import { useBooleanState } from '@luxfi/utilities/src/react/useBooleanState'
@@ -61,7 +61,7 @@ export function LegalAndPrivacyMenu({ closeMenu }: { closeMenu?: () => void }) {
           <PrivacyOptions /> {t('common.privacyChoices')}
         </MenuLink>
         <MenuLink onPress={handleOnMenuPress(togglePrivacyPolicy)}>{t('common.privacyPolicy')}</MenuLink>
-        <MenuLink href={uniswapUrls.termsOfServiceUrl} target="_blank">
+        <MenuLink href={lxUrls.termsOfServiceUrl} target="_blank">
           {t('common.termsOfService')}
         </MenuLink>
       </Flex>

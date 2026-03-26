@@ -12,7 +12,7 @@ import {
 } from 'uniswap/src/components/modals/WarningModal/types'
 import { type PollingInterval } from 'uniswap/src/constants/misc'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
-import { useGasFeeQuery } from 'uniswap/src/data/apiClients/uniswapApi/useGasFeeQuery'
+import { useGasFeeQuery } from 'uniswap/src/data/apiClients/lxApi/useGasFeeQuery'
 import { useIsSmartContractAddress } from 'uniswap/src/features/address/useIsSmartContractAddress'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -25,7 +25,7 @@ import { usePollingIntervalByChain } from 'uniswap/src/features/transactions/hoo
 import { useUSDCValueWithStatus } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { type DerivedSendInfo } from 'uniswap/src/features/transactions/send/types'
 import { type DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { type UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { type LxSwapGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { NumberType } from 'utilities/src/format/types'
 import { isWebPlatform } from 'utilities/src/platform'
@@ -331,4 +331,4 @@ export function useGasFeeFormattedDisplayAmounts<T extends string | undefined>({
 }
 
 export const useFormattedLXGasFeeInfo = useFormattedDEXGasFeeInfo
-export const useFormattedUniswapXGasFeeInfo = useFormattedDEXGasFeeInfo
+export const useFormattedLxSwapGasFeeInfo = useFormattedDEXGasFeeInfo

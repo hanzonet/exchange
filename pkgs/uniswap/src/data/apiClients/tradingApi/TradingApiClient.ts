@@ -9,13 +9,13 @@ import {
   Layers,
 } from '@luxexchange/gating'
 import { config } from 'uniswap/src/config'
-import { tradingApiVersionPrefix, uniswapUrls } from 'uniswap/src/constants/urls'
-import { createUniswapFetchClient } from 'uniswap/src/data/apiClients/createUniswapFetchClient'
+import { tradingApiVersionPrefix, lxUrls } from 'uniswap/src/constants/urls'
+import { createLxFetchClient } from 'uniswap/src/data/apiClients/createLxFetchClient'
 import { filterChainIdsByPlatform } from 'uniswap/src/features/chains/utils'
 import { Platform } from 'uniswap/src/features/platforms/types/Platform'
 
-const TradingFetchClient = createUniswapFetchClient({
-  baseUrl: uniswapUrls.tradingApiUrl,
+const TradingFetchClient = createLxFetchClient({
+  baseUrl: lxUrls.tradingApiUrl,
   additionalHeaders: {
     'x-api-key': config.tradingApiKey,
   },
@@ -39,7 +39,7 @@ export enum TradingApiHeaders {
   ChainedActionsEnabled = 'x-chained-actions-enabled',
   UnirouteEnabled = 'x-uniroute-enabled',
   UniroutePulumiEnabled = 'x-uniroute-pulumi-enabled',
-  DisableUniswapInterfaceFees = 'x-disable-uniswap-interface-fees',
+  DisableLxInterfaceFees = 'x-disable-uniswap-interface-fees',
 }
 
 /**
@@ -71,7 +71,7 @@ export const getFeatureFlaggedHeaders = (
     param: EthAsErc20DEXProperties.EthAsErc20DEXEnabled,
     defaultValue: false,
   })
-  const disableUniswapInterfaceFees = getFeatureFlag(FeatureFlags.NoUniswapInterfaceFees)
+  const disableLxInterfaceFees = getFeatureFlag(FeatureFlags.NoLxInterfaceFees)
   switch (tradingApiPath) {
     case TRADING_API_PATHS.quote:
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.UnirouteEnabled, enabled: unirouteEnabled })
@@ -80,8 +80,8 @@ export const getFeatureFlaggedHeaders = (
       addHeaderIfEnabled({ headers, key: TradingApiHeaders.ChainedActionsEnabled, enabled: chainedActionsEnabled })
       addHeaderIfEnabled({
         headers,
-        key: TradingApiHeaders.DisableUniswapInterfaceFees,
-        enabled: disableUniswapInterfaceFees,
+        key: TradingApiHeaders.DisableLxInterfaceFees,
+        enabled: disableLxInterfaceFees,
       })
       break
     case TRADING_API_PATHS.plan:

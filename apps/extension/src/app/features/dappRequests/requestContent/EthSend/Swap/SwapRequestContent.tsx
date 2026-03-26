@@ -137,7 +137,7 @@ export function DEXSwapRequestContent({ typedData }: { typedData: DEXSwapRequest
 
   return (
     <SwapDisplay
-      isUniswapX
+      isLxSwap
       chainId={activeChain}
       inputAmount={inputAmount}
       inputCurrencyInfo={inputCurrencyInfo}

@@ -4,10 +4,10 @@ import { Swap } from 'ui/src/components/icons/Swap'
 import { StepRowProps, StepRowSkeleton } from 'uniswap/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
 import { StepStatus } from 'uniswap/src/components/ConfirmSwapModal/types'
 import { useSecondsUntilDeadline } from 'uniswap/src/components/ConfirmSwapModal/useSecondsUntilDeadline'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
 import {
-  UniswapXPlanSignatureStep,
+  LxSwapPlanSignatureStep,
   LXSignatureStep,
 } from 'uniswap/src/features/transactions/swap/steps/signOrder'
 import {
@@ -26,7 +26,7 @@ type SwapSteps =
   | SwapTransactionStep
   | SwapTransactionStepAsync
   | LXSignatureStep
-  | UniswapXPlanSignatureStep
+  | LxSwapPlanSignatureStep
   | SwapTransactionStepBatched
 
 /**
@@ -41,7 +41,7 @@ export function SwapTransactionStepRow({
   const { t } = useTranslation()
 
   const deadline =
-    step.type === TransactionStepType.LXSignature || step.type === TransactionStepType.UniswapXPlanSignature
+    step.type === TransactionStepType.LXSignature || step.type === TransactionStepType.LxSwapPlanSignature
       ? step.deadline
       : undefined
 
@@ -65,8 +65,8 @@ export function SwapTransactionStepRow({
       learnMore={{
         url:
           step.type === TransactionStepType.SwapTransactionBatched
-            ? uniswapUrls.helpArticleUrls.batchedSwaps
-            : uniswapUrls.helpArticleUrls.howToSwapTokens,
+            ? lxUrls.helpArticleUrls.batchedSwaps
+            : lxUrls.helpArticleUrls.howToSwapTokens,
         text: t('common.learnMoreSwap'),
       }}
       status={status}

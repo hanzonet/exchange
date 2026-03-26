@@ -21,12 +21,12 @@ import {
 import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_pb'
 import { Pair } from '@luxamm/v2-sdk'
 import { useMemo } from 'react'
-import { uniswapPostTransport } from 'uniswap/src/data/rest/base'
+import { lxPostTransport } from 'uniswap/src/data/rest/base'
 import { SerializedToken } from 'uniswap/src/features/tokens/warnings/slice/types'
 import { deserializeToken } from 'uniswap/src/utils/currency'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
-const positionsClient = createPromiseClient(DataApiService, uniswapPostTransport)
+const positionsClient = createPromiseClient(DataApiService, lxPostTransport)
 
 export function useGetPositionsQuery(
   input?: PartialMessage<ListPositionsRequest>,

@@ -1,12 +1,12 @@
 import { providers } from 'ethers'
 import { call, select } from 'typed-redux-saga'
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import { cancelRemoteUniswapXOrder } from 'uniswap/src/features/transactions/slice'
-import { isBridge, isClassic, isUniswapX } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { cancelRemoteLxSwapOrder } from 'uniswap/src/features/transactions/slice'
+import { isBridge, isClassic, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionOriginType,
-  UniswapXOrderDetails,
+  LxSwapOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { getValidAddress } from 'uniswap/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
@@ -17,8 +17,8 @@ import {
 import { attemptReplaceTransaction } from '@luxfi/wallet/src/features/transactions/replaceTransactionSaga'
 import { selectAccounts } from '@luxfi/wallet/src/features/wallet/selectors'
 
-type CancelRemoteUniswapXOrderAction = ReturnType<typeof cancelRemoteUniswapXOrder>
-type SubmitPermit2CancelTransactionParams = CancelRemoteUniswapXOrderAction['payload']
+type CancelRemoteLxSwapOrderAction = ReturnType<typeof cancelRemoteLxSwapOrder>
+type SubmitPermit2CancelTransactionParams = CancelRemoteLxSwapOrderAction['payload']
 
 // Note, transaction cancellation on Ethereum is inherently flaky
 // The best we can do is replace the transaction and hope the original isn't mined first
@@ -29,12 +29,12 @@ export function* attemptCancelTransaction(
 ) {
   if (isClassic(transaction) || isBridge(transaction)) {
     yield* call(attemptReplaceTransaction, { transaction, newTxRequest: cancelRequest, isCancellation: true })
-  } else if (isUniswapX(transaction)) {
+  } else if (isLxSwap(transaction)) {
     yield* call(cancelOrder, transaction, cancelRequest)
   }
 }
 
-function* cancelOrder(order: UniswapXOrderDetails, cancelRequest: providers.TransactionRequest) {
+function* cancelOrder(order: LxSwapOrderDetails, cancelRequest: providers.TransactionRequest) {
   yield* call(submitPermit2CancelTransaction, {
     chainId: order.chainId,
     address: order.from,
@@ -46,7 +46,7 @@ function* cancelOrder(order: UniswapXOrderDetails, cancelRequest: providers.Tran
 /**
  * Submits a Permit2 nonce invalidation transaction to cancel a LX order.
  * Used by both the local order cancel flow (via cancelOrder) and the remote order cancel flow
- * (via cancelRemoteUniswapXOrder action) for orders that only exist in the GraphQL activity feed.
+ * (via cancelRemoteLxSwapOrder action) for orders that only exist in the GraphQL activity feed.
  */
 function* submitPermit2CancelTransaction(params: SubmitPermit2CancelTransactionParams) {
   const { chainId, address, orderHash, cancelRequest } = params
@@ -97,6 +97,6 @@ function* submitPermit2CancelTransaction(params: SubmitPermit2CancelTransactionP
  * (not in local Redux state). This bypasses the cancelTransaction reducer + watcher pipeline
  * and directly submits the Permit2 nonce invalidation transaction.
  */
-export function* attemptCancelRemoteUniswapXOrder({ payload }: CancelRemoteUniswapXOrderAction) {
+export function* attemptCancelRemoteLxSwapOrder({ payload }: CancelRemoteLxSwapOrderAction) {
   yield* call(submitPermit2CancelTransaction, payload)
 }

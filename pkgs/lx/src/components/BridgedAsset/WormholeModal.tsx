@@ -19,7 +19,7 @@ import { iconSizes } from 'ui/src/theme'
 import { BaseModalProps } from 'uniswap/src/components/BridgedAsset/BridgedAssetModal'
 import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
 import { Modal } from 'uniswap/src/components/modals/Modal'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { getChainLabel } from 'uniswap/src/features/chains/utils'
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
 import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
@@ -54,7 +54,7 @@ export function WormholeModal({
   const bridgedWithdrawalInfo = currencyInfo?.bridgedWithdrawalInfo
 
   const onPressLearnMore = async (): Promise<void> => {
-    await openUri({ uri: uniswapUrls.helpArticleUrls.bridgedAssets })
+    await openUri({ uri: lxUrls.helpArticleUrls.bridgedAssets })
     onClose()
   }
 

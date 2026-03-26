@@ -51,14 +51,14 @@ import { AnimatedFlex } from '@luxfi/ui/src/components/layout/AnimatedFlex'
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
 import { spacing } from '@luxfi/ui/src/theme'
 import { buildWrappedUrl } from 'uniswap/src/components/banners/shared/utils'
-import { UniswapWrapped2025Banner } from 'uniswap/src/components/banners/UniswapWrapped2025Banner/UniswapWrapped2025Banner'
+import { LxWrapped2025Banner } from 'uniswap/src/components/banners/LxWrapped2025Banner/LxWrapped2025Banner'
 import { NFTS_TAB_DATA_DEPENDENCIES } from 'uniswap/src/components/nfts/constants'
-import { UNISWAP_WEB_URL } from 'uniswap/src/constants/urls'
+import { LX_WEB_URL } from 'uniswap/src/constants/urls'
 import { getPortfolioQuery } from 'uniswap/src/data/rest/getPortfolio'
 import { getListTransactionsQuery } from 'uniswap/src/data/rest/listTransactions'
 import { AccountType } from 'uniswap/src/features/accounts/types'
-import { selectHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/selectors'
-import { setHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/slice'
+import { selectHasDismissedLxWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/selectors'
+import { setHasDismissedLxWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/slice'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { useSelectAddressHasNotifications } from 'uniswap/src/features/notifications/slice/hooks'
 import { setNotificationStatus } from 'uniswap/src/features/notifications/slice/slice'
@@ -132,7 +132,7 @@ function HomeScreen({
 
   const isBottomTabsEnabled = useFeatureFlag(FeatureFlags.BottomTabs)
   const isPnLEnabled = useFeatureFlag(FeatureFlags.ProfitLoss)
-  const isWrappedBannerEnabled = useFeatureFlag(FeatureFlags.UniswapWrapped2025)
+  const isWrappedBannerEnabled = useFeatureFlag(FeatureFlags.LxWrapped2025)
   const isNotificationServiceEnabledFlag = useFeatureFlag(FeatureFlags.NotificationService)
   const isNotificationServiceEnabled =
     getIsNotificationServiceLocalOverrideEnabled() || isNotificationServiceEnabledFlag

@@ -87,7 +87,7 @@ function getInjectedConnectors({
       ) {
         // Special-case: Ignore coinbase eip6963-injected connector and coinbase solana wallet adapter; CB is selected separately / not treated as an injector since it can always be accessed via the CB SDK connector.
         return false
-      } else if (wallet.id === CONNECTION_PROVIDER_IDS.UNISWAP_EXTENSION_RDNS && !isEmbeddedWalletEnabled) {
+      } else if (wallet.id === CONNECTION_PROVIDER_IDS.LX_EXTENSION_RDNS && !isEmbeddedWalletEnabled) {
         // Special-case: Ignore the Uniswap Extension injection here if it's being displayed separately. This logic is updated with Embedded Wallet support where the Uniswap Extension is displayed with other connectors
         return false
       } else if (wallet.id === CONNECTION_PROVIDER_IDS.PORTO_CONNECTOR_ID) {
@@ -98,9 +98,9 @@ function getInjectedConnectors({
     })
     .sort((a, b) => {
       // prioritize uniswap extension over other injected connectors
-      if (a.id === CONNECTION_PROVIDER_IDS.UNISWAP_EXTENSION_RDNS) {
+      if (a.id === CONNECTION_PROVIDER_IDS.LX_EXTENSION_RDNS) {
         return -1
-      } else if (b.id === CONNECTION_PROVIDER_IDS.UNISWAP_EXTENSION_RDNS) {
+      } else if (b.id === CONNECTION_PROVIDER_IDS.LX_EXTENSION_RDNS) {
         return 1
       } else {
         return 0

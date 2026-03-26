@@ -3,7 +3,7 @@ import { Text } from '@luxfi/ui/src'
 import { WarningSeverity } from '@luxexchange/lx/src/components/modals/WarningModal/types'
 import { WarningModal } from '@luxexchange/lx/src/components/modals/WarningModal/WarningModal'
 import { LearnMoreLink } from '@luxexchange/lx/src/components/text/LearnMoreLink'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { ModalName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { TestID } from '@luxexchange/lx/src/test/fixtures/testIDs'
 
@@ -33,7 +33,7 @@ export function ContractAddressExplainerModal({
             display="inline"
             textColor="$neutral1"
             textVariant="buttonLabel3"
-            url={uniswapUrls.helpArticleUrls.contractAddressExplainer}
+            url={lxUrls.helpArticleUrls.contractAddressExplainer}
           />
         </>
       }

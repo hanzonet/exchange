@@ -1,32 +1,32 @@
-import { UniswapState } from 'uniswap/src/state/uniswapReducer'
+import { LxState } from 'uniswap/src/state/lxReducer'
 
-export const selectHasViewedBridgingBanner = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasViewedBridgingBanner === true
+export const selectHasViewedBridgingBanner = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasViewedBridgingBanner === true
 
-export const selectHasDismissedBridgingWarning = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasDismissedBridgingWarning === true
+export const selectHasDismissedBridgingWarning = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasDismissedBridgingWarning === true
 
-export const selectHasDismissedLowNetworkTokenWarning = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasDismissedLowNetworkTokenWarning === true
+export const selectHasDismissedLowNetworkTokenWarning = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasDismissedLowNetworkTokenWarning === true
 
-export const selectHasViewedContractAddressExplainer = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasViewedContractAddressExplainer === true
+export const selectHasViewedContractAddressExplainer = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasViewedContractAddressExplainer === true
 
-export const selectHasShownMismatchToast = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasShownMismatchToast === true
+export const selectHasShownMismatchToast = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasShownMismatchToast === true
 
 /** Returns true if user has seen the modal globally (when disconnected) */
-export const selectHasSeenToucanIntroModal = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasSeenToucanIntroModal === true
+export const selectHasSeenToucanIntroModal = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasSeenToucanIntroModal === true
 
 /** Returns true if user has seen the modal for a specific wallet */
-export const selectHasSeenToucanIntroModalForWallet = (state: UniswapState, walletAddress: string): boolean =>
-  state.uniswapBehaviorHistory.toucanIntroModalSeenByWallet?.[walletAddress.toLowerCase()] === true
+export const selectHasSeenToucanIntroModalForWallet = (state: LxState, walletAddress: string): boolean =>
+  state.lxBehaviorHistory.toucanIntroModalSeenByWallet?.[walletAddress.toLowerCase()] === true
 
-export const selectHasDismissedUniswapWrapped2025Banner = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasDismissedUniswapWrapped2025Banner === true
+export const selectHasDismissedLxWrapped2025Banner = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasDismissedLxWrapped2025Banner === true
 
-export const selectHasDismissedCrosschainSwapsPromoBanner = (state: UniswapState): boolean =>
-  state.uniswapBehaviorHistory.hasDismissedCrosschainSwapsPromoBanner === true
+export const selectHasDismissedCrosschainSwapsPromoBanner = (state: LxState): boolean =>
+  state.lxBehaviorHistory.hasDismissedCrosschainSwapsPromoBanner === true
 
-export const selectHasDismissedLuxWrapped2025Banner = selectHasDismissedUniswapWrapped2025Banner
+export const selectHasDismissedLuxWrapped2025Banner = selectHasDismissedLxWrapped2025Banner

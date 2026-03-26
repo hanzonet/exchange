@@ -7,16 +7,16 @@ import { HandledTransactionInterrupt } from 'uniswap/src/features/transactions/e
 import { addTransaction } from 'uniswap/src/features/transactions/slice'
 import {
   HandleSignatureStepParams,
-  HandleUniswapXPlanSignatureStepParams,
+  HandleLxSwapPlanSignatureStepParams,
 } from 'uniswap/src/features/transactions/steps/types'
 import { LXSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
-import { UniswapXTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { LxSwapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
 import { slippageToleranceToPercent } from 'uniswap/src/features/transactions/swap/utils/format'
 import {
   QueuedOrderStatus,
   TransactionOriginType,
   TransactionStatus,
-  UniswapXOrderDetails,
+  LxSwapOrderDetails,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
 import { popupRegistry } from '~/components/Popups/registry'
 import { PopupType } from '~/components/Popups/types'
@@ -29,7 +29,7 @@ import {
 } from '~/state/sagas/transactions/utils'
 
 interface HandleLXSignatureStepParams extends HandleSignatureStepParams<LXSignatureStep> {
-  trade: UniswapXTrade
+  trade: LxSwapTrade
   analytics: SwapTradeBaseProperties
 }
 
@@ -84,7 +84,7 @@ export function* handleLXSignatureStep(params: HandleLXSignatureStepParams) {
   try {
     yield* call(TradingApiClient.submitOrder, { signature, quote, routing })
   } catch (error) {
-    sendAnalyticsEvent(InterfaceEventName.UniswapXOrderPostError, {
+    sendAnalyticsEvent(InterfaceEventName.LxSwapOrderPostError, {
       ...formatSwapSignedAnalyticsEventProperties(analyticsParams),
       detail: error.message,
     })
@@ -92,10 +92,10 @@ export function* handleLXSignatureStep(params: HandleLXSignatureStepParams) {
   }
 
   sendAnalyticsEvent(
-    InterfaceEventName.UniswapXOrderSubmitted,
+    InterfaceEventName.LxSwapOrderSubmitted,
     formatSwapSignedAnalyticsEventProperties(analyticsParams),
   )
-  const transaction: UniswapXOrderDetails = {
+  const transaction: LxSwapOrderDetails = {
     // Use orderHash as the ID to ensure consistency with orders fetched from remote
     // This prevents duplicate orders when the same order is fetched from GraphQL
     id: orderHash,
@@ -117,7 +117,7 @@ export function* handleLXSignatureStep(params: HandleLXSignatureStepParams) {
   popupRegistry.addPopup({ type: PopupType.Order, orderHash }, orderHash)
 }
 
-export function* handleUniswapXPlanSignatureStep(params: HandleUniswapXPlanSignatureStepParams): SagaGenerator<string> {
+export function* handleLxSwapPlanSignatureStep(params: HandleLxSwapPlanSignatureStepParams): SagaGenerator<string> {
   const { step, analytics } = params
 
   // Check before requiring user to sign an expired deadline

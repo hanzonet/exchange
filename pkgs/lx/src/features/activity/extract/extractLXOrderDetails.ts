@@ -11,15 +11,15 @@ import {
   TransactionOriginType,
   TransactionType,
 } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { remoteOrderStatusToLocalTxStatus } from 'uniswap/src/features/transactions/utils/uniswapX.utils'
+import { remoteOrderStatusToLocalTxStatus } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
 import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
 
-export function extractUniswapXOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
-  if (transaction?.details.__typename !== TransactionDetailsType.UniswapXOrder) {
+export function extractLxSwapOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
+  if (transaction?.details.__typename !== TransactionDetailsType.LxSwapOrder) {
     return null
   }
 
-  const typeInfo = parseUniswapXOrderTransaction(transaction)
+  const typeInfo = parseLxSwapOrderTransaction(transaction)
   const routing =
     transaction.details.swapOrderType === GraphQLApi.SwapOrderType.Limit
       ? TradingApi.Routing.DUTCH_LIMIT
@@ -45,10 +45,10 @@ export function extractUniswapXOrderDetails(transaction: TransactionListQueryRes
   }
 }
 
-export default function parseUniswapXOrderTransaction(
+export default function parseLxSwapOrderTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,
 ): ConfirmedSwapTransactionInfo | null {
-  if (transaction.details.__typename !== TransactionDetailsType.UniswapXOrder) {
+  if (transaction.details.__typename !== TransactionDetailsType.LxSwapOrder) {
     return null
   }
 

@@ -6,8 +6,8 @@ import { Flex, Text, Tooltip } from 'ui/src'
 import { Snowflake } from 'ui/src/components/icons/Snowflake'
 import { zIndexes } from 'ui/src/theme'
 import { WRAPPED_PATH } from 'uniswap/src/components/banners/shared/utils'
-import { selectHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/selectors'
-import { setHasDismissedUniswapWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/slice'
+import { selectHasDismissedLxWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/selectors'
+import { setHasDismissedLxWrapped2025Banner } from 'uniswap/src/features/behaviorHistory/slice'
 import { ElementName } from 'uniswap/src/features/telemetry/constants'
 import Trace from 'uniswap/src/features/telemetry/Trace'
 import { isMobileWeb } from 'utilities/src/platform'
@@ -35,26 +35,26 @@ const snowflakeHoverKeyframes = `
   }
 `
 
-export function UniswapWrappedEntry() {
-  const isUniswapWrapped2025Enabled = useFeatureFlag(FeatureFlags.UniswapWrapped2025)
-  const isDismissed = useAppSelector(selectHasDismissedUniswapWrapped2025Banner)
+export function LxWrappedEntry() {
+  const isLxWrapped2025Enabled = useFeatureFlag(FeatureFlags.LxWrapped2025)
+  const isDismissed = useAppSelector(selectHasDismissedLxWrapped2025Banner)
   const { t } = useTranslation()
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
 
   const handlePress = useCallback(() => {
-    dispatch(setHasDismissedUniswapWrapped2025Banner(true))
+    dispatch(setHasDismissedLxWrapped2025Banner(true))
     navigate(WRAPPED_PATH)
   }, [dispatch, navigate])
 
   return (
-    isUniswapWrapped2025Enabled &&
+    isLxWrapped2025Enabled &&
     isDismissed && (
       <>
         <style>{snowflakeHoverKeyframes}</style>
         <Tooltip placement="bottom" offset={{ mainAxis: 8 }} delay={{ open: 300 }}>
           <Tooltip.Trigger>
-            <Trace logPress element={ElementName.UniswapWrappedNavbarButton}>
+            <Trace logPress element={ElementName.LxWrappedNavbarButton}>
               <Text
                 className="snowflake-icon"
                 color="$neutral2"
@@ -70,10 +70,10 @@ export function UniswapWrappedEntry() {
             <Tooltip.Arrow />
             <Flex centered>
               <Text variant="buttonLabel4" color="$accent1">
-                {t('home.banner.uniswapWrapped2025.title')}
+                {t('home.banner.lxWrapped2025.title')}
               </Text>
               <Text variant="body4" color="$neutral2">
-                {t('home.banner.uniswapWrapped2025.subtitle')}
+                {t('home.banner.lxWrapped2025.subtitle')}
               </Text>
             </Flex>
           </Tooltip.Content>

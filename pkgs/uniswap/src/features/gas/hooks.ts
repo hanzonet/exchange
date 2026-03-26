@@ -1,5 +1,5 @@
 import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
-import { type FormattedUniswapXGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
+import { type FormattedLxSwapGasFeeInfo, type GasFeeResult, type GasStrategy } from '@luxexchange/api'
 import { type GasStrategyType, useStatsigClientStatus } from '@luxexchange/gating'
 import { BigNumber, type providers } from 'ethers/lib/ethers'
 import { useMemo } from 'react'
@@ -12,7 +12,7 @@ import {
 } from 'uniswap/src/components/modals/WarningModal/types'
 import { type PollingInterval } from 'uniswap/src/constants/misc'
 import { nativeOnChain } from 'uniswap/src/constants/tokens'
-import { useGasFeeQuery } from 'uniswap/src/data/apiClients/uniswapApi/useGasFeeQuery'
+import { useGasFeeQuery } from 'uniswap/src/data/apiClients/lxApi/useGasFeeQuery'
 import { useIsSmartContractAddress } from 'uniswap/src/features/address/useIsSmartContractAddress'
 import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -25,7 +25,7 @@ import { usePollingIntervalByChain } from 'uniswap/src/features/transactions/hoo
 import { useUSDCValueWithStatus } from 'uniswap/src/features/transactions/hooks/useUSDCPriceWrapper'
 import { type DerivedSendInfo } from 'uniswap/src/features/transactions/send/types'
 import { type DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { type UniswapXGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { type LxSwapGasBreakdown } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { CurrencyField } from 'uniswap/src/types/currency'
 import { NumberType } from 'utilities/src/format/types'
 import { isWebPlatform } from 'utilities/src/platform'
@@ -51,7 +51,7 @@ export function useActiveGasStrategy(chainId: number | undefined, type: GasStrat
  * We use the `displayLimitInflationFactor` to calculate the display value, which can be
  * different from the `limitInflationFactor` so that the gas fee displayed is more accurate.
  *
- * More info: https://www.notion.so/uniswaplabs/Gas-Limit-Experiment-14ac52b2548b80ea932ff2edfdab6683
+ * More info: https://www.notion.so/luxfi/Gas-Limit-Experiment-14ac52b2548b80ea932ff2edfdab6683
  *
  * @param gasFee - The gas fee value to convert.
  * @param gasStrategy - The gas strategy used to calculate the gas fee.
@@ -135,24 +135,24 @@ export function useUSDCurrencyAmountOfGasFee(
   return value
 }
 
-export function useFormattedUniswapXGasFeeInfo(
-  uniswapXGasBreakdown: UniswapXGasBreakdown | undefined,
+export function useFormattedLxSwapGasFeeInfo(
+  lxSwapGasBreakdown: LxSwapGasBreakdown | undefined,
   chainId: UniverseChainId,
-): FormattedUniswapXGasFeeInfo | undefined {
+): FormattedLxSwapGasFeeInfo | undefined {
   const { convertFiatAmountFormatted } = useLocalizationContext()
 
-  const { value: approvalCostUsd } = useUSDValueOfGasFee(chainId, uniswapXGasBreakdown?.approvalCost)
+  const { value: approvalCostUsd } = useUSDValueOfGasFee(chainId, lxSwapGasBreakdown?.approvalCost)
 
   return useMemo(() => {
-    if (!uniswapXGasBreakdown) {
+    if (!lxSwapGasBreakdown) {
       return undefined
     }
-    const { approvalCost, inputTokenSymbol } = uniswapXGasBreakdown
+    const { approvalCost, inputTokenSymbol } = lxSwapGasBreakdown
     const approvalCostAmount = Number(approvalCost)
     const hasApprovalCost = Number.isFinite(approvalCostAmount) && approvalCostAmount > 0
     // If this swap was done via classic routing, the total gas fee would have been approval gas fee + classic swap gas fee.
     const preSavingsGasCostUsd =
-      Number(approvalCostUsd ?? 0) + Number(uniswapXGasBreakdown.classicGasUseEstimateUSD ?? 0)
+      Number(approvalCostUsd ?? 0) + Number(lxSwapGasBreakdown.classicGasUseEstimateUSD ?? 0)
     const preSavingsGasFeeFormatted = convertFiatAmountFormatted(preSavingsGasCostUsd, NumberType.FiatGasPrice)
 
     // Swap submission will always cost 0, since it's not an on-chain tx.
@@ -166,7 +166,7 @@ export function useFormattedUniswapXGasFeeInfo(
       swapFeeFormatted,
       inputTokenSymbol,
     }
-  }, [uniswapXGasBreakdown, approvalCostUsd, convertFiatAmountFormatted])
+  }, [lxSwapGasBreakdown, approvalCostUsd, convertFiatAmountFormatted])
 }
 
 export function useGasFeeHighRelativeToValue(

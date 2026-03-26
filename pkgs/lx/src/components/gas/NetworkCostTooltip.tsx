@@ -5,7 +5,7 @@ import { DEX } from 'ui/src/components/icons/DEX'
 import { DEXText } from 'ui/src/components/text/DEXText'
 import { NetworkLogo } from '@luxexchange/lx/src/components/CurrencyLogo/NetworkLogo'
 import { TransactionDetailsTooltip as Tooltip } from '@luxexchange/lx/src/components/TransactionDetailsTooltip'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { getChainInfo } from '@luxexchange/lx/src/features/chains/chainInfo'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
 
@@ -19,8 +19,8 @@ export function NetworkCostTooltip({
   const { t } = useTranslation()
 
   const learnMoreUrl = includesDelegation
-    ? uniswapUrls.helpArticleUrls.smartWalletDelegation
-    : uniswapUrls.helpArticleUrls.networkFeeInfo
+    ? lxUrls.helpArticleUrls.smartWalletDelegation
+    : lxUrls.helpArticleUrls.networkFeeInfo
   const text = includesDelegation
     ? t('smartWallet.banner.networkCost', { chainName: getChainInfo(chainId).label })
     : t('transaction.networkCost.description')
@@ -69,7 +69,7 @@ export function NetworkCostTooltipDEX({
         )}
       </Tooltip.Content>
       <Tooltip.Separator />
-      <Tooltip.Description learnMoreUrl={uniswapUrls.helpArticleUrls.uniswapXInfo} text={t('uniswapX.cost')} />
+      <Tooltip.Description learnMoreUrl={lxUrls.helpArticleUrls.lxSwapInfo} text={t('lxSwap.cost')} />
     </Tooltip.Outer>
   )
 }

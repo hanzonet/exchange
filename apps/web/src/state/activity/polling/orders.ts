@@ -2,7 +2,7 @@ import { TradeType } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { useEffect, useRef, useState } from 'react'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { isL2ChainId } from '@luxexchange/lx/src/features/chains/utils'
 import { InterfaceEventName } from '@luxexchange/lx/src/features/telemetry/constants'
 import { sendAnalyticsEvent } from '@luxexchange/lx/src/features/telemetry/send'
@@ -68,7 +68,7 @@ export async function fetchOpenLimitOrders(params: {
   account?: string
   orderHashes?: string[]
 }): Promise<DEXBackendOrder[]> {
-  let url = `${LUX_GATEWAY_DNS_URL}${uniswapUrls.limitOrderStatusesPath}`
+  let url = `${LUX_GATEWAY_DNS_URL}${lxUrls.limitOrderStatusesPath}`
   const queryParams: string[] = []
 
   if (params.account) {

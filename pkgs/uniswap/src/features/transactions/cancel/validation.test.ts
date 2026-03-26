@@ -1,11 +1,11 @@
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
 import { validateOrdersForCancellation } from 'uniswap/src/features/transactions/cancel/validation'
-import { UniswapXOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { uniswapXOrderDetails } from 'uniswap/src/test/fixtures'
+import { LxSwapOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { lxSwapOrderDetails } from 'uniswap/src/test/fixtures'
 
 describe('validateOrdersForCancellation', () => {
-  const createMockOrder = (overrides?: Partial<UniswapXOrderDetails>): UniswapXOrderDetails =>
-    uniswapXOrderDetails(overrides ?? {}) as UniswapXOrderDetails
+  const createMockOrder = (overrides?: Partial<LxSwapOrderDetails>): LxSwapOrderDetails =>
+    lxSwapOrderDetails(overrides ?? {}) as LxSwapOrderDetails
 
   describe('empty orders', () => {
     it('should return error for empty array', () => {

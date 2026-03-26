@@ -4,7 +4,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
  * Used to store persisted info about a users interactions with UI.
  * We use this to show conditional UI, usually only for the first time a user views a new feature.
  */
-export interface UniswapBehaviorHistoryState {
+export interface LxBehaviorHistoryState {
   hasViewedBridgingBanner?: boolean
   hasDismissedBridgingWarning?: boolean
   hasDismissedLowNetworkTokenWarning?: boolean
@@ -32,11 +32,11 @@ export interface UniswapBehaviorHistoryState {
   toucanIntroModalSeenByWallet?: {
     [walletAddress: string]: boolean
   }
-  hasDismissedUniswapWrapped2025Banner?: boolean
+  hasDismissedLxWrapped2025Banner?: boolean
   hasDismissedCrosschainSwapsPromoBanner?: boolean
 }
 
-export const initialUniswapBehaviorHistoryState: UniswapBehaviorHistoryState = {
+export const initialLxBehaviorHistoryState: LxBehaviorHistoryState = {
   hasViewedBridgingBanner: false,
   hasDismissedBridgingWarning: false,
   hasDismissedLowNetworkTokenWarning: false,
@@ -54,13 +54,13 @@ export const initialUniswapBehaviorHistoryState: UniswapBehaviorHistoryState = {
   hasShownMismatchToast: false,
   hasShownSmartWalletNudge: false,
   hasSeenToucanIntroModal: false,
-  hasDismissedUniswapWrapped2025Banner: false,
+  hasDismissedLxWrapped2025Banner: false,
   hasDismissedCrosschainSwapsPromoBanner: false,
 }
 
 const slice = createSlice({
-  name: 'uniswapBehaviorHistory',
-  initialState: initialUniswapBehaviorHistoryState,
+  name: 'lxBehaviorHistory',
+  initialState: initialLxBehaviorHistoryState,
   reducers: {
     setHasViewedBridgingBanner: (state, action: PayloadAction<boolean>) => {
       state.hasViewedBridgingBanner = action.payload
@@ -103,8 +103,8 @@ const slice = createSlice({
       state.unichainPromotion.bridgingAnimationSeen = action.payload
     },
     // Should only be used for testing
-    resetUniswapBehaviorHistory: (_state, _action: PayloadAction) => {
-      return initialUniswapBehaviorHistoryState
+    resetLxBehaviorHistory: (_state, _action: PayloadAction) => {
+      return initialLxBehaviorHistoryState
     },
     setHasShownMismatchToast: (state, action: PayloadAction<boolean>) => {
       state.hasShownMismatchToast = action.payload
@@ -126,8 +126,8 @@ const slice = createSlice({
     setHasDismissedBridgedAssetsBannerV2: (state, action: PayloadAction<boolean>) => {
       state.hasDismissedBridgedAssetsBannerV2 = action.payload
     },
-    setHasDismissedUniswapWrapped2025Banner: (state, action: PayloadAction<boolean>) => {
-      state.hasDismissedUniswapWrapped2025Banner = action.payload
+    setHasDismissedLxWrapped2025Banner: (state, action: PayloadAction<boolean>) => {
+      state.hasDismissedLxWrapped2025Banner = action.payload
     },
     setHasDismissedCrosschainSwapsPromoBanner: (state, action: PayloadAction<boolean>) => {
       state.hasDismissedCrosschainSwapsPromoBanner = action.payload
@@ -146,7 +146,7 @@ export const {
   setHasSeenBridgingTooltip,
   setIsFirstUnichainBridgeSelection,
   setHasSeenBridgingAnimation,
-  resetUniswapBehaviorHistory,
+  resetLxBehaviorHistory,
   setHasViewedContractAddressExplainer,
   setHasShownMismatchToast,
   setEmbeddedWalletGraduateCardDismissed,
@@ -154,8 +154,8 @@ export const {
   setHasSeenToucanIntroModal,
   setToucanIntroModalSeenByWallet,
   setHasDismissedBridgedAssetsBannerV2,
-  setHasDismissedUniswapWrapped2025Banner,
+  setHasDismissedLxWrapped2025Banner,
   setHasDismissedCrosschainSwapsPromoBanner,
 } = slice.actions
 
-export const uniswapBehaviorHistoryReducer = slice.reducer
+export const lxBehaviorHistoryReducer = slice.reducer

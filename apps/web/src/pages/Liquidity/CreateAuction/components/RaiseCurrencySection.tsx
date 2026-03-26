@@ -4,7 +4,7 @@ import { Flex, Text } from '@luxfi/ui/src'
 import { CheckCircleFilled } from '@luxfi/ui/src/components/icons/CheckCircleFilled'
 import { QuestionInCircleFilled } from '@luxfi/ui/src/components/icons/QuestionInCircleFilled'
 import { iconSizes } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
 import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
 import { UniverseChainId } from 'uniswap/src/features/chains/types'
@@ -126,7 +126,7 @@ export function RaiseCurrencySection({
         </Flex>
         <Flex row gap="$spacing4" alignItems="center">
           <QuestionInCircleFilled size="$icon.16" color="$neutral2" />
-          <ExternalLink href={uniswapUrls.helpUrl}>
+          <ExternalLink href={lxUrls.helpUrl}>
             <Text variant="body3" color="$neutral2" textDecorationLine="underline" textDecorationStyle="dashed">
               {t('toucan.createAuction.step.configureAuction.raiseCurrency.helpLink')}
             </Text>

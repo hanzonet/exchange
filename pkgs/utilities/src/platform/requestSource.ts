@@ -6,15 +6,15 @@ import { isAndroid, isExtensionApp, isIOS } from '@luxfi/utilities/src/platform'
  */
 function getRequestSource(): string {
   if (isIOS) {
-    return 'uniswap-ios'
+    return 'lx-ios'
   }
   if (isAndroid) {
-    return 'uniswap-android'
+    return 'lx-android'
   }
   if (isExtensionApp) {
-    return 'uniswap-extension'
+    return 'lx-extension'
   }
-  return 'uniswap-web'
+  return 'lx-web'
 }
 
 export const REQUEST_SOURCE = getRequestSource()

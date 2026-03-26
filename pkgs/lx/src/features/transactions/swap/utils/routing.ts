@@ -5,18 +5,18 @@ import { UnexpectedTransactionStateError } from 'uniswap/src/features/transactio
 import { type SwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
 import { type ValidatedTransactionRequest } from 'uniswap/src/features/transactions/types/transactionRequests'
 
-export const UNISWAPX_ROUTING_VARIANTS = [
+export const LXSWAP_ROUTING_VARIANTS = [
   TradingApi.Routing.DUTCH_V2,
   TradingApi.Routing.DUTCH_V3,
   TradingApi.Routing.DUTCH_LIMIT,
   TradingApi.Routing.PRIORITY,
 ] as const
-type UniswapXRouting = (typeof UNISWAPX_ROUTING_VARIANTS)[number]
+type LxSwapRouting = (typeof LXSWAP_ROUTING_VARIANTS)[number]
 
-export function isUniswapX<T extends { routing: TradingApi.Routing }>(
+export function isLxSwap<T extends { routing: TradingApi.Routing }>(
   obj: T,
-): obj is Extract<T, { routing: UniswapXRouting }> {
-  return UNISWAPX_ROUTING_VARIANTS.includes(obj.routing as UniswapXRouting)
+): obj is Extract<T, { routing: LxSwapRouting }> {
+  return LXSWAP_ROUTING_VARIANTS.includes(obj.routing as LxSwapRouting)
 }
 
 export function isClassic<T extends { routing: TradingApi.Routing }>(
@@ -77,7 +77,7 @@ export function isMultiChainGasQuote(quote: { routing: TradingApi.Routing } | un
 
 // Returns the first EVM txRequest in a SwapTxAndGasInfo object if it exists, otherwise undefined
 export function getEVMTxRequest(swapTxContext: SwapTxAndGasInfo): ValidatedTransactionRequest | undefined {
-  if (isJupiter(swapTxContext) || isUniswapX(swapTxContext)) {
+  if (isJupiter(swapTxContext) || isLxSwap(swapTxContext)) {
     return undefined
   }
   return swapTxContext.txRequests?.[0]

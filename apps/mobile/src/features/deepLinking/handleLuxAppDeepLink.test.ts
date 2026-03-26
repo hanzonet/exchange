@@ -34,7 +34,7 @@ const stateWithAccounts = {
   },
 }
 
-describe('handleUniswapAppDeepLink', () => {
+describe('handleLxAppDeepLink', () => {
   describe('Token deep links', () => {
     it('should handle token share with contract address', () => {
       const path = `tokens/ethereum/${SAMPLE_CONTRACT_ADDRESS}`
@@ -307,7 +307,7 @@ describe('handleUniswapAppDeepLink', () => {
       const path = `portfolio/${externalAddress}`
       const url = `https://app.uniswap.org/${path}`
 
-      return expectSaga(handleUniswapAppDeepLink, {
+      return expectSaga(handleLxAppDeepLink, {
         path,
         url,
         linkSource: LinkSource.Share,

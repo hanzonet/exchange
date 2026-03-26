@@ -1,5 +1,5 @@
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { CurrencyAmount, Token, ChainId as UniswapSDKChainId } from '@luxamm/sdk-core'
+import { CurrencyAmount, Token, ChainId as LxSDKChainId } from '@luxamm/sdk-core'
 import type { GraphQLApi } from '@luxexchange/api'
 import { SwapConfigKey } from '@luxexchange/gating'
 import type { ImageSourcePropType } from 'react-native'
@@ -11,25 +11,25 @@ import { NonEmptyArray } from 'utilities/src/primitives/array'
 import { Chain as WagmiChain } from 'wagmi/chains'
 
 export enum UniverseChainId {
-  Mainnet = UniswapSDKChainId.MAINNET,
-  ArbitrumOne = UniswapSDKChainId.ARBITRUM_ONE,
-  Avalanche = UniswapSDKChainId.AVALANCHE,
-  Base = UniswapSDKChainId.BASE,
-  Blast = UniswapSDKChainId.BLAST,
-  Bnb = UniswapSDKChainId.BNB,
-  Celo = UniswapSDKChainId.CELO,
-  Monad = UniswapSDKChainId.MONAD,
-  Optimism = UniswapSDKChainId.OPTIMISM,
-  Polygon = UniswapSDKChainId.POLYGON,
-  Sepolia = UniswapSDKChainId.SEPOLIA,
-  Soneium = UniswapSDKChainId.SONEIUM,
-  Tempo = UniswapSDKChainId.TEMPO,
-  Unichain = UniswapSDKChainId.UNICHAIN,
-  UnichainSepolia = UniswapSDKChainId.UNICHAIN_SEPOLIA,
-  WorldChain = UniswapSDKChainId.WORLDCHAIN,
-  XLayer = UniswapSDKChainId.XLAYER,
-  Zksync = UniswapSDKChainId.ZKSYNC,
-  Zora = UniswapSDKChainId.ZORA,
+  Mainnet = LxSDKChainId.MAINNET,
+  ArbitrumOne = LxSDKChainId.ARBITRUM_ONE,
+  Avalanche = LxSDKChainId.AVALANCHE,
+  Base = LxSDKChainId.BASE,
+  Blast = LxSDKChainId.BLAST,
+  Bnb = LxSDKChainId.BNB,
+  Celo = LxSDKChainId.CELO,
+  Monad = LxSDKChainId.MONAD,
+  Optimism = LxSDKChainId.OPTIMISM,
+  Polygon = LxSDKChainId.POLYGON,
+  Sepolia = LxSDKChainId.SEPOLIA,
+  Soneium = LxSDKChainId.SONEIUM,
+  Tempo = LxSDKChainId.TEMPO,
+  Unichain = LxSDKChainId.UNICHAIN,
+  UnichainSepolia = LxSDKChainId.UNICHAIN_SEPOLIA,
+  WorldChain = LxSDKChainId.WORLDCHAIN,
+  XLayer = LxSDKChainId.XLAYER,
+  Zksync = LxSDKChainId.ZKSYNC,
+  Zora = LxSDKChainId.ZORA,
   Solana = 501000101,
   // Lux ecosystem chains
   Lux = 96369,

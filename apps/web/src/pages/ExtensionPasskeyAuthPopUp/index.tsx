@@ -5,7 +5,7 @@ import { Anchor, Button, Flex, SpinningLoader, Text } from '@luxfi/ui/src'
 import { EnvelopeHeart } from '@luxfi/ui/src/components/icons/EnvelopeHeart'
 import { Passkey } from '@luxfi/ui/src/components/icons/Passkey'
 import { LuxLogo } from '@luxfi/ui/src/components/icons/LuxLogo'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { parseMessage } from '@luxexchange/lx/src/extension/messagePassing/platform'
 import {
   InterfaceToExtensionRequestType,
@@ -173,7 +173,7 @@ export default function ExtensionPasskeyAuthPopUp() {
               <Anchor
                 target="_blank"
                 rel="noreferrer"
-                href={uniswapUrls.helpArticleUrls.passkeysInfo}
+                href={lxUrls.helpArticleUrls.passkeysInfo}
                 textDecorationLine="none"
               >
                 <Button icon={<EnvelopeHeart size="$icon.16" color="$neutral2" />} size="xxsmall" emphasis="secondary">

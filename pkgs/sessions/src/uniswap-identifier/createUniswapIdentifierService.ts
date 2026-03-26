@@ -1,19 +1,19 @@
-import type { UniswapIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
 
-function createUniswapIdentifierService(ctx: {
-  getUniswapIdentifier: () => Promise<string | null>
-  setUniswapIdentifier: (identifier: string) => Promise<void>
-  removeUniswapIdentifier: () => Promise<void>
-}): UniswapIdentifierService {
-  const getUniswapIdentifier = ctx.getUniswapIdentifier
-  const setUniswapIdentifier = ctx.setUniswapIdentifier
-  const removeUniswapIdentifier = ctx.removeUniswapIdentifier
+function createLxIdentifierService(ctx: {
+  getLxIdentifier: () => Promise<string | null>
+  setLxIdentifier: (identifier: string) => Promise<void>
+  removeLxIdentifier: () => Promise<void>
+}): LxIdentifierService {
+  const getLxIdentifier = ctx.getLxIdentifier
+  const setLxIdentifier = ctx.setLxIdentifier
+  const removeLxIdentifier = ctx.removeLxIdentifier
 
   return {
-    getUniswapIdentifier,
-    setUniswapIdentifier,
-    removeUniswapIdentifier,
+    getLxIdentifier,
+    setLxIdentifier,
+    removeLxIdentifier,
   }
 }
 
-export { createUniswapIdentifierService }
+export { createLxIdentifierService }

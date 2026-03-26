@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text, useSporeColors } from '@luxfi/ui/src'
 import { AlertTriangleFilled } from '@luxfi/ui/src/components/icons/AlertTriangleFilled'
 import { opacifyRaw, zIndexes } from '@luxfi/ui/src/theme'
-import { uniswapUrls } from '@luxexchange/lx/src/constants/urls'
+import { lxUrls } from '@luxexchange/lx/src/constants/urls'
 import { TokenLaunchedBannerWrapper } from '~/components/Toucan/Auction/Banners/TokenLaunched/TokenLaunchedBannerWrapper'
 import { ExternalLink } from '~/theme/components/Links'
 
-const LEARN_MORE_URL = uniswapUrls.helpArticleUrls.toucanFailedToLaunchHelp
+const LEARN_MORE_URL = lxUrls.helpArticleUrls.toucanFailedToLaunchHelp
 
 interface TokenLaunchFailedBannerContentProps {
   tokenName: string

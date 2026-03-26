@@ -9,7 +9,7 @@ import { SwapTransactionDetails } from 'uniswap/src/components/activity/details/
 import { isSwapTransactionInfo } from 'uniswap/src/components/activity/details/types'
 import { Modal } from 'uniswap/src/components/modals/Modal'
 import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { AssetType, TradeableAsset } from 'uniswap/src/entities/assets'
 import { ModalName } from 'uniswap/src/features/telemetry/constants'
 import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
@@ -33,7 +33,7 @@ import { useActiveSignerAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 
 export function QueuedOrderModal(): JSX.Element | null {
   const { t } = useTranslation()
-  const uniswapXEnabled = useFeatureFlag(FeatureFlags.LX)
+  const lxSwapEnabled = useFeatureFlag(FeatureFlags.LX)
   const isShortMobileDevice = useIsShortMobileDevice()
 
   const account = useActiveSignerAccount()
@@ -58,7 +58,7 @@ export function QueuedOrderModal(): JSX.Element | null {
   }, [transactionState, navigateToSwapFlow, onCancel])
 
   // If there are no failed orders tracked in state, return nothing.
-  if (!uniswapXEnabled || !currentFailedOrder || !isSwapTransactionInfo(currentFailedOrder.typeInfo)) {
+  if (!lxSwapEnabled || !currentFailedOrder || !isSwapTransactionInfo(currentFailedOrder.typeInfo)) {
     return null
   }
 
@@ -92,7 +92,7 @@ export function QueuedOrderModal(): JSX.Element | null {
             <LearnMoreLink
               textColor="$neutral1"
               textVariant="buttonLabel2"
-              url={uniswapUrls.helpArticleUrls.uniswapXFailure}
+              url={lxUrls.helpArticleUrls.lxSwapFailure}
             />
           </Flex>
           <Separator />

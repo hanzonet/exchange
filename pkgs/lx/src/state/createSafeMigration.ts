@@ -30,7 +30,7 @@ type SafeMigrationOptionsWithoutFilename<T> = Omit<SafeMigrationOptions<T>, 'fil
  * @example
  * // Migration with custom error fallback
  * export const migrateSearchHistory = createSafeMigration({
- *   filename: 'uniswapMigrations',
+ *   filename: 'lxMigrations',
  *   name: 'migrateSearchHistory',
  *   migrate: (state) => {
  *     const processed = processSearchHistory(state.searchHistory)
@@ -57,7 +57,7 @@ export function createSafeMigration<T>({ filename, name, migrate, onError }: Saf
  *
  * @example
  * // Create a factory for a specific file
- * const createMigration = createSafeMigrationFactory('uniswapMigrations')
+ * const createMigration = createSafeMigrationFactory('lxMigrations')
  *
  * export const migrateSearchHistory = createMigration({
  *   name: 'migrateSearchHistory',

@@ -1,25 +1,25 @@
 import { getStorageDriver } from '@luxexchange/api/src/storage/getStorageDriver'
-import { createUniswapIdentifierService, UniswapIdentifierService } from '@luxexchange/sessions'
+import { createLxIdentifierService, LxIdentifierService } from '@luxexchange/sessions'
 
-const UNISWAP_IDENTIFIER_KEY = 'UNISWAP_IDENTIFIER'
+const LX_IDENTIFIER_KEY = 'UNISWAP_IDENTIFIER'
 
-function provideUniswapIdentifierService(): UniswapIdentifierService {
+function provideLxIdentifierService(): LxIdentifierService {
   const driver = getStorageDriver()
 
-  const service = createUniswapIdentifierService({
-    getUniswapIdentifier: async () => {
-      const identifier = await driver.get(UNISWAP_IDENTIFIER_KEY)
+  const service = createLxIdentifierService({
+    getLxIdentifier: async () => {
+      const identifier = await driver.get(LX_IDENTIFIER_KEY)
       return identifier || null
     },
-    setUniswapIdentifier: async (identifier: string) => {
-      await driver.set(UNISWAP_IDENTIFIER_KEY, identifier)
+    setLxIdentifier: async (identifier: string) => {
+      await driver.set(LX_IDENTIFIER_KEY, identifier)
     },
-    removeUniswapIdentifier: async () => {
-      await driver.remove(UNISWAP_IDENTIFIER_KEY)
+    removeLxIdentifier: async () => {
+      await driver.remove(LX_IDENTIFIER_KEY)
     },
   })
 
   return service
 }
 
-export { provideUniswapIdentifierService }
+export { provideLxIdentifierService }

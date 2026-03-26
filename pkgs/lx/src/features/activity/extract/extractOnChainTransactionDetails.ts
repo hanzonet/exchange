@@ -74,7 +74,7 @@ export default function extractRestOnChainTransactionDetails(transaction: OnChai
       typeInfo = parseRestReceiveTransaction(transaction)
       break
     case OnChainTransactionLabel.SWAP:
-    case OnChainTransactionLabel.UNISWAP_X:
+    case OnChainTransactionLabel.LX_SWAP:
       typeInfo = parseRestSwapTransaction(transaction)
       break
     case OnChainTransactionLabel.WRAP:
@@ -124,7 +124,7 @@ export default function extractRestOnChainTransactionDetails(transaction: OnChai
       }
     : undefined
 
-  const routing = label === OnChainTransactionLabel.UNISWAP_X ? TradingApi.Routing.DUTCH_V2 : TradingApi.Routing.CLASSIC
+  const routing = label === OnChainTransactionLabel.LX_SWAP ? TradingApi.Routing.DUTCH_V2 : TradingApi.Routing.CLASSIC
 
   return [
     {

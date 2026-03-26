@@ -2,7 +2,7 @@ import { ApolloLink, createHttpLink } from '@apollo/client'
 import { onError } from '@apollo/client/link/error'
 import { RestLink } from 'apollo-link-rest'
 import { config } from 'uniswap/src/config'
-import { uniswapUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'uniswap/src/constants/urls'
 import { getVersionHeader } from 'uniswap/src/data/getVersionHeader'
 import { logger } from 'utilities/src/logger/logger'
 import { isMobileApp } from 'utilities/src/platform'
@@ -11,16 +11,16 @@ import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
 // Handles fetching data from REST APIs
 // Responses will be stored in graphql cache
 export const getRestLink = (): ApolloLink => {
-  const restUri = uniswapUrls.apiBaseUrl
+  const restUri = lxUrls.apiBaseUrl
 
   return new RestLink({
     uri: restUri,
     headers: {
       'Content-Type': 'application/json',
-      'X-API-KEY': config.uniswapApiKey,
+      'X-API-KEY': config.lxApiKey,
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
-      Origin: uniswapUrls.requestOriginUrl,
+      Origin: lxUrls.requestOriginUrl,
     },
   })
 }
@@ -39,20 +39,20 @@ export const getCustomGraphqlHttpLink = (endpoint: CustomEndpoint): ApolloLink =
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
       // TODO: [MOB-3883] remove once API gateway supports mobile origin URL
-      Origin: uniswapUrls.apiOrigin,
+      Origin: lxUrls.apiOrigin,
     },
   })
 
 export const getGraphqlHttpLink = (): ApolloLink =>
   createHttpLink({
-    uri: uniswapUrls.graphQLUrl,
+    uri: lxUrls.graphQLUrl,
     headers: {
       'Content-Type': 'application/json',
-      'X-API-KEY': config.uniswapApiKey,
+      'X-API-KEY': config.lxApiKey,
       'x-request-source': REQUEST_SOURCE,
       'x-app-version': getVersionHeader(),
       // TODO: [MOB-3883] remove once API gateway supports mobile origin URL
-      Origin: uniswapUrls.apiOrigin,
+      Origin: lxUrls.apiOrigin,
     },
   })
 

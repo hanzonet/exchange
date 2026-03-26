@@ -5,8 +5,8 @@ import { useAccount } from '~/hooks/useAccount'
 //
 // @returns {boolean} True if the user is connected to the uniswap extension; otherwise, false.
 //
-export function useIsUniswapExtensionConnected() {
+export function useIsLxExtensionConnected() {
   const currentConnector = useAccount().connector
 
-  return currentConnector?.id === CONNECTION_PROVIDER_IDS.UNISWAP_EXTENSION_RDNS
+  return currentConnector?.id === CONNECTION_PROVIDER_IDS.LX_EXTENSION_RDNS
 }
