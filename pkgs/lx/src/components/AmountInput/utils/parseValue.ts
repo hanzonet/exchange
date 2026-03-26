@@ -1,4 +1,4 @@
-import { replaceSeparators } from 'uniswap/src/components/AmountInput/utils/replaceSeparators'
+import { replaceSeparators } from 'lx/src/components/AmountInput/utils/replaceSeparators'
 import { truncateToMaxDecimals } from 'utilities/src/format/truncateToMaxDecimals'
 import { isMobileWeb } from 'utilities/src/platform'
 

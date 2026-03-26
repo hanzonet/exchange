@@ -3,12 +3,12 @@ import {
   useFormattedLxSwapGasFeeInfo,
   useGasFeeFormattedDisplayAmounts,
   useGasFeeHighRelativeToValue,
-} from 'uniswap/src/features/gas/hooks'
-import type { GasInfo } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
-import { useSwapFormStoreDerivedSwapInfo } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { useSwapTxStore } from 'uniswap/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { CurrencyField } from 'uniswap/src/types/currency'
+} from 'lx/src/features/gas/hooks'
+import type { GasInfo } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/GasAndWarningRows/types'
+import { useSwapFormStoreDerivedSwapInfo } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useSwapTxStore } from 'lx/src/features/transactions/swap/stores/swapTxStore/useSwapTxStore'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
+import { CurrencyField } from 'lx/src/types/currency'
 import { usePrevious } from 'utilities/src/react/hooks'
 
 // TODO: WALL-6293

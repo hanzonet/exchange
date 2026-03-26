@@ -1,6 +1,6 @@
 import { Commitment, ParsedAccountData, PublicKey } from '@solana/web3.js'
 import { queryOptions } from '@tanstack/react-query'
-import { getSolanaConnection } from 'uniswap/src/features/providers/getSolanaConnection'
+import { getSolanaConnection } from 'lx/src/features/providers/getSolanaConnection'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'

@@ -7,7 +7,7 @@ export interface ShakeAnimation {
 }
 
 // CSS keyframes for shake animation - injected once into the document
-const SHAKE_KEYFRAMES_NAME = 'uniswap-shake-animation'
+const SHAKE_KEYFRAMES_NAME = 'lx-shake-animation'
 const SHAKE_DURATION_MS = 300
 
 function injectShakeKeyframes(): void {

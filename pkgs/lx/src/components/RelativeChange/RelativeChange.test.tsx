@@ -1,12 +1,12 @@
-import { RelativeChange } from 'uniswap/src/components/RelativeChange/RelativeChange'
-import { FiatCurrencyInfo } from 'uniswap/src/features/fiatOnRamp/types'
-import { Locale } from 'uniswap/src/features/language/constants'
-import { renderWithProviders } from 'uniswap/src/test/render'
+import { RelativeChange } from 'lx/src/components/RelativeChange/RelativeChange'
+import { FiatCurrencyInfo } from 'lx/src/features/fiatOnRamp/types'
+import { Locale } from 'lx/src/features/language/constants'
+import { renderWithProviders } from 'lx/src/test/render'
 
 const mockLocale = Locale.EnglishUnitedStates
 
-vi.mock('uniswap/src/features/language/hooks', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('uniswap/src/features/language/hooks')>()
+vi.mock('lx/src/features/language/hooks', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('lx/src/features/language/hooks')>()
   return {
     ...actual,
     useCurrentLocale: (): Locale => mockLocale,
@@ -24,7 +24,7 @@ const mockFiatCurrencyInfo: FiatCurrencyInfo = {
   symbolAtFront: true,
 }
 
-vi.mock('uniswap/src/features/fiatCurrency/hooks', () => ({
+vi.mock('lx/src/features/fiatCurrency/hooks', () => ({
   useAppFiatCurrencyInfo: (): FiatCurrencyInfo => mockFiatCurrencyInfo,
 }))
 

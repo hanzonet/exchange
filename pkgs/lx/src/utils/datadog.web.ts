@@ -12,7 +12,7 @@ import {
   WALLET_FEATURE_FLAG_NAMES,
   WEB_FEATURE_FLAG_NAMES,
 } from '@luxexchange/gating'
-import { config } from 'uniswap/src/config'
+import { config } from 'lx/src/config'
 import { getUniqueId } from 'utilities/src/device/uniqueId'
 import { datadogEnabledBuild, localDevDatadogEnabled } from 'utilities/src/environment/constants'
 import { isBetaEnv } from 'utilities/src/environment/env'

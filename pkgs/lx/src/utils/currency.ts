@@ -1,10 +1,10 @@
 import { Currency, Token } from '@luxamm/sdk-core'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { LocalizationContextState } from 'uniswap/src/features/language/LocalizationContext'
-import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
-import { SerializedToken } from 'uniswap/src/features/tokens/warnings/slice/types'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
+import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import { SerializedToken } from 'lx/src/features/tokens/warnings/slice/types'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { shortenAddress } from 'utilities/src/addresses'
 
 const DEFAULT_MAX_SYMBOL_CHARACTERS = 6

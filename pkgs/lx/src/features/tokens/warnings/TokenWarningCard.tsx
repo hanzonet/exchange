@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { TouchableArea } from 'ui/src'
-import { InlineWarningCard } from 'uniswap/src/components/InlineWarningCard/InlineWarningCard'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
-import { useBlockaidFeeComparisonAnalytics } from 'uniswap/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
+import { InlineWarningCard } from 'lx/src/components/InlineWarningCard/InlineWarningCard'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
+import { useBlockaidFeeComparisonAnalytics } from 'lx/src/features/tokens/warnings/hooks/useBlockaidFeeComparisonAnalytics'
 import {
   getSeverityFromTokenProtectionWarning,
   getTokenProtectionFeeOnTransfer,
@@ -14,9 +14,9 @@ import {
   useCardHeaderText,
   useCardSubtitleText,
   useTokenWarningCardText,
-} from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'uniswap/src/features/tokens/warnings/types'
-import { currencyIdToAddress } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
+import { currencyIdToAddress } from 'lx/src/utils/currencyId'
 
 type TokenWarningCardProps = {
   currencyInfo: Maybe<CurrencyInfo>

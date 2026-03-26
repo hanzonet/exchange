@@ -1,5 +1,5 @@
-import { processLXResponse } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
-import { createMockPermitData } from 'uniswap/src/test/fixtures/transactions/swap'
+import { processLXResponse } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
+import { createMockPermitData } from 'lx/src/test/fixtures/transactions/swap'
 
 describe('processLXResponse', () => {
   it('should return swapTxAndGasInfo with zero gas fee', () => {

@@ -5,12 +5,12 @@ import {
   DEFAULT_MS_BEFORE_WARNING,
   DEFAULT_NATIVE_ADDRESS,
   getQuicknodeEndpointUrl,
-} from 'uniswap/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
-import { GENERIC_L2_GAS_CONFIG } from 'uniswap/src/features/chains/gasDefaults'
-import { NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from 'uniswap/src/features/chains/types'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
+} from 'lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
+import { NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from 'lx/src/features/chains/types'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { ElementName } from 'lx/src/features/telemetry/constants'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 const PATHUSD_ADDRESS = '0x20c0000000000000000000000000000000000000'

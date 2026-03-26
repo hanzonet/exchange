@@ -24,7 +24,7 @@ export function isBetaEnv(): boolean {
 }
 
 export function isProdEnv(): boolean {
-  return BUNDLE_ID === 'com.uniswap.mobile'
+  return BUNDLE_ID === 'com.lx.mobile'
 }
 
 export function isRNDev(): boolean {

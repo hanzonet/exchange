@@ -9,8 +9,8 @@ import {
   useExperimentValueFromLayer,
   useFeatureFlag,
 } from '@luxexchange/gating'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { shouldShowFlashblocksUI } from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { shouldShowFlashblocksUI } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
 import { isWebApp } from 'utilities/src/platform'
 
 /**

@@ -1,8 +1,8 @@
-import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import { DAI, nativeOnChain } from 'uniswap/src/constants/tokens'
-import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/rpc'
-import { DEFAULT_NATIVE_ADDRESS_SOLANA } from 'uniswap/src/features/chains/svm/defaults'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { getNativeAddress } from 'lx/src/constants/addresses'
+import { DAI, nativeOnChain } from 'lx/src/constants/tokens'
+import { DEFAULT_NATIVE_ADDRESS } from 'lx/src/features/chains/evm/rpc'
+import { DEFAULT_NATIVE_ADDRESS_SOLANA } from 'lx/src/features/chains/svm/defaults'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import {
   areCurrencyIdsEqual,
   buildCurrencyId,
@@ -16,7 +16,7 @@ import {
   isCurrencyIdValid,
   isNativeCurrencyAddress,
   NATIVE_ANALYTICS_ADDRESS_VALUE,
-} from 'uniswap/src/utils/currencyId'
+} from 'lx/src/utils/currencyId'
 import { INVALID_ADDRESS_TOO_SHORT, INVALID_CHAIN_ID, VALID_ADDRESS, VALID_CHAIN_ID } from 'utilities/src/test/fixtures'
 
 const ETH = nativeOnChain(UniverseChainId.Mainnet)

@@ -1,16 +1,16 @@
 import { CurrencyAmount, Token } from '@luxamm/sdk-core'
 import type { GasStrategy } from '@luxexchange/api'
 import { DynamicConfigs, type GasStrategies, getStatsigClient } from '@luxexchange/gating'
-import { DAI } from 'uniswap/src/constants/tokens'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { DEFAULT_GAS_STRATEGY } from 'uniswap/src/features/gas/consts'
+import { DAI } from 'lx/src/constants/tokens'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { DEFAULT_GAS_STRATEGY } from 'lx/src/features/gas/consts'
 import {
   applyNativeTokenPercentageBuffer,
   getActiveGasStrategy,
   hasSufficientFundsIncludingGas,
   hasSufficientGasBalance,
-} from 'uniswap/src/features/gas/utils'
-import { MAINNET_CURRENCY } from 'uniswap/src/test/fixtures'
+} from 'lx/src/features/gas/utils'
+import { MAINNET_CURRENCY } from 'lx/src/test/fixtures'
 
 vi.mock('@luxexchange/gating', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@luxexchange/gating')>()

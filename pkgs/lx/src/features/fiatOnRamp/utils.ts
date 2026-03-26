@@ -1,5 +1,5 @@
 import type { SectionListData } from 'react-native'
-import { PortfolioBalance } from 'uniswap/src/features/dataApi/types'
+import { PortfolioBalance } from 'lx/src/features/dataApi/types'
 import {
   FiatOnRampCurrency,
   FORCurrencyOrBalance,
@@ -8,7 +8,7 @@ import {
   FORLogo,
   FORQuote,
   InitialQuoteSelection,
-} from 'uniswap/src/features/fiatOnRamp/types'
+} from 'lx/src/features/fiatOnRamp/types'
 import { isAndroid, isIOS } from 'utilities/src/platform'
 import { v4 as uuid } from 'uuid'
 

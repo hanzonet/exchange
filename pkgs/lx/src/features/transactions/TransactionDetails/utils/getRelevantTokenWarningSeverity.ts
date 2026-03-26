@@ -1,10 +1,10 @@
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
 import {
   getSeverityFromTokenProtectionWarning,
   getTokenProtectionWarning,
-} from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { TokenWarningProps } from 'uniswap/src/features/transactions/TransactionDetails/types'
+} from 'lx/src/features/tokens/warnings/safetyUtils'
+import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { TokenWarningProps } from 'lx/src/features/transactions/TransactionDetails/types'
 
 export function getRelevantTokenWarningSeverity(
   acceptedDerivedSwapInfo?: DerivedSwapInfo<CurrencyInfo, CurrencyInfo>,

@@ -1,4 +1,4 @@
-import type { CurrencyField } from 'uniswap/src/types/currency'
+import type { CurrencyField } from 'lx/src/types/currency'
 import { usePrevious } from 'utilities/src/react/hooks'
 import { useDebounceWithStatus } from 'utilities/src/time/timing'
 

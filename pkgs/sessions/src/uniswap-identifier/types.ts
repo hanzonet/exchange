@@ -1,6 +1,6 @@
 /**
- * Uniswap Identifier provider interface
- * Platform-specific implementations handle uniswap identifier persistence
+ * Lx Identifier provider interface
+ * Platform-specific implementations handle lx identifier persistence
  */
 interface LxIdentifierService {
   getLxIdentifier(): Promise<string | null>

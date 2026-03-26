@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import type { TextProps, TouchableAreaProps, TouchableTextLinkProps } from 'ui/src'
 import { Button, TouchableTextLink } from 'ui/src'
-import { openUri } from 'uniswap/src/utils/linking'
+import { openUri } from 'lx/src/utils/linking'
 import { isWebPlatform } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
 

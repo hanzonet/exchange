@@ -1,12 +1,12 @@
 import { TradingApi } from '@luxexchange/api'
-import { toGqlSafetyLevel } from 'uniswap/src/components/TokenSelector/utils'
-import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { buildCurrency } from 'uniswap/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'uniswap/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { NATIVE_ADDRESS_FOR_TRADING_API } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+import { toGqlSafetyLevel } from 'lx/src/components/TokenSelector/utils'
+import { getNativeAddress } from 'lx/src/constants/addresses'
+import { toSupportedChainId } from 'lx/src/features/chains/utils'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { NATIVE_ADDRESS_FOR_TRADING_API } from 'lx/src/features/transactions/swap/utils/tradingApi'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 export function tradingApiSwappableTokenToCurrencyInfo(
   token: TradingApi.GetSwappableTokensResponse['tokens'][0],

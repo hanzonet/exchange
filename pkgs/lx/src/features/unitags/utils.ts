@@ -1,6 +1,6 @@
 import { UnitagErrorCodes } from '@luxexchange/api'
 import { TFunction } from 'i18next'
-import { UNITAG_VALID_REGEX } from 'uniswap/src/features/unitags/constants'
+import { UNITAG_VALID_REGEX } from 'lx/src/features/unitags/constants'
 
 export function parseUnitagErrorCode(t: TFunction, errorCode: UnitagErrorCodes): string {
   switch (errorCode) {

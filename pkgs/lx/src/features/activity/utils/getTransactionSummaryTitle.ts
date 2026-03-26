@@ -5,7 +5,7 @@ import {
   TransactionDetails,
   TransactionStatus,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export function getTransactionSummaryTitle(
   tx: Pick<TransactionDetails, 'typeInfo' | 'status'>,

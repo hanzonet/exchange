@@ -1,4 +1,4 @@
-import { HapticFeedbackControl } from 'uniswap/src/features/settings/useHapticFeedback/types'
+import { HapticFeedbackControl } from 'lx/src/features/settings/useHapticFeedback/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export function useHapticFeedback(): HapticFeedbackControl {

@@ -5,7 +5,7 @@ export const CONNECTION_PROVIDER_IDS = {
   COINBASE_SDK_CONNECTOR_ID: 'coinbaseWalletSDK',
   COINBASE_RDNS: 'com.coinbase.wallet',
   METAMASK_RDNS: 'io.metamask',
-  LX_EXTENSION_RDNS: 'org.uniswap.app',
+  LX_EXTENSION_RDNS: 'org.lx.app',
   SAFE_CONNECTOR_ID: 'safe',
   EMBEDDED_WALLET_CONNECTOR_ID: 'embeddedLxWalletConnector',
   BINANCE_WALLET_CONNECTOR_ID: 'wallet.binance.com',
@@ -16,10 +16,10 @@ export const CONNECTION_PROVIDER_IDS = {
 
 export const CONNECTION_PROVIDER_NAMES = {
   WALLET_CONNECT: 'WalletConnect',
-  EMBEDDED_WALLET: 'Uniswap Embedded Wallet',
+  EMBEDDED_WALLET: 'Lx Embedded Wallet',
   METAMASK: 'MetaMask',
-  LX_EXTENSION: 'Uniswap Extension',
-  LX_WALLET: 'Uniswap Wallet',
+  LX_EXTENSION: 'Lx Extension',
+  LX_WALLET: 'Lx Wallet',
   PHANTOM: 'Phantom',
   COINBASE_SDK: 'Coinbase Wallet',
   COINBASE_SOLANA_WALLET_ADAPTER: 'Coinbase Wallet',

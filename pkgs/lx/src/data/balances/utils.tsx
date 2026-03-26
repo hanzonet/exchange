@@ -1,8 +1,8 @@
 import { GetPortfolioResponse } from '@luxamm/client-data-api/dist/data/v1/api_pb'
 import { GraphQLApi } from '@luxexchange/api'
 import { useEffect, useState } from 'react'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import { logger } from 'utilities/src/logger/logger'
 
 /**

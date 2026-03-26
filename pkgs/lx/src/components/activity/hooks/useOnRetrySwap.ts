@@ -1,6 +1,6 @@
-import { SwapSummaryCallbacks } from 'uniswap/src/components/activity/types'
+import { SwapSummaryCallbacks } from 'lx/src/components/activity/types'
 
-import { TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 
 const MAX_SHOW_RETRY_TIME = 15 * ONE_MINUTE_MS

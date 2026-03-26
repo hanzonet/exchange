@@ -3,18 +3,18 @@ import { UseQueryResult, useQuery } from '@tanstack/react-query'
 import {
   VerifyWalletRequest,
   VerifyWalletResponse,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
+} from '@luxamm/client-liquidity/dist/lx/liquidity/v1/auction_pb'
 import {
   AuctionValidation,
   Erc1155GateData,
   KycVerificationStatus,
   PredicateKycVerificationData,
   ValidationType,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+} from '@luxamm/client-liquidity/dist/lx/liquidity/v1/types_pb'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
-import { PollingInterval } from 'uniswap/src/constants/misc'
-import { AuctionMutationClient } from 'uniswap/src/data/apiClients/liquidityService/AuctionMutationClient'
-import { AUCTION_DEFAULT_RETRY, AuctionStaleTime } from 'uniswap/src/data/rest/auctions/queryTypes'
+import { PollingInterval } from 'lx/src/constants/misc'
+import { AuctionMutationClient } from 'lx/src/data/apiClients/liquidityService/AuctionMutationClient'
+import { AUCTION_DEFAULT_RETRY, AuctionStaleTime } from 'lx/src/data/rest/auctions/queryTypes'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 /**

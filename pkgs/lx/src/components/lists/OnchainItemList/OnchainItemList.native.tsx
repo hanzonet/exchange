@@ -1,14 +1,14 @@
 import { FlashList } from '@shopify/flash-list'
 import { memo, useCallback, useEffect, useMemo, useRef } from 'react'
 import { AnimatedBottomSheetFlashList } from 'ui/src/components/AnimatedFlashList/AnimatedFlashList'
-import { OnchainItemListOption } from 'uniswap/src/components/lists/items/types'
-import { OnchainItemListProps } from 'uniswap/src/components/lists/OnchainItemList/OnchainItemList'
+import { OnchainItemListOption } from 'lx/src/components/lists/items/types'
+import { OnchainItemListProps } from 'lx/src/components/lists/OnchainItemList/OnchainItemList'
 import {
   ProcessedRow,
   ProcessedRowType,
   processSectionsToRows,
-} from 'uniswap/src/components/lists/OnchainItemList/processSectionsToRows'
-import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+} from 'lx/src/components/lists/OnchainItemList/processSectionsToRows'
+import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 
 const TOKEN_ITEM_SIZE = 64
 const AMOUNT_TO_DRAW = 18

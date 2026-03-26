@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useContext, useMemo } from 'react'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { useFiatConverter } from 'uniswap/src/features/fiatCurrency/conversion'
+import { useFiatConverter } from 'lx/src/features/fiatCurrency/conversion'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
-import { useLocalizedFormatter } from 'uniswap/src/features/language/formatter'
+import { useLocalizedFormatter } from 'lx/src/features/language/formatter'
 
 export type LocalizationContextState = {
   conversionRate: ReturnType<typeof useFiatConverter>['conversionRate']

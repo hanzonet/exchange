@@ -1,12 +1,12 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import React, { createContext, PropsWithChildren, useContext, useMemo } from 'react'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { MismatchAccountEffects } from 'uniswap/src/features/smartWallet/mismatch/MismatchAccountEffects'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { MismatchAccountEffects } from 'lx/src/features/smartWallet/mismatch/MismatchAccountEffects'
 import type {
   HasMismatchInput,
   HasMismatchResult,
   HasMismatchUtil,
-} from 'uniswap/src/features/smartWallet/mismatch/mismatch'
+} from 'lx/src/features/smartWallet/mismatch/mismatch'
 import { useEvent } from 'utilities/src/react/hooks'
 
 interface MismatchContextValue {

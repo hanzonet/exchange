@@ -1,5 +1,5 @@
 import type { GasStrategy } from '@luxexchange/api'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 
 // Normal speed strategy - Lower multipliers for economical transactions
 export const NORMAL_GAS_STRATEGY: GasStrategy = {

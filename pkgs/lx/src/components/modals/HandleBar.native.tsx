@@ -1,6 +1,6 @@
 import { Flex, useSporeColors } from 'ui/src'
 import { spacing } from 'ui/src/theme'
-import { HandleBarProps } from 'uniswap/src/components/modals/HandleBar'
+import { HandleBarProps } from 'lx/src/components/modals/HandleBar'
 import { isAndroid } from 'utilities/src/platform'
 
 const HANDLEBAR_HEIGHT = spacing.spacing4

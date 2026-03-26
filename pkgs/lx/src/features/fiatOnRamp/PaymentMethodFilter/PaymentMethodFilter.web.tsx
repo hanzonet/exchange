@@ -4,10 +4,10 @@ import {
   PaymentMethodItem,
   useEnabledPaymentMethodFilters,
   useTogglePaymentMethod,
-} from 'uniswap/src/features/fiatOnRamp/PaymentMethodFilter/utils'
-import { FORFilters } from 'uniswap/src/features/fiatOnRamp/types'
-import { FiatOffRampEventName, FiatOnRampEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+} from 'lx/src/features/fiatOnRamp/PaymentMethodFilter/utils'
+import { FORFilters } from 'lx/src/features/fiatOnRamp/types'
+import { FiatOffRampEventName, FiatOnRampEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 
 export function PaymentMethodFilter({
   paymentMethod,

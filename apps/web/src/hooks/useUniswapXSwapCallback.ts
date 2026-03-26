@@ -14,9 +14,9 @@ import {
 } from '@luxamm/sdk'
 import { useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { InterfaceEventName, SwapEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+import { InterfaceEventName, SwapEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
 import { useTotalBalancesUsdForAnalytics } from '~/appGraphql/data/apollo/useTotalBalancesUsdForAnalytics'
@@ -244,7 +244,7 @@ export function useLXSwapCallback({
       // X v2 orders are posted to GPA; X v1 orders are posted to order-service. Their payloads are different.
       if (trade.offchainOrderType === OffchainOrderType.DUTCH_V2_AUCTION) {
         endpoint = 'rfq'
-        // Should follow HardQuoteRequestBody schema type: https://github.com/Uniswap/lx-parameterization-api/blob/main/lib/handlers/hard-quote/schema.ts
+        // Should follow HardQuoteRequestBody schema type: https://github.com/Lx/lx-parameterization-api/blob/main/lib/handlers/hard-quote/schema.ts
         body = {
           encodedInnerOrder: encodedOrder,
           innerSig: signature,

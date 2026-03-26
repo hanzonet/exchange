@@ -8,15 +8,15 @@ import {
   USDC_OPTIMISM,
   USDC_POLYGON,
   WRAPPED_NATIVE_CURRENCY,
-} from 'uniswap/src/constants/tokens'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { toGraphQLChain } from 'uniswap/src/features/chains/utils'
-import { amounts } from 'uniswap/src/test/fixtures/gql/amounts'
-import { get24hPriceChange, getLatestPrice, priceHistory } from 'uniswap/src/test/fixtures/gql/history'
-import { GQL_CHAINS, image } from 'uniswap/src/test/fixtures/gql/misc'
-import { ETH } from 'uniswap/src/test/fixtures/lib'
-import { faker, MAX_FIXTURE_TIMESTAMP } from 'uniswap/src/test/shared'
-import { createFixture, randomChoice, randomEnumValue } from 'uniswap/src/test/utils'
+} from 'lx/src/constants/tokens'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { toGraphQLChain } from 'lx/src/features/chains/utils'
+import { amounts } from 'lx/src/test/fixtures/gql/amounts'
+import { get24hPriceChange, getLatestPrice, priceHistory } from 'lx/src/test/fixtures/gql/history'
+import { GQL_CHAINS, image } from 'lx/src/test/fixtures/gql/misc'
+import { ETH } from 'lx/src/test/fixtures/lib'
+import { faker, MAX_FIXTURE_TIMESTAMP } from 'lx/src/test/shared'
+import { createFixture, randomChoice, randomEnumValue } from 'lx/src/test/utils'
 
 const benignProtectionInfo: GraphQLApi.ProtectionInfo = {
   result: GraphQLApi.ProtectionResult.Benign,

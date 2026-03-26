@@ -4,7 +4,7 @@ import {
   FavoritesState,
   favoritesReducer,
   removeFavoriteToken,
-} from 'uniswap/src/features/favorites/slice'
+} from 'lx/src/features/favorites/slice'
 
 describe(favoritesReducer, () => {
   let store: Store<FavoritesState>

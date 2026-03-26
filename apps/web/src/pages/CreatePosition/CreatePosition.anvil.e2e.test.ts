@@ -1,12 +1,12 @@
-import { LiquidityService } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_connect'
+import { LiquidityService } from '@luxamm/client-liquidity/dist/lx/liquidity/v1/api_connect'
 import { PERMIT2_ADDRESS } from '@luxamm/permit2-sdk'
 import { V2_FACTORY_ADDRESSES } from '@luxamm/sdk-core'
 import { computePairAddress } from '@luxamm/v2-sdk'
 import { FeatureFlags, getFeatureFlagName } from '@luxexchange/gating'
-import { USDT } from 'uniswap/src/constants/tokens'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { WETH } from 'uniswap/src/test/fixtures/lib/sdk'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { USDT } from 'lx/src/constants/tokens'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { WETH } from 'lx/src/test/fixtures/lib/sdk'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
 import { ONE_MILLION_USDT } from '~/playwright/anvil/utils'
 import { expect, getTest, type Page } from '~/playwright/fixtures'
@@ -264,7 +264,7 @@ test.describe(
           endpoint: LiquidityService.methods.createLPPosition,
           modifyRequestData,
         })
-        await page.route('**/uniswap.liquidity.v1.LiquidityService/PoolInfo*', async (route) => {
+        await page.route('**/lx.liquidity.v1.LiquidityService/PoolInfo*', async (route) => {
           await route.fulfill({ path: Mocks.LiquidityService.pool_info_eth_weeth })
         })
         await graphql.intercept('PoolPriceHistory', Mocks.PoolPriceHistory.eth_weeth)
@@ -289,7 +289,7 @@ test.describe(
             return data
           },
         })
-        await page.route('**/uniswap.liquidity.v1.LiquidityService/PoolInfo*', async (route) => {
+        await page.route('**/lx.liquidity.v1.LiquidityService/PoolInfo*', async (route) => {
           await route.fulfill({ path: Mocks.LiquidityService.pool_info_eth_weeth })
         })
         await graphql.intercept('PoolPriceHistory', Mocks.PoolPriceHistory.eth_weeth)

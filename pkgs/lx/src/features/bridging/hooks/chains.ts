@@ -1,12 +1,12 @@
 import { TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { useTradingApiSwappableTokensQuery } from 'uniswap/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
+import { useTradingApiSwappableTokensQuery } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { toSupportedChainId } from 'lx/src/features/chains/utils'
 import {
   NATIVE_ADDRESS_FOR_TRADING_API,
   toTradingApiSupportedChainId,
-} from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+} from 'lx/src/features/transactions/swap/utils/tradingApi'
 
 const FALLBACK_NUM_CHAINS = 8
 

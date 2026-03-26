@@ -1,4 +1,4 @@
-import type { SlippageControlProps } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/types'
+import type { SlippageControlProps } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageControl/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 /**

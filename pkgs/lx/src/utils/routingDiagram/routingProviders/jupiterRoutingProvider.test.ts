@@ -1,8 +1,8 @@
 import { Percent } from '@luxamm/sdk-core'
 import { type JupiterOrderResponse, TradingApi } from '@luxexchange/api'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { SolanaTrade } from 'uniswap/src/features/transactions/swap/types/solana'
-import { jupiterRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingProviders/jupiterRoutingProvider'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { SolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
+import { jupiterRoutingProvider } from 'lx/src/utils/routingDiagram/routingProviders/jupiterRoutingProvider'
 
 function createMockSwapInfo(params: { inputMint: string; outputMint: string; label: string }): {
   inputMint: string

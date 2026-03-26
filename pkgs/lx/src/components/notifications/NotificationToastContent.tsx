@@ -8,8 +8,8 @@ import {
   NOTIFICATION_HEIGHT,
   SMALL_TOAST_RADIUS,
   TOAST_BORDER_WIDTH,
-} from 'uniswap/src/features/notifications/constants'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+} from 'lx/src/features/notifications/constants'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 
 export interface NotificationContentProps {
   title: string

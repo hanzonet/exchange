@@ -2,11 +2,11 @@ import { ComponentProps } from 'react'
 import { Flex, SpinningLoader, Text, TouchableArea, useIsDarkMode } from 'ui/src'
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { iconSizes, spacing } from 'ui/src/theme'
-import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
-import { CurrencyInfo, PortfolioBalance } from 'uniswap/src/features/dataApi/types'
-import { useFormatExactCurrencyAmount } from 'uniswap/src/features/fiatOnRamp/hooks'
-import { TestID, TestIDType } from 'uniswap/src/test/fixtures/testIDs'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
+import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
+import { CurrencyInfo, PortfolioBalance } from 'lx/src/features/dataApi/types'
+import { useFormatExactCurrencyAmount } from 'lx/src/features/fiatOnRamp/hooks'
+import { TestID, TestIDType } from 'lx/src/test/fixtures/testIDs'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
 
 interface TokenSelectorBalanceDisplayProps {
   onPress: () => void

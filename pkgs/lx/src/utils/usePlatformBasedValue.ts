@@ -1,4 +1,4 @@
-import { useIsChromeWindowFocusedWithTimeout } from 'uniswap/src/extension/useIsChromeWindowFocused'
+import { useIsChromeWindowFocusedWithTimeout } from 'lx/src/extension/useIsChromeWindowFocused'
 import { isExtensionApp } from 'utilities/src/platform'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 

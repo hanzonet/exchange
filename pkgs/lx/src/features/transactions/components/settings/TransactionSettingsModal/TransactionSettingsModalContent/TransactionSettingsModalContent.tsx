@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { AnimatedPager, Button, Flex, Text, TouchableArea, useMedia } from 'ui/src'
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { iconSizes } from 'ui/src/theme'
-import { TransactionSettingRow } from 'uniswap/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsRow'
-import type { TransactionSettingsModalProps } from 'uniswap/src/features/transactions/components/settings/TransactionSettingsModal/types'
-import { type TransactionSettingConfig } from 'uniswap/src/features/transactions/components/settings/types'
+import { TransactionSettingRow } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/TransactionSettingsModalContent/TransactionSettingsRow'
+import type { TransactionSettingsModalProps } from 'lx/src/features/transactions/components/settings/TransactionSettingsModal/types'
+import { type TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
 import { isExtensionApp, isMobileApp, isMobileWeb, isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
 
 const TopLevelSettings = ({

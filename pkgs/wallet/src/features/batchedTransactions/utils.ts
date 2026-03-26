@@ -1,7 +1,7 @@
 import { TradingApi } from '@luxexchange/api'
-import { checkWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
-import { DappResponseType } from 'uniswap/src/features/dappRequests/types'
-import { EthTransaction } from 'uniswap/src/types/walletConnect'
+import { checkWalletDelegation } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
+import { DappResponseType } from 'lx/src/features/dappRequests/types'
+import { EthTransaction } from 'lx/src/types/walletConnect'
 import { numberToHex } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
 import { Capability } from '@luxfi/wallet/src/features/dappRequests/types'
@@ -61,8 +61,8 @@ export function getCapabilitiesForDelegationStatus(
 
     // If the user has consented to smart wallets, we can use the delegation status to determine the capabilities
     if (hasSmartWalletConsent) {
-      // If the wallet is delegated to Uniswap, it's supported, even if the delegation address is outdated
-      if (delegationStatusForChain.isWalletDelegatedToUniswap) {
+      // If the wallet is delegated to Lx, it's supported, even if the delegation address is outdated
+      if (delegationStatusForChain.isWalletDelegatedToLx) {
         status = 'supported'
       } else if (isFreshDelegation(delegationStatusForChain)) {
         status = 'ready'

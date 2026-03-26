@@ -1,7 +1,7 @@
 import { type QueryFunction, type QueryKey, skipToken, type UseQueryResult, useQuery } from '@tanstack/react-query'
 import { type TradingApi, type UseQueryApiHelperHookArgs } from '@luxexchange/api'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
+import { lxUrls } from 'lx/src/constants/urls'
+import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export function useWalletEncode7702Query({

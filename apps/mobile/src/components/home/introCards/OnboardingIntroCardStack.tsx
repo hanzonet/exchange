@@ -11,12 +11,12 @@ import {
 import { Flex } from '@luxfi/ui/src'
 import { PUSH_NOTIFICATIONS_CARD_BANNER } from '@luxfi/ui/src/assets'
 import { Buy } from '@luxfi/ui/src/components/icons'
-import { AccountType } from 'uniswap/src/features/accounts/types'
-import { ElementName, ModalName, WalletEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { OnboardingCardLoggingName } from 'uniswap/src/features/telemetry/types'
-import { ImportType, OnboardingEntryPoint } from 'uniswap/src/types/onboarding'
-import { MobileScreens, OnboardingScreens, UnitagScreens } from 'uniswap/src/types/screens/mobile'
+import { AccountType } from 'lx/src/features/accounts/types'
+import { ElementName, ModalName, WalletEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { OnboardingCardLoggingName } from 'lx/src/features/telemetry/types'
+import { ImportType, OnboardingEntryPoint } from 'lx/src/types/onboarding'
+import { MobileScreens, OnboardingScreens, UnitagScreens } from 'lx/src/types/screens/mobile'
 import {
   CardType,
   IntroCardGraphicType,

@@ -1,4 +1,4 @@
-import { IncreaseLPPositionRequest } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/api_pb'
+import { IncreaseLPPositionRequest } from '@luxamm/client-liquidity/dist/lx/liquidity/v1/api_pb'
 import {
   ChainId,
   IndependentToken,
@@ -6,17 +6,17 @@ import {
   V3IncreaseLPPosition,
   V3Pool,
   V3Position,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
-import { DEFAULT_TICK_SPACING } from 'uniswap/src/constants/pools'
-import { USDC, USDT } from 'uniswap/src/constants/tokens'
-import { generateLPTransactionSteps } from 'uniswap/src/features/transactions/liquidity/steps/generateLPTransactionSteps'
+} from '@luxamm/client-liquidity/dist/lx/liquidity/v1/types_pb'
+import { DEFAULT_TICK_SPACING } from 'lx/src/constants/pools'
+import { USDC, USDT } from 'lx/src/constants/tokens'
+import { generateLPTransactionSteps } from 'lx/src/features/transactions/liquidity/steps/generateLPTransactionSteps'
 import {
   IncreasePositionTxAndGasInfo,
   LiquidityTransactionType,
   LiquidityTxAndGasInfo,
-} from 'uniswap/src/features/transactions/liquidity/types'
-import { TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
-import { createMockCurrencyAmount } from 'uniswap/src/test/fixtures/transactions/swap'
+} from 'lx/src/features/transactions/liquidity/types'
+import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
+import { createMockCurrencyAmount } from 'lx/src/test/fixtures/transactions/swap'
 
 const mockTxRequest = {
   chainId: 1,

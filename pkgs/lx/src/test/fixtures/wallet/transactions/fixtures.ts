@@ -1,11 +1,11 @@
 import { TransactionRequest } from '@ethersproject/providers'
 import { TradeType } from '@luxamm/sdk-core'
 import { TradingApi } from '@luxexchange/api'
-import { DAI, USDC_MAINNET } from 'uniswap/src/constants/tokens'
-import { AssetType } from 'uniswap/src/entities/assets'
-import { ALL_EVM_CHAIN_IDS } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { finalizeTransaction } from 'uniswap/src/features/transactions/slice'
+import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
+import { AssetType } from 'lx/src/entities/assets'
+import { ALL_EVM_CHAIN_IDS } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { finalizeTransaction } from 'lx/src/features/transactions/slice'
 import {
   ApproveTransactionInfo,
   BaseSwapTransactionInfo,
@@ -32,11 +32,11 @@ import {
   UnknownTransactionInfo,
   WCConfirmInfo,
   WrapTransactionInfo,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { dappInfoWC } from 'uniswap/src/test/fixtures/wallet/walletConnect'
-import { faker } from 'uniswap/src/test/shared'
-import { createFixture, randomChoice, randomEnumValue } from 'uniswap/src/test/utils'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { dappInfoWC } from 'lx/src/test/fixtures/wallet/walletConnect'
+import { faker } from 'lx/src/test/shared'
+import { createFixture, randomChoice, randomEnumValue } from 'lx/src/test/utils'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 export const transactionId = createFixture<TransactionId>()(() => ({
   id: faker.datatype.uuid(),

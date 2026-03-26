@@ -1,9 +1,9 @@
 import { GraphQLApi } from '@luxexchange/api'
 import { useCallback, useMemo } from 'react'
-import { PollingInterval } from 'uniswap/src/constants/misc'
-import { FiatCurrency } from 'uniswap/src/features/fiatCurrency/constants'
-import { getFiatCurrencyCode, useAppFiatCurrency } from 'uniswap/src/features/fiatCurrency/hooks'
-import { LocalizationContextState } from 'uniswap/src/features/language/LocalizationContext'
+import { PollingInterval } from 'lx/src/constants/misc'
+import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
+import { getFiatCurrencyCode, useAppFiatCurrency } from 'lx/src/features/fiatCurrency/hooks'
+import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
 import { FiatNumberType } from 'utilities/src/format/types'
 
 type SupportedServerCurrency = Extract<

@@ -50,7 +50,7 @@ export function OtherWalletsModal() {
             transition={`${transitions.duration.fast} ${transitions.timing.inOut}`}
             data-testid="option-grid"
           >
-            {/* If uniswap mobile was the last used connector it will be show on the primary window */}
+            {/* If lx mobile was the last used connector it will be show on the primary window */}
             {/* If Embedded Wallet is enabled, it will be shown on the primary window */}
             {recentConnectorId !== CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID &&
               !isEmbeddedWalletEnabled && (

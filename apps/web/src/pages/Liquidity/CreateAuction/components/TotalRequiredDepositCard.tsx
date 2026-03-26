@@ -1,7 +1,7 @@
 import { type Currency, type CurrencyAmount } from '@luxamm/sdk-core'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from '@luxfi/utilities/src/format/types'
 import { amountToPercent } from '~/pages/Liquidity/CreateAuction/utils'
 

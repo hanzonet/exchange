@@ -1,4 +1,4 @@
-import { KeyboardLayout } from 'uniswap/src/utils/useKeyboardLayout'
+import { KeyboardLayout } from 'lx/src/utils/useKeyboardLayout'
 import { NotImplementedError } from 'utilities/src/errors'
 
 export function useKeyboardLayout(): KeyboardLayout {

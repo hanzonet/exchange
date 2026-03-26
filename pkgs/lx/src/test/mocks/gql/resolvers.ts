@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxexchange/api'
 import { GraphQLJSON } from 'graphql-scalars'
-import { priceHistory, tokenProject } from 'uniswap/src/test/fixtures'
+import { priceHistory, tokenProject } from 'lx/src/test/fixtures'
 
 export const defaultResolvers: GraphQLApi.Resolvers = {
   Query: {

@@ -6,19 +6,19 @@ import { Check } from 'ui/src/components/icons/Check'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import {
   FLASHBLOCKS_INSTANT_BALANCE_TIMEOUT,
   NON_FLASHBLOCKS_INSTANT_BALANCE_BUTTON_DURATION,
-} from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/constants'
-import { useInstantReceiptOutput } from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useInstantReceiptOutput'
-import { shouldShowFlashblocksUI } from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
-import { useIsUnichainFlashblocksEnabled } from 'uniswap/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
-import { useSwapDependenciesStore } from 'uniswap/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
+} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/constants'
+import { useInstantReceiptOutput } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useInstantReceiptOutput'
+import { shouldShowFlashblocksUI } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/utils'
+import { useIsUnichainFlashblocksEnabled } from 'lx/src/features/transactions/swap/hooks/useIsUnichainFlashblocksEnabled'
+import { useSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/useSwapDependenciesStore'
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 export function FlashblocksConfirmButton({ size }: { size: 'medium' | 'large' }): JSX.Element {
   const { t } = useTranslation()

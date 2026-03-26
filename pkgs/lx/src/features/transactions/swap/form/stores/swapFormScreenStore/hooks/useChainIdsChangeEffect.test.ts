@@ -1,6 +1,6 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useChainIdsChangeEffect } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
-import { act, renderHook } from 'uniswap/src/test/test-utils'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useChainIdsChangeEffect } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useChainIdsChangeEffect'
+import { act, renderHook } from 'lx/src/test/test-utils'
 
 describe('useChainIdsChangeEffect', () => {
   describe.each([

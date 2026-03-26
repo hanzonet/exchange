@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import { Flex } from 'ui/src'
-import type { OverlapIconWrapperProps } from 'uniswap/src/components/network/NetworkIconList/OverlapIconWrapper'
+import type { OverlapIconWrapperProps } from 'lx/src/components/network/NetworkIconList/OverlapIconWrapper'
 
 /**
  * Web: uses SVG <mask> + <foreignObject> so the icon is visible only in the

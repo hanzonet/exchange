@@ -7,9 +7,9 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler'
 import { runOnJS } from 'react-native-reanimated'
 import { TouchableArea } from 'ui/src'
 import { borderRadii } from 'ui/src/theme'
-import type { TokenBalanceItemContextMenuProps } from 'uniswap/src/components/portfolio/TokenBalanceItemContextMenu'
-import { TokenList } from 'uniswap/src/features/dataApi/types'
-import { useTokenContextMenuOptions } from 'uniswap/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
+import type { TokenBalanceItemContextMenuProps } from 'lx/src/components/portfolio/TokenBalanceItemContextMenu'
+import { TokenList } from 'lx/src/features/dataApi/types'
+import { useTokenContextMenuOptions } from 'lx/src/features/portfolio/balances/hooks/useTokenContextMenuOptions'
 import { useEvent } from 'utilities/src/react/hooks'
 
 const DEFAULT_LONG_PRESS_DURATION = 300

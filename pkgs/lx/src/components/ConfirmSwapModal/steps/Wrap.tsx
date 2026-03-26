@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { StepRowProps, StepRowSkeleton } from 'uniswap/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
-import { StepStatus } from 'uniswap/src/components/ConfirmSwapModal/types'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { WrapTransactionStep } from 'uniswap/src/features/transactions/steps/wrap'
+import { StepRowProps, StepRowSkeleton } from 'lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
+import { lxUrls } from 'lx/src/constants/urls'
+import { WrapTransactionStep } from 'lx/src/features/transactions/steps/wrap'
 
 export function WrapTransactionStepRow({
   step,

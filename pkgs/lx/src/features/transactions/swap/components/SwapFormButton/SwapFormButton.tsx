@@ -1,18 +1,18 @@
 import { Button, Flex, useIsShortMobileDevice } from 'ui/src'
-import { useCexTransferProviders } from 'uniswap/src/features/fiatOnRamp/useCexTransferProviders'
+import { useCexTransferProviders } from 'lx/src/features/fiatOnRamp/useCexTransferProviders'
 import {
   useIsShowingWebFORNudge,
   useIsWebFORNudgeEnabled,
   useSetIsShowingWebFORNudge,
-} from 'uniswap/src/features/providers/webForNudgeProvider'
-import { useTransactionModalContext } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useIsSwapButtonDisabled } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
-import { useIsTradeIndicative } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
-import { useOnReviewPress } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
-import { useSwapFormButtonColors } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
-import { useSwapFormButtonText } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
-import { SwapFormButtonTrace } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/SwapFormButtonTrace'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+} from 'lx/src/features/providers/webForNudgeProvider'
+import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useIsSwapButtonDisabled } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsSwapButtonDisabled'
+import { useIsTradeIndicative } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsTradeIndicative'
+import { useOnReviewPress } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
+import { useSwapFormButtonColors } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonColors'
+import { useSwapFormButtonText } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useSwapFormButtonText'
+import { SwapFormButtonTrace } from 'lx/src/features/transactions/swap/components/SwapFormButton/SwapFormButtonTrace'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export const SWAP_BUTTON_TEXT_VARIANT = 'buttonLabel1'

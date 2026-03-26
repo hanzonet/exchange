@@ -3,7 +3,7 @@ import { ProtocolVersion } from '@luxamm/client-data-api/dist/data/v1/poolTypes_
 import { Currency } from '@luxamm/sdk-core'
 import { memo, useState } from 'react'
 import { Flex } from 'ui/src'
-import { PoolOptionItem } from 'uniswap/src/components/lists/items/pools/PoolOptionItem'
+import { PoolOptionItem } from 'lx/src/components/lists/items/pools/PoolOptionItem'
 import {
   PoolContextMenuAction,
   PoolOptionItemContextMenu,
@@ -12,21 +12,21 @@ import { TokenContextMenuVariant, TokenOptionItem } from '@luxexchange/lx/src/co
 import {
   TokenContextMenuAction,
   TokenOptionItemContextMenu,
-} from 'uniswap/src/components/lists/items/tokens/TokenOptionItemContextMenu'
-import { OnchainItemListOptionType, SearchModalOption } from 'uniswap/src/components/lists/items/types'
-import { ENSAddressOptionItem } from 'uniswap/src/components/lists/items/wallets/ENSAddressOptionItem'
-import { UnitagOptionItem } from 'uniswap/src/components/lists/items/wallets/UnitagOptionItem'
-import { WalletByAddressOptionItem } from 'uniswap/src/components/lists/items/wallets/WalletByAddressOptionItem'
-import { ItemRowInfo } from 'uniswap/src/components/lists/OnchainItemList/OnchainItemList'
-import type { OnchainItemSection } from 'uniswap/src/components/lists/OnchainItemList/types'
-import { SelectorBaseList } from 'uniswap/src/components/lists/SelectorBaseList'
-import { ContextMenuTriggerButton } from 'uniswap/src/components/menus/ContextMenuTriggerButton'
-import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
-import { useAddToSearchHistory } from 'uniswap/src/components/TokenSelector/hooks/useAddToSearchHistory'
-import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { sendSearchOptionItemClickedAnalytics } from 'uniswap/src/features/search/SearchModal/analytics/analytics'
-import { SearchFilterContext } from 'uniswap/src/features/search/SearchModal/analytics/SearchContext'
+} from 'lx/src/components/lists/items/tokens/TokenOptionItemContextMenu'
+import { OnchainItemListOptionType, SearchModalOption } from 'lx/src/components/lists/items/types'
+import { ENSAddressOptionItem } from 'lx/src/components/lists/items/wallets/ENSAddressOptionItem'
+import { UnitagOptionItem } from 'lx/src/components/lists/items/wallets/UnitagOptionItem'
+import { WalletByAddressOptionItem } from 'lx/src/components/lists/items/wallets/WalletByAddressOptionItem'
+import { ItemRowInfo } from 'lx/src/components/lists/OnchainItemList/OnchainItemList'
+import type { OnchainItemSection } from 'lx/src/components/lists/OnchainItemList/types'
+import { SelectorBaseList } from 'lx/src/components/lists/SelectorBaseList'
+import { ContextMenuTriggerButton } from 'lx/src/components/menus/ContextMenuTriggerButton'
+import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
+import { useAddToSearchHistory } from 'lx/src/components/TokenSelector/hooks/useAddToSearchHistory'
+import { useLuxContext } from 'lx/src/contexts/LuxContext'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { sendSearchOptionItemClickedAnalytics } from 'lx/src/features/search/SearchModal/analytics/analytics'
+import { SearchFilterContext } from 'lx/src/features/search/SearchModal/analytics/SearchContext'
 import { isHoverable, isWebPlatform } from 'utilities/src/platform'
 import { useBooleanState } from 'utilities/src/react/useBooleanState'
 

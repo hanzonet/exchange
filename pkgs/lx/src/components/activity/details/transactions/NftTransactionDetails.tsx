@@ -1,5 +1,5 @@
 import { Flex, Text } from 'ui/src'
-import { NFTViewer } from 'uniswap/src/components/nfts/NFTViewer'
+import { NFTViewer } from 'lx/src/components/nfts/NFTViewer'
 import {
   NFTApproveTransactionInfo,
   NFTMintTransactionInfo,
@@ -7,7 +7,7 @@ import {
   NFTTradeTransactionInfo,
   ReceiveTokenTransactionInfo,
   SendTokenTransactionInfo,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 const MAX_NFT_IMAGE_HEIGHT = 375
 

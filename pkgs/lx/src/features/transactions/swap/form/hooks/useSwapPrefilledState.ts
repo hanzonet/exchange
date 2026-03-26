@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
-import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import type { CurrencyAsset } from 'uniswap/src/entities/assets'
-import { AssetType } from 'uniswap/src/entities/assets'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import type { SwapFormState } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/types'
-import { DEFAULT_PROTOCOL_OPTIONS } from 'uniswap/src/features/transactions/swap/utils/protocols'
-import type { TransactionState } from 'uniswap/src/features/transactions/types/transactionState'
-import { CurrencyField } from 'uniswap/src/types/currency'
-import { areAddressesEqual } from 'uniswap/src/utils/addresses'
+import { getNativeAddress } from 'lx/src/constants/addresses'
+import type { CurrencyAsset } from 'lx/src/entities/assets'
+import { AssetType } from 'lx/src/entities/assets'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
+import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { DEFAULT_PROTOCOL_OPTIONS } from 'lx/src/features/transactions/swap/utils/protocols'
+import type { TransactionState } from 'lx/src/features/transactions/types/transactionState'
+import { CurrencyField } from 'lx/src/types/currency'
+import { areAddressesEqual } from 'lx/src/utils/addresses'
 
 export function useSwapPrefilledState(initialState: TransactionState | undefined): SwapFormState | undefined {
   const swapPrefilledState = useMemo((): SwapFormState | undefined => {

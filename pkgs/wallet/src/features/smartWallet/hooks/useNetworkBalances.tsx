@@ -1,9 +1,9 @@
 import { useStatsigClientStatus } from '@luxexchange/gating'
 import { useEffect, useState } from 'react'
-import { fetchGasFeeQuery } from 'uniswap/src/data/apiClients/lxApi/useGasFeeQuery'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
-import { createEthersProvider } from 'uniswap/src/features/providers/createEthersProvider'
+import { fetchGasFeeQuery } from 'lx/src/data/apiClients/lxApi/useGasFeeQuery'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { DEFAULT_NATIVE_ADDRESS } from 'lx/src/features/chains/evm/defaults'
+import { createEthersProvider } from 'lx/src/features/providers/createEthersProvider'
 import { useSmartWalletChains } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletChains'
 import { NetworkInfo } from '@luxfi/wallet/src/features/smartWallet/InsufficientFundsNetworkRow'
 import { getRemoveDelegationTransaction } from '@luxfi/wallet/src/features/smartWallet/sagas/removeDelegationSaga'
@@ -30,7 +30,7 @@ export const useNetworkBalances = (account?: Address): NetworkInfo[] => {
       const networkInfoPromises = enabledChains.map(async (chainId): Promise<NetworkInfo | undefined> => {
         const result = getDelegationDetails(account, chainId)
 
-        if (result?.latestDelegationAddress && result.isWalletDelegatedToUniswap) {
+        if (result?.latestDelegationAddress && result.isWalletDelegatedToLx) {
           try {
             const provider = createEthersProvider({ chainId })
             const balance = await provider?.getBalance(account)

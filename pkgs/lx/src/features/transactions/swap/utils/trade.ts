@@ -1,12 +1,12 @@
 import providers from '@ethersproject/providers'
-import { NFTPermitData, PermitBatchData } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/types_pb'
+import { NFTPermitData, PermitBatchData } from '@luxamm/client-liquidity/dist/lx/liquidity/v1/types_pb'
 import { ONE, Protocol } from '@luxamm/router-sdk'
 import { Currency, CurrencyAmount, Fraction, Percent, TradeType } from '@luxamm/sdk-core'
 import { GasEstimate, TradingApi } from '@luxexchange/api'
-import { LocalizationContextState } from 'uniswap/src/features/language/LocalizationContext'
-import { IndicativeTrade, Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { ACROSS_DAPP_INFO, isBridge, isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { getClassicQuoteFromResponse } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+import { LocalizationContextState } from 'lx/src/features/language/LocalizationContext'
+import { IndicativeTrade, Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { ACROSS_DAPP_INFO, isBridge, isClassic } from 'lx/src/features/transactions/swap/utils/routing'
+import { getClassicQuoteFromResponse } from 'lx/src/features/transactions/swap/utils/tradingApi'
 import {
   BaseSwapTransactionInfo,
   BridgeTransactionInfo,
@@ -14,13 +14,13 @@ import {
   ExactOutputSwapTransactionInfo,
   TransactionType,
   TransactionTypeInfo,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 import {
   PopulatedTransactionRequestArray,
   ValidatedTransactionRequest,
-} from 'uniswap/src/features/transactions/types/transactionRequests'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionRequests'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { currencyId } from 'lx/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
 
 export function tradeToTransactionInfo({

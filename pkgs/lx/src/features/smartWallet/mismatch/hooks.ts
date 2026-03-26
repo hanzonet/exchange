@@ -1,13 +1,13 @@
 import { UseMutationResult, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useEffect, useMemo, useRef } from 'react'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useMismatchContext } from 'uniswap/src/features/smartWallet/mismatch/MismatchContext'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useMismatchContext } from 'lx/src/features/smartWallet/mismatch/MismatchContext'
 import {
   getIsMismatchAccountQueryOptions,
   MisMatchQueryOptions,
   type MisMatchQueryResult,
   type MismatchResult,
-} from 'uniswap/src/features/smartWallet/mismatch/queryOptions'
+} from 'lx/src/features/smartWallet/mismatch/queryOptions'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent, usePrevious } from 'utilities/src/react/hooks'
 

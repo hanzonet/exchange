@@ -1,10 +1,10 @@
 import { GqlResult } from '@luxexchange/api'
-import { useCurrencies } from 'uniswap/src/components/TokenSelector/hooks/useCurrencies'
-import { USDC, USDT, WBTC } from 'uniswap/src/constants/tokens'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { buildNativeCurrencyId, buildWrappedNativeCurrencyId, currencyId } from 'uniswap/src/utils/currencyId'
+import { useCurrencies } from 'lx/src/components/TokenSelector/hooks/useCurrencies'
+import { USDC, USDT, WBTC } from 'lx/src/constants/tokens'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { buildNativeCurrencyId, buildWrappedNativeCurrencyId, currencyId } from 'lx/src/utils/currencyId'
 
 // Use Mainnet base token addresses since TokenProjects query returns each token
 // on each network

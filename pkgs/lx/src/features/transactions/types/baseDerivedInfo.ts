@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { CurrencyField } from 'uniswap/src/types/currency'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { CurrencyField } from 'lx/src/types/currency'
 
 export type BaseDerivedInfo<TInput = CurrencyInfo> = {
   currencies: {

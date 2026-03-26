@@ -9,7 +9,7 @@
   ],
   "references": [
     {
-      "path": "../uniswap"
+      "path": "../lx"
     },
     {
       "path": "../utilities"

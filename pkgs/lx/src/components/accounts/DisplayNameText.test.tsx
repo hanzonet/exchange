@@ -1,7 +1,7 @@
-import { DisplayNameText } from 'uniswap/src/components/accounts/DisplayNameText'
-import { DisplayName, DisplayNameType } from 'uniswap/src/features/accounts/types'
-import { SAMPLE_SEED_ADDRESS_1 } from 'uniswap/src/test/fixtures'
-import { render } from 'uniswap/src/test/test-utils'
+import { DisplayNameText } from 'lx/src/components/accounts/DisplayNameText'
+import { DisplayName, DisplayNameType } from 'lx/src/features/accounts/types'
+import { SAMPLE_SEED_ADDRESS_1 } from 'lx/src/test/fixtures'
+import { render } from 'lx/src/test/test-utils'
 
 const unitagDisplayName: DisplayName = { name: 'luni', type: DisplayNameType.Unitag }
 const ensDisplayName: DisplayName = { name: 'vitalik.eth', type: DisplayNameType.ENS }

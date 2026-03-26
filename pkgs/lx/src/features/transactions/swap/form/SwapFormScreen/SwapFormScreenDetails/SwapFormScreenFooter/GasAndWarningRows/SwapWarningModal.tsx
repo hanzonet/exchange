@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
-import { ParsedWarnings } from 'uniswap/src/components/modals/WarningModal/types'
-import { WarningModal } from 'uniswap/src/components/modals/WarningModal/WarningModal'
-import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { ParsedWarnings } from 'lx/src/components/modals/WarningModal/types'
+import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 
 export function SwapWarningModal({
   isOpen,

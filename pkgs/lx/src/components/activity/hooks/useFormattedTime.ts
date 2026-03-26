@@ -3,7 +3,7 @@ import {
   FORMAT_DATE_MONTH_DAY,
   FORMAT_TIME_SHORT,
   useLocalizedDayjs,
-} from 'uniswap/src/features/language/localizedDayjs'
+} from 'lx/src/features/language/localizedDayjs'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 import { useInterval } from 'utilities/src/time/timing'
 

@@ -18,9 +18,9 @@ export const devPortalAvailabilityMonitors: MonitorDefinition[] = [
     noDataTimeframe: 15,
     notifyNoData: true,
     logQuery: 'service:dev-portal',
-    runbookUrl: 'https://www.notion.so/uniswap/dev-portal-runbook',
+    runbookUrl: 'https://www.notion.so/lx/dev-portal-runbook',
     readmeUrl:
-      'https://github.com/Uniswap/universe/tree/main/apps/dev-portal',
+      'https://github.com/Lx/universe/tree/main/apps/dev-portal',
     dashboards: [],
   },
   {
@@ -34,9 +34,9 @@ export const devPortalAvailabilityMonitors: MonitorDefinition[] = [
     priority: 2,
     thresholds: {critical: 99, warning: 99.5},
     logQuery: 'service:dev-portal status:error',
-    runbookUrl: 'https://www.notion.so/uniswap/dev-portal-runbook',
+    runbookUrl: 'https://www.notion.so/lx/dev-portal-runbook',
     readmeUrl:
-      'https://github.com/Uniswap/universe/tree/main/apps/dev-portal',
+      'https://github.com/Lx/universe/tree/main/apps/dev-portal',
     dashboards: [],
     notifyNoData: true,
     noDataTimeframe: 15,

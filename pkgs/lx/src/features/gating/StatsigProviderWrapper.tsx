@@ -6,8 +6,8 @@ import {
   useClientAsyncInit,
 } from '@luxexchange/gating'
 import { type ReactNode, useEffect, useMemo } from 'react'
-import { config } from 'uniswap/src/config'
-import { statsigBaseConfig } from 'uniswap/src/features/gating/statsigBaseConfig'
+import { config } from 'lx/src/config'
+import { statsigBaseConfig } from 'lx/src/features/gating/statsigBaseConfig'
 import { logger } from 'utilities/src/logger/logger'
 
 type StatsigProviderWrapperProps = {

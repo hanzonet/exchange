@@ -2,10 +2,10 @@ import { ApolloError } from '@apollo/client'
 import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { useTokenProjects } from 'uniswap/src/features/dataApi/tokenProjects/tokenProjects'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { usePersistedError } from 'uniswap/src/features/dataApi/utils/usePersistedError'
-import { selectFavoriteTokens } from 'uniswap/src/features/favorites/selectors'
+import { useTokenProjects } from 'lx/src/features/dataApi/tokenProjects/tokenProjects'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { usePersistedError } from 'lx/src/features/dataApi/utils/usePersistedError'
+import { selectFavoriteTokens } from 'lx/src/features/favorites/selectors'
 
 export function useFavoriteCurrencies(): GqlResult<CurrencyInfo[]> {
   const favoriteCurrencyIds = useSelector(selectFavoriteTokens)

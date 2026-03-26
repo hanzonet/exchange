@@ -1,12 +1,12 @@
-import type { TokenApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
-import type { Permit2SignatureStep } from 'uniswap/src/features/transactions/steps/permit2Signature'
-import type { Permit2TransactionStep } from 'uniswap/src/features/transactions/steps/permit2Transaction'
-import type { TokenRevocationTransactionStep } from 'uniswap/src/features/transactions/steps/revoke'
+import type { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
+import type { Permit2SignatureStep } from 'lx/src/features/transactions/steps/permit2Signature'
+import type { Permit2TransactionStep } from 'lx/src/features/transactions/steps/permit2Transaction'
+import type { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
 import type {
   SwapTransactionStep,
   SwapTransactionStepAsync,
   SwapTransactionStepBatched,
-} from 'uniswap/src/features/transactions/swap/steps/swap'
+} from 'lx/src/features/transactions/swap/steps/swap'
 
 export type ClassicSwapSteps =
   | TokenApprovalTransactionStep

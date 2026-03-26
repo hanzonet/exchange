@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { AppNotification } from 'uniswap/src/features/notifications/slice/types'
+import { AppNotification } from 'lx/src/features/notifications/slice/types'
 
 export interface NotificationState {
   notificationQueue: AppNotification[]

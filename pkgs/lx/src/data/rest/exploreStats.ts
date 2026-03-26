@@ -2,12 +2,12 @@ import { PartialMessage } from '@bufbuild/protobuf'
 import { ConnectError } from '@connectrpc/connect'
 import { useQuery } from '@connectrpc/connect-query'
 import { UseQueryResult } from '@tanstack/react-query'
-import { ExploreStatsRequest, ExploreStatsResponse } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
-import { exploreStats } from '@luxamm/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
-import { lxGetTransport } from 'uniswap/src/data/rest/base'
+import { ExploreStatsRequest, ExploreStatsResponse } from '@luxamm/client-explore/dist/lx/explore/v1/service_pb'
+import { exploreStats } from '@luxamm/client-explore/dist/lx/explore/v1/service-ExploreStatsService_connectquery'
+import { lxGetTransport } from 'lx/src/data/rest/base'
 
 /**
- * Wrapper around Tanstack useQuery for the Uniswap REST BE service ExploreStats
+ * Wrapper around Tanstack useQuery for the Lx REST BE service ExploreStats
  * This included top tokens and top pools data
  * @param input { chainId: string } - string representation of the chain to query or `ALL_NETWORKS` for aggregated data
  * @param select - function to transform the data before returning it

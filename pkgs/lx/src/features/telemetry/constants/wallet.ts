@@ -1,7 +1,7 @@
 import { SharedEventName } from '@luxamm/analytics-events'
-import { ExtensionEventName } from 'uniswap/src/features/telemetry/constants/extension'
-import { SwapEventName } from 'uniswap/src/features/telemetry/constants/features'
-import { LxEventName } from 'uniswap/src/features/telemetry/constants/uniswap'
+import { ExtensionEventName } from 'lx/src/features/telemetry/constants/extension'
+import { SwapEventName } from 'lx/src/features/telemetry/constants/features'
+import { LxEventName } from 'lx/src/features/telemetry/constants/lx'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
 import type { TestnetModeConfig } from 'utilities/src/telemetry/analytics/analytics'
 

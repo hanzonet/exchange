@@ -1,9 +1,9 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'uniswap/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'uniswap/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 // Type for the token parameter that gqlTokenToCurrencyInfo expects
 export type GqlTokenToCurrencyInfoToken = Omit<NonNullable<NonNullable<GraphQLApi.TokenQuery['token']>>, 'project'> & {

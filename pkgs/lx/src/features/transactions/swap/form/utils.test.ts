@@ -1,7 +1,7 @@
-import { AssetType } from 'uniswap/src/entities/assets'
-import { getShouldResetExactAmountToken } from 'uniswap/src/features/transactions/swap/form/utils'
-import type { SwapFormState } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/types'
-import { CurrencyField } from 'uniswap/src/types/currency'
+import { AssetType } from 'lx/src/entities/assets'
+import { getShouldResetExactAmountToken } from 'lx/src/features/transactions/swap/form/utils'
+import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { CurrencyField } from 'lx/src/types/currency'
 
 type SwapContextParam = Parameters<typeof getShouldResetExactAmountToken>[0]
 

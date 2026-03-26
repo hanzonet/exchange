@@ -1,7 +1,7 @@
 import type { BlockaidScanJsonRpcRequest, GasFeeResult } from '@luxexchange/api'
 import { useEffect, useMemo } from 'react'
 import { Flex } from 'ui/src'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
 import { DappRequestFooter } from '@luxfi/wallet/src/components/dappRequests/DappRequestFooter'
 import { TransactionErrorType } from '@luxfi/wallet/src/components/dappRequests/TransactionErrorSection'
 import { TransactionLoadingState } from '@luxfi/wallet/src/components/dappRequests/TransactionLoadingState'

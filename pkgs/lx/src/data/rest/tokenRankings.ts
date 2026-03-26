@@ -6,18 +6,18 @@ import {
   TokenRankingsRequest,
   TokenRankingsResponse,
   TokenRankingsStat,
-} from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
-import { tokenRankings } from '@luxamm/client-explore/dist/uniswap/explore/v1/service-ExploreStatsService_connectquery'
+} from '@luxamm/client-explore/dist/lx/explore/v1/service_pb'
+import { tokenRankings } from '@luxamm/client-explore/dist/lx/explore/v1/service-ExploreStatsService_connectquery'
 import { parseProtectionInfo, parseSafetyLevel } from '@luxexchange/api'
-import { lxGetTransport } from 'uniswap/src/data/rest/base'
-import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'uniswap/src/features/dataApi/utils/buildCurrency'
-import { getCurrencySafetyInfo } from 'uniswap/src/features/dataApi/utils/getCurrencySafetyInfo'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+import { lxGetTransport } from 'lx/src/data/rest/base'
+import { fromGraphQLChain } from 'lx/src/features/chains/utils'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
+import { getCurrencySafetyInfo } from 'lx/src/features/dataApi/utils/getCurrencySafetyInfo'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 /**
- * Wrapper around Tanstack useQuery for the Uniswap REST BE service TokenRankings
+ * Wrapper around Tanstack useQuery for the Lx REST BE service TokenRankings
  * This includes the top tokens pre-sorted by various filters
  * @param input { chainId: string } - string representation of the chain to query or `ALL_NETWORKS` for aggregated data
  * @returns UseQueryResult<TokenRankingsResponse, ConnectError>

@@ -1,7 +1,7 @@
 import { Flex } from 'ui/src'
-import { TokenLogo } from 'uniswap/src/components/CurrencyLogo/TokenLogo'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { useBackgroundColor } from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
+import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { useBackgroundColor } from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/hooks/useBackgroundColor'
 
 interface StyledTokenLogoProps {
   currencyInfo: CurrencyInfo

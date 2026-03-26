@@ -1,14 +1,14 @@
 import { providers } from 'ethers'
 import { call, select } from 'typed-redux-saga'
-import { AccountType } from 'uniswap/src/features/accounts/types'
-import { cancelRemoteLxSwapOrder } from 'uniswap/src/features/transactions/slice'
-import { isBridge, isClassic, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { AccountType } from 'lx/src/features/accounts/types'
+import { cancelRemoteLxSwapOrder } from 'lx/src/features/transactions/slice'
+import { isBridge, isClassic, isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionOriginType,
   LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { logger } from 'utilities/src/logger/logger'
 import {
   ExecuteTransactionParams,

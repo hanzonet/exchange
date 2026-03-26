@@ -1,9 +1,9 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { assetActivity } from 'uniswap/src/test/fixtures/gql'
-import { amount } from 'uniswap/src/test/fixtures/gql/amounts'
-import { tokenBalance } from 'uniswap/src/test/fixtures/gql/assets'
-import { faker } from 'uniswap/src/test/shared'
-import { createArray, createFixture } from 'uniswap/src/test/utils'
+import { assetActivity } from 'lx/src/test/fixtures/gql'
+import { amount } from 'lx/src/test/fixtures/gql/amounts'
+import { tokenBalance } from 'lx/src/test/fixtures/gql/assets'
+import { faker } from 'lx/src/test/shared'
+import { createArray, createFixture } from 'lx/src/test/utils'
 
 type PortfolioOptions = {
   activitiesCount: number

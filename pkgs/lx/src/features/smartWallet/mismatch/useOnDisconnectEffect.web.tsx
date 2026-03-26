@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { setHasShownMismatchToast } from 'uniswap/src/features/behaviorHistory/slice'
+import { setHasShownMismatchToast } from 'lx/src/features/behaviorHistory/slice'
 import { isExtensionApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useAccountEffect } from 'wagmi'

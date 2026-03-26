@@ -1,6 +1,6 @@
-import { FiatCurrency } from 'uniswap/src/features/fiatCurrency/constants'
-import { formatChartFiatDelta } from 'uniswap/src/features/fiatCurrency/priceChart/priceChartConversion'
-import { FormatNumberOrStringInput } from 'uniswap/src/features/language/formatter'
+import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
+import { formatChartFiatDelta } from 'lx/src/features/fiatCurrency/priceChart/priceChartConversion'
+import { FormatNumberOrStringInput } from 'lx/src/features/language/formatter'
 
 // Minimal test formatter that matches expected test output
 const defaultFormatter = (input: FormatNumberOrStringInput): string => {

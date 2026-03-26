@@ -1,6 +1,6 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { EthMethod } from 'uniswap/src/features/dappRequests/types'
-import { areAddressesEqual } from 'uniswap/src/utils/addresses'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { EthMethod } from 'lx/src/features/dappRequests/types'
+import { areAddressesEqual } from 'lx/src/utils/addresses'
 
 export const isSignTypedDataRequest = (request: { type: EthMethod }): boolean =>
   request.type === EthMethod.SignTypedData || request.type === EthMethod.SignTypedDataV4

@@ -1,7 +1,7 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { memo, useMemo } from 'react'
 import { Text, TextProps } from '@luxfi/ui/src'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 import { NumberType } from '@luxfi/utilities/src/format/types'
 import { EllipsisText } from '~/components/Table/shared/TableText'
 import { ValueWithFadedDecimals } from '~/pages/Portfolio/components/ValueWithFadedDecimals/ValueWithFadedDecimals'

@@ -1,4 +1,4 @@
-import { CollectFeesTransactionStep } from 'uniswap/src/features/transactions/liquidity/steps/collectFees'
+import { CollectFeesTransactionStep } from 'lx/src/features/transactions/liquidity/steps/collectFees'
 
 export type CollectFeesSteps = CollectFeesTransactionStep
 

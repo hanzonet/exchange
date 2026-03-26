@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Text, LXText } from 'ui/src'
 import { AnimatedLX } from 'ui/src/components/icons/LX'
 import { AcrossLogo } from 'ui/src/components/logos/AcrossLogo'
-import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isBridge, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { useRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingRegistry'
+import { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { isBridge, isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
+import { useRoutingProvider } from 'lx/src/utils/routingDiagram/routingRegistry'
 
 export function RoutingLabel({ trade }: { trade: Trade }): JSX.Element {
   const { t } = useTranslation()

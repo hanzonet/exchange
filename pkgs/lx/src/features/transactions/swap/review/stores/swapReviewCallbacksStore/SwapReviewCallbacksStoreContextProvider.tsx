@@ -1,17 +1,17 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import type { AuthTrigger } from 'uniswap/src/features/auth/types'
-import type { TransactionScreen } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useParsedSwapWarnings } from 'uniswap/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
-import { useCreateSwapReviewCallbacks } from 'uniswap/src/features/transactions/swap/review/hooks/useCreateSwapReviewCallbacks'
-import { createSwapReviewCallbacksStore } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/createSwapReviewCallbacksStore'
-import { SwapReviewCallbacksStoreContext } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/SwapReviewCallbacksStoreContext'
-import { useSwapReviewActions } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
+import type { AuthTrigger } from 'lx/src/features/auth/types'
+import type { TransactionScreen } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import { useCreateSwapReviewCallbacks } from 'lx/src/features/transactions/swap/review/hooks/useCreateSwapReviewCallbacks'
+import { createSwapReviewCallbacksStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/createSwapReviewCallbacksStore'
+import { SwapReviewCallbacksStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/SwapReviewCallbacksStoreContext'
+import { useSwapReviewActions } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/useSwapReviewStore'
 import {
   useSwapReviewWarningStateActions,
   useSwapReviewWarningStore,
-} from 'uniswap/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
-import type { GetExecuteSwapService } from 'uniswap/src/features/transactions/swap/services/executeSwapService'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from 'lx/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
+import type { GetExecuteSwapService } from 'lx/src/features/transactions/swap/services/executeSwapService'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
 
 interface SwapReviewCallbacksContextProviderProps {

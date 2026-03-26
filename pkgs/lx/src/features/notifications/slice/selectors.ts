@@ -1,6 +1,6 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
-import { AppNotification } from 'uniswap/src/features/notifications/slice/types'
-import { LxState } from 'uniswap/src/state/lxReducer'
+import { AppNotification } from 'lx/src/features/notifications/slice/types'
+import { LxState } from 'lx/src/state/lxReducer'
 
 const selectNotificationQueue = (state: LxState): AppNotification[] => state.notifications.notificationQueue
 

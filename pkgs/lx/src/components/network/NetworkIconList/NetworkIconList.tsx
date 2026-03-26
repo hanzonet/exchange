@@ -1,11 +1,11 @@
 import { memo, useMemo } from 'react'
 import { Flex } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
-import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
-import { getDisplayChainIds } from 'uniswap/src/components/network/NetworkIconList/getDisplayChainIds'
-import { OverlapIconWrapper } from 'uniswap/src/components/network/NetworkIconList/OverlapIconWrapper'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { getDisplayChainIds } from 'lx/src/components/network/NetworkIconList/getDisplayChainIds'
+import { OverlapIconWrapper } from 'lx/src/components/network/NetworkIconList/OverlapIconWrapper'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 
 /** Extra size around the icon; clipped by the container so the ring is transparent and matches any background. */
 const RING_RATIO = 1.2

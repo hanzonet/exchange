@@ -1,7 +1,7 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { ETH_LOGO, SONEIUM_LOGO } from 'ui/src/assets'
-import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
+import { CHAIN_ID_TO_URL_PARAM } from 'lx/src/features/chains/chainUrlParam'
 import {
   DEFAULT_NATIVE_ADDRESS_LEGACY,
   DEFAULT_RETRY_OPTIONS,

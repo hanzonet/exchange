@@ -1,5 +1,5 @@
 import { queryOptions, type UseQueryResult } from '@tanstack/react-query'
-import type { HasMismatchInput, HasMismatchUtil } from 'uniswap/src/features/smartWallet/mismatch/mismatch'
+import type { HasMismatchInput, HasMismatchUtil } from 'lx/src/features/smartWallet/mismatch/mismatch'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 

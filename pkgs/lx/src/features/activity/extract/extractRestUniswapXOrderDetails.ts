@@ -11,8 +11,8 @@ import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 
 function mapLxSwapStatusToLocalTxStatus(status: LxSwapTransactionStatus): TransactionStatus {
@@ -34,7 +34,7 @@ function mapLxSwapStatusToLocalTxStatus(status: LxSwapTransactionStatus): Transa
 }
 
 /**
- * Parse a Uniswap X transaction from the REST API
+ * Parse a Lx X transaction from the REST API
  */
 export default function extractRestLxSwapOrderDetails(transaction: LxSwapTransaction): TransactionDetails | null {
   try {

@@ -1,5 +1,5 @@
 import { Accordion } from 'ui/src'
-import { SwapFormScreenFooter } from 'uniswap/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
+import { SwapFormScreenFooter } from 'lx/src/features/transactions/swap/form/SwapFormScreen/SwapFormScreenDetails/SwapFormScreenFooter/SwapFormScreenFooter'
 
 export function SwapFormScreenDetails(): JSX.Element {
   return (

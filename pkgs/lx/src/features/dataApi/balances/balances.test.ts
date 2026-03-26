@@ -1,28 +1,28 @@
 import { NetworkStatus } from '@apollo/client'
 import { renderHook } from '@testing-library/react'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import {
   sortPortfolioBalances,
   useSortedPortfolioBalances,
   useSortedPortfolioBalancesMultichain,
-} from 'uniswap/src/features/dataApi/balances/balances'
-import { usePortfolioData, usePortfolioDataMultichain } from 'uniswap/src/features/dataApi/balances/balancesRest'
-import type { PortfolioBalance, PortfolioMultichainBalance } from 'uniswap/src/features/dataApi/types'
-import { useCurrencyIdToVisibility } from 'uniswap/src/features/transactions/selectors'
+} from 'lx/src/features/dataApi/balances/balances'
+import { usePortfolioData, usePortfolioDataMultichain } from 'lx/src/features/dataApi/balances/balancesRest'
+import type { PortfolioBalance, PortfolioMultichainBalance } from 'lx/src/features/dataApi/types'
+import { useCurrencyIdToVisibility } from 'lx/src/features/transactions/selectors'
 import { describe, expect, it, vi } from 'vitest'
 
-vi.mock('uniswap/src/features/dataApi/balances/balancesRest', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('uniswap/src/features/dataApi/balances/balancesRest')>()
+vi.mock('lx/src/features/dataApi/balances/balancesRest', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('lx/src/features/dataApi/balances/balancesRest')>()
   return {
     ...actual,
     usePortfolioData: vi.fn(),
     usePortfolioDataMultichain: vi.fn(),
   }
 })
-vi.mock('uniswap/src/features/chains/hooks/useEnabledChains', () => ({
+vi.mock('lx/src/features/chains/hooks/useEnabledChains', () => ({
   useEnabledChains: vi.fn(() => ({ isTestnetModeEnabled: false })),
 }))
-vi.mock('uniswap/src/features/transactions/selectors', () => ({
+vi.mock('lx/src/features/transactions/selectors', () => ({
   useCurrencyIdToVisibility: vi.fn(() => ({})),
 }))
 

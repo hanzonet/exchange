@@ -1,33 +1,33 @@
 import { CurrencyAmount } from '@luxamm/sdk-core'
-import { createCollectFeesStep } from 'uniswap/src/features/transactions/liquidity/steps/collectFees'
-import { orderCollectFeesSteps } from 'uniswap/src/features/transactions/liquidity/steps/collectFeesSteps'
-import { orderDecreaseLiquiditySteps } from 'uniswap/src/features/transactions/liquidity/steps/decreaseLiquiditySteps'
-import { createDecreasePositionStep } from 'uniswap/src/features/transactions/liquidity/steps/decreasePosition'
+import { createCollectFeesStep } from 'lx/src/features/transactions/liquidity/steps/collectFees'
+import { orderCollectFeesSteps } from 'lx/src/features/transactions/liquidity/steps/collectFeesSteps'
+import { orderDecreaseLiquiditySteps } from 'lx/src/features/transactions/liquidity/steps/decreaseLiquiditySteps'
+import { createDecreasePositionStep } from 'lx/src/features/transactions/liquidity/steps/decreasePosition'
 import {
   IncreaseLiquiditySteps,
   orderIncreaseLiquiditySteps,
-} from 'uniswap/src/features/transactions/liquidity/steps/increaseLiquiditySteps'
+} from 'lx/src/features/transactions/liquidity/steps/increaseLiquiditySteps'
 import {
   createCreatePositionAsyncStep,
   createIncreasePositionAsyncStep,
   createIncreasePositionStep,
   createIncreasePositionStepBatched,
-} from 'uniswap/src/features/transactions/liquidity/steps/increasePosition'
+} from 'lx/src/features/transactions/liquidity/steps/increasePosition'
 import {
   createMigratePositionAsyncStep,
   createMigratePositionStep,
-} from 'uniswap/src/features/transactions/liquidity/steps/migrate'
-import { orderMigrateLiquiditySteps } from 'uniswap/src/features/transactions/liquidity/steps/migrationSteps'
+} from 'lx/src/features/transactions/liquidity/steps/migrate'
+import { orderMigrateLiquiditySteps } from 'lx/src/features/transactions/liquidity/steps/migrationSteps'
 import {
   isValidLiquidityTxContext,
   LiquidityTransactionType,
   LiquidityTxAndGasInfo,
-} from 'uniswap/src/features/transactions/liquidity/types'
-import { createApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
-import { createPermit2SignatureStep } from 'uniswap/src/features/transactions/steps/permit2Signature'
-import { createPermit2TransactionStep } from 'uniswap/src/features/transactions/steps/permit2Transaction'
-import { createRevocationTransactionStep } from 'uniswap/src/features/transactions/steps/revoke'
-import { OnChainTransactionFields, TransactionStep } from 'uniswap/src/features/transactions/steps/types'
+} from 'lx/src/features/transactions/liquidity/types'
+import { createApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
+import { createPermit2SignatureStep } from 'lx/src/features/transactions/steps/permit2Signature'
+import { createPermit2TransactionStep } from 'lx/src/features/transactions/steps/permit2Transaction'
+import { createRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
+import { OnChainTransactionFields, TransactionStep } from 'lx/src/features/transactions/steps/types'
 
 export function generateLPTransactionSteps(txContext: LiquidityTxAndGasInfo): TransactionStep[] {
   const isValidLP = isValidLiquidityTxContext(txContext)

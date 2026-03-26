@@ -7,7 +7,7 @@ import {
   Notification,
   NotificationVersion,
   OnClick,
-} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
 import {
@@ -292,7 +292,7 @@ function createSolanaPromoModal(): InAppNotification {
 }
 
 /**
- * Create No Uniswap interface fees banner notification
+ * Create No Lx interface fees banner notification
  */
 function createNoLuxInterfaceFeesBanner(isDarkMode: boolean): InAppNotification {
   return new Notification({

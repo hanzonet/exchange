@@ -14,9 +14,9 @@ import type { PropsWithChildren, ReactNode } from 'react'
 import { memo } from 'react'
 import { Button, Flex, FlexProps, ModalCloseIcon, Switch, styled, Text, TouchableArea } from '@luxfi/ui/src'
 import { Pin } from '@luxfi/ui/src/components/icons/Pin'
-import { useLayerValue } from 'uniswap/src/components/gating/Rows'
-import { Modal } from 'uniswap/src/components/modals/Modal'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { useLayerValue } from 'lx/src/components/gating/Rows'
+import { Modal } from 'lx/src/components/modals/Modal'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 import { isPlaywrightEnv } from '@luxfi/utilities/src/environment/env'
 import { TRUSTED_CHROME_EXTENSION_IDS } from '@luxfi/utilities/src/environment/extensionId'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'
@@ -372,7 +372,7 @@ export default function FeatureFlagModal(): JSX.Element {
             <FeatureFlagOption flag={FeatureFlags.TDPTokenCarousel} label="Enable TDP Token Carousel" />
           </FeatureFlagGroup>
           <FeatureFlagGroup name="Misc">
-            <FeatureFlagOption flag={FeatureFlags.LxWrapped2025} label="Enable Uniswap Wrapped 2025" />
+            <FeatureFlagOption flag={FeatureFlags.LxWrapped2025} label="Enable Lx Wrapped 2025" />
             <FeatureFlagOption flag={FeatureFlags.UnificationCopy} label="Enable Unification Copy" />
           </FeatureFlagGroup>
           <FeatureFlagGroup name="Prices">

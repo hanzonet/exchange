@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js'
-import { TokenOption } from 'uniswap/src/components/lists/items/types'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isWSOL } from 'uniswap/src/utils/isWSOL'
+import { TokenOption } from 'lx/src/components/lists/items/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { isWSOL } from 'lx/src/utils/isWSOL'
 
 const searchOptions: Fuse.IFuseOptions<TokenOption> = {
   includeMatches: true,

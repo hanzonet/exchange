@@ -1,4 +1,4 @@
-import { EmbeddedWalletApiClient } from 'uniswap/src/data/rest/embeddedWallet/requests'
+import { EmbeddedWalletApiClient } from 'lx/src/data/rest/embeddedWallet/requests'
 import {
   blindPin,
   combineAndDeriveKey,
@@ -9,8 +9,8 @@ import {
   hashAuthMethodId,
   SALT_LENGTH,
   zeroBuffers,
-} from 'uniswap/src/features/passkey/pinCrypto'
-import { storeEncryptedBlob } from 'uniswap/src/features/passkey/privyBlobStore'
+} from 'lx/src/features/passkey/pinCrypto'
+import { storeEncryptedBlob } from 'lx/src/features/passkey/privyBlobStore'
 import { logger } from 'utilities/src/logger/logger'
 
 export type SetupProgress =

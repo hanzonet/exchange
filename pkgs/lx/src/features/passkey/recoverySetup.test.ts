@@ -1,19 +1,19 @@
-import { EmbeddedWalletApiClient } from 'uniswap/src/data/rest/embeddedWallet/requests'
-import { storeEncryptedBlob } from 'uniswap/src/features/passkey/privyBlobStore'
-import { encryptAndStoreRecovery } from 'uniswap/src/features/passkey/recoverySetup'
+import { EmbeddedWalletApiClient } from 'lx/src/data/rest/embeddedWallet/requests'
+import { storeEncryptedBlob } from 'lx/src/features/passkey/privyBlobStore'
+import { encryptAndStoreRecovery } from 'lx/src/features/passkey/recoverySetup'
 
-vi.mock('uniswap/src/data/rest/embeddedWallet/requests', () => ({
+vi.mock('lx/src/data/rest/embeddedWallet/requests', () => ({
   EmbeddedWalletApiClient: {
     fetchOprfEvaluate: vi.fn(),
   },
 }))
 
-vi.mock('uniswap/src/features/passkey/privyBlobStore', () => ({
+vi.mock('lx/src/features/passkey/privyBlobStore', () => ({
   storeEncryptedBlob: vi.fn(),
 }))
 
-vi.mock('uniswap/src/features/passkey/pinCrypto', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('uniswap/src/features/passkey/pinCrypto')>()
+vi.mock('lx/src/features/passkey/pinCrypto', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('lx/src/features/passkey/pinCrypto')>()
   return {
     ...actual,
     blindPin: vi.fn(),
@@ -22,7 +22,7 @@ vi.mock('uniswap/src/features/passkey/pinCrypto', async (importOriginal) => {
   }
 })
 
-const { blindPin, finalizeOprf, deriveArgon2InWorker } = await import('uniswap/src/features/passkey/pinCrypto')
+const { blindPin, finalizeOprf, deriveArgon2InWorker } = await import('lx/src/features/passkey/pinCrypto')
 
 describe('encryptAndStoreRecovery', () => {
   const params = {

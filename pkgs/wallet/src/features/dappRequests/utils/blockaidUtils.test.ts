@@ -1,5 +1,5 @@
 // Mock chain info to avoid importing chain data with PNG files
-jest.mock('uniswap/src/features/chains/chainInfo', () => ({
+jest.mock('lx/src/features/chains/chainInfo', () => ({
   getChainInfo: jest.fn((chainId: number) => ({
     nativeCurrency: {
       address: `0xNATIVE${chainId}`,
@@ -14,7 +14,7 @@ jest.mock('uniswap/src/features/chains/chainInfo', () => ({
 }))
 
 import { type BlockaidScanTransactionResponse } from '@luxexchange/api/src'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import { TransactionRiskLevel, TransactionSectionType } from '@luxfi/wallet/src/features/dappRequests/types'
 import {
   extractContractName,
@@ -451,7 +451,7 @@ describe('blockaidUtils', () => {
           asset: {
             type: 'ERC20',
             symbol: 'UNI',
-            name: 'Uniswap',
+            name: 'Lx',
             address: '0xc3De830EA07524a0761646a6a4e4be0e114a3C83',
             decimals: 18,
             chain_id: 8453,
@@ -1062,13 +1062,13 @@ describe('blockaidUtils', () => {
           status: 'Success',
           address_details: {
             '0xcontract123': {
-              contract_name: 'Uniswap Router',
+              contract_name: 'Lx Router',
             },
           },
         } as any,
       }
 
-      expect(extractContractName(scanResult, '0xcontract123')).toBe('Uniswap Router')
+      expect(extractContractName(scanResult, '0xcontract123')).toBe('Lx Router')
     })
 
     it('should handle case-insensitive address matching', () => {

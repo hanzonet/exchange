@@ -1,6 +1,6 @@
 import { DynamicConfigs, FeatureFlags, SwapConfigKey, useDynamicConfigValue, useFeatureFlag } from '@luxexchange/gating'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isMainnetChainId } from 'uniswap/src/features/chains/utils'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { isMainnetChainId } from 'lx/src/features/chains/utils'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 export const AVERAGE_L1_BLOCK_TIME_MS = 12 * ONE_SECOND_MS

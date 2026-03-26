@@ -6,19 +6,19 @@ import { type ColorTokens, Flex, LinearGradient, type LinearGradientProps, useSp
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { DEFAULT_BOTTOM_INSET } from 'ui/src/hooks/constants'
 import { borderRadii, opacify, spacing } from 'ui/src/theme'
-import { HandleBar } from 'uniswap/src/components/modals/HandleBar'
-import { Modal } from 'uniswap/src/components/modals/Modal'
+import { HandleBar } from 'lx/src/components/modals/HandleBar'
+import { Modal } from 'lx/src/components/modals/Modal'
 import {
   TransactionModalContextProvider,
   TransactionScreen,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import type {
   TransactionModalFooterContainerProps,
   TransactionModalInnerContainerProps,
   TransactionModalProps,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalProps'
-import { TransactionModalUpdateLogger } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalUpdateLogger'
-import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalProps'
+import { TransactionModalUpdateLogger } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalUpdateLogger'
+import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { isAndroid } from 'utilities/src/platform'
 
 export function TransactionModal({

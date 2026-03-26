@@ -3,9 +3,9 @@ import { Button, Flex, SpinningLoader, Text, TouchableArea } from '@luxfi/ui/src
 import { Lock } from '@luxfi/ui/src/components/icons/Lock'
 import { ShieldCheck } from '@luxfi/ui/src/components/icons/ShieldCheck'
 import { X } from '@luxfi/ui/src/components/icons/X'
-import type { EncryptedRecoveryState } from 'uniswap/src/features/passkey/embeddedWallet'
-import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
+import type { EncryptedRecoveryState } from 'lx/src/features/passkey/embeddedWallet'
+import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
 import { BackupMethodSummary, IconBox } from '~/components/Passkey/BackupLoginComponents'
 
 export function ConfirmPasscodeExtra({

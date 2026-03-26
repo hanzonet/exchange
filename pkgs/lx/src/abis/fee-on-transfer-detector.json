@@ -84,7 +84,7 @@
         "type": "bytes"
       }
     ],
-    "name": "uniswapV2Call",
+    "name": "lxV2Call",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

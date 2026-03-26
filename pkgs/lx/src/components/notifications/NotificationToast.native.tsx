@@ -3,16 +3,16 @@ import { Directions, FlingGestureHandler, FlingGestureHandlerGestureEvent, State
 import { useAnimatedStyle, useSharedValue, withDelay, withSpring } from 'react-native-reanimated'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { spacing } from 'ui/src/theme'
-import { NotificationToastProps } from 'uniswap/src/components/notifications/NotificationToast'
-import { NotificationToastContent } from 'uniswap/src/components/notifications/NotificationToastContent'
+import { NotificationToastProps } from 'lx/src/components/notifications/NotificationToast'
+import { NotificationToastContent } from 'lx/src/components/notifications/NotificationToastContent'
 import {
   HIDE_OFFSET_Y,
   LARGE_TOAST_RADIUS,
   SPRING_ANIMATION,
   SPRING_ANIMATION_DELAY,
-} from 'uniswap/src/features/notifications/constants'
-import { useNotificationLifecycle } from 'uniswap/src/features/notifications/hooks/useNotificationLifecycle'
-import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+} from 'lx/src/features/notifications/constants'
+import { useNotificationLifecycle } from 'lx/src/features/notifications/hooks/useNotificationLifecycle'
+import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 
 export function NotificationToast({
   subtitle,

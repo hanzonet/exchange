@@ -1,7 +1,7 @@
-import { SwapTransactionContent } from 'uniswap/src/components/activity/details/transactions/SwapTransactionDetails'
-import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
-import { TransactionDetails, WrapTransactionInfo } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { buildNativeCurrencyId, buildWrappedNativeCurrencyId } from 'uniswap/src/utils/currencyId'
+import { SwapTransactionContent } from 'lx/src/components/activity/details/transactions/SwapTransactionDetails'
+import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { TransactionDetails, WrapTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { buildNativeCurrencyId, buildWrappedNativeCurrencyId } from 'lx/src/utils/currencyId'
 
 export function WrapTransactionDetails({
   transactionDetails,

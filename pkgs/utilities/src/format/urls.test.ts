@@ -1,4 +1,4 @@
-// Copied from https://github.com/Uniswap/interface/blob/main/src/utils/uriToHttp.test.ts
+// Copied from https://github.com/Lx/interface/blob/main/src/utils/uriToHttp.test.ts
 
 import {
   extractBaseUrl,
@@ -34,9 +34,9 @@ describe(uriToHttpUrls, () => {
     ])
   })
   it('returns ipns gateways for ipns:// urls', () => {
-    expect(uriToHttpUrls('ipns://app.uniswap.org')).toEqual([
-      'https://ipfs.io/ipns/app.uniswap.org/',
-      'https://hardbin.com/ipns/app.uniswap.org/',
+    expect(uriToHttpUrls('ipns://app.lx.org')).toEqual([
+      'https://ipfs.io/ipns/app.lx.org/',
+      'https://hardbin.com/ipns/app.lx.org/',
     ])
   })
   it('returns empty array for invalid scheme', () => {

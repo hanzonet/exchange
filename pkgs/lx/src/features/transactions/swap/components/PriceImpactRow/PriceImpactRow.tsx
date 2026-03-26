@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled'
-import { getAlertColor } from 'uniswap/src/components/modals/WarningModal/getAlertColor'
-import { MarketPriceImpactWarningModal } from 'uniswap/src/features/transactions/swap/components/PriceImpactRow/MarketPriceImpactWarning'
-import { usePriceImpact } from 'uniswap/src/features/transactions/swap/components/PriceImpactRow/usePriceImpact'
-import { useParsedSwapWarnings } from 'uniswap/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
-import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { isBridge } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { getAlertColor } from 'lx/src/components/modals/WarningModal/getAlertColor'
+import { MarketPriceImpactWarningModal } from 'lx/src/features/transactions/swap/components/PriceImpactRow/MarketPriceImpactWarning'
+import { usePriceImpact } from 'lx/src/features/transactions/swap/components/PriceImpactRow/usePriceImpact'
+import { useParsedSwapWarnings } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/useSwapWarnings'
+import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { isBridge } from 'lx/src/features/transactions/swap/utils/routing'
 
 export function PriceImpactRow({
   hide,

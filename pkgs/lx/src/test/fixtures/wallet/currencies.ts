@@ -1,11 +1,11 @@
 import { Currency } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
-import { nativeOnChain } from 'uniswap/src/constants/tokens'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { CurrencyInfo, SafetyInfo, TokenList } from 'uniswap/src/features/dataApi/types'
-import { faker } from 'uniswap/src/test/shared'
-import { createFixture } from 'uniswap/src/test/utils'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+import { nativeOnChain } from 'lx/src/constants/tokens'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { CurrencyInfo, SafetyInfo, TokenList } from 'lx/src/features/dataApi/types'
+import { faker } from 'lx/src/test/shared'
+import { createFixture } from 'lx/src/test/utils'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 export const MAINNET_CURRENCY = nativeOnChain(UniverseChainId.Mainnet)
 export const BASE_CURRENCY = nativeOnChain(UniverseChainId.Base)
@@ -51,7 +51,7 @@ export const uniCurrencyInfo = createFixture<CurrencyInfo>()(() =>
   currencyInfo({
     nativeCurrency: MAINNET_CURRENCY,
     logoUrl:
-      'https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png',
+      'https://raw.githubusercontent.com/Lx/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png',
   }),
 )
 
@@ -59,7 +59,7 @@ export const daiCurrencyInfo = createFixture<CurrencyInfo>()(() =>
   currencyInfo({
     nativeCurrency: MAINNET_CURRENCY,
     logoUrl:
-      'https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
+      'https://raw.githubusercontent.com/Lx/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
   }),
 )
 
@@ -67,7 +67,7 @@ export const arbitrumDaiCurrencyInfo = createFixture<CurrencyInfo>()(() =>
   currencyInfo({
     nativeCurrency: ARBITRUM_CURRENCY,
     logoUrl:
-      'https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
+      'https://raw.githubusercontent.com/Lx/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
   }),
 )
 

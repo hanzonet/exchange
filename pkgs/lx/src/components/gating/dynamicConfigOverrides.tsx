@@ -1,7 +1,7 @@
 import { brand } from '@luxexchange/config'
 import { ForceUpgradeStatus, ForceUpgradeTranslations } from '@luxexchange/gating'
 import { ComponentProps } from 'react'
-import { DynamicConfigDropdown } from 'uniswap/src/components/gating/DynamicConfigDropdown'
+import { DynamicConfigDropdown } from 'lx/src/components/gating/DynamicConfigDropdown'
 
 type DynamicConfigOptions = ComponentProps<typeof DynamicConfigDropdown>['options']
 

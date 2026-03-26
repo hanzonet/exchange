@@ -1,5 +1,5 @@
-import type { TieredNetworkOptions } from 'uniswap/src/components/network/NetworkFilterV2/types'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import type { TieredNetworkOptions } from 'lx/src/components/network/NetworkFilterV2/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export interface NetworkFilterV2Props {

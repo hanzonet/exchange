@@ -11,10 +11,10 @@
 // Device ID
 export { createDeviceIdService } from '@luxexchange/sessions/src/device-id/createDeviceIdService'
 export type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
-// Uniswap Identifier
-export { createLxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/createLxIdentifierService'
-export { lxIdentifierQuery } from '@luxexchange/sessions/src/uniswap-identifier/lxIdentifierQuery'
-export type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+// Lx Identifier
+export { createLxIdentifierService } from '@luxexchange/sessions/src/lx-identifier/createLxIdentifierService'
+export { lxIdentifierQuery } from '@luxexchange/sessions/src/lx-identifier/lxIdentifierQuery'
+export type { LxIdentifierService } from '@luxexchange/sessions/src/lx-identifier/types'
 // Session Repository
 export { createSessionRepository } from '@luxexchange/sessions/src/session-repository/createSessionRepository'
 export { ChallengeRejectedError } from '@luxexchange/sessions/src/session-repository/errors'

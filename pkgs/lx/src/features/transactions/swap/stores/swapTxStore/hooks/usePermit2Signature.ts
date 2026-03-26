@@ -3,9 +3,9 @@ import { useQuery } from '@tanstack/react-query'
 import { TradingApi } from '@luxexchange/api'
 import type { TypedDataField } from 'ethers/lib/ethers'
 import { useCallback } from 'react'
-import { useSigner } from 'uniswap/src/contexts/LuxContext'
+import { useSigner } from 'lx/src/contexts/LuxContext'
 
-import { signTypedData } from 'uniswap/src/features/transactions/signing'
+import { signTypedData } from 'lx/src/features/transactions/signing'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { queryWithoutCache } from 'utilities/src/reactQuery/queryOptions'
 

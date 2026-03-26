@@ -16,7 +16,7 @@
       "**/*.jsonc",
       "!.vscode/settings.json",
       "!.vscode/extensions.json",
-      "!tools/uniswap-nx/src/generators"
+      "!tools/lx-nx/src/generators"
     ],
     "experimentalScannerIgnores": [
       "*.tsbuildinfo",
@@ -187,13 +187,13 @@
           "options": {
             "paths": {
               "utilities/src/telemetry/analytics/analytics": {
-                "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
               },
               "utilities/src/telemetry/trace/Trace": {
-                "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
               },
               "ui/src/components/modal/AdaptiveWebModal": {
-                "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
               },
               "react-native": {
                 "importNames": [
@@ -232,19 +232,19 @@
               "utilities/src/format/localeBased": {
                 "message": "Use via `useLocalizationContext` instead."
               },
-              "uniswap/src/features/fiatCurrency/conversion": {
+              "lx/src/features/fiatCurrency/conversion": {
                 "importNames": [
                   "useFiatConverter"
                 ],
                 "message": "Use via `useLocalizationContext` instead."
               },
-              "uniswap/src/features/language/formatter": {
+              "lx/src/features/language/formatter": {
                 "importNames": [
                   "useLocalizedFormatter"
                 ],
                 "message": "Use via `useLocalizationContext` instead."
               },
-              "uniswap/src/features/dataApi/balances/balances": {
+              "lx/src/features/dataApi/balances/balances": {
                 "importNames": [
                   "usePortfolioValueModifiers"
                 ],
@@ -254,16 +254,16 @@
                 "importNames": [
                   "BottomSheetTextInput"
                 ],
-                "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
               },
               "expo-haptics": {
-                "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
               },
               "@luxamm/analytics": {
                 "importNames": [
                   "sendAnalyticsEvent"
                 ],
-                "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
               },
               "@tamagui/core": {
                 "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -463,13 +463,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -508,19 +508,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -530,16 +530,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -581,13 +581,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -626,19 +626,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -648,16 +648,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -699,13 +699,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -744,19 +744,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -766,16 +766,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -817,13 +817,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -862,19 +862,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -884,16 +884,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -935,13 +935,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -980,19 +980,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1002,16 +1002,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1053,13 +1053,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1098,19 +1098,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1120,16 +1120,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1171,13 +1171,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1216,19 +1216,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1238,16 +1238,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1289,13 +1289,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1334,19 +1334,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1356,16 +1356,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1407,13 +1407,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1452,19 +1452,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1474,16 +1474,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1525,13 +1525,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1570,19 +1570,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1592,16 +1592,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1643,13 +1643,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1688,19 +1688,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1710,16 +1710,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1761,13 +1761,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1806,19 +1806,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -1828,16 +1828,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -1936,13 +1936,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -1981,19 +1981,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2003,16 +2003,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -2058,13 +2058,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2103,19 +2103,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2125,16 +2125,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -2177,11 +2177,11 @@
     },
     {
       "includes": [
-        "pkgs/uniswap/**",
-        "!pkgs/uniswap/**/*.test.ts",
-        "!pkgs/uniswap/**/*.test.tsx",
-        "!pkgs/uniswap/**/test/**",
-        "!pkgs/uniswap/**/tests/**"
+        "pkgs/lx/**",
+        "!pkgs/lx/**/*.test.ts",
+        "!pkgs/lx/**/*.test.tsx",
+        "!pkgs/lx/**/test/**",
+        "!pkgs/lx/**/tests/**"
       ],
       "linter": {
         "rules": {
@@ -2191,13 +2191,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2236,19 +2236,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2258,48 +2258,48 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
                   },
-                  "uniswap/src": {
-                    "message": "Avoid importing directly from uniswap/src from within the uniswap package which causes circular imports."
+                  "lx/src": {
+                    "message": "Avoid importing directly from lx/src from within the lx package which causes circular imports."
                   },
                   "@luxamm/sdk-core": {
                     "importNames": [
                       "ChainId"
                     ],
-                    "message": "Don't use ChainId from @luxamm/sdk-core. Use the UniverseChainId from universe/uniswap."
+                    "message": "Don't use ChainId from @luxamm/sdk-core. Use the UniverseChainId from universe/lx."
                   },
-                  "uniswap/src/features/chains/hooks/useOrderedChainIds": {
+                  "lx/src/features/chains/hooks/useOrderedChainIds": {
                     "importNames": [
                       "useOrderedChainIds"
                     ],
                     "message": "Use `useEnabledChains` instead, which returns the ordered chains that are currently enabled."
                   },
-                  "uniswap/src/features/settings/selectors": {
+                  "lx/src/features/settings/selectors": {
                     "importNames": [
                       "selectIsTestnetModeEnabled"
                     ],
                     "message": "Use `useEnabledChains` instead."
                   },
-                  "uniswap/src/features/chains/chainInfo": {
+                  "lx/src/features/chains/chainInfo": {
                     "importNames": [
                       "UNIVERSE_CHAIN_INFO"
                     ],
-                    "message": "Use useChainInfo or helpers in pkgs/uniswap/src/features/chains/utils.ts when possible!"
+                    "message": "Use useChainInfo or helpers in pkgs/lx/src/features/chains/utils.ts when possible!"
                   },
-                  "uniswap/src/data/graphql/uniswap-data-api/__generated__/react-hooks": {
+                  "lx/src/data/graphql/lx-data-api/__generated__/react-hooks": {
                     "importNames": [
                       "useAccountListQuery"
                     ],
@@ -2329,12 +2329,12 @@
     },
     {
       "includes": [
-        "pkgs/uniswap/src/index.ts",
-        "pkgs/uniswap/src/features/telemetry/constants/index.ts",
-        "pkgs/uniswap/src/features/telemetry/constants/trace/index.ts",
-        "pkgs/uniswap/src/i18n/index.ts",
-        "pkgs/uniswap/src/state/index.ts",
-        "pkgs/uniswap/src/test/**"
+        "pkgs/lx/src/index.ts",
+        "pkgs/lx/src/features/telemetry/constants/index.ts",
+        "pkgs/lx/src/features/telemetry/constants/trace/index.ts",
+        "pkgs/lx/src/i18n/index.ts",
+        "pkgs/lx/src/state/index.ts",
+        "pkgs/lx/src/test/**"
       ],
       "linter": {
         "rules": {
@@ -2344,13 +2344,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2386,19 +2386,19 @@
                   "expo-localization": {
                     "message": "Avoid using due to issue with unsupported locales. Use utilities/src/device/locales.ts getDeviceLocales instead"
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2408,16 +2408,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -2446,8 +2446,8 @@
     },
     {
       "includes": [
-        "pkgs/uniswap/src/data/**/__generated__/**",
-        "pkgs/uniswap/src/abis/types/**"
+        "pkgs/lx/src/data/**/__generated__/**",
+        "pkgs/lx/src/abis/types/**"
       ],
       "linter": {
         "enabled": false
@@ -2455,7 +2455,7 @@
     },
     {
       "includes": [
-        "pkgs/uniswap/vite/**"
+        "pkgs/lx/vite/**"
       ],
       "linter": {
         "enabled": false
@@ -2513,13 +2513,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2558,19 +2558,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2580,16 +2580,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -2681,13 +2681,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2726,19 +2726,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2748,16 +2748,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -2906,13 +2906,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -2951,19 +2951,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -2973,16 +2973,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -3026,11 +3026,11 @@
                     ],
                     "message": "Import wrapped utilities from internal hooks instead: useAccount from `hooks/useAccount`, useConnect from `hooks/useConnect`, useDisconnect from `hooks/useDisconnect`, useBlockNumber from `hooks/useBlockNumber`."
                   },
-                  "uniswap/src/features/chains/chainInfo": {
+                  "lx/src/features/chains/chainInfo": {
                     "importNames": [
                       "UNIVERSE_CHAIN_INFO"
                     ],
-                    "message": "Use useChainInfo or helpers in pkgs/uniswap/src/features/chains/utils.ts when possible!"
+                    "message": "Use useChainInfo or helpers in pkgs/lx/src/features/chains/utils.ts when possible!"
                   }
                 },
                 "patterns": [
@@ -3111,13 +3111,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -3156,19 +3156,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -3178,16 +3178,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."
@@ -3195,7 +3195,7 @@
                   "wallet/src": {
                     "message": "Avoid importing directly from wallet/src from within the wallet package which causes circular imports."
                   },
-                  "uniswap/src/features/dataApi/balances/balancesRest": {
+                  "lx/src/features/dataApi/balances/balancesRest": {
                     "importNames": [
                       "useRESTPortfolioTotalValue"
                     ],
@@ -3241,13 +3241,13 @@
               "options": {
                 "paths": {
                   "utilities/src/telemetry/analytics/analytics": {
-                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/uniswap/src/features/telemetry`"
+                    "message": "Please only use this for initialization, tests, flushing, and internal usage. Otherwise use `pkgs/lx/src/features/telemetry`"
                   },
                   "utilities/src/telemetry/trace/Trace": {
-                    "message": "Please use the Trace in 'uniswap/src/features/telemetry/Trace' for app level usage!"
+                    "message": "Please use the Trace in 'lx/src/features/telemetry/Trace' for app level usage!"
                   },
                   "ui/src/components/modal/AdaptiveWebModal": {
-                    "message": "Please import Modal from `uniswap/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
+                    "message": "Please import Modal from `lx/src/components/modals/Modal` instead. Modal uses AdaptiveWebModal under the hood but has extra logic for handling animation, mounting, and dismounting."
                   },
                   "react-native": {
                     "importNames": [
@@ -3286,19 +3286,19 @@
                   "utilities/src/format/localeBased": {
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/fiatCurrency/conversion": {
+                  "lx/src/features/fiatCurrency/conversion": {
                     "importNames": [
                       "useFiatConverter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/language/formatter": {
+                  "lx/src/features/language/formatter": {
                     "importNames": [
                       "useLocalizedFormatter"
                     ],
                     "message": "Use via `useLocalizationContext` instead."
                   },
-                  "uniswap/src/features/dataApi/balances/balances": {
+                  "lx/src/features/dataApi/balances/balances": {
                     "importNames": [
                       "usePortfolioValueModifiers"
                     ],
@@ -3308,16 +3308,16 @@
                     "importNames": [
                       "BottomSheetTextInput"
                     ],
-                    "message": "Use our internal BottomSheetTextInput wrapper from /uniswap/src/components/modals/Modal."
+                    "message": "Use our internal BottomSheetTextInput wrapper from /lx/src/components/modals/Modal."
                   },
                   "expo-haptics": {
-                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/uniswap/src/features/settings/useHapticFeedback/types"
+                    "message": "Use our internal HapticFeedback wrapper instead: import { HapticFeedback } from pkgs/lx/src/features/settings/useHapticFeedback/types"
                   },
                   "@luxamm/analytics": {
                     "importNames": [
                       "sendAnalyticsEvent"
                     ],
-                    "message": "Please use the typed `sendAnalyticsEvent` in 'uniswap/src/features/telemetry/send'"
+                    "message": "Please use the typed `sendAnalyticsEvent` in 'lx/src/features/telemetry/send'"
                   },
                   "@tamagui/core": {
                     "message": "Please import from 'tamagui' directly to prevent mismatches."

@@ -3,9 +3,9 @@ import type { JupiterOrderUrlParams } from '@luxexchange/api/src/clients/jupiter
 import type {
   TradeService,
   TradeWithGasEstimates,
-} from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import { ValidatedTradeInput } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 
 export type TradeServiceQueryOptions = UseQueryOptions<

@@ -1,5 +1,5 @@
 import { useFeatureFlag } from '@universe/gating'
-import { CONNECTION_PROVIDER_IDS } from 'uniswap/src/constants/web3'
+import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
 import { LxWalletOptions } from '~/components/WalletModal/LxWalletOptions'
 import { useWalletWithId } from '~/features/accounts/store/hooks'
 import { ExternalWallet } from '~/features/accounts/store/types'
@@ -38,7 +38,7 @@ describe('LxWalletOptions', () => {
     mocked(useFeatureFlag).mockReturnValue(true)
     const { asFragment } = render(<LxWalletOptions />)
     expect(asFragment()).toMatchSnapshot()
-    const downloadOption = screen.getByTestId('download-uniswap-wallet')
+    const downloadOption = screen.getByTestId('download-lx-wallet')
     expect(downloadOption).toBeInTheDocument()
   })
   it('Extension connecter should be shown if detected', () => {

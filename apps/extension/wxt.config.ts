@@ -31,8 +31,8 @@ function getPublicAssetsVariant(): 'prod' | 'beta' | 'dev' | 'local' {
 
 const publicAssetsVariant = getPublicAssetsVariant()
 
-const BASE_NAME = 'Uniswap Extension'
-const BASE_DESCRIPTION = "The Uniswap Extension is a self-custody crypto wallet that's built for swapping."
+const BASE_NAME = 'Lx Extension'
+const BASE_DESCRIPTION = "The Lx Extension is a self-custody crypto wallet that's built for swapping."
 const BASE_VERSION = '1.69.0'
 
 const BUILD_NUM = parseInt(process.env.BUILD_NUM || '0')

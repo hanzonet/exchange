@@ -1,7 +1,7 @@
 import { memo } from 'react'
-import { TokenOption } from 'uniswap/src/components/lists/items/types'
-import type { OnchainItemSection } from 'uniswap/src/components/lists/OnchainItemList/types'
-import { OnSelectCurrency } from 'uniswap/src/components/TokenSelector/types'
+import { TokenOption } from 'lx/src/components/lists/items/types'
+import type { OnchainItemSection } from 'lx/src/components/lists/OnchainItemList/types'
+import { OnSelectCurrency } from 'lx/src/components/TokenSelector/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export type HorizontalTokenListProps = {

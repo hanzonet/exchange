@@ -1,8 +1,8 @@
 import { startTransition, useEffect, useState } from 'react'
 import { Flex, type FlexProps, styled } from 'ui/src'
 import { validColor } from 'ui/src/theme'
-import { ItemData, ItemPoint } from 'uniswap/src/components/IconCloud/IconCloud'
-import { randomChoice } from 'uniswap/src/components/IconCloud/utils'
+import { ItemData, ItemPoint } from 'lx/src/components/IconCloud/IconCloud'
+import { randomChoice } from 'lx/src/components/IconCloud/utils'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 function TokenIconPositioner({

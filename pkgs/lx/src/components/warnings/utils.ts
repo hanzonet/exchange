@@ -4,7 +4,7 @@ import { AlertTriangleFilled } from 'ui/src/components/icons/AlertTriangleFilled
 import { Blocked } from 'ui/src/components/icons/Blocked'
 import { InfoCircleFilled } from 'ui/src/components/icons/InfoCircleFilled'
 import { OctagonExclamation } from 'ui/src/components/icons/OctagonExclamation'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
 
 export function safetyLevelToWarningSeverity(safetyLevel: Maybe<GraphQLApi.SafetyLevel>): WarningSeverity {
   switch (safetyLevel) {

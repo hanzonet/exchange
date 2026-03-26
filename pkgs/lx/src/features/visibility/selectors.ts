@@ -3,8 +3,8 @@ import {
   CurrencyIdToVisibility,
   NFTKeyToVisibility,
   PositionKeyToVisibility,
-} from 'uniswap/src/features/visibility/slice'
-import { LxRootState } from 'uniswap/src/state'
+} from 'lx/src/features/visibility/slice'
+import { LxRootState } from 'lx/src/state'
 
 export const selectPositionsVisibility = (state: LxRootState): PositionKeyToVisibility =>
   state.visibility.positions

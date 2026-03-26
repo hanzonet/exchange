@@ -31,7 +31,7 @@ export function handleReduxAction({
 }
 
 const ALLOWED_REDUX_FIELDS: string[] = [
-  // Uniswap
+  // Lx
   'searchHistory',
   'transactions',
   'lxBehaviorHistory',

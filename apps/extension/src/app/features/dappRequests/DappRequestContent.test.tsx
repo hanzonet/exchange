@@ -30,7 +30,7 @@ jest.mock('src/app/features/dapp/hooks', () => ({
   useDappLastChainId: jest.fn(() => 1),
 }))
 
-jest.mock('uniswap/src/features/gas/hooks/useChainGasToken', () => ({
+jest.mock('lx/src/features/gas/hooks/useChainGasToken', () => ({
   useChainGasToken: jest.fn(() => ({
     gasToken: { symbol: 'ETH' },
     gasBalance: { value: '1000000000000000000', currency: { symbol: 'ETH' }, equalTo: () => false },
@@ -38,8 +38,8 @@ jest.mock('uniswap/src/features/gas/hooks/useChainGasToken', () => ({
   })),
 }))
 
-jest.mock('uniswap/src/features/gas/utils', () => ({
-  ...jest.requireActual('uniswap/src/features/gas/utils'),
+jest.mock('lx/src/features/gas/utils', () => ({
+  ...jest.requireActual('lx/src/features/gas/utils'),
   hasSufficientGasBalance: jest.fn(() => true),
   hasGasEstimationFailed: jest.fn(() => false),
 }))

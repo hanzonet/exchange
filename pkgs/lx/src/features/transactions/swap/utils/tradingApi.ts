@@ -9,12 +9,12 @@ import { Pool as V3Pool, Route as V3Route } from '@luxamm/v3-sdk'
 import { Pool as V4Pool, Route as V4Route } from '@luxamm/v4-sdk'
 import { type ClassicQuoteResponse, type DiscriminatedQuoteResponse, TradingApi } from '@luxexchange/api'
 import { DynamicConfigs, getDynamicConfigValue, SwapConfigKey } from '@luxexchange/gating'
-import { nativeOnChain } from 'uniswap/src/constants/tokens'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isUniverseChainId } from 'uniswap/src/features/chains/utils'
-import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
-import type { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { nativeOnChain } from 'lx/src/constants/tokens'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
+import { isUniverseChainId } from 'lx/src/features/chains/utils'
+import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import type { Trade } from 'lx/src/features/transactions/swap/types/trade'
 import {
   BridgeTrade,
   ChainedActionTrade,
@@ -24,13 +24,13 @@ import {
   LxSwapV3Trade,
   UnwrapTrade,
   WrapTrade,
-} from 'uniswap/src/features/transactions/swap/types/trade'
-import type { FrontendSupportedProtocol } from 'uniswap/src/features/transactions/swap/utils/protocols'
-import { DEFAULT_PROTOCOL_OPTIONS, useProtocolsForChain } from 'uniswap/src/features/transactions/swap/utils/protocols'
-import { isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
-import type { CurrencyField } from 'uniswap/src/types/currency'
-import { areAddressesEqual } from 'uniswap/src/utils/addresses'
-import { currencyAddress, currencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/swap/types/trade'
+import type { FrontendSupportedProtocol } from 'lx/src/features/transactions/swap/utils/protocols'
+import { DEFAULT_PROTOCOL_OPTIONS, useProtocolsForChain } from 'lx/src/features/transactions/swap/utils/protocols'
+import { isClassic } from 'lx/src/features/transactions/swap/utils/routing'
+import type { CurrencyField } from 'lx/src/types/currency'
+import { areAddressesEqual } from 'lx/src/utils/addresses'
+import { currencyAddress, currencyId } from 'lx/src/utils/currencyId'
 import { logger } from 'utilities/src/logger/logger'
 import { isWebApp } from 'utilities/src/platform'
 

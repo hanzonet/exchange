@@ -17,10 +17,10 @@ import {
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { useDeviceDimensions } from 'ui/src/hooks/useDeviceDimensions'
 import { spacing, zIndexes } from 'ui/src/theme'
-import { BaseCard } from 'uniswap/src/components/BaseCard/BaseCard'
-import { Scrollbar } from 'uniswap/src/components/misc/Scrollbar'
-import { MenuItemProp } from 'uniswap/src/components/modals/ActionSheetModal'
-import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
+import { Scrollbar } from 'lx/src/components/misc/Scrollbar'
+import { MenuItemProp } from 'lx/src/components/modals/ActionSheetModal'
+import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 import { closeKeyboardBeforeCallback } from 'utilities/src/device/keyboard/dismissNativeKeyboard'
 import { isAndroid, isTouchable, isWebApp, isWebPlatform } from 'utilities/src/platform'
 import { executeWithFrameDelay } from 'utilities/src/react/delayUtils'
@@ -224,7 +224,7 @@ const ActionSheetBackdropWithContent = memo(function ActionSheetBackdropWithCont
     There is a race condition when we switch from a view with one Portal to another view with a Portal.
     It seems that if we mount a second Portal while the first is still mounted, the second would not work properly.
     setTimeout with 0ms is a workaround to avoid this issue for now
-    Remove when https://linear.app/uniswap/issue/WALL-4817 is resolved
+    Remove when https://linear.app/lx/issue/WALL-4817 is resolved
   */
   const [shouldRender, setShouldRender] = useState(false)
   useTimeout(() => setShouldRender(true), 0)

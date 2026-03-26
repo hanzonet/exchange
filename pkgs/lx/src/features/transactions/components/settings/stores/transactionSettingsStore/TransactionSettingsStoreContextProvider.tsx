@@ -1,10 +1,10 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import { createTransactionSettingsAutoSlippageToleranceStore } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsAutoSlippageToleranceStore'
+import { createTransactionSettingsAutoSlippageToleranceStore } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsAutoSlippageToleranceStore'
 import {
   createTransactionSettingsStore,
   type TransactionSettingsStoreState,
-} from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
-import { TransactionSettingsStoreContext } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContext'
+} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
+import { TransactionSettingsStoreContext } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/TransactionSettingsStoreContext'
 import type { StoreApi } from 'zustand/vanilla'
 
 // Create the provider component

@@ -1,11 +1,11 @@
 import type {
   DialogPreferencesService,
   DialogPreferencesServiceContext,
-} from 'uniswap/src/dialog-preferences/DialogPreferencesService'
-import type { DialogVisibilityId } from 'uniswap/src/dialog-preferences/types'
+} from 'lx/src/dialog-preferences/DialogPreferencesService'
+import type { DialogVisibilityId } from 'lx/src/dialog-preferences/types'
 import { logger } from 'utilities/src/logger/logger'
 
-const STORAGE_KEY_PREFIX = 'uniswap-dialog_hidden_'
+const STORAGE_KEY_PREFIX = 'lx-dialog_hidden_'
 const getStorageKey = (dialogId: string): string => `${STORAGE_KEY_PREFIX}${dialogId}`
 
 /**

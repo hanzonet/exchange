@@ -4,11 +4,11 @@ import { Pair } from '@luxamm/v2-sdk'
 import { Pool as V3Pool } from '@luxamm/v3-sdk'
 import { Pool as V4Pool } from '@luxamm/v4-sdk'
 import { LxLogo } from 'ui/src/components/icons/LxLogo'
-import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'uniswap/src/constants/pools'
-import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isChained, isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { currencyId } from 'uniswap/src/utils/currencyId'
-import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'uniswap/src/utils/routingDiagram/types'
+import { DYNAMIC_FEE_AMOUNT, V2_DEFAULT_FEE_TIER } from 'lx/src/constants/pools'
+import { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { isChained, isClassic } from 'lx/src/features/transactions/swap/utils/routing'
+import { currencyId } from 'lx/src/utils/currencyId'
+import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'lx/src/utils/routingDiagram/types'
 
 type LxPool = Pair | V3Pool | V4Pool
 
@@ -50,7 +50,7 @@ function getProtocolLabel(route: { protocol: Protocol; pools: LxPool[] }): strin
 }
 
 export const lxRoutingProvider: RoutingProvider = {
-  name: 'Uniswap API',
+  name: 'Lx API',
   icon: LxLogo,
   iconColor: '$accent1',
 
@@ -110,7 +110,7 @@ export const lxRoutingProvider: RoutingProvider = {
 }
 
 export const lxChainedRoutingProvider: RoutingProvider = {
-  name: 'Uniswap API',
+  name: 'Lx API',
   icon: undefined,
   iconColor: '$neutral1',
 

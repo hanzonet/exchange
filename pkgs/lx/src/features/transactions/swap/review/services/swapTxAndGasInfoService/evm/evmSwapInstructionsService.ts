@@ -6,22 +6,22 @@ import type {
   UnwrapQuoteResponse,
   WrapQuoteResponse,
 } from '@luxexchange/api'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import type { SwapDelegationInfo } from 'uniswap/src/features/smartWallet/delegation/types'
-import type { TransactionSettings } from 'uniswap/src/features/transactions/components/settings/types'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
+import type { SwapDelegationInfo } from 'lx/src/features/smartWallet/delegation/types'
+import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
 import type {
   EVMSwapRepository,
   SwapData,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
+} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
 import {
   create5792EVMSwapRepository,
   create7702EVMSwapRepository,
   createLegacyEVMSwapRepository,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
-import type { PresignPermitFn } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/hooks'
-import { createPrepareSwapRequestParams } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import { ApprovalAction } from 'uniswap/src/features/transactions/swap/types/trade'
-import { tradingApiToUniverseChainId } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
+import type { PresignPermitFn } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/hooks'
+import { createPrepareSwapRequestParams } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import { ApprovalAction } from 'lx/src/features/transactions/swap/types/trade'
+import { tradingApiToUniverseChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
 
 type SwapInstructions =
   | { response: SwapData; unsignedPermit: null; swapRequestParams: null }

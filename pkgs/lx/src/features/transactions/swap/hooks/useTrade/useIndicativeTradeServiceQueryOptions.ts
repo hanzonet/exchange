@@ -1,7 +1,7 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { TradeService } from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import type { ValidatedTradeInput } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import type { IndicativeTrade, UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+import type { TradeService } from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import type { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import type { IndicativeTrade, UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import type { QueryOptionsResult } from 'utilities/src/reactQuery/queryOptions'
 

@@ -1,5 +1,5 @@
-import type { DelegatedResult } from 'uniswap/src/features/smartWallet/delegation/delegationRepository'
-import { createHasMismatchUtil } from 'uniswap/src/features/smartWallet/mismatch/mismatch'
+import type { DelegatedResult } from 'lx/src/features/smartWallet/delegation/delegationRepository'
+import { createHasMismatchUtil } from 'lx/src/features/smartWallet/mismatch/mismatch'
 
 describe('createHasMismatchUtil', () => {
   const mockAddress = '0xMockAddress' as string

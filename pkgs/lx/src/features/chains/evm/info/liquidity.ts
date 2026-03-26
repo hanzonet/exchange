@@ -1,12 +1,12 @@
 import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxexchange/api'
 import { LIQUIDITY_LOGO } from 'ui/src/assets'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'uniswap/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
-import { GENERIC_L2_GAS_CONFIG } from 'uniswap/src/features/chains/gasDefaults'
-import { GqlChainId, NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from 'uniswap/src/features/chains/types'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
+import { GENERIC_L2_GAS_CONFIG } from 'lx/src/features/chains/gasDefaults'
+import { GqlChainId, NetworkLayer, RPCType, UniverseChainId, UniverseChainInfo } from 'lx/src/features/chains/types'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { ElementName } from 'lx/src/features/telemetry/constants'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 // LUSD is the only dollar on the Liquidity chain — 1:1 USD backed via Braintree/ACH

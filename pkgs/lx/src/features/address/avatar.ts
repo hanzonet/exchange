@@ -1,7 +1,7 @@
-import { useUnitagsAddressQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { useENSAvatar } from 'uniswap/src/features/ens/api'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { useENSAvatar } from 'lx/src/features/ens/api'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { getValidAddress } from 'lx/src/utils/addresses'
 
 /*
  * Fetches avatar for address, in priority uses: unitag avatar, ens avatar, undefined

@@ -229,7 +229,7 @@ describe('handleLxAppDeepLink', () => {
     it('should handle external address share', () => {
       const externalAddress = '0x1234567890abcdef1234567890abcdef12345679'
       const path = `portfolio/${externalAddress}`
-      const url = `https://app.uniswap.org/${path}`
+      const url = `https://app.lx.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -257,7 +257,7 @@ describe('handleLxAppDeepLink', () => {
 
     it('should handle internal address share by switching to that account', () => {
       const path = `portfolio/${SAMPLE_CONTRACT_ADDRESS_2}`
-      const url = `https://app.uniswap.org/${path}`
+      const url = `https://app.lx.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -280,7 +280,7 @@ describe('handleLxAppDeepLink', () => {
 
     it('should not handle active account address', () => {
       const path = `portfolio/${account.address}`
-      const url = `https://app.uniswap.org/${path}`
+      const url = `https://app.lx.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,
@@ -305,7 +305,7 @@ describe('handleLxAppDeepLink', () => {
     it('should handle portfolio share', () => {
       const externalAddress = '0x1234567890abcdef1234567890abcdef12345679'
       const path = `portfolio/${externalAddress}`
-      const url = `https://app.uniswap.org/${path}`
+      const url = `https://app.lx.org/${path}`
 
       return expectSaga(handleLxAppDeepLink, {
         path,
@@ -349,7 +349,7 @@ describe('handleLxAppDeepLink', () => {
 
     it('should not handle address with invalid format', () => {
       const path = 'portfolio/invalid-address'
-      const url = `https://app.uniswap.org/${path}`
+      const url = `https://app.lx.org/${path}`
 
       return expectSaga(handleLuxAppDeepLink, {
         path,

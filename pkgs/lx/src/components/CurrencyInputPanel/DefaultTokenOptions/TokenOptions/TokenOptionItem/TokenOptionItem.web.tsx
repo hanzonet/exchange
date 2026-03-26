@@ -1,7 +1,7 @@
 import { Text, Tooltip } from 'ui/src'
 import { zIndexes } from 'ui/src/theme'
-import { TokenIcon } from 'uniswap/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenIcon'
-import type { TokenOptionItemProps } from 'uniswap/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
+import { TokenIcon } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenIcon'
+import type { TokenOptionItemProps } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
 
 const delay = { close: 0, open: 0 }
 

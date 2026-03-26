@@ -2,10 +2,10 @@ import { Token } from '@luxamm/sdk-core'
 import { GraphQLApi } from '@luxfi/api'
 import { SwapConfigKey } from '@luxfi/gating'
 import { AVALANCHE_LOGO } from 'ui/src/assets'
-import { config } from 'uniswap/src/config'
-import { CHAIN_ID_TO_URL_PARAM } from 'uniswap/src/features/chains/chainUrlParam'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'uniswap/src/features/chains/evm/rpc'
-import { buildChainTokens } from 'uniswap/src/features/chains/evm/tokens'
+import { config } from 'lx/src/config'
+import { CHAIN_ID_TO_URL_PARAM } from 'lx/src/features/chains/chainUrlParam'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY, getQuicknodeEndpointUrl } from 'lx/src/features/chains/evm/rpc'
+import { buildChainTokens } from 'lx/src/features/chains/evm/tokens'
 import {
   GqlChainId,
   NetworkLayer,
