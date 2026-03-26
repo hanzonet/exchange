@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/wallet",
-  "version": "0.0.0",
+  "version": "1.0.4",
   "scripts": {
     "check:deps:usage": "nx check:deps:usage wallet",
     "lint:biome": "nx lint:biome wallet",
@@ -92,7 +92,7 @@
     "typescript": "5.8.3"
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": [
     "*.css"
   ]

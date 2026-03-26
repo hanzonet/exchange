@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/lx",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "scripts": {
     "prepare": "nx prepare @luxexchange/lx",
     "build": "nx build @luxexchange/lx",
@@ -160,7 +160,7 @@
     "vitest-presets": "workspace:^"
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": [
     "*.css"
   ]

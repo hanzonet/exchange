@@ -52,6 +52,8 @@ const XOAuthCallbackPage = lazy(() => import('~/pages/Liquidity/CreateAuction/XO
 const BetaPage = lazy(() => import('~/pages/Beta'))
 const Wrapped = lazy(() => import('~/pages/Wrapped'))
 const TradePage = lazy(() => import('~/pages/Trade'))
+const TermsOfService = lazy(() => import('~/pages/Legal/TermsOfService'))
+const PrivacyPolicyPage = lazy(() => import('~/pages/Legal/PrivacyPolicy'))
 
 /**
  * Wrapper that provides SwapFormStoreContextProvider for routes that use
@@ -446,6 +448,26 @@ export const routes: RouteDefinition[] = [
     getElement: () => (
       <Suspense fallback={null}>
         <BetaPage />
+      </Suspense>
+    ),
+  }),
+  createRouteDefinition({
+    path: '/terms',
+    getTitle: () => 'Terms of Service',
+    getDescription: () => 'Terms of Service for Lux Network protocol interfaces',
+    getElement: () => (
+      <Suspense fallback={null}>
+        <TermsOfService />
+      </Suspense>
+    ),
+  }),
+  createRouteDefinition({
+    path: '/privacy',
+    getTitle: () => 'Privacy Policy',
+    getDescription: () => 'Privacy Policy for Lux Network protocol interfaces',
+    getElement: () => (
+      <Suspense fallback={null}>
+        <PrivacyPolicyPage />
       </Suspense>
     ),
   }),

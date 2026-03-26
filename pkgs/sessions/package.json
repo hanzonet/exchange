@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/sessions",
-  "version": "0.0.0",
+  "version": "1.0.3",
   "scripts": {
     "typecheck": "nx typecheck sessions",
     "typecheck:tsgo": "nx typecheck:tsgo sessions",
@@ -44,6 +44,6 @@
     "vitest": "3.2.1"
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }
