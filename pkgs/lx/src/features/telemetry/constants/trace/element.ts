@@ -72,6 +72,7 @@ export enum ElementName {
   ChainLiquidityDevnet = 'chain-liquidity-devnet',
   ChainLux = 'chain-lux',
   ChainLuxTestnet = 'chain-lux-testnet',
+  ChainLuxDev = 'chain-lux-dev',
   ChainPars = 'chain-pars',
   ChainSPC = 'chain-spc',
   ChainMonad = 'chain-monad',
