@@ -68,7 +68,6 @@
       "path": "./pkgs/privacy"
     },
     {
-      "path": "./pkgs/uniswap"
     },
     {
       "path": "./pkgs/logger"
