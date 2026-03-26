@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "name": "Liquidity Exchange",
+    "title": "Liquidity.io | Trade",
+    "description": "Revolutionizing Private Credit and Private Stock Trading",
+    "legalEntity": "Liquidity.io Inc.",
+    "appDomain": "liquidity.io",
+    "docsDomain": "docs.liquidity.io",
+    "infoDomain": "info.liquidity.io",
+    "gatewayDomain": "gw.liquidity.io",
+    "wsDomain": "ws.liquidity.io",
+    "helpUrl": "https://docs.liquidity.io/help",
+    "termsUrl": "https://liquidity.io/terms",
+    "privacyUrl": "https://liquidity.io/privacy",
+    "downloadUrl": "https://liquidity.io/wallet",
+    "complianceEmail": "compliance@liquidity.io",
+    "supportEmail": "hi@liquidity.io",
+    "twitter": "https://x.com/liquidityio",
+    "github": "https://github.com/liquidityio",
+    "discord": "https://discord.gg/liquidity",
+    "primaryColor": "#3B82F6",
+    "defaultChainId": 8675309,
+    "supportedChainIds": [8675309, 8675310, 8675311]
+  }
+}
