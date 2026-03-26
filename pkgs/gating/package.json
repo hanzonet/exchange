@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/gating",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "@statsig/client-core": "3.12.2",
     "@statsig/js-client": "3.12.2",
@@ -34,6 +34,6 @@
     "includedScripts": []
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }

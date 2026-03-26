@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/websocket",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "partysocket": "1.1.10",
     "zustand": "5.0.6"
@@ -31,6 +31,6 @@
     "includedScripts": []
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }

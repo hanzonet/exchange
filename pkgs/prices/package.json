@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/prices",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "@tanstack/react-query": "5.90.20",
     "@luxamm/sdk-core": "7.12.3",
@@ -39,6 +39,6 @@
     "includedScripts": []
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }

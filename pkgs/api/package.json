@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "lint:biome": "nx lint:biome api",
     "lint:biome:fix": "nx lint:biome:fix api",
@@ -65,6 +65,6 @@
     "zod": "4.3.6"
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }

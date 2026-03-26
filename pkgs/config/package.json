@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "react-native-dotenv": "3.2.0",
     "@luxfi/utilities": "workspace:^"
@@ -28,6 +28,6 @@
     "includedScripts": []
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }

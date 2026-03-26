@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/notifications",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "@bufbuild/protobuf": "1.10.0",
     "@tanstack/react-query": "5.90.20",
@@ -37,6 +37,6 @@
     "includedScripts": []
   },
   "main": "src/index.ts",
-  "private": true,
+  "private": false,
   "sideEffects": false
 }
