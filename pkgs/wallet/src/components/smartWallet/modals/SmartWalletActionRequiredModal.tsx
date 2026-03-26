@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { FlatList } from 'react-native'
 import { Flex, Loader, Separator } from 'ui/src'
 import { InsufficientGas } from 'ui/src/components/icons'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 import { useEvent } from 'utilities/src/react/hooks'
 import { SmartWalletModal } from '@luxfi/wallet/src/components/smartWallet/modals/SmartWalletModal'
 import { useSmartWalletChains } from '@luxfi/wallet/src/features/smartWallet/hooks/useSmartWalletChains'
@@ -41,7 +41,7 @@ export function SmartWalletActionRequiredModal({
   const { getDelegationDetails } = useWalletDelegationContext()
 
   const delegatedChainsCount = enabledChains.filter(
-    (chainId) => getDelegationDetails(walletAddress, chainId)?.isWalletDelegatedToUniswap,
+    (chainId) => getDelegationDetails(walletAddress, chainId)?.isWalletDelegatedToLx,
   ).length
 
   const onConfirmCallback = useEvent(() => {

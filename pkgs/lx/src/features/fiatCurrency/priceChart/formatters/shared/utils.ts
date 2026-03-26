@@ -1,7 +1,7 @@
-import { FiatCurrency } from 'uniswap/src/features/fiatCurrency/constants'
-import { getFiatCurrencyCode } from 'uniswap/src/features/fiatCurrency/hooks'
-import { TrimTrailingZerosParams } from 'uniswap/src/features/fiatCurrency/priceChart/formatters/shared/types'
-import { FormatNumberOrStringInput } from 'uniswap/src/features/language/formatter'
+import { FiatCurrency } from 'lx/src/features/fiatCurrency/constants'
+import { getFiatCurrencyCode } from 'lx/src/features/fiatCurrency/hooks'
+import { TrimTrailingZerosParams } from 'lx/src/features/fiatCurrency/priceChart/formatters/shared/types'
+import { FormatNumberOrStringInput } from 'lx/src/features/language/formatter'
 import { NumberType } from 'utilities/src/format/types'
 
 export const FIAT_DELTA_THRESHOLD = 0.000001

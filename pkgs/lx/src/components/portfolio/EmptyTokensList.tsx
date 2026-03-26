@@ -2,8 +2,8 @@ import { isError, isNonPollingRequestInFlight } from '@luxexchange/api'
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, FlexProps, Loader } from 'ui/src'
-import { BaseCard } from 'uniswap/src/components/BaseCard/BaseCard'
-import { useTokenBalanceListContext } from 'uniswap/src/features/portfolio/TokenBalanceListContext'
+import { BaseCard } from 'lx/src/components/BaseCard/BaseCard'
+import { useTokenBalanceListContext } from 'lx/src/features/portfolio/TokenBalanceListContext'
 import { isMobileApp } from 'utilities/src/platform'
 
 export const EmptyTokensList = memo(function _EmptyTokensList({

@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { addFavoriteToken } from 'uniswap/src/features/favorites/slice'
-import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { createAppStateResetter } from 'uniswap/src/state/createAppStateResetter'
-import { type LxState, lxReducer } from 'uniswap/src/state/lxReducer'
+import { addFavoriteToken } from 'lx/src/features/favorites/slice'
+import { pushNotification } from 'lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
+import { createAppStateResetter } from 'lx/src/state/createAppStateResetter'
+import { type LxState, lxReducer } from 'lx/src/state/lxReducer'
 import { sleep } from 'utilities/src/time/timing'
 import type { Mock } from 'vitest'
 
@@ -58,7 +58,7 @@ describe('createAppStateResetter', () => {
 
   describe('resetUserSettings', () => {
     it('dispatches user settings reset actions', async () => {
-      // Modify uniswap-specific state
+      // Modify lx-specific state
       const initialTokenCount = store.getState().favorites.tokens.length
       store.dispatch(addFavoriteToken({ currencyId: 'test-currency-id' }))
 
@@ -67,7 +67,7 @@ describe('createAppStateResetter', () => {
 
       await resetter.resetUserSettings()
 
-      // Verify uniswap state was reset
+      // Verify lx state was reset
       const state = store.getState()
       expect(state.favorites.tokens.length).toBe(initialTokenCount) // resetFavorites restores defaults
     })

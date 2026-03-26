@@ -1,7 +1,7 @@
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
-import { config } from 'uniswap/src/config'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { getVersionHeader } from 'uniswap/src/data/getVersionHeader'
+import { config } from 'lx/src/config'
+import { lxUrls } from 'lx/src/constants/urls'
+import { getVersionHeader } from 'lx/src/data/getVersionHeader'
 import { isMobileApp } from 'utilities/src/platform'
 import { REQUEST_SOURCE } from 'utilities/src/platform/requestSource'
 

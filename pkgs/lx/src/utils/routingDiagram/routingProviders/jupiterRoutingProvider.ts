@@ -1,10 +1,10 @@
 import { Percent } from '@luxamm/sdk-core'
 import { JupiterLogoMonotone } from 'ui/src/components/logos/JupiterLogoMonotone'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isJupiter } from 'uniswap/src/features/transactions/swap/utils/routing'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
-import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'uniswap/src/utils/routingDiagram/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { isJupiter } from 'lx/src/features/transactions/swap/utils/routing'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
+import type { RoutingDiagramEntry, RoutingHop, RoutingProvider } from 'lx/src/utils/routingDiagram/types'
 import { logger } from 'utilities/src/logger/logger'
 
 export const jupiterRoutingProvider: RoutingProvider = {

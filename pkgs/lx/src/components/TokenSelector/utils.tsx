@@ -3,12 +3,12 @@ import {
   type OnchainItemListOption,
   OnchainItemListOptionType,
   type TokenOption,
-} from 'uniswap/src/components/lists/items/types'
-import { type OnchainItemSection, OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'
-import { TokenSelectorFlow } from 'uniswap/src/components/TokenSelector/types'
-import { tradingApiSwappableTokenToCurrencyInfo } from 'uniswap/src/data/apiClients/tradingApi/utils/tradingApiSwappableTokenToCurrencyInfo'
-import { ModalName, type ModalNameType } from 'uniswap/src/features/telemetry/constants'
-import { areCurrencyIdsEqual } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/components/lists/items/types'
+import { type OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
+import { TokenSelectorFlow } from 'lx/src/components/TokenSelector/types'
+import { tradingApiSwappableTokenToCurrencyInfo } from 'lx/src/data/apiClients/tradingApi/utils/tradingApiSwappableTokenToCurrencyInfo'
+import { ModalName, type ModalNameType } from 'lx/src/features/telemetry/constants'
+import { areCurrencyIdsEqual } from 'lx/src/utils/currencyId'
 import { differenceWith } from 'utilities/src/primitives/array'
 
 export function createEmptyTokenOptionFromBridgingToken(

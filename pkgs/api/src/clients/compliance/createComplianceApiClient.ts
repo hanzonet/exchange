@@ -13,7 +13,7 @@ export type {
 } from '@luxexchange/api/src/clients/compliance/types'
 
 const COMPLIANCE_API_PATHS = {
-  screenAddress: '/uniswap.compliancev2service.v1.compliancev2Service/ScreenAddress',
+  screenAddress: '/lx.compliancev2service.v1.compliancev2Service/ScreenAddress',
 }
 
 export function createComplianceApiClient(ctx: ComplianceApiClientContext): ComplianceApiClient {

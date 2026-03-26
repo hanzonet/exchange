@@ -1,8 +1,8 @@
 import { GraphQLApi, TradingApi } from '@luxexchange/api'
 
-import { deriveCurrencyAmountFromAssetResponse } from 'uniswap/src/features/activity/utils/remote'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
+import { deriveCurrencyAmountFromAssetResponse } from 'lx/src/features/activity/utils/remote'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { fromGraphQLChain } from 'lx/src/features/chains/utils'
 import {
   ConfirmedSwapTransactionInfo,
   TransactionDetails,
@@ -10,9 +10,9 @@ import {
   TransactionListQueryResponse,
   TransactionOriginType,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { remoteOrderStatusToLocalTxStatus } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { remoteOrderStatusToLocalTxStatus } from 'lx/src/features/transactions/utils/lxSwap.utils'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 
 export function extractLxSwapOrderDetails(transaction: TransactionListQueryResponse): TransactionDetails | null {
   if (transaction?.details.__typename !== TransactionDetailsType.LxSwapOrder) {

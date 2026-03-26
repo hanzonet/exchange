@@ -7,16 +7,16 @@ import { ButtonProps } from 'ui/src/components/buttons/Button/types'
 import type {
   PresetPercentage,
   PresetPercentageNumber,
-} from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import { isMaxPercentage } from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/utils'
-import { useMaxAmountSpend } from 'uniswap/src/features/gas/hooks/useMaxAmountSpend'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
-import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
-import { MaxBalanceInfoModal } from 'uniswap/src/features/transactions/modals/MaxBalanceInfoModal'
-import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
-import { CurrencyField } from 'uniswap/src/types/currency'
+} from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import { isMaxPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
+import { useMaxAmountSpend } from 'lx/src/features/gas/hooks/useMaxAmountSpend'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
+import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
+import { MaxBalanceInfoModal } from 'lx/src/features/transactions/modals/MaxBalanceInfoModal'
+import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
+import { CurrencyField } from 'lx/src/types/currency'
 import { useEvent } from 'utilities/src/react/hooks'
 
 /**

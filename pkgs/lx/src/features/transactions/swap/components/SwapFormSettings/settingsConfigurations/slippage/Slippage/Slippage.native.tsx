@@ -1,9 +1,9 @@
 import { TradingApi } from '@luxexchange/api'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { SlippageWarning } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageWarning'
-import type { TransactionSettingConfig } from 'uniswap/src/features/transactions/components/settings/types'
-import { SlippageControl } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippage/SlippageControl/SlippageControl'
-import { SlippageScreenNative } from 'uniswap/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippage/SlippageScreenNative'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { SlippageWarning } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageWarning'
+import type { TransactionSettingConfig } from 'lx/src/features/transactions/components/settings/types'
+import { SlippageControl } from 'lx/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippage/SlippageControl/SlippageControl'
+import { SlippageScreenNative } from 'lx/src/features/transactions/swap/components/SwapFormSettings/settingsConfigurations/slippage/SlippageScreenNative'
 
 export const Slippage: TransactionSettingConfig = {
   renderTitle: (t) => t('swap.slippage.settings.title'),

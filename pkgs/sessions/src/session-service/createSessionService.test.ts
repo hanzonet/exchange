@@ -3,7 +3,7 @@ import type { SessionRepository } from '@luxexchange/sessions/src/session-reposi
 import { createSessionService } from '@luxexchange/sessions/src/session-service/createSessionService'
 import type { SessionService } from '@luxexchange/sessions/src/session-service/types'
 import type { SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
-import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/lx-identifier/types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('createSessionService', () => {
@@ -326,7 +326,7 @@ describe('createSessionService', () => {
     })
   })
 
-  describe('uniswap identifier handling', () => {
+  describe('lx identifier handling', () => {
     it('persists lxIdentifier when provided in extra', async () => {
       repository.initSession = async (): Promise<{
         sessionId?: string

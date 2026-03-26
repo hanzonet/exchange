@@ -1,8 +1,8 @@
-import type { CheckWalletDelegation } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
+import type { CheckWalletDelegation } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
 import type {
   ChainDelegationDetails,
   DelegationRepository,
-} from 'uniswap/src/features/smartWallet/delegation/delegationRepository'
+} from 'lx/src/features/smartWallet/delegation/delegationRepository'
 import type { Logger } from 'utilities/src/logger/logger'
 
 interface TradingApiClient {
@@ -39,7 +39,7 @@ export function createTradingApiDelegationRepository(ctx: {
         if (delegationDetails) {
           result[String(chainId)] = {
             currentDelegationAddress: delegationDetails.currentDelegationAddress,
-            isWalletDelegatedToUniswap: delegationDetails.isWalletDelegatedToUniswap,
+            isWalletDelegatedToLx: delegationDetails.isWalletDelegatedToLx,
             latestDelegationAddress: delegationDetails.latestDelegationAddress,
           }
         } else {

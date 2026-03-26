@@ -1,6 +1,6 @@
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId, UniverseChainIdByPlatform } from 'uniswap/src/features/chains/types'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId, UniverseChainIdByPlatform } from 'lx/src/features/chains/types'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
 
 export function chainIdToPlatform(chainId: UniverseChainId): Platform {
   return getChainInfo(chainId).platform

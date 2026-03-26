@@ -1,7 +1,7 @@
 import { UseQueryResult, useQuery } from '@tanstack/react-query'
-import { useTradeService } from 'uniswap/src/features/services'
-import { createIndicativeTradeServiceQueryOptions } from 'uniswap/src/features/transactions/swap/hooks/useTrade/useIndicativeTradeServiceQueryOptions'
-import { IndicativeTrade, type UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+import { useTradeService } from 'lx/src/features/services'
+import { createIndicativeTradeServiceQueryOptions } from 'lx/src/features/transactions/swap/hooks/useTrade/useIndicativeTradeServiceQueryOptions'
+import { IndicativeTrade, type UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export function useIndicativeTradeQuery(params: UseTradeArgs): {

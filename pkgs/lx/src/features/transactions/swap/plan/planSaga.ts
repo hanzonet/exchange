@@ -2,13 +2,13 @@
 import { TradingApi } from '@luxexchange/api'
 import ms from 'ms'
 import { call, cancel, delay, fork } from 'typed-redux-saga'
-import { TradingApiSessionClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiSessionClient'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { AppNotificationType, type PlanTxNotification } from 'uniswap/src/features/notifications/slice/types'
-import { HandledTransactionInterrupt } from 'uniswap/src/features/transactions/errors'
-import { TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
-import { tradeRoutingToFillType } from 'uniswap/src/features/transactions/swap/analytics'
+import { TradingApiSessionClient } from 'lx/src/data/apiClients/tradingApi/TradingApiSessionClient'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { AppNotificationType, type PlanTxNotification } from 'lx/src/features/notifications/slice/types'
+import { HandledTransactionInterrupt } from 'lx/src/features/transactions/errors'
+import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
+import { tradeRoutingToFillType } from 'lx/src/features/transactions/swap/analytics'
 import {
   backgroundPlan,
   buildTradeFromPlanResponse,
@@ -46,12 +46,12 @@ import {
   isChained,
   planStepTypeToTradingRoute,
   requireRouting,
-} from 'uniswap/src/features/transactions/swap/utils/routing'
-import { requireAcceptNewTrade } from 'uniswap/src/features/transactions/swap/utils/trade'
-import { tradingApiToUniverseChainId } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
-import { TransactionStatus, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { currencyId } from 'uniswap/src/utils/currencyId'
-import { createMonitoredSaga } from 'uniswap/src/utils/saga'
+} from 'lx/src/features/transactions/swap/utils/routing'
+import { requireAcceptNewTrade } from 'lx/src/features/transactions/swap/utils/trade'
+import { tradingApiToUniverseChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
+import { TransactionStatus, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
+import { currencyId } from 'lx/src/utils/currencyId'
+import { createMonitoredSaga } from 'lx/src/utils/saga'
 import { BackoffStrategy, retryWithBackoff } from 'utilities/src/async/retryWithBackoff'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'

@@ -12,7 +12,7 @@ import {
   SAMPLE_SEED_ADDRESS_8,
   SAMPLE_SEED_ADDRESS_9,
   SAMPLE_SEED_ADDRESS_10,
-} from 'uniswap/src/test/fixtures'
+} from 'lx/src/test/fixtures'
 import { WebKeyring } from '@luxfi/wallet/src/features/wallet/Keyring/Keyring.web'
 
 // Mock the chrome utilities to return valid chrome
@@ -137,7 +137,7 @@ const mockStore = async ({ data }: { data: Record<string, string> }): Promise<vo
   await chrome.storage.local.set(data)
 }
 
-const ENCRYPTION_KEY_KEY = 'com.uniswap.web.encryptionKey'
+const ENCRYPTION_KEY_KEY = 'com.lx.web.encryptionKey'
 
 describe(WebKeyring, () => {
   beforeEach(async () => {
@@ -148,9 +148,9 @@ describe(WebKeyring, () => {
     it('returns all mnemonic ids', async () => {
       await mockStore({
         data: {
-          'com.uniswap.web.mnemonic.address1': SAMPLE_SEED,
-          'com.uniswap.web.mnemonic.address2': SAMPLE_SEED,
-          'com.uniswap.web.privateKey.address3': 'private-key',
+          'com.lx.web.mnemonic.address1': SAMPLE_SEED,
+          'com.lx.web.mnemonic.address2': SAMPLE_SEED,
+          'com.lx.web.privateKey.address3': 'private-key',
         },
       })
       const keyring = new WebKeyring()
@@ -201,7 +201,7 @@ describe(WebKeyring, () => {
     it('fails when password is valid, but stored mnemonic is not', async () => {
       await mockStore({
         data: {
-          [`com.uniswap.web.mnemonic.${SAMPLE_SEED_ADDRESS_1}`]: JSON.stringify({
+          [`com.lx.web.mnemonic.${SAMPLE_SEED_ADDRESS_1}`]: JSON.stringify({
             ciphertext: 'fail',
           }),
         },

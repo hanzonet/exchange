@@ -3,8 +3,8 @@ import { UseMutationResult, useMutation } from '@tanstack/react-query'
 import type {
   SubmitBidRequest,
   SubmitBidResponse,
-} from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/auction_pb'
-import { AuctionMutationClient } from 'uniswap/src/data/apiClients/liquidityService/AuctionMutationClient'
+} from '@luxamm/client-liquidity/dist/lx/liquidity/v1/auction_pb'
+import { AuctionMutationClient } from 'lx/src/data/apiClients/liquidityService/AuctionMutationClient'
 
 /**
  * Hook to submit a bid to an auction

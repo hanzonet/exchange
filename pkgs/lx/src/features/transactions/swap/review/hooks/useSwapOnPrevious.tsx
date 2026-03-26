@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { interruptTransactionFlow } from 'uniswap/src/utils/saga'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { interruptTransactionFlow } from 'lx/src/utils/saga'
 import { isWebApp } from 'utilities/src/platform'
 
 export function useSwapOnPrevious(): {

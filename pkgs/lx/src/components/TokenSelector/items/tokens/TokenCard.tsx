@@ -1,12 +1,12 @@
 import { memo } from 'react'
 import { Flex, Text, Tooltip, TouchableArea } from 'ui/src'
 import { iconSizes, zIndexes } from 'ui/src/theme'
-import { TokenLogo } from 'uniswap/src/components/CurrencyLogo/TokenLogo'
-import { TokenOption } from 'uniswap/src/components/lists/items/types'
-import { OnchainItemSection, OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'
-import { OnSelectCurrency } from 'uniswap/src/components/TokenSelector/types'
-import { getChainLabel } from 'uniswap/src/features/chains/utils'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
+import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
+import { TokenOption } from 'lx/src/components/lists/items/types'
+import { OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
+import { OnSelectCurrency } from 'lx/src/components/TokenSelector/types'
+import { getChainLabel } from 'lx/src/features/chains/utils'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
 
 function _TokenCard({
   onSelectCurrency,

@@ -1,18 +1,18 @@
-import { createApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
-import { createPermit2SignatureStep } from 'uniswap/src/features/transactions/steps/permit2Signature'
-import { createPermit2TransactionStep } from 'uniswap/src/features/transactions/steps/permit2Transaction'
-import { createRevocationTransactionStep } from 'uniswap/src/features/transactions/steps/revoke'
-import { TransactionStep } from 'uniswap/src/features/transactions/steps/types'
-import { orderClassicSwapSteps } from 'uniswap/src/features/transactions/swap/steps/classicSteps'
-import { createSignLxSwapOrderStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import { createApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
+import { createPermit2SignatureStep } from 'lx/src/features/transactions/steps/permit2Signature'
+import { createPermit2TransactionStep } from 'lx/src/features/transactions/steps/permit2Transaction'
+import { createRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
+import { TransactionStep } from 'lx/src/features/transactions/steps/types'
+import { orderClassicSwapSteps } from 'lx/src/features/transactions/swap/steps/classicSteps'
+import { createSignLxSwapOrderStep } from 'lx/src/features/transactions/swap/steps/signOrder'
 import {
   createSwapTransactionAsyncStep,
   createSwapTransactionStep,
   createSwapTransactionStepBatched,
-} from 'uniswap/src/features/transactions/swap/steps/swap'
-import { orderLXSteps } from 'uniswap/src/features/transactions/swap/steps/lxSteps'
-import { isValidSwapTxContext, SwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { isBridge, isClassic, isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+} from 'lx/src/features/transactions/swap/steps/swap'
+import { orderLXSteps } from 'lx/src/features/transactions/swap/steps/lxSteps'
+import { isValidSwapTxContext, SwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { isBridge, isClassic, isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 
 export function generateSwapTransactionSteps(txContext: SwapTxAndGasInfo): TransactionStep[] {
   const isValidSwap = isValidSwapTxContext(txContext)

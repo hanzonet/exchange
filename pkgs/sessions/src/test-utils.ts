@@ -17,24 +17,24 @@ import {
   type UpdateSessionResponse,
   type VerifyRequest,
   type VerifyResponse,
-} from '@luxamm/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
+} from '@luxamm/client-platform-service/dist/lx/platformservice/v1/sessionService_pb'
 import type { DeviceIdService } from '@luxexchange/sessions/src/device-id/types'
 import type { SessionServiceClient } from '@luxexchange/sessions/src/session-repository/createSessionClient'
 import type { SessionState, SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
-import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/lx-identifier/types'
 // Types for our test transport
 export interface MockEndpointHandler {
   (request: any, headers: Record<string, string>): Promise<any>
 }
 
 export interface MockEndpoints {
-  '/uniswap.platformservice.v1.SessionService/InitSession': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/Challenge': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/Verify': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/IntrospectSession': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/UpdateSession': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/GetChallengeTypes': MockEndpointHandler
-  '/uniswap.platformservice.v1.SessionService/Signout': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/InitSession': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/Challenge': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/Verify': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/IntrospectSession': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/UpdateSession': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/GetChallengeTypes': MockEndpointHandler
+  '/lx.platformservice.v1.SessionService/Signout': MockEndpointHandler
 }
 
 // Test transport that intercepts requests and returns mock responses
@@ -137,7 +137,7 @@ export function createMockSessionClient(
       request: PartialMessage<InitSessionRequest>,
       _options?: CallOptions,
     ): Promise<InitSessionResponse> => {
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/InitSession'](request, {})
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/InitSession'](request, {})
       return response as InitSessionResponse
     },
     challenge: async (
@@ -154,7 +154,7 @@ export function createMockSessionClient(
         headers['X-Device-ID'] = deviceId
       }
 
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/Challenge'](request, headers)
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/Challenge'](request, headers)
       return response as ChallengeResponse
     },
     verify: async (request: PartialMessage<VerifyRequest>, _options?: CallOptions): Promise<VerifyResponse> => {
@@ -168,32 +168,32 @@ export function createMockSessionClient(
         headers['X-Device-ID'] = deviceId
       }
 
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/Verify'](request, headers)
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/Verify'](request, headers)
       return response as VerifyResponse
     },
     introspectSession: async (
       request: PartialMessage<IntrospectSessionRequest>,
       _options?: CallOptions,
     ): Promise<IntrospectSessionResponse> => {
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/IntrospectSession'](request, {})
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/IntrospectSession'](request, {})
       return response as IntrospectSessionResponse
     },
     updateSession: async (
       request: PartialMessage<UpdateSessionRequest>,
       _options?: CallOptions,
     ): Promise<UpdateSessionResponse> => {
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/UpdateSession'](request, {})
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/UpdateSession'](request, {})
       return response as UpdateSessionResponse
     },
     getChallengeTypes: async (
       request: PartialMessage<GetChallengeTypesRequest>,
       _options?: CallOptions,
     ): Promise<GetChallengeTypesResponse> => {
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/GetChallengeTypes'](request, {})
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/GetChallengeTypes'](request, {})
       return response as GetChallengeTypesResponse
     },
     signout: async (request: PartialMessage<SignoutRequest>, _options?: CallOptions): Promise<SignoutResponse> => {
-      const response = await mockEndpoints['/uniswap.platformservice.v1.SessionService/Signout'](request, {})
+      const response = await mockEndpoints['/lx.platformservice.v1.SessionService/Signout'](request, {})
       return response as SignoutResponse
     },
   }

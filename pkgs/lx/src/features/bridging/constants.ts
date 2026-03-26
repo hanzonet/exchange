@@ -1,5 +1,5 @@
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import { extractBaseUrl } from 'utilities/src/format/urls'
 
 /*

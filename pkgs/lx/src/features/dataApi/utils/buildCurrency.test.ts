@@ -1,6 +1,6 @@
 import { NativeCurrency, Token } from '@luxamm/sdk-core'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { buildCurrency } from 'uniswap/src/features/dataApi/utils/buildCurrency'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { buildCurrency } from 'lx/src/features/dataApi/utils/buildCurrency'
 
 const TEST_TOKEN_ADDRESS = '0xabcdef0123456789abcdef0123456789abcdef01'
 

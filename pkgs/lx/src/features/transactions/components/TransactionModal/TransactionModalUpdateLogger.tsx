@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import type { ModalNameType } from 'uniswap/src/features/telemetry/constants'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
-import { useTransactionModalContext } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import type { ModalNameType } from 'lx/src/features/telemetry/constants'
+import { ModalName } from 'lx/src/features/telemetry/constants'
+import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import { logContextUpdate } from 'utilities/src/logger/contextEnhancer'
 
 export function TransactionModalUpdateLogger({ modalName }: { modalName: ModalNameType }): null {

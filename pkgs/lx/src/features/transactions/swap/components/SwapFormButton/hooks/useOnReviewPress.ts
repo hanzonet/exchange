@@ -1,6 +1,6 @@
-import { useSwapFormWarningStoreActions } from 'uniswap/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
-import { usePrepareSwap } from 'uniswap/src/features/transactions/swap/services/hooks/usePrepareSwap'
-import { useWarningService } from 'uniswap/src/features/transactions/swap/services/hooks/useWarningService'
+import { useSwapFormWarningStoreActions } from 'lx/src/features/transactions/swap/form/stores/swapFormWarningStore/useSwapFormWarningStore'
+import { usePrepareSwap } from 'lx/src/features/transactions/swap/services/hooks/usePrepareSwap'
+import { useWarningService } from 'lx/src/features/transactions/swap/services/hooks/useWarningService'
 import { useEvent } from 'utilities/src/react/hooks'
 
 type CallbackArgs = Record<

@@ -1,6 +1,6 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { LxSwapOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { hasEncodedOrder } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { LxSwapOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
+import { hasEncodedOrder } from 'lx/src/features/transactions/utils/lxSwap.utils'
 
 /**
  * Result of order validation

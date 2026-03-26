@@ -1,10 +1,10 @@
 import type { GasStrategy } from '@luxexchange/api'
-import type { TransactionSettings } from 'uniswap/src/features/transactions/components/settings/types'
-import type { EVMSwapInstructionsService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
-import { createGetEVMSwapTransactionRequestInfo } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/utils'
-import type { SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
-import { getBridgeSwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import type { BridgeTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
+import type { EVMSwapInstructionsService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
+import { createGetEVMSwapTransactionRequestInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/utils'
+import type { SwapTxAndGasInfoService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
+import { getBridgeSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { BridgeTrade } from 'lx/src/features/transactions/swap/types/trade'
 
 export function createBridgeSwapTxAndGasInfoService(ctx: {
   instructionService: EVMSwapInstructionsService

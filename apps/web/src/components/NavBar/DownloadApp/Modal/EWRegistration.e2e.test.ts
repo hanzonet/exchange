@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 import { FeatureFlags, getFeatureFlagName } from '@luxexchange/gating'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { expect, getTest } from '~/playwright/fixtures'
 import { getVisibleDropdownElementByTestId } from '~/playwright/fixtures/utils'
 

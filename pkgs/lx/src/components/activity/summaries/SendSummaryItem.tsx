@@ -1,10 +1,10 @@
-import { TransferTokenSummaryItem } from 'uniswap/src/components/activity/summaries/TransferTokenSummaryItem'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
+import { TransferTokenSummaryItem } from 'lx/src/components/activity/summaries/TransferTokenSummaryItem'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
 import {
   SendTokenTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export function SendSummaryItem({
   transaction,

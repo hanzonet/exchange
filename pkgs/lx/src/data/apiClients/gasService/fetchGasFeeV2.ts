@@ -1,9 +1,9 @@
 import { type TransactionRequest } from '@ethersproject/providers'
 import { type GasFeeResultWithoutState, type GasStrategy } from '@luxexchange/api'
-import { GasServiceClient } from 'uniswap/src/data/apiClients/gasService/GasServiceClient'
-import { mapGasServiceV2Response } from 'uniswap/src/data/apiClients/gasService/mapGasServiceV2Response'
-import { mapToEstimateGasFeeRequest } from 'uniswap/src/data/apiClients/gasService/mapToEstimateGasFeeRequest'
-import { estimateGasWithClientSideProvider } from 'uniswap/src/features/gas/utils'
+import { GasServiceClient } from 'lx/src/data/apiClients/gasService/GasServiceClient'
+import { mapGasServiceV2Response } from 'lx/src/data/apiClients/gasService/mapGasServiceV2Response'
+import { mapToEstimateGasFeeRequest } from 'lx/src/data/apiClients/gasService/mapToEstimateGasFeeRequest'
+import { estimateGasWithClientSideProvider } from 'lx/src/features/gas/utils'
 import { logger } from 'utilities/src/logger/logger'
 import { isWebApp } from 'utilities/src/platform'
 

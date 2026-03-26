@@ -1,5 +1,5 @@
 import appsFlyer from 'react-native-appsflyer'
-import { AppsFlyerEventProperties, UniverseEventProperties } from 'uniswap/src/features/telemetry/types'
+import { AppsFlyerEventProperties, UniverseEventProperties } from 'lx/src/features/telemetry/types'
 import { isBetaEnv, isDevEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated

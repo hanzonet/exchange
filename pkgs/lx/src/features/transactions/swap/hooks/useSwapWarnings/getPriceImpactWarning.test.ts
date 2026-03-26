@@ -1,8 +1,8 @@
 import { Percent } from '@luxamm/sdk-core'
 import i18next from 'i18next'
 import { AlertTriangleFilled } from 'ui/src/components/icons'
-import { WarningAction, WarningLabel, WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { getPriceImpactWarning } from 'uniswap/src/features/transactions/swap/hooks/useSwapWarnings/getPriceImpactWarning'
+import { WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { getPriceImpactWarning } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/getPriceImpactWarning'
 import { PercentNumberDecimals } from 'utilities/src/format/types'
 
 describe('getPriceImpactWarning', () => {

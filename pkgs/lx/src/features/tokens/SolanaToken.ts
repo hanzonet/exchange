@@ -1,6 +1,6 @@
 import { Currency, Token } from '@luxamm/sdk-core'
 import invariant from 'tiny-invariant'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
 import { isSVMAddress } from 'utilities/src/addresses/svm/svm'
 
 export class SolanaToken implements Token {

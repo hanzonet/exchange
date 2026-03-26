@@ -1,4 +1,4 @@
-import { renderHookWithProviders, renderWithProviders } from 'uniswap/src/test/render'
+import { renderHookWithProviders, renderWithProviders } from 'lx/src/test/render'
 
 // re-export everything
 export * from '@testing-library/react-native'

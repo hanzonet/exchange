@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
-import { useSelectAddressTransactions } from 'uniswap/src/features/transactions/selectors'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { useSelectAddressTransactions } from 'lx/src/features/transactions/selectors'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   QueuedOrderStatus,
   TransactionDetails,
   TransactionStatus,
   LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 const ERRORED_QUEUE_STATUSES = [
   QueuedOrderStatus.AppClosed,

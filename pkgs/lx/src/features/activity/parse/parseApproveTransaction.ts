@@ -5,7 +5,7 @@ import {
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export default function parseApproveTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,

@@ -5,7 +5,7 @@ import {
   setHideSpamTokens,
   UserSettingsState,
   userSettingsReducer,
-} from 'uniswap/src/features/settings/slice'
+} from 'lx/src/features/settings/slice'
 
 describe(userSettingsReducer, () => {
   let store: Store<UserSettingsState>

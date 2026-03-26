@@ -1,6 +1,6 @@
-import { TokenApprovalTransactionStep } from 'uniswap/src/features/transactions/steps/approve'
-import { TokenRevocationTransactionStep } from 'uniswap/src/features/transactions/steps/revoke'
-import type { LXSignatureStep } from 'uniswap/src/features/transactions/swap/steps/signOrder'
+import { TokenApprovalTransactionStep } from 'lx/src/features/transactions/steps/approve'
+import { TokenRevocationTransactionStep } from 'lx/src/features/transactions/steps/revoke'
+import type { LXSignatureStep } from 'lx/src/features/transactions/swap/steps/signOrder'
 
 export type LXSwapFlow = {
   revocation?: TokenRevocationTransactionStep

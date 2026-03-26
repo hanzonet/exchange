@@ -3,13 +3,13 @@ import { Flex } from 'ui/src'
 import {
   TransactionModalContextProvider,
   TransactionScreen,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
 import {
   TransactionModalFooterContainerProps,
   TransactionModalInnerContainerProps,
   TransactionModalProps,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalProps'
-import { TransactionModalUpdateLogger } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalUpdateLogger'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalProps'
+import { TransactionModalUpdateLogger } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalUpdateLogger'
 
 export function TransactionModal({
   children,

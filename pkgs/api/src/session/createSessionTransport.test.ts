@@ -35,7 +35,7 @@ describe('createSessionTransport', () => {
       baseUrl: 'https://api.example.com',
       headers: {
         'x-request-source': 'test',
-        'x-uniswap-timezone': 'UTC',
+        'x-lx-timezone': 'UTC',
       },
       cookie: 'session=abc123',
       credentials: 'include',

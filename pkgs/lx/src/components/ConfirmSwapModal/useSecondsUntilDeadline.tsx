@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { StepStatus } from 'uniswap/src/components/ConfirmSwapModal/types'
+import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
 import { noop } from 'utilities/src/react/noop'
 
 /**

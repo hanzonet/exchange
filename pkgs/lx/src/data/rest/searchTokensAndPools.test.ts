@@ -1,5 +1,5 @@
 import { ChainToken, MultichainToken, SpamCode, Token } from '@luxamm/client-search/dist/search/v1/api_pb'
-import { multichainTokenToCurrencyInfos, searchTokenToCurrencyInfo } from 'uniswap/src/data/rest/searchTokensAndPools'
+import { multichainTokenToCurrencyInfos, searchTokenToCurrencyInfo } from 'lx/src/data/rest/searchTokensAndPools'
 
 function createMultichainToken(
   overrides: Partial<{

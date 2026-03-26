@@ -1,5 +1,5 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { SAMPLE_SEED_ADDRESS_1 } from 'uniswap/src/test/fixtures'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { SAMPLE_SEED_ADDRESS_1 } from 'lx/src/test/fixtures'
 import {
   SmartWalletDelegationAction,
   useSmartWalletDelegationStatus,
@@ -40,7 +40,7 @@ function delegation(overrides: Partial<DelegationCheckResult> = {}): DelegationC
   return {
     needsDelegation: false,
     currentDelegationAddress: null,
-    isWalletDelegatedToUniswap: false,
+    isWalletDelegatedToLx: false,
     ...overrides,
   }
 }
@@ -122,7 +122,7 @@ describe(useSmartWalletDelegationStatus, () => {
     expect(result.current.status).toBe(SmartWalletDelegationAction.None)
   })
 
-  it('returns ShowConflict when a non-Uniswap delegation exists', async () => {
+  it('returns ShowConflict when a non-Lx delegation exists', async () => {
     setupMocks({
       getDelegationDetails: jest.fn().mockReturnValue(delegation({ currentDelegationAddress: '0xNonLxContract' })),
     })
@@ -136,12 +136,12 @@ describe(useSmartWalletDelegationStatus, () => {
     expect(result.current.status).toBe(SmartWalletDelegationAction.ShowConflict)
   })
 
-  it('returns None when already delegated to Uniswap (even without consent)', async () => {
+  it('returns None when already delegated to Lx (even without consent)', async () => {
     setupMocks({
       getDelegationDetails: jest
         .fn()
         .mockReturnValue(
-          delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToUniswap: true }),
+          delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToLx: true }),
         ),
     })
 
@@ -154,10 +154,10 @@ describe(useSmartWalletDelegationStatus, () => {
     expect(result.current.status).toBe(SmartWalletDelegationAction.None)
   })
 
-  it('returns ShowConflict if any chain has a non-Uniswap delegation', async () => {
+  it('returns ShowConflict if any chain has a non-Lx delegation', async () => {
     const getDelegationDetails = jest.fn().mockImplementation((_address: string, chainId: UniverseChainId) => {
       if (chainId === UniverseChainId.Mainnet) {
-        return delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToUniswap: true })
+        return delegation({ currentDelegationAddress: '0xLxContract', isWalletDelegatedToLx: true })
       }
       return delegation({ currentDelegationAddress: '0xOtherProtocol' })
     })

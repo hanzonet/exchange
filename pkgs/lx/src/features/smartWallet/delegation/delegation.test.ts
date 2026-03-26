@@ -1,4 +1,4 @@
-import { createDelegationService } from 'uniswap/src/features/smartWallet/delegation/delegation'
+import { createDelegationService } from 'lx/src/features/smartWallet/delegation/delegation'
 import type { Logger } from 'utilities/src/logger/logger'
 
 describe('delegation service', () => {
@@ -13,7 +13,7 @@ describe('delegation service', () => {
           getWalletDelegations: async () => ({
             '1': {
               currentDelegationAddress: delegatedAddress,
-              isWalletDelegatedToUniswap: true,
+              isWalletDelegatedToLx: true,
               latestDelegationAddress: '0xLatest',
             },
           }),
@@ -60,13 +60,13 @@ describe('delegation service', () => {
           getWalletDelegations: async () => ({
             '1': {
               currentDelegationAddress: '0xDelegated1',
-              isWalletDelegatedToUniswap: true,
+              isWalletDelegatedToLx: true,
               latestDelegationAddress: '0xLatest',
             },
             '137': null,
             '10': {
               currentDelegationAddress: '0xDelegated10',
-              isWalletDelegatedToUniswap: false,
+              isWalletDelegatedToLx: false,
               latestDelegationAddress: '0xLatest',
             },
           }),
@@ -91,7 +91,7 @@ describe('delegation service', () => {
           getWalletDelegations: async () => ({
             '1': {
               currentDelegationAddress: null,
-              isWalletDelegatedToUniswap: false,
+              isWalletDelegatedToLx: false,
               latestDelegationAddress: '0xLatest',
             },
           }),
@@ -134,7 +134,7 @@ describe('delegation service', () => {
           getWalletDelegations: async () => ({
             '1': {
               currentDelegationAddress: delegatedAddress,
-              isWalletDelegatedToUniswap: true,
+              isWalletDelegatedToLx: true,
               latestDelegationAddress: '0xLatest',
             },
           }),

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Eye } from 'ui/src/components/icons/Eye'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { WarningModal } from 'uniswap/src/components/modals/WarningModal/WarningModal'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 
 type ViewOnlyModalProps = {
   onDismiss: () => void

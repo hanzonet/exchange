@@ -5,8 +5,8 @@ import {
   useTokenProjectMarketsPartsFragment as useTokenProjectMarketsPartsFragmentFromApi,
   useTokenProjectUrlsPartsFragment as useTokenProjectUrlsPartsFragmentFromApi,
 } from '@luxexchange/api'
-import { toGraphQLChain } from 'uniswap/src/features/chains/utils'
-import { currencyIdToChain, currencyIdToGraphQLAddress } from 'uniswap/src/utils/currencyId'
+import { toGraphQLChain } from 'lx/src/features/chains/utils'
+import { currencyIdToChain, currencyIdToGraphQLAddress } from 'lx/src/utils/currencyId'
 
 function currencyIdToGraphQLTokenVariables(currencyId: string): {
   // The GraphQL `address` is `null` for native ETH

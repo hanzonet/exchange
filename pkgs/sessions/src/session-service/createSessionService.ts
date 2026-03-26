@@ -9,7 +9,7 @@ import type {
   VerifySessionResponse,
 } from '@luxexchange/sessions/src/session-service/types'
 import type { SessionStorage } from '@luxexchange/sessions/src/session-storage/types'
-import type { LxIdentifierService } from '@luxexchange/sessions/src/uniswap-identifier/types'
+import type { LxIdentifierService } from '@luxexchange/sessions/src/lx-identifier/types'
 
 /**
  * Creates a Session Service instance.

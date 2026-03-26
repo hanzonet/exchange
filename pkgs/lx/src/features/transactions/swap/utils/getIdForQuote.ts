@@ -1,4 +1,4 @@
-import { GetQuoteRequestResult } from 'uniswap/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
+import { GetQuoteRequestResult } from 'lx/src/features/transactions/swap/hooks/useTrade/createGetQuoteRequestArgs'
 import { canonicalStringify } from 'utilities/src/format/canonicalJson'
 
 /**

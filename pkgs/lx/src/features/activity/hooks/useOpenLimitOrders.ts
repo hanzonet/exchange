@@ -1,10 +1,10 @@
 import { TransactionTypeFilter } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { useMemo } from 'react'
-import { LIMIT_SUPPORTED_CHAINS } from 'uniswap/src/features/chains/chainInfo'
-import { useListTransactions } from 'uniswap/src/features/dataApi/listTransactions/listTransactions'
-import { BaseResult } from 'uniswap/src/features/dataApi/types'
-import { LxSwapOrderDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { isLimitOrder, isLxSwapOrderPending } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
+import { LIMIT_SUPPORTED_CHAINS } from 'lx/src/features/chains/chainInfo'
+import { useListTransactions } from 'lx/src/features/dataApi/listTransactions/listTransactions'
+import { BaseResult } from 'lx/src/features/dataApi/types'
+import { LxSwapOrderDetails } from 'lx/src/features/transactions/types/transactionDetails'
+import { isLimitOrder, isLxSwapOrderPending } from 'lx/src/features/transactions/utils/lxSwap.utils'
 
 /**
  * Custom hook that fetches open limit orders using the ListTransactions API

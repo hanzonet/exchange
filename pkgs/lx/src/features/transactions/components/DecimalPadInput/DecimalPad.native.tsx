@@ -6,13 +6,13 @@ import { Flex, Text } from 'ui/src'
 import { ArrowLeft, ArrowRight } from 'ui/src/components/icons'
 import { AnimatedFlex } from 'ui/src/components/layout/AnimatedFlex'
 import { fonts, iconSizes, spacing } from 'ui/src/theme'
-import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
+import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
 import {
   DecimalPadProps,
   KeyAction,
   KeyLabel,
-} from 'uniswap/src/features/transactions/components/DecimalPadInput/types'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+} from 'lx/src/features/transactions/components/DecimalPadInput/types'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 
 const KEY_PRESS_ANIMATION_DURATION_MS = 150
 

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Flex, type FlexProps, Text, type TextProps } from 'ui/src'
-import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
+import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
 
 export interface DialogContentProps {
   icon: ReactNode

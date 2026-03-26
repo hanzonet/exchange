@@ -1,4 +1,4 @@
-import type { DialogProps } from 'uniswap/src/components/dialog/DialogProps'
+import type { DialogProps } from 'lx/src/components/dialog/DialogProps'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 /**

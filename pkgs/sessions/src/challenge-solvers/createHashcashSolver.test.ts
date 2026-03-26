@@ -1,4 +1,4 @@
-import { ChallengeType } from '@luxamm/client-platform-service/dist/uniswap/platformservice/v1/sessionService_pb'
+import { ChallengeType } from '@luxamm/client-platform-service/dist/lx/platformservice/v1/sessionService_pb'
 import { createHashcashSolver } from '@luxexchange/sessions/src/challenge-solvers/createHashcashSolver'
 import type { HashcashWorkerChannel } from '@luxexchange/sessions/src/challenge-solvers/hashcash/worker/types'
 import type { ChallengeData } from '@luxexchange/sessions/src/challenge-solvers/types'
@@ -23,7 +23,7 @@ describe('createHashcashSolver', () => {
   // Real backend example data
   const backendExample = {
     difficulty: 1,
-    subject: 'Uniswap',
+    subject: 'Lx',
     algorithm: 'sha256' as const,
     nonce: 'Qlquffem7d8RrL6fmveE68XK0KxcoczdiVpFrV1qeUk=',
     max_proof_length: 10000,
@@ -41,14 +41,14 @@ describe('createHashcashSolver', () => {
     const solution = await solver.solve(challengeData)
 
     // Check format: "${subject}:${nonce}:${counter}"
-    expect(solution).toMatch(/^Uniswap:[A-Za-z0-9+/=]+:\d+$/)
-    expect(solution.startsWith('Uniswap:')).toBe(true)
+    expect(solution).toMatch(/^Lx:[A-Za-z0-9+/=]+:\d+$/)
+    expect(solution.startsWith('Lx:')).toBe(true)
     expect(solution).toContain(backendExample.nonce) // Should contain the base64 nonce
 
     // Verify the solution has all three parts
     const parts = solution.split(':')
     expect(parts.length).toBe(3)
-    expect(parts[0]).toBe('Uniswap')
+    expect(parts[0]).toBe('Lx')
     expect(parts[1]).toBe(backendExample.nonce)
     expect(Number.parseInt(parts[2], 10)).toBeGreaterThanOrEqual(0)
   })
@@ -293,7 +293,7 @@ describe('createHashcashSolver', () => {
         rangeSize: backendExample.max_proof_length,
       })
       expect(mockTerminate).toHaveBeenCalled()
-      expect(solution).toBe(`Uniswap:${backendExample.nonce}:42`)
+      expect(solution).toBe(`Lx:${backendExample.nonce}:42`)
     })
 
     it('terminates worker channel even on error', async () => {

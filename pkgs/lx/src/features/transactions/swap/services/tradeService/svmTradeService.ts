@@ -1,17 +1,17 @@
 import { TradeType } from '@luxamm/sdk-core'
 import { FetchError, type JupiterOrderUrlParams } from '@luxexchange/api'
-import { JupiterApiClient } from 'uniswap/src/data/apiClients/jupiterApi/JupiterFetchClient'
-import { isSVMChain } from 'uniswap/src/features/platforms/utils/chains'
+import { JupiterApiClient } from 'lx/src/data/apiClients/jupiterApi/JupiterFetchClient'
+import { isSVMChain } from 'lx/src/features/platforms/utils/chains'
 import {
   areCurrenciesEqual,
   isZeroAmount,
-} from 'uniswap/src/features/transactions/swap/hooks/useTrade/parseQuoteCurrencies'
+} from 'lx/src/features/transactions/swap/hooks/useTrade/parseQuoteCurrencies'
 import {
   TradeService,
   TradeWithGasEstimates,
-} from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import { createSolanaTrade } from 'uniswap/src/features/transactions/swap/types/solana'
-import { UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { createSolanaTrade } from 'lx/src/features/transactions/swap/types/solana'
+import { UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 
 class JupiterOrderError extends Error {
   name = 'JupiterOrderError'

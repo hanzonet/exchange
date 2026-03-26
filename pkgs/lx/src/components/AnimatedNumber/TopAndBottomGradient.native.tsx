@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { Defs, LinearGradient, Rect, Stop, Svg } from 'react-native-svg'
 import { useSporeColors } from 'ui/src/hooks/useSporeColors'
-import { DIGIT_HEIGHT } from 'uniswap/src/components/AnimatedNumber/AnimatedNumber'
+import { DIGIT_HEIGHT } from 'lx/src/components/AnimatedNumber/AnimatedNumber'
 
 const AnimatedNumberStyles = StyleSheet.create({
   gradientStyle: {

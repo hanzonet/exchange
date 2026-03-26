@@ -1,5 +1,5 @@
 import { type DiscriminatedQuoteResponse, type TradingApi, type TradingApiClient } from '@luxexchange/api'
-import { logSwapQuoteFetch } from 'uniswap/src/features/transactions/swap/analytics'
+import { logSwapQuoteFetch } from 'lx/src/features/transactions/swap/analytics'
 import { type Logger } from 'utilities/src/logger/logger'
 
 // Minimal parameters needed for indicative quotes

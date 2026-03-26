@@ -1,5 +1,5 @@
-import { ValueText } from 'uniswap/src/components/activity/details/transactions/utilityComponents'
-import { render } from 'uniswap/src/test/test-utils'
+import { ValueText } from 'lx/src/components/activity/details/transactions/utilityComponents'
+import { render } from 'lx/src/test/test-utils'
 
 describe('ValueText', () => {
   it('renders formatted USD value as text', () => {

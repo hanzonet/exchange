@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
-import { TransactionSummaryLayout } from 'uniswap/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'uniswap/src/components/activity/utils'
-import { SplitLogo } from 'uniswap/src/components/CurrencyLogo/SplitLogo'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
-import { TransactionDetails, WrapTransactionInfo } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount } from 'uniswap/src/utils/currency'
+import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
+import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { useNativeCurrencyInfo, useWrappedNativeCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
+import { TransactionDetails, WrapTransactionInfo } from 'lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount } from 'lx/src/utils/currency'
 
 export function WrapSummaryItem({
   transaction,

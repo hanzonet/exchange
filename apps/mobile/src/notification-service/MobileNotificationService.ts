@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query'
-import { PlatformType } from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+import { PlatformType } from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
 import {
   createFetchClient,
   createNotificationsApiClient,
@@ -61,7 +61,7 @@ function provideMobileNotificationService(ctx: { getIsApiDataSourceEnabled: () =
       return {
         'Content-Type': 'application/json',
         'x-request-source': REQUEST_SOURCE,
-        'x-uniswap-locale': backendLocale,
+        'x-lx-locale': backendLocale,
         'x-app-version': semver,
       }
     },

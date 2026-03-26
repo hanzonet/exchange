@@ -1,4 +1,4 @@
-import { LxState } from 'uniswap/src/state/lxReducer'
+import { LxState } from 'lx/src/state/lxReducer'
 
 export const selectHasViewedBridgingBanner = (state: LxState): boolean =>
   state.lxBehaviorHistory.hasViewedBridgingBanner === true

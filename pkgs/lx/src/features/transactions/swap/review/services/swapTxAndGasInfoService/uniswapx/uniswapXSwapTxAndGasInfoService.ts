@@ -1,9 +1,9 @@
-import { SwapTxAndGasInfoService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
+import { SwapTxAndGasInfoService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/swapTxAndGasInfoService'
 import {
   getLXSwapTxAndGasInfo,
   processLXResponse,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
-import { LxSwapTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/lxswap/utils'
+import { LxSwapTrade } from 'lx/src/features/transactions/swap/types/trade'
 
 export function createLxSwapSwapTxAndGasInfoService(): SwapTxAndGasInfoService<LxSwapTrade> {
   const service: SwapTxAndGasInfoService<LxSwapTrade> = {

@@ -1,9 +1,9 @@
 import { CurrencyAmount, Token } from '@luxamm/sdk-core'
 import i18next from 'i18next'
-import { WarningAction, WarningLabel, WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { getBalanceWarning } from 'uniswap/src/features/transactions/swap/hooks/useSwapWarnings/getBalanceWarning'
-import { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { CurrencyField } from 'uniswap/src/types/currency'
+import { WarningAction, WarningLabel, WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { getBalanceWarning } from 'lx/src/features/transactions/swap/hooks/useSwapWarnings/getBalanceWarning'
+import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { CurrencyField } from 'lx/src/types/currency'
 
 vi.mock('utilities/src/platform', () => ({
   isAndroid: false,

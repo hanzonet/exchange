@@ -1,8 +1,8 @@
 import { useMemo, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { isUniverseChainId } from 'uniswap/src/features/chains/utils'
-import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { AddressStringFormat, normalizeAddress } from 'uniswap/src/utils/addresses'
+import { isUniverseChainId } from 'lx/src/features/chains/utils'
+import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
+import { AddressStringFormat, normalizeAddress } from 'lx/src/utils/addresses'
 import { type WalletData, WalletStatus } from '@luxfi/wallet/src/features/smartWallet/types'
 import { useWalletDelegationContext } from '@luxfi/wallet/src/features/smartWallet/WalletDelegationProvider'
 import { useSignerMnemonicAccountsSorted } from '@luxfi/wallet/src/features/wallet/hooks'
@@ -46,9 +46,9 @@ export function useSmartWalletData(): WalletData[] {
       let status = WalletStatus.Inactive
 
       if (walletDelegationData) {
-        // Check for mismatched delegations first (delegated but not to Uniswap)
+        // Check for mismatched delegations first (delegated but not to Lx)
         const hasMismatchedDelegations = Object.values(walletDelegationData).some(
-          (details) => details.currentDelegationAddress && !details.isWalletDelegatedToUniswap,
+          (details) => details.currentDelegationAddress && !details.isWalletDelegatedToLx,
         )
 
         if (hasMismatchedDelegations) {
@@ -100,7 +100,7 @@ export function useSmartWalletData(): WalletData[] {
         derivedStatus = WalletStatus.Active
       }
 
-      // No consent, but has active delegations to Uniswap
+      // No consent, but has active delegations to Lx
       if (
         wallet.status === WalletStatus.Inactive &&
         !hasConsent &&

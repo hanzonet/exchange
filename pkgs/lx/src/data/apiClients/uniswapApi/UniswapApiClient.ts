@@ -1,9 +1,9 @@
 import { createLxApiClient, type GasFeeResponse, type GasStrategy } from '@luxexchange/api'
-import { config } from 'uniswap/src/config'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { createLxFetchClient } from 'uniswap/src/data/apiClients/createLxFetchClient'
-import { convertGasFeeToDisplayValue } from 'uniswap/src/features/gas/hooks'
-import { estimateGasWithClientSideProvider, extractGasFeeParams } from 'uniswap/src/features/gas/utils'
+import { config } from 'lx/src/config'
+import { lxUrls } from 'lx/src/constants/urls'
+import { createLxFetchClient } from 'lx/src/data/apiClients/createLxFetchClient'
+import { convertGasFeeToDisplayValue } from 'lx/src/features/gas/hooks'
+import { estimateGasWithClientSideProvider, extractGasFeeParams } from 'lx/src/features/gas/utils'
 import { isWebApp } from 'utilities/src/platform'
 
 const LxFetchClient = createLxFetchClient({

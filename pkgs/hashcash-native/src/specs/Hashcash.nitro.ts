@@ -6,7 +6,7 @@ import type { HybridObject } from 'react-native-nitro-modules'
 export interface HashcashChallenge {
   /** Number of zero bytes required at start of hash */
   difficulty: number
-  /** Subject string (e.g., "Uniswap") */
+  /** Subject string (e.g., "Lx") */
   subject: string
   /** Base64-encoded nonce from backend */
   nonce: string

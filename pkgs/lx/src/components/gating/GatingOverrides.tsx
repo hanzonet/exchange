@@ -17,17 +17,17 @@ import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import {
   DynamicConfigDropdown,
   DynamicConfigDropdownBoolean,
-} from 'uniswap/src/components/gating/DynamicConfigDropdown'
+} from 'lx/src/components/gating/DynamicConfigDropdown'
 import {
   EMBEDDED_WALLET_BASE_URL_OPTIONS,
   FORCE_UPGRADE_STATUS_OPTIONS,
   FORCE_UPGRADE_TRANSLATIONS_OPTIONS,
-} from 'uniswap/src/components/gating/dynamicConfigOverrides'
-import { GatingButton } from 'uniswap/src/components/gating/GatingButton'
-import { ExperimentRow, LayerRow } from 'uniswap/src/components/gating/Rows'
-import { useForceUpgradeStatus } from 'uniswap/src/features/forceUpgrade/hooks/useForceUpgradeStatus'
-import { useForceUpgradeTranslations } from 'uniswap/src/features/forceUpgrade/hooks/useForceUpgradeTranslations'
-import { useEmbeddedWalletBaseUrl } from 'uniswap/src/features/passkey/hooks/useEmbeddedWalletBaseUrl'
+} from 'lx/src/components/gating/dynamicConfigOverrides'
+import { GatingButton } from 'lx/src/components/gating/GatingButton'
+import { ExperimentRow, LayerRow } from 'lx/src/components/gating/Rows'
+import { useForceUpgradeStatus } from 'lx/src/features/forceUpgrade/hooks/useForceUpgradeStatus'
+import { useForceUpgradeTranslations } from 'lx/src/features/forceUpgrade/hooks/useForceUpgradeTranslations'
+import { useEmbeddedWalletBaseUrl } from 'lx/src/features/passkey/hooks/useEmbeddedWalletBaseUrl'
 import { isExtensionApp, isMobileApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
 

@@ -1,13 +1,13 @@
 import { Currency } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
-import { parseQuoteCurrencies } from 'uniswap/src/features/transactions/swap/hooks/useTrade/parseQuoteCurrencies'
-import { useIndicativeTradeQuery } from 'uniswap/src/features/transactions/swap/hooks/useTrade/useIndicativeTradeQuery'
-import { useTradeQuery } from 'uniswap/src/features/transactions/swap/hooks/useTrade/useTradeQuery'
-import type { TradeWithGasEstimates } from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import { TradeWithStatus, UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+import { parseQuoteCurrencies } from 'lx/src/features/transactions/swap/hooks/useTrade/parseQuoteCurrencies'
+import { useIndicativeTradeQuery } from 'lx/src/features/transactions/swap/hooks/useTrade/useIndicativeTradeQuery'
+import { useTradeQuery } from 'lx/src/features/transactions/swap/hooks/useTrade/useTradeQuery'
+import type { TradeWithGasEstimates } from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { TradeWithStatus, UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 
 // error strings hardcoded in @luxamm/unified-routing-api
-// https://github.com/Uniswap/unified-routing-api/blob/020ea371a00d4cc25ce9f9906479b00a43c65f2c/lib/util/errors.ts#L4
+// https://github.com/Lx/unified-routing-api/blob/020ea371a00d4cc25ce9f9906479b00a43c65f2c/lib/util/errors.ts#L4
 export const SWAP_QUOTE_ERROR = 'QUOTE_ERROR'
 
 export const API_RATE_LIMIT_ERROR = 'TOO_MANY_REQUESTS'

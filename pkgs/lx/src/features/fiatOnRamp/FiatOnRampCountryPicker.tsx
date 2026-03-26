@@ -1,10 +1,10 @@
 import { Flex, TouchableArea, UniversalImage } from 'ui/src'
 import { RotatableChevron } from 'ui/src/components/icons/RotatableChevron'
 import { iconSizes } from 'ui/src/theme'
-import { getCountryFlagSvgUrl } from 'uniswap/src/features/fiatOnRamp/utils'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { getCountryFlagSvgUrl } from 'lx/src/features/fiatOnRamp/utils'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { isWebPlatform } from 'utilities/src/platform'
 
 const ICON_SIZE = iconSizes.icon16

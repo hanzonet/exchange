@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
-import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import type { TradeableAsset } from 'uniswap/src/entities/assets'
-import { AssetType } from 'uniswap/src/entities/assets'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import type { UniverseChainId } from 'uniswap/src/features/chains/types'
-import type { SwapFormState } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/types'
-import { CurrencyField } from 'uniswap/src/types/currency'
+import { getNativeAddress } from 'lx/src/constants/addresses'
+import type { TradeableAsset } from 'lx/src/entities/assets'
+import { AssetType } from 'lx/src/entities/assets'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import type { UniverseChainId } from 'lx/src/features/chains/types'
+import type { SwapFormState } from 'lx/src/features/transactions/swap/stores/swapFormStore/types'
+import { CurrencyField } from 'lx/src/types/currency'
 
 const getDefaultInputCurrency = (chainId: UniverseChainId): TradeableAsset => ({
   address: getNativeAddress(chainId),

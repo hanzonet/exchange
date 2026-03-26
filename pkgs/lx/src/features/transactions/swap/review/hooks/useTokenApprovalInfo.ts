@@ -1,17 +1,17 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { GasFeeResult, TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
-import { useCheckApprovalQuery } from 'uniswap/src/data/apiClients/tradingApi/useCheckApprovalQuery'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { convertGasFeeToDisplayValue, useActiveGasStrategy } from 'uniswap/src/features/gas/hooks'
-import { ApprovalAction, TokenApprovalInfo } from 'uniswap/src/features/transactions/swap/types/trade'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { useLuxContextSelector } from 'lx/src/contexts/LuxContext'
+import { useCheckApprovalQuery } from 'lx/src/data/apiClients/tradingApi/useCheckApprovalQuery'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { convertGasFeeToDisplayValue, useActiveGasStrategy } from 'lx/src/features/gas/hooks'
+import { ApprovalAction, TokenApprovalInfo } from 'lx/src/features/transactions/swap/types/trade'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   getTokenAddressForApi,
   toTradingApiSupportedChainId,
-} from 'uniswap/src/features/transactions/swap/utils/tradingApi'
-import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
+} from 'lx/src/features/transactions/swap/utils/tradingApi'
+import { WrapType } from 'lx/src/features/transactions/types/wrap'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_MINUTE_MS, ONE_SECOND_MS } from 'utilities/src/time/time'
 

@@ -1,4 +1,4 @@
-import { AppsFlyerEventProperties, UniverseEventProperties } from 'uniswap/src/features/telemetry/types'
+import { AppsFlyerEventProperties, UniverseEventProperties } from 'lx/src/features/telemetry/types'
 import { logger } from 'utilities/src/logger/logger'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
 import { analytics } from 'utilities/src/telemetry/analytics/analytics'

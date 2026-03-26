@@ -1,16 +1,16 @@
 import { TradingApi } from '@luxexchange/api'
 import { call, delay, fork, select, take } from 'typed-redux-saga'
-import { makeSelectLxSwapOrder } from 'uniswap/src/features/transactions/selectors'
-import { updateTransaction } from 'uniswap/src/features/transactions/slice'
-import { getOrders } from 'uniswap/src/features/transactions/swap/orders'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { makeSelectLxSwapOrder } from 'lx/src/features/transactions/selectors'
+import { updateTransaction } from 'lx/src/features/transactions/slice'
+import { getOrders } from 'lx/src/features/transactions/swap/orders'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   QueuedOrderStatus,
   TransactionStatus,
   LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { isFinalizedTxStatus } from 'uniswap/src/features/transactions/types/utils'
-import { convertOrderStatusToTransactionStatus } from 'uniswap/src/features/transactions/utils/lxSwap.utils'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { isFinalizedTxStatus } from 'lx/src/features/transactions/types/utils'
+import { convertOrderStatusToTransactionStatus } from 'lx/src/features/transactions/utils/lxSwap.utils'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 

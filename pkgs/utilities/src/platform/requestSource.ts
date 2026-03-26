@@ -2,7 +2,7 @@ import { isAndroid, isExtensionApp, isIOS } from '@luxfi/utilities/src/platform'
 
 /**
  * Returns the x-request-source header value for the current platform.
- * This header should be added to all requests to Uniswap services.
+ * This header should be added to all requests to Lx services.
  */
 function getRequestSource(): string {
   if (isIOS) {

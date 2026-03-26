@@ -1,10 +1,10 @@
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { DeadlineControl } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/deadline/DeadlineControl'
-import { DeadlineWarning } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/deadline/DeadlineWarning'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { DeadlineControl } from 'lx/src/features/transactions/components/settings/settingsConfigurations/deadline/DeadlineControl'
+import { DeadlineWarning } from 'lx/src/features/transactions/components/settings/settingsConfigurations/deadline/DeadlineWarning'
 import {
   type TransactionSettingConfig,
   TransactionSettingId,
-} from 'uniswap/src/features/transactions/components/settings/types'
+} from 'lx/src/features/transactions/components/settings/types'
 
 /**
  * Note: This setting has its title overridden in the Web Swap flow

@@ -1,4 +1,4 @@
-import { Wallet } from 'uniswap/src/features/wallet/types/Wallet'
+import { Wallet } from 'lx/src/features/wallet/types/Wallet'
 import { HexString } from 'utilities/src/addresses/hex'
 
 export interface WalletService {

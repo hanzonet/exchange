@@ -9,7 +9,7 @@ const { none: lightTransparent, ...guiColorsLight } = colorsLight
 // TODO can convert tokens to createTokens() and then use them here
 // Gui will automatically convert them though, so it just saves a small amount of performance
 const light = {
-  // Uniswap Design System
+  // Lx Design System
   ...guiColorsLight,
   transparent: lightTransparent,
 

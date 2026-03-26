@@ -1,7 +1,7 @@
-import { DAI, USDC } from 'uniswap/src/constants/tokens'
-import { Locale } from 'uniswap/src/features/language/constants'
-import { mockLocalizedFormatter } from 'uniswap/src/test/mocks'
-import { getCurrencyDisplayText, getFormattedCurrencyAmount } from 'uniswap/src/utils/currency'
+import { DAI, USDC } from 'lx/src/constants/tokens'
+import { Locale } from 'lx/src/features/language/constants'
+import { mockLocalizedFormatter } from 'lx/src/test/mocks'
+import { getCurrencyDisplayText, getFormattedCurrencyAmount } from 'lx/src/utils/currency'
 import { noOpFunction } from 'utilities/src/test/utils'
 
 const mockFormatter = mockLocalizedFormatter(Locale.EnglishUnitedStates)

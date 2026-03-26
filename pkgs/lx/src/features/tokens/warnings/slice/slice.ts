@@ -5,9 +5,9 @@ import {
   SerializedTokenMap,
   TokenDismissInfo,
   TokenWarningDismissal,
-} from 'uniswap/src/features/tokens/warnings/slice/types'
-import { TokenProtectionWarning } from 'uniswap/src/features/tokens/warnings/types'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+} from 'lx/src/features/tokens/warnings/slice/types'
+import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
+import { getValidAddress } from 'lx/src/utils/addresses'
 
 export interface TokensState {
   dismissedTokenWarnings: SerializedTokenMap<TokenWarningDismissal>

@@ -5,9 +5,9 @@ import { EnvelopeLock } from '@luxfi/ui/src/components/icons/EnvelopeLock'
 import { Eye } from '@luxfi/ui/src/components/icons/Eye'
 import { EyeOff } from '@luxfi/ui/src/components/icons/EyeOff'
 import { Person } from '@luxfi/ui/src/components/icons/Person'
-import { AccountIcon } from 'uniswap/src/features/accounts/AccountIcon'
-import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
+import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
+import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
 import { DigitInputRow, type DigitInputState, IconBox, StepHeader } from '~/components/Passkey/BackupLoginComponents'
 
 export function OAuthLoadingStep({

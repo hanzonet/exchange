@@ -2,7 +2,7 @@ import type { ChainBalance, MultichainBalance } from '@luxamm/client-data-api/di
 import {
   getPortfolioMultichainBalancesById,
   toPortfolioMultichainBalance,
-} from 'uniswap/src/features/dataApi/balances/toPortfolioMultichainBalance'
+} from 'lx/src/features/dataApi/balances/toPortfolioMultichainBalance'
 
 function createChainBalance(
   overrides: Partial<{

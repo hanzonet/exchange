@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { Flex, Loader, Text, TouchableArea, UniversalImage, useIsDarkMode } from 'ui/src'
 import { TimePast } from 'ui/src/components/icons/TimePast'
 import { borderRadii, iconSizes } from 'ui/src/theme'
-import { FORServiceProvider } from 'uniswap/src/features/fiatOnRamp/types'
-import { getOptionalServiceProviderLogo } from 'uniswap/src/features/fiatOnRamp/utils'
+import { FORServiceProvider } from 'lx/src/features/fiatOnRamp/types'
+import { getOptionalServiceProviderLogo } from 'lx/src/features/fiatOnRamp/utils'
 
 function LogoLoader(): JSX.Element {
   return <Loader.Box borderRadius="$roundedFull" height={iconSizes.icon32} width={iconSizes.icon32} />

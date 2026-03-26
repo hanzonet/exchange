@@ -1,14 +1,14 @@
 import type { DiscriminatedQuoteResponse } from '@luxexchange/api'
 import { TradingApi } from '@luxexchange/api'
-import { logSwapQuoteFetch } from 'uniswap/src/features/transactions/swap/analytics'
+import { logSwapQuoteFetch } from 'lx/src/features/transactions/swap/analytics'
 import {
   createTradeRepository,
   type TradeRepository,
-} from 'uniswap/src/features/transactions/swap/services/tradeService/tradeRepository'
+} from 'lx/src/features/transactions/swap/services/tradeService/tradeRepository'
 import type { Logger } from 'utilities/src/logger/logger'
 
 // Mock dependencies
-vi.mock('uniswap/src/features/transactions/swap/analytics')
+vi.mock('lx/src/features/transactions/swap/analytics')
 
 describe('TradeRepository', () => {
   // Minimal test params

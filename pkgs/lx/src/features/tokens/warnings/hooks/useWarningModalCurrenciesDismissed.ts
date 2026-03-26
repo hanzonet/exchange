@@ -1,7 +1,7 @@
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { getTokenProtectionWarning } from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { useDismissedTokenWarnings } from 'uniswap/src/features/tokens/warnings/slice/hooks'
-import { currencyIdToAddress } from 'uniswap/src/utils/currencyId'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { getTokenProtectionWarning } from 'lx/src/features/tokens/warnings/safetyUtils'
+import { useDismissedTokenWarnings } from 'lx/src/features/tokens/warnings/slice/hooks'
+import { currencyIdToAddress } from 'lx/src/utils/currencyId'
 
 // Handle if user has previously dismissed a warning for either token
 export function useWarningModalCurrenciesDismissed({

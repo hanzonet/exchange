@@ -1,4 +1,4 @@
-import { NotificationContentProps } from 'uniswap/src/components/notifications/NotificationToastContent'
+import { NotificationContentProps } from 'lx/src/components/notifications/NotificationToastContent'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export interface NotificationToastProps

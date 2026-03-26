@@ -1,6 +1,6 @@
 import React from 'react'
-import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
-import { useIsPortfolioZero } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useIsPortfolioZero'
+import { useLuxContext } from 'lx/src/contexts/LuxContext'
+import { useIsPortfolioZero } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useIsPortfolioZero'
 import { isWebApp } from 'utilities/src/platform'
 
 type StateContext = boolean

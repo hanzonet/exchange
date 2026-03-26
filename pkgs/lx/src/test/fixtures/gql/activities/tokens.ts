@@ -1,8 +1,8 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { amount } from 'uniswap/src/test/fixtures/gql/amounts'
-import { daiToken, ethToken } from 'uniswap/src/test/fixtures/gql/assets'
-import { faker } from 'uniswap/src/test/shared'
-import { createFixture, randomEnumValue } from 'uniswap/src/test/utils'
+import { amount } from 'lx/src/test/fixtures/gql/amounts'
+import { daiToken, ethToken } from 'lx/src/test/fixtures/gql/assets'
+import { faker } from 'lx/src/test/shared'
+import { createFixture, randomEnumValue } from 'lx/src/test/utils'
 
 /**
  * Base fixtures

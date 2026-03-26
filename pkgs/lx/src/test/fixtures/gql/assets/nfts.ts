@@ -1,7 +1,7 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { GQL_CHAINS, image } from 'uniswap/src/test/fixtures/gql/misc'
-import { faker } from 'uniswap/src/test/shared'
-import { createArray, createFixture, randomChoice } from 'uniswap/src/test/utils'
+import { GQL_CHAINS, image } from 'lx/src/test/fixtures/gql/misc'
+import { faker } from 'lx/src/test/shared'
+import { createArray, createFixture, randomChoice } from 'lx/src/test/utils'
 
 /**
  * Base fixtures

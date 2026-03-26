@@ -1,9 +1,9 @@
 import { GasEstimate } from '@luxexchange/api'
 import type { JupiterOrderUrlParams } from '@luxexchange/api/src/clients/jupiter/types'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { chainIdToPlatform } from 'uniswap/src/features/platforms/utils/chains'
-import { type ValidatedTradeInput } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { IndicativeTrade, Trade, type UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { chainIdToPlatform } from 'lx/src/features/platforms/utils/chains'
+import { type ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { IndicativeTrade, Trade, type UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 export interface TradeWithGasEstimates {
   quoteHash?: string
   trade: Trade | null

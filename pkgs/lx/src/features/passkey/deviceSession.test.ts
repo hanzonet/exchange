@@ -5,7 +5,7 @@ import {
   getDeviceSession,
   setDeviceSession,
   signWithDeviceKey,
-} from 'uniswap/src/features/passkey/deviceSession'
+} from 'lx/src/features/passkey/deviceSession'
 
 describe('deviceSession', () => {
   afterEach(() => {

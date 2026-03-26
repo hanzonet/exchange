@@ -8,22 +8,22 @@ import {
   TokenType,
 } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { TradingApi } from '@luxexchange/api'
-import { getNativeAddress, getWrappedNativeAddress } from 'uniswap/src/constants/addresses'
-import { DAI } from 'uniswap/src/constants/tokens'
+import { getNativeAddress, getWrappedNativeAddress } from 'lx/src/constants/addresses'
+import { DAI } from 'lx/src/constants/tokens'
 
-import extractRestOnChainTransactionDetails from 'uniswap/src/features/activity/extract/extractOnChainTransactionDetails'
-import { parseRestApproveTransaction } from 'uniswap/src/features/activity/parse/parseApproveTransaction'
-import { parseRestLiquidityTransaction } from 'uniswap/src/features/activity/parse/parseLiquidityTransaction'
-import { parseRestNFTMintTransaction } from 'uniswap/src/features/activity/parse/parseMintTransaction'
-import { parseRestReceiveTransaction } from 'uniswap/src/features/activity/parse/parseReceiveTransaction'
-import { parseRestSendTransaction } from 'uniswap/src/features/activity/parse/parseSendTransaction'
+import extractRestOnChainTransactionDetails from 'lx/src/features/activity/extract/extractOnChainTransactionDetails'
+import { parseRestApproveTransaction } from 'lx/src/features/activity/parse/parseApproveTransaction'
+import { parseRestLiquidityTransaction } from 'lx/src/features/activity/parse/parseLiquidityTransaction'
+import { parseRestNFTMintTransaction } from 'lx/src/features/activity/parse/parseMintTransaction'
+import { parseRestReceiveTransaction } from 'lx/src/features/activity/parse/parseReceiveTransaction'
+import { parseRestSendTransaction } from 'lx/src/features/activity/parse/parseSendTransaction'
 import {
   parseRestSwapTransaction,
   parseRestWithdrawTransaction,
   parseRestWrapTransaction,
-} from 'uniswap/src/features/activity/parse/parseTradeTransaction'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/activity/parse/parseTradeTransaction'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
 import {
   SAMPLE_SEED_ADDRESS_1,
   SAMPLE_SEED_ADDRESS_2,
@@ -31,7 +31,7 @@ import {
   SAMPLE_SEED_ADDRESS_4,
   SAMPLE_SEED_ADDRESS_5,
   SAMPLE_SEED_ADDRESS_6,
-} from 'uniswap/src/test/fixtures'
+} from 'lx/src/test/fixtures'
 
 /**
  * Testing for REST API transaction parsing utils.
@@ -152,7 +152,7 @@ const MOCK_ERC20_APPROVE: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap',
+    name: 'Lx',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -168,7 +168,7 @@ describe(parseRestApproveTransaction, () => {
       spender: TO_ADDRESS,
       approvalAmount: '1',
       dappInfo: {
-        name: 'Uniswap',
+        name: 'Lx',
         icon: 'https://logo.url',
       },
     })
@@ -580,8 +580,8 @@ describe(parseRestSwapTransaction, () => {
       inputCurrencyAmountRaw: '1000000000000000000',
       outputCurrencyAmountRaw: '1000000000000000000',
       dappInfo: {
-        name: 'Uniswap',
-        icon: 'https://protocol-icons.s3.amazonaws.com/icons/uniswap-v4.jpg',
+        name: 'Lx',
+        icon: 'https://protocol-icons.s3.amazonaws.com/icons/lx-v4.jpg',
       },
     })
   })
@@ -819,7 +819,7 @@ const MOCK_BRIDGE: OnChainTransaction = {
 } as unknown as OnChainTransaction
 
 // Import the parseRestBridgeTransaction function
-import { parseRestBridgeTransaction } from 'uniswap/src/features/activity/parse/parseBridgingTransaction'
+import { parseRestBridgeTransaction } from 'lx/src/features/activity/parse/parseBridgingTransaction'
 
 describe(parseRestBridgeTransaction, () => {
   it('Bridge: handle empty transfers', () => {
@@ -893,7 +893,7 @@ const MOCK_ONRAMP_TRANSFER = {
 } as unknown as FiatOnRampTransaction
 
 // Import the parseRestOnRampTransaction function
-import { parseRestOnRampTransaction } from 'uniswap/src/features/activity/parse/parseOnRampTransaction'
+import { parseRestOnRampTransaction } from 'lx/src/features/activity/parse/parseOnRampTransaction'
 
 describe(parseRestOnRampTransaction, () => {
   it('OnRamp: handle empty transaction', () => {
@@ -1072,7 +1072,7 @@ const MOCK_COLLECT_FEES: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap',
+    name: 'Lx',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -1172,7 +1172,7 @@ describe(parseRestLiquidityTransaction, () => {
       currency1AmountRaw: undefined,
       isSpam: false,
       dappInfo: {
-        name: 'Uniswap',
+        name: 'Lx',
         icon: 'https://logo.url',
       },
     })

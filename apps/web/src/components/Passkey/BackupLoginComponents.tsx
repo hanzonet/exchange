@@ -8,9 +8,9 @@ import { GoogleLogo } from '@luxfi/ui/src/components/icons/GoogleLogo'
 import { X } from '@luxfi/ui/src/components/icons/X'
 import { useSporeColors } from '@luxfi/ui/src/hooks/useSporeColors'
 import { SpinningLoader } from '@luxfi/ui/src/loading/SpinningLoader'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import Trace from 'uniswap/src/features/telemetry/Trace'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import Trace from 'lx/src/features/telemetry/Trace'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { AppleLogo } from '~/components/Icons/AppleLogo'
 
 export function useDigitInput({ length, onComplete }: { length: number; onComplete?: (code: string) => void }) {

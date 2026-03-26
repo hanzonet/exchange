@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
-import { useSelectAddressTransactions } from 'uniswap/src/features/transactions/selectors'
+import { useSelectAddressTransactions } from 'lx/src/features/transactions/selectors'
 import {
   TransactionDetails,
   TransactionStatus,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export function usePendingTransactions({
   evmAddress,

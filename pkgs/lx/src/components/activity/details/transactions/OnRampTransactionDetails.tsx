@@ -9,9 +9,9 @@ import {
   OnRampPurchaseInfo,
   OnRampTransferInfo,
   TransactionDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { NumberType } from 'utilities/src/format/types'
 
 export function OnRampTransactionDetails({

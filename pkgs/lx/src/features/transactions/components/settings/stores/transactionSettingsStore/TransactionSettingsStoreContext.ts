@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
-import { type TransactionSettingsAutoSlippageToleranceState } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsAutoSlippageToleranceStore'
-import { type TransactionSettingsStoreState } from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
+import { type TransactionSettingsAutoSlippageToleranceState } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsAutoSlippageToleranceStore'
+import { type TransactionSettingsStoreState } from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/createTransactionSettingsStore'
 import type { StoreApi } from 'zustand/vanilla'
 
 export interface TransactionSettingsStoreContextValue {

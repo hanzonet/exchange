@@ -1,16 +1,16 @@
 import { useMemo } from 'react'
-import { TransactionSummaryLayout } from 'uniswap/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'uniswap/src/components/activity/utils'
-import { LogoWithTxStatus } from 'uniswap/src/components/CurrencyLogo/LogoWithTxStatus'
-import { AssetType } from 'uniswap/src/entities/assets'
+import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
+import { LogoWithTxStatus } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { AssetType } from 'lx/src/entities/assets'
 import {
   NFTApproveTransactionInfo,
   NFTMintTransactionInfo,
   NFTTradeTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export function NFTSummaryItem({
   transaction,

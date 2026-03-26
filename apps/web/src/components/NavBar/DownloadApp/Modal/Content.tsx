@@ -4,7 +4,7 @@ import { Flex, FlexProps, Image, ModalCloseIcon, Text, TouchableArea } from '@lu
 import { LUX_LOGO } from '@luxfi/ui/src/assets'
 import { BackArrow } from '@luxfi/ui/src/components/icons/BackArrow'
 import { iconSizes } from '@luxfi/ui/src/theme'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { ExternalLink } from '~/theme/components/Links'
 
 export function ModalContent({

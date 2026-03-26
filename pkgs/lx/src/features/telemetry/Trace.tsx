@@ -1,8 +1,8 @@
 import { memo, PropsWithChildren } from 'react'
-import { ElementName, InterfacePageName, ModalNameType, SectionName } from 'uniswap/src/features/telemetry/constants'
-import { UniverseEventProperties } from 'uniswap/src/features/telemetry/types'
-import { ExtensionScreen } from 'uniswap/src/types/screens/extension'
-import { MobileAppScreen } from 'uniswap/src/types/screens/mobile'
+import { ElementName, InterfacePageName, ModalNameType, SectionName } from 'lx/src/features/telemetry/constants'
+import { UniverseEventProperties } from 'lx/src/features/telemetry/types'
+import { ExtensionScreen } from 'lx/src/types/screens/extension'
+import { MobileAppScreen } from 'lx/src/types/screens/mobile'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
 import { TraceProps, Trace as UntypedTrace } from 'utilities/src/telemetry/trace/Trace'
 

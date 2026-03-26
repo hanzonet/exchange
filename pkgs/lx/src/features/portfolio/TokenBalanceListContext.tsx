@@ -11,16 +11,16 @@ import {
   useRef,
   useState,
 } from 'react'
-import { PollingInterval } from 'uniswap/src/constants/misc'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { PollingInterval } from 'lx/src/constants/misc'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import {
   sortPortfolioBalances,
   usePortfolioBalances,
   useTokenBalancesGroupedByVisibility,
-} from 'uniswap/src/features/dataApi/balances/balances'
-import { PortfolioBalance } from 'uniswap/src/features/dataApi/types'
-import { HIDDEN_TOKEN_BALANCES_ROW, TokenBalanceListRow } from 'uniswap/src/features/portfolio/types'
-import { CurrencyId } from 'uniswap/src/types/currency'
+} from 'lx/src/features/dataApi/balances/balances'
+import { PortfolioBalance } from 'lx/src/features/dataApi/types'
+import { HIDDEN_TOKEN_BALANCES_ROW, TokenBalanceListRow } from 'lx/src/features/portfolio/types'
+import { CurrencyId } from 'lx/src/types/currency'
 
 type TokenBalanceListContextState = {
   balancesById: Record<string, PortfolioBalance> | undefined

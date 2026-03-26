@@ -1,6 +1,6 @@
 import { CurrencyAmount } from '@luxamm/sdk-core'
-import { DAI } from 'uniswap/src/constants/tokens'
-import { getCurrencyAmount, ValueType } from 'uniswap/src/features/tokens/getCurrencyAmount'
+import { DAI } from 'lx/src/constants/tokens'
+import { getCurrencyAmount, ValueType } from 'lx/src/features/tokens/getCurrencyAmount'
 import { noOpFunction } from 'utilities/src/test/utils'
 
 const ZERO_DAI = CurrencyAmount.fromRawAmount(DAI, '0')

@@ -2,8 +2,8 @@ import {
   SerializedTokenMap,
   TokenDismissInfo,
   TokenWarningDismissal,
-} from 'uniswap/src/features/tokens/warnings/slice/types'
-import { LxState } from 'uniswap/src/state/lxReducer'
+} from 'lx/src/features/tokens/warnings/slice/types'
+import { LxState } from 'lx/src/state/lxReducer'
 
 // selectors
 

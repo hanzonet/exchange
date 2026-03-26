@@ -1,9 +1,9 @@
 // This test expects the invalid image URLs to fail to load, so
 // we silence the error logs to keep the test output clean.
 import 'utilities/src/logger/mocks'
-import { TokenLogo } from 'uniswap/src/components/CurrencyLogo/TokenLogo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { render } from 'uniswap/src/test/test-utils'
+import { TokenLogo } from 'lx/src/components/CurrencyLogo/TokenLogo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { render } from 'lx/src/test/test-utils'
 
 vi.mock('ui/src/components/UniversalImage/internal/PlainImage', async (importOriginal) => {
   const actual = await importOriginal<typeof import('ui/src/components/UniversalImage/internal/PlainImage.web')>()
@@ -79,7 +79,7 @@ describe('TokenLogo', () => {
         <TokenLogo
           chainId={UniverseChainId.ArbitrumOne}
           symbol="DAI"
-          url="https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+          url="https://raw.githubusercontent.com/Lx/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
         />,
       )
 

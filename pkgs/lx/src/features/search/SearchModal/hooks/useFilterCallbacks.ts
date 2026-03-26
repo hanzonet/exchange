@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { ModalNameType, LxEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { parseChainFromTokenSearchQuery } from 'uniswap/src/utils/search/parseChainFromTokenSearchQuery'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { ModalNameType, LxEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { parseChainFromTokenSearchQuery } from 'lx/src/utils/search/parseChainFromTokenSearchQuery'
 
 export function useFilterCallbacks(
   chainId: UniverseChainId | null,

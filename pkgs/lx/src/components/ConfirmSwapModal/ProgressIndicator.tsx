@@ -6,18 +6,18 @@ import { zIndexes } from 'ui/src/theme'
 import {
   TokenApprovalTransactionStepRow,
   TokenRevocationTransactionStepRow,
-} from 'uniswap/src/components/ConfirmSwapModal/steps/Approve'
-import { LPTransactionStepRow } from 'uniswap/src/components/ConfirmSwapModal/steps/LP'
+} from 'lx/src/components/ConfirmSwapModal/steps/Approve'
+import { LPTransactionStepRow } from 'lx/src/components/ConfirmSwapModal/steps/LP'
 import {
   Permit2SignatureStepRow,
   Permit2TransactionStepRow,
-} from 'uniswap/src/components/ConfirmSwapModal/steps/Permit'
-import { STEP_ROW_HEIGHT, STEP_ROW_ICON_SIZE } from 'uniswap/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
-import { SwapTransactionStepRow } from 'uniswap/src/components/ConfirmSwapModal/steps/Swap'
-import { SwapSteps, SwapTransactionPlanStepRow } from 'uniswap/src/components/ConfirmSwapModal/steps/SwapTXPlanStepRow'
-import { WrapTransactionStepRow } from 'uniswap/src/components/ConfirmSwapModal/steps/Wrap'
-import { StepStatus } from 'uniswap/src/components/ConfirmSwapModal/types'
-import { TransactionStep, TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
+} from 'lx/src/components/ConfirmSwapModal/steps/Permit'
+import { STEP_ROW_HEIGHT, STEP_ROW_ICON_SIZE } from 'lx/src/components/ConfirmSwapModal/steps/StepRowSkeleton'
+import { SwapTransactionStepRow } from 'lx/src/components/ConfirmSwapModal/steps/Swap'
+import { SwapSteps, SwapTransactionPlanStepRow } from 'lx/src/components/ConfirmSwapModal/steps/SwapTXPlanStepRow'
+import { WrapTransactionStepRow } from 'lx/src/components/ConfirmSwapModal/steps/Wrap'
+import { StepStatus } from 'lx/src/components/ConfirmSwapModal/types'
+import { TransactionStep, TransactionStepType } from 'lx/src/features/transactions/steps/types'
 
 interface ProgressIndicatorProps {
   steps: TransactionStep[]

@@ -2,7 +2,7 @@ import type {
   ChainDelegatedResults,
   DelegatedResult,
   DelegationRepository,
-} from 'uniswap/src/features/smartWallet/delegation/delegationRepository'
+} from 'lx/src/features/smartWallet/delegation/delegationRepository'
 import type { Logger } from 'utilities/src/logger/logger'
 
 export type Address = string
@@ -58,7 +58,7 @@ export function createDelegationService(ctx: {
           'getAddressDelegations',
           `Address ${input.address} is delegated on chain ${chainId}`,
           {
-            isWalletDelegatedToUniswap: delegationInfo.isWalletDelegatedToUniswap,
+            isWalletDelegatedToLx: delegationInfo.isWalletDelegatedToLx,
             latestDelegationAddress: delegationInfo.latestDelegationAddress,
           },
         )

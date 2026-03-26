@@ -1,4 +1,4 @@
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 export const useIsAmountSelectionInvalid = (): boolean => {
   const { exactAmountToken, exactAmountFiat } = useSwapFormStore((s) => ({

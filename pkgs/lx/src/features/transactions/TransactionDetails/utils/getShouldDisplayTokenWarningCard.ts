@@ -1,14 +1,14 @@
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { getIsFeeRelatedWarning } from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'uniswap/src/features/tokens/warnings/types'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { getIsFeeRelatedWarning } from 'lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
 import {
   FeeOnTransferFeeGroupProps,
   FoTFeeType,
   TokenFeeInfo,
   TokenWarningProps,
-} from 'uniswap/src/features/transactions/TransactionDetails/types'
-import { getHighestFeeSeverity } from 'uniswap/src/features/transactions/TransactionDetails/utils/getFeeSeverity'
+} from 'lx/src/features/transactions/TransactionDetails/types'
+import { getHighestFeeSeverity } from 'lx/src/features/transactions/TransactionDetails/utils/getFeeSeverity'
 
 export function getShouldDisplayTokenWarningCard({
   feeOnTransferProps,

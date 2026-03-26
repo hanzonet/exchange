@@ -1,6 +1,6 @@
 import { createConnectTransportWithDefaults } from '@luxexchange/api'
-import { config } from 'uniswap/src/config'
-import { lxUrls } from 'uniswap/src/constants/urls'
+import { config } from 'lx/src/config'
+import { lxUrls } from 'lx/src/constants/urls'
 
 export const liquidityServiceTransport = createConnectTransportWithDefaults(
   {

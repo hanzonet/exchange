@@ -5,7 +5,7 @@ import type {
   AccountsGetters,
   AccountsState,
   AccountsStore,
-} from 'uniswap/src/features/accounts/store/types/AccountsState'
+} from 'lx/src/features/accounts/store/types/AccountsState'
 import { isDevEnv } from 'utilities/src/environment/env'
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'

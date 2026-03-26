@@ -2,23 +2,23 @@ import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ElementAfterText } from 'ui/src'
 import { Unitag } from 'ui/src/components/icons/Unitag'
-import { TransactionSummaryLayout } from 'uniswap/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'uniswap/src/components/activity/utils'
-import { LogoWithTxStatus } from 'uniswap/src/components/CurrencyLogo/LogoWithTxStatus'
-import { useUnitagsAddressQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
-import { AssetType } from 'uniswap/src/entities/assets'
-import { useENS } from 'uniswap/src/features/ens/useENS'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
+import { LogoWithTxStatus } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { useUnitagsAddressQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsAddressQuery'
+import { AssetType } from 'lx/src/entities/assets'
+import { useENS } from 'lx/src/features/ens/useENS'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import {
   ReceiveTokenTransactionInfo,
   SendTokenTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount, getSymbolDisplayText } from 'uniswap/src/utils/currency'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount, getSymbolDisplayText } from 'lx/src/utils/currency'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { shortenAddress } from 'utilities/src/addresses'
 
 function _TransferTokenSummaryItem({

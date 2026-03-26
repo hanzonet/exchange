@@ -1,9 +1,9 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
 import { NumberType } from 'utilities/src/format/types'
 
 interface FormattedDisplayAmountsProps {

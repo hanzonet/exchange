@@ -1,10 +1,10 @@
 import { GraphQLApi, TradingApi } from '@luxexchange/api'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   TransactionDetails,
   TransactionStatus,
   LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Converts a trading API OrderType to internal Routing type.

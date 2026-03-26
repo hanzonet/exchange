@@ -22,8 +22,8 @@ import {
   WidgetUrlResponse,
 } from '@luxexchange/api'
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
-import { config } from 'uniswap/src/config'
-import { ForApiClient } from 'uniswap/src/data/apiClients/forApi/ForApiClient'
+import { config } from 'lx/src/config'
+import { ForApiClient } from 'lx/src/data/apiClients/forApi/ForApiClient'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { ONE_HOUR_MS, ONE_MINUTE_MS } from 'utilities/src/time/time'
 

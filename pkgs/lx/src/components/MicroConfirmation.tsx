@@ -1,4 +1,4 @@
-import { InfoTooltip } from 'uniswap/src/components/tooltip/InfoTooltip'
+import { InfoTooltip } from 'lx/src/components/tooltip/InfoTooltip'
 import { isWebApp } from 'utilities/src/platform'
 
 type MicroConfirmationProps = {

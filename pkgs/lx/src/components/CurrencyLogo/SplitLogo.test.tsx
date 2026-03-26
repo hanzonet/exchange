@@ -1,7 +1,7 @@
-import { SplitLogo } from 'uniswap/src/components/CurrencyLogo/SplitLogo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { DAI_CURRENCY_INFO, daiCurrencyInfo, ETH_CURRENCY_INFO, ethCurrencyInfo } from 'uniswap/src/test/fixtures'
-import { render, within } from 'uniswap/src/test/test-utils'
+import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { DAI_CURRENCY_INFO, daiCurrencyInfo, ETH_CURRENCY_INFO, ethCurrencyInfo } from 'lx/src/test/fixtures'
+import { render, within } from 'lx/src/test/test-utils'
 
 vi.mock('ui/src/components/UniversalImage/internal/PlainImage', async (importOriginal) => {
   const actual = await importOriginal<typeof import('ui/src/components/UniversalImage/internal/PlainImage.web')>()

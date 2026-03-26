@@ -1,6 +1,6 @@
 import { Flex } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
-import { AddressDisplay } from 'uniswap/src/components/accounts/AddressDisplay'
+import { AddressDisplay } from 'lx/src/components/accounts/AddressDisplay'
 
 export function TransactionParticipantDisplay({ address }: { address: string }): JSX.Element {
   return (

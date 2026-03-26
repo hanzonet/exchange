@@ -48,22 +48,22 @@ import {
   getOptionalServiceProviderLogo,
   isSupportedFORCurrency,
   organizeQuotesIntoSections,
-} from 'uniswap/src/features/fiatOnRamp/utils'
-import { pushNotification } from 'uniswap/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { FiatOffRampEventName, FiatOnRampEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { type FORAmountEnteredProperties } from 'uniswap/src/features/telemetry/types'
+} from 'lx/src/features/fiatOnRamp/utils'
+import { pushNotification } from 'lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
+import { FiatOffRampEventName, FiatOnRampEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { type FORAmountEnteredProperties } from 'lx/src/features/telemetry/types'
 import {
   DecimalPadCalculatedSpaceId,
   DecimalPadCalculateSpace,
   DecimalPadInput,
   type DecimalPadInputRef,
-} from 'uniswap/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
-import { useUSDTokenUpdater } from 'uniswap/src/features/transactions/hooks/useUSDTokenUpdater'
-import { CurrencyField } from 'uniswap/src/types/currency'
-import { FiatOnRampScreens } from 'uniswap/src/types/screens/mobile'
-import { currencyIdToAddress } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
+import { useUSDTokenUpdater } from 'lx/src/features/transactions/hooks/useUSDTokenUpdater'
+import { CurrencyField } from 'lx/src/types/currency'
+import { FiatOnRampScreens } from 'lx/src/types/screens/mobile'
+import { currencyIdToAddress } from 'lx/src/utils/currencyId'
 import { truncateToMaxDecimals } from '@luxfi/utilities/src/format/truncateToMaxDecimals'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { isIOS, isWebPlatform } from '@luxfi/utilities/src/platform'

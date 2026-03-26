@@ -1,10 +1,10 @@
 import { listTransactions } from '@luxamm/client-data-api/dist/data/v1/api-DataApiService_connectquery'
 import { WETH9 } from '@luxamm/sdk-core'
-import { ZERO_ADDRESS } from 'uniswap/src/constants/misc'
-import { DAI, USDC_MAINNET } from 'uniswap/src/constants/tokens'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { ZERO_ADDRESS } from 'lx/src/constants/misc'
+import { DAI, USDC_MAINNET } from 'lx/src/constants/tokens'
+import { lxUrls } from 'lx/src/constants/urls'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { parseEther } from 'viem'
 import { expect, getTest } from '~/playwright/fixtures'
 import { TEST_WALLET_ADDRESS } from '~/playwright/fixtures/wallets'
@@ -13,7 +13,7 @@ import { assume0xAddress } from '~/utils/wagmi'
 
 const test = getTest({ withAnvil: true })
 
-const LX_SWAP_ORDERS_ENDPOINT = `https://interface.gateway.uniswap.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
+const LX_SWAP_ORDERS_ENDPOINT = `https://interface.gateway.lx.org/v2/orders?swapper=${TEST_WALLET_ADDRESS}&orderHashes=${ZERO_ADDRESS}`
 
 test.describe(
   'LX',

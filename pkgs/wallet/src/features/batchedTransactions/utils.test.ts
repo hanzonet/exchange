@@ -1,5 +1,5 @@
 import { TradingApi } from '@luxexchange/api'
-import { EthTransaction } from 'uniswap/src/types/walletConnect'
+import { EthTransaction } from 'lx/src/types/walletConnect'
 import { generateBatchId, transformCallsToTransactionRequests } from '@luxfi/wallet/src/features/batchedTransactions/utils'
 
 describe(generateBatchId, () => {

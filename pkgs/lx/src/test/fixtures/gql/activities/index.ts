@@ -1,14 +1,14 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { STALE_TRANSACTION_TIME_MS } from 'uniswap/src/features/notifications/constants'
+import { STALE_TRANSACTION_TIME_MS } from 'lx/src/features/notifications/constants'
 import {
   erc20ApproveAssetChange,
   erc20TokenTransferOut,
   erc20TransferIn,
-} from 'uniswap/src/test/fixtures/gql/activities/tokens'
-import { GQL_CHAINS } from 'uniswap/src/test/fixtures/gql/misc'
-import { gqlTransaction, gqlTransactionDetails } from 'uniswap/src/test/fixtures/gql/transactions'
-import { faker, MAX_FIXTURE_TIMESTAMP } from 'uniswap/src/test/shared'
-import { createFixture, randomChoice, randomEnumValue } from 'uniswap/src/test/utils'
+} from 'lx/src/test/fixtures/gql/activities/tokens'
+import { GQL_CHAINS } from 'lx/src/test/fixtures/gql/misc'
+import { gqlTransaction, gqlTransactionDetails } from 'lx/src/test/fixtures/gql/transactions'
+import { faker, MAX_FIXTURE_TIMESTAMP } from 'lx/src/test/shared'
+import { createFixture, randomChoice, randomEnumValue } from 'lx/src/test/utils'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 
 export * from './nfts'

@@ -6,30 +6,30 @@ import { Balance } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { PortfolioValueModifier as RestPortfolioValueModifier } from '@luxamm/client-data-api/dist/data/v1/types_pb.d'
 import { Currency } from '@luxamm/sdk-core'
 import { useMemo } from 'react'
-import { PollingInterval } from 'uniswap/src/constants/misc'
-import { normalizeTokenAddressForCache } from 'uniswap/src/data/cache'
-import { GetPortfolioInput, getPortfolioQuery, useGetPortfolioQuery } from 'uniswap/src/data/rest/getPortfolio'
+import { PollingInterval } from 'lx/src/constants/misc'
+import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
+import { GetPortfolioInput, getPortfolioQuery, useGetPortfolioQuery } from 'lx/src/data/rest/getPortfolio'
 import {
   shouldTransformToMultichain,
   transformPortfolioToMultichain,
-} from 'uniswap/src/data/rest/transformPortfolioToMultichain'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+} from 'lx/src/data/rest/transformPortfolioToMultichain'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import {
   buildPortfolioBalance,
   PortfolioCacheUpdater,
   PortfolioTotalValueResult,
-} from 'uniswap/src/features/dataApi/balances/balances'
-import { getPortfolioMultichainBalancesById } from 'uniswap/src/features/dataApi/balances/toPortfolioMultichainBalance'
-import { mapRestStatusToNetworkStatus, matchesCurrency } from 'uniswap/src/features/dataApi/balances/utils'
+} from 'lx/src/features/dataApi/balances/balances'
+import { getPortfolioMultichainBalancesById } from 'lx/src/features/dataApi/balances/toPortfolioMultichainBalance'
+import { mapRestStatusToNetworkStatus, matchesCurrency } from 'lx/src/features/dataApi/balances/utils'
 import {
   BaseResult,
   PortfolioBalance,
   PortfolioMultichainBalance,
   RestContract,
-} from 'uniswap/src/features/dataApi/types'
-import { buildCurrency, buildCurrencyInfo } from 'uniswap/src/features/dataApi/utils/buildCurrency'
-import { currencyIdToRestContractInput } from 'uniswap/src/features/dataApi/utils/currencyIdToContractInput'
+} from 'lx/src/features/dataApi/types'
+import { buildCurrency, buildCurrencyInfo } from 'lx/src/features/dataApi/utils/buildCurrency'
+import { currencyIdToRestContractInput } from 'lx/src/features/dataApi/utils/currencyIdToContractInput'
 import {
   getRestCurrencySafetyInfo,
   getRestTokenSafetyInfo,

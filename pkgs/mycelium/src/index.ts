@@ -1,4 +1,4 @@
-// Mycelium - Uniswap's Tailwind Design System
+// Mycelium - Lx's Tailwind Design System
 // Main JS exports
 
 export { cn } from './cn'

@@ -1,30 +1,30 @@
 import type { MutableRefObject, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { TextInputProps } from 'react-native'
-import type { CurrencyInputPanelRef } from 'uniswap/src/components/CurrencyInputPanel/types'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { usePrefetchSwappableTokens } from 'uniswap/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
-import { getTokenWarningSeverity } from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import type { DecimalPadInputRef } from 'uniswap/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
+import type { CurrencyInputPanelRef } from 'lx/src/components/CurrencyInputPanel/types'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { usePrefetchSwappableTokens } from 'lx/src/data/apiClients/tradingApi/useTradingApiSwappableTokensQuery'
+import { getTokenWarningSeverity } from 'lx/src/features/tokens/warnings/safetyUtils'
+import type { DecimalPadInputRef } from 'lx/src/features/transactions/components/DecimalPadInput/DecimalPadInput'
 import {
   TransactionScreen,
   useTransactionModalContext,
-} from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { useDecimalPadControlledField } from 'uniswap/src/features/transactions/swap/form/hooks/useDecimalPadControlledField'
-import { useSyncFiatAndTokenAmountUpdater } from 'uniswap/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
-import { createSwapFormScreenStore } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/createSwapFormScreenStore'
-import { useSwapNetworkChangeEffect } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
-import { useTemporaryExactOutputUnavailableWarning } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useTemporaryExactOutputUnavailableWarning'
-import { useUpdateSwapFormOnMountIfExactOutputWillFail } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useUpdateSwapFormOnMountIfExactOutputWillFail'
-import { SwapFormScreenStoreContext } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/SwapFormScreenStoreContext'
-import { useSwapFormScreenCallbacks } from 'uniswap/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
+} from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { useDecimalPadControlledField } from 'lx/src/features/transactions/swap/form/hooks/useDecimalPadControlledField'
+import { useSyncFiatAndTokenAmountUpdater } from 'lx/src/features/transactions/swap/form/hooks/useSyncFiatAndTokenAmountUpdater'
+import { createSwapFormScreenStore } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/createSwapFormScreenStore'
+import { useSwapNetworkChangeEffect } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useSwapNetworkChangeEffect'
+import { useTemporaryExactOutputUnavailableWarning } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useTemporaryExactOutputUnavailableWarning'
+import { useUpdateSwapFormOnMountIfExactOutputWillFail } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/hooks/useUpdateSwapFormOnMountIfExactOutputWillFail'
+import { SwapFormScreenStoreContext } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/SwapFormScreenStoreContext'
+import { useSwapFormScreenCallbacks } from 'lx/src/features/transactions/swap/form/stores/swapFormScreenStore/useSwapFormScreenCallbacks'
 
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import { getExactOutputWillFail } from 'uniswap/src/features/transactions/swap/utils/getExactOutputWillFail'
-import { CurrencyField } from 'uniswap/src/types/currency'
+} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { getExactOutputWillFail } from 'lx/src/features/transactions/swap/utils/getExactOutputWillFail'
+import { CurrencyField } from 'lx/src/types/currency'
 // biome-ignore lint/style/noRestrictedImports: legacy import will be migrated
 import { formatCurrencyAmount } from 'utilities/src/format/localeBased'
 import { NumberType } from 'utilities/src/format/types'

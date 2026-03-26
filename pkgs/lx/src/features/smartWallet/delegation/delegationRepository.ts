@@ -15,7 +15,7 @@ export type DelegatedResult =
 export type ChainDelegatedResults = Record<string, DelegatedResult>
 export type DelegationDetails = {
   currentDelegationAddress: string | null
-  isWalletDelegatedToUniswap: boolean
+  isWalletDelegatedToLx: boolean
   latestDelegationAddress: string
 } | null
 export type ChainDelegationDetails = Record<string, DelegationDetails>

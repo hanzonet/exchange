@@ -2,7 +2,7 @@ import {
   Content,
   Metadata,
   Notification,
-} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
 import { ContentStyle } from '@luxexchange/api'
 import { type MobileState } from 'src/app/mobileReducer'
 import {

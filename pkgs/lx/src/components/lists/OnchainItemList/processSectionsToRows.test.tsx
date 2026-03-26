@@ -1,13 +1,13 @@
 import { Token } from '@luxamm/sdk-core'
-import { OnchainItemListOptionType, type TokenOption } from 'uniswap/src/components/lists/items/types'
+import { OnchainItemListOptionType, type TokenOption } from 'lx/src/components/lists/items/types'
 import {
   ProcessedRow,
   ProcessedRowType,
   processSectionsToRows,
-} from 'uniswap/src/components/lists/OnchainItemList/processSectionsToRows'
-import { type OnchainItemSection, OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'
-import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { benignSafetyInfo } from 'uniswap/src/test/fixtures'
+} from 'lx/src/components/lists/OnchainItemList/processSectionsToRows'
+import { type OnchainItemSection, OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
+import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { benignSafetyInfo } from 'lx/src/test/fixtures'
 
 describe('processSectionsToRows', () => {
   const mockToken = new Token(

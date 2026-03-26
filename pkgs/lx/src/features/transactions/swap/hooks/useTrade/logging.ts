@@ -1,14 +1,14 @@
 import { TradeType } from '@luxamm/sdk-core'
 import { FetchError } from '@luxexchange/api'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { SwapEventName } from 'uniswap/src/features/telemetry/constants/features'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { UniverseEventProperties } from 'uniswap/src/features/telemetry/types'
-import { TradeService } from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import { BlockingTradeError } from 'uniswap/src/features/transactions/swap/types/BlockingTradeError'
-import { Trade, UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
-import { TransactionOriginType } from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getCurrencyAddressForAnalytics } from 'uniswap/src/utils/currencyId'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { SwapEventName } from 'lx/src/features/telemetry/constants/features'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { UniverseEventProperties } from 'lx/src/features/telemetry/types'
+import { TradeService } from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { BlockingTradeError } from 'lx/src/features/transactions/swap/types/BlockingTradeError'
+import { Trade, UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
+import { TransactionOriginType } from 'lx/src/features/transactions/types/transactionDetails'
+import { getCurrencyAddressForAnalytics } from 'lx/src/utils/currencyId'
 import { tryCatch } from 'utilities/src/errors'
 import { getLogger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
@@ -97,7 +97,7 @@ function logSwapQuoteFailure(params: { error: Error; input: UseTradeArgs }): voi
 
   getLogger().error(error, {
     tags: {
-      file: 'packages/uniswap/src/features/transactions/swap/hooks/useTrade/logging.ts',
+      file: 'packages/lx/src/features/transactions/swap/hooks/useTrade/logging.ts',
       function: 'logSwapQuoteFailure',
     },
     extra: { ...input },
@@ -107,7 +107,7 @@ function logSwapQuoteFailure(params: { error: Error; input: UseTradeArgs }): voi
 function logBlockingTradeError(params: { blockingError: BlockingTradeError }): void {
   getLogger().error(params.blockingError, {
     tags: {
-      file: 'packages/uniswap/src/features/transactions/swap/hooks/useTrade/logging.ts',
+      file: 'packages/lx/src/features/transactions/swap/hooks/useTrade/logging.ts',
       function: 'logBlockingTradeError',
     },
     extra: { ...params.blockingError },

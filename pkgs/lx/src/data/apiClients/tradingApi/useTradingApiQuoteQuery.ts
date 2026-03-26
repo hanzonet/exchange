@@ -1,8 +1,8 @@
 import { queryOptions, type UseQueryOptions } from '@tanstack/react-query'
 import { type DiscriminatedQuoteResponse, type TradingApi } from '@luxexchange/api'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { type TradeRepository } from 'uniswap/src/features/transactions/swap/services/tradeService/tradeRepository'
-import { type QuoteWithTradeAndGasEstimate } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/transformQuoteToTrade'
+import { lxUrls } from 'lx/src/constants/urls'
+import { type TradeRepository } from 'lx/src/features/transactions/swap/services/tradeService/tradeRepository'
+import { type QuoteWithTradeAndGasEstimate } from 'lx/src/features/transactions/swap/services/tradeService/transformations/transformQuoteToTrade'
 import { type Logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 

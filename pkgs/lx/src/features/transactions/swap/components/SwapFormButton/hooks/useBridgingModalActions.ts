@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { OnReviewPress } from 'uniswap/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
+import { OnReviewPress } from 'lx/src/features/transactions/swap/components/SwapFormButton/hooks/useOnReviewPress'
 
 export const useBridgingModalActions = ({
   handleHideBridgingWarningModal,

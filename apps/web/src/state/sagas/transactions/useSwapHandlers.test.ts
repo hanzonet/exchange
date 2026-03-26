@@ -1,8 +1,8 @@
 import { FeeType, TradingApi } from '@luxexchange/api'
-import { AccountType } from 'uniswap/src/features/accounts/types'
-import { DEFAULT_GAS_STRATEGY } from 'uniswap/src/features/gas/consts'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { ExecuteSwapParams } from 'uniswap/src/features/transactions/swap/types/swapHandlers'
+import { AccountType } from 'lx/src/features/accounts/types'
+import { DEFAULT_GAS_STRATEGY } from 'lx/src/features/gas/consts'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { ExecuteSwapParams } from 'lx/src/features/transactions/swap/types/swapHandlers'
 import {
   ValidatedClassicSwapTxAndGasInfo,
   ValidatedSwapTxContext,
