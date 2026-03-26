@@ -22,7 +22,7 @@ export function useMiniPoolsTableData({ account, maxPools = 5, chainId }: UseMin
   const { chains } = useEnabledChains()
   const isPositionVisible = usePositionVisibilityCheck()
 
-  // Positions are EVM-only (Uniswap V2/V3/V4), so skip if no EVM address
+  // Positions are EVM-only (LX V2/V3/V4), so skip if no EVM address
   const skipQuery = !account
 
   const { data, isLoading, refetch } = useGetPositionsQuery(

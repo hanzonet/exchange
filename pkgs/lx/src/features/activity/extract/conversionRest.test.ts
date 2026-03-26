@@ -979,7 +979,7 @@ const MOCK_LIQUIDITY_INCREASE: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap V3',
+    name: 'LX V3',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -1014,7 +1014,7 @@ const MOCK_LIQUIDITY_DECREASE: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap V3',
+    name: 'LX V3',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -1049,7 +1049,7 @@ const MOCK_CREATE_POOL: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap V3',
+    name: 'LX V3',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -1107,7 +1107,7 @@ const MOCK_COLLECT_FEES_TWO_TOKENS: OnChainTransaction = {
     },
   ],
   protocol: {
-    name: 'Uniswap V3',
+    name: 'LX V3',
     logoUrl: 'https://logo.url',
   },
 } as OnChainTransaction
@@ -1127,7 +1127,7 @@ describe(parseRestLiquidityTransaction, () => {
       currency1AmountRaw: '500000000000000000',
       isSpam: false,
       dappInfo: {
-        name: 'Uniswap V3',
+        name: 'LX V3',
         icon: 'https://logo.url',
       },
     })
@@ -1142,7 +1142,7 @@ describe(parseRestLiquidityTransaction, () => {
       currency1AmountRaw: '400000000000000000',
       isSpam: false,
       dappInfo: {
-        name: 'Uniswap V3',
+        name: 'LX V3',
         icon: 'https://logo.url',
       },
     })
@@ -1157,7 +1157,7 @@ describe(parseRestLiquidityTransaction, () => {
       currency1AmountRaw: '1000000000000000000',
       isSpam: false,
       dappInfo: {
-        name: 'Uniswap V3',
+        name: 'LX V3',
         icon: 'https://logo.url',
       },
     })
@@ -1187,7 +1187,7 @@ describe(parseRestLiquidityTransaction, () => {
       currency1AmountRaw: '150000000000000000',
       isSpam: false,
       dappInfo: {
-        name: 'Uniswap V3',
+        name: 'LX V3',
         icon: 'https://logo.url',
       },
     })
