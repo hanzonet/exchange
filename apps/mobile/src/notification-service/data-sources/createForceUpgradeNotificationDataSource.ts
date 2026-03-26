@@ -5,7 +5,7 @@ import {
   Notification,
   NotificationVersion,
   OnClick,
-} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { DynamicConfigs, ForceUpgradeConfigKey, type ForceUpgradeStatus, getDynamicConfigValue } from '@luxexchange/gating'
 import { createIntervalNotificationDataSource, type NotificationDataSource } from '@luxexchange/notifications'
