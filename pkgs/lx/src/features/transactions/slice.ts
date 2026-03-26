@@ -1,10 +1,10 @@
 /* biome-ignore-all lint/style/noNonNullAssertion: helpful when dealing with deeply nested state objects */
 import { createAction, createSlice, Draft, PayloadAction } from '@reduxjs/toolkit'
 import { providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { FORTransactionDetails } from 'uniswap/src/features/fiatOnRamp/types'
-import { CancelableStepInfo } from 'uniswap/src/features/transactions/hooks/useIsCancelable'
-import { isLxSwap } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { FORTransactionDetails } from 'lx/src/features/fiatOnRamp/types'
+import { CancelableStepInfo } from 'lx/src/features/transactions/hooks/useIsCancelable'
+import { isLxSwap } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   BridgeTransactionInfo,
   ChainIdToTxIdToDetails,
@@ -16,12 +16,12 @@ import {
   TransactionType,
   TransactionTypeInfo,
   type LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 import {
   getInterfaceTransaction,
   getWalletTransaction,
   isBridgeTypeInfo,
-} from 'uniswap/src/features/transactions/types/utils'
+} from 'lx/src/features/transactions/types/utils'
 import { assert } from 'utilities/src/errors'
 
 export type TransactionsState = Partial<Record<Address, ChainIdToTxIdToDetails>>
@@ -335,7 +335,7 @@ const slice = createSlice({
   },
 })
 
-// This action is fired, when user has come back from Moonpay flow using Return to Uniswap button
+// This action is fired, when user has come back from Moonpay flow using Return to Lx button
 export const forceFetchFiatOnRampTransactions = createAction('transactions/forceFetchFiatOnRampTransactions')
 
 // Action to cancel a LX order that only exists in the remote activity feed (not in local Redux state).

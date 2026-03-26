@@ -1,5 +1,5 @@
-import { NavigateToNftItemArgs } from 'uniswap/src/contexts/LuxContext'
-import { getNftExplorerLink, openUri } from 'uniswap/src/utils/linking'
+import { NavigateToNftItemArgs } from 'lx/src/contexts/LuxContext'
+import { getNftExplorerLink, openUri } from 'lx/src/utils/linking'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export function useNavigateToNftExplorerLink(): (args: NavigateToNftItemArgs) => void {

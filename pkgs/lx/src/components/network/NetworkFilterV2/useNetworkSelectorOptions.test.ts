@@ -1,10 +1,10 @@
-import { useNetworkSelectorOptions } from 'uniswap/src/components/network/NetworkFilterV2/useNetworkSelectorOptions'
-import { usePortfolioBalancesForAddressById } from 'uniswap/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { PortfolioBalance } from 'uniswap/src/features/dataApi/types'
-import { renderHookWithProviders } from 'uniswap/src/test/render'
+import { useNetworkSelectorOptions } from 'lx/src/components/network/NetworkFilterV2/useNetworkSelectorOptions'
+import { usePortfolioBalancesForAddressById } from 'lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { PortfolioBalance } from 'lx/src/features/dataApi/types'
+import { renderHookWithProviders } from 'lx/src/test/render'
 
-vi.mock('uniswap/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById')
+vi.mock('lx/src/components/TokenSelector/hooks/usePortfolioBalancesForAddressById')
 
 function mockBalance(chainId: number, balanceUSD: number | null): PortfolioBalance {
   return {

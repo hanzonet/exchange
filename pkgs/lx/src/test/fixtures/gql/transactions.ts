@@ -1,6 +1,6 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { faker } from 'uniswap/src/test/shared'
-import { createFixture, randomEnumValue } from 'uniswap/src/test/utils'
+import { faker } from 'lx/src/test/shared'
+import { createFixture, randomEnumValue } from 'lx/src/test/utils'
 
 export const gqlTransaction = createFixture<GraphQLApi.Transaction>()(() => ({
   __typename: 'Transaction',

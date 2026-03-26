@@ -15,7 +15,7 @@ export default defineConfig({
     exclude: ['node_modules', 'dist'],
     testTimeout: 15000,
     deps: {
-      inline: [/packages\/ui/, /packages\/uniswap/],
+      inline: [/packages\/ui/, /packages\/lx/],
     },
     reporters: ['verbose'],
     coverage: {
@@ -29,7 +29,7 @@ export default defineConfig({
     alias: {
       'utilities/src': path.resolve(__dirname, './src'),
       'ui/src': path.resolve(__dirname, '../ui/src'),
-      'uniswap/src': path.resolve(__dirname, '../uniswap/src'),
+      'lx/src': path.resolve(__dirname, '../lx/src'),
 
       // React Native aliases for web testing
       'react-native': 'react-native-web',

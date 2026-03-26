@@ -442,7 +442,7 @@ export const routes: RouteDefinition[] = [
   }),
   createRouteDefinition({
     path: '/preview',
-    getTitle: () => 'Uniswap Preview',
+    getTitle: () => 'Lx Preview',
     getElement: () => (
       <Suspense fallback={null}>
         <BetaPage />

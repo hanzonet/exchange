@@ -15,9 +15,9 @@ export const devPortalGatewayMonitors: MonitorDefinition[] = [
     priority: 2,
     thresholds: {critical: 5},
     logQuery: 'service:dev-portal',
-    runbookUrl: 'https://www.notion.so/uniswap/dev-portal-runbook',
+    runbookUrl: 'https://www.notion.so/lx/dev-portal-runbook',
     readmeUrl:
-      'https://github.com/Uniswap/universe/tree/main/apps/dev-portal',
+      'https://github.com/Lx/universe/tree/main/apps/dev-portal',
     dashboards: [],
     onMissingData: 'show_no_data',
     prodOnly: true,
@@ -36,9 +36,9 @@ export const devPortalGatewayMonitors: MonitorDefinition[] = [
     priority: 3,
     thresholds: {critical: 10},
     logQuery: 'service:dev-portal',
-    runbookUrl: 'https://www.notion.so/uniswap/dev-portal-runbook',
+    runbookUrl: 'https://www.notion.so/lx/dev-portal-runbook',
     readmeUrl:
-      'https://github.com/Uniswap/universe/tree/main/apps/dev-portal',
+      'https://github.com/Lx/universe/tree/main/apps/dev-portal',
     dashboards: [],
     enablePaging: false,
     onMissingData: 'show_no_data',

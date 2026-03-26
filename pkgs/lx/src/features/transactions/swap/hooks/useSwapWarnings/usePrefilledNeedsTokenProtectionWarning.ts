@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { TradeableAsset } from 'uniswap/src/entities/assets'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { getTokenProtectionWarning, getTokenWarningSeverity } from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { useDismissedTokenWarnings } from 'uniswap/src/features/tokens/warnings/slice/hooks'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { TradeableAsset } from 'lx/src/entities/assets'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { getTokenProtectionWarning, getTokenWarningSeverity } from 'lx/src/features/tokens/warnings/safetyUtils'
+import { useDismissedTokenWarnings } from 'lx/src/features/tokens/warnings/slice/hooks'
 
-import { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { areCurrencyIdsEqual, currencyId } from 'uniswap/src/utils/currencyId'
+import { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { areCurrencyIdsEqual, currencyId } from 'lx/src/utils/currencyId'
 import { isWebApp } from 'utilities/src/platform'
 
 /*

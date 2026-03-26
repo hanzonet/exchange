@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { Locale } from 'uniswap/src/features/language/constants'
+import { Locale } from 'lx/src/features/language/constants'
 import { isWebApp } from 'utilities/src/platform'
 
 let changingTo = ''

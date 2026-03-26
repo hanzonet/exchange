@@ -1,4 +1,4 @@
-import { PaymentMethodFilterProps } from 'uniswap/src/features/fiatOnRamp/PaymentMethodFilter/utils'
+import { PaymentMethodFilterProps } from 'lx/src/features/fiatOnRamp/PaymentMethodFilter/utils'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export function PaymentMethodFilter(_props: PaymentMethodFilterProps): JSX.Element {

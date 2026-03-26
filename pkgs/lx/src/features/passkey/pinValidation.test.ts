@@ -1,4 +1,4 @@
-import { BANNED_PINS, validatePin } from 'uniswap/src/features/passkey/pinValidation'
+import { BANNED_PINS, validatePin } from 'lx/src/features/passkey/pinValidation'
 import { describe, expect, it } from 'vitest'
 
 describe('validatePin', () => {

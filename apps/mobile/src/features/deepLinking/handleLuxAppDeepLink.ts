@@ -50,7 +50,7 @@ export function* handleLuxAppDeepLink({
     return
   }
 
-  // Handle Token share (ex. https://app.uniswap.org/tokens/ethereum/0x... or https://app.uniswap.org/explore/tokens/arbitrum/0x...)
+  // Handle Token share (ex. https://app.lx.org/tokens/ethereum/0x... or https://app.lx.org/explore/tokens/arbitrum/0x...)
   if (TOKEN_SHARE_LINK_HASH_REGEX.test(path)) {
     yield* call(handleTokenShare, { path, url, linkSource })
     return

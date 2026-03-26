@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
-import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'uniswap/src/features/chains/evm/rpc'
-import { type CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { LxEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { type CurrencyField } from 'uniswap/src/types/currency'
+import { DEFAULT_NATIVE_ADDRESS_LEGACY } from 'lx/src/features/chains/evm/rpc'
+import { type CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { LxEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { type CurrencyField } from 'lx/src/types/currency'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
 
 type SelectCurrencyEventProperties = {

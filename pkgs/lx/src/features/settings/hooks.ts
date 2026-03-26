@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
 import {
   // biome-ignore lint/style/noRestrictedImports: expected usage here
   selectIsTestnetModeEnabled,
   selectWalletHideReportedActivitySetting,
   selectWalletHideSmallBalancesSetting,
   selectWalletHideSpamTokensSetting,
-} from 'uniswap/src/features/settings/selectors'
+} from 'lx/src/features/settings/selectors'
 import { isMobileApp } from 'utilities/src/platform'
 
 export function useHideSmallBalancesSetting(): boolean {

@@ -1,20 +1,20 @@
 import { Store } from '@reduxjs/toolkit'
 import { PropsWithChildren, useMemo } from 'react'
 import { useStore } from 'react-redux'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { WalletProvider } from 'uniswap/src/features/wallet/contexts/WalletProvider'
-import { createEVMWalletService } from 'uniswap/src/features/wallet/services/createEVMWalletService'
-import { WalletService } from 'uniswap/src/features/wallet/services/IWalletService'
-import { WalletMeta } from 'uniswap/src/features/wallet/types/WalletMeta'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { WalletProvider } from 'lx/src/features/wallet/contexts/WalletProvider'
+import { createEVMWalletService } from 'lx/src/features/wallet/services/createEVMWalletService'
+import { WalletService } from 'lx/src/features/wallet/services/IWalletService'
+import { WalletMeta } from 'lx/src/features/wallet/types/WalletMeta'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { HexString } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useActiveAccount } from '@luxfi/wallet/src/features/wallet/hooks'
 import { WalletState } from '@luxfi/wallet/src/state/walletReducer'
 
-const NATIVE_LX_WALLET_ID = 'native-uniswap-wallet'
-const NATIVE_LX_WALLET_NAME = 'Native Uniswap Wallet'
+const NATIVE_LX_WALLET_ID = 'native-lx-wallet'
+const NATIVE_LX_WALLET_NAME = 'Native Lx Wallet'
 
 export function getLxWalletMeta(): WalletMeta {
   return {

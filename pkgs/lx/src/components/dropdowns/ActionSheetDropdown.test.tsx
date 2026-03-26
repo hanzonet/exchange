@@ -2,10 +2,10 @@ import '@testing-library/jest-native'
 
 import { ReactNode } from 'react'
 import { Text } from 'ui/src'
-import { ActionSheetDropdown } from 'uniswap/src/components/dropdowns/ActionSheetDropdown'
-import { MenuItemProp } from 'uniswap/src/components/modals/ActionSheetModal'
-import { ON_PRESS_EVENT_PAYLOAD } from 'uniswap/src/test/fixtures'
-import { fireEvent, render, screen, waitFor, waitForElementToBeRemoved } from 'uniswap/src/test/test-utils'
+import { ActionSheetDropdown } from 'lx/src/components/dropdowns/ActionSheetDropdown'
+import { MenuItemProp } from 'lx/src/components/modals/ActionSheetModal'
+import { ON_PRESS_EVENT_PAYLOAD } from 'lx/src/test/fixtures'
+import { fireEvent, render, screen, waitFor, waitForElementToBeRemoved } from 'lx/src/test/test-utils'
 
 vi.mock('react-native', async (importOriginal) => {
   const actualReactNative = await importOriginal<typeof import('react-native')>()

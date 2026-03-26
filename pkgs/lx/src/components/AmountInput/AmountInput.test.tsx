@@ -1,5 +1,5 @@
-import { parseValue } from 'uniswap/src/components/AmountInput/utils/parseValue'
-import { replaceSeparators } from 'uniswap/src/components/AmountInput/utils/replaceSeparators'
+import { parseValue } from 'lx/src/components/AmountInput/utils/parseValue'
+import { replaceSeparators } from 'lx/src/components/AmountInput/utils/replaceSeparators'
 
 describe(replaceSeparators, () => {
   describe('it can strip grouping separators', () => {

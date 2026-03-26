@@ -1,9 +1,9 @@
 import { usePrice } from '@luxexchange/prices'
-import { DEFAULT_NATIVE_ADDRESS } from 'uniswap/src/features/chains/evm/defaults'
-import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'uniswap/src/features/dataApi/tokenDetails/useTokenDetailsData'
-import { isPriceServiceSupportedChain } from 'uniswap/src/features/prices/isPriceServiceSupportedChain'
-import type { CurrencyId } from 'uniswap/src/types/currency'
-import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from 'uniswap/src/utils/currencyId'
+import { DEFAULT_NATIVE_ADDRESS } from 'lx/src/features/chains/evm/defaults'
+import { useTokenSpotPrice as useTokenSpotPriceLegacy } from 'lx/src/features/dataApi/tokenDetails/useTokenDetailsData'
+import { isPriceServiceSupportedChain } from 'lx/src/features/prices/isPriceServiceSupportedChain'
+import type { CurrencyId } from 'lx/src/types/currency'
+import { currencyIdToAddress, currencyIdToChain, isNativeCurrencyAddress } from 'lx/src/utils/currencyId'
 
 export function useTokenSpotPriceCentralized(currencyId: CurrencyId | undefined): number | undefined {
   const chainId = currencyId ? (currencyIdToChain(currencyId) ?? undefined) : undefined

@@ -5,14 +5,14 @@ import {
   type ParsedTradeInput,
   parseTradeInputForTradingApiQuote,
   validateParsedInput,
-} from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { UseTradeArgs } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { UseTradeArgs } from 'lx/src/features/transactions/swap/types/trade'
 import {
   GetQuoteRoutingParams,
   GetQuoteSlippageParams,
   type QuoteRoutingParamsResult,
   type QuoteSlippageParamsResult,
-} from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+} from 'lx/src/features/transactions/swap/utils/tradingApi'
 
 export type GetQuoteRequestArgs = ParsedTradeInput
 

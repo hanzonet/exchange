@@ -1,6 +1,6 @@
-import { NFTSummaryItem } from 'uniswap/src/components/activity/summaries/NFTSummaryItem'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
-import { NFTTradeTransactionInfo, TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { NFTSummaryItem } from 'lx/src/components/activity/summaries/NFTSummaryItem'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { NFTTradeTransactionInfo, TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
 
 export function NFTTradeSummaryItem({
   transaction,

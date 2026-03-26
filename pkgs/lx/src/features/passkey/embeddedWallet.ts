@@ -3,17 +3,17 @@ import type {
   RegistrationOptions_AuthenticatorAttachment as AuthenticatorAttachment,
   ChallengeResponse,
   RegistrationOptions,
-} from '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
-import { EmbeddedWalletApiClient } from 'uniswap/src/data/rest/embeddedWallet/requests'
+} from '@luxamm/client-privy-embedded-wallet/dist/lx/privy-embedded-wallet/v1/service_pb'
+import { EmbeddedWalletApiClient } from 'lx/src/data/rest/embeddedWallet/requests'
 import {
   clearDeviceSession,
   generateDeviceKeyPair,
   getDeviceSession,
   setDeviceSession,
-} from 'uniswap/src/features/passkey/deviceSession'
-import { authenticatePasskey, registerPasskey } from 'uniswap/src/features/passkey/passkey'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+} from 'lx/src/features/passkey/deviceSession'
+import { authenticatePasskey, registerPasskey } from 'lx/src/features/passkey/passkey'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { HexString } from 'utilities/src/addresses/hex'
 import { logger } from 'utilities/src/logger/logger'
 
@@ -24,10 +24,10 @@ export type {
   AuthenticatorNameType,
   RecoveryMethod,
   RegistrationOptions_AuthenticatorAttachment as AuthenticatorAttachment,
-} from '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+} from '@luxamm/client-privy-embedded-wallet/dist/lx/privy-embedded-wallet/v1/service_pb'
 
 type PrivyPbModule =
-  typeof import('@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb')
+  typeof import('@luxamm/client-privy-embedded-wallet/dist/lx/privy-embedded-wallet/v1/service_pb')
 
 let _privyPbModulePromise: Promise<PrivyPbModule> | undefined
 
@@ -37,7 +37,7 @@ export async function loadPrivyPbModule(): Promise<PrivyPbModule> {
       try {
         return await import(
           /* @vite-ignore */
-          '@luxamm/client-privy-embedded-wallet/dist/uniswap/privy-embedded-wallet/v1/service_pb'
+          '@luxamm/client-privy-embedded-wallet/dist/lx/privy-embedded-wallet/v1/service_pb'
         )
       } catch {
         throw new Error('Embedded Wallet requires @luxamm/client-privy-embedded-wallet (private Lux package).')
@@ -283,16 +283,16 @@ export {
   listAuthenticators,
   registerNewAuthenticator,
   startAddAuthenticatorSession,
-} from 'uniswap/src/features/passkey/authenticatorManagement'
-export type { SetupProgress } from 'uniswap/src/features/passkey/recoverySetup'
-export { encryptAndStoreRecovery } from 'uniswap/src/features/passkey/recoverySetup'
+} from 'lx/src/features/passkey/authenticatorManagement'
+export type { SetupProgress } from 'lx/src/features/passkey/recoverySetup'
+export { encryptAndStoreRecovery } from 'lx/src/features/passkey/recoverySetup'
 // Re-exports from sub-modules — consumers continue to import from this file
 export {
   exportEncryptedSeedPhrase,
   signMessageWithPasskey,
   signTransactionWithPasskey,
   signTypedDataWithPasskey,
-} from 'uniswap/src/features/passkey/signing'
+} from 'lx/src/features/passkey/signing'
 
 /** Result of the crypto phase — feed this into {@link authorizeAndCompleteRecovery}. */
 export interface EncryptedRecoveryState {
@@ -322,7 +322,7 @@ export async function authorizeAndCompleteRecovery({
   walletId: string
   privyUserId: string
   authMethodType: RecoveryAuthMethodType
-  onProgress?: (step: import('uniswap/src/features/passkey/recoverySetup').SetupProgress) => void
+  onProgress?: (step: import('lx/src/features/passkey/recoverySetup').SetupProgress) => void
 }): Promise<{ recoveryQuorumId: string }> {
   const { AuthenticationTypes, Action: ActionEnum } = await loadPrivyPbModule()
 

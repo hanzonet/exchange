@@ -1,10 +1,10 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { useCallback, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { AccountType } from 'uniswap/src/features/accounts/types'
-import { DEFAULT_TOAST_HIDE_DELAY } from 'uniswap/src/features/notifications/constants'
-import { useSuccessfulSwapCompleted } from 'uniswap/src/features/transactions/hooks/useSuccessfulSwapCompleted'
-import { type TransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { AccountType } from 'lx/src/features/accounts/types'
+import { DEFAULT_TOAST_HIDE_DELAY } from 'lx/src/features/notifications/constants'
+import { useSuccessfulSwapCompleted } from 'lx/src/features/transactions/hooks/useSuccessfulSwapCompleted'
+import { type TransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
 import { logger } from 'utilities/src/logger/logger'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 import {
@@ -65,7 +65,7 @@ export function useSmartWalletDelegationStatus({ overrideAddress }: { overrideAd
         const result = getDelegationDetails(activeAccount.address, chain)
         if (result?.currentDelegationAddress) {
           hasExistingDelegation = true
-          if (!result.isWalletDelegatedToUniswap) {
+          if (!result.isWalletDelegatedToLx) {
             hasNonLxDelegation = true
           }
         }

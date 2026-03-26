@@ -57,7 +57,7 @@ export const RecentTransactionsTable = memo(function RecentTransactions() {
   const chainId = useChainIdFromUrlParam() ?? UniverseChainId.Mainnet
   const chainInfo = getChainInfo(chainId)
   const { t } = useTranslation()
-  // Lux/Zoo chains use our own subgraph (exchange-api), not Uniswap GraphQL
+  // Lux/Zoo chains use our own subgraph (exchange-api), not Lx GraphQL
   const isLuxChain = chainId === UniverseChainId.Lux || chainId === UniverseChainId.Zoo ||
     chainId === UniverseChainId.LuxTestnet || chainId === UniverseChainId.ZooTestnet
   const { transactions, loading, loadMore, errorV2, errorV3 } = useAllTransactions(

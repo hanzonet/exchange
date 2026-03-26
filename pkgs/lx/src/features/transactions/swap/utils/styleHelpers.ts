@@ -1,6 +1,6 @@
 import { ColorTokens } from 'ui/src'
-import { SLIPPAGE_CRITICAL_TOLERANCE } from 'uniswap/src/constants/transactions'
-import { SLIPPAGE_LOW_TOLERANCE_LP } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageLPWarning'
+import { SLIPPAGE_CRITICAL_TOLERANCE } from 'lx/src/constants/transactions'
+import { SLIPPAGE_LOW_TOLERANCE_LP } from 'lx/src/features/transactions/components/settings/settingsConfigurations/slippage/SlippageLPWarning'
 
 export function getSlippageWarningColor({
   customSlippageValue,

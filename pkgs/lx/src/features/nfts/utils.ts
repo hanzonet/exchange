@@ -1,8 +1,8 @@
 import { GraphQLApi } from '@luxexchange/api'
-import { normalizeTokenAddressForCache } from 'uniswap/src/data/cache'
-import { EMPTY_NFT_ITEM, HIDDEN_NFTS_ROW } from 'uniswap/src/features/nfts/constants'
-import { NFTItem } from 'uniswap/src/features/nfts/types'
-import { NFTKeyToVisibility } from 'uniswap/src/features/visibility/slice'
+import { normalizeTokenAddressForCache } from 'lx/src/data/cache'
+import { EMPTY_NFT_ITEM, HIDDEN_NFTS_ROW } from 'lx/src/features/nfts/constants'
+import { NFTItem } from 'lx/src/features/nfts/types'
+import { NFTKeyToVisibility } from 'lx/src/features/visibility/slice'
 
 export function formatNftItems(data: GraphQLApi.NftsTabQuery | undefined): NFTItem[] | undefined {
   const items = data?.nftBalances?.edges.flatMap((item) => item.node)

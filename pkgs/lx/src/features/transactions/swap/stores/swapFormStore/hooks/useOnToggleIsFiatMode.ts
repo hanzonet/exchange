@@ -1,6 +1,6 @@
 import type { RefObject } from 'react'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import type { CurrencyField } from 'uniswap/src/types/currency'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { CurrencyField } from 'lx/src/types/currency'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export const useOnToggleIsFiatMode = ({

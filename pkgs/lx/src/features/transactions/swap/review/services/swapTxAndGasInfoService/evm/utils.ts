@@ -1,20 +1,20 @@
 import type { GasStrategy } from '@luxexchange/api'
-import type { TransactionSettings } from 'uniswap/src/features/transactions/components/settings/types'
-import type { ApprovalTxInfo } from 'uniswap/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
-import type { EVMSwapInstructionsService } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
-import type { TransactionRequestInfo } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { TransactionSettings } from 'lx/src/features/transactions/components/settings/types'
+import type { ApprovalTxInfo } from 'lx/src/features/transactions/swap/review/hooks/useTokenApprovalInfo'
+import type { EVMSwapInstructionsService } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapInstructionsService'
+import type { TransactionRequestInfo } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
 import {
   createProcessSwapResponse,
   getSwapInputExceedsBalance,
-} from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
-import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
+} from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/utils'
+import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
 import type {
   BridgeTrade,
   ClassicTrade,
   UnwrapTrade,
   WrapTrade,
-} from 'uniswap/src/features/transactions/swap/types/trade'
-import { ApprovalAction } from 'uniswap/src/features/transactions/swap/types/trade'
+} from 'lx/src/features/transactions/swap/types/trade'
+import { ApprovalAction } from 'lx/src/features/transactions/swap/types/trade'
 import { tryCatch } from 'utilities/src/errors'
 
 type GetEVMSwapTransactionRequestInfoFn = (params: {

@@ -1,4 +1,4 @@
-import { RetryOptions } from 'uniswap/src/features/chains/types'
+import { RetryOptions } from 'lx/src/features/chains/types'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 
 /** Address that represents native currencies on ETH, Arbitrum, etc. */

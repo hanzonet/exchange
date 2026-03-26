@@ -12,11 +12,11 @@ import {
   useSporeColors,
 } from 'ui/src'
 import { iconSizes, validColor, zIndexes } from 'ui/src/theme'
-import { getBadgeBorderRadius, getBadgeOuterSize } from 'uniswap/src/components/CurrencyLogo/badgeSizeUtils'
-import { STATUS_RATIO } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
-import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isTestnetChain } from 'uniswap/src/features/chains/utils'
+import { getBadgeBorderRadius, getBadgeOuterSize } from 'lx/src/components/CurrencyLogo/badgeSizeUtils'
+import { STATUS_RATIO } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
+import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { isTestnetChain } from 'lx/src/features/chains/utils'
 import { isMobileApp } from 'utilities/src/platform'
 
 interface TokenLogoProps {

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react'
 import { DropdownMenuSheetItemProps, GeneratedIcon, IconProps, TextProps } from 'ui/src'
-import { ContextMenuTriggerMode } from 'uniswap/src/components/menus/types'
-import { ElementName, SectionName } from 'uniswap/src/features/telemetry/constants'
+import { ContextMenuTriggerMode } from 'lx/src/components/menus/types'
+import { ElementName, SectionName } from 'lx/src/features/telemetry/constants'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export type MenuOptionItemWithId = MenuOptionItem & {

@@ -1,6 +1,6 @@
 import { useCallback, useEffect } from 'react'
-import { ElementName, SectionName, LxEventName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import { ElementName, SectionName, LxEventName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { useTrace } from 'utilities/src/telemetry/trace/TraceContext'
 
 interface UseContextMenuTrackingParams {

@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { useCallback, useMemo } from 'react'
-import { useCurrentLocale } from 'uniswap/src/features/language/hooks'
+import { useCurrentLocale } from 'lx/src/features/language/hooks'
 import {
   addFiatSymbolToNumber,
   formatCurrencyAmount,

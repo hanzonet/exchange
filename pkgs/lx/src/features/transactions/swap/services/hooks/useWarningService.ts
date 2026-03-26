@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { WarningService } from 'uniswap/src/features/transactions/swap/services/warningService'
+import { WarningService } from 'lx/src/features/transactions/swap/services/warningService'
 import { useEvent } from 'utilities/src/react/hooks'
 
 // useRef because we need value access to be synchronous

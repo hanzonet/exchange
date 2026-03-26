@@ -7,7 +7,7 @@ import {
   useFormattedDate,
   useFormattedDateTime,
   useLocalizedDayjs,
-} from 'uniswap/src/features/language/localizedDayjs'
+} from 'lx/src/features/language/localizedDayjs'
 
 const DATETIME_INPUT_CLASS = 'DatePickerCard-datetimeInput'
 

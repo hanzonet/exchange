@@ -2,11 +2,11 @@ import { CurrencyAmount } from '@luxamm/sdk-core'
 import type { ClassicQuoteResponse, GasFeeResult } from '@luxexchange/api'
 import { FeeType, TradingApi } from '@luxexchange/api'
 import type { providers } from 'ethers/lib/ethers'
-import { DAI, USDC } from 'uniswap/src/constants/tokens'
-import { DEFAULT_GAS_STRATEGY } from 'uniswap/src/features/gas/consts'
-import type { TransactionSettingsState } from 'uniswap/src/features/transactions/components/settings/types'
-import { UnknownSimulationError } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
-import type { SwapData } from 'uniswap/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
+import { DAI, USDC } from 'lx/src/constants/tokens'
+import { DEFAULT_GAS_STRATEGY } from 'lx/src/features/gas/consts'
+import type { TransactionSettingsState } from 'lx/src/features/transactions/components/settings/types'
+import { UnknownSimulationError } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/constants'
+import type { SwapData } from 'lx/src/features/transactions/swap/review/services/swapTxAndGasInfoService/evm/evmSwapRepository'
 import {
   createPrepareSwapRequestParams,
   createProcessSwapResponse,

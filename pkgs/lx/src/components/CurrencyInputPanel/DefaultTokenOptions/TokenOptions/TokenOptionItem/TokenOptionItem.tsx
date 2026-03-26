@@ -1,4 +1,4 @@
-import type { TokenOptionItemProps } from 'uniswap/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
+import type { TokenOptionItemProps } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/TokenOptions/TokenOptionItem/types'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 export const TokenOptionItem = (_props: TokenOptionItemProps): JSX.Element => {

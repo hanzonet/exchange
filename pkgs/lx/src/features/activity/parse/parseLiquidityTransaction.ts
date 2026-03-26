@@ -4,8 +4,8 @@ import {
   OnChainTransactionLabel,
   Transfer,
 } from '@luxamm/client-data-api/dist/data/v1/types_pb'
-import { extractDappInfo } from 'uniswap/src/features/activity/utils/extractDappInfo'
-import { AssetCase } from 'uniswap/src/features/activity/utils/remote'
+import { extractDappInfo } from 'lx/src/features/activity/utils/extractDappInfo'
+import { AssetCase } from 'lx/src/features/activity/utils/remote'
 import {
   CollectFeesTransactionInfo,
   CreatePairTransactionInfo,
@@ -15,8 +15,8 @@ import {
   LpIncentivesClaimTransactionInfo,
   TransactionType,
   UnknownTransactionInfo,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 
 /**
  * Parse LP transaction types from the REST API

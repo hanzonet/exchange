@@ -1,7 +1,7 @@
-import type { EstimateGasFeeResponse } from '@luxamm/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
+import type { EstimateGasFeeResponse } from '@luxamm/client-unirpc-v2/dist/lx/unirpc/v2/service_pb'
 import { FeeType, type GasEstimate, type GasFeeResultWithoutState, type GasStrategy } from '@luxexchange/api'
-import { convertGasFeeToDisplayValue } from 'uniswap/src/features/gas/hooks'
-import { extractGasFeeParams } from 'uniswap/src/features/gas/utils'
+import { convertGasFeeToDisplayValue } from 'lx/src/features/gas/hooks'
+import { extractGasFeeParams } from 'lx/src/features/gas/utils'
 
 export function mapGasServiceV2Response({
   response,

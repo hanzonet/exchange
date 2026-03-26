@@ -1,4 +1,4 @@
-import { BackgroundType } from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
+import { BackgroundType } from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
 import type { InAppNotification } from '@luxexchange/api'
 import { NotificationContent } from '@luxexchange/api/src/clients/notifications/types'
 import type { NotificationClickTarget } from '@luxexchange/notifications'
@@ -7,7 +7,7 @@ import {
   type ModalFeatureItem,
   ModalTemplate,
   type ModalTemplateButton,
-} from 'uniswap/src/components/notifications/ModalTemplate'
+} from 'lx/src/components/notifications/ModalTemplate'
 import { useEvent } from 'utilities/src/react/hooks'
 
 interface ModalNotificationProps {

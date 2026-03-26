@@ -1,5 +1,5 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { toSupportedChainId } from 'uniswap/src/features/chains/utils'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { toSupportedChainId } from 'lx/src/features/chains/utils'
 import { logger } from 'utilities/src/logger/logger'
 
 const MAX_DISPLAY_CHAIN_IDS = 3

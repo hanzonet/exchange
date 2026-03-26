@@ -1,22 +1,22 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
 import { ethers } from 'ethers'
 import React, { PropsWithChildren, useCallback, useEffect, useState } from 'react'
-import { LuxProvider } from 'uniswap/src/contexts/LuxContext'
-import { getDelegationService } from 'uniswap/src/domains/services'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useUpdateDelegatedState } from 'uniswap/src/features/smartWallet/delegation/hooks/useUpdateDelegateState'
-import { useHasAccountMismatchCallback } from 'uniswap/src/features/smartWallet/mismatch/hooks'
-import { MismatchContextProvider } from 'uniswap/src/features/smartWallet/mismatch/MismatchContext'
+import { LuxProvider } from 'lx/src/contexts/LuxContext'
+import { getDelegationService } from 'lx/src/domains/services'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useUpdateDelegatedState } from 'lx/src/features/smartWallet/delegation/hooks/useUpdateDelegateState'
+import { useHasAccountMismatchCallback } from 'lx/src/features/smartWallet/mismatch/hooks'
+import { MismatchContextProvider } from 'lx/src/features/smartWallet/mismatch/MismatchContext'
 import type {
   HasMismatchInput,
   HasMismatchResult,
   HasMismatchUtil,
-} from 'uniswap/src/features/smartWallet/mismatch/mismatch'
-import { createHasMismatchUtil } from 'uniswap/src/features/smartWallet/mismatch/mismatch'
-import { useGetCanSignPermits } from 'uniswap/src/features/transactions/hooks/useGetCanSignPermits'
-import { prepareSwapFormState } from 'uniswap/src/features/transactions/types/transactionState'
-import { CurrencyField } from 'uniswap/src/types/currency'
+} from 'lx/src/features/smartWallet/mismatch/mismatch'
+import { createHasMismatchUtil } from 'lx/src/features/smartWallet/mismatch/mismatch'
+import { useGetCanSignPermits } from 'lx/src/features/transactions/hooks/useGetCanSignPermits'
+import { prepareSwapFormState } from 'lx/src/features/transactions/types/transactionState'
+import { CurrencyField } from 'lx/src/types/currency'
 import { getLogger, logger } from 'utilities/src/logger/logger'
 import { useEvent } from 'utilities/src/react/hooks'
 import { useWalletNavigation } from '@luxfi/wallet/src/contexts/WalletNavigationContext'
@@ -30,7 +30,7 @@ import { useProvider, useWalletSigners } from '@luxfi/wallet/src/features/wallet
 import { useActiveAccount, useActiveSignerAccount, useDisplayName } from '@luxfi/wallet/src/features/wallet/hooks'
 import { NativeSigner } from '@luxfi/wallet/src/features/wallet/signing/NativeSigner'
 
-// Adapts useProvider to fit uniswap context requirement of returning undefined instead of null
+// Adapts useProvider to fit lx context requirement of returning undefined instead of null
 function useWalletProvider(chainId: number): ethers.providers.JsonRpcProvider | undefined {
   return useProvider(chainId) ?? undefined
 }
@@ -65,7 +65,7 @@ export function WalletLuxProvider({ children }: PropsWithChildren): JSX.Element 
   )
 }
 
-// Abstracts wallet-specific transaction flow objects for usage in cross-platform flows in the `uniswap` package.
+// Abstracts wallet-specific transaction flow objects for usage in cross-platform flows in the `lx` package.
 function WalletLuxProviderInner({ children }: PropsWithChildren): JSX.Element {
   const signer = useWalletSigner()
   const {

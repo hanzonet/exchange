@@ -1,6 +1,6 @@
-import { getNativeAddress } from 'uniswap/src/constants/addresses'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { buildCurrencyId, currencyIdToGraphQLAddress } from 'uniswap/src/utils/currencyId'
+import { getNativeAddress } from 'lx/src/constants/addresses'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { buildCurrencyId, currencyIdToGraphQLAddress } from 'lx/src/utils/currencyId'
 
 export const BACKEND_NATIVE_CHAIN_ADDRESS_STRING = 'NATIVE'
 

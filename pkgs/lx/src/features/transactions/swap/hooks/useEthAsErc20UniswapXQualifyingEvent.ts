@@ -6,15 +6,15 @@ import {
 } from '@luxexchange/gating'
 import { BigNumber, Contract } from 'ethers/lib/ethers'
 import { useEffect, useRef } from 'react'
-import { ERC20_ETH_ADDRESS } from 'uniswap/src/constants/addresses'
-import { useProvider } from 'uniswap/src/contexts/LuxContext'
-import { useWalletCheckDelegationQuery } from 'uniswap/src/data/apiClients/tradingApi/useWalletCheckDelegationQuery'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { logExperimentQualifyingEvent } from 'uniswap/src/features/telemetry/utils/logExperimentQualifyingEvent'
-import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { toTradingApiSupportedChainId } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
-import { useWallet } from 'uniswap/src/features/wallet/hooks/useWallet'
-import { CurrencyField } from 'uniswap/src/types/currency'
+import { ERC20_ETH_ADDRESS } from 'lx/src/constants/addresses'
+import { useProvider } from 'lx/src/contexts/LuxContext'
+import { useWalletCheckDelegationQuery } from 'lx/src/data/apiClients/tradingApi/useWalletCheckDelegationQuery'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { logExperimentQualifyingEvent } from 'lx/src/features/telemetry/utils/logExperimentQualifyingEvent'
+import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { toTradingApiSupportedChainId } from 'lx/src/features/transactions/swap/utils/tradingApi'
+import { useWallet } from 'lx/src/features/wallet/hooks/useWallet'
+import { CurrencyField } from 'lx/src/types/currency'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
@@ -187,7 +187,7 @@ function useNativeAllowanceCheck({
  * 4. Chain is one of `ELIGIBLE_CHAIN_IDS`.
  * 5. Input USD value higher than `DEFAULT_MIN_USD_THRESHOLDS` (configurable via Statsig)
  * 6. Wallet has sufficient balance for the swap input amount
- * 7. Wallet is delegated to Uniswap (via /check_delegation API)
+ * 7. Wallet is delegated to Lx (via /check_delegation API)
  * 8. Wallet has native allowance > 0 for the ERC20 ETH contract (on-chain check)
  */
 export function useEthAsErc20LxSwapQualifyingEvent(derivedSwapInfo: DerivedSwapInfo): void {
@@ -214,7 +214,7 @@ export function useEthAsErc20LxSwapQualifyingEvent(derivedSwapInfo: DerivedSwapI
   })
 
   const isDelegated = walletAddress
-    ? delegationResponse?.delegationDetails[walletAddress]?.[String(chainId)]?.isWalletDelegatedToUniswap === true
+    ? delegationResponse?.delegationDetails[walletAddress]?.[String(chainId)]?.isWalletDelegatedToLx === true
     : false
 
   // 3. Check native allowance (async RPC, only when cheaper conditions pass)

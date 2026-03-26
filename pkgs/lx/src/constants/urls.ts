@@ -9,7 +9,7 @@ import {
 } from '@luxexchange/api'
 import { brand, getBrandUrl, getDocsUrl } from '@luxexchange/config'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
-import { config } from 'uniswap/src/config'
+import { config } from 'lx/src/config'
 import { isBetaEnv, isDevEnv, isPlaywrightEnv } from 'utilities/src/environment/env'
 import { isWebApp } from 'utilities/src/platform'
 

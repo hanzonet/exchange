@@ -1,7 +1,7 @@
 import { Currency } from '@luxamm/sdk-core'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
-import { areCurrencyIdsEqual, buildWrappedNativeCurrencyId, currencyId } from 'uniswap/src/utils/currencyId'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { WrapType } from 'lx/src/features/transactions/types/wrap'
+import { areCurrencyIdsEqual, buildWrappedNativeCurrencyId, currencyId } from 'lx/src/utils/currencyId'
 
 export function getWrapType(
   inputCurrency: Currency | null | undefined,

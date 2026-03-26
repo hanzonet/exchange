@@ -1,6 +1,6 @@
 import { createSelector, Selector } from '@reduxjs/toolkit'
-import { normalizeCurrencyIdForMapLookup } from 'uniswap/src/data/cache'
-import { LxRootState } from 'uniswap/src/state'
+import { normalizeCurrencyIdForMapLookup } from 'lx/src/data/cache'
+import { LxRootState } from 'lx/src/state'
 import { unique } from 'utilities/src/primitives/array'
 
 const selectFavoriteTokensWithPossibleDuplicates = (state: LxRootState): string[] => state.favorites.tokens

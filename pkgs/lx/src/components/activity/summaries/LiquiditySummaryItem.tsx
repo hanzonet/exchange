@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { useSporeColors } from 'ui/src'
 import { ContractInteraction } from 'ui/src/components/icons/ContractInteraction'
 import { iconSizes } from 'ui/src/theme'
-import { TransactionSummaryLayout } from 'uniswap/src/components/activity/summaries/TransactionSummaryLayout'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
-import { TXN_HISTORY_ICON_SIZE } from 'uniswap/src/components/activity/utils'
-import { DappLogoWithWCBadge, LogoWithTxStatus } from 'uniswap/src/components/CurrencyLogo/LogoWithTxStatus'
-import { SplitLogo } from 'uniswap/src/components/CurrencyLogo/SplitLogo'
-import { AssetType } from 'uniswap/src/entities/assets'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { TransactionSummaryLayout } from 'lx/src/components/activity/summaries/TransactionSummaryLayout'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
+import { TXN_HISTORY_ICON_SIZE } from 'lx/src/components/activity/utils'
+import { DappLogoWithWCBadge, LogoWithTxStatus } from 'lx/src/components/CurrencyLogo/LogoWithTxStatus'
+import { SplitLogo } from 'lx/src/components/CurrencyLogo/SplitLogo'
+import { AssetType } from 'lx/src/entities/assets'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import {
   CollectFeesTransactionInfo,
   CreatePairTransactionInfo,
@@ -18,8 +18,8 @@ import {
   LiquidityDecreaseTransactionInfo,
   LiquidityIncreaseTransactionInfo,
   TransactionDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getFormattedCurrencyAmount, getSymbolDisplayText } from 'uniswap/src/utils/currency'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { getFormattedCurrencyAmount, getSymbolDisplayText } from 'lx/src/utils/currency'
 
 export function LiquiditySummaryItem({
   transaction,

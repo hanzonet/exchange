@@ -1,9 +1,9 @@
 import { SharedEventName } from '@luxamm/analytics-events'
 import { useCallback } from 'react'
-import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
-import { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
+import { useLuxContext } from 'lx/src/contexts/LuxContext'
+import { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function useTokenDetailsNavigation(currency: Maybe<CurrencyInfo>, onClose?: () => void): () => void {

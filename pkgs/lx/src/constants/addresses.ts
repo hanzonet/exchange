@@ -1,5 +1,5 @@
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 
 const POL_MAINNET_ADDRESS = '0x455e53cbb86018ac2b8092fdcd39d8444affc3f6'
 const MATIC_MAINNET_ADDRESS = '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0'
@@ -39,5 +39,5 @@ export function getWrappedNativeAddress(chainId: UniverseChainId): string {
 export const LX_DELEGATION_ADDRESS: Address = '0x227380efd3392EC33cf148Ade5e0a89D33121814'
 
 // The ERC20 ETH contract address — this is the spender that wallets grant `nativeAllowance` to.
-// https://github.com/Uniswap/ERC20-eth
+// https://github.com/Lx/ERC20-eth
 export const ERC20_ETH_ADDRESS = '0x00000000e20E49e6dCeE6e8283A0C090578F0fb9'

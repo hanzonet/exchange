@@ -1,4 +1,4 @@
-import { MessageParsers } from 'uniswap/src/extension/messagePassing/platform'
+import { MessageParsers } from 'lx/src/extension/messagePassing/platform'
 import {
   ExtensionToInterfaceRequestType,
   InterfaceToExtensionRequestType,
@@ -10,7 +10,7 @@ import {
   PasskeyRequestSchema,
   PasskeySignInFlowOpened,
   PasskeySignInFlowOpenedSchema,
-} from 'uniswap/src/extension/messagePassing/types/requests'
+} from 'lx/src/extension/messagePassing/types/requests'
 
 export type ExtensionToInterfaceMessageSchemas = {
   [ExtensionToInterfaceRequestType.PasskeyRequest]: PasskeyRequest

@@ -1,16 +1,16 @@
 /* eslint-disable @jambit/typed-redux-saga/use-typed-effects -- typed-redux-saga doesn't export these correctly */
 import type { PutEffect, SelectEffect } from 'redux-saga/effects'
 import { put, type SagaGenerator, select } from 'typed-redux-saga'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { AddressTransactionsSelector } from 'uniswap/src/features/transactions/selectors'
-import { transactionActions } from 'uniswap/src/features/transactions/slice'
-import { isClassic } from 'uniswap/src/features/transactions/swap/utils/routing'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { AddressTransactionsSelector } from 'lx/src/features/transactions/selectors'
+import { transactionActions } from 'lx/src/features/transactions/slice'
+import { isClassic } from 'lx/src/features/transactions/swap/utils/routing'
 import {
   type OnChainTransactionDetails,
   type TransactionDetails,
   TransactionStatus,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import type { LxState } from 'uniswap/src/state/lxReducer'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import type { LxState } from 'lx/src/state/lxReducer'
 import { logger } from 'utilities/src/logger/logger'
 import type { TransactionRepository } from '@luxfi/wallet/src/features/transactions/executeTransaction/services/TransactionRepository/transactionRepository'
 import { RunSagaEffect } from '@luxfi/wallet/src/state/createSagaEffectRunner'

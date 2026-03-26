@@ -1,6 +1,6 @@
-import { InlineNetworkPill, NetworkPill } from 'uniswap/src/components/network/NetworkPill'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { render } from 'uniswap/src/test/test-utils'
+import { InlineNetworkPill, NetworkPill } from 'lx/src/components/network/NetworkPill'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { render } from 'lx/src/test/test-utils'
 
 describe(NetworkPill, () => {
   it('renders a NetworkPill without image', () => {

@@ -1,10 +1,10 @@
-// Copied from https://github.com/Uniswap/interface/blob/main/src/hooks/useENS.ts
+// Copied from https://github.com/Lx/interface/blob/main/src/hooks/useENS.ts
 
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useAddressFromEns, useENSName } from 'uniswap/src/features/ens/api'
-import { ENS_SUFFIX } from 'uniswap/src/features/ens/constants'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { getValidAddress } from 'uniswap/src/utils/addresses'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useAddressFromEns, useENSName } from 'lx/src/features/ens/api'
+import { ENS_SUFFIX } from 'lx/src/features/ens/constants'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { getValidAddress } from 'lx/src/utils/addresses'
 import { useDebounce } from 'utilities/src/time/timing'
 
 type UseENSParams = {

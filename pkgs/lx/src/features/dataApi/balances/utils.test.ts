@@ -1,5 +1,5 @@
-import { sortBalancesByName } from 'uniswap/src/features/dataApi/balances/utils'
-import { PortfolioBalance } from 'uniswap/src/features/dataApi/types'
+import { sortBalancesByName } from 'lx/src/features/dataApi/balances/utils'
+import { PortfolioBalance } from 'lx/src/features/dataApi/types'
 
 describe('sortBalancesByName', () => {
   it('returns an empty array when input is undefined', () => {

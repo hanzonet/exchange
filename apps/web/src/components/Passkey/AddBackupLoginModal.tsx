@@ -4,15 +4,15 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex } from '@luxfi/ui/src'
-import { Modal } from 'uniswap/src/components/modals/Modal'
+import { Modal } from 'lx/src/components/modals/Modal'
 import {
   authorizeAndCompleteRecovery,
   type EncryptedRecoveryState,
   encryptAndStoreRecovery,
   type RecoveryAuthMethodType,
-} from 'uniswap/src/features/passkey/embeddedWallet'
-import { validatePin } from 'uniswap/src/features/passkey/pinValidation'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+} from 'lx/src/features/passkey/embeddedWallet'
+import { validatePin } from 'lx/src/features/passkey/pinValidation'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 import { logger } from '@luxfi/utilities/src/logger/logger'
 import { useEvent } from '@luxfi/utilities/src/react/hooks'
 import { LIST_AUTHENTICATORS_QUERY_KEY } from '~/components/AccountDrawer/PasskeyMenu/PasskeyMenu'

@@ -3,13 +3,13 @@ import { skipToken, useQuery, useQueryClient } from '@tanstack/react-query'
 import type { TradingApi, UseQueryApiHelperHookArgs } from '@luxexchange/api'
 import { type SwappableTokensParams } from '@luxexchange/api'
 import { useEffect } from 'react'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { TradingApiClient } from 'uniswap/src/data/apiClients/tradingApi/TradingApiClient'
-import type { TradeableAsset } from 'uniswap/src/entities/assets'
+import { lxUrls } from 'lx/src/constants/urls'
+import { TradingApiClient } from 'lx/src/data/apiClients/tradingApi/TradingApiClient'
+import type { TradeableAsset } from 'lx/src/entities/assets'
 import {
   getTokenAddressFromChainForTradingApi,
   toTradingApiSupportedChainId,
-} from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+} from 'lx/src/features/transactions/swap/utils/tradingApi'
 import { logger } from 'utilities/src/logger/logger'
 import { ReactQueryCacheKey } from 'utilities/src/reactQuery/cache'
 import { MAX_REACT_QUERY_CACHE_TIME_MS } from 'utilities/src/time/time'

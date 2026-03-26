@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
-import { IndicativeLoadingWrapper } from 'uniswap/src/components/misc/IndicativeLoadingWrapper'
-import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { SlippageInfo } from 'uniswap/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/SlippageInfo'
-import type { DerivedSwapInfo } from 'uniswap/src/features/transactions/swap/types/derivedSwapInfo'
-import { BridgeTrade } from 'uniswap/src/features/transactions/swap/types/trade'
+import { IndicativeLoadingWrapper } from 'lx/src/components/misc/IndicativeLoadingWrapper'
+import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { SlippageInfo } from 'lx/src/features/transactions/swap/components/MaxSlippageRow/SlippageInfo/SlippageInfo'
+import type { DerivedSwapInfo } from 'lx/src/features/transactions/swap/types/derivedSwapInfo'
+import { BridgeTrade } from 'lx/src/features/transactions/swap/types/trade'
 
 interface MaxSlippageRowProps {
   acceptedDerivedSwapInfo: DerivedSwapInfo<CurrencyInfo, CurrencyInfo>

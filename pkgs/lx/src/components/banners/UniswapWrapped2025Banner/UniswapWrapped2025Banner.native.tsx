@@ -7,9 +7,9 @@ import { styled, Text, TouchableArea } from 'ui/src/index'
 import {
   renderSnowflakesNative,
   SnowflakeContainer,
-} from 'uniswap/src/components/banners/shared/SharedSnowflakeComponents'
-import { LxWrapped2025BannerProps } from 'uniswap/src/components/banners/LxWrapped2025Banner/types'
-import { useSnowflakeAnimation } from 'uniswap/src/hooks/useSnowflakeAnimation'
+} from 'lx/src/components/banners/shared/SharedSnowflakeComponents'
+import { LxWrapped2025BannerProps } from 'lx/src/components/banners/LxWrapped2025Banner/types'
+import { useSnowflakeAnimation } from 'lx/src/hooks/useSnowflakeAnimation'
 
 const BannerWrapper = styled(Flex, {
   width: '100%',

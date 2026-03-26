@@ -9,8 +9,8 @@ import {
 } from '@luxamm/sdk'
 import { TradingApi } from '@luxexchange/api'
 import { providers } from 'ethers/lib/ethers'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { createPermit2Contract } from 'uniswap/src/features/transactions/utils/permit2'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { createPermit2Contract } from 'lx/src/features/transactions/utils/permit2'
 import { logger } from 'utilities/src/logger/logger'
 
 const ROUTING_TO_ORDER_CLASS = {

@@ -2,9 +2,9 @@ import { useContext } from 'react'
 import type {
   SwapReviewState,
   SwapReviewStore,
-} from 'uniswap/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
-import { EMPTY_STEPS } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
-import { SwapReviewStoreContext } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
+} from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
+import { EMPTY_STEPS } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/createSwapReviewStore'
+import { SwapReviewStoreContext } from 'lx/src/features/transactions/swap/review/stores/swapReviewStore/SwapReviewContext'
 import { isWebApp } from 'utilities/src/platform'
 import { useStore } from 'zustand'
 import { useShallow } from 'zustand/shallow'

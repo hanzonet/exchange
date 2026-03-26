@@ -1,7 +1,7 @@
 import { GqlResult, GraphQLApi } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { PollingInterval } from 'uniswap/src/constants/misc'
-import { GQLNftAsset } from 'uniswap/src/features/nfts/types'
+import { PollingInterval } from 'lx/src/constants/misc'
+import { GQLNftAsset } from 'lx/src/features/nfts/types'
 
 export function useNFT({
   owner = '',

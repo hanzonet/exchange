@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Flex, Input, Text } from 'ui/src'
-import { useDeadlineSettings } from 'uniswap/src/features/transactions/components/settings/settingsConfigurations/deadline/useDeadlineSettings'
+import { useDeadlineSettings } from 'lx/src/features/transactions/components/settings/settingsConfigurations/deadline/useDeadlineSettings'
 
 const INPUT_MIN_WIDTH = 44
 

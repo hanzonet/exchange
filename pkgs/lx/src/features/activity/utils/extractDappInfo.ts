@@ -1,5 +1,5 @@
 import { OnChainTransaction, OnChainTransactionLabel } from '@luxamm/client-data-api/dist/data/v1/types_pb'
-import { DappInfoTransactionDetails } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { DappInfoTransactionDetails } from 'lx/src/features/transactions/types/transactionDetails'
 
 /**
  * Extracts Dapp info from a REST API OnChainTransaction's protocol metadata.
@@ -16,8 +16,8 @@ export function extractDappInfo(transaction: OnChainTransaction): DappInfoTransa
   // Fallback: infer protocol from transaction label when protocol field is empty
   if (transaction.label === OnChainTransactionLabel.LX_SWAP) {
     return {
-      name: 'Uniswap',
-      icon: 'https://protocol-icons.s3.amazonaws.com/icons/uniswap-v4.jpg',
+      name: 'Lx',
+      icon: 'https://protocol-icons.s3.amazonaws.com/icons/lx-v4.jpg',
     }
   }
 
@@ -29,8 +29,8 @@ export function extractDappInfo(transaction: OnChainTransaction): DappInfoTransa
     transaction.label === OnChainTransactionLabel.AUCTION_CLAIM_TOKENS_BATCHED
   ) {
     return {
-      name: 'Uniswap CCA',
-      icon: 'https://protocol-icons.s3.amazonaws.com/icons/uniswap-v4.jpg',
+      name: 'Lx CCA',
+      icon: 'https://protocol-icons.s3.amazonaws.com/icons/lx-v4.jpg',
     }
   }
 

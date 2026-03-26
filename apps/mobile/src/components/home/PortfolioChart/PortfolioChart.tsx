@@ -10,7 +10,7 @@ import { Loader } from 'src/components/loading/loaders'
 import { Flex, Separator, Text, TouchableArea, useSporeColors } from '@luxfi/ui/src'
 import { useDeviceDimensions } from '@luxfi/ui/src/hooks/useDeviceDimensions'
 import { opacify } from '@luxfi/ui/src/theme'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 
 const EXPANDED_CHART_HEIGHT = 180
 const COLLAPSED_CHART_VISIBLE_HEIGHT = 70
@@ -29,7 +29,7 @@ export const PERIOD_OPTIONS: ChartPeriod[] = [
   ChartPeriod.MAX,
 ]
 
-// TODO(CONS-1374): move periodToTestIdSuffixValue and periodToLabel to shared uniswap package
+// TODO(CONS-1374): move periodToTestIdSuffixValue and periodToLabel to shared lx package
 function periodToTestIdSuffixValue(period: ChartPeriod): string {
   switch (period) {
     case ChartPeriod.HOUR:

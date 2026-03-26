@@ -1,10 +1,10 @@
 import { ComponentProps } from 'react'
 import { iconSizes } from 'ui/src/theme'
-import { NetworkLogo } from 'uniswap/src/components/CurrencyLogo/NetworkLogo'
-import { Pill } from 'uniswap/src/components/pill/Pill'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { getChainLabel } from 'uniswap/src/features/chains/utils'
-import { useNetworkColors } from 'uniswap/src/utils/colors'
+import { NetworkLogo } from 'lx/src/components/CurrencyLogo/NetworkLogo'
+import { Pill } from 'lx/src/components/pill/Pill'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { getChainLabel } from 'lx/src/features/chains/utils'
+import { useNetworkColors } from 'lx/src/utils/colors'
 
 export type NetworkPillProps = {
   chainId: UniverseChainId

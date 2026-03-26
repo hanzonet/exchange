@@ -1,9 +1,9 @@
-import { CONNECTION_PROVIDER_IDS } from 'uniswap/src/constants/web3'
+import { CONNECTION_PROVIDER_IDS } from 'lx/src/constants/web3'
 import { useAccount } from '~/hooks/useAccount'
 
-// Checks if the user is connected to the uniswap extension.
+// Checks if the user is connected to the lx extension.
 //
-// @returns {boolean} True if the user is connected to the uniswap extension; otherwise, false.
+// @returns {boolean} True if the user is connected to the lx extension; otherwise, false.
 //
 export function useIsLxExtensionConnected() {
   const currentConnector = useAccount().connector

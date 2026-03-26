@@ -1,8 +1,8 @@
-import { VerifyXCallbackRequest } from '@luxamm/client-liquidity/dist/uniswap/liquidity/v1/x_verification_pb'
+import { VerifyXCallbackRequest } from '@luxamm/client-liquidity/dist/lx/liquidity/v1/x_verification_pb'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text } from '@luxfi/ui/src'
-import { XVerificationClient } from 'uniswap/src/data/apiClients/liquidityService/XVerificationClient'
+import { XVerificationClient } from 'lx/src/data/apiClients/liquidityService/XVerificationClient'
 
 type CallbackState = 'loading' | 'success' | 'error'
 

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { useWalletContext } from 'uniswap/src/features/wallet/contexts/WalletProvider'
-import { Wallet } from 'uniswap/src/features/wallet/types/Wallet'
+import { useWalletContext } from 'lx/src/features/wallet/contexts/WalletProvider'
+import { Wallet } from 'lx/src/features/wallet/types/Wallet'
 
 export function useWallet(): Wallet {
   const context = useWalletContext()

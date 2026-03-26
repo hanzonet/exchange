@@ -1,5 +1,5 @@
 import { getOverrideAdapter } from '@luxexchange/gating'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { BetaPasscodeModal } from '~/pages/Beta/BetaPasscodeModal'
 import { act, fireEvent, render, screen } from '~/test-utils/render'
 
@@ -39,7 +39,7 @@ describe('BetaPasscodeModal', () => {
 
   it('renders default state', () => {
     const { container } = render(<BetaPasscodeModal />)
-    expect(screen.getByText('Uniswap Preview')).toBeTruthy()
+    expect(screen.getByText('Lx Preview')).toBeTruthy()
     expect(screen.getByTestId(TestID.PreviewPassphraseInput)).toBeTruthy()
     expect(container.firstChild).toMatchSnapshot()
   })

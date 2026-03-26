@@ -1,8 +1,8 @@
 /** biome-ignore lint/style/noRestrictedImports: this is the implementation of a wrapper we recommend to use */
 import type { BottomSheetTextInput as GorhomBottomSheetTextInput } from '@gorhom/bottom-sheet'
 import { ComponentProps } from 'react'
-import { TextInput } from 'uniswap/src/components/input/TextInput'
-import { ModalProps } from 'uniswap/src/components/modals/ModalProps'
+import { TextInput } from 'lx/src/components/input/TextInput'
+import { ModalProps } from 'lx/src/components/modals/ModalProps'
 import { PlatformSplitStubError } from 'utilities/src/errors'
 
 /**

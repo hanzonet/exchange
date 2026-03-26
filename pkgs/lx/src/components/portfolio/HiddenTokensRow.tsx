@@ -1,9 +1,9 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex } from 'ui/src'
-import { InformationBanner } from 'uniswap/src/components/banners/InformationBanner'
-import { ExpandoRow } from 'uniswap/src/components/ExpandoRow/ExpandoRow'
-import { useTokenBalanceListContext } from 'uniswap/src/features/portfolio/TokenBalanceListContext'
+import { InformationBanner } from 'lx/src/components/banners/InformationBanner'
+import { ExpandoRow } from 'lx/src/components/ExpandoRow/ExpandoRow'
+import { useTokenBalanceListContext } from 'lx/src/features/portfolio/TokenBalanceListContext'
 import { isMobileApp } from 'utilities/src/platform'
 
 function _HiddenTokensRow({ onPressLearnMore }: { onPressLearnMore: () => void }): JSX.Element {

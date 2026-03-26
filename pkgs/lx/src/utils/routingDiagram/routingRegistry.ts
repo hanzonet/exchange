@@ -1,12 +1,12 @@
 import { TradingApi } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { jupiterRoutingProvider } from 'uniswap/src/utils/routingDiagram/routingProviders/jupiterRoutingProvider'
+import { Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { jupiterRoutingProvider } from 'lx/src/utils/routingDiagram/routingProviders/jupiterRoutingProvider'
 import {
   lxChainedRoutingProvider,
   lxRoutingProvider,
-} from 'uniswap/src/utils/routingDiagram/routingProviders/lxRoutingProvider'
-import type { RoutingDiagramEntry, RoutingProvider } from 'uniswap/src/utils/routingDiagram/types'
+} from 'lx/src/utils/routingDiagram/routingProviders/lxRoutingProvider'
+import type { RoutingDiagramEntry, RoutingProvider } from 'lx/src/utils/routingDiagram/types'
 import { logger } from 'utilities/src/logger/logger'
 
 /**

@@ -1,5 +1,5 @@
-import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import { useLuxContext } from 'lx/src/contexts/LuxContext'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export const useHideTokenSelector = (): (() => void) => {

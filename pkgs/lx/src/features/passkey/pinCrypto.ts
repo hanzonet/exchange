@@ -15,7 +15,7 @@ export interface OprfBlindState {
 }
 
 export const ARGON2_PARAMS = { t: 3, m: 262144, p: 4 } as const // 256 MB, 3 iterations, 4 parallelism
-export const HKDF_INFO = new TextEncoder().encode('uniswap-recovery-v1')
+export const HKDF_INFO = new TextEncoder().encode('lx-recovery-v1')
 export const AES_KEY_LENGTH = 32
 export const SALT_LENGTH = 16
 const IV_LENGTH = 12

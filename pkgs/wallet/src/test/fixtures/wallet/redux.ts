@@ -1,5 +1,5 @@
 import { PreloadedState } from 'redux'
-import { createFixture } from 'uniswap/src/test/utils'
+import { createFixture } from 'lx/src/test/utils'
 import { Account } from '@luxfi/wallet/src/features/wallet/accounts/types'
 import { initialWalletState, WalletSliceState } from '@luxfi/wallet/src/features/wallet/slice'
 import { WalletState as WalletPackageState } from '@luxfi/wallet/src/state/walletReducer'

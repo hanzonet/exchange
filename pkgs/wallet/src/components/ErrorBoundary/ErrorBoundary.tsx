@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux'
 import { type Dispatch } from 'redux'
 import { Button, Flex, Switch, Text } from 'ui/src'
 import { AlertTriangleFilled } from 'ui/src/components/icons'
-import { pushNotification, resetNotifications } from 'uniswap/src/features/notifications/slice/slice'
-import { AppNotificationType } from 'uniswap/src/features/notifications/slice/types'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import { Trace } from 'uniswap/src/features/telemetry/Trace'
-import { type AppStateResetter } from 'uniswap/src/state/createAppStateResetter'
+import { pushNotification, resetNotifications } from 'lx/src/features/notifications/slice/slice'
+import { AppNotificationType } from 'lx/src/features/notifications/slice/types'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import { Trace } from 'lx/src/features/telemetry/Trace'
+import { type AppStateResetter } from 'lx/src/state/createAppStateResetter'
 import { isProdEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
 import { restartApp } from '@luxfi/wallet/src/components/ErrorBoundary/restartApp'
@@ -101,7 +101,7 @@ export function ErrorBoundary({
   const dispatch = useDispatch()
   const { t } = useTranslation()
 
-  // We want to temporary disable non global error boundaries until https://linear.app/uniswap/issue/WALL-4461 is done
+  // We want to temporary disable non global error boundaries until https://linear.app/lx/issue/WALL-4461 is done
   const disableLocalErrorBoundaries = true
   // we do not pass `name` to global error boundary
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

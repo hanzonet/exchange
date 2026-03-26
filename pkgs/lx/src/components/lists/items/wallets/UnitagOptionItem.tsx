@@ -1,11 +1,11 @@
 import { Text } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
-import { OptionItemProps } from 'uniswap/src/components/lists/items/OptionItem'
-import { UnitagOption } from 'uniswap/src/components/lists/items/types'
-import { WalletBaseOptionItem } from 'uniswap/src/components/lists/items/wallets/WalletBaseOptionItem'
-import { AccountIcon } from 'uniswap/src/features/accounts/AccountIcon'
-import { UnitagName } from 'uniswap/src/features/unitags/UnitagName'
-import { sanitizeAddressText } from 'uniswap/src/utils/addresses'
+import { OptionItemProps } from 'lx/src/components/lists/items/OptionItem'
+import { UnitagOption } from 'lx/src/components/lists/items/types'
+import { WalletBaseOptionItem } from 'lx/src/components/lists/items/wallets/WalletBaseOptionItem'
+import { AccountIcon } from 'lx/src/features/accounts/AccountIcon'
+import { UnitagName } from 'lx/src/features/unitags/UnitagName'
+import { sanitizeAddressText } from 'lx/src/utils/addresses'
 import { shortenAddress } from 'utilities/src/addresses'
 
 type UnitagOptionItemProps = {

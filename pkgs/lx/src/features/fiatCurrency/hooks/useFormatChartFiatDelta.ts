@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
-import { useAppFiatCurrency } from 'uniswap/src/features/fiatCurrency/hooks'
+import { useAppFiatCurrency } from 'lx/src/features/fiatCurrency/hooks'
 import {
   FiatDeltaFormatOptions,
   FormattedFiatDelta,
-} from 'uniswap/src/features/fiatCurrency/priceChart/formatters/shared/types'
-import { formatChartFiatDelta } from 'uniswap/src/features/fiatCurrency/priceChart/priceChartConversion'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
+} from 'lx/src/features/fiatCurrency/priceChart/formatters/shared/types'
+import { formatChartFiatDelta } from 'lx/src/features/fiatCurrency/priceChart/priceChartConversion'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
 
 /**
  * Hook for formatting chart fiat delta values using the app's current fiat currency

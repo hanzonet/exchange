@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { UseInputFocusSyncProps } from 'uniswap/src/components/CurrencyInputPanel/hooks/useInputFocusSync/types'
+import { UseInputFocusSyncProps } from 'lx/src/components/CurrencyInputPanel/hooks/useInputFocusSync/types'
 import { ONE_SECOND_MS } from 'utilities/src/time/time'
 
 // For native mobile, given that we're using a custom `DecimalPad`,

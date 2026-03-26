@@ -1,6 +1,6 @@
 import { FeatureFlags, useFeatureFlag } from '@luxexchange/gating'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useHasAccountMismatchCallback } from 'uniswap/src/features/smartWallet/mismatch/hooks'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useHasAccountMismatchCallback } from 'lx/src/features/smartWallet/mismatch/hooks'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export function useGetCanSignPermits(): (chainId?: UniverseChainId) => boolean {

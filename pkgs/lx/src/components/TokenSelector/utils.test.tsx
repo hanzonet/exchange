@@ -1,5 +1,5 @@
-import { OnchainItemSectionName } from 'uniswap/src/components/lists/OnchainItemList/types'
-import { isSwapListLoading } from 'uniswap/src/components/TokenSelector/utils'
+import { OnchainItemSectionName } from 'lx/src/components/lists/OnchainItemList/types'
+import { isSwapListLoading } from 'lx/src/components/TokenSelector/utils'
 
 describe(isSwapListLoading, () => {
   it('returns true if loading and no sections', () => {

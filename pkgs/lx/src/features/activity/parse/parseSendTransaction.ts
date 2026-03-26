@@ -1,7 +1,7 @@
 import { Nft, OnChainTransaction, Token } from '@luxamm/client-data-api/dist/data/v1/types_pb'
 import { SpamCode } from '@luxexchange/api'
-import { AssetType } from 'uniswap/src/entities/assets'
-import { extractDappInfo } from 'uniswap/src/features/activity/utils/extractDappInfo'
+import { AssetType } from 'lx/src/entities/assets'
+import { extractDappInfo } from 'lx/src/features/activity/utils/extractDappInfo'
 import {
   AssetCase,
   deriveCurrencyAmountFromAssetResponse,
@@ -9,13 +9,13 @@ import {
   isRestTokenSpam,
   mapTokenTypeToAssetType,
   parseUSDValueFromAssetChange,
-} from 'uniswap/src/features/activity/utils/remote'
+} from 'lx/src/features/activity/utils/remote'
 import {
   SendTokenTransactionInfo,
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export default function parseSendTransaction(
   transaction: NonNullable<TransactionListQueryResponse>,

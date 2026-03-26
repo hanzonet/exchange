@@ -1,10 +1,10 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { WarningModal } from 'uniswap/src/components/modals/WarningModal/WarningModal'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
-import { useSwapReviewCallbacksStore } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/useSwapReviewCallbacksStore'
-import { useSwapReviewTransactionStore } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewTransactionStore/useSwapReviewTransactionStore'
-import { useSwapReviewWarningStore } from 'uniswap/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
+import { WarningModal } from 'lx/src/components/modals/WarningModal/WarningModal'
+import { ModalName } from 'lx/src/features/telemetry/constants'
+import { useSwapReviewCallbacksStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewCallbacksStore/useSwapReviewCallbacksStore'
+import { useSwapReviewTransactionStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewTransactionStore/useSwapReviewTransactionStore'
+import { useSwapReviewWarningStore } from 'lx/src/features/transactions/swap/review/stores/swapReviewWarningStore/useSwapReviewWarningStore'
 
 export const SwapReviewWarningModal = memo(function SwapReviewWarningModal(): JSX.Element | null {
   const { t } = useTranslation()

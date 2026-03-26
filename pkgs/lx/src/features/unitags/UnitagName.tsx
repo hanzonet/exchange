@@ -1,7 +1,7 @@
 import { Flex, FlexProps, Text, TextProps } from 'ui/src'
 import { Unitag } from 'ui/src/components/icons/Unitag'
 import { fonts, spacing } from 'ui/src/theme'
-import { UNITAG_SUFFIX } from 'uniswap/src/features/unitags/constants'
+import { UNITAG_SUFFIX } from 'lx/src/features/unitags/constants'
 
 export function UnitagName({
   name,

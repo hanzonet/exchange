@@ -1,4 +1,4 @@
-import type { DelegationService } from 'uniswap/src/features/smartWallet/delegation/delegation'
+import type { DelegationService } from 'lx/src/features/smartWallet/delegation/delegation'
 import type { Logger } from 'utilities/src/logger/logger'
 
 interface MismatchCtx {

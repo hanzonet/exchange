@@ -1,5 +1,5 @@
 import { FeeType } from '@luxexchange/api'
-import { mapGasServiceV2Response } from 'uniswap/src/data/apiClients/gasService/mapGasServiceV2Response'
+import { mapGasServiceV2Response } from 'lx/src/data/apiClients/gasService/mapGasServiceV2Response'
 import { describe, expect, it } from 'vitest'
 
 const CLIENT_STRATEGY = {

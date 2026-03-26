@@ -3,20 +3,20 @@ import { useTranslation } from 'react-i18next'
 import { Button, Flex, IconButton, Text } from 'ui/src'
 import { HelpCenter } from 'ui/src/components/icons/HelpCenter'
 import { X } from 'ui/src/components/icons/X'
-import { WarningSeverity } from 'uniswap/src/components/modals/WarningModal/types'
-import { WarningModalContent } from 'uniswap/src/components/modals/WarningModal/WarningModal'
-import { LearnMoreLink } from 'uniswap/src/components/text/LearnMoreLink'
-import { lxUrls } from 'uniswap/src/constants/urls'
-import { ModalName } from 'uniswap/src/features/telemetry/constants'
+import { WarningSeverity } from 'lx/src/components/modals/WarningModal/types'
+import { WarningModalContent } from 'lx/src/components/modals/WarningModal/WarningModal'
+import { LearnMoreLink } from 'lx/src/components/text/LearnMoreLink'
+import { lxUrls } from 'lx/src/constants/urls'
+import { ModalName } from 'lx/src/features/telemetry/constants'
 import {
   useTransactionSettingsActions,
   useTransactionSettingsStore,
-} from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
-import { TransactionModalInnerContainer } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModal'
-import { useTransactionModalContext } from 'uniswap/src/features/transactions/components/TransactionModal/TransactionModalContext'
-import { getErrorContent, TransactionStepFailedError } from 'uniswap/src/features/transactions/errors'
-import { TransactionStepType } from 'uniswap/src/features/transactions/steps/types'
-import { openUri } from 'uniswap/src/utils/linking'
+} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+import { TransactionModalInnerContainer } from 'lx/src/features/transactions/components/TransactionModal/TransactionModal'
+import { useTransactionModalContext } from 'lx/src/features/transactions/components/TransactionModal/TransactionModalContext'
+import { getErrorContent, TransactionStepFailedError } from 'lx/src/features/transactions/errors'
+import { TransactionStepType } from 'lx/src/features/transactions/steps/types'
+import { openUri } from 'lx/src/utils/linking'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function SwapErrorScreen({
@@ -51,7 +51,7 @@ export function SwapErrorScreen({
       onPressRetry()
     } else if (isLXBackendError) {
       // TODO(WEB-7668): move this into onPressRetry logic.
-      // Update swap preferences for this session to exclude LX if Uniswap x failed
+      // Update swap preferences for this session to exclude LX if Lx x failed
       const updatedProtocols = selectedProtocols.filter((protocol) => protocol !== TradingApi.ProtocolItems.LXSWAP_V2)
       setSelectedProtocols(updatedProtocols)
     } else {

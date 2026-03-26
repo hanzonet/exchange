@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
-import { selectTransactions } from 'uniswap/src/features/transactions/selectors'
-import { TransactionDetails, TransactionType } from 'uniswap/src/features/transactions/types/transactionDetails'
+import { selectTransactions } from 'lx/src/features/transactions/selectors'
+import { TransactionDetails, TransactionType } from 'lx/src/features/transactions/types/transactionDetails'
 import { flattenObjectOfObjects } from 'utilities/src/primitives/objects'
 
 export function useMostRecentSwapTx(address: Address): TransactionDetails | undefined {

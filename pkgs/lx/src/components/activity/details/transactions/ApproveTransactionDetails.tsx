@@ -2,21 +2,21 @@ import { SharedEventName } from '@luxamm/analytics-events'
 import { useTranslation } from 'react-i18next'
 import { Flex, Text, TouchableArea } from 'ui/src'
 import { iconSizes } from 'ui/src/theme'
-import { formatApprovalAmount } from 'uniswap/src/components/activity/utils'
-import { CurrencyLogo } from 'uniswap/src/components/CurrencyLogo/CurrencyLogo'
-import { useLuxContext } from 'uniswap/src/contexts/LuxContext'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { ElementName, ModalName } from 'uniswap/src/features/telemetry/constants'
-import { sendAnalyticsEvent } from 'uniswap/src/features/telemetry/send'
-import { useCurrencyInfo } from 'uniswap/src/features/tokens/useCurrencyInfo'
+import { formatApprovalAmount } from 'lx/src/components/activity/utils'
+import { CurrencyLogo } from 'lx/src/components/CurrencyLogo/CurrencyLogo'
+import { useLuxContext } from 'lx/src/contexts/LuxContext'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { ElementName, ModalName } from 'lx/src/features/telemetry/constants'
+import { sendAnalyticsEvent } from 'lx/src/features/telemetry/send'
+import { useCurrencyInfo } from 'lx/src/features/tokens/useCurrencyInfo'
 import {
   ApproveTransactionInfo,
   Permit2ApproveTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
-import { buildCurrencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/features/transactions/types/transactionDetails'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
+import { buildCurrencyId } from 'lx/src/utils/currencyId'
 import { isWebPlatform } from 'utilities/src/platform'
 
 export function ApproveTransactionDetails({

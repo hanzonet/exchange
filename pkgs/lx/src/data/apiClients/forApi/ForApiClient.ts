@@ -1,7 +1,7 @@
 import { createFetchClient, createForApiClient, provideSessionService } from '@luxexchange/api'
 import { FeatureFlags, getFeatureFlag } from '@luxexchange/gating'
-import { getForApiUrl } from 'uniswap/src/constants/urls'
-import { getForApiHeaders } from 'uniswap/src/features/fiatOnRamp/constants'
+import { getForApiUrl } from 'lx/src/constants/urls'
+import { getForApiHeaders } from 'lx/src/features/fiatOnRamp/constants'
 
 /**
  * Singleton FetchClient for FOR API.

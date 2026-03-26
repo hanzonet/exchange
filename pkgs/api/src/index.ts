@@ -1,7 +1,7 @@
 /** biome-ignore-all assist/source/organizeImports: we want to manually group exports by category */
 
 /**
- * @luxexchange/api - Unified data layer for Uniswap Universe
+ * @luxexchange/api - Unified data layer for Lx Universe
  *
  * This is the ONLY public entry point for the API package.
  * All exports must be explicitly listed here.
@@ -147,12 +147,12 @@ export {
   type XVerificationServiceClient,
 } from '@luxexchange/api/src/clients/x/createXVerificationServiceClient'
 
-// Uniswap API
+// Lx API
 export {
   createLxApiClient,
   type LxApiClient,
   type LxApiClientContext,
-} from '@luxexchange/api/src/clients/uniswap/createLxApiClient'
+} from '@luxexchange/api/src/clients/lx/createLxApiClient'
 
 // Compliance API
 export {
@@ -198,7 +198,7 @@ export {
 export type {
   EstimateGasFeeRequest as GasServiceEstimateRequest,
   EstimateGasFeeResponse as GasServiceEstimateResponse,
-} from '@luxamm/client-unirpc-v2/dist/uniswap/unirpc/v2/service_pb'
+} from '@luxamm/client-unirpc-v2/dist/lx/unirpc/v2/service_pb'
 
 // Data API Service (ConnectRPC - listTopTokens, listTopPools, getPortfolio, etc.)
 export {

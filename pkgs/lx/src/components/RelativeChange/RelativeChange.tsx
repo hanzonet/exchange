@@ -1,9 +1,9 @@
 import { ColorTokens, Flex, Text } from 'ui/src'
 import { Caret } from 'ui/src/components/icons/Caret'
 import { fonts, IconSizeTokens } from 'ui/src/theme'
-import { useAppFiatCurrencyInfo } from 'uniswap/src/features/fiatCurrency/hooks'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { useAppFiatCurrencyInfo } from 'lx/src/features/fiatCurrency/hooks'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 import { NumberType } from 'utilities/src/format/types'
 
 interface RelativeChangeProps {

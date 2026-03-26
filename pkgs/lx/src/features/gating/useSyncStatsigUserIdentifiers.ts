@@ -16,7 +16,7 @@ export const StatsigCustomIdKeys = {
 interface UseStatsigUserIdentifiersParams {
   /** The currently active wallet address */
   address?: string | null
-  /** The uniswap identifier from the sessions service */
+  /** The lx identifier from the sessions service */
   lxIdentifier?: string | null
 }
 

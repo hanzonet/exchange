@@ -8,8 +8,8 @@ import { iconSizes } from 'ui/src/theme'
 import {
   SERVICE_PROVIDER_ICON_BORDER_RADIUS,
   ServiceProviderLogoStyles,
-} from 'uniswap/src/features/fiatOnRamp/constants'
-import { useAppInsets } from 'uniswap/src/hooks/useAppInsets'
+} from 'lx/src/features/fiatOnRamp/constants'
+import { useAppInsets } from 'lx/src/hooks/useAppInsets'
 
 export function FiatOnRampConnectingView({
   isOffRamp,

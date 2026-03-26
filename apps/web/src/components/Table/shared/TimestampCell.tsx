@@ -1,5 +1,5 @@
 import { Anchor, styled } from '@luxfi/ui/src'
-import { useCurrentLocale } from 'uniswap/src/features/language/hooks'
+import { useCurrentLocale } from 'lx/src/features/language/hooks'
 import { TableText } from '~/components/Table/shared/TableText'
 import { useAbbreviatedTimeString } from '~/components/Table/utils/useAbbreviatedTimeString'
 import { MouseoverTooltip, TooltipSize } from '~/components/Tooltip'

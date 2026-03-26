@@ -1,12 +1,12 @@
 import { Pool, SearchTokensResponse, SearchType } from '@luxamm/client-search/dist/search/v1/api_pb'
 import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { searchPoolToPoolSearchResult, useSearchTokensAndPoolsQuery } from 'uniswap/src/data/rest/searchTokensAndPools'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { PoolSearchHistoryResult } from 'uniswap/src/features/search/SearchHistoryResult'
-import { NUMBER_OF_RESULTS_LONG } from 'uniswap/src/features/search/SearchModal/constants'
+import { searchPoolToPoolSearchResult, useSearchTokensAndPoolsQuery } from 'lx/src/data/rest/searchTokensAndPools'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { PoolSearchHistoryResult } from 'lx/src/features/search/SearchHistoryResult'
+import { NUMBER_OF_RESULTS_LONG } from 'lx/src/features/search/SearchModal/constants'
 import { useEvent } from 'utilities/src/react/hooks'
 
 export function useSearchPools({

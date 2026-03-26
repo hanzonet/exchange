@@ -3,10 +3,10 @@ import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, GeneratedIcon, Text } from 'ui/src'
 import { Person } from 'ui/src/components/icons'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { useSectionsForNoQuerySearch } from 'uniswap/src/features/search/SearchModal/hooks/useSectionsForNoQuerySearch'
-import { SearchModalList, SearchModalListProps } from 'uniswap/src/features/search/SearchModal/SearchModalList'
-import { SearchTab } from 'uniswap/src/features/search/SearchModal/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { useSectionsForNoQuerySearch } from 'lx/src/features/search/SearchModal/hooks/useSectionsForNoQuerySearch'
+import { SearchModalList, SearchModalListProps } from 'lx/src/features/search/SearchModal/SearchModalList'
+import { SearchTab } from 'lx/src/features/search/SearchModal/types'
 
 function EmptyPretypeSection({ title, icon: Icon }: { title: string; icon: GeneratedIcon }): JSX.Element {
   return (

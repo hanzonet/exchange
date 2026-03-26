@@ -1,16 +1,16 @@
 import { TradingApi } from '@luxexchange/api'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import {
   TransactionOriginType,
   TransactionStatus,
   TransactionType,
   LxSwapOrderDetails,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 import {
   convertOrderStatusToTransactionStatus,
   convertOrderTypeToRouting,
   isLimitOrder,
-} from 'uniswap/src/features/transactions/utils/lxSwap.utils'
+} from 'lx/src/features/transactions/utils/lxSwap.utils'
 
 describe('LX Utils', () => {
   describe('convertOrderTypeToRouting', () => {

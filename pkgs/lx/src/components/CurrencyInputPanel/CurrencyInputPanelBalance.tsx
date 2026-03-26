@@ -1,10 +1,10 @@
 import type { Currency, CurrencyAmount } from '@luxamm/sdk-core'
 import { Text, type TextProps } from 'ui/src'
-import { useConnectionStatus } from 'uniswap/src/features/accounts/store/hooks'
-import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { CurrencyField } from 'uniswap/src/types/currency'
-import { getSymbolDisplayText } from 'uniswap/src/utils/currency'
+import { useConnectionStatus } from 'lx/src/features/accounts/store/hooks'
+import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { CurrencyField } from 'lx/src/types/currency'
+import { getSymbolDisplayText } from 'lx/src/utils/currency'
 import { NumberType } from 'utilities/src/format/types'
 
 interface CurrencyInputBalanceProps {

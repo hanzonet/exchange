@@ -4,12 +4,12 @@ import range from 'lodash/range'
 import {
   MINIMUM_SWAP_LOG_LENGTH,
   TOLERANCE_INDEX,
-} from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/constants'
+} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/constants'
 import {
   getDataWithoutPadding,
   getInputAmountIndices,
   slidingWindowRangeMatch,
-} from 'uniswap/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/utils'
+} from 'lx/src/features/transactions/swap/components/UnichainInstantBalanceModal/getOutputAmountFromSwapLogAndFormData.ts/utils'
 import { logger } from 'utilities/src/logger/logger'
 
 /**

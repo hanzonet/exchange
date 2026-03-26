@@ -8,12 +8,12 @@ import { Flex, TouchableArea } from '@luxfi/ui/src'
 import { useLayoutAnimationOnChange } from '@luxfi/ui/src/animations/layout'
 import { AnglesMaximize } from '@luxfi/ui/src/components/icons/AnglesMaximize'
 import { AnglesMinimize } from '@luxfi/ui/src/components/icons/AnglesMinimize'
-import { getPortfolioHistoricalValueChartQuery } from 'uniswap/src/data/rest/getPortfolioChart'
-import { usePortfolioTotalValue } from 'uniswap/src/features/dataApi/balances/balancesRest'
-import { PortfolioBalance } from 'uniswap/src/features/portfolio/PortfolioBalance/PortfolioBalance'
-import { usePortfolioChartBalanceMismatch } from 'uniswap/src/features/portfolio/usePortfolioChartBalanceMismatch'
-import { useHapticFeedback } from 'uniswap/src/features/settings/useHapticFeedback/useHapticFeedback'
-import { TestID } from 'uniswap/src/test/fixtures/testIDs'
+import { getPortfolioHistoricalValueChartQuery } from 'lx/src/data/rest/getPortfolioChart'
+import { usePortfolioTotalValue } from 'lx/src/features/dataApi/balances/balancesRest'
+import { PortfolioBalance } from 'lx/src/features/portfolio/PortfolioBalance/PortfolioBalance'
+import { usePortfolioChartBalanceMismatch } from 'lx/src/features/portfolio/usePortfolioChartBalanceMismatch'
+import { useHapticFeedback } from 'lx/src/features/settings/useHapticFeedback/useHapticFeedback'
+import { TestID } from 'lx/src/test/fixtures/testIDs'
 
 interface PortfolioChartSectionProps {
   evmAddress: string

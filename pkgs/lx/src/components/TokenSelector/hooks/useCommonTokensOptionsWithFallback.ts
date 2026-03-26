@@ -1,16 +1,16 @@
 import { GqlResult } from '@luxexchange/api'
 import { useMemo } from 'react'
-import { TokenOption } from 'uniswap/src/components/lists/items/types'
-import { useCommonTokensOptions } from 'uniswap/src/components/TokenSelector/hooks/useCommonTokensOptions'
-import { useCurrencies } from 'uniswap/src/components/TokenSelector/hooks/useCurrencies'
+import { TokenOption } from 'lx/src/components/lists/items/types'
+import { useCommonTokensOptions } from 'lx/src/components/TokenSelector/hooks/useCommonTokensOptions'
+import { useCurrencies } from 'lx/src/components/TokenSelector/hooks/useCurrencies'
 import {
   currencyInfosToTokenOptions,
   useCurrencyInfosToTokenOptions,
-} from 'uniswap/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
-import { COMMON_BASES } from 'uniswap/src/constants/routing'
-import type { AddressGroup } from 'uniswap/src/features/accounts/store/types/AccountsState'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { currencyId } from 'uniswap/src/utils/currencyId'
+} from 'lx/src/components/TokenSelector/hooks/useCurrencyInfosToTokenOptions'
+import { COMMON_BASES } from 'lx/src/constants/routing'
+import type { AddressGroup } from 'lx/src/features/accounts/store/types/AccountsState'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { currencyId } from 'lx/src/utils/currencyId'
 
 export function useCommonTokensOptionsWithFallback({
   addresses,

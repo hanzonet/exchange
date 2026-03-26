@@ -1,5 +1,5 @@
-import { useAccountsStore } from 'uniswap/src/features/accounts/store/hooks'
-import { FlexiblePlatformInput } from 'uniswap/src/features/accounts/store/utils/flexibleInput'
+import { useAccountsStore } from 'lx/src/features/accounts/store/hooks'
+import { FlexiblePlatformInput } from 'lx/src/features/accounts/store/utils/flexibleInput'
 
 export function useIsMissingPlatformWallet(expectedFlexiblePlatform: FlexiblePlatformInput | undefined): boolean {
   return useAccountsStore((s) => {

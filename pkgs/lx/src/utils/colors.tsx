@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useExtractedColors, useSporeColors } from 'ui/src'
 import { GlobalColorNames, colors as GlobalColors, GlobalPalette, opacify } from 'ui/src/theme'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import { assert } from 'utilities/src/errors'
 import { hexToRGB } from 'utilities/src/theme/colors'
 

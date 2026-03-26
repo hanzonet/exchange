@@ -1,18 +1,18 @@
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { getPossibleChainMatchFromSearchWord } from 'uniswap/src/utils/search/getPossibleChainMatchFromSearchWord'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { getPossibleChainMatchFromSearchWord } from 'lx/src/utils/search/getPossibleChainMatchFromSearchWord'
 
 // Mock the dependencies before importing the function
-vi.mock('uniswap/src/features/chains/chainInfo', () => ({
+vi.mock('lx/src/features/chains/chainInfo', () => ({
   getChainInfo: vi.fn(),
 }))
 
-vi.mock('uniswap/src/features/chains/utils', () => ({
+vi.mock('lx/src/features/chains/utils', () => ({
   isTestnetChain: vi.fn(),
 }))
 
 // Import the mocked functions
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { isTestnetChain } from 'uniswap/src/features/chains/utils'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { isTestnetChain } from 'lx/src/features/chains/utils'
 
 const mockGetChainInfo = getChainInfo as any
 const mockIsTestnetChain = isTestnetChain as any

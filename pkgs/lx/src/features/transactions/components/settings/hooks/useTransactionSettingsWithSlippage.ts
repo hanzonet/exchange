@@ -1,16 +1,16 @@
 import {
   type ModalIdWithSlippage,
   TransactionSettingsModalId,
-} from 'uniswap/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
+} from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/createTransactionSettingsModalStore'
 import {
   useModalHide,
   useModalShow,
   useModalVisibility,
-} from 'uniswap/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
+} from 'lx/src/features/transactions/components/settings/stores/TransactionSettingsModalStore/useTransactionSettingsModalStore'
 import {
   useTransactionSettingsActions,
   useTransactionSettingsStore,
-} from 'uniswap/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
+} from 'lx/src/features/transactions/components/settings/stores/transactionSettingsStore/useTransactionSettingsStore'
 import { isMobileApp } from 'utilities/src/platform'
 import { useEvent } from 'utilities/src/react/hooks'
 

@@ -1,18 +1,18 @@
 import { useMemo } from 'react'
-import { useLuxContextSelector } from 'uniswap/src/contexts/LuxContext'
-import { useEnabledChains } from 'uniswap/src/features/chains/hooks/useEnabledChains'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
-import { isL2ChainId } from 'uniswap/src/features/chains/utils'
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
-import { getEVMTradeRepository } from 'uniswap/src/features/repositories'
-import { useWithQuoteLogging } from 'uniswap/src/features/transactions/swap/hooks/useTrade/logging'
-import { createEVMTradeService } from 'uniswap/src/features/transactions/swap/services/tradeService/evmTradeService'
-import { createSolanaTradeService } from 'uniswap/src/features/transactions/swap/services/tradeService/svmTradeService'
+import { useLuxContextSelector } from 'lx/src/contexts/LuxContext'
+import { useEnabledChains } from 'lx/src/features/chains/hooks/useEnabledChains'
+import { UniverseChainId } from 'lx/src/features/chains/types'
+import { isL2ChainId } from 'lx/src/features/chains/utils'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
+import { getEVMTradeRepository } from 'lx/src/features/repositories'
+import { useWithQuoteLogging } from 'lx/src/features/transactions/swap/hooks/useTrade/logging'
+import { createEVMTradeService } from 'lx/src/features/transactions/swap/services/tradeService/evmTradeService'
+import { createSolanaTradeService } from 'lx/src/features/transactions/swap/services/tradeService/svmTradeService'
 import {
   createTradeService,
   TradeService,
-} from 'uniswap/src/features/transactions/swap/services/tradeService/tradeService'
-import { getMinAutoSlippageToleranceL2 } from 'uniswap/src/features/transactions/swap/utils/tradingApi'
+} from 'lx/src/features/transactions/swap/services/tradeService/tradeService'
+import { getMinAutoSlippageToleranceL2 } from 'lx/src/features/transactions/swap/utils/tradingApi'
 import { getLogger } from 'utilities/src/logger/logger'
 
 /**

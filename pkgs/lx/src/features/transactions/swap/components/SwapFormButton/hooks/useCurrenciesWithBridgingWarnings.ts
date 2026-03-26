@@ -1,6 +1,6 @@
-import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { useNeedsBridgedAssetWarning } from 'uniswap/src/features/transactions/swap/hooks/useNeedsBridgedAssetWarning'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { useNeedsBridgedAssetWarning } from 'lx/src/features/transactions/swap/hooks/useNeedsBridgedAssetWarning'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 type UseCurrenciesWithBridgingWarnings = () =>
   | {

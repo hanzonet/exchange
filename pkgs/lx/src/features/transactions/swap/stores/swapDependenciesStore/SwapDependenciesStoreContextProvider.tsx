@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react'
 import { useEffect, useMemo, useState } from 'react'
-import { useCreateGetExecuteSwapService } from 'uniswap/src/features/transactions/swap/services/hooks/useExecuteSwap'
-import { createSwapDependenciesStore } from 'uniswap/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
-import { SwapDependenciesStoreContext } from 'uniswap/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
-import { useSwapFormStore } from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
-import type { SwapHandlers } from 'uniswap/src/features/transactions/swap/types/swapHandlers'
+import { useCreateGetExecuteSwapService } from 'lx/src/features/transactions/swap/services/hooks/useExecuteSwap'
+import { createSwapDependenciesStore } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/createSwapDependenciesStore'
+import { SwapDependenciesStoreContext } from 'lx/src/features/transactions/swap/stores/swapDependenciesStore/SwapDependenciesStoreContext'
+import { useSwapFormStore } from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+import type { SwapHandlers } from 'lx/src/features/transactions/swap/types/swapHandlers'
 import { useHasValueChanged } from 'utilities/src/react/useHasValueChanged'
 
 interface SwapDependenciesStoreContextProviderProps {

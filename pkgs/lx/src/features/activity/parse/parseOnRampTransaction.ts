@@ -1,6 +1,6 @@
 import { FiatOnRampTransaction } from '@luxamm/client-data-api/dist/data/v1/types_pb'
-import { getAddressFromAsset } from 'uniswap/src/features/activity/utils/remote'
-import { fromGraphQLChain } from 'uniswap/src/features/chains/utils'
+import { getAddressFromAsset } from 'lx/src/features/activity/utils/remote'
+import { fromGraphQLChain } from 'lx/src/features/chains/utils'
 import {
   OnRampPurchaseInfo,
   OnRampTransactionInfo,
@@ -8,7 +8,7 @@ import {
   TransactionDetailsType,
   TransactionListQueryResponse,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 // TODO: WALL-5532 - Add support for offramp transactions on the graphql service
 export default function parseOnRampTransaction(

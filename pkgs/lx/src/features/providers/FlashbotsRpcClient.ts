@@ -1,11 +1,11 @@
-import { Platform } from 'uniswap/src/features/platforms/types/Platform'
+import { Platform } from 'lx/src/features/platforms/types/Platform'
 import {
   buildFlashbotsUrl,
   FLASHBOTS_DEFAULT_REFUND_PERCENT,
   FLASHBOTS_SIGNATURE_HEADER,
   SignerInfo,
-} from 'uniswap/src/features/providers/FlashbotsCommon'
-import { areAddressesEqual } from 'uniswap/src/utils/addresses'
+} from 'lx/src/features/providers/FlashbotsCommon'
+import { areAddressesEqual } from 'lx/src/utils/addresses'
 import {
   Chain,
   ClientConfig,

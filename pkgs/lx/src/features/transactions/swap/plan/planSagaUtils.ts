@@ -23,16 +23,16 @@ import {
   createOrRefreshPlan,
   findFirstActiveStep,
   getStepLogArray,
-} from 'uniswap/src/features/transactions/swap/plan/utils'
+} from 'lx/src/features/transactions/swap/plan/utils'
 import {
   ActivePlanData,
   activePlanStore,
-} from 'uniswap/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
-import { ValidatedTradeInput } from 'uniswap/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
-import { ValidatedChainedSwapTxAndGasInfo } from 'uniswap/src/features/transactions/swap/types/swapTxAndGasInfo'
-import { ChainedActionTrade, Trade } from 'uniswap/src/features/transactions/swap/types/trade'
-import { WrapType } from 'uniswap/src/features/transactions/types/wrap'
-import { signalSwapModalClosed } from 'uniswap/src/utils/saga'
+} from 'lx/src/features/transactions/swap/review/stores/activePlan/activePlanStore'
+import { ValidatedTradeInput } from 'lx/src/features/transactions/swap/services/tradeService/transformations/buildQuoteRequest'
+import { ValidatedChainedSwapTxAndGasInfo } from 'lx/src/features/transactions/swap/types/swapTxAndGasInfo'
+import { ChainedActionTrade, Trade } from 'lx/src/features/transactions/swap/types/trade'
+import { WrapType } from 'lx/src/features/transactions/types/wrap'
+import { signalSwapModalClosed } from 'lx/src/utils/saga'
 import { isProdEnv } from 'utilities/src/environment/env'
 import { logger } from 'utilities/src/logger/logger'
 

@@ -3,11 +3,11 @@ import { PropsWithChildren, useMemo } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Flex, Text } from 'ui/src'
 import { Flag } from 'ui/src/components/icons/Flag'
-import { CurrencyInfo, TokenList } from 'uniswap/src/features/dataApi/types'
-import { useLocalizationContext } from 'uniswap/src/features/language/LocalizationContext'
-import { getFeeColor } from 'uniswap/src/features/tokens/warnings/safetyUtils'
-import { TokenProtectionWarning } from 'uniswap/src/features/tokens/warnings/types'
-import { WarningModalInfoContainer } from 'uniswap/src/features/tokens/warnings/WarningInfoModalContainer'
+import { CurrencyInfo, TokenList } from 'lx/src/features/dataApi/types'
+import { useLocalizationContext } from 'lx/src/features/language/LocalizationContext'
+import { getFeeColor } from 'lx/src/features/tokens/warnings/safetyUtils'
+import { TokenProtectionWarning } from 'lx/src/features/tokens/warnings/types'
+import { WarningModalInfoContainer } from 'lx/src/features/tokens/warnings/WarningInfoModalContainer'
 
 function getWarningFlags({
   currencyInfo,

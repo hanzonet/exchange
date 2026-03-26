@@ -1,9 +1,9 @@
 import { TFunction } from 'i18next'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useUnitagsUsernameQuery } from 'uniswap/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
-import { useENS } from 'uniswap/src/features/ens/useENS'
-import { UNITAG_VALID_REGEX } from 'uniswap/src/features/unitags/constants'
+import { useUnitagsUsernameQuery } from 'lx/src/data/apiClients/unitagsApi/useUnitagsUsernameQuery'
+import { useENS } from 'lx/src/features/ens/useENS'
+import { UNITAG_VALID_REGEX } from 'lx/src/features/unitags/constants'
 import { ONE_MINUTE_MS } from 'utilities/src/time/time'
 
 const MIN_UNITAG_LENGTH = 3

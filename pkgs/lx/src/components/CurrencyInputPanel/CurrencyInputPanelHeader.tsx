@@ -5,14 +5,14 @@ import { spacing } from 'ui/src/theme/spacing'
 import {
   AmountInputPresets,
   PRESET_BUTTON_PROPS,
-} from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
-import { PresetAmountButton } from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
-import type { PresetPercentage } from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/types'
-import { PRESET_PERCENTAGES } from 'uniswap/src/components/CurrencyInputPanel/AmountInputPresets/utils'
-import { DefaultTokenOptions } from 'uniswap/src/components/CurrencyInputPanel/DefaultTokenOptions/DefaultTokenOptions'
-import type { CurrencyInfo } from 'uniswap/src/features/dataApi/types'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import { CurrencyField } from 'uniswap/src/types/currency'
+} from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/AmountInputPresets'
+import { PresetAmountButton } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/PresetAmountButton'
+import type { PresetPercentage } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/types'
+import { PRESET_PERCENTAGES } from 'lx/src/components/CurrencyInputPanel/AmountInputPresets/utils'
+import { DefaultTokenOptions } from 'lx/src/components/CurrencyInputPanel/DefaultTokenOptions/DefaultTokenOptions'
+import type { CurrencyInfo } from 'lx/src/features/dataApi/types'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import { CurrencyField } from 'lx/src/types/currency'
 import { isExtensionApp, isWebAppDesktop, isWebPlatform } from 'utilities/src/platform'
 
 interface CurrencyInputPanelHeaderProps {

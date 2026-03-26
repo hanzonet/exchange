@@ -2,14 +2,14 @@ import type {
   DecimalPlaceNumber,
   FiatDeltaFormatter,
   TrimTrailingZerosParams,
-} from 'uniswap/src/features/fiatCurrency/priceChart/formatters/shared/types'
+} from 'lx/src/features/fiatCurrency/priceChart/formatters/shared/types'
 import {
   FIAT_DELTA_THRESHOLD,
   formatThreshold,
   formatWithDecimals,
   formatZero,
   parseFormattedNumber,
-} from 'uniswap/src/features/fiatCurrency/priceChart/formatters/shared/utils'
+} from 'lx/src/features/fiatCurrency/priceChart/formatters/shared/utils'
 
 const DECIMAL_THRESHOLDS = [
   { min: 1, decimals: 2 },

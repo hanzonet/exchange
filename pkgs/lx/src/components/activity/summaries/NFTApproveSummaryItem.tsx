@@ -1,10 +1,10 @@
-import { NFTSummaryItem } from 'uniswap/src/components/activity/summaries/NFTSummaryItem'
-import { SummaryItemProps } from 'uniswap/src/components/activity/types'
+import { NFTSummaryItem } from 'lx/src/components/activity/summaries/NFTSummaryItem'
+import { SummaryItemProps } from 'lx/src/components/activity/types'
 import {
   NFTApproveTransactionInfo,
   TransactionDetails,
   TransactionType,
-} from 'uniswap/src/features/transactions/types/transactionDetails'
+} from 'lx/src/features/transactions/types/transactionDetails'
 
 export function NFTApproveSummaryItem({
   transaction,

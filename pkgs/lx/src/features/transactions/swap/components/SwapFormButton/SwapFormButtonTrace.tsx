@@ -1,10 +1,10 @@
 import { useMemo } from 'react'
-import { ElementName } from 'uniswap/src/features/telemetry/constants'
-import { Trace } from 'uniswap/src/features/telemetry/Trace'
+import { ElementName } from 'lx/src/features/telemetry/constants'
+import { Trace } from 'lx/src/features/telemetry/Trace'
 import {
   useSwapFormStore,
   useSwapFormStoreDerivedSwapInfo,
-} from 'uniswap/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
+} from 'lx/src/features/transactions/swap/stores/swapFormStore/useSwapFormStore'
 
 const useTraceProperties = (): {
   chainId: number

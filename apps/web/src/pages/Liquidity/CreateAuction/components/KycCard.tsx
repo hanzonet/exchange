@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Button, Flex, Text } from '@luxfi/ui/src'
-import { lxUrls } from 'uniswap/src/constants/urls'
+import { lxUrls } from 'lx/src/constants/urls'
 import { ExternalLink } from '~/theme/components/Links'
 
 export function KycCard() {

@@ -3,9 +3,9 @@ import type { ImageSourcePropType } from 'react-native'
 import { Flex, FlexProps, Image, Loader, useSporeColors } from 'ui/src'
 import { ALL_NETWORKS_LOGO } from 'ui/src/assets'
 import { iconSizes, zIndexes } from 'ui/src/theme'
-import { getBadgeBorderRadius, getBadgeOuterSize } from 'uniswap/src/components/CurrencyLogo/badgeSizeUtils'
-import { getChainInfo } from 'uniswap/src/features/chains/chainInfo'
-import { UniverseChainId } from 'uniswap/src/features/chains/types'
+import { getBadgeBorderRadius, getBadgeOuterSize } from 'lx/src/components/CurrencyLogo/badgeSizeUtils'
+import { getChainInfo } from 'lx/src/features/chains/chainInfo'
+import { UniverseChainId } from 'lx/src/features/chains/types'
 import { isMobileWeb } from 'utilities/src/platform'
 
 type NetworkLogoProps = FlexProps & {
