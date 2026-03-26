@@ -3,7 +3,7 @@ import {
   ContentStyle,
   Notification,
   OnClick,
-} from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
 import { type InAppNotification, OnClickAction } from '@luxexchange/api'
 import { DynamicConfigs, getDynamicConfigValue, OutageBannerChainIdConfigKey } from '@luxexchange/gating'
 import { createNotificationDataSource } from '@luxexchange/notifications/src/notification-data-source/implementations/createNotificationDataSource'

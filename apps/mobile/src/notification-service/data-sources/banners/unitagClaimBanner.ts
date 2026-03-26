@@ -4,7 +4,7 @@ import {
   Notification,
   NotificationVersion,
   OnClick,
-} from '@luxamm/client-notification-service/dist/lx/notificationservice/v1/api_pb'
+} from '@luxamm/client-notification-service/dist/uniswap/notificationservice/v1/api_pb'
 import { BackgroundType, ContentStyle, type InAppNotification, OnClickAction, SharedQueryClient } from '@luxexchange/api'
 import type { MobileState } from 'src/app/mobileReducer'
 import { BannerId, UNITAG_NAV_PREFIX } from 'src/notification-service/data-sources/banners/types'

@@ -6,7 +6,7 @@
  * - Other chains: CoinGecko (tokens) + static pool data
  */
 import { useQuery } from '@tanstack/react-query'
-import { ExploreStatsResponse } from '@luxamm/client-explore/dist/lx/explore/v1/service_pb'
+import { ExploreStatsResponse } from '@luxamm/client-explore/dist/uniswap/explore/v1/service_pb'
 import { GraphQLApi } from '@luxexchange/api'
 import { isLuxChain } from '@luxexchange/lx/src/data/rest/luxGateway'
 import { UniverseChainId } from '@luxexchange/lx/src/features/chains/types'
