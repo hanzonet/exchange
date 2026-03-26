@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/dex",
-  "version": "1.3.0",
+  "version": "2.0.4",
   "description": "Lux DEX SDK - CLOB client, AMM precompiles, and omnichain routing",
   "license": "MIT",
   "type": "module",
@@ -63,5 +63,6 @@
     "amm",
     "swap",
     "precompile"
-  ]
+  ],
+  "private": false
 }

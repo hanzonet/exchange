@@ -16,6 +16,8 @@ export interface BrandConfig {
   name: string
   title: string
   description: string
+  /** Legal entity name for Terms/Privacy, e.g. "Lux Industries Inc." */
+  legalEntity: string
   appDomain: string
   docsDomain: string
   infoDomain: string
@@ -62,6 +64,7 @@ export const brand: BrandConfig = {
   name: 'Exchange',
   title: 'Exchange | Trade',
   description: 'Swap, earn, and build on the leading decentralized exchange',
+  legalEntity: 'Lux Industries Inc.',
   appDomain: 'lux.exchange',
   docsDomain: 'docs.lux.exchange',
   infoDomain: 'info.lux.exchange',

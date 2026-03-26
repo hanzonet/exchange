@@ -1,6 +1,6 @@
 {
   "name": "@luxexchange/sessions",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "scripts": {
     "typecheck": "nx typecheck sessions",
     "typecheck:tsgo": "nx typecheck:tsgo sessions",

@@ -26,9 +26,9 @@ export const LEGAL_URLS = {
 export const FOOTER_DISCLAIMER =
   'Experimental research software. Not legal, tax, or financial advice. Non-custodial — we never have access to your keys or funds. Use at your own risk.'
 
-/** Regulatory notice for inline display */
+/** Regulatory notice for inline display (brand-agnostic) */
 export const REGULATORY_NOTICE =
-  'LUX is classified as a digital commodity under the SEC/CFTC joint interpretive release of March 17, 2026. ' +
+  'Native protocol tokens are classified as digital commodities under the SEC/CFTC joint interpretive release of March 17, 2026. ' +
   'Protocol staking, liquidity provision, and no-consideration airdrops are administrative activities outside the Howey test. ' +
   'This interface is experimental research software provided "as is" without warranty.'
 

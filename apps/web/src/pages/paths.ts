@@ -66,4 +66,6 @@ export const paths = [
   '/extension/uninstall',
   '/wrapped',
   '/preview',
+  '/terms',
+  '/privacy',
 ]
