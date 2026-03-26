@@ -111,6 +111,64 @@ export const LUX_DEV_CONTRACTS = {
 } as const
 
 /**
+ * Contract addresses for Zoo Mainnet (200200) — deployed 2026-03-04
+ * Deployer: 0x9011E888251AB053B7bD1cdB598Db4f9DEd94714
+ */
+export const ZOO_MAINNET_CONTRACTS = {
+  // Core
+  WLUX: '0x5491216406daB99b7032b83765F36790E27F8A61' as Address,
+  MULTICALL: '0xd25F88CBdAe3c2CCA3Bb75FC4E723b44C0Ea362F' as Address,
+
+  // Bridge tokens
+  LETH: '0x4870621EA8be7a383eFCfdA225249d35888bD9f2' as Address,
+  LBTC: '0x6fc44509a32E513bE1aa00d27bb298e63830C6A8' as Address,
+  LUSD: '0xb2ee1CE7b84853b83AA08702aD0aD4D79711882D' as Address,
+
+  // AMM V2
+  V2_FACTORY: '0xF034942c1140125b5c278aE9cEE1B488e915B2FE' as Address,
+  V2_ROUTER: '0x2cd306913e6546C59249b48d7c786A6D1d7ebE08' as Address,
+} as const
+
+/**
+ * Contract addresses for Hanzo Mainnet (36963) — deployed 2026-03-04
+ */
+export const HANZO_MAINNET_CONTRACTS = {
+  WLUX: '0x5491216406daB99b7032b83765F36790E27F8A61' as Address,
+  MULTICALL: '0xd25F88CBdAe3c2CCA3Bb75FC4E723b44C0Ea362F' as Address,
+  LETH: '0x4870621EA8be7a383eFCfdA225249d35888bD9f2' as Address,
+  LBTC: '0x6fc44509a32E513bE1aa00d27bb298e63830C6A8' as Address,
+  LUSD: '0xb2ee1CE7b84853b83AA08702aD0aD4D79711882D' as Address,
+  V2_FACTORY: '0xDc384E006BAec602b0b2B2fe6f2712646EFb1e9D' as Address,
+  V2_ROUTER: '0x191067f88d61f9506555E88CEab9CF71deeD61A9' as Address,
+} as const
+
+/**
+ * Contract addresses for SPC Mainnet (36911) — deployed 2026-03-04
+ */
+export const SPC_MAINNET_CONTRACTS = {
+  WLUX: '0x5491216406daB99b7032b83765F36790E27F8A61' as Address,
+  MULTICALL: '0xd25F88CBdAe3c2CCA3Bb75FC4E723b44C0Ea362F' as Address,
+  LETH: '0x4870621EA8be7a383eFCfdA225249d35888bD9f2' as Address,
+  LBTC: '0x6fc44509a32E513bE1aa00d27bb298e63830C6A8' as Address,
+  LUSD: '0xb2ee1CE7b84853b83AA08702aD0aD4D79711882D' as Address,
+  V2_FACTORY: '0x84CF0A13db1be8e1F0676405cfcBC8b09692FD1C' as Address,
+  V2_ROUTER: '0x2382F7A49FA48E1F91Bec466c32e1D7F13ec8206' as Address,
+} as const
+
+/**
+ * Contract addresses for Pars Mainnet (494949) — deployed 2026-03-04
+ */
+export const PARS_MAINNET_CONTRACTS = {
+  WLUX: '0x5491216406daB99b7032b83765F36790E27F8A61' as Address,
+  MULTICALL: '0xd25F88CBdAe3c2CCA3Bb75FC4E723b44C0Ea362F' as Address,
+  LETH: '0x4870621EA8be7a383eFCfdA225249d35888bD9f2' as Address,
+  LBTC: '0x6fc44509a32E513bE1aa00d27bb298e63830C6A8' as Address,
+  LUSD: '0xb2ee1CE7b84853b83AA08702aD0aD4D79711882D' as Address,
+  V2_FACTORY: '0xF034942c1140125b5c278aE9cEE1B488e915B2FE' as Address,
+  V2_ROUTER: '0x2cd306913e6546C59249b48d7c786A6D1d7ebE08' as Address,
+} as const
+
+/**
  * Get contracts for a specific chain
  */
 export function getContracts(chainId: number) {
@@ -119,10 +177,18 @@ export function getContracts(chainId: number) {
       return LUX_MAINNET_CONTRACTS
     case 96368:
       return LUX_TESTNET_CONTRACTS
+    case 200200:
+      return ZOO_MAINNET_CONTRACTS
+    case 36963:
+      return HANZO_MAINNET_CONTRACTS
+    case 36911:
+      return SPC_MAINNET_CONTRACTS
+    case 494949:
+      return PARS_MAINNET_CONTRACTS
     case 1337:
       return LUX_DEV_CONTRACTS
     default:
-      return LUX_TESTNET_CONTRACTS
+      return LUX_MAINNET_CONTRACTS
   }
 }
 
