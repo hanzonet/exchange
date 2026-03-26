@@ -19,7 +19,7 @@ vi.mock('@universe/gating', async (importOriginal) => {
   }
 })
 
-const UniswapMobileWallet = {
+const LxMobileWallet = {
   id: CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID,
 } as ExternalWallet
 
@@ -32,7 +32,7 @@ describe('LxWalletOptions', () => {
     mocked(useWalletWithId).mockImplementation(
       (testId) =>
         ({
-          [CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID]: UniswapMobileWallet,
+          [CONNECTION_PROVIDER_IDS.LX_WALLET_CONNECT_CONNECTOR_ID]: LxMobileWallet,
         })[testId],
     )
     mocked(useFeatureFlag).mockReturnValue(true)

@@ -1,7 +1,7 @@
 import { getStorageDriver } from '@luxexchange/api/src/storage/getStorageDriver'
 import { createLxIdentifierService, LxIdentifierService } from '@luxexchange/sessions'
 
-const LX_IDENTIFIER_KEY = 'UNISWAP_IDENTIFIER'
+const LX_IDENTIFIER_KEY = 'LX_IDENTIFIER'
 
 function provideLxIdentifierService(): LxIdentifierService {
   const driver = getStorageDriver()

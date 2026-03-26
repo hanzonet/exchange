@@ -359,7 +359,7 @@ async function openSupportLink(transactionDetails: TransactionDetails): Promise<
       return openFORSupportLink(transactionDetails.typeInfo.serviceProvider)
     default:
       params.append(SupportLinkParams.WalletAddress, transactionDetails.ownerAddress ?? '') // Wallet Address
-      params.append(SupportLinkParams.ReportType, isWebPlatform ? 'uniswap_extension_issue' : 'uw_ios_app') // Report Type Dropdown
+      params.append(SupportLinkParams.ReportType, isWebPlatform ? 'lx_extension_issue' : 'uw_ios_app') // Report Type Dropdown
       params.append(SupportLinkParams.IssueType, 'uw_transaction_details_page_submission') // Issue type Dropdown
       params.append(SupportLinkParams.TransactionId, transactionDetails.hash ?? 'N/A') // Transaction id
       return openUri({ uri: lxUrls.helpRequestUrl + '?' + params.toString() }).catch((e) =>

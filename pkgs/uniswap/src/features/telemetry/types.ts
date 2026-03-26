@@ -136,7 +136,7 @@ type OnboardingCompletedProps = {
 export type SwapRouting =
   | 'jupiter'
   | 'classic'
-  | 'uniswap_x'
+  | 'lx_swap'
   | 'lx_swap_v2'
   | 'lx_swap_v3'
   | 'priority_order'

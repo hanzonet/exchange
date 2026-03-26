@@ -568,7 +568,7 @@ export function tradeRoutingToFillType({
     case TradingApi.Routing.DUTCH_V2:
       return 'lx_swap_v2'
     case TradingApi.Routing.DUTCH_LIMIT:
-      return 'uniswap_x'
+      return 'lx_swap'
     case TradingApi.Routing.PRIORITY:
       return 'priority_order'
     case TradingApi.Routing.LIMIT_ORDER:

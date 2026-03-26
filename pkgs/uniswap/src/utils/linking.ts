@@ -250,7 +250,7 @@ export async function openTransactionLink(hash: string | undefined, chainId: Uni
   return openUri({ uri: explorerUrl })
 }
 
-export async function openUniswapHelpLink(): Promise<void> {
+export async function openLxHelpLink(): Promise<void> {
   return openUri({ uri: lxUrls.helpRequestUrl })
 }
 

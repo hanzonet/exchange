@@ -1,10 +1,10 @@
 import { getScantasticQueryParams } from 'src/components/Requests/ScanSheet/util'
 import { LUX_URL_SCHEME_UWU_LINK } from 'src/components/Requests/Uwulink/utils'
 import {
-  UNISWAP_URL_SCHEME,
-  UNISWAP_URL_SCHEME_E2E_OVERRIDE_GATES,
-  UNISWAP_URL_SCHEME_SCANTASTIC,
-  UNISWAP_URL_SCHEME_WALLETCONNECT_AS_PARAM,
+  LX_URL_SCHEME,
+  LX_URL_SCHEME_E2E_OVERRIDE_GATES,
+  LX_URL_SCHEME_SCANTASTIC,
+  LX_URL_SCHEME_WALLETCONNECT_AS_PARAM,
   LX_WALLETCONNECT_URL,
 } from 'src/features/deepLinking/constants'
 import { LX_WEB_HOSTNAME } from '@luxexchange/lx/src/constants/urls'
@@ -297,7 +297,7 @@ const handlers: Record<string, DeepLinkHandler> = {
     action: DeepLinkAction.UwuLink,
     data,
   }),
-  [UNISWAP_URL_SCHEME_E2E_OVERRIDE_GATES]: (url, data) => {
+  [LX_URL_SCHEME_E2E_OVERRIDE_GATES]: (url, data) => {
     const enableParam = url.searchParams.get('enable') ?? url.searchParams.get('gates')
     const enable = enableParam ? enableParam.split(',').filter(Boolean) : []
     return { action: DeepLinkAction.E2EOverrideGates, data: { ...data, enable } }

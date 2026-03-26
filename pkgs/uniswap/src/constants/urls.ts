@@ -56,7 +56,7 @@ export function getForApiUrl(): string {
 }
 
 export const LX_WEB_URL = `https://${LX_WEB_HOSTNAME}`
-export const UNISWAP_APP_URL = getBrandUrl('/app')
+export const LX_APP_URL = getBrandUrl('/app')
 export const LX_MOBILE_REDIRECT_URL = getBrandUrl('/mobile-redirect')
 
 // The trading api uses custom builds for testing which may not use the v1 prefix
@@ -253,7 +253,7 @@ export const lxUrls = {
   limitOrderStatusesPath: '/limit-orders',
 
   // App and Redirect URL's
-  appBaseUrl: UNISWAP_APP_URL,
+  appBaseUrl: LX_APP_URL,
   redirectUrlBase: LX_MOBILE_REDIRECT_URL,
   requestOriginUrl: LX_WEB_URL,
 
